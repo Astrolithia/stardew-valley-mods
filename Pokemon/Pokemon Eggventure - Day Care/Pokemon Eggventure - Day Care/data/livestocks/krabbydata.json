@@ -1,0 +1,208 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load krabby textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/krabby/krabby, {{ModId}}/krabby/shinykrabby, {{ModId}}/krabby/kingler, {{ModId}}/krabby/shinykingler, {{ModId}}/krabby/krabbyegg",
+      "FromFile": "assets/livestocks/krabby/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_krabby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_krabby": {
+          "DisplayName": "{{i18n: krabby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_krabbyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: krabbybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/krabby/kingler",
+          "BabyTexture": "{{ModId}}/krabby/krabby",
+          "Sound": "{{ModId}}_kinglercry",
+          "BabySound": "{{ModId}}_krabbycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_krabbyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_krabby type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_krabby"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykrabby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykrabby": {
+          "DisplayName": "{{i18n: shinykrabby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_krabbyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykrabbybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/krabby/shinykingler",
+          "BabyTexture": "{{ModId}}/krabby/shinykrabby",
+          "Sound": "{{ModId}}_kinglercry",
+          "BabySound": "{{ModId}}_krabbycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_krabbyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinykrabby type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinykrabby"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "krabby cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_krabbycry": {
+          "ID": "{{ModId}}_krabbycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/krabby/krabbycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_kinglercry": {
+          "ID": "{{ModId}}_kinglercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/krabby/kinglercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "krabby egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_krabbyegg": {
+          "Name": "{{ModId}}_krabbyegg",
+          "DisplayName": "{{i18n: krabbyegg}}",
+          "Description": "{{i18n: krabbyegg.d}}",
+          "Texture": "{{ModId}}/krabby/krabbyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "krabby hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_krabbyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykrabby",
+              "AnimalId": "{{ModId}}_shinykrabby",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_krabby",
+              "AnimalId": "{{ModId}}_krabby",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

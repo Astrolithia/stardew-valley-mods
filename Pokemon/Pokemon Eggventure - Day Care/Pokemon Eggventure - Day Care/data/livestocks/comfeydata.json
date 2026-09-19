@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load comfey textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/comfey/comfey, {{ModId}}/comfey/shinycomfey, {{ModId}}/comfey/comfeyegg",
+      "FromFile": "assets/livestocks/comfey/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_comfey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_comfey": {
+          "DisplayName": "{{i18n: comfey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_comfeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: comfeybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/comfey/comfey",
+          "BabyTexture": "{{ModId}}/comfey/comfey",
+          "Sound": "{{ModId}}_comfeycry",
+          "BabySound": "{{ModId}}_comfeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_comfeyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycomfey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycomfey": {
+          "DisplayName": "{{i18n: shinycomfey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_comfeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycomfeybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/comfey/shinycomfey",
+          "BabyTexture": "{{ModId}}/comfey/shinycomfey",
+          "Sound": "{{ModId}}_comfeycry",
+          "BabySound": "{{ModId}}_comfeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_comfeyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "comfey cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_comfeycry": {
+          "ID": "{{ModId}}_comfeycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/comfey/comfeycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "comfey egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_comfeyegg": {
+          "Name": "{{ModId}}_comfeyegg",
+          "DisplayName": "{{i18n: comfeyegg}}",
+          "Description": "{{i18n: comfeyegg.d}}",
+          "Texture": "{{ModId}}/comfey/comfeyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "comfey hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_comfeyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycomfey",
+              "AnimalId": "{{ModId}}_shinycomfey",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_comfey",
+              "AnimalId": "{{ModId}}_comfey",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

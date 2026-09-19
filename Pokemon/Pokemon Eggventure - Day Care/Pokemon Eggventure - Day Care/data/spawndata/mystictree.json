@@ -1,0 +1,142 @@
+{
+  "Changes": [
+    {
+      "LogName": "Arbre mystique (ID13) - CHOP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "13",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_mystic_comfey_chop": {
+          "Id": "{{ModId}}_mystic_comfey_chop",
+          "ItemId": "{{ModId}}_comfeyegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_mystic_gardevoir_chop": {
+          "Id": "{{ModId}}_mystic_gardevoir_chop",
+          "ItemId": "{{ModId}}_gardevoiregg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_mystic_impidimp_chop": {
+          "Id": "{{ModId}}_mystic_impidimp_chop",
+          "ItemId": "{{ModId}}_impidimpegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_mystic_milcery_chop": {
+          "Id": "{{ModId}}_mystic_milcery_chop",
+          "ItemId": "{{ModId}}_milceryegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_mystic_spritzee_chop": {
+          "Id": "{{ModId}}_mystic_spritzee_chop",
+          "ItemId": "{{ModId}}_spritzeeegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_mystic_swirlix_chop": {
+          "Id": "{{ModId}}_mystic_swirlix_chop",
+          "ItemId": "{{ModId}}_swirlixegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_mystic_tinkatink_chop": {
+          "Id": "{{ModId}}_mystic_tinkatink_chop",
+          "ItemId": "{{ModId}}_tinkatinkegg",
+          "Chance": "{{RateMysticChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Arbre mystique (ID13) - SHAKE",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "13",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_mystic_comfey_shake": {
+          "Id": "{{ModId}}_mystic_comfey_shake",
+          "ItemId": "{{ModId}}_comfeyegg",
+          "Chance": "{{RateMysticShake}}"
+        },
+        "{{ModId}}_mystic_gardevoir_shake": {
+          "Id": "{{ModId}}_mystic_gardevoir_shake",
+          "ItemId": "{{ModId}}_gardevoiregg",
+          "Chance": "{{RateMysticShake}}"
+        },
+        "{{ModId}}_mystic_impidimp_shake": {
+          "Id": "{{ModId}}_mystic_impidimp_shake",
+          "ItemId": "{{ModId}}_impidimpegg",
+          "Chance": "{{RateMysticShake}}"
+        },
+        "{{ModId}}_mystic_milcery_shake": {
+          "Id": "{{ModId}}_mystic_milcery_shake",
+          "ItemId": "{{ModId}}_milceryegg",
+          "Chance": "{{RateMysticShake}}"
+        },
+        "{{ModId}}_mystic_spritzee_shake": {
+          "Id": "{{ModId}}_mystic_spritzee_shake",
+          "ItemId": "{{ModId}}_spritzeeegg",
+          "Chance": "{{RateMysticShake}}"
+        },
+        "{{ModId}}_mystic_swirlix_shake": {
+          "Id": "{{ModId}}_mystic_swirlix_shake",
+          "ItemId": "{{ModId}}_swirlixegg",
+          "Chance": "{{RateMysticShake}}"
+        },
+        "{{ModId}}_mystic_tinkatink_shake": {
+          "Id": "{{ModId}}_mystic_tinkatink_shake",
+          "ItemId": "{{ModId}}_tinkatinkegg",
+          "Chance": "{{RateMysticShake}}"
+        }
+      }
+    },
+    {
+      "LogName": "Arbre mystique (ID13) - TAP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "13",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_13_tinkatinkegg": {
+          "Id": "{{ModId}}_chop_13_tinkatinkegg",
+          "ItemId": "{{ModId}}_tinkatinkegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_chop_13_spritzeeegg": {
+          "Id": "{{ModId}}_chop_13_spritzeeegg",
+          "ItemId": "{{ModId}}_spritzeeegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_chop_13_milceryegg": {
+          "Id": "{{ModId}}_chop_13_milceryegg",
+          "ItemId": "{{ModId}}_milceryegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_chop_13_gardevoiregg": {
+          "Id": "{{ModId}}_chop_13_gardevoiregg",
+          "ItemId": "{{ModId}}_gardevoiregg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_chop_13_impidimpegg": {
+          "Id": "{{ModId}}_chop_13_impidimpegg",
+          "ItemId": "{{ModId}}_impidimpegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_chop_13_comfeyegg": {
+          "Id": "{{ModId}}_chop_13_comfeyegg",
+          "ItemId": "{{ModId}}_comfeyegg",
+          "Chance": "{{RateMysticChop}}"
+        },
+        "{{ModId}}_chop_13_swirlixegg": {
+          "Id": "{{ModId}}_chop_13_swirlixegg",
+          "ItemId": "{{ModId}}_swirlixegg",
+          "Chance": "{{RateMysticChop}}"
+        }
+      }
+    }
+  ]
+}

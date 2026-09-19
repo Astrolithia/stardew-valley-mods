@@ -1,0 +1,28 @@
+{
+  "Changes": [
+    {
+      "LogName": "Pokemon ingredients in the Community Center bundles",
+      "Action": "EditData",
+      "Target": "Data/Bundles",
+      "When": {
+        "CommunityCenter": "pokemon"
+      },
+      "Entries": {
+        "Pantry/4": "Animal/BO 16 1/{{ModId}}_milk_moomoolarge 1 0 {{ModId}}_spearowegg 1 0 {{ModId}}_pidgeyegg 1 0 {{ModId}}_milk_skiddolarge 1 0 {{ModId}}_wool_mareep 1 0 {{ModId}}_ducklettegg 1 0/4/5//Animal",
+        "Bulletin Board/34": "Dye/BO 25 1/420 1 0 397 1 0 421 1 0 {{ModId}}_feather_ducklett 1 0 62 1 0 266 1 0/6///Dye"
+      }
+    },
+    {
+      "LogName": "Pokemon ingredients, harder",
+      "Action": "EditData",
+      "Target": "Data/Bundles",
+      "When": {
+        "CommunityCenter": "difficile"
+      },
+      "Entries": {
+        "Pantry/4": "Animal/BO 16 1/{{ModId}}_milk_moomoolarge 1 2 {{ModId}}_spearowegg 1 2 {{ModId}}_pidgeyegg 1 2 {{ModId}}_milk_skiddolarge 1 2 {{ModId}}_wool_mareep 1 2 {{ModId}}_ducklettegg 1 2/4/6//Animal",
+        "Bulletin Board/34": "Dye/BO 25 1/420 1 2 397 1 2 421 1 2 {{ModId}}_feather_ducklett 1 2 62 1 2 266 1 2/6///Dye"
+      }
+    }
+  ]
+}

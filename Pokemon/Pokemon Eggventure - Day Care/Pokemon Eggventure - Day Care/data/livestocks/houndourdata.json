@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load houndour textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/houndour/houndour, {{ModId}}/houndour/shinyhoundour, {{ModId}}/houndour/houndoom, {{ModId}}/houndour/shinyhoundoom, {{ModId}}/houndour/houndouregg",
+      "FromFile": "assets/livestocks/houndour/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_houndour data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_houndour": {
+          "DisplayName": "{{i18n: houndour}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_houndouregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: houndourbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/houndour/houndoom",
+          "BabyTexture": "{{ModId}}/houndour/houndour",
+          "Sound": "{{ModId}}_houndoomcry",
+          "BabySound": "{{ModId}}_houndourcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_houndouregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_houndour type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_houndour"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhoundour data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhoundour": {
+          "DisplayName": "{{i18n: shinyhoundour}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_houndouregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhoundourbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/houndour/shinyhoundoom",
+          "BabyTexture": "{{ModId}}/houndour/shinyhoundour",
+          "Sound": "{{ModId}}_houndoomcry",
+          "BabySound": "{{ModId}}_houndourcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_houndouregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhoundour type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhoundour"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "houndour cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_houndourcry": {
+          "ID": "{{ModId}}_houndourcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/houndour/houndourcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_houndoomcry": {
+          "ID": "{{ModId}}_houndoomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/houndour/houndoomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "houndour egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_houndouregg": {
+          "Name": "{{ModId}}_houndouregg",
+          "DisplayName": "{{i18n: houndouregg}}",
+          "Description": "{{i18n: houndouregg.d}}",
+          "Texture": "{{ModId}}/houndour/houndouregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_common",
+            "pkegg_mine_81_100_p5",
+            "pkegg_mine_101_120_p5",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "houndour hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_houndouregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhoundour",
+              "AnimalId": "{{ModId}}_shinyhoundour",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_houndour",
+              "AnimalId": "{{ModId}}_houndour",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

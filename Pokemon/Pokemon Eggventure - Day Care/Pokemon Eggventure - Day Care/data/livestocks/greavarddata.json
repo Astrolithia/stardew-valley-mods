@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load greavard textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/greavard/greavard, {{ModId}}/greavard/shinygreavard, {{ModId}}/greavard/houndstone, {{ModId}}/greavard/shinyhoundstone, {{ModId}}/greavard/greavardegg",
+      "FromFile": "assets/livestocks/greavard/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_greavard data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_greavard": {
+          "DisplayName": "{{i18n: greavard}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_greavardegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: greavardbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/greavard/houndstone",
+          "BabyTexture": "{{ModId}}/greavard/greavard",
+          "Sound": "{{ModId}}_houndstonecry",
+          "BabySound": "{{ModId}}_greavardcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_greavardegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygreavard data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygreavard": {
+          "DisplayName": "{{i18n: shinygreavard}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_greavardegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygreavardbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/greavard/shinyhoundstone",
+          "BabyTexture": "{{ModId}}/greavard/shinygreavard",
+          "Sound": "{{ModId}}_houndstonecry",
+          "BabySound": "{{ModId}}_greavardcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_greavardegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "greavard cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_greavardcry": {
+          "ID": "{{ModId}}_greavardcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/greavard/greavardcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_houndstonecry": {
+          "ID": "{{ModId}}_houndstonecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/greavard/houndstonecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "greavard egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_greavardegg": {
+          "Name": "{{ModId}}_greavardegg",
+          "DisplayName": "{{i18n: greavardegg}}",
+          "Description": "{{i18n: greavardegg.d}}",
+          "Texture": "{{ModId}}/greavard/greavardegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "greavard hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_greavardegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygreavard",
+              "AnimalId": "{{ModId}}_shinygreavard",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_greavard",
+              "AnimalId": "{{ModId}}_greavard",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

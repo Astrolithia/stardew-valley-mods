@@ -1,0 +1,208 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load barboach textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/barboach/barboach, {{ModId}}/barboach/shinybarboach, {{ModId}}/barboach/whiscash, {{ModId}}/barboach/shinywhiscash, {{ModId}}/barboach/barboachegg",
+      "FromFile": "assets/livestocks/barboach/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_barboach data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_barboach": {
+          "DisplayName": "{{i18n: barboach}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_barboachegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: barboachbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/barboach/whiscash",
+          "BabyTexture": "{{ModId}}/barboach/barboach",
+          "Sound": "{{ModId}}_whiscashcry",
+          "BabySound": "{{ModId}}_barboachcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_barboachegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_barboach type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_barboach"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybarboach data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybarboach": {
+          "DisplayName": "{{i18n: shinybarboach}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_barboachegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybarboachbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/barboach/shinywhiscash",
+          "BabyTexture": "{{ModId}}/barboach/shinybarboach",
+          "Sound": "{{ModId}}_whiscashcry",
+          "BabySound": "{{ModId}}_barboachcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_barboachegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybarboach type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybarboach"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "barboach cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_barboachcry": {
+          "ID": "{{ModId}}_barboachcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/barboach/barboachcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_whiscashcry": {
+          "ID": "{{ModId}}_whiscashcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/barboach/whiscashcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "barboach egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_barboachegg": {
+          "Name": "{{ModId}}_barboachegg",
+          "DisplayName": "{{i18n: barboachegg}}",
+          "Description": "{{i18n: barboachegg.d}}",
+          "Texture": "{{ModId}}/barboach/barboachegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "barboach hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_barboachegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybarboach",
+              "AnimalId": "{{ModId}}_shinybarboach",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_barboach",
+              "AnimalId": "{{ModId}}_barboach",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

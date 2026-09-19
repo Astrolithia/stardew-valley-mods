@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fuecoco textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fuecoco/fuecoco, {{ModId}}/fuecoco/shinyfuecoco, {{ModId}}/fuecoco/crocalor, {{ModId}}/fuecoco/shinycrocalor, {{ModId}}/fuecoco/skeledirge, {{ModId}}/fuecoco/shinyskeledirge, {{ModId}}/fuecoco/fuecocoegg",
+      "FromFile": "assets/livestocks/fuecoco/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_fuecoco data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_fuecoco": {
+          "DisplayName": "{{i18n: fuecoco}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fuecocoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: fuecocobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fuecoco/crocalor",
+          "BabyTexture": "{{ModId}}/fuecoco/fuecoco",
+          "Sound": "{{ModId}}_skeledirgecry",
+          "BabySound": "{{ModId}}_fuecococry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fuecocoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_fuecoco evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_fuecoco",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "fuecocoevolution": {
+          "Id": "fuecocoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/fuecoco/skeledirge"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_fuecoco type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_fuecoco"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfuecoco data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfuecoco": {
+          "DisplayName": "{{i18n: shinyfuecoco}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fuecocoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfuecocobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fuecoco/shinycrocalor",
+          "BabyTexture": "{{ModId}}/fuecoco/shinyfuecoco",
+          "Sound": "{{ModId}}_skeledirgecry",
+          "BabySound": "{{ModId}}_fuecococry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fuecocoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfuecoco evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfuecoco",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyfuecocoevolution": {
+          "Id": "shinyfuecocoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/fuecoco/shinyskeledirge"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfuecoco type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfuecoco"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "fuecoco cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_fuecococry": {
+          "ID": "{{ModId}}_fuecococry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fuecoco/fuecococry.ogg}}"
+          ]
+        },
+        "{{ModId}}_skeledirgecry": {
+          "ID": "{{ModId}}_skeledirgecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fuecoco/skeledirgecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fuecoco egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fuecocoegg": {
+          "Name": "{{ModId}}_fuecocoegg",
+          "DisplayName": "{{i18n: fuecocoegg}}",
+          "Description": "{{i18n: fuecocoegg.d}}",
+          "Texture": "{{ModId}}/fuecoco/fuecocoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fuecoco hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_fuecocoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfuecoco",
+              "AnimalId": "{{ModId}}_shinyfuecoco",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_fuecoco",
+              "AnimalId": "{{ModId}}_fuecoco",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

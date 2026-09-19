@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load emolga textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/emolga/emolga, {{ModId}}/emolga/shinyemolga, {{ModId}}/emolga/emolgaegg",
+      "FromFile": "assets/livestocks/emolga/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_emolga data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_emolga": {
+          "DisplayName": "{{i18n: emolga}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_emolgaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: emolgabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/emolga/emolga",
+          "BabyTexture": "{{ModId}}/emolga/emolga",
+          "Sound": "{{ModId}}_emolgacry",
+          "BabySound": "{{ModId}}_emolgacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_emolgaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyemolga data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyemolga": {
+          "DisplayName": "{{i18n: shinyemolga}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_emolgaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyemolgabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/emolga/shinyemolga",
+          "BabyTexture": "{{ModId}}/emolga/shinyemolga",
+          "Sound": "{{ModId}}_emolgacry",
+          "BabySound": "{{ModId}}_emolgacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_emolgaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "emolga cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_emolgacry": {
+          "ID": "{{ModId}}_emolgacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/emolga/emolgacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "emolga egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_emolgaegg": {
+          "Name": "{{ModId}}_emolgaegg",
+          "DisplayName": "{{i18n: emolgaegg}}",
+          "Description": "{{i18n: emolgaegg.d}}",
+          "Texture": "{{ModId}}/emolga/emolgaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_summer_storm",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "emolga hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_emolgaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyemolga",
+              "AnimalId": "{{ModId}}_shinyemolga",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_emolga",
+              "AnimalId": "{{ModId}}_emolga",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

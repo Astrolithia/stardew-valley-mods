@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load larvitar textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/larvitar/larvitar, {{ModId}}/larvitar/shinylarvitar, {{ModId}}/larvitar/pupitar, {{ModId}}/larvitar/shinypupitar, {{ModId}}/larvitar/tyranitar, {{ModId}}/larvitar/shinytyranitar, {{ModId}}/larvitar/larvitaregg",
+      "FromFile": "assets/livestocks/larvitar/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_larvitar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_larvitar": {
+          "DisplayName": "{{i18n: larvitar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_larvitaregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: larvitarbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/larvitar/pupitar",
+          "BabyTexture": "{{ModId}}/larvitar/larvitar",
+          "Sound": "{{ModId}}_tyranitarcry",
+          "BabySound": "{{ModId}}_larvitarcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_larvitaregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_larvitar evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_larvitar",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "larvitarevolution": {
+          "Id": "larvitarevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/larvitar/tyranitar"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylarvitar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylarvitar": {
+          "DisplayName": "{{i18n: shinylarvitar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_larvitaregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylarvitarbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/larvitar/shinypupitar",
+          "BabyTexture": "{{ModId}}/larvitar/shinylarvitar",
+          "Sound": "{{ModId}}_tyranitarcry",
+          "BabySound": "{{ModId}}_larvitarcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_larvitaregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylarvitar evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylarvitar",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinylarvitarevolution": {
+          "Id": "shinylarvitarevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/larvitar/shinytyranitar"
+        }
+      }
+    },
+    {
+      "LogName": "larvitar cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_larvitarcry": {
+          "ID": "{{ModId}}_larvitarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/larvitar/larvitarcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_tyranitarcry": {
+          "ID": "{{ModId}}_tyranitarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/larvitar/tyranitarcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "larvitar egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_larvitaregg": {
+          "Name": "{{ModId}}_larvitaregg",
+          "DisplayName": "{{i18n: larvitaregg}}",
+          "Description": "{{i18n: larvitaregg.d}}",
+          "Texture": "{{ModId}}/larvitar/larvitaregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "larvitar hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_larvitaregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylarvitar",
+              "AnimalId": "{{ModId}}_shinylarvitar",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_larvitar",
+              "AnimalId": "{{ModId}}_larvitar",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

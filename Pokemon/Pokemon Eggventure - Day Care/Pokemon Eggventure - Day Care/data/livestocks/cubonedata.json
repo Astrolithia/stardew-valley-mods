@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cubone textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cubone/cubone, {{ModId}}/cubone/shinycubone, {{ModId}}/cubone/marowak, {{ModId}}/cubone/shinymarowak, {{ModId}}/cubone/cuboneegg",
+      "FromFile": "assets/livestocks/cubone/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cubone data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cubone": {
+          "DisplayName": "{{i18n: cubone}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cuboneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cubonebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cubone/marowak",
+          "BabyTexture": "{{ModId}}/cubone/cubone",
+          "Sound": "{{ModId}}_marowakcry",
+          "BabySound": "{{ModId}}_cubonecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cuboneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycubone data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycubone": {
+          "DisplayName": "{{i18n: shinycubone}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cuboneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycubonebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cubone/shinymarowak",
+          "BabyTexture": "{{ModId}}/cubone/shinycubone",
+          "Sound": "{{ModId}}_marowakcry",
+          "BabySound": "{{ModId}}_cubonecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cuboneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "cubone cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cubonecry": {
+          "ID": "{{ModId}}_cubonecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cubone/cubonecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_marowakcry": {
+          "ID": "{{ModId}}_marowakcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cubone/marowakcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cubone egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cuboneegg": {
+          "Name": "{{ModId}}_cuboneegg",
+          "DisplayName": "{{i18n: cuboneegg}}",
+          "Description": "{{i18n: cuboneegg.d}}",
+          "Texture": "{{ModId}}/cubone/cuboneegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cubone hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cuboneegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycubone",
+              "AnimalId": "{{ModId}}_shinycubone",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cubone",
+              "AnimalId": "{{ModId}}_cubone",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

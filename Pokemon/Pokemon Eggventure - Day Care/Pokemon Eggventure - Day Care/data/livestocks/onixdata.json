@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load onix textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/onix/onix, {{ModId}}/onix/shinyonix, {{ModId}}/onix/steelix, {{ModId}}/onix/shinysteelix, {{ModId}}/onix/megasteelix, {{ModId}}/onix/shinymegasteelix, {{ModId}}/onix/onixegg",
+      "FromFile": "assets/livestocks/onix/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_onix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_onix": {
+          "DisplayName": "{{i18n: onix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_onixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: onixbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/onix/steelix",
+          "BabyTexture": "{{ModId}}/onix/onix",
+          "Sound": "{{ModId}}_steelixcry",
+          "BabySound": "{{ModId}}_onixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_onixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_onix mega evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_onix",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "onixmega": {
+          "Id": "onixmega",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP 1000",
+          "TextureToUse": "{{ModId}}/onix/megasteelix"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyonix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyonix": {
+          "DisplayName": "{{i18n: shinyonix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_onixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyonixbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/onix/shinysteelix",
+          "BabyTexture": "{{ModId}}/onix/shinyonix",
+          "Sound": "{{ModId}}_steelixcry",
+          "BabySound": "{{ModId}}_onixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_onixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyonix mega evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyonix",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyonixmega": {
+          "Id": "shinyonixmega",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP 1000",
+          "TextureToUse": "{{ModId}}/onix/shinymegasteelix"
+        }
+      }
+    },
+    {
+      "LogName": "onix cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_onixcry": {
+          "ID": "{{ModId}}_onixcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/onix/onixcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_steelixcry": {
+          "ID": "{{ModId}}_steelixcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/onix/steelixcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "onix egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_onixegg": {
+          "Name": "{{ModId}}_onixegg",
+          "DisplayName": "{{i18n: onixegg}}",
+          "Description": "{{i18n: onixegg.d}}",
+          "Texture": "{{ModId}}/onix/onixegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_rare",
+            "pkegg_mine_1_30_p1",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "onix hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_onixegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyonix",
+              "AnimalId": "{{ModId}}_shinyonix",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_onix",
+              "AnimalId": "{{ModId}}_onix",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

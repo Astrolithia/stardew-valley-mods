@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load smoliv textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/smoliv/smoliv, {{ModId}}/smoliv/shinysmoliv, {{ModId}}/smoliv/dolliv, {{ModId}}/smoliv/shinydolliv, {{ModId}}/smoliv/arboliva, {{ModId}}/smoliv/shinyarboliva, {{ModId}}/smoliv/smolivegg",
+      "FromFile": "assets/livestocks/smoliv/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_smoliv data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_smoliv": {
+          "DisplayName": "{{i18n: smoliv}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_smolivegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: smolivbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/smoliv/dolliv",
+          "BabyTexture": "{{ModId}}/smoliv/smoliv",
+          "Sound": "{{ModId}}_arbolivacry",
+          "BabySound": "{{ModId}}_smolivcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_smolivegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_smoliv evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_smoliv",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "smolivevolution": {
+          "Id": "smolivevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/smoliv/arboliva"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysmoliv data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysmoliv": {
+          "DisplayName": "{{i18n: shinysmoliv}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_smolivegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysmolivbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/smoliv/shinydolliv",
+          "BabyTexture": "{{ModId}}/smoliv/shinysmoliv",
+          "Sound": "{{ModId}}_arbolivacry",
+          "BabySound": "{{ModId}}_smolivcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_smolivegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysmoliv evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysmoliv",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysmolivevolution": {
+          "Id": "shinysmolivevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/smoliv/shinyarboliva"
+        }
+      }
+    },
+    {
+      "LogName": "smoliv cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_smolivcry": {
+          "ID": "{{ModId}}_smolivcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/smoliv/smolivcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_arbolivacry": {
+          "ID": "{{ModId}}_arbolivacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/smoliv/arbolivacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "smoliv egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_smolivegg": {
+          "Name": "{{ModId}}_smolivegg",
+          "DisplayName": "{{i18n: smolivegg}}",
+          "Description": "{{i18n: smolivegg.d}}",
+          "Texture": "{{ModId}}/smoliv/smolivegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "smoliv hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_smolivegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysmoliv",
+              "AnimalId": "{{ModId}}_shinysmoliv",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_smoliv",
+              "AnimalId": "{{ModId}}_smoliv",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

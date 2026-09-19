@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load seviper textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/seviper/seviper, {{ModId}}/seviper/shinyseviper, {{ModId}}/seviper/seviperegg",
+      "FromFile": "assets/livestocks/seviper/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_seviper data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_seviper": {
+          "DisplayName": "{{i18n: seviper}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_seviperegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: seviperbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/seviper/seviper",
+          "BabyTexture": "{{ModId}}/seviper/seviper",
+          "Sound": "{{ModId}}_sevipercry",
+          "BabySound": "{{ModId}}_sevipercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_seviperegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyseviper data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyseviper": {
+          "DisplayName": "{{i18n: shinyseviper}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_seviperegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyseviperbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/seviper/shinyseviper",
+          "BabyTexture": "{{ModId}}/seviper/shinyseviper",
+          "Sound": "{{ModId}}_sevipercry",
+          "BabySound": "{{ModId}}_sevipercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_seviperegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "seviper cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sevipercry": {
+          "ID": "{{ModId}}_sevipercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/seviper/sevipercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "seviper egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_seviperegg": {
+          "Name": "{{ModId}}_seviperegg",
+          "DisplayName": "{{i18n: seviperegg}}",
+          "Description": "{{i18n: seviperegg.d}}",
+          "Texture": "{{ModId}}/seviper/seviperegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_rare",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "seviper hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_seviperegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyseviper",
+              "AnimalId": "{{ModId}}_shinyseviper",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_seviper",
+              "AnimalId": "{{ModId}}_seviper",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

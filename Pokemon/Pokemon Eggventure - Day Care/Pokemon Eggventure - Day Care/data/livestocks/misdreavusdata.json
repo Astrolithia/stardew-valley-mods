@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load misdreavus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/misdreavus/misdreavus, {{ModId}}/misdreavus/shinymisdreavus, {{ModId}}/misdreavus/mismagius, {{ModId}}/misdreavus/shinymismagius, {{ModId}}/misdreavus/misdreavusegg",
+      "FromFile": "assets/livestocks/misdreavus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_misdreavus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_misdreavus": {
+          "DisplayName": "{{i18n: misdreavus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_misdreavusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: misdreavusbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/misdreavus/mismagius",
+          "BabyTexture": "{{ModId}}/misdreavus/misdreavus",
+          "Sound": "{{ModId}}_mismagiuscry",
+          "BabySound": "{{ModId}}_misdreavuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_misdreavusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymisdreavus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymisdreavus": {
+          "DisplayName": "{{i18n: shinymisdreavus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_misdreavusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymisdreavusbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/misdreavus/shinymismagius",
+          "BabyTexture": "{{ModId}}/misdreavus/shinymisdreavus",
+          "Sound": "{{ModId}}_mismagiuscry",
+          "BabySound": "{{ModId}}_misdreavuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_misdreavusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "misdreavus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_misdreavuscry": {
+          "ID": "{{ModId}}_misdreavuscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/misdreavus/misdreavuscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mismagiuscry": {
+          "ID": "{{ModId}}_mismagiuscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/misdreavus/mismagiuscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "misdreavus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_misdreavusegg": {
+          "Name": "{{ModId}}_misdreavusegg",
+          "DisplayName": "{{i18n: misdreavusegg}}",
+          "Description": "{{i18n: misdreavusegg.d}}",
+          "Texture": "{{ModId}}/misdreavus/misdreavusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_rare",
+            "pkegg_mine_31_40_p2",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "misdreavus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_misdreavusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymisdreavus",
+              "AnimalId": "{{ModId}}_shinymisdreavus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_misdreavus",
+              "AnimalId": "{{ModId}}_misdreavus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

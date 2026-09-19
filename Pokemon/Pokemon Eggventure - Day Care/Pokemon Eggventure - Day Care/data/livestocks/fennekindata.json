@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fennekin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fennekin/fennekin, {{ModId}}/fennekin/shinyfennekin, {{ModId}}/fennekin/braixen, {{ModId}}/fennekin/shinybraixen, {{ModId}}/fennekin/delphox, {{ModId}}/fennekin/shinydelphox, {{ModId}}/fennekin/fennekinegg",
+      "FromFile": "assets/livestocks/fennekin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_fennekin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_fennekin": {
+          "DisplayName": "{{i18n: fennekin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fennekinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: fennekinbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fennekin/braixen",
+          "BabyTexture": "{{ModId}}/fennekin/fennekin",
+          "Sound": "{{ModId}}_delphoxcry",
+          "BabySound": "{{ModId}}_fennekincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fennekinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_fennekin evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_fennekin",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "fennekinevolution": {
+          "Id": "fennekinevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/fennekin/delphox"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_fennekin type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_fennekin"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfennekin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfennekin": {
+          "DisplayName": "{{i18n: shinyfennekin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fennekinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfennekinbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fennekin/shinybraixen",
+          "BabyTexture": "{{ModId}}/fennekin/shinyfennekin",
+          "Sound": "{{ModId}}_delphoxcry",
+          "BabySound": "{{ModId}}_fennekincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fennekinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfennekin evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfennekin",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyfennekinevolution": {
+          "Id": "shinyfennekinevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/fennekin/shinydelphox"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfennekin type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfennekin"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "fennekin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_fennekincry": {
+          "ID": "{{ModId}}_fennekincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fennekin/fennekincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_delphoxcry": {
+          "ID": "{{ModId}}_delphoxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fennekin/delphoxcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fennekin egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fennekinegg": {
+          "Name": "{{ModId}}_fennekinegg",
+          "DisplayName": "{{i18n: fennekinegg}}",
+          "Description": "{{i18n: fennekinegg.d}}",
+          "Texture": "{{ModId}}/fennekin/fennekinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_mine_81_100_p5",
+            "pkegg_mine_101_120_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fennekin hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_fennekinegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfennekin",
+              "AnimalId": "{{ModId}}_shinyfennekin",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_fennekin",
+              "AnimalId": "{{ModId}}_fennekin",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load baltoy textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/baltoy/baltoy, {{ModId}}/baltoy/shinybaltoy, {{ModId}}/baltoy/claydol, {{ModId}}/baltoy/shinyclaydol, {{ModId}}/baltoy/baltoyegg",
+      "FromFile": "assets/livestocks/baltoy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_baltoy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_baltoy": {
+          "DisplayName": "{{i18n: baltoy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_baltoyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: baltoybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/baltoy/claydol",
+          "BabyTexture": "{{ModId}}/baltoy/baltoy",
+          "Sound": "{{ModId}}_claydolcry",
+          "BabySound": "{{ModId}}_baltoycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_baltoyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybaltoy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybaltoy": {
+          "DisplayName": "{{i18n: shinybaltoy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_baltoyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybaltoybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/baltoy/shinyclaydol",
+          "BabyTexture": "{{ModId}}/baltoy/shinybaltoy",
+          "Sound": "{{ModId}}_claydolcry",
+          "BabySound": "{{ModId}}_baltoycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_baltoyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "baltoy cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_baltoycry": {
+          "ID": "{{ModId}}_baltoycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/baltoy/baltoycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_claydolcry": {
+          "ID": "{{ModId}}_claydolcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/baltoy/claydolcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "baltoy egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_baltoyegg": {
+          "Name": "{{ModId}}_baltoyegg",
+          "DisplayName": "{{i18n: baltoyegg}}",
+          "Description": "{{i18n: baltoyegg.d}}",
+          "Texture": "{{ModId}}/baltoy/baltoyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "baltoy hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_baltoyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybaltoy",
+              "AnimalId": "{{ModId}}_shinybaltoy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_baltoy",
+              "AnimalId": "{{ModId}}_baltoy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

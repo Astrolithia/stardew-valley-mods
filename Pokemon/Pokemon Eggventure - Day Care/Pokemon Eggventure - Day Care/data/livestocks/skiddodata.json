@@ -1,0 +1,307 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load skiddo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/skiddo/skiddo, {{ModId}}/skiddo/shinyskiddo, {{ModId}}/skiddo/gogoat, {{ModId}}/skiddo/shinygogoat, {{ModId}}/skiddo/skiddoegg, {{ModId}}/skiddo/skiddoshop",
+      "FromFile": "assets/livestocks/skiddo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_skiddo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_skiddo": {
+          "DisplayName": "{{i18n: skiddo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Big Barn",
+          "EggItemIds": [
+            "{{ModId}}_skiddoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: skiddobirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skiddo/gogoat",
+          "BabyTexture": "{{ModId}}/skiddo/skiddo",
+          "Sound": "{{ModId}}_gogoatcry",
+          "BabySound": "{{ModId}}_skiddocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_skiddo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_skiddoegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_skiddolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "PurchasePrice": 2000,
+          "ShopDescription": "{{i18n:marnie_skiddo_desc}}",
+          "ShopTexture": "{{ModId}}/skiddo/skiddoshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyskiddo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyskiddo": {
+          "DisplayName": "{{i18n: shinyskiddo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_skiddoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyskiddobirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skiddo/shinygogoat",
+          "BabyTexture": "{{ModId}}/skiddo/shinyskiddo",
+          "Sound": "{{ModId}}_gogoatcry",
+          "BabySound": "{{ModId}}_skiddocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_skiddo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_skiddoegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_skiddolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "skiddo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_skiddocry": {
+          "ID": "{{ModId}}_skiddocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skiddo/skiddocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gogoatcry": {
+          "ID": "{{ModId}}_gogoatcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skiddo/gogoatcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skiddo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_skiddoegg": {
+          "Name": "{{ModId}}_skiddoegg",
+          "DisplayName": "{{i18n: skiddoegg}}",
+          "Description": "{{i18n: skiddoegg.d}}",
+          "Texture": "{{ModId}}/skiddo/skiddoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skiddo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_skiddoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyskiddo",
+              "AnimalId": "{{ModId}}_shinyskiddo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_skiddo",
+              "AnimalId": "{{ModId}}_skiddo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - skiddo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_skiddo",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_miracleseed": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyskiddo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyskiddo",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_miracleseed": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_skiddo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_skiddo",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_skiddo_dailydrop": {
+          "Id": "{{ModId}}_skiddo_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_skiddo_dailydrop_item",
+              "ItemId": "{{ModId}}_miracleseed",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - skiddo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_skiddo",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_miracleseed": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinyskiddo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyskiddo",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinyskiddo_dailydrop": {
+          "Id": "{{ModId}}_shinyskiddo_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinyskiddo_dailydrop_item",
+              "ItemId": "{{ModId}}_miracleseed",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyskiddo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyskiddo",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_miracleseed": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

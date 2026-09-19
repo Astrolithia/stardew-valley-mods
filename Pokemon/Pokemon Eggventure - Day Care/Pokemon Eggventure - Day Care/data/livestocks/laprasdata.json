@@ -1,0 +1,203 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load lapras textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/lapras/lapras, {{ModId}}/lapras/shinylapras, {{ModId}}/lapras/laprasegg",
+      "FromFile": "assets/livestocks/lapras/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_lapras data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_lapras": {
+          "DisplayName": "{{i18n: lapras}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_laprasegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: laprasbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/lapras/lapras",
+          "BabyTexture": "{{ModId}}/lapras/lapras",
+          "Sound": "{{ModId}}_laprascry",
+          "BabySound": "{{ModId}}_laprascry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_laprasegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_lapras type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_lapras"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylapras data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylapras": {
+          "DisplayName": "{{i18n: shinylapras}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_laprasegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylaprasbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/lapras/shinylapras",
+          "BabyTexture": "{{ModId}}/lapras/shinylapras",
+          "Sound": "{{ModId}}_laprascry",
+          "BabySound": "{{ModId}}_laprascry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_laprasegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylapras type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylapras"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "lapras cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_laprascry": {
+          "ID": "{{ModId}}_laprascry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/lapras/laprascry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lapras egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_laprasegg": {
+          "Name": "{{ModId}}_laprasegg",
+          "DisplayName": "{{i18n: laprasegg}}",
+          "Description": "{{i18n: laprasegg.d}}",
+          "Texture": "{{ModId}}/lapras/laprasegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lapras hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_laprasegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylapras",
+              "AnimalId": "{{ModId}}_shinylapras",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_lapras",
+              "AnimalId": "{{ModId}}_lapras",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

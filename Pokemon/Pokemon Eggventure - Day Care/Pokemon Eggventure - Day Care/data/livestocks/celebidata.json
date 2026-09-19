@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load celebi textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/celebi/celebi, {{ModId}}/celebi/shinycelebi, {{ModId}}/celebi/celebiegg",
+      "FromFile": "assets/livestocks/celebi/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_celebi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_celebi": {
+          "DisplayName": "{{i18n: celebi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_celebiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: celebibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/celebi/celebi",
+          "BabyTexture": "{{ModId}}/celebi/celebi",
+          "Sound": "{{ModId}}_celebicry",
+          "BabySound": "{{ModId}}_celebicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_celebiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycelebi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycelebi": {
+          "DisplayName": "{{i18n: shinycelebi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_celebiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycelebibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/celebi/shinycelebi",
+          "BabyTexture": "{{ModId}}/celebi/shinycelebi",
+          "Sound": "{{ModId}}_celebicry",
+          "BabySound": "{{ModId}}_celebicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_celebiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "celebi cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_celebicry": {
+          "ID": "{{ModId}}_celebicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/celebi/celebicry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "celebi egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_celebiegg": {
+          "Name": "{{ModId}}_celebiegg",
+          "DisplayName": "{{i18n: celebiegg}}",
+          "Description": "{{i18n: celebiegg.d}}",
+          "Texture": "{{ModId}}/celebi/celebiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "celebi hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_celebiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycelebi",
+              "AnimalId": "{{ModId}}_shinycelebi",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_celebi",
+              "AnimalId": "{{ModId}}_celebi",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

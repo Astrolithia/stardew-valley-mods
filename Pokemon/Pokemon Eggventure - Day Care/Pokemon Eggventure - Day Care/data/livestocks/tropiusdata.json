@@ -1,0 +1,181 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tropius textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tropius/tropius, {{ModId}}/tropius/shinytropius, {{ModId}}/tropius/tropiusegg",
+      "FromFile": "assets/livestocks/tropius/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tropius data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tropius": {
+          "DisplayName": "{{i18n: tropius}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_tropiusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tropiusbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tropius/tropius",
+          "BabyTexture": "{{ModId}}/tropius/tropius",
+          "Sound": "{{ModId}}_tropiuscry",
+          "BabySound": "{{ModId}}_tropiuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tropiusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytropius data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytropius": {
+          "DisplayName": "{{i18n: shinytropius}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_tropiusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytropiusbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tropius/shinytropius",
+          "BabyTexture": "{{ModId}}/tropius/shinytropius",
+          "Sound": "{{ModId}}_tropiuscry",
+          "BabySound": "{{ModId}}_tropiuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tropiusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "tropius cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tropiuscry": {
+          "ID": "{{ModId}}_tropiuscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tropius/tropiuscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tropius egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tropiusegg": {
+          "Name": "{{ModId}}_tropiusegg",
+          "DisplayName": "{{i18n: tropiusegg}}",
+          "Description": "{{i18n: tropiusegg.d}}",
+          "Texture": "{{ModId}}/tropius/tropiusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_palmisland",
+            "pkegg_shake_palmisland",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tropius hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tropiusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytropius",
+              "AnimalId": "{{ModId}}_shinytropius",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tropius",
+              "AnimalId": "{{ModId}}_tropius",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

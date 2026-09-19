@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mankey textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mankey/mankey, {{ModId}}/mankey/shinymankey, {{ModId}}/mankey/primeape, {{ModId}}/mankey/shinyprimeape, {{ModId}}/mankey/annihilape, {{ModId}}/mankey/shinyannihilape, {{ModId}}/mankey/mankeyegg",
+      "FromFile": "assets/livestocks/mankey/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mankey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mankey": {
+          "DisplayName": "{{i18n: mankey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mankeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mankeybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mankey/primeape",
+          "BabyTexture": "{{ModId}}/mankey/mankey",
+          "Sound": "{{ModId}}_annihilapecry",
+          "BabySound": "{{ModId}}_mankeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mankeyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mankey evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mankey",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "mankeyevolution": {
+          "Id": "mankeyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mankey/annihilape"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymankey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymankey": {
+          "DisplayName": "{{i18n: shinymankey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mankeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymankeybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mankey/shinyprimeape",
+          "BabyTexture": "{{ModId}}/mankey/shinymankey",
+          "Sound": "{{ModId}}_annihilapecry",
+          "BabySound": "{{ModId}}_mankeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mankeyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymankey evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymankey",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymankeyevolution": {
+          "Id": "shinymankeyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mankey/shinyannihilape"
+        }
+      }
+    },
+    {
+      "LogName": "mankey cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mankeycry": {
+          "ID": "{{ModId}}_mankeycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mankey/mankeycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_annihilapecry": {
+          "ID": "{{ModId}}_annihilapecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mankey/annihilapecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mankey egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mankeyegg": {
+          "Name": "{{ModId}}_mankeyegg",
+          "DisplayName": "{{i18n: mankeyegg}}",
+          "Description": "{{i18n: mankeyegg.d}}",
+          "Texture": "{{ModId}}/mankey/mankeyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_common",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mankey hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mankeyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymankey",
+              "AnimalId": "{{ModId}}_shinymankey",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mankey",
+              "AnimalId": "{{ModId}}_mankey",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

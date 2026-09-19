@@ -1,0 +1,492 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load wormadam textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/burmy/burmy_wormadam, {{ModId}}/burmy/shinyburmy_wormadam, {{ModId}}/burmy/burmy2_wormadam, {{ModId}}/burmy/shinyburmy2_wormadam, {{ModId}}/burmy/burmy3_wormadam, {{ModId}}/burmy/shinyburmy3_wormadam, {{ModId}}/burmy/wormadam, {{ModId}}/burmy/shinywormadam, {{ModId}}/burmy/wormadam2, {{ModId}}/burmy/shinywormadam2, {{ModId}}/burmy/wormadam3, {{ModId}}/burmy/shinywormadam3, {{ModId}}/burmy/wormadamegg",
+      "FromFile": "assets/livestocks/burmy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_wormadamplant data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_wormadamplant": {
+          "DisplayName": "{{i18n: wormadamplant}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wormadamplantegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: wormadamplantbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/wormadam",
+          "BabyTexture": "{{ModId}}/burmy/burmy_wormadam",
+          "Sound": "{{ModId}}_wormadamcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wormadamplantegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywormadamplant data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywormadamplant": {
+          "DisplayName": "{{i18n: shinywormadamplant}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wormadamplantegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywormadamplantbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/shinywormadam",
+          "BabyTexture": "{{ModId}}/burmy/shinyburmy_wormadam",
+          "Sound": "{{ModId}}_wormadamcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wormadamplantegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_wormadamsandy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_wormadamsandy": {
+          "DisplayName": "{{i18n: wormadamsandy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wormadamsandyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: wormadamsandybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/wormadam2",
+          "BabyTexture": "{{ModId}}/burmy/burmy2_wormadam",
+          "Sound": "{{ModId}}_wormadamcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wormadamsandyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywormadamsandy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywormadamsandy": {
+          "DisplayName": "{{i18n: shinywormadamsandy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wormadamsandyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywormadamsandybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/shinywormadam2",
+          "BabyTexture": "{{ModId}}/burmy/shinyburmy2_wormadam",
+          "Sound": "{{ModId}}_wormadamcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wormadamsandyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_wormadamtrash data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_wormadamtrash": {
+          "DisplayName": "{{i18n: wormadamtrash}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wormadamtrashegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: wormadamtrashbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/wormadam3",
+          "BabyTexture": "{{ModId}}/burmy/burmy3_wormadam",
+          "Sound": "{{ModId}}_wormadamcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wormadamtrashegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywormadamtrash data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywormadamtrash": {
+          "DisplayName": "{{i18n: shinywormadamtrash}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wormadamtrashegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywormadamtrashbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/shinywormadam3",
+          "BabyTexture": "{{ModId}}/burmy/shinyburmy3_wormadam",
+          "Sound": "{{ModId}}_wormadamcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wormadamtrashegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "wormadam cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_wormadamcry": {
+          "ID": "{{ModId}}_wormadamcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/burmy/wormadamcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wormadamplantegg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_wormadamplantegg": {
+          "Name": "{{ModId}}_wormadamplantegg",
+          "DisplayName": "{{i18n: wormadamplantegg}}",
+          "Description": "{{i18n: wormadamplantegg.d}}",
+          "Texture": "{{ModId}}/burmy/wormadamegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "pkegg_shake_season_spring",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wormadamsandyegg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_wormadamsandyegg": {
+          "Name": "{{ModId}}_wormadamsandyegg",
+          "DisplayName": "{{i18n: wormadamsandyegg}}",
+          "Description": "{{i18n: wormadamsandyegg.d}}",
+          "Texture": "{{ModId}}/burmy/wormadamegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "pkegg_shake_season_summer",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wormadamtrashegg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_wormadamtrashegg": {
+          "Name": "{{ModId}}_wormadamtrashegg",
+          "DisplayName": "{{i18n: wormadamtrashegg}}",
+          "Description": "{{i18n: wormadamtrashegg.d}}",
+          "Texture": "{{ModId}}/burmy/wormadamegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "pkegg_shake_season_fall",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wormadamplantegg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_wormadamplantegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywormadamplant",
+              "AnimalId": "{{ModId}}_shinywormadamplant",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_wormadamplant",
+              "AnimalId": "{{ModId}}_wormadamplant",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wormadamsandyegg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_wormadamsandyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywormadamsandy",
+              "AnimalId": "{{ModId}}_shinywormadamsandy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_wormadamsandy",
+              "AnimalId": "{{ModId}}_wormadamsandy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wormadamtrashegg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_wormadamtrashegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywormadamtrash",
+              "AnimalId": "{{ModId}}_shinywormadamtrash",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_wormadamtrash",
+              "AnimalId": "{{ModId}}_wormadamtrash",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

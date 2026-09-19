@@ -1,0 +1,239 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load litwick textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/litwick/litwick, {{ModId}}/litwick/shinylitwick, {{ModId}}/litwick/lampent, {{ModId}}/litwick/shinylampent, {{ModId}}/litwick/chandelure, {{ModId}}/litwick/shinychandelure, {{ModId}}/litwick/litwickegg",
+      "FromFile": "assets/livestocks/litwick/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_litwick data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_litwick": {
+          "DisplayName": "{{i18n: litwick}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_litwickegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: litwickbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/litwick/lampent",
+          "BabyTexture": "{{ModId}}/litwick/litwick",
+          "Sound": "{{ModId}}_chandelurecry",
+          "BabySound": "{{ModId}}_litwickcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_litwickegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_litwick evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_litwick",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "litwickevolution": {
+          "Id": "litwickevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/litwick/chandelure"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_litwick type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_litwick"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylitwick data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylitwick": {
+          "DisplayName": "{{i18n: shinylitwick}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_litwickegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylitwickbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/litwick/shinylampent",
+          "BabyTexture": "{{ModId}}/litwick/shinylitwick",
+          "Sound": "{{ModId}}_chandelurecry",
+          "BabySound": "{{ModId}}_litwickcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_litwickegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylitwick evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylitwick",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinylitwickevolution": {
+          "Id": "shinylitwickevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/litwick/shinychandelure"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylitwick type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylitwick"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "litwick cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_litwickcry": {
+          "ID": "{{ModId}}_litwickcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/litwick/litwickcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_chandelurecry": {
+          "ID": "{{ModId}}_chandelurecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/litwick/chandelurecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "litwick egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_litwickegg": {
+          "Name": "{{ModId}}_litwickegg",
+          "DisplayName": "{{i18n: litwickegg}}",
+          "Description": "{{i18n: litwickegg.d}}",
+          "Texture": "{{ModId}}/litwick/litwickegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "litwick hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_litwickegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylitwick",
+              "AnimalId": "{{ModId}}_shinylitwick",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_litwick",
+              "AnimalId": "{{ModId}}_litwick",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

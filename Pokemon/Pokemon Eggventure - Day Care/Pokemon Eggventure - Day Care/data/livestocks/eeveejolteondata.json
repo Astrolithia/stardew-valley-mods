@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load eeveejolteon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/eevee/eeveejolteon, {{ModId}}/eevee/shinyeeveejolteon, {{ModId}}/eevee/jolteon, {{ModId}}/eevee/shinyjolteon, {{ModId}}/eevee/eeveejolteonegg",
+      "FromFile": "assets/livestocks/eevee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_eeveejolteon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_eeveejolteon": {
+          "DisplayName": "{{i18n: eeveejolteon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eeveejolteonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: eeveejolteonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eevee/jolteon",
+          "BabyTexture": "{{ModId}}/eevee/eeveejolteon",
+          "Sound": "{{ModId}}_jolteoncry",
+          "BabySound": "{{ModId}}_eeveecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eeveejolteonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyeeveejolteon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyeeveejolteon": {
+          "DisplayName": "{{i18n: shinyeeveejolteon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eeveejolteonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyeeveejolteonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eevee/shinyjolteon",
+          "BabyTexture": "{{ModId}}/eevee/shinyeeveejolteon",
+          "Sound": "{{ModId}}_jolteoncry",
+          "BabySound": "{{ModId}}_eeveecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eeveejolteonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "eeveejolteon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_eeveecry": {
+          "ID": "{{ModId}}_eeveecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eevee/eeveecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_jolteoncry": {
+          "ID": "{{ModId}}_jolteoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eevee/jolteoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eeveejolteon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_eeveejolteonegg": {
+          "Name": "{{ModId}}_eeveejolteonegg",
+          "DisplayName": "{{i18n: eeveejolteonegg}}",
+          "Description": "{{i18n: eeveejolteonegg.d}}",
+          "Texture": "{{ModId}}/eevee/eeveejolteonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eeveejolteon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_eeveejolteonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyeeveejolteon",
+              "AnimalId": "{{ModId}}_shinyeeveejolteon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_eeveejolteon",
+              "AnimalId": "{{ModId}}_eeveejolteon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

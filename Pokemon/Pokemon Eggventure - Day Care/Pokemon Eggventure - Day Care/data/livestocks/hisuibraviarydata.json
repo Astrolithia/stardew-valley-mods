@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuibraviary textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rufflet/rufflet_hisuibraviary, {{ModId}}/rufflet/shinyrufflet_hisuibraviary, {{ModId}}/rufflet/hisuibraviary, {{ModId}}/rufflet/shinyhisuibraviary, {{ModId}}/rufflet/hisuibraviaryegg",
+      "FromFile": "assets/livestocks/rufflet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuibraviary data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuibraviary": {
+          "DisplayName": "{{i18n: hisuibraviary}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hisuibraviaryegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuibraviarybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rufflet/hisuibraviary",
+          "BabyTexture": "{{ModId}}/rufflet/rufflet_hisuibraviary",
+          "Sound": "{{ModId}}_hisuibraviarycry",
+          "BabySound": "{{ModId}}_ruffletcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuibraviaryegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuibraviary data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuibraviary": {
+          "DisplayName": "{{i18n: shinyhisuibraviary}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hisuibraviaryegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuibraviarybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rufflet/shinyhisuibraviary",
+          "BabyTexture": "{{ModId}}/rufflet/shinyrufflet_hisuibraviary",
+          "Sound": "{{ModId}}_hisuibraviarycry",
+          "BabySound": "{{ModId}}_ruffletcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuibraviaryegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "hisuibraviary cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ruffletcry": {
+          "ID": "{{ModId}}_ruffletcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rufflet/ruffletcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuibraviarycry": {
+          "ID": "{{ModId}}_hisuibraviarycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rufflet/hisuibraviarycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuibraviary egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuibraviaryegg": {
+          "Name": "{{ModId}}_hisuibraviaryegg",
+          "DisplayName": "{{i18n: hisuibraviaryegg}}",
+          "Description": "{{i18n: hisuibraviaryegg.d}}",
+          "Texture": "{{ModId}}/rufflet/hisuibraviaryegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuibraviary hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuibraviaryegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuibraviary",
+              "AnimalId": "{{ModId}}_shinyhisuibraviary",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuibraviary",
+              "AnimalId": "{{ModId}}_hisuibraviary",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

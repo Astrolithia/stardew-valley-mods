@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load skorupi textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/skorupi/skorupi, {{ModId}}/skorupi/shinyskorupi, {{ModId}}/skorupi/drapion, {{ModId}}/skorupi/shinydrapion, {{ModId}}/skorupi/skorupiegg",
+      "FromFile": "assets/livestocks/skorupi/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_skorupi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_skorupi": {
+          "DisplayName": "{{i18n: skorupi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_skorupiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: skorupibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skorupi/drapion",
+          "BabyTexture": "{{ModId}}/skorupi/skorupi",
+          "Sound": "{{ModId}}_drapioncry",
+          "BabySound": "{{ModId}}_skorupicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skorupiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyskorupi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyskorupi": {
+          "DisplayName": "{{i18n: shinyskorupi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_skorupiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyskorupibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skorupi/shinydrapion",
+          "BabyTexture": "{{ModId}}/skorupi/shinyskorupi",
+          "Sound": "{{ModId}}_drapioncry",
+          "BabySound": "{{ModId}}_skorupicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skorupiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "skorupi cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_skorupicry": {
+          "ID": "{{ModId}}_skorupicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skorupi/skorupicry.ogg}}"
+          ]
+        },
+        "{{ModId}}_drapioncry": {
+          "ID": "{{ModId}}_drapioncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skorupi/drapioncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skorupi egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_skorupiegg": {
+          "Name": "{{ModId}}_skorupiegg",
+          "DisplayName": "{{i18n: skorupiegg}}",
+          "Description": "{{i18n: skorupiegg.d}}",
+          "Texture": "{{ModId}}/skorupi/skorupiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skorupi hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_skorupiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyskorupi",
+              "AnimalId": "{{ModId}}_shinyskorupi",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_skorupi",
+              "AnimalId": "{{ModId}}_skorupi",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

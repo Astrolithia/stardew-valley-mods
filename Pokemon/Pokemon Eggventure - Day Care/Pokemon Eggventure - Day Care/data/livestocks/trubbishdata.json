@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load trubbish textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/trubbish/trubbish, {{ModId}}/trubbish/shinytrubbish, {{ModId}}/trubbish/garbodor, {{ModId}}/trubbish/shinygarbodor, {{ModId}}/trubbish/trubbishegg",
+      "FromFile": "assets/livestocks/trubbish/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_trubbish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_trubbish": {
+          "DisplayName": "{{i18n: trubbish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_trubbishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: trubbishbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/trubbish/garbodor",
+          "BabyTexture": "{{ModId}}/trubbish/trubbish",
+          "Sound": "{{ModId}}_garbodorcry",
+          "BabySound": "{{ModId}}_trubbishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_trubbishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytrubbish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytrubbish": {
+          "DisplayName": "{{i18n: shinytrubbish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_trubbishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytrubbishbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/trubbish/shinygarbodor",
+          "BabyTexture": "{{ModId}}/trubbish/shinytrubbish",
+          "Sound": "{{ModId}}_garbodorcry",
+          "BabySound": "{{ModId}}_trubbishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_trubbishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "trubbish cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_trubbishcry": {
+          "ID": "{{ModId}}_trubbishcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/trubbish/trubbishcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_garbodorcry": {
+          "ID": "{{ModId}}_garbodorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/trubbish/garbodorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "trubbish egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_trubbishegg": {
+          "Name": "{{ModId}}_trubbishegg",
+          "DisplayName": "{{i18n: trubbishegg}}",
+          "Description": "{{i18n: trubbishegg.d}}",
+          "Texture": "{{ModId}}/trubbish/trubbishegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "trubbish hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_trubbishegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytrubbish",
+              "AnimalId": "{{ModId}}_shinytrubbish",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_trubbish",
+              "AnimalId": "{{ModId}}_trubbish",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

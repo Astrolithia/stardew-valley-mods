@@ -1,0 +1,260 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load wooloo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/wooloo/wooloo, {{ModId}}/wooloo/shinywooloo, {{ModId}}/wooloo/dubwool, {{ModId}}/wooloo/shinydubwool, {{ModId}}/wooloo/woolooegg",
+      "FromFile": "assets/livestocks/wooloo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_wooloo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_wooloo": {
+          "DisplayName": "{{i18n: wooloo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_woolooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: wooloobirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wooloo/dubwool",
+          "BabyTexture": "{{ModId}}/wooloo/wooloo",
+          "Sound": "{{ModId}}_dubwoolcry",
+          "BabySound": "{{ModId}}_wooloocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_wooloo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_woolooegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywooloo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywooloo": {
+          "DisplayName": "{{i18n: shinywooloo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_woolooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywooloobirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wooloo/shinydubwool",
+          "BabyTexture": "{{ModId}}/wooloo/shinywooloo",
+          "Sound": "{{ModId}}_dubwoolcry",
+          "BabySound": "{{ModId}}_wooloocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_wooloo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_woolooegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "wooloo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_wooloocry": {
+          "ID": "{{ModId}}_wooloocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wooloo/wooloocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dubwoolcry": {
+          "ID": "{{ModId}}_dubwoolcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wooloo/dubwoolcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wooloo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_woolooegg": {
+          "Name": "{{ModId}}_woolooegg",
+          "DisplayName": "{{i18n: woolooegg}}",
+          "Description": "{{i18n: woolooegg.d}}",
+          "Texture": "{{ModId}}/wooloo/woolooegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wooloo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_woolooegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywooloo",
+              "AnimalId": "{{ModId}}_shinywooloo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_wooloo",
+              "AnimalId": "{{ModId}}_wooloo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_wooloo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_wooloo",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_wooloo_dailydrop": {
+          "Id": "{{ModId}}_wooloo_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_wooloo_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - wooloo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_wooloo",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinywooloo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinywooloo",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinywooloo_dailydrop": {
+          "Id": "{{ModId}}_shinywooloo_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinywooloo_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinywooloo",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinywooloo",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

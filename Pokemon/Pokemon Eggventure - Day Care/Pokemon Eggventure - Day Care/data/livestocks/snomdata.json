@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load snom textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/snom/snom, {{ModId}}/snom/shinysnom, {{ModId}}/snom/frosmoth, {{ModId}}/snom/shinyfrosmoth, {{ModId}}/snom/snomegg",
+      "FromFile": "assets/livestocks/snom/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_snom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_snom": {
+          "DisplayName": "{{i18n: snom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_snomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: snombirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snom/frosmoth",
+          "BabyTexture": "{{ModId}}/snom/snom",
+          "Sound": "{{ModId}}_frosmothcry",
+          "BabySound": "{{ModId}}_snomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_snomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_snom type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_snom"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysnom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysnom": {
+          "DisplayName": "{{i18n: shinysnom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_snomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysnombirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snom/shinyfrosmoth",
+          "BabyTexture": "{{ModId}}/snom/shinysnom",
+          "Sound": "{{ModId}}_frosmothcry",
+          "BabySound": "{{ModId}}_snomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_snomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysnom type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysnom"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "snom cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_snomcry": {
+          "ID": "{{ModId}}_snomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snom/snomcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_frosmothcry": {
+          "ID": "{{ModId}}_frosmothcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snom/frosmothcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "snom egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_snomegg": {
+          "Name": "{{ModId}}_snomegg",
+          "DisplayName": "{{i18n: snomegg}}",
+          "Description": "{{i18n: snomegg.d}}",
+          "Texture": "{{ModId}}/snom/snomegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_common",
+            "pkegg_shake_winter",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "snom hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_snomegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysnom",
+              "AnimalId": "{{ModId}}_shinysnom",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_snom",
+              "AnimalId": "{{ModId}}_snom",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

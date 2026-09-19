@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sprigatito textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sprigatito/sprigatito, {{ModId}}/sprigatito/shinysprigatito, {{ModId}}/sprigatito/floragato, {{ModId}}/sprigatito/shinyfloragato, {{ModId}}/sprigatito/meowscarada, {{ModId}}/sprigatito/shinymeowscarada, {{ModId}}/sprigatito/sprigatitoegg",
+      "FromFile": "assets/livestocks/sprigatito/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sprigatito data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sprigatito": {
+          "DisplayName": "{{i18n: sprigatito}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sprigatitoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sprigatitobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sprigatito/floragato",
+          "BabyTexture": "{{ModId}}/sprigatito/sprigatito",
+          "Sound": "{{ModId}}_meowscaradacry",
+          "BabySound": "{{ModId}}_sprigatitocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sprigatitoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_sprigatito evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_sprigatito",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "sprigatitoevolution": {
+          "Id": "sprigatitoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/sprigatito/meowscarada"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysprigatito data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysprigatito": {
+          "DisplayName": "{{i18n: shinysprigatito}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sprigatitoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysprigatitobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sprigatito/shinyfloragato",
+          "BabyTexture": "{{ModId}}/sprigatito/shinysprigatito",
+          "Sound": "{{ModId}}_meowscaradacry",
+          "BabySound": "{{ModId}}_sprigatitocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sprigatitoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysprigatito evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysprigatito",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysprigatitoevolution": {
+          "Id": "shinysprigatitoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/sprigatito/shinymeowscarada"
+        }
+      }
+    },
+    {
+      "LogName": "sprigatito cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sprigatitocry": {
+          "ID": "{{ModId}}_sprigatitocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sprigatito/sprigatitocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_meowscaradacry": {
+          "ID": "{{ModId}}_meowscaradacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sprigatito/meowscaradacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sprigatito egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sprigatitoegg": {
+          "Name": "{{ModId}}_sprigatitoegg",
+          "DisplayName": "{{i18n: sprigatitoegg}}",
+          "Description": "{{i18n: sprigatitoegg.d}}",
+          "Texture": "{{ModId}}/sprigatito/sprigatitoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sprigatito hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sprigatitoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysprigatito",
+              "AnimalId": "{{ModId}}_shinysprigatito",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sprigatito",
+              "AnimalId": "{{ModId}}_sprigatito",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

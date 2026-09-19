@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load deino textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/deino/deino, {{ModId}}/deino/shinydeino, {{ModId}}/deino/zweilous, {{ModId}}/deino/shinyzweilous, {{ModId}}/deino/hydreigon, {{ModId}}/deino/shinyhydreigon, {{ModId}}/deino/deinoegg",
+      "FromFile": "assets/livestocks/deino/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_deino data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_deino": {
+          "DisplayName": "{{i18n: deino}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_deinoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: deinobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/deino/zweilous",
+          "BabyTexture": "{{ModId}}/deino/deino",
+          "Sound": "{{ModId}}_hydreigoncry",
+          "BabySound": "{{ModId}}_deinocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_deinoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_deino evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_deino",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "deinoevolution": {
+          "Id": "deinoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/deino/hydreigon"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydeino data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydeino": {
+          "DisplayName": "{{i18n: shinydeino}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_deinoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydeinobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/deino/shinyzweilous",
+          "BabyTexture": "{{ModId}}/deino/shinydeino",
+          "Sound": "{{ModId}}_hydreigoncry",
+          "BabySound": "{{ModId}}_deinocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_deinoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinydeino evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinydeino",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinydeinoevolution": {
+          "Id": "shinydeinoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/deino/shinyhydreigon"
+        }
+      }
+    },
+    {
+      "LogName": "deino cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_deinocry": {
+          "ID": "{{ModId}}_deinocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/deino/deinocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hydreigoncry": {
+          "ID": "{{ModId}}_hydreigoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/deino/hydreigoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "deino egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_deinoegg": {
+          "Name": "{{ModId}}_deinoegg",
+          "DisplayName": "{{i18n: deinoegg}}",
+          "Description": "{{i18n: deinoegg.d}}",
+          "Texture": "{{ModId}}/deino/deinoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 150,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_rare",
+            "pkegg_travelingcart",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "deino hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_deinoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydeino",
+              "AnimalId": "{{ModId}}_shinydeino",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_deino",
+              "AnimalId": "{{ModId}}_deino",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

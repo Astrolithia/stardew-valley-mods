@@ -1,0 +1,239 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuisamurott textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/oshawott/oshawott_hisuisamurott, {{ModId}}/oshawott/shinyoshawott_hisuisamurott, {{ModId}}/oshawott/dewott_hisuisamurott, {{ModId}}/oshawott/shinydewott_hisuisamurott, {{ModId}}/oshawott/hisuisamurott, {{ModId}}/oshawott/shinyhisuisamurott, {{ModId}}/oshawott/hisuisamurottegg",
+      "FromFile": "assets/livestocks/oshawott/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuisamurott data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuisamurott": {
+          "DisplayName": "{{i18n: hisuisamurott}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuisamurottegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuisamurottbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oshawott/dewott_hisuisamurott",
+          "BabyTexture": "{{ModId}}/oshawott/oshawott_hisuisamurott",
+          "Sound": "{{ModId}}_hisuisamurottcry",
+          "BabySound": "{{ModId}}_oshawottcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuisamurottegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hisuisamurott evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hisuisamurott",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "hisuisamurottevolution": {
+          "Id": "hisuisamurottevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oshawott/hisuisamurott"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hisuisamurott type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hisuisamurott"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuisamurott data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuisamurott": {
+          "DisplayName": "{{i18n: shinyhisuisamurott}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuisamurottegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuisamurottbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oshawott/shinydewott_hisuisamurott",
+          "BabyTexture": "{{ModId}}/oshawott/shinyoshawott_hisuisamurott",
+          "Sound": "{{ModId}}_hisuisamurottcry",
+          "BabySound": "{{ModId}}_oshawottcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuisamurottegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhisuisamurott evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhisuisamurott",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhisuisamurottevolution": {
+          "Id": "shinyhisuisamurottevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oshawott/shinyhisuisamurott"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhisuisamurott type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhisuisamurott"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "hisuisamurott cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_oshawottcry": {
+          "ID": "{{ModId}}_oshawottcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oshawott/oshawottcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuisamurottcry": {
+          "ID": "{{ModId}}_hisuisamurottcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oshawott/hisuisamurottcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuisamurott egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuisamurottegg": {
+          "Name": "{{ModId}}_hisuisamurottegg",
+          "DisplayName": "{{i18n: hisuisamurottegg}}",
+          "Description": "{{i18n: hisuisamurottegg.d}}",
+          "Texture": "{{ModId}}/oshawott/hisuisamurottegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuisamurott hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuisamurottegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuisamurott",
+              "AnimalId": "{{ModId}}_shinyhisuisamurott",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuisamurott",
+              "AnimalId": "{{ModId}}_hisuisamurott",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

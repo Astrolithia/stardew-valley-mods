@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gossifleur textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/gossifleur/gossifleur, {{ModId}}/gossifleur/shinygossifleur, {{ModId}}/gossifleur/eldegoss, {{ModId}}/gossifleur/shinyeldegoss, {{ModId}}/gossifleur/gossifleuregg",
+      "FromFile": "assets/livestocks/gossifleur/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gossifleur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gossifleur": {
+          "DisplayName": "{{i18n: gossifleur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_gossifleuregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gossifleurbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gossifleur/eldegoss",
+          "BabyTexture": "{{ModId}}/gossifleur/gossifleur",
+          "Sound": "{{ModId}}_eldegosscry",
+          "BabySound": "{{ModId}}_gossifleurcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gossifleuregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygossifleur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygossifleur": {
+          "DisplayName": "{{i18n: shinygossifleur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_gossifleuregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygossifleurbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gossifleur/shinyeldegoss",
+          "BabyTexture": "{{ModId}}/gossifleur/shinygossifleur",
+          "Sound": "{{ModId}}_eldegosscry",
+          "BabySound": "{{ModId}}_gossifleurcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gossifleuregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "gossifleur cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_gossifleurcry": {
+          "ID": "{{ModId}}_gossifleurcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gossifleur/gossifleurcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_eldegosscry": {
+          "ID": "{{ModId}}_eldegosscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gossifleur/eldegosscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gossifleur egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gossifleuregg": {
+          "Name": "{{ModId}}_gossifleuregg",
+          "DisplayName": "{{i18n: gossifleuregg}}",
+          "Description": "{{i18n: gossifleuregg.d}}",
+          "Texture": "{{ModId}}/gossifleur/gossifleuregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gossifleur hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_gossifleuregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygossifleur",
+              "AnimalId": "{{ModId}}_shinygossifleur",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gossifleur",
+              "AnimalId": "{{ModId}}_gossifleur",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

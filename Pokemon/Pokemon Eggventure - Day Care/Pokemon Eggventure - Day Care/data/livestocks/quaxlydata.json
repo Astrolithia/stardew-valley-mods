@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load quaxly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/quaxly/quaxly, {{ModId}}/quaxly/shinyquaxly, {{ModId}}/quaxly/quaxwell, {{ModId}}/quaxly/shinyquaxwell, {{ModId}}/quaxly/quaquaval, {{ModId}}/quaxly/shinyquaquaval, {{ModId}}/quaxly/quaxlyegg",
+      "FromFile": "assets/livestocks/quaxly/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_quaxly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_quaxly": {
+          "DisplayName": "{{i18n: quaxly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_quaxlyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: quaxlybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/quaxly/quaxwell",
+          "BabyTexture": "{{ModId}}/quaxly/quaxly",
+          "Sound": "{{ModId}}_quaquavalcry",
+          "BabySound": "{{ModId}}_quaxlycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_quaxlyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_quaxly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_quaxly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "quaxlyevolution": {
+          "Id": "quaxlyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/quaxly/quaquaval"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_quaxly type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_quaxly"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyquaxly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyquaxly": {
+          "DisplayName": "{{i18n: shinyquaxly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_quaxlyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyquaxlybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/quaxly/shinyquaxwell",
+          "BabyTexture": "{{ModId}}/quaxly/shinyquaxly",
+          "Sound": "{{ModId}}_quaquavalcry",
+          "BabySound": "{{ModId}}_quaxlycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_quaxlyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyquaxly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyquaxly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyquaxlyevolution": {
+          "Id": "shinyquaxlyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/quaxly/shinyquaquaval"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyquaxly type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyquaxly"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "quaxly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_quaxlycry": {
+          "ID": "{{ModId}}_quaxlycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/quaxly/quaxlycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_quaquavalcry": {
+          "ID": "{{ModId}}_quaquavalcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/quaxly/quaquavalcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "quaxly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_quaxlyegg": {
+          "Name": "{{ModId}}_quaxlyegg",
+          "DisplayName": "{{i18n: quaxlyegg}}",
+          "Description": "{{i18n: quaxlyegg.d}}",
+          "Texture": "{{ModId}}/quaxly/quaxlyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "pkegg_panning_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "quaxly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_quaxlyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyquaxly",
+              "AnimalId": "{{ModId}}_shinyquaxly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_quaxly",
+              "AnimalId": "{{ModId}}_quaxly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

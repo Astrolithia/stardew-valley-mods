@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load stufful textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/stufful/stufful, {{ModId}}/stufful/shinystufful, {{ModId}}/stufful/bewear, {{ModId}}/stufful/shinybewear, {{ModId}}/stufful/stuffulegg",
+      "FromFile": "assets/livestocks/stufful/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_stufful data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_stufful": {
+          "DisplayName": "{{i18n: stufful}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_stuffulegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: stuffulbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stufful/bewear",
+          "BabyTexture": "{{ModId}}/stufful/stufful",
+          "Sound": "{{ModId}}_bewearcry",
+          "BabySound": "{{ModId}}_stuffulcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stuffulegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinystufful data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinystufful": {
+          "DisplayName": "{{i18n: shinystufful}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_stuffulegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinystuffulbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stufful/shinybewear",
+          "BabyTexture": "{{ModId}}/stufful/shinystufful",
+          "Sound": "{{ModId}}_bewearcry",
+          "BabySound": "{{ModId}}_stuffulcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stuffulegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "stufful cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_stuffulcry": {
+          "ID": "{{ModId}}_stuffulcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/stufful/stuffulcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_bewearcry": {
+          "ID": "{{ModId}}_bewearcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/stufful/bewearcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stufful egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_stuffulegg": {
+          "Name": "{{ModId}}_stuffulegg",
+          "DisplayName": "{{i18n: stuffulegg}}",
+          "Description": "{{i18n: stuffulegg.d}}",
+          "Texture": "{{ModId}}/stufful/stuffulegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stufful hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_stuffulegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinystufful",
+              "AnimalId": "{{ModId}}_shinystufful",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_stufful",
+              "AnimalId": "{{ModId}}_stufful",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

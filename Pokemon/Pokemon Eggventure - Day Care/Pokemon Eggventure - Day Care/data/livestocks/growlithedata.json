@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load growlithe textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/growlithe/growlithe, {{ModId}}/growlithe/shinygrowlithe, {{ModId}}/growlithe/arcanine, {{ModId}}/growlithe/shinyarcanine, {{ModId}}/growlithe/growlitheegg",
+      "FromFile": "assets/livestocks/growlithe/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_growlithe data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_growlithe": {
+          "DisplayName": "{{i18n: growlithe}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_growlitheegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: growlithebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/growlithe/arcanine",
+          "BabyTexture": "{{ModId}}/growlithe/growlithe",
+          "Sound": "{{ModId}}_arcaninecry",
+          "BabySound": "{{ModId}}_growlithecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_growlitheegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_growlithe type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_growlithe"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygrowlithe data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygrowlithe": {
+          "DisplayName": "{{i18n: shinygrowlithe}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_growlitheegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygrowlithebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/growlithe/shinyarcanine",
+          "BabyTexture": "{{ModId}}/growlithe/shinygrowlithe",
+          "Sound": "{{ModId}}_arcaninecry",
+          "BabySound": "{{ModId}}_growlithecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_growlitheegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygrowlithe type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygrowlithe"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "growlithe cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_growlithecry": {
+          "ID": "{{ModId}}_growlithecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/growlithe/growlithecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_arcaninecry": {
+          "ID": "{{ModId}}_arcaninecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/growlithe/arcaninecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "growlithe egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_growlitheegg": {
+          "Name": "{{ModId}}_growlitheegg",
+          "DisplayName": "{{i18n: growlitheegg}}",
+          "Description": "{{i18n: growlitheegg.d}}",
+          "Texture": "{{ModId}}/growlithe/growlitheegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_common",
+            "pkegg_mine_81_100_p4",
+            "pkegg_mine_101_120_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "growlithe hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_growlitheegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygrowlithe",
+              "AnimalId": "{{ModId}}_shinygrowlithe",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_growlithe",
+              "AnimalId": "{{ModId}}_growlithe",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

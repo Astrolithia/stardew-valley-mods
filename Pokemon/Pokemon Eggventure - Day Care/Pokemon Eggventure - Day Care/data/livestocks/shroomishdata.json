@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shroomish textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shroomish/shroomish, {{ModId}}/shroomish/shinyshroomish, {{ModId}}/shroomish/breloom, {{ModId}}/shroomish/shinybreloom, {{ModId}}/shroomish/shroomishegg",
+      "FromFile": "assets/livestocks/shroomish/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shroomish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shroomish": {
+          "DisplayName": "{{i18n: shroomish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shroomishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shroomishbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shroomish/breloom",
+          "BabyTexture": "{{ModId}}/shroomish/shroomish",
+          "Sound": "{{ModId}}_breloomcry",
+          "BabySound": "{{ModId}}_shroomishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shroomishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshroomish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshroomish": {
+          "DisplayName": "{{i18n: shinyshroomish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shroomishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshroomishbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shroomish/shinybreloom",
+          "BabyTexture": "{{ModId}}/shroomish/shinyshroomish",
+          "Sound": "{{ModId}}_breloomcry",
+          "BabySound": "{{ModId}}_shroomishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shroomishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "shroomish cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shroomishcry": {
+          "ID": "{{ModId}}_shroomishcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shroomish/shroomishcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_breloomcry": {
+          "ID": "{{ModId}}_breloomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shroomish/breloomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shroomish egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shroomishegg": {
+          "Name": "{{ModId}}_shroomishegg",
+          "DisplayName": "{{i18n: shroomishegg}}",
+          "Description": "{{i18n: shroomishegg.d}}",
+          "Texture": "{{ModId}}/shroomish/shroomishegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shroomish hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shroomishegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshroomish",
+              "AnimalId": "{{ModId}}_shinyshroomish",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shroomish",
+              "AnimalId": "{{ModId}}_shroomish",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

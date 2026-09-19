@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ironboulder textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ironboulder/ironboulder, {{ModId}}/ironboulder/shinyironboulder, {{ModId}}/ironboulder/ironboulderegg",
+      "FromFile": "assets/livestocks/ironboulder/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ironboulder data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ironboulder": {
+          "DisplayName": "{{i18n: ironboulder}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ironboulderegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ironboulderbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironboulder/ironboulder",
+          "BabyTexture": "{{ModId}}/ironboulder/ironboulder",
+          "Sound": "{{ModId}}_ironbouldercry",
+          "BabySound": "{{ModId}}_ironbouldercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironboulderegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyironboulder data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyironboulder": {
+          "DisplayName": "{{i18n: shinyironboulder}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ironboulderegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyironboulderbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironboulder/shinyironboulder",
+          "BabyTexture": "{{ModId}}/ironboulder/shinyironboulder",
+          "Sound": "{{ModId}}_ironbouldercry",
+          "BabySound": "{{ModId}}_ironbouldercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironboulderegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "ironboulder cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ironbouldercry": {
+          "ID": "{{ModId}}_ironbouldercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ironboulder/ironbouldercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironboulder egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ironboulderegg": {
+          "Name": "{{ModId}}_ironboulderegg",
+          "DisplayName": "{{i18n: ironboulderegg}}",
+          "Description": "{{i18n: ironboulderegg.d}}",
+          "Texture": "{{ModId}}/ironboulder/ironboulderegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_futurs",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironboulder hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ironboulderegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyironboulder",
+              "AnimalId": "{{ModId}}_shinyironboulder",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ironboulder",
+              "AnimalId": "{{ModId}}_ironboulder",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

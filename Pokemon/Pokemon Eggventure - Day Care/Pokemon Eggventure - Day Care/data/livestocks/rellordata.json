@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rellor textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rellor/rellor, {{ModId}}/rellor/shinyrellor, {{ModId}}/rellor/rabsca, {{ModId}}/rellor/shinyrabsca, {{ModId}}/rellor/relloregg",
+      "FromFile": "assets/livestocks/rellor/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rellor data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rellor": {
+          "DisplayName": "{{i18n: rellor}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_relloregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rellorbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rellor/rabsca",
+          "BabyTexture": "{{ModId}}/rellor/rellor",
+          "Sound": "{{ModId}}_rabscacry",
+          "BabySound": "{{ModId}}_rellorcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_relloregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrellor data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrellor": {
+          "DisplayName": "{{i18n: shinyrellor}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_relloregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrellorbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rellor/shinyrabsca",
+          "BabyTexture": "{{ModId}}/rellor/shinyrellor",
+          "Sound": "{{ModId}}_rabscacry",
+          "BabySound": "{{ModId}}_rellorcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_relloregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "rellor cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rellorcry": {
+          "ID": "{{ModId}}_rellorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rellor/rellorcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_rabscacry": {
+          "ID": "{{ModId}}_rabscacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rellor/rabscacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rellor egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_relloregg": {
+          "Name": "{{ModId}}_relloregg",
+          "DisplayName": "{{i18n: relloregg}}",
+          "Description": "{{i18n: relloregg.d}}",
+          "Texture": "{{ModId}}/rellor/relloregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rellor hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_relloregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrellor",
+              "AnimalId": "{{ModId}}_shinyrellor",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rellor",
+              "AnimalId": "{{ModId}}_rellor",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

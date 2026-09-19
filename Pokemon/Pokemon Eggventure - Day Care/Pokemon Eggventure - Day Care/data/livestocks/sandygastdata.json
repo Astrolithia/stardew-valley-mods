@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sandygast textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sandygast/sandygast, {{ModId}}/sandygast/shinysandygast, {{ModId}}/sandygast/palossand, {{ModId}}/sandygast/shinypalossand, {{ModId}}/sandygast/sandygastegg",
+      "FromFile": "assets/livestocks/sandygast/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sandygast data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sandygast": {
+          "DisplayName": "{{i18n: sandygast}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sandygastegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sandygastbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandygast/palossand",
+          "BabyTexture": "{{ModId}}/sandygast/sandygast",
+          "Sound": "{{ModId}}_palossandcry",
+          "BabySound": "{{ModId}}_sandygastcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandygastegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysandygast data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysandygast": {
+          "DisplayName": "{{i18n: shinysandygast}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sandygastegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysandygastbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandygast/shinypalossand",
+          "BabyTexture": "{{ModId}}/sandygast/shinysandygast",
+          "Sound": "{{ModId}}_palossandcry",
+          "BabySound": "{{ModId}}_sandygastcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandygastegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "sandygast cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sandygastcry": {
+          "ID": "{{ModId}}_sandygastcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandygast/sandygastcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_palossandcry": {
+          "ID": "{{ModId}}_palossandcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandygast/palossandcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandygast egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sandygastegg": {
+          "Name": "{{ModId}}_sandygastegg",
+          "DisplayName": "{{i18n: sandygastegg}}",
+          "Description": "{{i18n: sandygastegg.d}}",
+          "Texture": "{{ModId}}/sandygast/sandygastegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandygast hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sandygastegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysandygast",
+              "AnimalId": "{{ModId}}_shinysandygast",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sandygast",
+              "AnimalId": "{{ModId}}_sandygast",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

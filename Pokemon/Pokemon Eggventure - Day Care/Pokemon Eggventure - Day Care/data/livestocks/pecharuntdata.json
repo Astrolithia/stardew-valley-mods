@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pecharunt textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pecharunt/pecharunt, {{ModId}}/pecharunt/shinypecharunt, {{ModId}}/pecharunt/pecharuntegg",
+      "FromFile": "assets/livestocks/pecharunt/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pecharunt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pecharunt": {
+          "DisplayName": "{{i18n: pecharunt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pecharuntegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pecharuntbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pecharunt/pecharunt",
+          "BabyTexture": "{{ModId}}/pecharunt/pecharunt",
+          "Sound": "{{ModId}}_pecharuntcry",
+          "BabySound": "{{ModId}}_pecharuntcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pecharuntegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypecharunt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypecharunt": {
+          "DisplayName": "{{i18n: shinypecharunt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pecharuntegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypecharuntbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pecharunt/shinypecharunt",
+          "BabyTexture": "{{ModId}}/pecharunt/shinypecharunt",
+          "Sound": "{{ModId}}_pecharuntcry",
+          "BabySound": "{{ModId}}_pecharuntcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pecharuntegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "pecharunt cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pecharuntcry": {
+          "ID": "{{ModId}}_pecharuntcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pecharunt/pecharuntcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pecharunt egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pecharuntegg": {
+          "Name": "{{ModId}}_pecharuntegg",
+          "DisplayName": "{{i18n: pecharuntegg}}",
+          "Description": "{{i18n: pecharuntegg.d}}",
+          "Texture": "{{ModId}}/pecharunt/pecharuntegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_poison",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pecharunt hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pecharuntegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypecharunt",
+              "AnimalId": "{{ModId}}_shinypecharunt",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pecharunt",
+              "AnimalId": "{{ModId}}_pecharunt",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

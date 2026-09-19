@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load stakataka textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/stakataka/stakataka, {{ModId}}/stakataka/shinystakataka, {{ModId}}/stakataka/stakatakaegg",
+      "FromFile": "assets/livestocks/stakataka/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_stakataka data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_stakataka": {
+          "DisplayName": "{{i18n: stakataka}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_stakatakaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: stakatakabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stakataka/stakataka",
+          "BabyTexture": "{{ModId}}/stakataka/stakataka",
+          "Sound": "{{ModId}}_stakatakacry",
+          "BabySound": "{{ModId}}_stakatakacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stakatakaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinystakataka data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinystakataka": {
+          "DisplayName": "{{i18n: shinystakataka}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_stakatakaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinystakatakabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stakataka/shinystakataka",
+          "BabyTexture": "{{ModId}}/stakataka/shinystakataka",
+          "Sound": "{{ModId}}_stakatakacry",
+          "BabySound": "{{ModId}}_stakatakacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stakatakaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "stakataka cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_stakatakacry": {
+          "ID": "{{ModId}}_stakatakacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/stakataka/stakatakacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stakataka egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_stakatakaegg": {
+          "Name": "{{ModId}}_stakatakaegg",
+          "DisplayName": "{{i18n: stakatakaegg}}",
+          "Description": "{{i18n: stakatakaegg.d}}",
+          "Texture": "{{ModId}}/stakataka/stakatakaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stakataka hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_stakatakaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinystakataka",
+              "AnimalId": "{{ModId}}_shinystakataka",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_stakataka",
+              "AnimalId": "{{ModId}}_stakataka",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

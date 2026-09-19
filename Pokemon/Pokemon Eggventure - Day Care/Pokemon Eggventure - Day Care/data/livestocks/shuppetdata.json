@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shuppet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shuppet/shuppet, {{ModId}}/shuppet/shinyshuppet, {{ModId}}/shuppet/banette, {{ModId}}/shuppet/shinybanette, {{ModId}}/shuppet/shuppetegg",
+      "FromFile": "assets/livestocks/shuppet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shuppet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shuppet": {
+          "DisplayName": "{{i18n: shuppet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shuppetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shuppetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shuppet/banette",
+          "BabyTexture": "{{ModId}}/shuppet/shuppet",
+          "Sound": "{{ModId}}_banettecry",
+          "BabySound": "{{ModId}}_shuppetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shuppetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshuppet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshuppet": {
+          "DisplayName": "{{i18n: shinyshuppet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shuppetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshuppetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shuppet/shinybanette",
+          "BabyTexture": "{{ModId}}/shuppet/shinyshuppet",
+          "Sound": "{{ModId}}_banettecry",
+          "BabySound": "{{ModId}}_shuppetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shuppetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "shuppet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shuppetcry": {
+          "ID": "{{ModId}}_shuppetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shuppet/shuppetcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_banettecry": {
+          "ID": "{{ModId}}_banettecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shuppet/banettecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shuppet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shuppetegg": {
+          "Name": "{{ModId}}_shuppetegg",
+          "DisplayName": "{{i18n: shuppetegg}}",
+          "Description": "{{i18n: shuppetegg.d}}",
+          "Texture": "{{ModId}}/shuppet/shuppetegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_31_40_p2",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shuppet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shuppetegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshuppet",
+              "AnimalId": "{{ModId}}_shinyshuppet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shuppet",
+              "AnimalId": "{{ModId}}_shuppet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

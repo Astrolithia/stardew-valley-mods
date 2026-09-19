@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load magnemite textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/magnemite/magnemite, {{ModId}}/magnemite/shinymagnemite, {{ModId}}/magnemite/magneton, {{ModId}}/magnemite/shinymagneton, {{ModId}}/magnemite/magnezone, {{ModId}}/magnemite/shinymagnezone, {{ModId}}/magnemite/magnemiteegg",
+      "FromFile": "assets/livestocks/magnemite/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_magnemite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_magnemite": {
+          "DisplayName": "{{i18n: magnemite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_magnemiteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: magnemitebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/magnemite/magneton",
+          "BabyTexture": "{{ModId}}/magnemite/magnemite",
+          "Sound": "{{ModId}}_magnezonecry",
+          "BabySound": "{{ModId}}_magnemitecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_magnemiteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_magnemite evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_magnemite",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "magnemiteevolution": {
+          "Id": "magnemiteevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/magnemite/magnezone"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymagnemite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymagnemite": {
+          "DisplayName": "{{i18n: shinymagnemite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_magnemiteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymagnemitebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/magnemite/shinymagneton",
+          "BabyTexture": "{{ModId}}/magnemite/shinymagnemite",
+          "Sound": "{{ModId}}_magnezonecry",
+          "BabySound": "{{ModId}}_magnemitecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_magnemiteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymagnemite evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymagnemite",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymagnemiteevolution": {
+          "Id": "shinymagnemiteevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/magnemite/shinymagnezone"
+        }
+      }
+    },
+    {
+      "LogName": "magnemite cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_magnemitecry": {
+          "ID": "{{ModId}}_magnemitecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/magnemite/magnemitecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_magnezonecry": {
+          "ID": "{{ModId}}_magnezonecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/magnemite/magnezonecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "magnemite egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_magnemiteegg": {
+          "Name": "{{ModId}}_magnemiteegg",
+          "DisplayName": "{{i18n: magnemiteegg}}",
+          "Description": "{{i18n: magnemiteegg.d}}",
+          "Texture": "{{ModId}}/magnemite/magnemiteegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "magnemite hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_magnemiteegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymagnemite",
+              "AnimalId": "{{ModId}}_shinymagnemite",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_magnemite",
+              "AnimalId": "{{ModId}}_magnemite",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load eeveeleafeon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/eevee/eeveeleafeon, {{ModId}}/eevee/shinyeeveeleafeon, {{ModId}}/eevee/leafeon, {{ModId}}/eevee/shinyleafeon, {{ModId}}/eevee/eeveeleafeonegg",
+      "FromFile": "assets/livestocks/eevee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_eeveeleafeon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_eeveeleafeon": {
+          "DisplayName": "{{i18n: eeveeleafeon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eeveeleafeonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: eeveeleafeonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eevee/leafeon",
+          "BabyTexture": "{{ModId}}/eevee/eeveeleafeon",
+          "Sound": "{{ModId}}_leafeoncry",
+          "BabySound": "{{ModId}}_eeveecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eeveeleafeonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyeeveeleafeon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyeeveeleafeon": {
+          "DisplayName": "{{i18n: shinyeeveeleafeon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eeveeleafeonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyeeveeleafeonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eevee/shinyleafeon",
+          "BabyTexture": "{{ModId}}/eevee/shinyeeveeleafeon",
+          "Sound": "{{ModId}}_leafeoncry",
+          "BabySound": "{{ModId}}_eeveecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eeveeleafeonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "eeveeleafeon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_eeveecry": {
+          "ID": "{{ModId}}_eeveecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eevee/eeveecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_leafeoncry": {
+          "ID": "{{ModId}}_leafeoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eevee/leafeoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eeveeleafeon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_eeveeleafeonegg": {
+          "Name": "{{ModId}}_eeveeleafeonegg",
+          "DisplayName": "{{i18n: eeveeleafeonegg}}",
+          "Description": "{{i18n: eeveeleafeonegg.d}}",
+          "Texture": "{{ModId}}/eevee/eeveeleafeonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eeveeleafeon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_eeveeleafeonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyeeveeleafeon",
+              "AnimalId": "{{ModId}}_shinyeeveeleafeon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_eeveeleafeon",
+              "AnimalId": "{{ModId}}_eeveeleafeon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

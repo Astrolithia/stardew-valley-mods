@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sneasel textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sneasel/sneasel, {{ModId}}/sneasel/shinysneasel, {{ModId}}/sneasel/weavile, {{ModId}}/sneasel/shinyweavile, {{ModId}}/sneasel/sneaselegg",
+      "FromFile": "assets/livestocks/sneasel/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sneasel data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sneasel": {
+          "DisplayName": "{{i18n: sneasel}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sneaselegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sneaselbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sneasel/weavile",
+          "BabyTexture": "{{ModId}}/sneasel/sneasel",
+          "Sound": "{{ModId}}_weavilecry",
+          "BabySound": "{{ModId}}_sneaselcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sneaselegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_sneasel type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_sneasel"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysneasel data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysneasel": {
+          "DisplayName": "{{i18n: shinysneasel}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sneaselegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysneaselbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sneasel/shinyweavile",
+          "BabyTexture": "{{ModId}}/sneasel/shinysneasel",
+          "Sound": "{{ModId}}_weavilecry",
+          "BabySound": "{{ModId}}_sneaselcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sneaselegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysneasel type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysneasel"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "sneasel cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sneaselcry": {
+          "ID": "{{ModId}}_sneaselcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sneasel/sneaselcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_weavilecry": {
+          "ID": "{{ModId}}_weavilecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sneasel/weavilecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sneasel egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sneaselegg": {
+          "Name": "{{ModId}}_sneaselegg",
+          "DisplayName": "{{i18n: sneaselegg}}",
+          "Description": "{{i18n: sneaselegg.d}}",
+          "Texture": "{{ModId}}/sneasel/sneaselegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_rare",
+            "pkegg_mine_41_60_p4",
+            "pkegg_mine_61_80_p4",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sneasel hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sneaselegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysneasel",
+              "AnimalId": "{{ModId}}_shinysneasel",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sneasel",
+              "AnimalId": "{{ModId}}_sneasel",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

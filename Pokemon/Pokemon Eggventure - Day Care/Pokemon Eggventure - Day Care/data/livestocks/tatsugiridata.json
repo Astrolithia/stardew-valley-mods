@@ -1,0 +1,224 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tatsugiri textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tatsugiri/tatsugiri, {{ModId}}/tatsugiri/shinytatsugiri, {{ModId}}/tatsugiri/tatsugiri2, {{ModId}}/tatsugiri/shinytatsugiri2, {{ModId}}/tatsugiri/tatsugiri3, {{ModId}}/tatsugiri/shinytatsugiri3, {{ModId}}/tatsugiri/tatsugiriegg",
+      "FromFile": "assets/livestocks/tatsugiri/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tatsugiri data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tatsugiri": {
+          "DisplayName": "{{i18n: tatsugiri}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_tatsugiriegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tatsugiribirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tatsugiri/tatsugiri",
+          "BabyTexture": "{{ModId}}/tatsugiri/tatsugiri",
+          "Sound": "{{ModId}}_tatsugiricry",
+          "BabySound": "{{ModId}}_tatsugiricry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tatsugiriegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "tatsugiri2",
+              "Texture": "{{ModId}}/tatsugiri/tatsugiri2",
+              "BabyTexture": "{{ModId}}/tatsugiri/tatsugiri2"
+            },
+            {
+              "Id": "tatsugiri3",
+              "Texture": "{{ModId}}/tatsugiri/tatsugiri3",
+              "BabyTexture": "{{ModId}}/tatsugiri/tatsugiri3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_tatsugiri type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_tatsugiri"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytatsugiri data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytatsugiri": {
+          "DisplayName": "{{i18n: shinytatsugiri}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_tatsugiriegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytatsugiribirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tatsugiri/shinytatsugiri",
+          "BabyTexture": "{{ModId}}/tatsugiri/shinytatsugiri",
+          "Sound": "{{ModId}}_tatsugiricry",
+          "BabySound": "{{ModId}}_tatsugiricry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tatsugiriegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "tatsugiri2",
+              "Texture": "{{ModId}}/tatsugiri/shinytatsugiri2",
+              "BabyTexture": "{{ModId}}/tatsugiri/shinytatsugiri2"
+            },
+            {
+              "Id": "tatsugiri3",
+              "Texture": "{{ModId}}/tatsugiri/shinytatsugiri3",
+              "BabyTexture": "{{ModId}}/tatsugiri/shinytatsugiri3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytatsugiri type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytatsugiri"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "tatsugiri cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tatsugiricry": {
+          "ID": "{{ModId}}_tatsugiricry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tatsugiri/tatsugiricry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tatsugiri egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tatsugiriegg": {
+          "Name": "{{ModId}}_tatsugiriegg",
+          "DisplayName": "{{i18n: tatsugiriegg}}",
+          "Description": "{{i18n: tatsugiriegg.d}}",
+          "Texture": "{{ModId}}/tatsugiri/tatsugiriegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tatsugiri hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tatsugiriegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytatsugiri",
+              "AnimalId": "{{ModId}}_shinytatsugiri",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tatsugiri",
+              "AnimalId": "{{ModId}}_tatsugiri",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

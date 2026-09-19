@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load wattrel textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/wattrel/wattrel, {{ModId}}/wattrel/shinywattrel, {{ModId}}/wattrel/kilowattrel, {{ModId}}/wattrel/shinykilowattrel, {{ModId}}/wattrel/wattrelegg",
+      "FromFile": "assets/livestocks/wattrel/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_wattrel data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_wattrel": {
+          "DisplayName": "{{i18n: wattrel}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wattrelegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: wattrelbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wattrel/kilowattrel",
+          "BabyTexture": "{{ModId}}/wattrel/wattrel",
+          "Sound": "{{ModId}}_kilowattrelcry",
+          "BabySound": "{{ModId}}_wattrelcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wattrelegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywattrel data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywattrel": {
+          "DisplayName": "{{i18n: shinywattrel}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_wattrelegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywattrelbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wattrel/shinykilowattrel",
+          "BabyTexture": "{{ModId}}/wattrel/shinywattrel",
+          "Sound": "{{ModId}}_kilowattrelcry",
+          "BabySound": "{{ModId}}_wattrelcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_wattrelegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "wattrel cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_wattrelcry": {
+          "ID": "{{ModId}}_wattrelcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wattrel/wattrelcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_kilowattrelcry": {
+          "ID": "{{ModId}}_kilowattrelcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wattrel/kilowattrelcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wattrel egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_wattrelegg": {
+          "Name": "{{ModId}}_wattrelegg",
+          "DisplayName": "{{i18n: wattrelegg}}",
+          "Description": "{{i18n: wattrelegg.d}}",
+          "Texture": "{{ModId}}/wattrel/wattrelegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "wattrel hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_wattrelegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywattrel",
+              "AnimalId": "{{ModId}}_shinywattrel",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_wattrel",
+              "AnimalId": "{{ModId}}_wattrel",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

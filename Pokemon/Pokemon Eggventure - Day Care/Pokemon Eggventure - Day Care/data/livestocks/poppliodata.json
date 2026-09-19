@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load popplio textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/popplio/popplio, {{ModId}}/popplio/shinypopplio, {{ModId}}/popplio/brionne, {{ModId}}/popplio/shinybrionne, {{ModId}}/popplio/primarina, {{ModId}}/popplio/shinyprimarina, {{ModId}}/popplio/popplioegg",
+      "FromFile": "assets/livestocks/popplio/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_popplio data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_popplio": {
+          "DisplayName": "{{i18n: popplio}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_popplioegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: poppliobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/popplio/brionne",
+          "BabyTexture": "{{ModId}}/popplio/popplio",
+          "Sound": "{{ModId}}_primarinacry",
+          "BabySound": "{{ModId}}_poppliocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_popplioegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_popplio evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_popplio",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "popplioevolution": {
+          "Id": "popplioevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/popplio/primarina"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_popplio type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_popplio"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypopplio data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypopplio": {
+          "DisplayName": "{{i18n: shinypopplio}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_popplioegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypoppliobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/popplio/shinybrionne",
+          "BabyTexture": "{{ModId}}/popplio/shinypopplio",
+          "Sound": "{{ModId}}_primarinacry",
+          "BabySound": "{{ModId}}_poppliocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_popplioegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypopplio evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypopplio",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypopplioevolution": {
+          "Id": "shinypopplioevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/popplio/shinyprimarina"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypopplio type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypopplio"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "popplio cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_poppliocry": {
+          "ID": "{{ModId}}_poppliocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/popplio/poppliocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_primarinacry": {
+          "ID": "{{ModId}}_primarinacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/popplio/primarinacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "popplio egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_popplioegg": {
+          "Name": "{{ModId}}_popplioegg",
+          "DisplayName": "{{i18n: popplioegg}}",
+          "Description": "{{i18n: popplioegg.d}}",
+          "Texture": "{{ModId}}/popplio/popplioegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "popplio hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_popplioegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypopplio",
+              "AnimalId": "{{ModId}}_shinypopplio",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_popplio",
+              "AnimalId": "{{ModId}}_popplio",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

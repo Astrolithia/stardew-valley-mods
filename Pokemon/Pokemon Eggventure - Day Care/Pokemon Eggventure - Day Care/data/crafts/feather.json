@@ -1,0 +1,33 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load Ducklett feather sprite",
+      "Action": "Load",
+      "Target": "{{ModId}}/feather/ducklett",
+      "FromFile": "assets/feather/ducklett.png"
+    },
+    {
+      "LogName": "Add Ducklett feather",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_feather_ducklett": {
+          "Name": "{{ModId}}_feather_ducklett",
+          "DisplayName": "{{i18n: feather_ducklett}}",
+          "Description": "{{i18n: feather_ducklett.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/feather/ducklett",
+          "Price": 250,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkfeather_item",
+            "pkfeather_ducklett",
+            "color_green",
+            "item_duck_feather"
+          ]
+        }
+      }
+    }
+  ]
+}

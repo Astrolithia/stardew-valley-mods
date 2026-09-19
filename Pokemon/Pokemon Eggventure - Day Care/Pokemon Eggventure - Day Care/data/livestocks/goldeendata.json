@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load goldeen textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/goldeen/goldeen, {{ModId}}/goldeen/shinygoldeen, {{ModId}}/goldeen/seaking, {{ModId}}/goldeen/shinyseaking, {{ModId}}/goldeen/goldeenegg",
+      "FromFile": "assets/livestocks/goldeen/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_goldeen data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_goldeen": {
+          "DisplayName": "{{i18n: goldeen}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_goldeenegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: goldeenbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/goldeen/seaking",
+          "BabyTexture": "{{ModId}}/goldeen/goldeen",
+          "Sound": "{{ModId}}_seakingcry",
+          "BabySound": "{{ModId}}_goldeencry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_goldeenegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_goldeen type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_goldeen"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygoldeen data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygoldeen": {
+          "DisplayName": "{{i18n: shinygoldeen}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_goldeenegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygoldeenbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/goldeen/shinyseaking",
+          "BabyTexture": "{{ModId}}/goldeen/shinygoldeen",
+          "Sound": "{{ModId}}_seakingcry",
+          "BabySound": "{{ModId}}_goldeencry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_goldeenegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygoldeen type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygoldeen"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "goldeen cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_goldeencry": {
+          "ID": "{{ModId}}_goldeencry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/goldeen/goldeencry.ogg}}"
+          ]
+        },
+        "{{ModId}}_seakingcry": {
+          "ID": "{{ModId}}_seakingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/goldeen/seakingcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "goldeen egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_goldeenegg": {
+          "Name": "{{ModId}}_goldeenegg",
+          "DisplayName": "{{i18n: goldeenegg}}",
+          "Description": "{{i18n: goldeenegg.d}}",
+          "Texture": "{{ModId}}/goldeen/goldeenegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_verycommon",
+            "pkegg_panning_p1",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "goldeen hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_goldeenegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygoldeen",
+              "AnimalId": "{{ModId}}_shinygoldeen",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_goldeen",
+              "AnimalId": "{{ModId}}_goldeen",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

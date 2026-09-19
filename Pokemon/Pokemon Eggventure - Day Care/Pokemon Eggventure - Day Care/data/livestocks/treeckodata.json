@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load treecko textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/treecko/treecko, {{ModId}}/treecko/shinytreecko, {{ModId}}/treecko/grovyle, {{ModId}}/treecko/shinygrovyle, {{ModId}}/treecko/sceptile, {{ModId}}/treecko/shinysceptile, {{ModId}}/treecko/treeckoegg",
+      "FromFile": "assets/livestocks/treecko/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_treecko data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_treecko": {
+          "DisplayName": "{{i18n: treecko}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_treeckoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: treeckobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/treecko/grovyle",
+          "BabyTexture": "{{ModId}}/treecko/treecko",
+          "Sound": "{{ModId}}_sceptilecry",
+          "BabySound": "{{ModId}}_treeckocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_treeckoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_treecko evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_treecko",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "treeckoevolution": {
+          "Id": "treeckoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/treecko/sceptile"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytreecko data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytreecko": {
+          "DisplayName": "{{i18n: shinytreecko}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_treeckoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytreeckobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/treecko/shinygrovyle",
+          "BabyTexture": "{{ModId}}/treecko/shinytreecko",
+          "Sound": "{{ModId}}_sceptilecry",
+          "BabySound": "{{ModId}}_treeckocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_treeckoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytreecko evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytreecko",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytreeckoevolution": {
+          "Id": "shinytreeckoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/treecko/shinysceptile"
+        }
+      }
+    },
+    {
+      "LogName": "treecko cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_treeckocry": {
+          "ID": "{{ModId}}_treeckocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/treecko/treeckocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_sceptilecry": {
+          "ID": "{{ModId}}_sceptilecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/treecko/sceptilecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "treecko egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_treeckoegg": {
+          "Name": "{{ModId}}_treeckoegg",
+          "DisplayName": "{{i18n: treeckoegg}}",
+          "Description": "{{i18n: treeckoegg.d}}",
+          "Texture": "{{ModId}}/treecko/treeckoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "treecko hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_treeckoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytreecko",
+              "AnimalId": "{{ModId}}_shinytreecko",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_treecko",
+              "AnimalId": "{{ModId}}_treecko",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

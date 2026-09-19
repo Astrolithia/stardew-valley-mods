@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load yungoos textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/yungoos/yungoos, {{ModId}}/yungoos/shinyyungoos, {{ModId}}/yungoos/gumshoos, {{ModId}}/yungoos/shinygumshoos, {{ModId}}/yungoos/yungoosegg",
+      "FromFile": "assets/livestocks/yungoos/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_yungoos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_yungoos": {
+          "DisplayName": "{{i18n: yungoos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yungoosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: yungoosbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yungoos/gumshoos",
+          "BabyTexture": "{{ModId}}/yungoos/yungoos",
+          "Sound": "{{ModId}}_gumshooscry",
+          "BabySound": "{{ModId}}_yungooscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yungoosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyyungoos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyyungoos": {
+          "DisplayName": "{{i18n: shinyyungoos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yungoosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyyungoosbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yungoos/shinygumshoos",
+          "BabyTexture": "{{ModId}}/yungoos/shinyyungoos",
+          "Sound": "{{ModId}}_gumshooscry",
+          "BabySound": "{{ModId}}_yungooscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yungoosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "yungoos cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_yungooscry": {
+          "ID": "{{ModId}}_yungooscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yungoos/yungooscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gumshooscry": {
+          "ID": "{{ModId}}_gumshooscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yungoos/gumshooscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yungoos egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_yungoosegg": {
+          "Name": "{{ModId}}_yungoosegg",
+          "DisplayName": "{{i18n: yungoosegg}}",
+          "Description": "{{i18n: yungoosegg.d}}",
+          "Texture": "{{ModId}}/yungoos/yungoosegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yungoos hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_yungoosegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyyungoos",
+              "AnimalId": "{{ModId}}_shinyyungoos",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_yungoos",
+              "AnimalId": "{{ModId}}_yungoos",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

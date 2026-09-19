@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load larvesta textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/larvesta/larvesta, {{ModId}}/larvesta/shinylarvesta, {{ModId}}/larvesta/volcarona, {{ModId}}/larvesta/shinyvolcarona, {{ModId}}/larvesta/larvestaegg",
+      "FromFile": "assets/livestocks/larvesta/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_larvesta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_larvesta": {
+          "DisplayName": "{{i18n: larvesta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_larvestaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: larvestabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/larvesta/volcarona",
+          "BabyTexture": "{{ModId}}/larvesta/larvesta",
+          "Sound": "{{ModId}}_volcaronacry",
+          "BabySound": "{{ModId}}_larvestacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_larvestaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_larvesta type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_larvesta"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylarvesta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylarvesta": {
+          "DisplayName": "{{i18n: shinylarvesta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_larvestaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylarvestabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/larvesta/shinyvolcarona",
+          "BabyTexture": "{{ModId}}/larvesta/shinylarvesta",
+          "Sound": "{{ModId}}_volcaronacry",
+          "BabySound": "{{ModId}}_larvestacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_larvestaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylarvesta type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylarvesta"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "larvesta cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_larvestacry": {
+          "ID": "{{ModId}}_larvestacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/larvesta/larvestacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_volcaronacry": {
+          "ID": "{{ModId}}_volcaronacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/larvesta/volcaronacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "larvesta egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_larvestaegg": {
+          "Name": "{{ModId}}_larvestaegg",
+          "DisplayName": "{{i18n: larvestaegg}}",
+          "Description": "{{i18n: larvestaegg.d}}",
+          "Texture": "{{ModId}}/larvesta/larvestaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p5",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "larvesta hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_larvestaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylarvesta",
+              "AnimalId": "{{ModId}}_shinylarvesta",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_larvesta",
+              "AnimalId": "{{ModId}}_larvesta",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

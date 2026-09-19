@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load voltorb textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/voltorb/voltorb, {{ModId}}/voltorb/shinyvoltorb, {{ModId}}/voltorb/electrode, {{ModId}}/voltorb/shinyelectrode, {{ModId}}/voltorb/voltorbegg",
+      "FromFile": "assets/livestocks/voltorb/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_voltorb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_voltorb": {
+          "DisplayName": "{{i18n: voltorb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_voltorbegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: voltorbbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/voltorb/electrode",
+          "BabyTexture": "{{ModId}}/voltorb/voltorb",
+          "Sound": "{{ModId}}_electrodecry",
+          "BabySound": "{{ModId}}_voltorbcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_voltorbegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvoltorb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvoltorb": {
+          "DisplayName": "{{i18n: shinyvoltorb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_voltorbegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvoltorbbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/voltorb/shinyelectrode",
+          "BabyTexture": "{{ModId}}/voltorb/shinyvoltorb",
+          "Sound": "{{ModId}}_electrodecry",
+          "BabySound": "{{ModId}}_voltorbcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_voltorbegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "voltorb cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_voltorbcry": {
+          "ID": "{{ModId}}_voltorbcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/voltorb/voltorbcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_electrodecry": {
+          "ID": "{{ModId}}_electrodecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/voltorb/electrodecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "voltorb egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_voltorbegg": {
+          "Name": "{{ModId}}_voltorbegg",
+          "DisplayName": "{{i18n: voltorbegg}}",
+          "Description": "{{i18n: voltorbegg.d}}",
+          "Texture": "{{ModId}}/voltorb/voltorbegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "pkegg_mine_1_30_p2",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "voltorb hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_voltorbegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvoltorb",
+              "AnimalId": "{{ModId}}_shinyvoltorb",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_voltorb",
+              "AnimalId": "{{ModId}}_voltorb",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

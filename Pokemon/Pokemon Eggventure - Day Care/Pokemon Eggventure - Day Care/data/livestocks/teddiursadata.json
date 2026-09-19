@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load teddiursa textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/teddiursa/teddiursa, {{ModId}}/teddiursa/shinyteddiursa, {{ModId}}/teddiursa/ursaring, {{ModId}}/teddiursa/shinyursaring, {{ModId}}/teddiursa/ursaluna, {{ModId}}/teddiursa/shinyursaluna, {{ModId}}/teddiursa/ursalunablood, {{ModId}}/teddiursa/shinyursalunablood, {{ModId}}/teddiursa/teddiursaegg",
+      "FromFile": "assets/livestocks/teddiursa/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_teddiursa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_teddiursa": {
+          "DisplayName": "{{i18n: teddiursa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_teddiursaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: teddiursabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/teddiursa/ursaring",
+          "BabyTexture": "{{ModId}}/teddiursa/teddiursa",
+          "Sound": "{{ModId}}_ursalunacry",
+          "BabySound": "{{ModId}}_teddiursacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_teddiursaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_teddiursa evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_teddiursa",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "teddiursaevolution": {
+          "Id": "teddiursaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/teddiursa/ursaluna"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyteddiursa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyteddiursa": {
+          "DisplayName": "{{i18n: shinyteddiursa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_teddiursaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyteddiursabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/teddiursa/shinyursaring",
+          "BabyTexture": "{{ModId}}/teddiursa/shinyteddiursa",
+          "Sound": "{{ModId}}_ursalunacry",
+          "BabySound": "{{ModId}}_teddiursacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_teddiursaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyteddiursa evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyteddiursa",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyteddiursaevolution": {
+          "Id": "shinyteddiursaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/teddiursa/shinyursaluna"
+        }
+      }
+    },
+    {
+      "LogName": "teddiursa cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_teddiursacry": {
+          "ID": "{{ModId}}_teddiursacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/teddiursa/teddiursacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ursalunacry": {
+          "ID": "{{ModId}}_ursalunacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/teddiursa/ursalunacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "teddiursa egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_teddiursaegg": {
+          "Name": "{{ModId}}_teddiursaegg",
+          "DisplayName": "{{i18n: teddiursaegg}}",
+          "Description": "{{i18n: teddiursaegg.d}}",
+          "Texture": "{{ModId}}/teddiursa/teddiursaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "teddiursa hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_teddiursaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyteddiursa",
+              "AnimalId": "{{ModId}}_shinyteddiursa",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_teddiursa",
+              "AnimalId": "{{ModId}}_teddiursa",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

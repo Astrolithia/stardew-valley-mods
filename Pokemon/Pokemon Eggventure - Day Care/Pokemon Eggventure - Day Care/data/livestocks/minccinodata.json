@@ -1,0 +1,259 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load minccino textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/minccino/minccino, {{ModId}}/minccino/shinyminccino, {{ModId}}/minccino/cinccino, {{ModId}}/minccino/shinycinccino, {{ModId}}/minccino/minccinoegg",
+      "FromFile": "assets/livestocks/minccino/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_minccino data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_minccino": {
+          "DisplayName": "{{i18n: minccino}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_minccinoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: minccinobirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/minccino/cinccino",
+          "BabyTexture": "{{ModId}}/minccino/minccino",
+          "Sound": "{{ModId}}_cinccinocry",
+          "BabySound": "{{ModId}}_minccinocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_minccino",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_minccinoegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyminccino data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyminccino": {
+          "DisplayName": "{{i18n: shinyminccino}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_minccinoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyminccinobirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/minccino/shinycinccino",
+          "BabyTexture": "{{ModId}}/minccino/shinyminccino",
+          "Sound": "{{ModId}}_cinccinocry",
+          "BabySound": "{{ModId}}_minccinocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_minccino",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_minccinoegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "minccino cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_minccinocry": {
+          "ID": "{{ModId}}_minccinocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/minccino/minccinocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cinccinocry": {
+          "ID": "{{ModId}}_cinccinocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/minccino/cinccinocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "minccino egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_minccinoegg": {
+          "Name": "{{ModId}}_minccinoegg",
+          "DisplayName": "{{i18n: minccinoegg}}",
+          "Description": "{{i18n: minccinoegg.d}}",
+          "Texture": "{{ModId}}/minccino/minccinoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "minccino hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_minccinoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyminccino",
+              "AnimalId": "{{ModId}}_shinyminccino",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_minccino",
+              "AnimalId": "{{ModId}}_minccino",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_minccino",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_minccino",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_minccino_dailydrop": {
+          "Id": "{{ModId}}_minccino_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_minccino_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - minccino",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_minccino",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinyminccino",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyminccino",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinyminccino_dailydrop": {
+          "Id": "{{ModId}}_shinyminccino_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinyminccino_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyminccino",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyminccino",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

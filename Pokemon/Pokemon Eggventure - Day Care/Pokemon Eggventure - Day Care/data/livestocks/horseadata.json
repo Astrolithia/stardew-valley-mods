@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load horsea textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/horsea/horsea, {{ModId}}/horsea/shinyhorsea, {{ModId}}/horsea/seadra, {{ModId}}/horsea/shinyseadra, {{ModId}}/horsea/kingdra, {{ModId}}/horsea/shinykingdra, {{ModId}}/horsea/horseaegg",
+      "FromFile": "assets/livestocks/horsea/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_horsea data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_horsea": {
+          "DisplayName": "{{i18n: horsea}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_horseaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: horseabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/horsea/seadra",
+          "BabyTexture": "{{ModId}}/horsea/horsea",
+          "Sound": "{{ModId}}_kingdracry",
+          "BabySound": "{{ModId}}_horseacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_horseaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_horsea evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_horsea",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "horseaevolution": {
+          "Id": "horseaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/horsea/kingdra"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_horsea type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_horsea"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhorsea data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhorsea": {
+          "DisplayName": "{{i18n: shinyhorsea}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_horseaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhorseabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/horsea/shinyseadra",
+          "BabyTexture": "{{ModId}}/horsea/shinyhorsea",
+          "Sound": "{{ModId}}_kingdracry",
+          "BabySound": "{{ModId}}_horseacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_horseaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhorsea evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhorsea",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhorseaevolution": {
+          "Id": "shinyhorseaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/horsea/shinykingdra"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhorsea type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhorsea"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "horsea cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_horseacry": {
+          "ID": "{{ModId}}_horseacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/horsea/horseacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_kingdracry": {
+          "ID": "{{ModId}}_kingdracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/horsea/kingdracry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "horsea egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_horseaegg": {
+          "Name": "{{ModId}}_horseaegg",
+          "DisplayName": "{{i18n: horseaegg}}",
+          "Description": "{{i18n: horseaegg.d}}",
+          "Texture": "{{ModId}}/horsea/horseaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "horsea hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_horseaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhorsea",
+              "AnimalId": "{{ModId}}_shinyhorsea",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_horsea",
+              "AnimalId": "{{ModId}}_horsea",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

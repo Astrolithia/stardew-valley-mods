@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sawk textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sawk/sawk, {{ModId}}/sawk/shinysawk, {{ModId}}/sawk/sawkegg",
+      "FromFile": "assets/livestocks/sawk/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sawk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sawk": {
+          "DisplayName": "{{i18n: sawk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sawkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sawkbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sawk/sawk",
+          "BabyTexture": "{{ModId}}/sawk/sawk",
+          "Sound": "{{ModId}}_sawkcry",
+          "BabySound": "{{ModId}}_sawkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sawkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysawk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysawk": {
+          "DisplayName": "{{i18n: shinysawk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sawkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysawkbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sawk/shinysawk",
+          "BabyTexture": "{{ModId}}/sawk/shinysawk",
+          "Sound": "{{ModId}}_sawkcry",
+          "BabySound": "{{ModId}}_sawkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sawkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "sawk cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sawkcry": {
+          "ID": "{{ModId}}_sawkcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sawk/sawkcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sawk egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sawkegg": {
+          "Name": "{{ModId}}_sawkegg",
+          "DisplayName": "{{i18n: sawkegg}}",
+          "Description": "{{i18n: sawkegg.d}}",
+          "Texture": "{{ModId}}/sawk/sawkegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sawk hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sawkegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysawk",
+              "AnimalId": "{{ModId}}_shinysawk",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sawk",
+              "AnimalId": "{{ModId}}_sawk",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

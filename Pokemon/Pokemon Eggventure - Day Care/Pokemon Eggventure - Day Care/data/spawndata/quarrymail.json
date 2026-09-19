@@ -1,0 +1,27 @@
+{
+  "Changes": [
+    {
+      "LogName": "Marlon quarry letter",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_quarrymail": "{{i18n:mail_quarry_text}}[#]{{i18n:mail_quarry_title}}"
+      }
+    },
+    {
+      "LogName": "Marlon quarry trigger",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_QuarryMailTrigger": {
+          "Id": "{{ModId}}_QuarryMailTrigger",
+          "Trigger": "DayStarted",
+          "Condition": "ANY \"PLAYER_HAS_MAIL Current ccCraftsRoom Any\" \"PLAYER_HAS_MAIL Current jojaCraftsRoom Any\", !PLAYER_HAS_MAIL Current {{ModId}}_quarrymail Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_quarrymail Now"
+          ]
+        }
+      }
+    }
+  ]
+}

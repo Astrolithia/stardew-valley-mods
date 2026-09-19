@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load koffing textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/koffing/koffing, {{ModId}}/koffing/shinykoffing, {{ModId}}/koffing/weezing, {{ModId}}/koffing/shinyweezing, {{ModId}}/koffing/koffingegg",
+      "FromFile": "assets/livestocks/koffing/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_koffing data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_koffing": {
+          "DisplayName": "{{i18n: koffing}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_koffingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: koffingbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/koffing/weezing",
+          "BabyTexture": "{{ModId}}/koffing/koffing",
+          "Sound": "{{ModId}}_weezingcry",
+          "BabySound": "{{ModId}}_koffingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_koffingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykoffing data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykoffing": {
+          "DisplayName": "{{i18n: shinykoffing}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_koffingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykoffingbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/koffing/shinyweezing",
+          "BabyTexture": "{{ModId}}/koffing/shinykoffing",
+          "Sound": "{{ModId}}_weezingcry",
+          "BabySound": "{{ModId}}_koffingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_koffingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "koffing cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_koffingcry": {
+          "ID": "{{ModId}}_koffingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/koffing/koffingcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_weezingcry": {
+          "ID": "{{ModId}}_weezingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/koffing/weezingcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "koffing egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_koffingegg": {
+          "Name": "{{ModId}}_koffingegg",
+          "DisplayName": "{{i18n: koffingegg}}",
+          "Description": "{{i18n: koffingegg.d}}",
+          "Texture": "{{ModId}}/koffing/koffingegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "koffing hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_koffingegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykoffing",
+              "AnimalId": "{{ModId}}_shinykoffing",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_koffing",
+              "AnimalId": "{{ModId}}_koffing",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

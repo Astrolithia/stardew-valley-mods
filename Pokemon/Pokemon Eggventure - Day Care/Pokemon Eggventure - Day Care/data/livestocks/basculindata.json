@@ -1,0 +1,506 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load basculin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/basculin/basculin, {{ModId}}/basculin/shinybasculin, {{ModId}}/basculin/basculin2, {{ModId}}/basculin/shinybasculin2, {{ModId}}/basculin/basculinwhite, {{ModId}}/basculin/shinybasculinwhite, {{ModId}}/basculin/basculegion1, {{ModId}}/basculin/shinybasculegion1, {{ModId}}/basculin/basculinegg",
+      "FromFile": "assets/livestocks/basculin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_basculinred data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_basculinred": {
+          "DisplayName": "{{i18n: basculinred}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_basculinredegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: basculinredbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/basculin/basculin",
+          "BabyTexture": "{{ModId}}/basculin/basculin",
+          "Sound": "{{ModId}}_basculincry",
+          "BabySound": "{{ModId}}_basculincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_basculinredegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybasculinred data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybasculinred": {
+          "DisplayName": "{{i18n: shinybasculinred}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_basculinredegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybasculinredbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/basculin/shinybasculin",
+          "BabyTexture": "{{ModId}}/basculin/shinybasculin",
+          "Sound": "{{ModId}}_basculincry",
+          "BabySound": "{{ModId}}_basculincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_basculinredegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_basculinblue data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_basculinblue": {
+          "DisplayName": "{{i18n: basculinblue}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_basculinblueegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: basculinbluebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/basculin/basculin2",
+          "BabyTexture": "{{ModId}}/basculin/basculin2",
+          "Sound": "{{ModId}}_basculinbluestripedcry",
+          "BabySound": "{{ModId}}_basculinbluestripedcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_basculinblueegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybasculinblue data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybasculinblue": {
+          "DisplayName": "{{i18n: shinybasculinblue}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_basculinblueegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybasculinbluebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/basculin/shinybasculin2",
+          "BabyTexture": "{{ModId}}/basculin/shinybasculin2",
+          "Sound": "{{ModId}}_basculinbluestripedcry",
+          "BabySound": "{{ModId}}_basculinbluestripedcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_basculinblueegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_basculinwhite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_basculinwhite": {
+          "DisplayName": "{{i18n: basculinwhite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_basculinwhiteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: basculinwhitebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/basculin/basculegion1",
+          "BabyTexture": "{{ModId}}/basculin/basculinwhite",
+          "Sound": "{{ModId}}_basculegion1cry",
+          "BabySound": "{{ModId}}_basculincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_basculinwhiteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybasculinwhite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybasculinwhite": {
+          "DisplayName": "{{i18n: shinybasculinwhite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_basculinwhiteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybasculinwhitebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/basculin/shinybasculegion1",
+          "BabyTexture": "{{ModId}}/basculin/shinybasculinwhite",
+          "Sound": "{{ModId}}_basculegion1cry",
+          "BabySound": "{{ModId}}_basculincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_basculinwhiteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "basculin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_basculincry": {
+          "ID": "{{ModId}}_basculincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/basculin/basculincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_basculinbluestripedcry": {
+          "ID": "{{ModId}}_basculinbluestripedcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/basculin/basculinbluestripedcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_basculegion1cry": {
+          "ID": "{{ModId}}_basculegion1cry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/basculin/basculegion1cry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "basculinredegg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_basculinredegg": {
+          "Name": "{{ModId}}_basculinredegg",
+          "DisplayName": "{{i18n: basculinredegg}}",
+          "Description": "{{i18n: basculinredegg.d}}",
+          "Texture": "{{ModId}}/basculin/basculinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_veryrare",
+            "pkegg_panning_p2",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "basculinblueegg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_basculinblueegg": {
+          "Name": "{{ModId}}_basculinblueegg",
+          "DisplayName": "{{i18n: basculinblueegg}}",
+          "Description": "{{i18n: basculinblueegg.d}}",
+          "Texture": "{{ModId}}/basculin/basculinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_veryrare",
+            "pkegg_panning_p2",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "basculinwhiteegg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_basculinwhiteegg": {
+          "Name": "{{ModId}}_basculinwhiteegg",
+          "DisplayName": "{{i18n: basculinwhiteegg}}",
+          "Description": "{{i18n: basculinwhiteegg.d}}",
+          "Texture": "{{ModId}}/basculin/basculinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_veryrare",
+            "pkegg_panning_p2",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "basculinredegg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_basculinredegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybasculinred",
+              "AnimalId": "{{ModId}}_shinybasculinred",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_basculinred",
+              "AnimalId": "{{ModId}}_basculinred",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "basculinblueegg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_basculinblueegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybasculinblue",
+              "AnimalId": "{{ModId}}_shinybasculinblue",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_basculinblue",
+              "AnimalId": "{{ModId}}_basculinblue",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "basculinwhiteegg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_basculinwhiteegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybasculinwhite",
+              "AnimalId": "{{ModId}}_shinybasculinwhite",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_basculinwhite",
+              "AnimalId": "{{ModId}}_basculinwhite",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

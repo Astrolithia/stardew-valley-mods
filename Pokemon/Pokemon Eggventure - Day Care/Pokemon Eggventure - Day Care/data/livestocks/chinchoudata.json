@@ -1,0 +1,207 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load chinchou textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/chinchou/chinchou, {{ModId}}/chinchou/shinychinchou, {{ModId}}/chinchou/lanturn, {{ModId}}/chinchou/shinylanturn, {{ModId}}/chinchou/chinchouegg",
+      "FromFile": "assets/livestocks/chinchou/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_chinchou data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_chinchou": {
+          "DisplayName": "{{i18n: chinchou}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chinchouegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: chinchoubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chinchou/lanturn",
+          "BabyTexture": "{{ModId}}/chinchou/chinchou",
+          "Sound": "{{ModId}}_lanturncry",
+          "BabySound": "{{ModId}}_chinchoucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chinchouegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_chinchou type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_chinchou"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinychinchou data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinychinchou": {
+          "DisplayName": "{{i18n: shinychinchou}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chinchouegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinychinchoubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chinchou/shinylanturn",
+          "BabyTexture": "{{ModId}}/chinchou/shinychinchou",
+          "Sound": "{{ModId}}_lanturncry",
+          "BabySound": "{{ModId}}_chinchoucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chinchouegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinychinchou type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinychinchou"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "chinchou cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_chinchoucry": {
+          "ID": "{{ModId}}_chinchoucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chinchou/chinchoucry.ogg}}"
+          ]
+        },
+        "{{ModId}}_lanturncry": {
+          "ID": "{{ModId}}_lanturncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chinchou/lanturncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chinchou egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_chinchouegg": {
+          "Name": "{{ModId}}_chinchouegg",
+          "DisplayName": "{{i18n: chinchouegg}}",
+          "Description": "{{i18n: chinchouegg.d}}",
+          "Texture": "{{ModId}}/chinchou/chinchouegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_water",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chinchou hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_chinchouegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinychinchou",
+              "AnimalId": "{{ModId}}_shinychinchou",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_chinchou",
+              "AnimalId": "{{ModId}}_chinchou",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

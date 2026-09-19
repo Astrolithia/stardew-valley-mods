@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rattata textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rattata/rattata, {{ModId}}/rattata/shinyrattata, {{ModId}}/rattata/raticate, {{ModId}}/rattata/shinyraticate, {{ModId}}/rattata/rattataegg",
+      "FromFile": "assets/livestocks/rattata/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rattata data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rattata": {
+          "DisplayName": "{{i18n: rattata}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rattataegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rattatabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rattata/raticate",
+          "BabyTexture": "{{ModId}}/rattata/rattata",
+          "Sound": "{{ModId}}_raticatecry",
+          "BabySound": "{{ModId}}_rattatacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rattataegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrattata data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrattata": {
+          "DisplayName": "{{i18n: shinyrattata}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rattataegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrattatabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rattata/shinyraticate",
+          "BabyTexture": "{{ModId}}/rattata/shinyrattata",
+          "Sound": "{{ModId}}_raticatecry",
+          "BabySound": "{{ModId}}_rattatacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rattataegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "rattata cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rattatacry": {
+          "ID": "{{ModId}}_rattatacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rattata/rattatacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_raticatecry": {
+          "ID": "{{ModId}}_raticatecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rattata/raticatecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rattata egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rattataegg": {
+          "Name": "{{ModId}}_rattataegg",
+          "DisplayName": "{{i18n: rattataegg}}",
+          "Description": "{{i18n: rattataegg.d}}",
+          "Texture": "{{ModId}}/rattata/rattataegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rattata hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rattataegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrattata",
+              "AnimalId": "{{ModId}}_shinyrattata",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rattata",
+              "AnimalId": "{{ModId}}_rattata",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

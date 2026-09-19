@@ -1,0 +1,44 @@
+{
+  "Name": "[CP] Pokemon Eggventure - Day Care",
+  "Author": "Parme69",
+  "Version": "2.1.0",
+  "Description": "Turns Stardew Valley into a Pokemon day care. Core pack: 1200 Pokemon, eggs, incubation, energies. Gotta Catch them'all ! Livestock Pokemon also produce Milk, Goat Milk, Wool and Truffles, on top of their daily Pokemon drop.",
+  "UniqueID": "Parme.PokemonEggventure",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [
+    "Nexus:49098"
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "mistyspring.ItemExtensions",
+      "IsRequired": true,
+      "MinimumVersion": "1.0.0"
+    },
+    {
+      "UniqueID": "selph.ExtraAnimalConfig",
+      "IsRequired": true,
+      "MinimumVersion": "1.9.0"
+    },
+    {
+      "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "FlashShifter.GrampletonFields",
+      "IsRequired": false
+    },
+    {
+      "UniqueID": "selph.ExtraMachineConfig",
+      "IsRequired": true,
+      "MinimumVersion": "1.0.0"
+    },
+    {
+      "UniqueID": "Esca.FarmTypeManager",
+      "IsRequired": true,
+      "MinimumVersion": "1.19.0"
+    }
+  ]
+}

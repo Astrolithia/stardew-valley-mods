@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pawniard textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pawniard/pawniard, {{ModId}}/pawniard/shinypawniard, {{ModId}}/pawniard/bisharp, {{ModId}}/pawniard/shinybisharp, {{ModId}}/pawniard/pawniardegg",
+      "FromFile": "assets/livestocks/pawniard/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pawniard data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pawniard": {
+          "DisplayName": "{{i18n: pawniard}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_pawniardegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pawniardbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pawniard/bisharp",
+          "BabyTexture": "{{ModId}}/pawniard/pawniard",
+          "Sound": "{{ModId}}_bisharpcry",
+          "BabySound": "{{ModId}}_pawniardcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pawniardegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypawniard data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypawniard": {
+          "DisplayName": "{{i18n: shinypawniard}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_pawniardegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypawniardbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pawniard/shinybisharp",
+          "BabyTexture": "{{ModId}}/pawniard/shinypawniard",
+          "Sound": "{{ModId}}_bisharpcry",
+          "BabySound": "{{ModId}}_pawniardcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pawniardegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "pawniard cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pawniardcry": {
+          "ID": "{{ModId}}_pawniardcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pawniard/pawniardcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_bisharpcry": {
+          "ID": "{{ModId}}_bisharpcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pawniard/bisharpcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pawniard egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pawniardegg": {
+          "Name": "{{ModId}}_pawniardegg",
+          "DisplayName": "{{i18n: pawniardegg}}",
+          "Description": "{{i18n: pawniardegg.d}}",
+          "Texture": "{{ModId}}/pawniard/pawniardegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_common",
+            "pkegg_skullcavern_p4",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pawniard hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pawniardegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypawniard",
+              "AnimalId": "{{ModId}}_shinypawniard",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pawniard",
+              "AnimalId": "{{ModId}}_pawniard",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

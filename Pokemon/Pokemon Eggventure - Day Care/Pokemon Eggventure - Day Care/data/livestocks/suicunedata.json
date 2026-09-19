@@ -1,0 +1,201 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load suicune textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/suicune/suicune, {{ModId}}/suicune/shinysuicune, {{ModId}}/suicune/suicuneegg",
+      "FromFile": "assets/livestocks/suicune/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_suicune data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_suicune": {
+          "DisplayName": "{{i18n: suicune}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_suicuneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: suicunebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/suicune/suicune",
+          "BabyTexture": "{{ModId}}/suicune/suicune",
+          "Sound": "{{ModId}}_suicunecry",
+          "BabySound": "{{ModId}}_suicunecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_suicuneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_suicune type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_suicune"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysuicune data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysuicune": {
+          "DisplayName": "{{i18n: shinysuicune}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_suicuneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysuicunebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/suicune/shinysuicune",
+          "BabyTexture": "{{ModId}}/suicune/shinysuicune",
+          "Sound": "{{ModId}}_suicunecry",
+          "BabySound": "{{ModId}}_suicunecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_suicuneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysuicune type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysuicune"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "suicune cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_suicunecry": {
+          "ID": "{{ModId}}_suicunecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/suicune/suicunecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "suicune egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_suicuneegg": {
+          "Name": "{{ModId}}_suicuneegg",
+          "DisplayName": "{{i18n: suicuneegg}}",
+          "Description": "{{i18n: suicuneegg.d}}",
+          "Texture": "{{ModId}}/suicune/suicuneegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_water",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "suicune hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_suicuneegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysuicune",
+              "AnimalId": "{{ModId}}_shinysuicune",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_suicune",
+              "AnimalId": "{{ModId}}_suicune",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load missigno textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/missigno/missigno, {{ModId}}/missigno/missignoegg",
+      "FromFile": "assets/livestocks/missigno/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_missigno data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_missigno": {
+          "DisplayName": "{{i18n: missigno}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_missignoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: missignobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/missigno/missigno",
+          "BabyTexture": "{{ModId}}/missigno/missigno",
+          "Sound": "{{ModId}}_missignocry",
+          "BabySound": "{{ModId}}_missignocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_missignoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "missigno cry",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_missignocry": {
+          "ID": "{{ModId}}_missignocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/missigno/missignocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "missigno egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_missignoegg": {
+          "Name": "{{ModId}}_missignoegg",
+          "DisplayName": "{{i18n: missignoegg}}",
+          "Description": "{{i18n: missignoegg.d}}",
+          "Texture": "{{ModId}}/missigno/missignoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_veryrare",
+            "color_yellow_green"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "missigno hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_missignoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_missigno",
+              "AnimalId": "{{ModId}}_missigno",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

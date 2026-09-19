@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load weedle textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/weedle/weedle, {{ModId}}/weedle/shinyweedle, {{ModId}}/weedle/kakuna, {{ModId}}/weedle/shinykakuna, {{ModId}}/weedle/beedrill, {{ModId}}/weedle/shinybeedrill, {{ModId}}/weedle/weedleegg",
+      "FromFile": "assets/livestocks/weedle/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_weedle data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_weedle": {
+          "DisplayName": "{{i18n: weedle}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_weedleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: weedlebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/weedle/kakuna",
+          "BabyTexture": "{{ModId}}/weedle/weedle",
+          "Sound": "{{ModId}}_beedrillcry",
+          "BabySound": "{{ModId}}_weedlecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_weedleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_weedle evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_weedle",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "weedleevolution": {
+          "Id": "weedleevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/weedle/beedrill"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyweedle data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyweedle": {
+          "DisplayName": "{{i18n: shinyweedle}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_weedleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyweedlebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/weedle/shinykakuna",
+          "BabyTexture": "{{ModId}}/weedle/shinyweedle",
+          "Sound": "{{ModId}}_beedrillcry",
+          "BabySound": "{{ModId}}_weedlecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_weedleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyweedle evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyweedle",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyweedleevolution": {
+          "Id": "shinyweedleevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/weedle/shinybeedrill"
+        }
+      }
+    },
+    {
+      "LogName": "weedle cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_weedlecry": {
+          "ID": "{{ModId}}_weedlecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/weedle/weedlecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_beedrillcry": {
+          "ID": "{{ModId}}_beedrillcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/weedle/beedrillcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "weedle egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_weedleegg": {
+          "Name": "{{ModId}}_weedleegg",
+          "DisplayName": "{{i18n: weedleegg}}",
+          "Description": "{{i18n: weedleegg.d}}",
+          "Texture": "{{ModId}}/weedle/weedleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "weedle hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_weedleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyweedle",
+              "AnimalId": "{{ModId}}_shinyweedle",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_weedle",
+              "AnimalId": "{{ModId}}_weedle",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

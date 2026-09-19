@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dunsparce textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dunsparce/dunsparce, {{ModId}}/dunsparce/shinydunsparce, {{ModId}}/dunsparce/dudunsparce, {{ModId}}/dunsparce/shinydudunsparce, {{ModId}}/dunsparce/dunsparceegg",
+      "FromFile": "assets/livestocks/dunsparce/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dunsparce data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dunsparce": {
+          "DisplayName": "{{i18n: dunsparce}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dunsparceegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dunsparcebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dunsparce/dudunsparce",
+          "BabyTexture": "{{ModId}}/dunsparce/dunsparce",
+          "Sound": "{{ModId}}_dudunsparcecry",
+          "BabySound": "{{ModId}}_dunsparcecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dunsparceegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydunsparce data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydunsparce": {
+          "DisplayName": "{{i18n: shinydunsparce}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dunsparceegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydunsparcebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dunsparce/shinydudunsparce",
+          "BabyTexture": "{{ModId}}/dunsparce/shinydunsparce",
+          "Sound": "{{ModId}}_dudunsparcecry",
+          "BabySound": "{{ModId}}_dunsparcecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dunsparceegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "dunsparce cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dunsparcecry": {
+          "ID": "{{ModId}}_dunsparcecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dunsparce/dunsparcecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dudunsparcecry": {
+          "ID": "{{ModId}}_dudunsparcecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dunsparce/dudunsparcecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dunsparce egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dunsparceegg": {
+          "Name": "{{ModId}}_dunsparceegg",
+          "DisplayName": "{{i18n: dunsparceegg}}",
+          "Description": "{{i18n: dunsparceegg.d}}",
+          "Texture": "{{ModId}}/dunsparce/dunsparceegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dunsparce hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dunsparceegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydunsparce",
+              "AnimalId": "{{ModId}}_shinydunsparce",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dunsparce",
+              "AnimalId": "{{ModId}}_dunsparce",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

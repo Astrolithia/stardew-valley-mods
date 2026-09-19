@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load stonjourner textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/stonjourner/stonjourner, {{ModId}}/stonjourner/shinystonjourner, {{ModId}}/stonjourner/stonjourneregg",
+      "FromFile": "assets/livestocks/stonjourner/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_stonjourner data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_stonjourner": {
+          "DisplayName": "{{i18n: stonjourner}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_stonjourneregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: stonjournerbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stonjourner/stonjourner",
+          "BabyTexture": "{{ModId}}/stonjourner/stonjourner",
+          "Sound": "{{ModId}}_stonjournercry",
+          "BabySound": "{{ModId}}_stonjournercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stonjourneregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinystonjourner data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinystonjourner": {
+          "DisplayName": "{{i18n: shinystonjourner}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_stonjourneregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinystonjournerbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stonjourner/shinystonjourner",
+          "BabyTexture": "{{ModId}}/stonjourner/shinystonjourner",
+          "Sound": "{{ModId}}_stonjournercry",
+          "BabySound": "{{ModId}}_stonjournercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stonjourneregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "stonjourner cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_stonjournercry": {
+          "ID": "{{ModId}}_stonjournercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/stonjourner/stonjournercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stonjourner egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_stonjourneregg": {
+          "Name": "{{ModId}}_stonjourneregg",
+          "DisplayName": "{{i18n: stonjourneregg}}",
+          "Description": "{{i18n: stonjourneregg.d}}",
+          "Texture": "{{ModId}}/stonjourner/stonjourneregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "pkegg_quarry_p3",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stonjourner hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_stonjourneregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinystonjourner",
+              "AnimalId": "{{ModId}}_shinystonjourner",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_stonjourner",
+              "AnimalId": "{{ModId}}_stonjourner",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

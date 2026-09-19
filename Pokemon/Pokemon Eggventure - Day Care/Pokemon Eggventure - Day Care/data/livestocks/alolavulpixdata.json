@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load alolavulpix textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/vulpix/alolavulpix, {{ModId}}/vulpix/shinyalolavulpix, {{ModId}}/vulpix/alolaninetales, {{ModId}}/vulpix/shinyalolaninetales, {{ModId}}/vulpix/alolavulpixegg",
+      "FromFile": "assets/livestocks/vulpix/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_alolavulpix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_alolavulpix": {
+          "DisplayName": "{{i18n: alolavulpix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolavulpixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: alolavulpixbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vulpix/alolaninetales",
+          "BabyTexture": "{{ModId}}/vulpix/alolavulpix",
+          "Sound": "{{ModId}}_alolaninetalescry",
+          "BabySound": "{{ModId}}_alolavulpixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolavulpixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_alolavulpix type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_alolavulpix"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyalolavulpix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyalolavulpix": {
+          "DisplayName": "{{i18n: shinyalolavulpix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolavulpixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyalolavulpixbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vulpix/shinyalolaninetales",
+          "BabyTexture": "{{ModId}}/vulpix/shinyalolavulpix",
+          "Sound": "{{ModId}}_alolaninetalescry",
+          "BabySound": "{{ModId}}_alolavulpixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolavulpixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyalolavulpix type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyalolavulpix"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "alolavulpix cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_alolavulpixcry": {
+          "ID": "{{ModId}}_alolavulpixcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vulpix/alolavulpixcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alolaninetalescry": {
+          "ID": "{{ModId}}_alolaninetalescry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vulpix/alolaninetalescry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolavulpix egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_alolavulpixegg": {
+          "Name": "{{ModId}}_alolavulpixegg",
+          "DisplayName": "{{i18n: alolavulpixegg}}",
+          "Description": "{{i18n: alolavulpixegg.d}}",
+          "Texture": "{{ModId}}/vulpix/alolavulpixegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_common",
+            "pkegg_mine_41_60_p4",
+            "pkegg_mine_61_80_p4",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolavulpix hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_alolavulpixegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyalolavulpix",
+              "AnimalId": "{{ModId}}_shinyalolavulpix",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_alolavulpix",
+              "AnimalId": "{{ModId}}_alolavulpix",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load arctozolt textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/arctozolt/arctozolt, {{ModId}}/arctozolt/shinyarctozolt, {{ModId}}/arctozolt/arctozoltegg",
+      "FromFile": "assets/livestocks/arctozolt/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_arctozolt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_arctozolt": {
+          "DisplayName": "{{i18n: arctozolt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_arctozoltegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: arctozoltbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/arctozolt/arctozolt",
+          "BabyTexture": "{{ModId}}/arctozolt/arctozolt",
+          "Sound": "{{ModId}}_arctozoltcry",
+          "BabySound": "{{ModId}}_arctozoltcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_arctozoltegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_arctozolt type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_arctozolt"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyarctozolt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyarctozolt": {
+          "DisplayName": "{{i18n: shinyarctozolt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_arctozoltegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyarctozoltbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/arctozolt/shinyarctozolt",
+          "BabyTexture": "{{ModId}}/arctozolt/shinyarctozolt",
+          "Sound": "{{ModId}}_arctozoltcry",
+          "BabySound": "{{ModId}}_arctozoltcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_arctozoltegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyarctozolt type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyarctozolt"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "arctozolt cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_arctozoltcry": {
+          "ID": "{{ModId}}_arctozoltcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/arctozolt/arctozoltcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arctozolt egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_arctozoltegg": {
+          "Name": "{{ModId}}_arctozoltegg",
+          "DisplayName": "{{i18n: arctozoltegg}}",
+          "Description": "{{i18n: arctozoltegg.d}}",
+          "Texture": "{{ModId}}/arctozolt/arctozoltegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arctozolt hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_arctozoltegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyarctozolt",
+              "AnimalId": "{{ModId}}_shinyarctozolt",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_arctozolt",
+              "AnimalId": "{{ModId}}_arctozolt",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

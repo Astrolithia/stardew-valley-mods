@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load swirlix textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/swirlix/swirlix, {{ModId}}/swirlix/shinyswirlix, {{ModId}}/swirlix/slurpuff, {{ModId}}/swirlix/shinyslurpuff, {{ModId}}/swirlix/swirlixegg",
+      "FromFile": "assets/livestocks/swirlix/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_swirlix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_swirlix": {
+          "DisplayName": "{{i18n: swirlix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_swirlixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: swirlixbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/swirlix/slurpuff",
+          "BabyTexture": "{{ModId}}/swirlix/swirlix",
+          "Sound": "{{ModId}}_slurpuffcry",
+          "BabySound": "{{ModId}}_swirlixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_swirlixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyswirlix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyswirlix": {
+          "DisplayName": "{{i18n: shinyswirlix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_swirlixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyswirlixbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/swirlix/shinyslurpuff",
+          "BabyTexture": "{{ModId}}/swirlix/shinyswirlix",
+          "Sound": "{{ModId}}_slurpuffcry",
+          "BabySound": "{{ModId}}_swirlixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_swirlixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "swirlix cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_swirlixcry": {
+          "ID": "{{ModId}}_swirlixcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/swirlix/swirlixcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_slurpuffcry": {
+          "ID": "{{ModId}}_slurpuffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/swirlix/slurpuffcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "swirlix egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_swirlixegg": {
+          "Name": "{{ModId}}_swirlixegg",
+          "DisplayName": "{{i18n: swirlixegg}}",
+          "Description": "{{i18n: swirlixegg.d}}",
+          "Texture": "{{ModId}}/swirlix/swirlixegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "swirlix hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_swirlixegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyswirlix",
+              "AnimalId": "{{ModId}}_shinyswirlix",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_swirlix",
+              "AnimalId": "{{ModId}}_swirlix",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

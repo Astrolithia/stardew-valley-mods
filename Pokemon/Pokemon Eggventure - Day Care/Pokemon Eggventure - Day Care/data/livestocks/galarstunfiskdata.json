@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarstunfisk textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/stunfisk/galarstunfisk, {{ModId}}/stunfisk/shinygalarstunfisk, {{ModId}}/stunfisk/galarstunfiskegg",
+      "FromFile": "assets/livestocks/stunfisk/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarstunfisk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarstunfisk": {
+          "DisplayName": "{{i18n: galarstunfisk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarstunfiskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarstunfiskbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stunfisk/galarstunfisk",
+          "BabyTexture": "{{ModId}}/stunfisk/galarstunfisk",
+          "Sound": "{{ModId}}_galarstunfiskcry",
+          "BabySound": "{{ModId}}_galarstunfiskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarstunfiskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarstunfisk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarstunfisk": {
+          "DisplayName": "{{i18n: shinygalarstunfisk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarstunfiskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarstunfiskbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stunfisk/shinygalarstunfisk",
+          "BabyTexture": "{{ModId}}/stunfisk/shinygalarstunfisk",
+          "Sound": "{{ModId}}_galarstunfiskcry",
+          "BabySound": "{{ModId}}_galarstunfiskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarstunfiskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarstunfisk cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarstunfiskcry": {
+          "ID": "{{ModId}}_galarstunfiskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/stunfisk/galarstunfiskcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarstunfisk egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarstunfiskegg": {
+          "Name": "{{ModId}}_galarstunfiskegg",
+          "DisplayName": "{{i18n: galarstunfiskegg}}",
+          "Description": "{{i18n: galarstunfiskegg.d}}",
+          "Texture": "{{ModId}}/stunfisk/galarstunfiskegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarstunfisk hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarstunfiskegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarstunfisk",
+              "AnimalId": "{{ModId}}_shinygalarstunfisk",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarstunfisk",
+              "AnimalId": "{{ModId}}_galarstunfisk",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

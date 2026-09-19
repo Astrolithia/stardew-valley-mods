@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load archen textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/archen/archen, {{ModId}}/archen/shinyarchen, {{ModId}}/archen/archeops, {{ModId}}/archen/shinyarcheops, {{ModId}}/archen/archenegg",
+      "FromFile": "assets/livestocks/archen/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_archen data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_archen": {
+          "DisplayName": "{{i18n: archen}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_archenegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: archenbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/archen/archeops",
+          "BabyTexture": "{{ModId}}/archen/archen",
+          "Sound": "{{ModId}}_archeopscry",
+          "BabySound": "{{ModId}}_archencry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_archenegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyarchen data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyarchen": {
+          "DisplayName": "{{i18n: shinyarchen}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_archenegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyarchenbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/archen/shinyarcheops",
+          "BabyTexture": "{{ModId}}/archen/shinyarchen",
+          "Sound": "{{ModId}}_archeopscry",
+          "BabySound": "{{ModId}}_archencry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_archenegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "archen cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_archencry": {
+          "ID": "{{ModId}}_archencry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/archen/archencry.ogg}}"
+          ]
+        },
+        "{{ModId}}_archeopscry": {
+          "ID": "{{ModId}}_archeopscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/archen/archeopscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "archen egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_archenegg": {
+          "Name": "{{ModId}}_archenegg",
+          "DisplayName": "{{i18n: archenegg}}",
+          "Description": "{{i18n: archenegg.d}}",
+          "Texture": "{{ModId}}/archen/archenegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "archen hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_archenegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyarchen",
+              "AnimalId": "{{ModId}}_shinyarchen",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_archen",
+              "AnimalId": "{{ModId}}_archen",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

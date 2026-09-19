@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dewpider textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dewpider/dewpider, {{ModId}}/dewpider/shinydewpider, {{ModId}}/dewpider/araquanid, {{ModId}}/dewpider/shinyaraquanid, {{ModId}}/dewpider/dewpideregg",
+      "FromFile": "assets/livestocks/dewpider/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dewpider data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dewpider": {
+          "DisplayName": "{{i18n: dewpider}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dewpideregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dewpiderbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dewpider/araquanid",
+          "BabyTexture": "{{ModId}}/dewpider/dewpider",
+          "Sound": "{{ModId}}_araquanidcry",
+          "BabySound": "{{ModId}}_dewpidercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dewpideregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_dewpider type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_dewpider"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydewpider data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydewpider": {
+          "DisplayName": "{{i18n: shinydewpider}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dewpideregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydewpiderbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dewpider/shinyaraquanid",
+          "BabyTexture": "{{ModId}}/dewpider/shinydewpider",
+          "Sound": "{{ModId}}_araquanidcry",
+          "BabySound": "{{ModId}}_dewpidercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dewpideregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinydewpider type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinydewpider"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "dewpider cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dewpidercry": {
+          "ID": "{{ModId}}_dewpidercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dewpider/dewpidercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_araquanidcry": {
+          "ID": "{{ModId}}_araquanidcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dewpider/araquanidcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dewpider egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dewpideregg": {
+          "Name": "{{ModId}}_dewpideregg",
+          "DisplayName": "{{i18n: dewpideregg}}",
+          "Description": "{{i18n: dewpideregg.d}}",
+          "Texture": "{{ModId}}/dewpider/dewpideregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_verycommon",
+            "pkegg_panning_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dewpider hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dewpideregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydewpider",
+              "AnimalId": "{{ModId}}_shinydewpider",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dewpider",
+              "AnimalId": "{{ModId}}_dewpider",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

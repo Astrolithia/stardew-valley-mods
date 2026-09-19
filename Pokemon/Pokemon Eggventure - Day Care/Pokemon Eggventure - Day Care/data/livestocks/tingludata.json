@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tinglu textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tinglu/tinglu, {{ModId}}/tinglu/shinytinglu, {{ModId}}/tinglu/tingluegg",
+      "FromFile": "assets/livestocks/tinglu/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tinglu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tinglu": {
+          "DisplayName": "{{i18n: tinglu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tingluegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tinglubirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tinglu/tinglu",
+          "BabyTexture": "{{ModId}}/tinglu/tinglu",
+          "Sound": "{{ModId}}_tinglucry",
+          "BabySound": "{{ModId}}_tinglucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tingluegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytinglu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytinglu": {
+          "DisplayName": "{{i18n: shinytinglu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tingluegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytinglubirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tinglu/shinytinglu",
+          "BabyTexture": "{{ModId}}/tinglu/shinytinglu",
+          "Sound": "{{ModId}}_tinglucry",
+          "BabySound": "{{ModId}}_tinglucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tingluegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "tinglu cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tinglucry": {
+          "ID": "{{ModId}}_tinglucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tinglu/tinglucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tinglu egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tingluegg": {
+          "Name": "{{ModId}}_tingluegg",
+          "DisplayName": "{{i18n: tingluegg}}",
+          "Description": "{{i18n: tingluegg.d}}",
+          "Texture": "{{ModId}}/tinglu/tingluegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tinglu hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tingluegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytinglu",
+              "AnimalId": "{{ModId}}_shinytinglu",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tinglu",
+              "AnimalId": "{{ModId}}_tinglu",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

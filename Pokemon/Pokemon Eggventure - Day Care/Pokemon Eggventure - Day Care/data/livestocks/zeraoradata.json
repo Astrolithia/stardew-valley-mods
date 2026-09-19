@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zeraora textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zeraora/zeraora, {{ModId}}/zeraora/shinyzeraora, {{ModId}}/zeraora/zeraoraegg",
+      "FromFile": "assets/livestocks/zeraora/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zeraora data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zeraora": {
+          "DisplayName": "{{i18n: zeraora}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zeraoraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zeraorabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zeraora/zeraora",
+          "BabyTexture": "{{ModId}}/zeraora/zeraora",
+          "Sound": "{{ModId}}_zeraoracry",
+          "BabySound": "{{ModId}}_zeraoracry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zeraoraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzeraora data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzeraora": {
+          "DisplayName": "{{i18n: shinyzeraora}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zeraoraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzeraorabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zeraora/shinyzeraora",
+          "BabyTexture": "{{ModId}}/zeraora/shinyzeraora",
+          "Sound": "{{ModId}}_zeraoracry",
+          "BabySound": "{{ModId}}_zeraoracry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zeraoraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "zeraora cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zeraoracry": {
+          "ID": "{{ModId}}_zeraoracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zeraora/zeraoracry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zeraora egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zeraoraegg": {
+          "Name": "{{ModId}}_zeraoraegg",
+          "DisplayName": "{{i18n: zeraoraegg}}",
+          "Description": "{{i18n: zeraoraegg.d}}",
+          "Texture": "{{ModId}}/zeraora/zeraoraegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zeraora hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zeraoraegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzeraora",
+              "AnimalId": "{{ModId}}_shinyzeraora",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zeraora",
+              "AnimalId": "{{ModId}}_zeraora",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

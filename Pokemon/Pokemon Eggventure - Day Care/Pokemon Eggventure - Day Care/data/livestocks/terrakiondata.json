@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load terrakion textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/terrakion/terrakion, {{ModId}}/terrakion/shinyterrakion, {{ModId}}/terrakion/terrakionegg",
+      "FromFile": "assets/livestocks/terrakion/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_terrakion data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_terrakion": {
+          "DisplayName": "{{i18n: terrakion}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_terrakionegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: terrakionbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/terrakion/terrakion",
+          "BabyTexture": "{{ModId}}/terrakion/terrakion",
+          "Sound": "{{ModId}}_terrakioncry",
+          "BabySound": "{{ModId}}_terrakioncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_terrakionegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyterrakion data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyterrakion": {
+          "DisplayName": "{{i18n: shinyterrakion}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_terrakionegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyterrakionbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/terrakion/shinyterrakion",
+          "BabyTexture": "{{ModId}}/terrakion/shinyterrakion",
+          "Sound": "{{ModId}}_terrakioncry",
+          "BabySound": "{{ModId}}_terrakioncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_terrakionegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "terrakion cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_terrakioncry": {
+          "ID": "{{ModId}}_terrakioncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/terrakion/terrakioncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "terrakion egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_terrakionegg": {
+          "Name": "{{ModId}}_terrakionegg",
+          "DisplayName": "{{i18n: terrakionegg}}",
+          "Description": "{{i18n: terrakionegg.d}}",
+          "Texture": "{{ModId}}/terrakion/terrakionegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "terrakion hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_terrakionegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyterrakion",
+              "AnimalId": "{{ModId}}_shinyterrakion",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_terrakion",
+              "AnimalId": "{{ModId}}_terrakion",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

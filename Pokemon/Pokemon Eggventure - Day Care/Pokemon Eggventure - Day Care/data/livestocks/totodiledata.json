@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load totodile textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/totodile/totodile, {{ModId}}/totodile/shinytotodile, {{ModId}}/totodile/croconaw, {{ModId}}/totodile/shinycroconaw, {{ModId}}/totodile/feraligatr, {{ModId}}/totodile/shinyferaligatr, {{ModId}}/totodile/totodileegg",
+      "FromFile": "assets/livestocks/totodile/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_totodile data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_totodile": {
+          "DisplayName": "{{i18n: totodile}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_totodileegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: totodilebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/totodile/croconaw",
+          "BabyTexture": "{{ModId}}/totodile/totodile",
+          "Sound": "{{ModId}}_feraligatrcry",
+          "BabySound": "{{ModId}}_totodilecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_totodileegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_totodile evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_totodile",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "totodileevolution": {
+          "Id": "totodileevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/totodile/feraligatr"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_totodile type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_totodile"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytotodile data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytotodile": {
+          "DisplayName": "{{i18n: shinytotodile}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_totodileegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytotodilebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/totodile/shinycroconaw",
+          "BabyTexture": "{{ModId}}/totodile/shinytotodile",
+          "Sound": "{{ModId}}_feraligatrcry",
+          "BabySound": "{{ModId}}_totodilecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_totodileegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytotodile evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytotodile",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytotodileevolution": {
+          "Id": "shinytotodileevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/totodile/shinyferaligatr"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytotodile type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytotodile"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "totodile cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_totodilecry": {
+          "ID": "{{ModId}}_totodilecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/totodile/totodilecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_feraligatrcry": {
+          "ID": "{{ModId}}_feraligatrcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/totodile/feraligatrcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "totodile egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_totodileegg": {
+          "Name": "{{ModId}}_totodileegg",
+          "DisplayName": "{{i18n: totodileegg}}",
+          "Description": "{{i18n: totodileegg.d}}",
+          "Texture": "{{ModId}}/totodile/totodileegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "pkegg_panning_p5",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "totodile hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_totodileegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytotodile",
+              "AnimalId": "{{ModId}}_shinytotodile",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_totodile",
+              "AnimalId": "{{ModId}}_totodile",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

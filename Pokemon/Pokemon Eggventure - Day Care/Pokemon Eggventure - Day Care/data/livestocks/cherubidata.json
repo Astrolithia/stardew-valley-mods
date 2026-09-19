@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cherubi textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cherubi/cherubi, {{ModId}}/cherubi/shinycherubi, {{ModId}}/cherubi/cherrim, {{ModId}}/cherubi/shinycherrim, {{ModId}}/cherubi/cherubiegg",
+      "FromFile": "assets/livestocks/cherubi/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cherubi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cherubi": {
+          "DisplayName": "{{i18n: cherubi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cherubiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cherubibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cherubi/cherrim",
+          "BabyTexture": "{{ModId}}/cherubi/cherubi",
+          "Sound": "{{ModId}}_cherrimcry",
+          "BabySound": "{{ModId}}_cherubicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cherubiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycherubi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycherubi": {
+          "DisplayName": "{{i18n: shinycherubi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cherubiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycherubibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cherubi/shinycherrim",
+          "BabyTexture": "{{ModId}}/cherubi/shinycherubi",
+          "Sound": "{{ModId}}_cherrimcry",
+          "BabySound": "{{ModId}}_cherubicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cherubiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "cherubi cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cherubicry": {
+          "ID": "{{ModId}}_cherubicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cherubi/cherubicry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cherrimcry": {
+          "ID": "{{ModId}}_cherrimcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cherubi/cherrimcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cherubi egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cherubiegg": {
+          "Name": "{{ModId}}_cherubiegg",
+          "DisplayName": "{{i18n: cherubiegg}}",
+          "Description": "{{i18n: cherubiegg.d}}",
+          "Texture": "{{ModId}}/cherubi/cherubiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cherubi hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cherubiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycherubi",
+              "AnimalId": "{{ModId}}_shinycherubi",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cherubi",
+              "AnimalId": "{{ModId}}_cherubi",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

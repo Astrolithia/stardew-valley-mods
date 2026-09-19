@@ -1,0 +1,201 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load reshiram textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/reshiram/reshiram, {{ModId}}/reshiram/shinyreshiram, {{ModId}}/reshiram/reshiramegg",
+      "FromFile": "assets/livestocks/reshiram/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_reshiram data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_reshiram": {
+          "DisplayName": "{{i18n: reshiram}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_reshiramegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: reshirambirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/reshiram/reshiram",
+          "BabyTexture": "{{ModId}}/reshiram/reshiram",
+          "Sound": "{{ModId}}_reshiramcry",
+          "BabySound": "{{ModId}}_reshiramcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_reshiramegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_reshiram type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_reshiram"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyreshiram data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyreshiram": {
+          "DisplayName": "{{i18n: shinyreshiram}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_reshiramegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyreshirambirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/reshiram/shinyreshiram",
+          "BabyTexture": "{{ModId}}/reshiram/shinyreshiram",
+          "Sound": "{{ModId}}_reshiramcry",
+          "BabySound": "{{ModId}}_reshiramcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_reshiramegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyreshiram type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyreshiram"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "reshiram cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_reshiramcry": {
+          "ID": "{{ModId}}_reshiramcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/reshiram/reshiramcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "reshiram egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_reshiramegg": {
+          "Name": "{{ModId}}_reshiramegg",
+          "DisplayName": "{{i18n: reshiramegg}}",
+          "Description": "{{i18n: reshiramegg.d}}",
+          "Texture": "{{ModId}}/reshiram/reshiramegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "reshiram hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_reshiramegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyreshiram",
+              "AnimalId": "{{ModId}}_shinyreshiram",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_reshiram",
+              "AnimalId": "{{ModId}}_reshiram",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

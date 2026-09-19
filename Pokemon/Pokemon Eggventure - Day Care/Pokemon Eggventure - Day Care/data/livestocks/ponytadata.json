@@ -1,0 +1,208 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ponyta textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ponyta/ponyta, {{ModId}}/ponyta/shinyponyta, {{ModId}}/ponyta/rapidash, {{ModId}}/ponyta/shinyrapidash, {{ModId}}/ponyta/ponytaegg",
+      "FromFile": "assets/livestocks/ponyta/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ponyta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ponyta": {
+          "DisplayName": "{{i18n: ponyta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ponytaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ponytabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ponyta/rapidash",
+          "BabyTexture": "{{ModId}}/ponyta/ponyta",
+          "Sound": "{{ModId}}_rapidashcry",
+          "BabySound": "{{ModId}}_ponytacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ponytaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_ponyta type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ponyta"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyponyta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyponyta": {
+          "DisplayName": "{{i18n: shinyponyta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ponytaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyponytabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ponyta/shinyrapidash",
+          "BabyTexture": "{{ModId}}/ponyta/shinyponyta",
+          "Sound": "{{ModId}}_rapidashcry",
+          "BabySound": "{{ModId}}_ponytacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ponytaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyponyta type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyponyta"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "ponyta cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ponytacry": {
+          "ID": "{{ModId}}_ponytacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ponyta/ponytacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_rapidashcry": {
+          "ID": "{{ModId}}_rapidashcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ponyta/rapidashcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ponyta egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ponytaegg": {
+          "Name": "{{ModId}}_ponytaegg",
+          "DisplayName": "{{i18n: ponytaegg}}",
+          "Description": "{{i18n: ponytaegg.d}}",
+          "Texture": "{{ModId}}/ponyta/ponytaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ponyta hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ponytaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyponyta",
+              "AnimalId": "{{ModId}}_shinyponyta",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ponyta",
+              "AnimalId": "{{ModId}}_ponyta",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

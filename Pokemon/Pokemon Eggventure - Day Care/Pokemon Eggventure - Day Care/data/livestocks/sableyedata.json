@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sableye textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sableye/sableye, {{ModId}}/sableye/shinysableye, {{ModId}}/sableye/sableyeegg",
+      "FromFile": "assets/livestocks/sableye/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sableye data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sableye": {
+          "DisplayName": "{{i18n: sableye}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sableyeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sableyebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sableye/sableye",
+          "BabyTexture": "{{ModId}}/sableye/sableye",
+          "Sound": "{{ModId}}_sableyecry",
+          "BabySound": "{{ModId}}_sableyecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sableyeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysableye data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysableye": {
+          "DisplayName": "{{i18n: shinysableye}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sableyeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysableyebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sableye/shinysableye",
+          "BabyTexture": "{{ModId}}/sableye/shinysableye",
+          "Sound": "{{ModId}}_sableyecry",
+          "BabySound": "{{ModId}}_sableyecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sableyeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "sableye cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sableyecry": {
+          "ID": "{{ModId}}_sableyecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sableye/sableyecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sableye egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sableyeegg": {
+          "Name": "{{ModId}}_sableyeegg",
+          "DisplayName": "{{i18n: sableyeegg}}",
+          "Description": "{{i18n: sableyeegg.d}}",
+          "Texture": "{{ModId}}/sableye/sableyeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_rare",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sableye hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sableyeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysableye",
+              "AnimalId": "{{ModId}}_shinysableye",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sableye",
+              "AnimalId": "{{ModId}}_sableye",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

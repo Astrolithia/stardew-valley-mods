@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load munchlax textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/munchlax/munchlax, {{ModId}}/munchlax/shinymunchlax, {{ModId}}/munchlax/snorlax, {{ModId}}/munchlax/shinysnorlax, {{ModId}}/munchlax/munchlaxegg",
+      "FromFile": "assets/livestocks/munchlax/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_munchlax data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_munchlax": {
+          "DisplayName": "{{i18n: munchlax}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_munchlaxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: munchlaxbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/munchlax/snorlax",
+          "BabyTexture": "{{ModId}}/munchlax/munchlax",
+          "Sound": "{{ModId}}_snorlaxcry",
+          "BabySound": "{{ModId}}_munchlaxcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_munchlaxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymunchlax data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymunchlax": {
+          "DisplayName": "{{i18n: shinymunchlax}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_munchlaxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymunchlaxbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/munchlax/shinysnorlax",
+          "BabyTexture": "{{ModId}}/munchlax/shinymunchlax",
+          "Sound": "{{ModId}}_snorlaxcry",
+          "BabySound": "{{ModId}}_munchlaxcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_munchlaxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "munchlax cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_munchlaxcry": {
+          "ID": "{{ModId}}_munchlaxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/munchlax/munchlaxcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_snorlaxcry": {
+          "ID": "{{ModId}}_snorlaxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/munchlax/snorlaxcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "munchlax egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_munchlaxegg": {
+          "Name": "{{ModId}}_munchlaxegg",
+          "DisplayName": "{{i18n: munchlaxegg}}",
+          "Description": "{{i18n: munchlaxegg.d}}",
+          "Texture": "{{ModId}}/munchlax/munchlaxegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "munchlax hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_munchlaxegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymunchlax",
+              "AnimalId": "{{ModId}}_shinymunchlax",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_munchlax",
+              "AnimalId": "{{ModId}}_munchlax",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

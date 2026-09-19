@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load virizion textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/virizion/virizion, {{ModId}}/virizion/shinyvirizion, {{ModId}}/virizion/virizionegg",
+      "FromFile": "assets/livestocks/virizion/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_virizion data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_virizion": {
+          "DisplayName": "{{i18n: virizion}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_virizionegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: virizionbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/virizion/virizion",
+          "BabyTexture": "{{ModId}}/virizion/virizion",
+          "Sound": "{{ModId}}_virizioncry",
+          "BabySound": "{{ModId}}_virizioncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_virizionegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvirizion data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvirizion": {
+          "DisplayName": "{{i18n: shinyvirizion}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_virizionegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvirizionbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/virizion/shinyvirizion",
+          "BabyTexture": "{{ModId}}/virizion/shinyvirizion",
+          "Sound": "{{ModId}}_virizioncry",
+          "BabySound": "{{ModId}}_virizioncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_virizionegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "virizion cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_virizioncry": {
+          "ID": "{{ModId}}_virizioncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/virizion/virizioncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "virizion egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_virizionegg": {
+          "Name": "{{ModId}}_virizionegg",
+          "DisplayName": "{{i18n: virizionegg}}",
+          "Description": "{{i18n: virizionegg.d}}",
+          "Texture": "{{ModId}}/virizion/virizionegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "virizion hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_virizionegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvirizion",
+              "AnimalId": "{{ModId}}_shinyvirizion",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_virizion",
+              "AnimalId": "{{ModId}}_virizion",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

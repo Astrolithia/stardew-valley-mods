@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zigzagoon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zigzagoon/zigzagoon, {{ModId}}/zigzagoon/shinyzigzagoon, {{ModId}}/zigzagoon/linoone, {{ModId}}/zigzagoon/shinylinoone, {{ModId}}/zigzagoon/obstagoon, {{ModId}}/zigzagoon/shinyobstagoon, {{ModId}}/zigzagoon/zigzagoonegg",
+      "FromFile": "assets/livestocks/zigzagoon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zigzagoon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zigzagoon": {
+          "DisplayName": "{{i18n: zigzagoon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zigzagoonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zigzagoonbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zigzagoon/linoone",
+          "BabyTexture": "{{ModId}}/zigzagoon/zigzagoon",
+          "Sound": "{{ModId}}_obstagooncry",
+          "BabySound": "{{ModId}}_zigzagooncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zigzagoonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzigzagoon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzigzagoon": {
+          "DisplayName": "{{i18n: shinyzigzagoon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zigzagoonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzigzagoonbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zigzagoon/shinylinoone",
+          "BabyTexture": "{{ModId}}/zigzagoon/shinyzigzagoon",
+          "Sound": "{{ModId}}_obstagooncry",
+          "BabySound": "{{ModId}}_zigzagooncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zigzagoonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "zigzagoon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zigzagooncry": {
+          "ID": "{{ModId}}_zigzagooncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zigzagoon/zigzagooncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_obstagooncry": {
+          "ID": "{{ModId}}_obstagooncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zigzagoon/obstagooncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zigzagoon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zigzagoonegg": {
+          "Name": "{{ModId}}_zigzagoonegg",
+          "DisplayName": "{{i18n: zigzagoonegg}}",
+          "Description": "{{i18n: zigzagoonegg.d}}",
+          "Texture": "{{ModId}}/zigzagoon/zigzagoonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zigzagoon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zigzagoonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzigzagoon",
+              "AnimalId": "{{ModId}}_shinyzigzagoon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zigzagoon",
+              "AnimalId": "{{ModId}}_zigzagoon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

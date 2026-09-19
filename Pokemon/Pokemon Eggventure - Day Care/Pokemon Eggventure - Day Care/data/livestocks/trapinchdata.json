@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load trapinch textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/trapinch/trapinch, {{ModId}}/trapinch/shinytrapinch, {{ModId}}/trapinch/vibrava, {{ModId}}/trapinch/shinyvibrava, {{ModId}}/trapinch/flygon, {{ModId}}/trapinch/shinyflygon, {{ModId}}/trapinch/trapinchegg",
+      "FromFile": "assets/livestocks/trapinch/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_trapinch data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_trapinch": {
+          "DisplayName": "{{i18n: trapinch}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_trapinchegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: trapinchbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/trapinch/vibrava",
+          "BabyTexture": "{{ModId}}/trapinch/trapinch",
+          "Sound": "{{ModId}}_flygoncry",
+          "BabySound": "{{ModId}}_trapinchcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_trapinchegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_trapinch evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_trapinch",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "trapinchevolution": {
+          "Id": "trapinchevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/trapinch/flygon"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytrapinch data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytrapinch": {
+          "DisplayName": "{{i18n: shinytrapinch}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_trapinchegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytrapinchbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/trapinch/shinyvibrava",
+          "BabyTexture": "{{ModId}}/trapinch/shinytrapinch",
+          "Sound": "{{ModId}}_flygoncry",
+          "BabySound": "{{ModId}}_trapinchcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_trapinchegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytrapinch evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytrapinch",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytrapinchevolution": {
+          "Id": "shinytrapinchevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/trapinch/shinyflygon"
+        }
+      }
+    },
+    {
+      "LogName": "trapinch cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_trapinchcry": {
+          "ID": "{{ModId}}_trapinchcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/trapinch/trapinchcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_flygoncry": {
+          "ID": "{{ModId}}_flygoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/trapinch/flygoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "trapinch egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_trapinchegg": {
+          "Name": "{{ModId}}_trapinchegg",
+          "DisplayName": "{{i18n: trapinchegg}}",
+          "Description": "{{i18n: trapinchegg.d}}",
+          "Texture": "{{ModId}}/trapinch/trapinchegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "trapinch hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_trapinchegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytrapinch",
+              "AnimalId": "{{ModId}}_shinytrapinch",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_trapinch",
+              "AnimalId": "{{ModId}}_trapinch",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

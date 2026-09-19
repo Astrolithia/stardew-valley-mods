@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sandyshocks textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sandyshocks/sandyshocks, {{ModId}}/sandyshocks/shinysandyshocks, {{ModId}}/sandyshocks/sandyshocksegg",
+      "FromFile": "assets/livestocks/sandyshocks/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sandyshocks data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sandyshocks": {
+          "DisplayName": "{{i18n: sandyshocks}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sandyshocksegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sandyshocksbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandyshocks/sandyshocks",
+          "BabyTexture": "{{ModId}}/sandyshocks/sandyshocks",
+          "Sound": "{{ModId}}_sandyshockscry",
+          "BabySound": "{{ModId}}_sandyshockscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandyshocksegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysandyshocks data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysandyshocks": {
+          "DisplayName": "{{i18n: shinysandyshocks}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sandyshocksegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysandyshocksbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandyshocks/shinysandyshocks",
+          "BabyTexture": "{{ModId}}/sandyshocks/shinysandyshocks",
+          "Sound": "{{ModId}}_sandyshockscry",
+          "BabySound": "{{ModId}}_sandyshockscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandyshocksegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "sandyshocks cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sandyshockscry": {
+          "ID": "{{ModId}}_sandyshockscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandyshocks/sandyshockscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandyshocks egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sandyshocksegg": {
+          "Name": "{{ModId}}_sandyshocksegg",
+          "DisplayName": "{{i18n: sandyshocksegg}}",
+          "Description": "{{i18n: sandyshocksegg.d}}",
+          "Texture": "{{ModId}}/sandyshocks/sandyshocksegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandyshocks hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sandyshocksegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysandyshocks",
+              "AnimalId": "{{ModId}}_shinysandyshocks",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sandyshocks",
+              "AnimalId": "{{ModId}}_sandyshocks",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

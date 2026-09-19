@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load lileep textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/lileep/lileep, {{ModId}}/lileep/shinylileep, {{ModId}}/lileep/cradily, {{ModId}}/lileep/shinycradily, {{ModId}}/lileep/lileepegg",
+      "FromFile": "assets/livestocks/lileep/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_lileep data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_lileep": {
+          "DisplayName": "{{i18n: lileep}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_lileepegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: lileepbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/lileep/cradily",
+          "BabyTexture": "{{ModId}}/lileep/lileep",
+          "Sound": "{{ModId}}_cradilycry",
+          "BabySound": "{{ModId}}_lileepcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_lileepegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylileep data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylileep": {
+          "DisplayName": "{{i18n: shinylileep}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_lileepegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylileepbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/lileep/shinycradily",
+          "BabyTexture": "{{ModId}}/lileep/shinylileep",
+          "Sound": "{{ModId}}_cradilycry",
+          "BabySound": "{{ModId}}_lileepcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_lileepegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "lileep cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_lileepcry": {
+          "ID": "{{ModId}}_lileepcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/lileep/lileepcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cradilycry": {
+          "ID": "{{ModId}}_cradilycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/lileep/cradilycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lileep egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_lileepegg": {
+          "Name": "{{ModId}}_lileepegg",
+          "DisplayName": "{{i18n: lileepegg}}",
+          "Description": "{{i18n: lileepegg.d}}",
+          "Texture": "{{ModId}}/lileep/lileepegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lileep hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_lileepegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylileep",
+              "AnimalId": "{{ModId}}_shinylileep",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_lileep",
+              "AnimalId": "{{ModId}}_lileep",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

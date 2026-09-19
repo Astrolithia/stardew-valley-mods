@@ -1,0 +1,197 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load toxel textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/toxel/toxel, {{ModId}}/toxel/shinytoxel, {{ModId}}/toxel/toxtricity1, {{ModId}}/toxel/shinytoxtricity1, {{ModId}}/toxel/toxtricity2, {{ModId}}/toxel/shinytoxtricity2, {{ModId}}/toxel/toxelegg",
+      "FromFile": "assets/livestocks/toxel/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_toxel data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_toxel": {
+          "DisplayName": "{{i18n: toxel}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_toxelegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: toxelbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/toxel/toxtricity1",
+          "BabyTexture": "{{ModId}}/toxel/toxel",
+          "Sound": "{{ModId}}_toxtricity1cry",
+          "BabySound": "{{ModId}}_toxelcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_toxelegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "toxtricity2",
+              "Texture": "{{ModId}}/toxel/toxtricity2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytoxel data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytoxel": {
+          "DisplayName": "{{i18n: shinytoxel}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_toxelegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytoxelbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/toxel/shinytoxtricity1",
+          "BabyTexture": "{{ModId}}/toxel/shinytoxel",
+          "Sound": "{{ModId}}_toxtricity1cry",
+          "BabySound": "{{ModId}}_toxelcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_toxelegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "toxtricity2",
+              "Texture": "{{ModId}}/toxel/shinytoxtricity2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "toxel cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_toxelcry": {
+          "ID": "{{ModId}}_toxelcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/toxel/toxelcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_toxtricity1cry": {
+          "ID": "{{ModId}}_toxtricity1cry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/toxel/toxtricity1cry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "toxel egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_toxelegg": {
+          "Name": "{{ModId}}_toxelegg",
+          "DisplayName": "{{i18n: toxelegg}}",
+          "Description": "{{i18n: toxelegg.d}}",
+          "Texture": "{{ModId}}/toxel/toxelegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_rare",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "toxel hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_toxelegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytoxel",
+              "AnimalId": "{{ModId}}_shinytoxel",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_toxel",
+              "AnimalId": "{{ModId}}_toxel",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

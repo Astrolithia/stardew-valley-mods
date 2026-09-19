@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load spritzee textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/spritzee/spritzee, {{ModId}}/spritzee/shinyspritzee, {{ModId}}/spritzee/aromatisse, {{ModId}}/spritzee/shinyaromatisse, {{ModId}}/spritzee/spritzeeegg",
+      "FromFile": "assets/livestocks/spritzee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_spritzee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_spritzee": {
+          "DisplayName": "{{i18n: spritzee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_spritzeeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: spritzeebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spritzee/aromatisse",
+          "BabyTexture": "{{ModId}}/spritzee/spritzee",
+          "Sound": "{{ModId}}_aromatissecry",
+          "BabySound": "{{ModId}}_spritzeecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_spritzeeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyspritzee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyspritzee": {
+          "DisplayName": "{{i18n: shinyspritzee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_spritzeeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyspritzeebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spritzee/shinyaromatisse",
+          "BabyTexture": "{{ModId}}/spritzee/shinyspritzee",
+          "Sound": "{{ModId}}_aromatissecry",
+          "BabySound": "{{ModId}}_spritzeecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_spritzeeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "spritzee cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_spritzeecry": {
+          "ID": "{{ModId}}_spritzeecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spritzee/spritzeecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_aromatissecry": {
+          "ID": "{{ModId}}_aromatissecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spritzee/aromatissecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spritzee egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_spritzeeegg": {
+          "Name": "{{ModId}}_spritzeeegg",
+          "DisplayName": "{{i18n: spritzeeegg}}",
+          "Description": "{{i18n: spritzeeegg.d}}",
+          "Texture": "{{ModId}}/spritzee/spritzeeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spritzee hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_spritzeeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyspritzee",
+              "AnimalId": "{{ModId}}_shinyspritzee",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_spritzee",
+              "AnimalId": "{{ModId}}_spritzee",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

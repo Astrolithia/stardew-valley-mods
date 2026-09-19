@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load piplup textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/piplup/piplup, {{ModId}}/piplup/shinypiplup, {{ModId}}/piplup/prinplup, {{ModId}}/piplup/shinyprinplup, {{ModId}}/piplup/empoleon, {{ModId}}/piplup/shinyempoleon, {{ModId}}/piplup/piplupegg",
+      "FromFile": "assets/livestocks/piplup/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_piplup data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_piplup": {
+          "DisplayName": "{{i18n: piplup}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_piplupegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: piplupbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/piplup/prinplup",
+          "BabyTexture": "{{ModId}}/piplup/piplup",
+          "Sound": "{{ModId}}_empoleoncry",
+          "BabySound": "{{ModId}}_piplupcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_piplupegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_piplup evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_piplup",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "piplupevolution": {
+          "Id": "piplupevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/piplup/empoleon"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_piplup type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_piplup"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypiplup data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypiplup": {
+          "DisplayName": "{{i18n: shinypiplup}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_piplupegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypiplupbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/piplup/shinyprinplup",
+          "BabyTexture": "{{ModId}}/piplup/shinypiplup",
+          "Sound": "{{ModId}}_empoleoncry",
+          "BabySound": "{{ModId}}_piplupcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_piplupegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypiplup evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypiplup",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypiplupevolution": {
+          "Id": "shinypiplupevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/piplup/shinyempoleon"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypiplup type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypiplup"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "piplup cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_piplupcry": {
+          "ID": "{{ModId}}_piplupcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/piplup/piplupcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_empoleoncry": {
+          "ID": "{{ModId}}_empoleoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/piplup/empoleoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "piplup egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_piplupegg": {
+          "Name": "{{ModId}}_piplupegg",
+          "DisplayName": "{{i18n: piplupegg}}",
+          "Description": "{{i18n: piplupegg.d}}",
+          "Texture": "{{ModId}}/piplup/piplupegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "piplup hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_piplupegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypiplup",
+              "AnimalId": "{{ModId}}_shinypiplup",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_piplup",
+              "AnimalId": "{{ModId}}_piplup",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

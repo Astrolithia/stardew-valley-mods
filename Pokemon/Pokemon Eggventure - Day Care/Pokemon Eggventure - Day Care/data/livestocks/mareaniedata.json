@@ -1,0 +1,208 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mareanie textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mareanie/mareanie, {{ModId}}/mareanie/shinymareanie, {{ModId}}/mareanie/toxapex, {{ModId}}/mareanie/shinytoxapex, {{ModId}}/mareanie/mareanieegg",
+      "FromFile": "assets/livestocks/mareanie/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mareanie data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mareanie": {
+          "DisplayName": "{{i18n: mareanie}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mareanieegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mareaniebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mareanie/toxapex",
+          "BabyTexture": "{{ModId}}/mareanie/mareanie",
+          "Sound": "{{ModId}}_toxapexcry",
+          "BabySound": "{{ModId}}_mareaniecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mareanieegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mareanie type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mareanie"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymareanie data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymareanie": {
+          "DisplayName": "{{i18n: shinymareanie}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mareanieegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymareaniebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mareanie/shinytoxapex",
+          "BabyTexture": "{{ModId}}/mareanie/shinymareanie",
+          "Sound": "{{ModId}}_toxapexcry",
+          "BabySound": "{{ModId}}_mareaniecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mareanieegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymareanie type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymareanie"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "mareanie cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mareaniecry": {
+          "ID": "{{ModId}}_mareaniecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mareanie/mareaniecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_toxapexcry": {
+          "ID": "{{ModId}}_toxapexcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mareanie/toxapexcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mareanie egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mareanieegg": {
+          "Name": "{{ModId}}_mareanieegg",
+          "DisplayName": "{{i18n: mareanieegg}}",
+          "Description": "{{i18n: mareanieegg.d}}",
+          "Texture": "{{ModId}}/mareanie/mareanieegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mareanie hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mareanieegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymareanie",
+              "AnimalId": "{{ModId}}_shinymareanie",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mareanie",
+              "AnimalId": "{{ModId}}_mareanie",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

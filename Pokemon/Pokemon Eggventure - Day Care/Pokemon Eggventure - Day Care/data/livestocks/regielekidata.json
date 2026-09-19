@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load regieleki textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/regieleki/regieleki, {{ModId}}/regieleki/shinyregieleki, {{ModId}}/regieleki/regielekiegg",
+      "FromFile": "assets/livestocks/regieleki/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_regieleki data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_regieleki": {
+          "DisplayName": "{{i18n: regieleki}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_regielekiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: regielekibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/regieleki/regieleki",
+          "BabyTexture": "{{ModId}}/regieleki/regieleki",
+          "Sound": "{{ModId}}_regielekicry",
+          "BabySound": "{{ModId}}_regielekicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_regielekiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyregieleki data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyregieleki": {
+          "DisplayName": "{{i18n: shinyregieleki}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_regielekiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyregielekibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/regieleki/shinyregieleki",
+          "BabyTexture": "{{ModId}}/regieleki/shinyregieleki",
+          "Sound": "{{ModId}}_regielekicry",
+          "BabySound": "{{ModId}}_regielekicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_regielekiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "regieleki cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_regielekicry": {
+          "ID": "{{ModId}}_regielekicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/regieleki/regielekicry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "regieleki egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_regielekiegg": {
+          "Name": "{{ModId}}_regielekiegg",
+          "DisplayName": "{{i18n: regielekiegg}}",
+          "Description": "{{i18n: regielekiegg.d}}",
+          "Texture": "{{ModId}}/regieleki/regielekiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "regieleki hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_regielekiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyregieleki",
+              "AnimalId": "{{ModId}}_shinyregieleki",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_regieleki",
+              "AnimalId": "{{ModId}}_regieleki",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

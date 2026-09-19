@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galaryamask textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/yamask/galaryamask, {{ModId}}/yamask/shinygalaryamask, {{ModId}}/yamask/runerigus, {{ModId}}/yamask/shinyrunerigus, {{ModId}}/yamask/galaryamaskegg",
+      "FromFile": "assets/livestocks/yamask/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galaryamask data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galaryamask": {
+          "DisplayName": "{{i18n: galaryamask}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galaryamaskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galaryamaskbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yamask/runerigus",
+          "BabyTexture": "{{ModId}}/yamask/galaryamask",
+          "Sound": "{{ModId}}_runeriguscry",
+          "BabySound": "{{ModId}}_galaryamaskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galaryamaskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalaryamask data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalaryamask": {
+          "DisplayName": "{{i18n: shinygalaryamask}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galaryamaskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalaryamaskbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yamask/shinyrunerigus",
+          "BabyTexture": "{{ModId}}/yamask/shinygalaryamask",
+          "Sound": "{{ModId}}_runeriguscry",
+          "BabySound": "{{ModId}}_galaryamaskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galaryamaskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "galaryamask cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galaryamaskcry": {
+          "ID": "{{ModId}}_galaryamaskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yamask/galaryamaskcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_runeriguscry": {
+          "ID": "{{ModId}}_runeriguscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yamask/runeriguscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galaryamask egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galaryamaskegg": {
+          "Name": "{{ModId}}_galaryamaskegg",
+          "DisplayName": "{{i18n: galaryamaskegg}}",
+          "Description": "{{i18n: galaryamaskegg.d}}",
+          "Texture": "{{ModId}}/yamask/galaryamaskegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "pkegg_mine_31_40_p3",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galaryamask hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galaryamaskegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalaryamask",
+              "AnimalId": "{{ModId}}_shinygalaryamask",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galaryamask",
+              "AnimalId": "{{ModId}}_galaryamask",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

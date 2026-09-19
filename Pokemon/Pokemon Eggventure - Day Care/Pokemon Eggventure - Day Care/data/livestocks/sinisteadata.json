@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sinistea textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sinistea/sinistea, {{ModId}}/sinistea/shinysinistea, {{ModId}}/sinistea/polteageist, {{ModId}}/sinistea/shinypolteageist, {{ModId}}/sinistea/sinisteaegg",
+      "FromFile": "assets/livestocks/sinistea/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sinistea data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sinistea": {
+          "DisplayName": "{{i18n: sinistea}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sinisteaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sinisteabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sinistea/polteageist",
+          "BabyTexture": "{{ModId}}/sinistea/sinistea",
+          "Sound": "{{ModId}}_polteageistcry",
+          "BabySound": "{{ModId}}_sinisteacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sinisteaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysinistea data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysinistea": {
+          "DisplayName": "{{i18n: shinysinistea}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sinisteaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysinisteabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sinistea/shinypolteageist",
+          "BabyTexture": "{{ModId}}/sinistea/shinysinistea",
+          "Sound": "{{ModId}}_polteageistcry",
+          "BabySound": "{{ModId}}_sinisteacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sinisteaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "sinistea cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sinisteacry": {
+          "ID": "{{ModId}}_sinisteacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sinistea/sinisteacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_polteageistcry": {
+          "ID": "{{ModId}}_polteageistcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sinistea/polteageistcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sinistea egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sinisteaegg": {
+          "Name": "{{ModId}}_sinisteaegg",
+          "DisplayName": "{{i18n: sinisteaegg}}",
+          "Description": "{{i18n: sinisteaegg.d}}",
+          "Texture": "{{ModId}}/sinistea/sinisteaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sinistea hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sinisteaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysinistea",
+              "AnimalId": "{{ModId}}_shinysinistea",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sinistea",
+              "AnimalId": "{{ModId}}_sinistea",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

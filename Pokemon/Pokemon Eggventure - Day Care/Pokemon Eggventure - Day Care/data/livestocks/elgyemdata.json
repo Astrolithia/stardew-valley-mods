@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load elgyem textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/elgyem/elgyem, {{ModId}}/elgyem/shinyelgyem, {{ModId}}/elgyem/beheeyem, {{ModId}}/elgyem/shinybeheeyem, {{ModId}}/elgyem/elgyemegg",
+      "FromFile": "assets/livestocks/elgyem/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_elgyem data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_elgyem": {
+          "DisplayName": "{{i18n: elgyem}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_elgyemegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: elgyembirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/elgyem/beheeyem",
+          "BabyTexture": "{{ModId}}/elgyem/elgyem",
+          "Sound": "{{ModId}}_beheeyemcry",
+          "BabySound": "{{ModId}}_elgyemcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_elgyemegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyelgyem data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyelgyem": {
+          "DisplayName": "{{i18n: shinyelgyem}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_elgyemegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyelgyembirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/elgyem/shinybeheeyem",
+          "BabyTexture": "{{ModId}}/elgyem/shinyelgyem",
+          "Sound": "{{ModId}}_beheeyemcry",
+          "BabySound": "{{ModId}}_elgyemcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_elgyemegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "elgyem cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_elgyemcry": {
+          "ID": "{{ModId}}_elgyemcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/elgyem/elgyemcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_beheeyemcry": {
+          "ID": "{{ModId}}_beheeyemcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/elgyem/beheeyemcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "elgyem egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_elgyemegg": {
+          "Name": "{{ModId}}_elgyemegg",
+          "DisplayName": "{{i18n: elgyemegg}}",
+          "Description": "{{i18n: elgyemegg.d}}",
+          "Texture": "{{ModId}}/elgyem/elgyemegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "pkegg_skullcavern_p4",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "elgyem hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_elgyemegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyelgyem",
+              "AnimalId": "{{ModId}}_shinyelgyem",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_elgyem",
+              "AnimalId": "{{ModId}}_elgyem",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

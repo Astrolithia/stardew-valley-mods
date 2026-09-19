@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load maractus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/maractus/maractus, {{ModId}}/maractus/shinymaractus, {{ModId}}/maractus/maractusegg",
+      "FromFile": "assets/livestocks/maractus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_maractus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_maractus": {
+          "DisplayName": "{{i18n: maractus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_maractusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: maractusbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/maractus/maractus",
+          "BabyTexture": "{{ModId}}/maractus/maractus",
+          "Sound": "{{ModId}}_maractuscry",
+          "BabySound": "{{ModId}}_maractuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_maractusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymaractus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymaractus": {
+          "DisplayName": "{{i18n: shinymaractus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_maractusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymaractusbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/maractus/shinymaractus",
+          "BabyTexture": "{{ModId}}/maractus/shinymaractus",
+          "Sound": "{{ModId}}_maractuscry",
+          "BabySound": "{{ModId}}_maractuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_maractusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "maractus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_maractuscry": {
+          "ID": "{{ModId}}_maractuscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/maractus/maractuscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "maractus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_maractusegg": {
+          "Name": "{{ModId}}_maractusegg",
+          "DisplayName": "{{i18n: maractusegg}}",
+          "Description": "{{i18n: maractusegg.d}}",
+          "Texture": "{{ModId}}/maractus/maractusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "maractus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_maractusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymaractus",
+              "AnimalId": "{{ModId}}_shinymaractus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_maractus",
+              "AnimalId": "{{ModId}}_maractus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

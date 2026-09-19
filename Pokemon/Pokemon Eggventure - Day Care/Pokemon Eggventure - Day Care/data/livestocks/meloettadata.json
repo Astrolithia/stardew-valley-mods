@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load meloetta textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/meloetta/meloetta, {{ModId}}/meloetta/shinymeloetta, {{ModId}}/meloetta/meloettadance, {{ModId}}/meloetta/shinymeloettadance, {{ModId}}/meloetta/meloettaegg",
+      "FromFile": "assets/livestocks/meloetta/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_meloetta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_meloetta": {
+          "DisplayName": "{{i18n: meloetta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_meloettaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: meloettabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meloetta/meloetta",
+          "BabyTexture": "{{ModId}}/meloetta/meloetta",
+          "Sound": "{{ModId}}_meloettacry",
+          "BabySound": "{{ModId}}_meloettacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_meloettaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "meloettadance",
+              "Texture": "{{ModId}}/meloetta/meloettadance",
+              "BabyTexture": "{{ModId}}/meloetta/meloettadance"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymeloetta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymeloetta": {
+          "DisplayName": "{{i18n: shinymeloetta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_meloettaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymeloettabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meloetta/shinymeloetta",
+          "BabyTexture": "{{ModId}}/meloetta/shinymeloetta",
+          "Sound": "{{ModId}}_meloettacry",
+          "BabySound": "{{ModId}}_meloettacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_meloettaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "meloettadance",
+              "Texture": "{{ModId}}/meloetta/shinymeloettadance",
+              "BabyTexture": "{{ModId}}/meloetta/shinymeloettadance"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meloetta cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_meloettacry": {
+          "ID": "{{ModId}}_meloettacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meloetta/meloettacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meloetta egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_meloettaegg": {
+          "Name": "{{ModId}}_meloettaegg",
+          "DisplayName": "{{i18n: meloettaegg}}",
+          "Description": "{{i18n: meloettaegg.d}}",
+          "Texture": "{{ModId}}/meloetta/meloettaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meloetta hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_meloettaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymeloetta",
+              "AnimalId": "{{ModId}}_shinymeloetta",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_meloetta",
+              "AnimalId": "{{ModId}}_meloetta",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

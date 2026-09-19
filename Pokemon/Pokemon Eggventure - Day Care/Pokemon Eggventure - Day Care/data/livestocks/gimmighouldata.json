@@ -1,0 +1,165 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gimmighoul textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/gimmighoul/gimmighoul, {{ModId}}/gimmighoul/shinygimmighoul, {{ModId}}/gimmighoul/gimmighoul2, {{ModId}}/gimmighoul/shinygimmighoul2, {{ModId}}/gimmighoul/gimmighoul3, {{ModId}}/gimmighoul/shinygimmighoul3, {{ModId}}/gimmighoul/gholdengo, {{ModId}}/gimmighoul/shinygholdengo, {{ModId}}/gimmighoul/gimmighoulegg",
+      "FromFile": "assets/livestocks/gimmighoul/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "gimmighoul egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gimmighoulegg": {
+          "Name": "{{ModId}}_gimmighoulegg",
+          "DisplayName": "{{i18n: gimmighoulegg}}",
+          "Description": "{{i18n: gimmighoulegg.d}}",
+          "Texture": "{{ModId}}/gimmighoul/gimmighoulegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 150,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_rare",
+            "pkegg_travelingcart",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_gimmighoul data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gimmighoul": {
+          "DisplayName": "{{i18n: gimmighoul}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_gimmighoulegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gimmighoulbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gimmighoul/gholdengo",
+          "BabyTexture": "{{ModId}}/gimmighoul/gimmighoul",
+          "Sound": "{{ModId}}_gholdengocry",
+          "BabySound": "{{ModId}}_gimmighoulcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gimmighoulegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygimmighoul data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygimmighoul": {
+          "DisplayName": "{{i18n: shinygimmighoul}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_gimmighoulegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygimmighoulbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gimmighoul/shinygholdengo",
+          "BabyTexture": "{{ModId}}/gimmighoul/shinygimmighoul",
+          "Sound": "{{ModId}}_gholdengocry",
+          "BabySound": "{{ModId}}_gimmighoulcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gimmighoulegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "gimmighoul cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_gimmighoulcry": {
+          "ID": "{{ModId}}_gimmighoulcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gimmighoul/gimmighoulcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gholdengocry": {
+          "ID": "{{ModId}}_gholdengocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gimmighoul/gholdengocry.ogg}}"
+          ]
+        }
+      }
+    }
+  ]
+}

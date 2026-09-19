@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fluttermane textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fluttermane/fluttermane, {{ModId}}/fluttermane/shinyfluttermane, {{ModId}}/fluttermane/fluttermaneegg",
+      "FromFile": "assets/livestocks/fluttermane/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_fluttermane data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_fluttermane": {
+          "DisplayName": "{{i18n: fluttermane}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fluttermaneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: fluttermanebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fluttermane/fluttermane",
+          "BabyTexture": "{{ModId}}/fluttermane/fluttermane",
+          "Sound": "{{ModId}}_fluttermanecry",
+          "BabySound": "{{ModId}}_fluttermanecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fluttermaneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfluttermane data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfluttermane": {
+          "DisplayName": "{{i18n: shinyfluttermane}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fluttermaneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfluttermanebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fluttermane/shinyfluttermane",
+          "BabyTexture": "{{ModId}}/fluttermane/shinyfluttermane",
+          "Sound": "{{ModId}}_fluttermanecry",
+          "BabySound": "{{ModId}}_fluttermanecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fluttermaneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "fluttermane cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_fluttermanecry": {
+          "ID": "{{ModId}}_fluttermanecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fluttermane/fluttermanecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fluttermane egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fluttermaneegg": {
+          "Name": "{{ModId}}_fluttermaneegg",
+          "DisplayName": "{{i18n: fluttermaneegg}}",
+          "Description": "{{i18n: fluttermaneegg.d}}",
+          "Texture": "{{ModId}}/fluttermane/fluttermaneegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fluttermane hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_fluttermaneegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfluttermane",
+              "AnimalId": "{{ModId}}_shinyfluttermane",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_fluttermane",
+              "AnimalId": "{{ModId}}_fluttermane",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

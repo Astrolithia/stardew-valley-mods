@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zekrom textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zekrom/zekrom, {{ModId}}/zekrom/shinyzekrom, {{ModId}}/zekrom/zekromegg",
+      "FromFile": "assets/livestocks/zekrom/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zekrom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zekrom": {
+          "DisplayName": "{{i18n: zekrom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zekromegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zekrombirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zekrom/zekrom",
+          "BabyTexture": "{{ModId}}/zekrom/zekrom",
+          "Sound": "{{ModId}}_zekromcry",
+          "BabySound": "{{ModId}}_zekromcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zekromegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzekrom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzekrom": {
+          "DisplayName": "{{i18n: shinyzekrom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zekromegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzekrombirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zekrom/shinyzekrom",
+          "BabyTexture": "{{ModId}}/zekrom/shinyzekrom",
+          "Sound": "{{ModId}}_zekromcry",
+          "BabySound": "{{ModId}}_zekromcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zekromegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "zekrom cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zekromcry": {
+          "ID": "{{ModId}}_zekromcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zekrom/zekromcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zekrom egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zekromegg": {
+          "Name": "{{ModId}}_zekromegg",
+          "DisplayName": "{{i18n: zekromegg}}",
+          "Description": "{{i18n: zekromegg.d}}",
+          "Texture": "{{ModId}}/zekrom/zekromegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zekrom hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zekromegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzekrom",
+              "AnimalId": "{{ModId}}_shinyzekrom",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zekrom",
+              "AnimalId": "{{ModId}}_zekrom",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

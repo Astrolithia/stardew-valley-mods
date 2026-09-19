@@ -1,0 +1,62 @@
+{
+  "Changes": [
+    {
+      "LogName": "Casino egg items",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Casino",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_casino_abra": {
+          "Id": "{{ModId}}_casino_abra",
+          "ItemId": "{{ModId}}_abraegg",
+          "Price": 30000
+        },
+        "{{ModId}}_casino_larvitar": {
+          "Id": "{{ModId}}_casino_larvitar",
+          "ItemId": "{{ModId}}_larvitaregg",
+          "Price": 75000
+        },
+        "{{ModId}}_casino_porygon": {
+          "Id": "{{ModId}}_casino_porygon",
+          "ItemId": "{{ModId}}_porygonegg",
+          "Price": 40000
+        },
+        "{{ModId}}_casino_dratini": {
+          "Id": "{{ModId}}_casino_dratini",
+          "ItemId": "{{ModId}}_dratiniegg",
+          "Price": 50000
+        },
+        "{{ModId}}_casino_klefki": {
+          "Id": "{{ModId}}_casino_klefki",
+          "ItemId": "{{ModId}}_klefkiegg",
+          "Price": 30000
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_casino_larvitar",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_casino_dratini",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_casino_porygon",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_casino_abra",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_casino_klefki",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

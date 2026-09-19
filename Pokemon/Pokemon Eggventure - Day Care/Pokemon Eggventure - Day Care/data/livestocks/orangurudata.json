@@ -1,0 +1,181 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load oranguru textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/oranguru/oranguru, {{ModId}}/oranguru/shinyoranguru, {{ModId}}/oranguru/oranguruegg",
+      "FromFile": "assets/livestocks/oranguru/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_oranguru data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_oranguru": {
+          "DisplayName": "{{i18n: oranguru}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_oranguruegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: orangurubirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oranguru/oranguru",
+          "BabyTexture": "{{ModId}}/oranguru/oranguru",
+          "Sound": "{{ModId}}_orangurucry",
+          "BabySound": "{{ModId}}_orangurucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oranguruegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyoranguru data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyoranguru": {
+          "DisplayName": "{{i18n: shinyoranguru}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_oranguruegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyorangurubirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oranguru/shinyoranguru",
+          "BabyTexture": "{{ModId}}/oranguru/shinyoranguru",
+          "Sound": "{{ModId}}_orangurucry",
+          "BabySound": "{{ModId}}_orangurucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oranguruegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "oranguru cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_orangurucry": {
+          "ID": "{{ModId}}_orangurucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oranguru/orangurucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oranguru egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_oranguruegg": {
+          "Name": "{{ModId}}_oranguruegg",
+          "DisplayName": "{{i18n: oranguruegg}}",
+          "Description": "{{i18n: oranguruegg.d}}",
+          "Texture": "{{ModId}}/oranguru/oranguruegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "pkegg_chop_palmisland",
+            "pkegg_shake_palmisland",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oranguru hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_oranguruegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyoranguru",
+              "AnimalId": "{{ModId}}_shinyoranguru",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_oranguru",
+              "AnimalId": "{{ModId}}_oranguru",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

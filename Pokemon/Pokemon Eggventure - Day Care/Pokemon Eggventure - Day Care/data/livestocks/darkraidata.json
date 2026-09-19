@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load darkrai textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/darkrai/darkrai, {{ModId}}/darkrai/shinydarkrai, {{ModId}}/darkrai/darkraiegg",
+      "FromFile": "assets/livestocks/darkrai/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_darkrai data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_darkrai": {
+          "DisplayName": "{{i18n: darkrai}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_darkraiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: darkraibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/darkrai/darkrai",
+          "BabyTexture": "{{ModId}}/darkrai/darkrai",
+          "Sound": "{{ModId}}_darkraicry",
+          "BabySound": "{{ModId}}_darkraicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_darkraiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydarkrai data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydarkrai": {
+          "DisplayName": "{{i18n: shinydarkrai}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_darkraiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydarkraibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/darkrai/shinydarkrai",
+          "BabyTexture": "{{ModId}}/darkrai/shinydarkrai",
+          "Sound": "{{ModId}}_darkraicry",
+          "BabySound": "{{ModId}}_darkraicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_darkraiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "darkrai cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_darkraicry": {
+          "ID": "{{ModId}}_darkraicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/darkrai/darkraicry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "darkrai egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_darkraiegg": {
+          "Name": "{{ModId}}_darkraiegg",
+          "DisplayName": "{{i18n: darkraiegg}}",
+          "Description": "{{i18n: darkraiegg.d}}",
+          "Texture": "{{ModId}}/darkrai/darkraiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "darkrai hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_darkraiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydarkrai",
+              "AnimalId": "{{ModId}}_shinydarkrai",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_darkrai",
+              "AnimalId": "{{ModId}}_darkrai",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

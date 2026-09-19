@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hitmonchan textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tyrogue/tyrogue_hitmonchan, {{ModId}}/tyrogue/shinytyrogue_hitmonchan, {{ModId}}/tyrogue/hitmonchan, {{ModId}}/tyrogue/shinyhitmonchan, {{ModId}}/tyrogue/hitmonchanegg",
+      "FromFile": "assets/livestocks/tyrogue/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hitmonchan data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hitmonchan": {
+          "DisplayName": "{{i18n: hitmonchan}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hitmonchanegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hitmonchanbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrogue/hitmonchan",
+          "BabyTexture": "{{ModId}}/tyrogue/tyrogue_hitmonchan",
+          "Sound": "{{ModId}}_hitmonchancry",
+          "BabySound": "{{ModId}}_tyroguecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hitmonchanegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhitmonchan data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhitmonchan": {
+          "DisplayName": "{{i18n: shinyhitmonchan}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hitmonchanegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhitmonchanbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrogue/shinyhitmonchan",
+          "BabyTexture": "{{ModId}}/tyrogue/shinytyrogue_hitmonchan",
+          "Sound": "{{ModId}}_hitmonchancry",
+          "BabySound": "{{ModId}}_tyroguecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hitmonchanegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hitmonchan cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tyroguecry": {
+          "ID": "{{ModId}}_tyroguecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrogue/tyroguecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hitmonchancry": {
+          "ID": "{{ModId}}_hitmonchancry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrogue/hitmonchancry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hitmonchan egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hitmonchanegg": {
+          "Name": "{{ModId}}_hitmonchanegg",
+          "DisplayName": "{{i18n: hitmonchanegg}}",
+          "Description": "{{i18n: hitmonchanegg.d}}",
+          "Texture": "{{ModId}}/tyrogue/hitmonchanegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hitmonchan hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hitmonchanegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhitmonchan",
+              "AnimalId": "{{ModId}}_shinyhitmonchan",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hitmonchan",
+              "AnimalId": "{{ModId}}_hitmonchan",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

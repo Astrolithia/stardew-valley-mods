@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load togedemaru textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/togedemaru/togedemaru, {{ModId}}/togedemaru/shinytogedemaru, {{ModId}}/togedemaru/togedemaruegg",
+      "FromFile": "assets/livestocks/togedemaru/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_togedemaru data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_togedemaru": {
+          "DisplayName": "{{i18n: togedemaru}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_togedemaruegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: togedemarubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/togedemaru/togedemaru",
+          "BabyTexture": "{{ModId}}/togedemaru/togedemaru",
+          "Sound": "{{ModId}}_togedemarucry",
+          "BabySound": "{{ModId}}_togedemarucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_togedemaruegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytogedemaru data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytogedemaru": {
+          "DisplayName": "{{i18n: shinytogedemaru}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_togedemaruegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytogedemarubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/togedemaru/shinytogedemaru",
+          "BabyTexture": "{{ModId}}/togedemaru/shinytogedemaru",
+          "Sound": "{{ModId}}_togedemarucry",
+          "BabySound": "{{ModId}}_togedemarucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_togedemaruegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "togedemaru cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_togedemarucry": {
+          "ID": "{{ModId}}_togedemarucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/togedemaru/togedemarucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "togedemaru egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_togedemaruegg": {
+          "Name": "{{ModId}}_togedemaruegg",
+          "DisplayName": "{{i18n: togedemaruegg}}",
+          "Description": "{{i18n: togedemaruegg.d}}",
+          "Texture": "{{ModId}}/togedemaru/togedemaruegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "pkegg_chop_winter",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "togedemaru hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_togedemaruegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytogedemaru",
+              "AnimalId": "{{ModId}}_shinytogedemaru",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_togedemaru",
+              "AnimalId": "{{ModId}}_togedemaru",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

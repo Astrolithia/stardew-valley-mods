@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sigilyph textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sigilyph/sigilyph, {{ModId}}/sigilyph/shinysigilyph, {{ModId}}/sigilyph/sigilyphegg",
+      "FromFile": "assets/livestocks/sigilyph/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sigilyph data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sigilyph": {
+          "DisplayName": "{{i18n: sigilyph}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sigilyphegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sigilyphbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sigilyph/sigilyph",
+          "BabyTexture": "{{ModId}}/sigilyph/sigilyph",
+          "Sound": "{{ModId}}_sigilyphcry",
+          "BabySound": "{{ModId}}_sigilyphcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sigilyphegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysigilyph data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysigilyph": {
+          "DisplayName": "{{i18n: shinysigilyph}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sigilyphegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysigilyphbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sigilyph/shinysigilyph",
+          "BabyTexture": "{{ModId}}/sigilyph/shinysigilyph",
+          "Sound": "{{ModId}}_sigilyphcry",
+          "BabySound": "{{ModId}}_sigilyphcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sigilyphegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "sigilyph cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sigilyphcry": {
+          "ID": "{{ModId}}_sigilyphcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sigilyph/sigilyphcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sigilyph egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sigilyphegg": {
+          "Name": "{{ModId}}_sigilyphegg",
+          "DisplayName": "{{i18n: sigilyphegg}}",
+          "Description": "{{i18n: sigilyphegg.d}}",
+          "Texture": "{{ModId}}/sigilyph/sigilyphegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_rare",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sigilyph hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sigilyphegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysigilyph",
+              "AnimalId": "{{ModId}}_shinysigilyph",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sigilyph",
+              "AnimalId": "{{ModId}}_sigilyph",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

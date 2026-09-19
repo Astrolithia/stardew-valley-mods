@@ -1,0 +1,207 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cubchoo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cubchoo/cubchoo, {{ModId}}/cubchoo/shinycubchoo, {{ModId}}/cubchoo/beartic, {{ModId}}/cubchoo/shinybeartic, {{ModId}}/cubchoo/cubchooegg",
+      "FromFile": "assets/livestocks/cubchoo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cubchoo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cubchoo": {
+          "DisplayName": "{{i18n: cubchoo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cubchooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cubchoobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cubchoo/beartic",
+          "BabyTexture": "{{ModId}}/cubchoo/cubchoo",
+          "Sound": "{{ModId}}_bearticcry",
+          "BabySound": "{{ModId}}_cubchoocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cubchooegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_cubchoo type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_cubchoo"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycubchoo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycubchoo": {
+          "DisplayName": "{{i18n: shinycubchoo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cubchooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycubchoobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cubchoo/shinybeartic",
+          "BabyTexture": "{{ModId}}/cubchoo/shinycubchoo",
+          "Sound": "{{ModId}}_bearticcry",
+          "BabySound": "{{ModId}}_cubchoocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cubchooegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycubchoo type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycubchoo"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "cubchoo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cubchoocry": {
+          "ID": "{{ModId}}_cubchoocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cubchoo/cubchoocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_bearticcry": {
+          "ID": "{{ModId}}_bearticcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cubchoo/bearticcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cubchoo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cubchooegg": {
+          "Name": "{{ModId}}_cubchooegg",
+          "DisplayName": "{{i18n: cubchooegg}}",
+          "Description": "{{i18n: cubchooegg.d}}",
+          "Texture": "{{ModId}}/cubchoo/cubchooegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ice",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cubchoo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cubchooegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycubchoo",
+              "AnimalId": "{{ModId}}_shinycubchoo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cubchoo",
+              "AnimalId": "{{ModId}}_cubchoo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ironmoth textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ironmoth/ironmoth, {{ModId}}/ironmoth/shinyironmoth, {{ModId}}/ironmoth/ironmothegg",
+      "FromFile": "assets/livestocks/ironmoth/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ironmoth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ironmoth": {
+          "DisplayName": "{{i18n: ironmoth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ironmothegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ironmothbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironmoth/ironmoth",
+          "BabyTexture": "{{ModId}}/ironmoth/ironmoth",
+          "Sound": "{{ModId}}_ironmothcry",
+          "BabySound": "{{ModId}}_ironmothcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironmothegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_ironmoth type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ironmoth"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyironmoth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyironmoth": {
+          "DisplayName": "{{i18n: shinyironmoth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ironmothegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyironmothbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironmoth/shinyironmoth",
+          "BabyTexture": "{{ModId}}/ironmoth/shinyironmoth",
+          "Sound": "{{ModId}}_ironmothcry",
+          "BabySound": "{{ModId}}_ironmothcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironmothegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyironmoth type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyironmoth"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "ironmoth cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ironmothcry": {
+          "ID": "{{ModId}}_ironmothcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ironmoth/ironmothcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironmoth egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ironmothegg": {
+          "Name": "{{ModId}}_ironmothegg",
+          "DisplayName": "{{i18n: ironmothegg}}",
+          "Description": "{{i18n: ironmothegg.d}}",
+          "Texture": "{{ModId}}/ironmoth/ironmothegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fire",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_futurs",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironmoth hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ironmothegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyironmoth",
+              "AnimalId": "{{ModId}}_shinyironmoth",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ironmoth",
+              "AnimalId": "{{ModId}}_ironmoth",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

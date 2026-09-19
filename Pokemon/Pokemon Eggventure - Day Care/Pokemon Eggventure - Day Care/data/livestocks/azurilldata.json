@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load azurill textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/azurill/azurill, {{ModId}}/azurill/shinyazurill, {{ModId}}/azurill/marill, {{ModId}}/azurill/shinymarill, {{ModId}}/azurill/azumarill, {{ModId}}/azurill/shinyazumarill, {{ModId}}/azurill/azurillegg",
+      "FromFile": "assets/livestocks/azurill/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_azurill data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_azurill": {
+          "DisplayName": "{{i18n: azurill}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_azurillegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: azurillbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/azurill/marill",
+          "BabyTexture": "{{ModId}}/azurill/azurill",
+          "Sound": "{{ModId}}_azumarillcry",
+          "BabySound": "{{ModId}}_azurillcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_azurillegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_azurill evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_azurill",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "azurillevolution": {
+          "Id": "azurillevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/azurill/azumarill"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_azurill type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_azurill"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyazurill data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyazurill": {
+          "DisplayName": "{{i18n: shinyazurill}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_azurillegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyazurillbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/azurill/shinymarill",
+          "BabyTexture": "{{ModId}}/azurill/shinyazurill",
+          "Sound": "{{ModId}}_azumarillcry",
+          "BabySound": "{{ModId}}_azurillcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_azurillegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyazurill evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyazurill",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyazurillevolution": {
+          "Id": "shinyazurillevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/azurill/shinyazumarill"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyazurill type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyazurill"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "azurill cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_azurillcry": {
+          "ID": "{{ModId}}_azurillcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/azurill/azurillcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_azumarillcry": {
+          "ID": "{{ModId}}_azumarillcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/azurill/azumarillcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "azurill egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_azurillegg": {
+          "Name": "{{ModId}}_azurillegg",
+          "DisplayName": "{{i18n: azurillegg}}",
+          "Description": "{{i18n: azurillegg.d}}",
+          "Texture": "{{ModId}}/azurill/azurillegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_common",
+            "pkegg_panning_p1",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "azurill hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_azurillegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyazurill",
+              "AnimalId": "{{ModId}}_shinyazurill",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_azurill",
+              "AnimalId": "{{ModId}}_azurill",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

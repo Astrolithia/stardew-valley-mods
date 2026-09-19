@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load nosepass textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/nosepass/nosepass, {{ModId}}/nosepass/shinynosepass, {{ModId}}/nosepass/probopass, {{ModId}}/nosepass/shinyprobopass, {{ModId}}/nosepass/nosepassegg",
+      "FromFile": "assets/livestocks/nosepass/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_nosepass data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_nosepass": {
+          "DisplayName": "{{i18n: nosepass}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_nosepassegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: nosepassbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nosepass/probopass",
+          "BabyTexture": "{{ModId}}/nosepass/nosepass",
+          "Sound": "{{ModId}}_probopasscry",
+          "BabySound": "{{ModId}}_nosepasscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nosepassegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinynosepass data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinynosepass": {
+          "DisplayName": "{{i18n: shinynosepass}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_nosepassegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinynosepassbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nosepass/shinyprobopass",
+          "BabyTexture": "{{ModId}}/nosepass/shinynosepass",
+          "Sound": "{{ModId}}_probopasscry",
+          "BabySound": "{{ModId}}_nosepasscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nosepassegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "nosepass cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_nosepasscry": {
+          "ID": "{{ModId}}_nosepasscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nosepass/nosepasscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_probopasscry": {
+          "ID": "{{ModId}}_probopasscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nosepass/probopasscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nosepass egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_nosepassegg": {
+          "Name": "{{ModId}}_nosepassegg",
+          "DisplayName": "{{i18n: nosepassegg}}",
+          "Description": "{{i18n: nosepassegg.d}}",
+          "Texture": "{{ModId}}/nosepass/nosepassegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_verycommon",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nosepass hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_nosepassegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinynosepass",
+              "AnimalId": "{{ModId}}_shinynosepass",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_nosepass",
+              "AnimalId": "{{ModId}}_nosepass",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

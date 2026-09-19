@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load applinhydrapple textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/applin/applin, {{ModId}}/applin/shinyapplin, {{ModId}}/applin/flapple, {{ModId}}/applin/shinyflapple, {{ModId}}/applin/applinhydrappleegg",
+      "FromFile": "assets/livestocks/applin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_applinhydrapple data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_applinhydrapple": {
+          "DisplayName": "{{i18n: applinhydrapple}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_applinhydrappleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: applinhydrapplebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/applin/flapple",
+          "BabyTexture": "{{ModId}}/applin/applin",
+          "Sound": "{{ModId}}_flapplecry",
+          "BabySound": "{{ModId}}_applincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_applinhydrappleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyapplinhydrapple data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyapplinhydrapple": {
+          "DisplayName": "{{i18n: shinyapplinhydrapple}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_applinhydrappleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyapplinhydrapplebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/applin/shinyflapple",
+          "BabyTexture": "{{ModId}}/applin/shinyapplin",
+          "Sound": "{{ModId}}_flapplecry",
+          "BabySound": "{{ModId}}_applincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_applinhydrappleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "applinhydrapple cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_applincry": {
+          "ID": "{{ModId}}_applincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/applin/applincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_flapplecry": {
+          "ID": "{{ModId}}_flapplecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/applin/flapplecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "applinhydrapple egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_applinhydrappleegg": {
+          "Name": "{{ModId}}_applinhydrappleegg",
+          "DisplayName": "{{i18n: applinhydrappleegg}}",
+          "Description": "{{i18n: applinhydrappleegg.d}}",
+          "Texture": "{{ModId}}/applin/applinhydrappleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "applinhydrapple hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_applinhydrappleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyapplinhydrapple",
+              "AnimalId": "{{ModId}}_shinyapplinhydrapple",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_applinhydrapple",
+              "AnimalId": "{{ModId}}_applinhydrapple",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

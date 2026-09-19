@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load grookey textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/grookey/grookey, {{ModId}}/grookey/shinygrookey, {{ModId}}/grookey/thwackey, {{ModId}}/grookey/shinythwackey, {{ModId}}/grookey/rillaboom, {{ModId}}/grookey/shinyrillaboom, {{ModId}}/grookey/grookeyegg",
+      "FromFile": "assets/livestocks/grookey/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_grookey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_grookey": {
+          "DisplayName": "{{i18n: grookey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_grookeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: grookeybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/grookey/thwackey",
+          "BabyTexture": "{{ModId}}/grookey/grookey",
+          "Sound": "{{ModId}}_rillaboomcry",
+          "BabySound": "{{ModId}}_grookeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_grookeyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_grookey evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_grookey",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "grookeyevolution": {
+          "Id": "grookeyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/grookey/rillaboom"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygrookey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygrookey": {
+          "DisplayName": "{{i18n: shinygrookey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_grookeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygrookeybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/grookey/shinythwackey",
+          "BabyTexture": "{{ModId}}/grookey/shinygrookey",
+          "Sound": "{{ModId}}_rillaboomcry",
+          "BabySound": "{{ModId}}_grookeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_grookeyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygrookey evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygrookey",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygrookeyevolution": {
+          "Id": "shinygrookeyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/grookey/shinyrillaboom"
+        }
+      }
+    },
+    {
+      "LogName": "grookey cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_grookeycry": {
+          "ID": "{{ModId}}_grookeycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/grookey/grookeycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_rillaboomcry": {
+          "ID": "{{ModId}}_rillaboomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/grookey/rillaboomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "grookey egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_grookeyegg": {
+          "Name": "{{ModId}}_grookeyegg",
+          "DisplayName": "{{i18n: grookeyegg}}",
+          "Description": "{{i18n: grookeyegg.d}}",
+          "Texture": "{{ModId}}/grookey/grookeyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "grookey hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_grookeyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygrookey",
+              "AnimalId": "{{ModId}}_shinygrookey",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_grookey",
+              "AnimalId": "{{ModId}}_grookey",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

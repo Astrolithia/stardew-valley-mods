@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load klawf textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/klawf/klawf, {{ModId}}/klawf/shinyklawf, {{ModId}}/klawf/klawfegg",
+      "FromFile": "assets/livestocks/klawf/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_klawf data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_klawf": {
+          "DisplayName": "{{i18n: klawf}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_klawfegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: klawfbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/klawf/klawf",
+          "BabyTexture": "{{ModId}}/klawf/klawf",
+          "Sound": "{{ModId}}_klawfcry",
+          "BabySound": "{{ModId}}_klawfcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_klawfegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyklawf data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyklawf": {
+          "DisplayName": "{{i18n: shinyklawf}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_klawfegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyklawfbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/klawf/shinyklawf",
+          "BabyTexture": "{{ModId}}/klawf/shinyklawf",
+          "Sound": "{{ModId}}_klawfcry",
+          "BabySound": "{{ModId}}_klawfcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_klawfegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "klawf cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_klawfcry": {
+          "ID": "{{ModId}}_klawfcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/klawf/klawfcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "klawf egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_klawfegg": {
+          "Name": "{{ModId}}_klawfegg",
+          "DisplayName": "{{i18n: klawfegg}}",
+          "Description": "{{i18n: klawfegg.d}}",
+          "Texture": "{{ModId}}/klawf/klawfegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_common",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "klawf hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_klawfegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyklawf",
+              "AnimalId": "{{ModId}}_shinyklawf",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_klawf",
+              "AnimalId": "{{ModId}}_klawf",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

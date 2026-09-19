@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hippopotas textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/hippopotas/hippopotas, {{ModId}}/hippopotas/shinyhippopotas, {{ModId}}/hippopotas/hippowdon, {{ModId}}/hippopotas/shinyhippowdon, {{ModId}}/hippopotas/hippopotasegg",
+      "FromFile": "assets/livestocks/hippopotas/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hippopotas data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hippopotas": {
+          "DisplayName": "{{i18n: hippopotas}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hippopotasegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hippopotasbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hippopotas/hippowdon",
+          "BabyTexture": "{{ModId}}/hippopotas/hippopotas",
+          "Sound": "{{ModId}}_hippowdoncry",
+          "BabySound": "{{ModId}}_hippopotascry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hippopotasegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhippopotas data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhippopotas": {
+          "DisplayName": "{{i18n: shinyhippopotas}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hippopotasegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhippopotasbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hippopotas/shinyhippowdon",
+          "BabyTexture": "{{ModId}}/hippopotas/shinyhippopotas",
+          "Sound": "{{ModId}}_hippowdoncry",
+          "BabySound": "{{ModId}}_hippopotascry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hippopotasegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "hippopotas cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hippopotascry": {
+          "ID": "{{ModId}}_hippopotascry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hippopotas/hippopotascry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hippowdoncry": {
+          "ID": "{{ModId}}_hippowdoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hippopotas/hippowdoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hippopotas egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hippopotasegg": {
+          "Name": "{{ModId}}_hippopotasegg",
+          "DisplayName": "{{i18n: hippopotasegg}}",
+          "Description": "{{i18n: hippopotasegg.d}}",
+          "Texture": "{{ModId}}/hippopotas/hippopotasegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hippopotas hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hippopotasegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhippopotas",
+              "AnimalId": "{{ModId}}_shinyhippopotas",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hippopotas",
+              "AnimalId": "{{ModId}}_hippopotas",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

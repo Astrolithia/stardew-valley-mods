@@ -1,0 +1,198 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load kubfu textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/kubfu/kubfu, {{ModId}}/kubfu/shinykubfu, {{ModId}}/kubfu/urshifu, {{ModId}}/kubfu/shinyurshifu, {{ModId}}/kubfu/urshifu2, {{ModId}}/kubfu/shinyurshifu2, {{ModId}}/kubfu/kubfuegg",
+      "FromFile": "assets/livestocks/kubfu/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_kubfu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_kubfu": {
+          "DisplayName": "{{i18n: kubfu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_kubfuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: kubfubirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kubfu/urshifu",
+          "BabyTexture": "{{ModId}}/kubfu/kubfu",
+          "Sound": "{{ModId}}_urshifucry",
+          "BabySound": "{{ModId}}_kubfucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kubfuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "urshifu2",
+              "Texture": "{{ModId}}/kubfu/urshifu2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykubfu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykubfu": {
+          "DisplayName": "{{i18n: shinykubfu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_kubfuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykubfubirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kubfu/shinyurshifu",
+          "BabyTexture": "{{ModId}}/kubfu/shinykubfu",
+          "Sound": "{{ModId}}_urshifucry",
+          "BabySound": "{{ModId}}_kubfucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kubfuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "urshifu2",
+              "Texture": "{{ModId}}/kubfu/shinyurshifu2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kubfu cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_kubfucry": {
+          "ID": "{{ModId}}_kubfucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kubfu/kubfucry.ogg}}"
+          ]
+        },
+        "{{ModId}}_urshifucry": {
+          "ID": "{{ModId}}_urshifucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kubfu/urshifucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kubfu egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_kubfuegg": {
+          "Name": "{{ModId}}_kubfuegg",
+          "DisplayName": "{{i18n: kubfuegg}}",
+          "Description": "{{i18n: kubfuegg.d}}",
+          "Texture": "{{ModId}}/kubfu/kubfuegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fighting",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kubfu hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_kubfuegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykubfu",
+              "AnimalId": "{{ModId}}_shinykubfu",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_kubfu",
+              "AnimalId": "{{ModId}}_kubfu",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

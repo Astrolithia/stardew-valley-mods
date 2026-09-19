@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load carbink textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/carbink/carbink, {{ModId}}/carbink/shinycarbink, {{ModId}}/carbink/carbinkegg",
+      "FromFile": "assets/livestocks/carbink/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_carbink data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_carbink": {
+          "DisplayName": "{{i18n: carbink}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_carbinkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: carbinkbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/carbink/carbink",
+          "BabyTexture": "{{ModId}}/carbink/carbink",
+          "Sound": "{{ModId}}_carbinkcry",
+          "BabySound": "{{ModId}}_carbinkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_carbinkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycarbink data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycarbink": {
+          "DisplayName": "{{i18n: shinycarbink}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_carbinkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycarbinkbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/carbink/shinycarbink",
+          "BabyTexture": "{{ModId}}/carbink/shinycarbink",
+          "Sound": "{{ModId}}_carbinkcry",
+          "BabySound": "{{ModId}}_carbinkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_carbinkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "carbink cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_carbinkcry": {
+          "ID": "{{ModId}}_carbinkcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/carbink/carbinkcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "carbink egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_carbinkegg": {
+          "Name": "{{ModId}}_carbinkegg",
+          "DisplayName": "{{i18n: carbinkegg}}",
+          "Description": "{{i18n: carbinkegg.d}}",
+          "Texture": "{{ModId}}/carbink/carbinkegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "pkegg_quarry_p3",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "carbink hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_carbinkegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycarbink",
+              "AnimalId": "{{ModId}}_shinycarbink",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_carbink",
+              "AnimalId": "{{ModId}}_carbink",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

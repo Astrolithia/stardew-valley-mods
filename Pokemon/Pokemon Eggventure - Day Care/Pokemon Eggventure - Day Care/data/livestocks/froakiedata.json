@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load froakie textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/froakie/froakie, {{ModId}}/froakie/shinyfroakie, {{ModId}}/froakie/frogadier, {{ModId}}/froakie/shinyfrogadier, {{ModId}}/froakie/greninja, {{ModId}}/froakie/shinygreninja, {{ModId}}/froakie/froakieegg",
+      "FromFile": "assets/livestocks/froakie/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_froakie data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_froakie": {
+          "DisplayName": "{{i18n: froakie}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_froakieegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: froakiebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/froakie/frogadier",
+          "BabyTexture": "{{ModId}}/froakie/froakie",
+          "Sound": "{{ModId}}_greninjacry",
+          "BabySound": "{{ModId}}_froakiecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_froakieegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_froakie evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_froakie",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "froakieevolution": {
+          "Id": "froakieevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/froakie/greninja"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_froakie type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_froakie"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfroakie data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfroakie": {
+          "DisplayName": "{{i18n: shinyfroakie}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_froakieegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfroakiebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/froakie/shinyfrogadier",
+          "BabyTexture": "{{ModId}}/froakie/shinyfroakie",
+          "Sound": "{{ModId}}_greninjacry",
+          "BabySound": "{{ModId}}_froakiecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_froakieegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfroakie evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfroakie",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyfroakieevolution": {
+          "Id": "shinyfroakieevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/froakie/shinygreninja"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfroakie type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfroakie"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "froakie cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_froakiecry": {
+          "ID": "{{ModId}}_froakiecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/froakie/froakiecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_greninjacry": {
+          "ID": "{{ModId}}_greninjacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/froakie/greninjacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "froakie egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_froakieegg": {
+          "Name": "{{ModId}}_froakieegg",
+          "DisplayName": "{{i18n: froakieegg}}",
+          "Description": "{{i18n: froakieegg.d}}",
+          "Texture": "{{ModId}}/froakie/froakieegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "pkegg_panning_p4",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "froakie hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_froakieegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfroakie",
+              "AnimalId": "{{ModId}}_shinyfroakie",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_froakie",
+              "AnimalId": "{{ModId}}_froakie",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

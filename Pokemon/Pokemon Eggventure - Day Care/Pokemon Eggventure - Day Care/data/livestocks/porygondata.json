@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load porygon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/porygon/porygon, {{ModId}}/porygon/shinyporygon, {{ModId}}/porygon/porygon2, {{ModId}}/porygon/shinyporygon2, {{ModId}}/porygon/porygonz, {{ModId}}/porygon/shinyporygonz, {{ModId}}/porygon/porygonegg",
+      "FromFile": "assets/livestocks/porygon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_porygon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_porygon": {
+          "DisplayName": "{{i18n: porygon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_porygonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: porygonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/porygon/porygon2",
+          "BabyTexture": "{{ModId}}/porygon/porygon",
+          "Sound": "{{ModId}}_porygonzcry",
+          "BabySound": "{{ModId}}_porygoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_porygonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_porygon evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_porygon",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "porygonevolution": {
+          "Id": "porygonevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/porygon/porygonz"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyporygon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyporygon": {
+          "DisplayName": "{{i18n: shinyporygon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_porygonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyporygonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/porygon/shinyporygon2",
+          "BabyTexture": "{{ModId}}/porygon/shinyporygon",
+          "Sound": "{{ModId}}_porygonzcry",
+          "BabySound": "{{ModId}}_porygoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_porygonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyporygon evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyporygon",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyporygonevolution": {
+          "Id": "shinyporygonevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/porygon/shinyporygonz"
+        }
+      }
+    },
+    {
+      "LogName": "porygon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_porygoncry": {
+          "ID": "{{ModId}}_porygoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/porygon/porygoncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_porygonzcry": {
+          "ID": "{{ModId}}_porygonzcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/porygon/porygonzcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "porygon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_porygonegg": {
+          "Name": "{{ModId}}_porygonegg",
+          "DisplayName": "{{i18n: porygonegg}}",
+          "Description": "{{i18n: porygonegg.d}}",
+          "Texture": "{{ModId}}/porygon/porygonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "porygon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_porygonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyporygon",
+              "AnimalId": "{{ModId}}_shinyporygon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_porygon",
+              "AnimalId": "{{ModId}}_porygon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

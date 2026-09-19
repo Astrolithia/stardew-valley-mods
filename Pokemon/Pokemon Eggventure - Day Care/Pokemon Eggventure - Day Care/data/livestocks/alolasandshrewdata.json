@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load alolasandshrew textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sandshrew/alolasandshrew, {{ModId}}/sandshrew/shinyalolasandshrew, {{ModId}}/sandshrew/alolasandslash, {{ModId}}/sandshrew/shinyalolasandslash, {{ModId}}/sandshrew/alolasandshrewegg",
+      "FromFile": "assets/livestocks/sandshrew/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_alolasandshrew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_alolasandshrew": {
+          "DisplayName": "{{i18n: alolasandshrew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolasandshrewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: alolasandshrewbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandshrew/alolasandslash",
+          "BabyTexture": "{{ModId}}/sandshrew/alolasandshrew",
+          "Sound": "{{ModId}}_alolasandslashcry",
+          "BabySound": "{{ModId}}_alolasandshrewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolasandshrewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_alolasandshrew type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_alolasandshrew"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyalolasandshrew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyalolasandshrew": {
+          "DisplayName": "{{i18n: shinyalolasandshrew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolasandshrewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyalolasandshrewbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandshrew/shinyalolasandslash",
+          "BabyTexture": "{{ModId}}/sandshrew/shinyalolasandshrew",
+          "Sound": "{{ModId}}_alolasandslashcry",
+          "BabySound": "{{ModId}}_alolasandshrewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolasandshrewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyalolasandshrew type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyalolasandshrew"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "alolasandshrew cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_alolasandshrewcry": {
+          "ID": "{{ModId}}_alolasandshrewcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandshrew/alolasandshrewcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alolasandslashcry": {
+          "ID": "{{ModId}}_alolasandslashcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandshrew/alolasandslashcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolasandshrew egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_alolasandshrewegg": {
+          "Name": "{{ModId}}_alolasandshrewegg",
+          "DisplayName": "{{i18n: alolasandshrewegg}}",
+          "Description": "{{i18n: alolasandshrewegg.d}}",
+          "Texture": "{{ModId}}/sandshrew/alolasandshrewegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_41_60_p3",
+            "pkegg_mine_61_80_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolasandshrew hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_alolasandshrewegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyalolasandshrew",
+              "AnimalId": "{{ModId}}_shinyalolasandshrew",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_alolasandshrew",
+              "AnimalId": "{{ModId}}_alolasandshrew",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

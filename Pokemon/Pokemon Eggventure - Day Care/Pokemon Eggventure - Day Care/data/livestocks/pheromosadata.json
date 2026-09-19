@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pheromosa textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pheromosa/pheromosa, {{ModId}}/pheromosa/shinypheromosa, {{ModId}}/pheromosa/pheromosaegg",
+      "FromFile": "assets/livestocks/pheromosa/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pheromosa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pheromosa": {
+          "DisplayName": "{{i18n: pheromosa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_pheromosaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pheromosabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pheromosa/pheromosa",
+          "BabyTexture": "{{ModId}}/pheromosa/pheromosa",
+          "Sound": "{{ModId}}_pheromosacry",
+          "BabySound": "{{ModId}}_pheromosacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pheromosaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypheromosa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypheromosa": {
+          "DisplayName": "{{i18n: shinypheromosa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_pheromosaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypheromosabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pheromosa/shinypheromosa",
+          "BabyTexture": "{{ModId}}/pheromosa/shinypheromosa",
+          "Sound": "{{ModId}}_pheromosacry",
+          "BabySound": "{{ModId}}_pheromosacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pheromosaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "pheromosa cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pheromosacry": {
+          "ID": "{{ModId}}_pheromosacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pheromosa/pheromosacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pheromosa egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pheromosaegg": {
+          "Name": "{{ModId}}_pheromosaegg",
+          "DisplayName": "{{i18n: pheromosaegg}}",
+          "Description": "{{i18n: pheromosaegg.d}}",
+          "Texture": "{{ModId}}/pheromosa/pheromosaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_bug",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pheromosa hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pheromosaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypheromosa",
+              "AnimalId": "{{ModId}}_shinypheromosa",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pheromosa",
+              "AnimalId": "{{ModId}}_pheromosa",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

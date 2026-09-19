@@ -1,0 +1,163 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load marine item sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/marine/heartscale, {{ModId}}/marine/deepseascale, {{ModId}}/marine/deepseatooth, {{ModId}}/marine/shoalsalt, {{ModId}}/marine/shoalshell, {{ModId}}/marine/prismscale, {{ModId}}/marine/dragonscale, {{ModId}}/marine/bigpearl",
+      "FromFile": "assets/marine/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add Pokemon marine items",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_marine_heartscale": {
+          "Name": "{{ModId}}_marine_heartscale",
+          "DisplayName": "{{i18n: marine_heartscale}}",
+          "Description": "{{i18n: marine_heartscale.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/heartscale",
+          "Price": 220,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_heartscale",
+            "color_pink",
+            "forage_item",
+            "forage_item_beach",
+            "marine_item",
+            "pkpan_rare"
+          ]
+        },
+        "{{ModId}}_marine_deepseascale": {
+          "Name": "{{ModId}}_marine_deepseascale",
+          "DisplayName": "{{i18n: marine_deepseascale}}",
+          "Description": "{{i18n: marine_deepseascale.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/deepseascale",
+          "Price": 300,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_deepseascale",
+            "color_light_cyan",
+            "forage_item",
+            "forage_item_beach",
+            "marine_item",
+            "pkpan_rare"
+          ]
+        },
+        "{{ModId}}_marine_deepseatooth": {
+          "Name": "{{ModId}}_marine_deepseatooth",
+          "DisplayName": "{{i18n: marine_deepseatooth}}",
+          "Description": "{{i18n: marine_deepseatooth.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/deepseatooth",
+          "Price": 300,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_deepseatooth",
+            "color_iron",
+            "forage_item",
+            "forage_item_beach",
+            "marine_item",
+            "pkpan_rare"
+          ]
+        },
+        "{{ModId}}_marine_shoalsalt": {
+          "Name": "{{ModId}}_marine_shoalsalt",
+          "DisplayName": "{{i18n: marine_shoalsalt}}",
+          "Description": "{{i18n: marine_shoalsalt.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/shoalsalt",
+          "Price": 140,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_shoalsalt",
+            "color_white",
+            "forage_item",
+            "forage_item_beach",
+            "marine_item",
+            "pkpan_commun"
+          ]
+        },
+        "{{ModId}}_marine_shoalshell": {
+          "Name": "{{ModId}}_marine_shoalshell",
+          "DisplayName": "{{i18n: marine_shoalshell}}",
+          "Description": "{{i18n: marine_shoalshell.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/shoalshell",
+          "Price": 140,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_shoalshell",
+            "color_sand",
+            "forage_item",
+            "forage_item_beach",
+            "marine_item",
+            "pkpan_commun"
+          ]
+        },
+        "{{ModId}}_marine_prismscale": {
+          "Name": "{{ModId}}_marine_prismscale",
+          "DisplayName": "{{i18n: marine_prismscale}}",
+          "Description": "{{i18n: marine_prismscale.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/prismscale",
+          "Price": 500,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_prismscale",
+            "color_prismatic",
+            "marine_item",
+            "pkpan_rare"
+          ]
+        },
+        "{{ModId}}_marine_dragonscale": {
+          "Name": "{{ModId}}_marine_dragonscale",
+          "DisplayName": "{{i18n: marine_dragonscale}}",
+          "Description": "{{i18n: marine_dragonscale.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/dragonscale",
+          "Price": 600,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_dragonscale",
+            "color_dark_green",
+            "marine_item",
+            "pkpan_rare"
+          ]
+        },
+        "{{ModId}}_marine_bigpearl": {
+          "Name": "{{ModId}}_marine_bigpearl",
+          "DisplayName": "{{i18n: marine_bigpearl}}",
+          "Description": "{{i18n: marine_bigpearl.d}}",
+          "Type": "Basic",
+          "Category": -23,
+          "Texture": "{{ModId}}/marine/bigpearl",
+          "Price": 1200,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkmarine_item",
+            "pkmarine_bigpearl",
+            "color_white",
+            "marine_item",
+            "pkpan_rare"
+          ]
+        }
+      }
+    }
+  ]
+}

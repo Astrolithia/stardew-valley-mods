@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load torchic textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/torchic/torchic, {{ModId}}/torchic/shinytorchic, {{ModId}}/torchic/combusken, {{ModId}}/torchic/shinycombusken, {{ModId}}/torchic/blaziken, {{ModId}}/torchic/shinyblaziken, {{ModId}}/torchic/torchicegg",
+      "FromFile": "assets/livestocks/torchic/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_torchic data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_torchic": {
+          "DisplayName": "{{i18n: torchic}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_torchicegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: torchicbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/torchic/combusken",
+          "BabyTexture": "{{ModId}}/torchic/torchic",
+          "Sound": "{{ModId}}_blazikencry",
+          "BabySound": "{{ModId}}_torchiccry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_torchicegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_torchic evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_torchic",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "torchicevolution": {
+          "Id": "torchicevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/torchic/blaziken"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_torchic type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_torchic"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytorchic data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytorchic": {
+          "DisplayName": "{{i18n: shinytorchic}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_torchicegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytorchicbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/torchic/shinycombusken",
+          "BabyTexture": "{{ModId}}/torchic/shinytorchic",
+          "Sound": "{{ModId}}_blazikencry",
+          "BabySound": "{{ModId}}_torchiccry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_torchicegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytorchic evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytorchic",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytorchicevolution": {
+          "Id": "shinytorchicevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/torchic/shinyblaziken"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytorchic type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytorchic"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "torchic cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_torchiccry": {
+          "ID": "{{ModId}}_torchiccry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/torchic/torchiccry.ogg}}"
+          ]
+        },
+        "{{ModId}}_blazikencry": {
+          "ID": "{{ModId}}_blazikencry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/torchic/blazikencry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "torchic egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_torchicegg": {
+          "Name": "{{ModId}}_torchicegg",
+          "DisplayName": "{{i18n: torchicegg}}",
+          "Description": "{{i18n: torchicegg.d}}",
+          "Texture": "{{ModId}}/torchic/torchicegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "torchic hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_torchicegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytorchic",
+              "AnimalId": "{{ModId}}_shinytorchic",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_torchic",
+              "AnimalId": "{{ModId}}_torchic",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

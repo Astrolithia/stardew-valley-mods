@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load buzzwole textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/buzzwole/buzzwole, {{ModId}}/buzzwole/shinybuzzwole, {{ModId}}/buzzwole/buzzwoleegg",
+      "FromFile": "assets/livestocks/buzzwole/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_buzzwole data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_buzzwole": {
+          "DisplayName": "{{i18n: buzzwole}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_buzzwoleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: buzzwolebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/buzzwole/buzzwole",
+          "BabyTexture": "{{ModId}}/buzzwole/buzzwole",
+          "Sound": "{{ModId}}_buzzwolecry",
+          "BabySound": "{{ModId}}_buzzwolecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_buzzwoleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybuzzwole data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybuzzwole": {
+          "DisplayName": "{{i18n: shinybuzzwole}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_buzzwoleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybuzzwolebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/buzzwole/shinybuzzwole",
+          "BabyTexture": "{{ModId}}/buzzwole/shinybuzzwole",
+          "Sound": "{{ModId}}_buzzwolecry",
+          "BabySound": "{{ModId}}_buzzwolecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_buzzwoleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "buzzwole cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_buzzwolecry": {
+          "ID": "{{ModId}}_buzzwolecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/buzzwole/buzzwolecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "buzzwole egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_buzzwoleegg": {
+          "Name": "{{ModId}}_buzzwoleegg",
+          "DisplayName": "{{i18n: buzzwoleegg}}",
+          "Description": "{{i18n: buzzwoleegg.d}}",
+          "Texture": "{{ModId}}/buzzwole/buzzwoleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_bug",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "buzzwole hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_buzzwoleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybuzzwole",
+              "AnimalId": "{{ModId}}_shinybuzzwole",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_buzzwole",
+              "AnimalId": "{{ModId}}_buzzwole",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

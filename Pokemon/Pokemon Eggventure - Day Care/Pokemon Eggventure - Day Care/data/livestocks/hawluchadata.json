@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hawlucha textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/hawlucha/hawlucha, {{ModId}}/hawlucha/shinyhawlucha, {{ModId}}/hawlucha/hawluchaegg",
+      "FromFile": "assets/livestocks/hawlucha/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hawlucha data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hawlucha": {
+          "DisplayName": "{{i18n: hawlucha}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hawluchaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hawluchabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hawlucha/hawlucha",
+          "BabyTexture": "{{ModId}}/hawlucha/hawlucha",
+          "Sound": "{{ModId}}_hawluchacry",
+          "BabySound": "{{ModId}}_hawluchacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hawluchaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhawlucha data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhawlucha": {
+          "DisplayName": "{{i18n: shinyhawlucha}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hawluchaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhawluchabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hawlucha/shinyhawlucha",
+          "BabyTexture": "{{ModId}}/hawlucha/shinyhawlucha",
+          "Sound": "{{ModId}}_hawluchacry",
+          "BabySound": "{{ModId}}_hawluchacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hawluchaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hawlucha cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hawluchacry": {
+          "ID": "{{ModId}}_hawluchacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hawlucha/hawluchacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hawlucha egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hawluchaegg": {
+          "Name": "{{ModId}}_hawluchaegg",
+          "DisplayName": "{{i18n: hawluchaegg}}",
+          "Description": "{{i18n: hawluchaegg.d}}",
+          "Texture": "{{ModId}}/hawlucha/hawluchaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hawlucha hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hawluchaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhawlucha",
+              "AnimalId": "{{ModId}}_shinyhawlucha",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hawlucha",
+              "AnimalId": "{{ModId}}_hawlucha",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

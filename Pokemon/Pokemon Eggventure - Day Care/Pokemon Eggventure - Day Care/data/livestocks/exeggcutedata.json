@@ -1,0 +1,188 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load exeggcute textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/exeggcute/exeggcute, {{ModId}}/exeggcute/shinyexeggcute, {{ModId}}/exeggcute/exeggutor, {{ModId}}/exeggcute/shinyexeggutor, {{ModId}}/exeggcute/exeggcuteegg",
+      "FromFile": "assets/livestocks/exeggcute/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_exeggcute data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_exeggcute": {
+          "DisplayName": "{{i18n: exeggcute}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_exeggcuteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: exeggcutebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/exeggcute/exeggutor",
+          "BabyTexture": "{{ModId}}/exeggcute/exeggcute",
+          "Sound": "{{ModId}}_exeggutorcry",
+          "BabySound": "{{ModId}}_exeggcutecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_exeggcuteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyexeggcute data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyexeggcute": {
+          "DisplayName": "{{i18n: shinyexeggcute}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_exeggcuteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyexeggcutebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/exeggcute/shinyexeggutor",
+          "BabyTexture": "{{ModId}}/exeggcute/shinyexeggcute",
+          "Sound": "{{ModId}}_exeggutorcry",
+          "BabySound": "{{ModId}}_exeggcutecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_exeggcuteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "exeggcute cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_exeggcutecry": {
+          "ID": "{{ModId}}_exeggcutecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/exeggcute/exeggcutecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_exeggutorcry": {
+          "ID": "{{ModId}}_exeggutorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/exeggcute/exeggutorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "exeggcute egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_exeggcuteegg": {
+          "Name": "{{ModId}}_exeggcuteegg",
+          "DisplayName": "{{i18n: exeggcuteegg}}",
+          "Description": "{{i18n: exeggcuteegg.d}}",
+          "Texture": "{{ModId}}/exeggcute/exeggcuteegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "pkegg_chop_palmisland",
+            "pkegg_shake_palmisland",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "exeggcute hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_exeggcuteegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyexeggcute",
+              "AnimalId": "{{ModId}}_shinyexeggcute",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_exeggcute",
+              "AnimalId": "{{ModId}}_exeggcute",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

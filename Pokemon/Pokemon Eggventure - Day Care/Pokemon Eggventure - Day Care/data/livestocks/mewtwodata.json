@@ -1,0 +1,385 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mewtwo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mewtwo/mewtwo, {{ModId}}/mewtwo/shinymewtwo, {{ModId}}/mewtwo/shadowmewtwo, {{ModId}}/mewtwo/armoredmewtwo, {{ModId}}/mewtwo/shinyarmoredmewtwo, {{ModId}}/mewtwo/megamewtwoy, {{ModId}}/mewtwo/shinymegamewtwoy, {{ModId}}/mewtwo/mewtwoegg, {{ModId}}/mewtwo/armoredmewtwoegg",
+      "FromFile": "assets/livestocks/mewtwo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mewtwo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mewtwo": {
+          "DisplayName": "{{i18n: mewtwo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mewtwoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mewtwobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mewtwo/mewtwo",
+          "BabyTexture": "{{ModId}}/mewtwo/mewtwo",
+          "Sound": "{{ModId}}_mewtwocry",
+          "BabySound": "{{ModId}}_mewtwocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mewtwoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "shadowmewtwo",
+              "Texture": "{{ModId}}/mewtwo/shadowmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/shadowmewtwo"
+            },
+            {
+              "Id": "armoredmewtwo",
+              "Texture": "{{ModId}}/mewtwo/armoredmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/armoredmewtwo"
+            }
+          ]
+        },
+        "{{ModId}}_armoredmewtwo": {
+          "DisplayName": "{{i18n: armoredmewtwo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_armoredmewtwoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: armoredmewtwobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mewtwo/armoredmewtwo",
+          "BabyTexture": "{{ModId}}/mewtwo/armoredmewtwo",
+          "Sound": "{{ModId}}_mewtwocry",
+          "BabySound": "{{ModId}}_mewtwocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mewtwoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "shadowmewtwo",
+              "Texture": "{{ModId}}/mewtwo/shadowmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/shadowmewtwo"
+            },
+            {
+              "Id": "armoredmewtwo",
+              "Texture": "{{ModId}}/mewtwo/armoredmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/armoredmewtwo"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mewtwo mega evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mewtwo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "mewtwomega": {
+          "Id": "mewtwomega",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP 1000",
+          "TextureToUse": "{{ModId}}/mewtwo/megamewtwoy"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymewtwo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymewtwo": {
+          "DisplayName": "{{i18n: shinymewtwo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mewtwoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymewtwobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mewtwo/shinymewtwo",
+          "BabyTexture": "{{ModId}}/mewtwo/shinymewtwo",
+          "Sound": "{{ModId}}_mewtwocry",
+          "BabySound": "{{ModId}}_mewtwocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mewtwoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "shadowmewtwo",
+              "Texture": "{{ModId}}/mewtwo/shadowmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/shadowmewtwo"
+            },
+            {
+              "Id": "armoredmewtwo",
+              "Texture": "{{ModId}}/mewtwo/shinyarmoredmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/shinyarmoredmewtwo"
+            }
+          ]
+        },
+        "{{ModId}}_shinyarmoredmewtwo": {
+          "DisplayName": "{{i18n: shinyarmoredmewtwo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_armoredmewtwoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyarmoredmewtwobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mewtwo/shinyarmoredmewtwo",
+          "BabyTexture": "{{ModId}}/mewtwo/shinyarmoredmewtwo",
+          "Sound": "{{ModId}}_mewtwocry",
+          "BabySound": "{{ModId}}_mewtwocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mewtwoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "shadowmewtwo",
+              "Texture": "{{ModId}}/mewtwo/shadowmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/shadowmewtwo"
+            },
+            {
+              "Id": "armoredmewtwo",
+              "Texture": "{{ModId}}/mewtwo/shinyarmoredmewtwo",
+              "BabyTexture": "{{ModId}}/mewtwo/shinyarmoredmewtwo"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymewtwo mega evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymewtwo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymewtwomega": {
+          "Id": "shinymewtwomega",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP 1000",
+          "TextureToUse": "{{ModId}}/mewtwo/shinymegamewtwoy"
+        }
+      }
+    },
+    {
+      "LogName": "mewtwo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mewtwocry": {
+          "ID": "{{ModId}}_mewtwocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mewtwo/mewtwocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mewtwo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mewtwoegg": {
+          "Name": "{{ModId}}_mewtwoegg",
+          "DisplayName": "{{i18n: mewtwoegg}}",
+          "Description": "{{i18n: mewtwoegg.d}}",
+          "Texture": "{{ModId}}/mewtwo/mewtwoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "color_poppyseed",
+            "pkegg_hardmine"
+          ]
+        },
+        "{{ModId}}_armoredmewtwoegg": {
+          "Name": "{{ModId}}_armoredmewtwoegg",
+          "DisplayName": "{{i18n: armoredmewtwoegg}}",
+          "Description": "{{i18n: armoredmewtwoegg.d}}",
+          "Texture": "{{ModId}}/mewtwo/armoredmewtwoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mewtwo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mewtwoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymewtwo",
+              "AnimalId": "{{ModId}}_shinymewtwo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mewtwo",
+              "AnimalId": "{{ModId}}_mewtwo",
+              "Condition": null
+            }
+          ]
+        },
+        "(O){{ModId}}_armoredmewtwoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyarmoredmewtwo",
+              "AnimalId": "{{ModId}}_shinyarmoredmewtwo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_armoredmewtwo",
+              "AnimalId": "{{ModId}}_armoredmewtwo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

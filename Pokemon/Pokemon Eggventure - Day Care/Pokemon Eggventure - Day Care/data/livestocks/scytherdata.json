@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load scyther textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/scyther/scyther, {{ModId}}/scyther/shinyscyther, {{ModId}}/scyther/scizor, {{ModId}}/scyther/shinyscizor, {{ModId}}/scyther/scytheregg",
+      "FromFile": "assets/livestocks/scyther/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_scyther data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_scyther": {
+          "DisplayName": "{{i18n: scyther}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_scytheregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: scytherbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scyther/scizor",
+          "BabyTexture": "{{ModId}}/scyther/scyther",
+          "Sound": "{{ModId}}_scizorcry",
+          "BabySound": "{{ModId}}_scythercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_scytheregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyscyther data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyscyther": {
+          "DisplayName": "{{i18n: shinyscyther}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_scytheregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyscytherbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scyther/shinyscizor",
+          "BabyTexture": "{{ModId}}/scyther/shinyscyther",
+          "Sound": "{{ModId}}_scizorcry",
+          "BabySound": "{{ModId}}_scythercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_scytheregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "scyther cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_scythercry": {
+          "ID": "{{ModId}}_scythercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scyther/scythercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_scizorcry": {
+          "ID": "{{ModId}}_scizorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scyther/scizorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scyther egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_scytheregg": {
+          "Name": "{{ModId}}_scytheregg",
+          "DisplayName": "{{i18n: scytheregg}}",
+          "Description": "{{i18n: scytheregg.d}}",
+          "Texture": "{{ModId}}/scyther/scytheregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scyther hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_scytheregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyscyther",
+              "AnimalId": "{{ModId}}_shinyscyther",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_scyther",
+              "AnimalId": "{{ModId}}_scyther",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

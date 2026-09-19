@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load karrablast textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/karrablast/karrablast, {{ModId}}/karrablast/shinykarrablast, {{ModId}}/karrablast/escavalier, {{ModId}}/karrablast/shinyescavalier, {{ModId}}/karrablast/karrablastegg",
+      "FromFile": "assets/livestocks/karrablast/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_karrablast data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_karrablast": {
+          "DisplayName": "{{i18n: karrablast}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_karrablastegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: karrablastbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/karrablast/escavalier",
+          "BabyTexture": "{{ModId}}/karrablast/karrablast",
+          "Sound": "{{ModId}}_escavaliercry",
+          "BabySound": "{{ModId}}_karrablastcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_karrablastegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykarrablast data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykarrablast": {
+          "DisplayName": "{{i18n: shinykarrablast}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_karrablastegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykarrablastbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/karrablast/shinyescavalier",
+          "BabyTexture": "{{ModId}}/karrablast/shinykarrablast",
+          "Sound": "{{ModId}}_escavaliercry",
+          "BabySound": "{{ModId}}_karrablastcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_karrablastegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "karrablast cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_karrablastcry": {
+          "ID": "{{ModId}}_karrablastcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/karrablast/karrablastcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_escavaliercry": {
+          "ID": "{{ModId}}_escavaliercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/karrablast/escavaliercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "karrablast egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_karrablastegg": {
+          "Name": "{{ModId}}_karrablastegg",
+          "DisplayName": "{{i18n: karrablastegg}}",
+          "Description": "{{i18n: karrablastegg.d}}",
+          "Texture": "{{ModId}}/karrablast/karrablastegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "karrablast hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_karrablastegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykarrablast",
+              "AnimalId": "{{ModId}}_shinykarrablast",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_karrablast",
+              "AnimalId": "{{ModId}}_karrablast",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

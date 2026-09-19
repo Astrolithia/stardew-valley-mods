@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load skwovet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/skwovet/skwovet, {{ModId}}/skwovet/shinyskwovet, {{ModId}}/skwovet/greedent, {{ModId}}/skwovet/shinygreedent, {{ModId}}/skwovet/skwovetegg",
+      "FromFile": "assets/livestocks/skwovet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_skwovet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_skwovet": {
+          "DisplayName": "{{i18n: skwovet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_skwovetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: skwovetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skwovet/greedent",
+          "BabyTexture": "{{ModId}}/skwovet/skwovet",
+          "Sound": "{{ModId}}_greedentcry",
+          "BabySound": "{{ModId}}_skwovetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skwovetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyskwovet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyskwovet": {
+          "DisplayName": "{{i18n: shinyskwovet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_skwovetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyskwovetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skwovet/shinygreedent",
+          "BabyTexture": "{{ModId}}/skwovet/shinyskwovet",
+          "Sound": "{{ModId}}_greedentcry",
+          "BabySound": "{{ModId}}_skwovetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skwovetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "skwovet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_skwovetcry": {
+          "ID": "{{ModId}}_skwovetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skwovet/skwovetcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_greedentcry": {
+          "ID": "{{ModId}}_greedentcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skwovet/greedentcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skwovet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_skwovetegg": {
+          "Name": "{{ModId}}_skwovetegg",
+          "DisplayName": "{{i18n: skwovetegg}}",
+          "Description": "{{i18n: skwovetegg.d}}",
+          "Texture": "{{ModId}}/skwovet/skwovetegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skwovet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_skwovetegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyskwovet",
+              "AnimalId": "{{ModId}}_shinyskwovet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_skwovet",
+              "AnimalId": "{{ModId}}_skwovet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

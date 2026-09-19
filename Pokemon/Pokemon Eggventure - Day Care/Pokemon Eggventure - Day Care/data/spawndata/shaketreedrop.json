@@ -1,0 +1,826 @@
+{
+  "Changes": [
+    {
+      "LogName": "SHAKE arbre 1 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_1_general": {
+          "Id": "{{ModId}}_shake_1_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_general",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_1_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 1 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_1_winter": {
+          "Id": "{{ModId}}_shake_1_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_1_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 1 pool season_spring",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_1_season_spring": {
+          "Id": "{{ModId}}_shake_1_season_spring",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_spring",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here spring"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_1_season_spring",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 1 pool season_summer",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_1_season_summer": {
+          "Id": "{{ModId}}_shake_1_season_summer",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_summer",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_1_season_summer",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 1 pool season_fall",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_1_season_fall": {
+          "Id": "{{ModId}}_shake_1_season_fall",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_fall",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here fall"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_1_season_fall",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 2 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_2_general": {
+          "Id": "{{ModId}}_shake_2_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_general",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_2_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 2 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_2_winter": {
+          "Id": "{{ModId}}_shake_2_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_2_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 2 pool season_spring",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_2_season_spring": {
+          "Id": "{{ModId}}_shake_2_season_spring",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_spring",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here spring"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_2_season_spring",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 2 pool season_summer",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_2_season_summer": {
+          "Id": "{{ModId}}_shake_2_season_summer",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_summer",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_2_season_summer",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 2 pool season_fall",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_2_season_fall": {
+          "Id": "{{ModId}}_shake_2_season_fall",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_fall",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here fall"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_2_season_fall",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 3 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_3_general": {
+          "Id": "{{ModId}}_shake_3_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_general",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_3_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 3 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_3_winter": {
+          "Id": "{{ModId}}_shake_3_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_3_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 3 pool season_spring",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_3_season_spring": {
+          "Id": "{{ModId}}_shake_3_season_spring",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_spring",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here spring"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_3_season_spring",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 3 pool season_summer",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_3_season_summer": {
+          "Id": "{{ModId}}_shake_3_season_summer",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_summer",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_3_season_summer",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 3 pool season_fall",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_3_season_fall": {
+          "Id": "{{ModId}}_shake_3_season_fall",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_fall",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here fall"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_3_season_fall",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 8 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_8_general": {
+          "Id": "{{ModId}}_shake_8_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_general",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_8_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 8 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_8_winter": {
+          "Id": "{{ModId}}_shake_8_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_8_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 8 pool season_spring",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_8_season_spring": {
+          "Id": "{{ModId}}_shake_8_season_spring",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_spring",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here spring"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_8_season_spring",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 8 pool season_summer",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_8_season_summer": {
+          "Id": "{{ModId}}_shake_8_season_summer",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_summer",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_8_season_summer",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 8 pool season_fall",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_8_season_fall": {
+          "Id": "{{ModId}}_shake_8_season_fall",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_fall",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here fall"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_8_season_fall",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre Birch_Tree pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_birch_general": {
+          "Id": "{{ModId}}_shake_birch_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_general",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_birch_general",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Birch_Tree pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_birch_winter": {
+          "Id": "{{ModId}}_shake_birch_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_birch_winter",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Birch_Tree pool season_spring",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_birch_season_spring": {
+          "Id": "{{ModId}}_shake_birch_season_spring",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_spring",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here spring"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_birch_season_spring",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Birch_Tree pool season_summer",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_birch_season_summer": {
+          "Id": "{{ModId}}_shake_birch_season_summer",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_summer",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_birch_season_summer",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Birch_Tree pool season_fall",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_birch_season_fall": {
+          "Id": "{{ModId}}_shake_birch_season_fall",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_fall",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here fall"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_birch_season_fall",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Fir_Tree pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_fir_general": {
+          "Id": "{{ModId}}_shake_fir_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_general",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_fir_general",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Fir_Tree pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_fir_winter": {
+          "Id": "{{ModId}}_shake_fir_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_fir_winter",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Fir_Tree pool season_spring",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_fir_season_spring": {
+          "Id": "{{ModId}}_shake_fir_season_spring",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_spring",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here spring"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_fir_season_spring",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Fir_Tree pool season_summer",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_fir_season_summer": {
+          "Id": "{{ModId}}_shake_fir_season_summer",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_summer",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_fir_season_summer",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre Fir_Tree pool season_fall",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_fir_season_fall": {
+          "Id": "{{ModId}}_shake_fir_season_fall",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_season_fall",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}",
+          "Condition": "LOCATION_SEASON Here fall"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_fir_season_fall",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "SHAKE arbre 6 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "6",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_6_general": {
+          "Id": "{{ModId}}_shake_6_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_palmdesert",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_6_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "SHAKE arbre 9 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "9",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_shake_9_general": {
+          "Id": "{{ModId}}_shake_9_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_shake_palmisland",
+          "MaxItems": 1,
+          "Chance": "{{RateShakeTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_shake_9_general",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

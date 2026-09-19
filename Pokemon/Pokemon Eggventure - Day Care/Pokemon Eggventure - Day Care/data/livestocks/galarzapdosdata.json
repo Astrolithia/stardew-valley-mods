@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarzapdos textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zapdos/galarzapdos, {{ModId}}/zapdos/shinygalarzapdos, {{ModId}}/zapdos/galarzapdosegg",
+      "FromFile": "assets/livestocks/zapdos/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarzapdos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarzapdos": {
+          "DisplayName": "{{i18n: galarzapdos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarzapdosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarzapdosbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zapdos/galarzapdos",
+          "BabyTexture": "{{ModId}}/zapdos/galarzapdos",
+          "Sound": "{{ModId}}_galarzapdoscry",
+          "BabySound": "{{ModId}}_galarzapdoscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarzapdosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarzapdos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarzapdos": {
+          "DisplayName": "{{i18n: shinygalarzapdos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarzapdosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarzapdosbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zapdos/shinygalarzapdos",
+          "BabyTexture": "{{ModId}}/zapdos/shinygalarzapdos",
+          "Sound": "{{ModId}}_galarzapdoscry",
+          "BabySound": "{{ModId}}_galarzapdoscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarzapdosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarzapdos cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarzapdoscry": {
+          "ID": "{{ModId}}_galarzapdoscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zapdos/galarzapdoscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarzapdos egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarzapdosegg": {
+          "Name": "{{ModId}}_galarzapdosegg",
+          "DisplayName": "{{i18n: galarzapdosegg}}",
+          "Description": "{{i18n: galarzapdosegg.d}}",
+          "Texture": "{{ModId}}/zapdos/galarzapdosegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fighting",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarzapdos hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarzapdosegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarzapdos",
+              "AnimalId": "{{ModId}}_shinygalarzapdos",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarzapdos",
+              "AnimalId": "{{ModId}}_galarzapdos",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

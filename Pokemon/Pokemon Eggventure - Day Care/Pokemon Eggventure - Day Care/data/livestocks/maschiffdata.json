@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load maschiff textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mabosstiff/maschiff, {{ModId}}/mabosstiff/shinymaschiff, {{ModId}}/mabosstiff/mabosstiff, {{ModId}}/mabosstiff/shinymabosstiff, {{ModId}}/mabosstiff/maschiffegg",
+      "FromFile": "assets/livestocks/mabosstiff/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_maschiff data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_maschiff": {
+          "DisplayName": "{{i18n: maschiff}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_maschiffegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: maschiffbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mabosstiff/mabosstiff",
+          "BabyTexture": "{{ModId}}/mabosstiff/maschiff",
+          "Sound": "{{ModId}}_mabosstiffcry",
+          "BabySound": "{{ModId}}_maschiffcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_maschiffegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymaschiff data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymaschiff": {
+          "DisplayName": "{{i18n: shinymaschiff}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_maschiffegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymaschiffbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mabosstiff/shinymabosstiff",
+          "BabyTexture": "{{ModId}}/mabosstiff/shinymaschiff",
+          "Sound": "{{ModId}}_mabosstiffcry",
+          "BabySound": "{{ModId}}_maschiffcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_maschiffegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "maschiff cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_maschiffcry": {
+          "ID": "{{ModId}}_maschiffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mabosstiff/maschiffcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mabosstiffcry": {
+          "ID": "{{ModId}}_mabosstiffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mabosstiff/mabosstiffcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "maschiff egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_maschiffegg": {
+          "Name": "{{ModId}}_maschiffegg",
+          "DisplayName": "{{i18n: maschiffegg}}",
+          "Description": "{{i18n: maschiffegg.d}}",
+          "Texture": "{{ModId}}/mabosstiff/maschiffegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_common",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "maschiff hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_maschiffegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymaschiff",
+              "AnimalId": "{{ModId}}_shinymaschiff",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_maschiff",
+              "AnimalId": "{{ModId}}_maschiff",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

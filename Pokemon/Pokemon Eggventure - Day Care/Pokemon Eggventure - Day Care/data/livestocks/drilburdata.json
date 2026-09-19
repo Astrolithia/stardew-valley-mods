@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load drilbur textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/drilbur/drilbur, {{ModId}}/drilbur/shinydrilbur, {{ModId}}/drilbur/excadrill, {{ModId}}/drilbur/shinyexcadrill, {{ModId}}/drilbur/drilburegg",
+      "FromFile": "assets/livestocks/drilbur/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_drilbur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_drilbur": {
+          "DisplayName": "{{i18n: drilbur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_drilburegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: drilburbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/drilbur/excadrill",
+          "BabyTexture": "{{ModId}}/drilbur/drilbur",
+          "Sound": "{{ModId}}_excadrillcry",
+          "BabySound": "{{ModId}}_drilburcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_drilburegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydrilbur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydrilbur": {
+          "DisplayName": "{{i18n: shinydrilbur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_drilburegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydrilburbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/drilbur/shinyexcadrill",
+          "BabyTexture": "{{ModId}}/drilbur/shinydrilbur",
+          "Sound": "{{ModId}}_excadrillcry",
+          "BabySound": "{{ModId}}_drilburcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_drilburegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "drilbur cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_drilburcry": {
+          "ID": "{{ModId}}_drilburcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/drilbur/drilburcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_excadrillcry": {
+          "ID": "{{ModId}}_excadrillcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/drilbur/excadrillcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "drilbur egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_drilburegg": {
+          "Name": "{{ModId}}_drilburegg",
+          "DisplayName": "{{i18n: drilburegg}}",
+          "Description": "{{i18n: drilburegg.d}}",
+          "Texture": "{{ModId}}/drilbur/drilburegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "pkegg_quarry_p2",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "drilbur hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_drilburegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydrilbur",
+              "AnimalId": "{{ModId}}_shinydrilbur",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_drilbur",
+              "AnimalId": "{{ModId}}_drilbur",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

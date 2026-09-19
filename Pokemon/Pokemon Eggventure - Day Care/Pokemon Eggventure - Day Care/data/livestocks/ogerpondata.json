@@ -1,0 +1,253 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ogerpon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ogerpon/ogerpon, {{ModId}}/ogerpon/shinyogerpon, {{ModId}}/ogerpon/ogerpon2, {{ModId}}/ogerpon/shinyogerpon2, {{ModId}}/ogerpon/ogerpon3, {{ModId}}/ogerpon/shinyogerpon3, {{ModId}}/ogerpon/ogerpon4, {{ModId}}/ogerpon/shinyogerpon4, {{ModId}}/ogerpon/ogerpon5, {{ModId}}/ogerpon/shinyogerpon5, {{ModId}}/ogerpon/ogerpon6, {{ModId}}/ogerpon/shinyogerpon6, {{ModId}}/ogerpon/ogerpon7, {{ModId}}/ogerpon/shinyogerpon7, {{ModId}}/ogerpon/ogerpon8, {{ModId}}/ogerpon/shinyogerpon8, {{ModId}}/ogerpon/ogerponegg",
+      "FromFile": "assets/livestocks/ogerpon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ogerpon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ogerpon": {
+          "DisplayName": "{{i18n: ogerpon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ogerponegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ogerponbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ogerpon/ogerpon",
+          "BabyTexture": "{{ModId}}/ogerpon/ogerpon",
+          "Sound": "{{ModId}}_ogerponcry",
+          "BabySound": "{{ModId}}_ogerponcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ogerponegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "ogerpon2",
+              "Texture": "{{ModId}}/ogerpon/ogerpon2",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon2"
+            },
+            {
+              "Id": "ogerpon3",
+              "Texture": "{{ModId}}/ogerpon/ogerpon3",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon3"
+            },
+            {
+              "Id": "ogerpon4",
+              "Texture": "{{ModId}}/ogerpon/ogerpon4",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon4"
+            },
+            {
+              "Id": "ogerpon5",
+              "Texture": "{{ModId}}/ogerpon/ogerpon5",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon5"
+            },
+            {
+              "Id": "ogerpon6",
+              "Texture": "{{ModId}}/ogerpon/ogerpon6",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon6"
+            },
+            {
+              "Id": "ogerpon7",
+              "Texture": "{{ModId}}/ogerpon/ogerpon7",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon7"
+            },
+            {
+              "Id": "ogerpon8",
+              "Texture": "{{ModId}}/ogerpon/ogerpon8",
+              "BabyTexture": "{{ModId}}/ogerpon/ogerpon8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyogerpon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyogerpon": {
+          "DisplayName": "{{i18n: shinyogerpon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ogerponegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyogerponbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ogerpon/shinyogerpon",
+          "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon",
+          "Sound": "{{ModId}}_ogerponcry",
+          "BabySound": "{{ModId}}_ogerponcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ogerponegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "ogerpon2",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon2",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon2"
+            },
+            {
+              "Id": "ogerpon3",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon3",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon3"
+            },
+            {
+              "Id": "ogerpon4",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon4",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon4"
+            },
+            {
+              "Id": "ogerpon5",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon5",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon5"
+            },
+            {
+              "Id": "ogerpon6",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon6",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon6"
+            },
+            {
+              "Id": "ogerpon7",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon7",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon7"
+            },
+            {
+              "Id": "ogerpon8",
+              "Texture": "{{ModId}}/ogerpon/shinyogerpon8",
+              "BabyTexture": "{{ModId}}/ogerpon/shinyogerpon8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ogerpon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ogerponcry": {
+          "ID": "{{ModId}}_ogerponcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ogerpon/ogerponcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ogerpon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ogerponegg": {
+          "Name": "{{ModId}}_ogerponegg",
+          "DisplayName": "{{i18n: ogerponegg}}",
+          "Description": "{{i18n: ogerponegg.d}}",
+          "Texture": "{{ModId}}/ogerpon/ogerponegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ogerpon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ogerponegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyogerpon",
+              "AnimalId": "{{ModId}}_shinyogerpon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ogerpon",
+              "AnimalId": "{{ModId}}_ogerpon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load arctovish textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/arctovish/arctovish, {{ModId}}/arctovish/shinyarctovish, {{ModId}}/arctovish/arctovishegg",
+      "FromFile": "assets/livestocks/arctovish/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_arctovish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_arctovish": {
+          "DisplayName": "{{i18n: arctovish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_arctovishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: arctovishbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/arctovish/arctovish",
+          "BabyTexture": "{{ModId}}/arctovish/arctovish",
+          "Sound": "{{ModId}}_arctovishcry",
+          "BabySound": "{{ModId}}_arctovishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_arctovishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_arctovish type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_arctovish"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyarctovish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyarctovish": {
+          "DisplayName": "{{i18n: shinyarctovish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_arctovishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyarctovishbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/arctovish/shinyarctovish",
+          "BabyTexture": "{{ModId}}/arctovish/shinyarctovish",
+          "Sound": "{{ModId}}_arctovishcry",
+          "BabySound": "{{ModId}}_arctovishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_arctovishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyarctovish type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyarctovish"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "arctovish cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_arctovishcry": {
+          "ID": "{{ModId}}_arctovishcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/arctovish/arctovishcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arctovish egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_arctovishegg": {
+          "Name": "{{ModId}}_arctovishegg",
+          "DisplayName": "{{i18n: arctovishegg}}",
+          "Description": "{{i18n: arctovishegg.d}}",
+          "Texture": "{{ModId}}/arctovish/arctovishegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arctovish hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_arctovishegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyarctovish",
+              "AnimalId": "{{ModId}}_shinyarctovish",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_arctovish",
+              "AnimalId": "{{ModId}}_arctovish",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

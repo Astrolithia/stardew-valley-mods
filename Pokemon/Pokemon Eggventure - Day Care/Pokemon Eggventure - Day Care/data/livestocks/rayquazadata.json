@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rayquaza textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rayquaza/rayquaza, {{ModId}}/rayquaza/shinyrayquaza, {{ModId}}/rayquaza/rayquazaprimal, {{ModId}}/rayquaza/shinyrayquazaprimal, {{ModId}}/rayquaza/rayquazaegg",
+      "FromFile": "assets/livestocks/rayquaza/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rayquaza data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rayquaza": {
+          "DisplayName": "{{i18n: rayquaza}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rayquazaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rayquazabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rayquaza/rayquaza",
+          "BabyTexture": "{{ModId}}/rayquaza/rayquaza",
+          "Sound": "{{ModId}}_rayquazacry",
+          "BabySound": "{{ModId}}_rayquazacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rayquazaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "rayquazaprimal",
+              "Texture": "{{ModId}}/rayquaza/rayquazaprimal",
+              "BabyTexture": "{{ModId}}/rayquaza/rayquazaprimal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrayquaza data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrayquaza": {
+          "DisplayName": "{{i18n: shinyrayquaza}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rayquazaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrayquazabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rayquaza/shinyrayquaza",
+          "BabyTexture": "{{ModId}}/rayquaza/shinyrayquaza",
+          "Sound": "{{ModId}}_rayquazacry",
+          "BabySound": "{{ModId}}_rayquazacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rayquazaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "rayquazaprimal",
+              "Texture": "{{ModId}}/rayquaza/shinyrayquazaprimal",
+              "BabyTexture": "{{ModId}}/rayquaza/shinyrayquazaprimal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rayquaza cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rayquazacry": {
+          "ID": "{{ModId}}_rayquazacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rayquaza/rayquazacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rayquaza egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rayquazaegg": {
+          "Name": "{{ModId}}_rayquazaegg",
+          "DisplayName": "{{i18n: rayquazaegg}}",
+          "Description": "{{i18n: rayquazaegg.d}}",
+          "Texture": "{{ModId}}/rayquaza/rayquazaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rayquaza hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rayquazaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrayquaza",
+              "AnimalId": "{{ModId}}_shinyrayquaza",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rayquaza",
+              "AnimalId": "{{ModId}}_rayquaza",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

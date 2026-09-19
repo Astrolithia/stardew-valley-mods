@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load electrike textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/electrike/electrike, {{ModId}}/electrike/shinyelectrike, {{ModId}}/electrike/manectric, {{ModId}}/electrike/shinymanectric, {{ModId}}/electrike/electrikeegg",
+      "FromFile": "assets/livestocks/electrike/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_electrike data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_electrike": {
+          "DisplayName": "{{i18n: electrike}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_electrikeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: electrikebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/electrike/manectric",
+          "BabyTexture": "{{ModId}}/electrike/electrike",
+          "Sound": "{{ModId}}_manectriccry",
+          "BabySound": "{{ModId}}_electrikecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_electrikeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyelectrike data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyelectrike": {
+          "DisplayName": "{{i18n: shinyelectrike}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_electrikeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyelectrikebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/electrike/shinymanectric",
+          "BabyTexture": "{{ModId}}/electrike/shinyelectrike",
+          "Sound": "{{ModId}}_manectriccry",
+          "BabySound": "{{ModId}}_electrikecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_electrikeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "electrike cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_electrikecry": {
+          "ID": "{{ModId}}_electrikecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/electrike/electrikecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_manectriccry": {
+          "ID": "{{ModId}}_manectriccry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/electrike/manectriccry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "electrike egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_electrikeegg": {
+          "Name": "{{ModId}}_electrikeegg",
+          "DisplayName": "{{i18n: electrikeegg}}",
+          "Description": "{{i18n: electrikeegg.d}}",
+          "Texture": "{{ModId}}/electrike/electrikeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "electrike hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_electrikeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyelectrike",
+              "AnimalId": "{{ModId}}_shinyelectrike",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_electrike",
+              "AnimalId": "{{ModId}}_electrike",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

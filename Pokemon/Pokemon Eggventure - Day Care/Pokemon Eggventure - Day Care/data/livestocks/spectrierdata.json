@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load spectrier textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/spectrier/spectrier, {{ModId}}/spectrier/shinyspectrier, {{ModId}}/spectrier/spectrieregg",
+      "FromFile": "assets/livestocks/spectrier/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_spectrier data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_spectrier": {
+          "DisplayName": "{{i18n: spectrier}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_spectrieregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: spectrierbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spectrier/spectrier",
+          "BabyTexture": "{{ModId}}/spectrier/spectrier",
+          "Sound": "{{ModId}}_spectriercry",
+          "BabySound": "{{ModId}}_spectriercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_spectrieregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyspectrier data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyspectrier": {
+          "DisplayName": "{{i18n: shinyspectrier}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_spectrieregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyspectrierbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spectrier/shinyspectrier",
+          "BabyTexture": "{{ModId}}/spectrier/shinyspectrier",
+          "Sound": "{{ModId}}_spectriercry",
+          "BabySound": "{{ModId}}_spectriercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_spectrieregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "spectrier cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_spectriercry": {
+          "ID": "{{ModId}}_spectriercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spectrier/spectriercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spectrier egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_spectrieregg": {
+          "Name": "{{ModId}}_spectrieregg",
+          "DisplayName": "{{i18n: spectrieregg}}",
+          "Description": "{{i18n: spectrieregg.d}}",
+          "Texture": "{{ModId}}/spectrier/spectrieregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spectrier hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_spectrieregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyspectrier",
+              "AnimalId": "{{ModId}}_shinyspectrier",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_spectrier",
+              "AnimalId": "{{ModId}}_spectrier",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load turtwig textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/turtwig/turtwig, {{ModId}}/turtwig/shinyturtwig, {{ModId}}/turtwig/grotle, {{ModId}}/turtwig/shinygrotle, {{ModId}}/turtwig/torterra, {{ModId}}/turtwig/shinytorterra, {{ModId}}/turtwig/turtwigegg",
+      "FromFile": "assets/livestocks/turtwig/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_turtwig data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_turtwig": {
+          "DisplayName": "{{i18n: turtwig}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_turtwigegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: turtwigbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/turtwig/grotle",
+          "BabyTexture": "{{ModId}}/turtwig/turtwig",
+          "Sound": "{{ModId}}_torterracry",
+          "BabySound": "{{ModId}}_turtwigcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_turtwigegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_turtwig evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_turtwig",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "turtwigevolution": {
+          "Id": "turtwigevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/turtwig/torterra"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyturtwig data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyturtwig": {
+          "DisplayName": "{{i18n: shinyturtwig}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_turtwigegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyturtwigbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/turtwig/shinygrotle",
+          "BabyTexture": "{{ModId}}/turtwig/shinyturtwig",
+          "Sound": "{{ModId}}_torterracry",
+          "BabySound": "{{ModId}}_turtwigcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_turtwigegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyturtwig evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyturtwig",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyturtwigevolution": {
+          "Id": "shinyturtwigevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/turtwig/shinytorterra"
+        }
+      }
+    },
+    {
+      "LogName": "turtwig cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_turtwigcry": {
+          "ID": "{{ModId}}_turtwigcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/turtwig/turtwigcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_torterracry": {
+          "ID": "{{ModId}}_torterracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/turtwig/torterracry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "turtwig egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_turtwigegg": {
+          "Name": "{{ModId}}_turtwigegg",
+          "DisplayName": "{{i18n: turtwigegg}}",
+          "Description": "{{i18n: turtwigegg.d}}",
+          "Texture": "{{ModId}}/turtwig/turtwigegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "turtwig hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_turtwigegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyturtwig",
+              "AnimalId": "{{ModId}}_shinyturtwig",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_turtwig",
+              "AnimalId": "{{ModId}}_turtwig",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

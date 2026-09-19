@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ironcrown textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ironcrown/ironcrown, {{ModId}}/ironcrown/shinyironcrown, {{ModId}}/ironcrown/ironcrownegg",
+      "FromFile": "assets/livestocks/ironcrown/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ironcrown data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ironcrown": {
+          "DisplayName": "{{i18n: ironcrown}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ironcrownegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ironcrownbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironcrown/ironcrown",
+          "BabyTexture": "{{ModId}}/ironcrown/ironcrown",
+          "Sound": "{{ModId}}_ironcrowncry",
+          "BabySound": "{{ModId}}_ironcrowncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironcrownegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyironcrown data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyironcrown": {
+          "DisplayName": "{{i18n: shinyironcrown}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ironcrownegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyironcrownbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironcrown/shinyironcrown",
+          "BabyTexture": "{{ModId}}/ironcrown/shinyironcrown",
+          "Sound": "{{ModId}}_ironcrowncry",
+          "BabySound": "{{ModId}}_ironcrowncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironcrownegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "ironcrown cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ironcrowncry": {
+          "ID": "{{ModId}}_ironcrowncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ironcrown/ironcrowncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironcrown egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ironcrownegg": {
+          "Name": "{{ModId}}_ironcrownegg",
+          "DisplayName": "{{i18n: ironcrownegg}}",
+          "Description": "{{i18n: ironcrownegg.d}}",
+          "Texture": "{{ModId}}/ironcrown/ironcrownegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_futurs",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironcrown hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ironcrownegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyironcrown",
+              "AnimalId": "{{ModId}}_shinyironcrown",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ironcrown",
+              "AnimalId": "{{ModId}}_ironcrown",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

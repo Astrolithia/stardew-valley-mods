@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load grubbin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/grubbin/grubbin, {{ModId}}/grubbin/shinygrubbin, {{ModId}}/grubbin/charjabug, {{ModId}}/grubbin/shinycharjabug, {{ModId}}/grubbin/vikavolt, {{ModId}}/grubbin/shinyvikavolt, {{ModId}}/grubbin/grubbinegg",
+      "FromFile": "assets/livestocks/grubbin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_grubbin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_grubbin": {
+          "DisplayName": "{{i18n: grubbin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_grubbinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: grubbinbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/grubbin/charjabug",
+          "BabyTexture": "{{ModId}}/grubbin/grubbin",
+          "Sound": "{{ModId}}_vikavoltcry",
+          "BabySound": "{{ModId}}_grubbincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_grubbinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_grubbin evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_grubbin",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "grubbinevolution": {
+          "Id": "grubbinevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/grubbin/vikavolt"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygrubbin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygrubbin": {
+          "DisplayName": "{{i18n: shinygrubbin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_grubbinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygrubbinbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/grubbin/shinycharjabug",
+          "BabyTexture": "{{ModId}}/grubbin/shinygrubbin",
+          "Sound": "{{ModId}}_vikavoltcry",
+          "BabySound": "{{ModId}}_grubbincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_grubbinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygrubbin evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygrubbin",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygrubbinevolution": {
+          "Id": "shinygrubbinevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/grubbin/shinyvikavolt"
+        }
+      }
+    },
+    {
+      "LogName": "grubbin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_grubbincry": {
+          "ID": "{{ModId}}_grubbincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/grubbin/grubbincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_vikavoltcry": {
+          "ID": "{{ModId}}_vikavoltcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/grubbin/vikavoltcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "grubbin egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_grubbinegg": {
+          "Name": "{{ModId}}_grubbinegg",
+          "DisplayName": "{{i18n: grubbinegg}}",
+          "Description": "{{i18n: grubbinegg.d}}",
+          "Texture": "{{ModId}}/grubbin/grubbinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "grubbin hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_grubbinegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygrubbin",
+              "AnimalId": "{{ModId}}_shinygrubbin",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_grubbin",
+              "AnimalId": "{{ModId}}_grubbin",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

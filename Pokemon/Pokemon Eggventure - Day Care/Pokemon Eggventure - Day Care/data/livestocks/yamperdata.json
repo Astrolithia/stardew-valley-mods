@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load yamper textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/yamper/yamper, {{ModId}}/yamper/shinyyamper, {{ModId}}/yamper/boltund, {{ModId}}/yamper/shinyboltund, {{ModId}}/yamper/yamperegg",
+      "FromFile": "assets/livestocks/yamper/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_yamper data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_yamper": {
+          "DisplayName": "{{i18n: yamper}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yamperegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: yamperbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yamper/boltund",
+          "BabyTexture": "{{ModId}}/yamper/yamper",
+          "Sound": "{{ModId}}_boltundcry",
+          "BabySound": "{{ModId}}_yampercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yamperegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyyamper data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyyamper": {
+          "DisplayName": "{{i18n: shinyyamper}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yamperegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyyamperbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yamper/shinyboltund",
+          "BabyTexture": "{{ModId}}/yamper/shinyyamper",
+          "Sound": "{{ModId}}_boltundcry",
+          "BabySound": "{{ModId}}_yampercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yamperegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "yamper cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_yampercry": {
+          "ID": "{{ModId}}_yampercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yamper/yampercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_boltundcry": {
+          "ID": "{{ModId}}_boltundcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yamper/boltundcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yamper egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_yamperegg": {
+          "Name": "{{ModId}}_yamperegg",
+          "DisplayName": "{{i18n: yamperegg}}",
+          "Description": "{{i18n: yamperegg.d}}",
+          "Texture": "{{ModId}}/yamper/yamperegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yamper hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_yamperegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyyamper",
+              "AnimalId": "{{ModId}}_shinyyamper",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_yamper",
+              "AnimalId": "{{ModId}}_yamper",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

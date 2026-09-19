@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load orthworm textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/orthworm/orthworm, {{ModId}}/orthworm/shinyorthworm, {{ModId}}/orthworm/orthwormegg",
+      "FromFile": "assets/livestocks/orthworm/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_orthworm data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_orthworm": {
+          "DisplayName": "{{i18n: orthworm}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_orthwormegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: orthwormbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/orthworm/orthworm",
+          "BabyTexture": "{{ModId}}/orthworm/orthworm",
+          "Sound": "{{ModId}}_orthwormcry",
+          "BabySound": "{{ModId}}_orthwormcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_orthwormegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyorthworm data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyorthworm": {
+          "DisplayName": "{{i18n: shinyorthworm}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_orthwormegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyorthwormbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/orthworm/shinyorthworm",
+          "BabyTexture": "{{ModId}}/orthworm/shinyorthworm",
+          "Sound": "{{ModId}}_orthwormcry",
+          "BabySound": "{{ModId}}_orthwormcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_orthwormegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "orthworm cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_orthwormcry": {
+          "ID": "{{ModId}}_orthwormcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/orthworm/orthwormcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "orthworm egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_orthwormegg": {
+          "Name": "{{ModId}}_orthwormegg",
+          "DisplayName": "{{i18n: orthwormegg}}",
+          "Description": "{{i18n: orthwormegg.d}}",
+          "Texture": "{{ModId}}/orthworm/orthwormegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_veryrare",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "orthworm hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_orthwormegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyorthworm",
+              "AnimalId": "{{ModId}}_shinyorthworm",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_orthworm",
+              "AnimalId": "{{ModId}}_orthworm",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

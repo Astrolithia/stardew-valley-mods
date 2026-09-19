@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load nihilego textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/nihilego/nihilego, {{ModId}}/nihilego/shinynihilego, {{ModId}}/nihilego/nihilegoegg",
+      "FromFile": "assets/livestocks/nihilego/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_nihilego data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_nihilego": {
+          "DisplayName": "{{i18n: nihilego}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_nihilegoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: nihilegobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nihilego/nihilego",
+          "BabyTexture": "{{ModId}}/nihilego/nihilego",
+          "Sound": "{{ModId}}_nihilegocry",
+          "BabySound": "{{ModId}}_nihilegocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nihilegoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinynihilego data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinynihilego": {
+          "DisplayName": "{{i18n: shinynihilego}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_nihilegoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinynihilegobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nihilego/shinynihilego",
+          "BabyTexture": "{{ModId}}/nihilego/shinynihilego",
+          "Sound": "{{ModId}}_nihilegocry",
+          "BabySound": "{{ModId}}_nihilegocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nihilegoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "nihilego cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_nihilegocry": {
+          "ID": "{{ModId}}_nihilegocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nihilego/nihilegocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nihilego egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_nihilegoegg": {
+          "Name": "{{ModId}}_nihilegoegg",
+          "DisplayName": "{{i18n: nihilegoegg}}",
+          "Description": "{{i18n: nihilegoegg.d}}",
+          "Texture": "{{ModId}}/nihilego/nihilegoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nihilego hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_nihilegoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinynihilego",
+              "AnimalId": "{{ModId}}_shinynihilego",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_nihilego",
+              "AnimalId": "{{ModId}}_nihilego",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

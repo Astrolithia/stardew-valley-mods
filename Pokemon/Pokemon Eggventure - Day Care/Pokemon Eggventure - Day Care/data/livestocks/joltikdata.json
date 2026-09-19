@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load joltik textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/joltik/joltik, {{ModId}}/joltik/shinyjoltik, {{ModId}}/joltik/galvantula, {{ModId}}/joltik/shinygalvantula, {{ModId}}/joltik/joltikegg",
+      "FromFile": "assets/livestocks/joltik/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_joltik data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_joltik": {
+          "DisplayName": "{{i18n: joltik}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_joltikegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: joltikbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/joltik/galvantula",
+          "BabyTexture": "{{ModId}}/joltik/joltik",
+          "Sound": "{{ModId}}_galvantulacry",
+          "BabySound": "{{ModId}}_joltikcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_joltikegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyjoltik data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyjoltik": {
+          "DisplayName": "{{i18n: shinyjoltik}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_joltikegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyjoltikbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/joltik/shinygalvantula",
+          "BabyTexture": "{{ModId}}/joltik/shinyjoltik",
+          "Sound": "{{ModId}}_galvantulacry",
+          "BabySound": "{{ModId}}_joltikcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_joltikegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "joltik cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_joltikcry": {
+          "ID": "{{ModId}}_joltikcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/joltik/joltikcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_galvantulacry": {
+          "ID": "{{ModId}}_galvantulacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/joltik/galvantulacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "joltik egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_joltikegg": {
+          "Name": "{{ModId}}_joltikegg",
+          "DisplayName": "{{i18n: joltikegg}}",
+          "Description": "{{i18n: joltikegg.d}}",
+          "Texture": "{{ModId}}/joltik/joltikegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "pkegg_chop_summer_storm",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "joltik hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_joltikegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyjoltik",
+              "AnimalId": "{{ModId}}_shinyjoltik",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_joltik",
+              "AnimalId": "{{ModId}}_joltik",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

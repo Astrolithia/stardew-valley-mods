@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hatenna textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/hatenna/hatenna, {{ModId}}/hatenna/shinyhatenna, {{ModId}}/hatenna/hattrem, {{ModId}}/hatenna/shinyhattrem, {{ModId}}/hatenna/hatterene, {{ModId}}/hatenna/shinyhatterene, {{ModId}}/hatenna/hatennaegg",
+      "FromFile": "assets/livestocks/hatenna/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hatenna data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hatenna": {
+          "DisplayName": "{{i18n: hatenna}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hatennaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hatennabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hatenna/hattrem",
+          "BabyTexture": "{{ModId}}/hatenna/hatenna",
+          "Sound": "{{ModId}}_hatterenecry",
+          "BabySound": "{{ModId}}_hatennacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hatennaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hatenna evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hatenna",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "hatennaevolution": {
+          "Id": "hatennaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/hatenna/hatterene"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhatenna data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhatenna": {
+          "DisplayName": "{{i18n: shinyhatenna}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hatennaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhatennabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hatenna/shinyhattrem",
+          "BabyTexture": "{{ModId}}/hatenna/shinyhatenna",
+          "Sound": "{{ModId}}_hatterenecry",
+          "BabySound": "{{ModId}}_hatennacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hatennaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhatenna evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhatenna",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhatennaevolution": {
+          "Id": "shinyhatennaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/hatenna/shinyhatterene"
+        }
+      }
+    },
+    {
+      "LogName": "hatenna cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hatennacry": {
+          "ID": "{{ModId}}_hatennacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hatenna/hatennacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hatterenecry": {
+          "ID": "{{ModId}}_hatterenecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hatenna/hatterenecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hatenna egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hatennaegg": {
+          "Name": "{{ModId}}_hatennaegg",
+          "DisplayName": "{{i18n: hatennaegg}}",
+          "Description": "{{i18n: hatennaegg.d}}",
+          "Texture": "{{ModId}}/hatenna/hatennaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hatenna hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hatennaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhatenna",
+              "AnimalId": "{{ModId}}_shinyhatenna",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hatenna",
+              "AnimalId": "{{ModId}}_hatenna",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

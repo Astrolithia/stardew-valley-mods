@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load munkidori textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/munkidori/munkidori, {{ModId}}/munkidori/shinymunkidori, {{ModId}}/munkidori/munkidoriegg",
+      "FromFile": "assets/livestocks/munkidori/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_munkidori data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_munkidori": {
+          "DisplayName": "{{i18n: munkidori}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_munkidoriegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: munkidoribirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/munkidori/munkidori",
+          "BabyTexture": "{{ModId}}/munkidori/munkidori",
+          "Sound": "{{ModId}}_munkidoricry",
+          "BabySound": "{{ModId}}_munkidoricry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_munkidoriegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymunkidori data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymunkidori": {
+          "DisplayName": "{{i18n: shinymunkidori}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_munkidoriegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymunkidoribirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/munkidori/shinymunkidori",
+          "BabyTexture": "{{ModId}}/munkidori/shinymunkidori",
+          "Sound": "{{ModId}}_munkidoricry",
+          "BabySound": "{{ModId}}_munkidoricry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_munkidoriegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "munkidori cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_munkidoricry": {
+          "ID": "{{ModId}}_munkidoricry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/munkidori/munkidoricry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "munkidori egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_munkidoriegg": {
+          "Name": "{{ModId}}_munkidoriegg",
+          "DisplayName": "{{i18n: munkidoriegg}}",
+          "Description": "{{i18n: munkidoriegg.d}}",
+          "Texture": "{{ModId}}/munkidori/munkidoriegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_poison",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "munkidori hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_munkidoriegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymunkidori",
+              "AnimalId": "{{ModId}}_shinymunkidori",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_munkidori",
+              "AnimalId": "{{ModId}}_munkidori",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

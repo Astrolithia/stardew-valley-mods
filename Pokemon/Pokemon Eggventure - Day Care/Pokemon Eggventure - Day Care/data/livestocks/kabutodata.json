@@ -1,0 +1,207 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load kabuto textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/kabuto/kabuto, {{ModId}}/kabuto/shinykabuto, {{ModId}}/kabuto/kabutops, {{ModId}}/kabuto/shinykabutops, {{ModId}}/kabuto/kabutoegg",
+      "FromFile": "assets/livestocks/kabuto/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_kabuto data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_kabuto": {
+          "DisplayName": "{{i18n: kabuto}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kabutoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: kabutobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kabuto/kabutops",
+          "BabyTexture": "{{ModId}}/kabuto/kabuto",
+          "Sound": "{{ModId}}_kabutopscry",
+          "BabySound": "{{ModId}}_kabutocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kabutoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_kabuto type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_kabuto"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykabuto data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykabuto": {
+          "DisplayName": "{{i18n: shinykabuto}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kabutoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykabutobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kabuto/shinykabutops",
+          "BabyTexture": "{{ModId}}/kabuto/shinykabuto",
+          "Sound": "{{ModId}}_kabutopscry",
+          "BabySound": "{{ModId}}_kabutocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kabutoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinykabuto type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinykabuto"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "kabuto cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_kabutocry": {
+          "ID": "{{ModId}}_kabutocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kabuto/kabutocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_kabutopscry": {
+          "ID": "{{ModId}}_kabutopscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kabuto/kabutopscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kabuto egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_kabutoegg": {
+          "Name": "{{ModId}}_kabutoegg",
+          "DisplayName": "{{i18n: kabutoegg}}",
+          "Description": "{{i18n: kabutoegg.d}}",
+          "Texture": "{{ModId}}/kabuto/kabutoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kabuto hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_kabutoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykabuto",
+              "AnimalId": "{{ModId}}_shinykabuto",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_kabuto",
+              "AnimalId": "{{ModId}}_kabuto",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cottonee textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cottonee/cottonee, {{ModId}}/cottonee/shinycottonee, {{ModId}}/cottonee/whimsicott, {{ModId}}/cottonee/shinywhimsicott, {{ModId}}/cottonee/cottoneeegg",
+      "FromFile": "assets/livestocks/cottonee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cottonee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cottonee": {
+          "DisplayName": "{{i18n: cottonee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cottoneeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cottoneebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cottonee/whimsicott",
+          "BabyTexture": "{{ModId}}/cottonee/cottonee",
+          "Sound": "{{ModId}}_whimsicottcry",
+          "BabySound": "{{ModId}}_cottoneecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cottoneeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycottonee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycottonee": {
+          "DisplayName": "{{i18n: shinycottonee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cottoneeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycottoneebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cottonee/shinywhimsicott",
+          "BabyTexture": "{{ModId}}/cottonee/shinycottonee",
+          "Sound": "{{ModId}}_whimsicottcry",
+          "BabySound": "{{ModId}}_cottoneecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cottoneeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "cottonee cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cottoneecry": {
+          "ID": "{{ModId}}_cottoneecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cottonee/cottoneecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_whimsicottcry": {
+          "ID": "{{ModId}}_whimsicottcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cottonee/whimsicottcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cottonee egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cottoneeegg": {
+          "Name": "{{ModId}}_cottoneeegg",
+          "DisplayName": "{{i18n: cottoneeegg}}",
+          "Description": "{{i18n: cottoneeegg.d}}",
+          "Texture": "{{ModId}}/cottonee/cottoneeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cottonee hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cottoneeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycottonee",
+              "AnimalId": "{{ModId}}_shinycottonee",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cottonee",
+              "AnimalId": "{{ModId}}_cottonee",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

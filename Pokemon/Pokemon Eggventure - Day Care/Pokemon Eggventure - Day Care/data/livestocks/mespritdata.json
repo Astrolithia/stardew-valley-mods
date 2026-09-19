@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mesprit textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mesprit/mesprit, {{ModId}}/mesprit/shinymesprit, {{ModId}}/mesprit/mespritegg",
+      "FromFile": "assets/livestocks/mesprit/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mesprit data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mesprit": {
+          "DisplayName": "{{i18n: mesprit}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mespritegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mespritbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mesprit/mesprit",
+          "BabyTexture": "{{ModId}}/mesprit/mesprit",
+          "Sound": "{{ModId}}_mespritcry",
+          "BabySound": "{{ModId}}_mespritcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mespritegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymesprit data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymesprit": {
+          "DisplayName": "{{i18n: shinymesprit}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mespritegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymespritbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mesprit/shinymesprit",
+          "BabyTexture": "{{ModId}}/mesprit/shinymesprit",
+          "Sound": "{{ModId}}_mespritcry",
+          "BabySound": "{{ModId}}_mespritcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mespritegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "mesprit cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mespritcry": {
+          "ID": "{{ModId}}_mespritcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mesprit/mespritcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mesprit egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mespritegg": {
+          "Name": "{{ModId}}_mespritegg",
+          "DisplayName": "{{i18n: mespritegg}}",
+          "Description": "{{i18n: mespritegg.d}}",
+          "Texture": "{{ModId}}/mesprit/mespritegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mesprit hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mespritegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymesprit",
+              "AnimalId": "{{ModId}}_shinymesprit",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mesprit",
+              "AnimalId": "{{ModId}}_mesprit",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

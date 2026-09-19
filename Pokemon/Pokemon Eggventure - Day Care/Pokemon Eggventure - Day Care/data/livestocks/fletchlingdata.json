@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fletchling textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fletchling/fletchling, {{ModId}}/fletchling/shinyfletchling, {{ModId}}/fletchling/fletchinder, {{ModId}}/fletchling/shinyfletchinder, {{ModId}}/fletchling/talonflame, {{ModId}}/fletchling/shinytalonflame, {{ModId}}/fletchling/fletchlingegg",
+      "FromFile": "assets/livestocks/fletchling/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_fletchling data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_fletchling": {
+          "DisplayName": "{{i18n: fletchling}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_fletchlingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: fletchlingbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fletchling/fletchinder",
+          "BabyTexture": "{{ModId}}/fletchling/fletchling",
+          "Sound": "{{ModId}}_talonflamecry",
+          "BabySound": "{{ModId}}_fletchlingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fletchlingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_fletchling evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_fletchling",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "fletchlingevolution": {
+          "Id": "fletchlingevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/fletchling/talonflame"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_fletchling type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_fletchling"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfletchling data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfletchling": {
+          "DisplayName": "{{i18n: shinyfletchling}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_fletchlingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfletchlingbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fletchling/shinyfletchinder",
+          "BabyTexture": "{{ModId}}/fletchling/shinyfletchling",
+          "Sound": "{{ModId}}_talonflamecry",
+          "BabySound": "{{ModId}}_fletchlingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fletchlingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfletchling evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfletchling",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyfletchlingevolution": {
+          "Id": "shinyfletchlingevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/fletchling/shinytalonflame"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfletchling type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfletchling"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "fletchling cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_fletchlingcry": {
+          "ID": "{{ModId}}_fletchlingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fletchling/fletchlingcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_talonflamecry": {
+          "ID": "{{ModId}}_talonflamecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fletchling/talonflamecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fletchling egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fletchlingegg": {
+          "Name": "{{ModId}}_fletchlingegg",
+          "DisplayName": "{{i18n: fletchlingegg}}",
+          "Description": "{{i18n: fletchlingegg.d}}",
+          "Texture": "{{ModId}}/fletchling/fletchlingegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fletchling hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_fletchlingegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfletchling",
+              "AnimalId": "{{ModId}}_shinyfletchling",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_fletchling",
+              "AnimalId": "{{ModId}}_fletchling",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

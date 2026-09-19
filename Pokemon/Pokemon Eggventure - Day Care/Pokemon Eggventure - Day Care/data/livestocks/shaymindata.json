@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shaymin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shaymin/shaymin, {{ModId}}/shaymin/shinyshaymin, {{ModId}}/shaymin/shayminegg",
+      "FromFile": "assets/livestocks/shaymin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shaymin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shaymin": {
+          "DisplayName": "{{i18n: shaymin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shayminegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shayminbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shaymin/shaymin",
+          "BabyTexture": "{{ModId}}/shaymin/shaymin",
+          "Sound": "{{ModId}}_shaymincry",
+          "BabySound": "{{ModId}}_shaymincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shayminegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshaymin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshaymin": {
+          "DisplayName": "{{i18n: shinyshaymin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shayminegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshayminbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shaymin/shinyshaymin",
+          "BabyTexture": "{{ModId}}/shaymin/shinyshaymin",
+          "Sound": "{{ModId}}_shaymincry",
+          "BabySound": "{{ModId}}_shaymincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shayminegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "shaymin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shaymincry": {
+          "ID": "{{ModId}}_shaymincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shaymin/shaymincry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shaymin egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shayminegg": {
+          "Name": "{{ModId}}_shayminegg",
+          "DisplayName": "{{i18n: shayminegg}}",
+          "Description": "{{i18n: shayminegg.d}}",
+          "Texture": "{{ModId}}/shaymin/shayminegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shaymin hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shayminegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshaymin",
+              "AnimalId": "{{ModId}}_shinyshaymin",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shaymin",
+              "AnimalId": "{{ModId}}_shaymin",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

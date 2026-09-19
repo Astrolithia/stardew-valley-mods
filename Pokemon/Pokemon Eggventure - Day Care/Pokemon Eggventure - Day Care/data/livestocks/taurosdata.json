@@ -1,0 +1,272 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tauros textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tauros/tauros, {{ModId}}/tauros/shinytauros, {{ModId}}/tauros/taurosegg, {{ModId}}/tauros/taurosshop",
+      "FromFile": "assets/livestocks/tauros/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tauros data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tauros": {
+          "DisplayName": "{{i18n: tauros}}",
+          "Gender": "Male",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_taurosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: taurosbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tauros/tauros",
+          "BabyTexture": "{{ModId}}/tauros/tauros",
+          "Sound": "{{ModId}}_tauroscry",
+          "BabySound": "{{ModId}}_tauroscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_moomoo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_taurosegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_moomoolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "PurchasePrice": 750,
+          "ShopDescription": "{{i18n:marnie_tauros_desc}}",
+          "ShopTexture": "{{ModId}}/tauros/taurosshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "HarvestTool": "Milk Pail",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytauros data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytauros": {
+          "DisplayName": "{{i18n: shinytauros}}",
+          "Gender": "Male",
+          "House": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_taurosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytaurosbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tauros/shinytauros",
+          "BabyTexture": "{{ModId}}/tauros/shinytauros",
+          "Sound": "{{ModId}}_tauroscry",
+          "BabySound": "{{ModId}}_tauroscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_moomoo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_taurosegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_moomoolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "tauros cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tauroscry": {
+          "ID": "{{ModId}}_tauroscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tauros/tauroscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tauros egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_taurosegg": {
+          "Name": "{{ModId}}_taurosegg",
+          "DisplayName": "{{i18n: taurosegg}}",
+          "Description": "{{i18n: taurosegg.d}}",
+          "Texture": "{{ModId}}/tauros/taurosegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tauros hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_taurosegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytauros",
+              "AnimalId": "{{ModId}}_shinytauros",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tauros",
+              "AnimalId": "{{ModId}}_tauros",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_tauros",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_tauros",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_tauros_dailydrop": {
+          "Id": "{{ModId}}_tauros_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_tauros_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - tauros",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_tauros",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinytauros",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytauros",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinytauros_dailydrop": {
+          "Id": "{{ModId}}_shinytauros_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinytauros_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinytauros",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytauros",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

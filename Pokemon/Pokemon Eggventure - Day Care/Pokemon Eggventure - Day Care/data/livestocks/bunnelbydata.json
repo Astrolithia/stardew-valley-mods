@@ -1,0 +1,305 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bunnelby textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bunnelby/bunnelby, {{ModId}}/bunnelby/shinybunnelby, {{ModId}}/bunnelby/diggersby, {{ModId}}/bunnelby/shinydiggersby, {{ModId}}/bunnelby/bunnelbyegg, {{ModId}}/bunnelby/bunnelbyshop",
+      "FromFile": "assets/livestocks/bunnelby/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bunnelby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bunnelby": {
+          "DisplayName": "{{i18n: bunnelby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Deluxe Coop",
+          "EggItemIds": [
+            "{{ModId}}_bunnelbyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bunnelbybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bunnelby/diggersby",
+          "BabyTexture": "{{ModId}}/bunnelby/bunnelby",
+          "Sound": "{{ModId}}_diggersbycry",
+          "BabySound": "{{ModId}}_bunnelbycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_bunnelby",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_bunnelbyegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "rabbitsfoot",
+              "ItemId": "446",
+              "MinimumFriendship": 400,
+              "Condition": "RANDOM 0.10"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "PurchasePrice": 4000,
+          "ShopDescription": "{{i18n:marnie_bunnelby_desc}}",
+          "ShopTexture": "{{ModId}}/bunnelby/bunnelbyshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybunnelby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybunnelby": {
+          "DisplayName": "{{i18n: shinybunnelby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bunnelbyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybunnelbybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bunnelby/shinydiggersby",
+          "BabyTexture": "{{ModId}}/bunnelby/shinybunnelby",
+          "Sound": "{{ModId}}_diggersbycry",
+          "BabySound": "{{ModId}}_bunnelbycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_bunnelby",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_bunnelbyegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "rabbitsfoot",
+              "ItemId": "446",
+              "MinimumFriendship": 400,
+              "Condition": "RANDOM 0.10"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "bunnelby cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bunnelbycry": {
+          "ID": "{{ModId}}_bunnelbycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bunnelby/bunnelbycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_diggersbycry": {
+          "ID": "{{ModId}}_diggersbycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bunnelby/diggersbycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bunnelby egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bunnelbyegg": {
+          "Name": "{{ModId}}_bunnelbyegg",
+          "DisplayName": "{{i18n: bunnelbyegg}}",
+          "Description": "{{i18n: bunnelbyegg.d}}",
+          "Texture": "{{ModId}}/bunnelby/bunnelbyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bunnelby hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bunnelbyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybunnelby",
+              "AnimalId": "{{ModId}}_shinybunnelby",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bunnelby",
+              "AnimalId": "{{ModId}}_bunnelby",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bunnelby",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybunnelby",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_bunnelby",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bunnelby",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_bunnelby_dailydrop": {
+          "Id": "{{ModId}}_bunnelby_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_bunnelby_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - bunnelby",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bunnelby",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinybunnelby",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybunnelby",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinybunnelby_dailydrop": {
+          "Id": "{{ModId}}_shinybunnelby_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinybunnelby_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinybunnelby",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybunnelby",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load volbeat textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/volbeat/volbeat, {{ModId}}/volbeat/shinyvolbeat, {{ModId}}/volbeat/volbeategg",
+      "FromFile": "assets/livestocks/volbeat/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_volbeat data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_volbeat": {
+          "DisplayName": "{{i18n: volbeat}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_volbeategg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: volbeatbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/volbeat/volbeat",
+          "BabyTexture": "{{ModId}}/volbeat/volbeat",
+          "Sound": "{{ModId}}_volbeatcry",
+          "BabySound": "{{ModId}}_volbeatcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_volbeategg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvolbeat data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvolbeat": {
+          "DisplayName": "{{i18n: shinyvolbeat}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_volbeategg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvolbeatbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/volbeat/shinyvolbeat",
+          "BabyTexture": "{{ModId}}/volbeat/shinyvolbeat",
+          "Sound": "{{ModId}}_volbeatcry",
+          "BabySound": "{{ModId}}_volbeatcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_volbeategg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "volbeat cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_volbeatcry": {
+          "ID": "{{ModId}}_volbeatcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/volbeat/volbeatcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "volbeat egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_volbeategg": {
+          "Name": "{{ModId}}_volbeategg",
+          "DisplayName": "{{i18n: volbeategg}}",
+          "Description": "{{i18n: volbeategg.d}}",
+          "Texture": "{{ModId}}/volbeat/volbeategg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "volbeat hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_volbeategg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvolbeat",
+              "AnimalId": "{{ModId}}_shinyvolbeat",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_volbeat",
+              "AnimalId": "{{ModId}}_volbeat",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

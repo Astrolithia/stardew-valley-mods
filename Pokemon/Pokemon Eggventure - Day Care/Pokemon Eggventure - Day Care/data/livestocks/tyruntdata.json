@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tyrunt textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tyrunt/tyrunt, {{ModId}}/tyrunt/shinytyrunt, {{ModId}}/tyrunt/tyrantrum, {{ModId}}/tyrunt/shinytyrantrum, {{ModId}}/tyrunt/tyruntegg",
+      "FromFile": "assets/livestocks/tyrunt/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tyrunt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tyrunt": {
+          "DisplayName": "{{i18n: tyrunt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tyruntegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tyruntbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrunt/tyrantrum",
+          "BabyTexture": "{{ModId}}/tyrunt/tyrunt",
+          "Sound": "{{ModId}}_tyrantrumcry",
+          "BabySound": "{{ModId}}_tyruntcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tyruntegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytyrunt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytyrunt": {
+          "DisplayName": "{{i18n: shinytyrunt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tyruntegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytyruntbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrunt/shinytyrantrum",
+          "BabyTexture": "{{ModId}}/tyrunt/shinytyrunt",
+          "Sound": "{{ModId}}_tyrantrumcry",
+          "BabySound": "{{ModId}}_tyruntcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tyruntegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "tyrunt cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tyruntcry": {
+          "ID": "{{ModId}}_tyruntcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrunt/tyruntcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_tyrantrumcry": {
+          "ID": "{{ModId}}_tyrantrumcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrunt/tyrantrumcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tyrunt egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tyruntegg": {
+          "Name": "{{ModId}}_tyruntegg",
+          "DisplayName": "{{i18n: tyruntegg}}",
+          "Description": "{{i18n: tyruntegg.d}}",
+          "Texture": "{{ModId}}/tyrunt/tyruntegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tyrunt hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tyruntegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytyrunt",
+              "AnimalId": "{{ModId}}_shinytyrunt",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tyrunt",
+              "AnimalId": "{{ModId}}_tyrunt",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

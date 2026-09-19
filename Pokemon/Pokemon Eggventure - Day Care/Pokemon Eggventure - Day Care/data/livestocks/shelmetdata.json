@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shelmet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shelmet/shelmet, {{ModId}}/shelmet/shinyshelmet, {{ModId}}/shelmet/accelgor, {{ModId}}/shelmet/shinyaccelgor, {{ModId}}/shelmet/shelmetegg",
+      "FromFile": "assets/livestocks/shelmet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shelmet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shelmet": {
+          "DisplayName": "{{i18n: shelmet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shelmetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shelmetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shelmet/accelgor",
+          "BabyTexture": "{{ModId}}/shelmet/shelmet",
+          "Sound": "{{ModId}}_accelgorcry",
+          "BabySound": "{{ModId}}_shelmetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shelmetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshelmet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshelmet": {
+          "DisplayName": "{{i18n: shinyshelmet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shelmetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshelmetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shelmet/shinyaccelgor",
+          "BabyTexture": "{{ModId}}/shelmet/shinyshelmet",
+          "Sound": "{{ModId}}_accelgorcry",
+          "BabySound": "{{ModId}}_shelmetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shelmetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "shelmet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shelmetcry": {
+          "ID": "{{ModId}}_shelmetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shelmet/shelmetcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_accelgorcry": {
+          "ID": "{{ModId}}_accelgorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shelmet/accelgorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shelmet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shelmetegg": {
+          "Name": "{{ModId}}_shelmetegg",
+          "DisplayName": "{{i18n: shelmetegg}}",
+          "Description": "{{i18n: shelmetegg.d}}",
+          "Texture": "{{ModId}}/shelmet/shelmetegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shelmet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shelmetegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshelmet",
+              "AnimalId": "{{ModId}}_shinyshelmet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shelmet",
+              "AnimalId": "{{ModId}}_shelmet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

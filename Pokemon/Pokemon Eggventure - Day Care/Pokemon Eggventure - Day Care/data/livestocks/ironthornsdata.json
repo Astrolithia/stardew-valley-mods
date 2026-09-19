@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ironthorns textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ironthorns/ironthorns, {{ModId}}/ironthorns/shinyironthorns, {{ModId}}/ironthorns/ironthornsegg",
+      "FromFile": "assets/livestocks/ironthorns/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ironthorns data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ironthorns": {
+          "DisplayName": "{{i18n: ironthorns}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ironthornsegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ironthornsbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironthorns/ironthorns",
+          "BabyTexture": "{{ModId}}/ironthorns/ironthorns",
+          "Sound": "{{ModId}}_ironthornscry",
+          "BabySound": "{{ModId}}_ironthornscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironthornsegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyironthorns data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyironthorns": {
+          "DisplayName": "{{i18n: shinyironthorns}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ironthornsegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyironthornsbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironthorns/shinyironthorns",
+          "BabyTexture": "{{ModId}}/ironthorns/shinyironthorns",
+          "Sound": "{{ModId}}_ironthornscry",
+          "BabySound": "{{ModId}}_ironthornscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironthornsegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "ironthorns cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ironthornscry": {
+          "ID": "{{ModId}}_ironthornscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ironthorns/ironthornscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironthorns egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ironthornsegg": {
+          "Name": "{{ModId}}_ironthornsegg",
+          "DisplayName": "{{i18n: ironthornsegg}}",
+          "Description": "{{i18n: ironthornsegg.d}}",
+          "Texture": "{{ModId}}/ironthorns/ironthornsegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_futurs",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironthorns hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ironthornsegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyironthorns",
+              "AnimalId": "{{ModId}}_shinyironthorns",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ironthorns",
+              "AnimalId": "{{ModId}}_ironthorns",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

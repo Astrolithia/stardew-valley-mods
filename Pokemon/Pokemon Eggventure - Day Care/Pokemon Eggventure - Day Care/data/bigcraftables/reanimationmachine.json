@@ -1,0 +1,393 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load reanimation machine texture",
+      "Action": "Load",
+      "Target": "{{ModId}}/bigcraftables/reanimationmachine",
+      "FromFile": "assets/bigcraftables/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Reanimation machine object",
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "{{ModId}}_ReanimationMachine": {
+          "Name": "{{ModId}}_ReanimationMachine",
+          "DisplayName": "{{i18n:ReanimationMachine}}",
+          "Description": "{{i18n:ReanimationMachine_d}}",
+          "Texture": "{{ModId}}/bigcraftables/reanimationmachine",
+          "Price": 100,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "SpriteIndex": 0
+        }
+      }
+    },
+    {
+      "LogName": "Reanimation machine recipe (unlocked by museum mail)",
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_ReanimationMachine": "336 10 337 5 749 20/Home/{{ModId}}_ReanimationMachine/true/l {{ModId}}_ReanimationRecipe/{{i18n:ReanimationMachine}}"
+      }
+    },
+    {
+      "LogName": "Reanimation machine rules",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_ReanimationMachine": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_reanimate_omanyte",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilnautile",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_omanyte_out",
+                  "ItemId": "{{ModId}}_omanyteegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energywater",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energywater}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_kabuto",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossildome",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_kabuto_out",
+                  "ItemId": "{{ModId}}_kabutoegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energywater",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energywater}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_aerodactyl",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_vieilambre",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_aerodactyl_out",
+                  "ItemId": "{{ModId}}_aerodactylegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyflying",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyflying}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_anorith",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilgriffe",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_anorith_out",
+                  "ItemId": "{{ModId}}_anorithegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energybug",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energybug}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_lileep",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilracine",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_lileep_out",
+                  "ItemId": "{{ModId}}_lileepegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energygrass",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energygrass}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_cranidos",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilcrane",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_cranidos_out",
+                  "ItemId": "{{ModId}}_cranidosegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyrock",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyrock}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_shieldon",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilarmure",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_shieldon_out",
+                  "ItemId": "{{ModId}}_shieldonegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energysteel",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energysteel}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_archen",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilplume",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_archen_out",
+                  "ItemId": "{{ModId}}_archenegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyflying",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyflying}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_tirtouga",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilplaque",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_tirtouga_out",
+                  "ItemId": "{{ModId}}_tirtougaegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyrock",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyrock}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_tyrunt",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilmachoire",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_tyrunt_out",
+                  "ItemId": "{{ModId}}_tyruntegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energydragon",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energydragon}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_amaura",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilsceau",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_amaura_out",
+                  "ItemId": "{{ModId}}_amauraegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyice",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyice}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_dracovish",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilvish",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_dracovish_out",
+                  "ItemId": "{{ModId}}_dracovishegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energydragon",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energydragon}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_dracozolt",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilzolt",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_dracozolt_out",
+                  "ItemId": "{{ModId}}_dracozoltegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyelectric",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyelectric}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_arctovish",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilarcto",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_arctovish_out",
+                  "ItemId": "{{ModId}}_arctovishegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energywater",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energywater}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            },
+            {
+              "Id": "{{ModId}}_reanimate_arctozolt",
+              "Triggers": [
+                {
+                  "Id": "Default",
+                  "RequiredItemId": "{{ModId}}_fossilpatch",
+                  "RequiredCount": 1,
+                  "RequiredTags": null
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_reanimate_arctozolt_out",
+                  "ItemId": "{{ModId}}_arctozoltegg",
+                  "CustomData": {
+                    "selph.ExtraMachineConfig.RequirementId.1": "(O){{ModId}}_energyice",
+                    "selph.ExtraMachineConfig.RequirementCount.1": "10",
+                    "selph.ExtraMachineConfig.RequirementInvalidMsg": "{{i18n:reanimation_needs_energyice}}"
+                  }
+                }
+              ],
+              "MinutesUntilReady": 2880
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,900 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gem sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/gems/normal, {{ModId}}/gems/fire, {{ModId}}/gems/water, {{ModId}}/gems/electric, {{ModId}}/gems/grass, {{ModId}}/gems/ice, {{ModId}}/gems/fighting, {{ModId}}/gems/poison, {{ModId}}/gems/ground, {{ModId}}/gems/flying, {{ModId}}/gems/psychic, {{ModId}}/gems/bug, {{ModId}}/gems/rock, {{ModId}}/gems/ghost, {{ModId}}/gems/dragon, {{ModId}}/gems/dark, {{ModId}}/gems/steel, {{ModId}}/gems/fairy",
+      "FromFile": "assets/gems/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add type gems",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gem_normal": {
+          "Name": "{{ModId}}_gem_normal",
+          "DisplayName": "{{i18n: gem_normal}}",
+          "Description": "{{i18n: gem_normal.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/normal",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_normal",
+            "pkgem_type_normal"
+          ]
+        },
+        "{{ModId}}_gem_fire": {
+          "Name": "{{ModId}}_gem_fire",
+          "DisplayName": "{{i18n: gem_fire}}",
+          "Description": "{{i18n: gem_fire.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/fire",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_fire",
+            "pkgem_type_fire"
+          ]
+        },
+        "{{ModId}}_gem_water": {
+          "Name": "{{ModId}}_gem_water",
+          "DisplayName": "{{i18n: gem_water}}",
+          "Description": "{{i18n: gem_water.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/water",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_water",
+            "pkgem_type_water"
+          ]
+        },
+        "{{ModId}}_gem_electric": {
+          "Name": "{{ModId}}_gem_electric",
+          "DisplayName": "{{i18n: gem_electric}}",
+          "Description": "{{i18n: gem_electric.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/electric",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_electric",
+            "pkgem_type_electric"
+          ]
+        },
+        "{{ModId}}_gem_grass": {
+          "Name": "{{ModId}}_gem_grass",
+          "DisplayName": "{{i18n: gem_grass}}",
+          "Description": "{{i18n: gem_grass.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/grass",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_grass",
+            "pkgem_type_grass"
+          ]
+        },
+        "{{ModId}}_gem_ice": {
+          "Name": "{{ModId}}_gem_ice",
+          "DisplayName": "{{i18n: gem_ice}}",
+          "Description": "{{i18n: gem_ice.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/ice",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_ice",
+            "pkgem_type_ice"
+          ]
+        },
+        "{{ModId}}_gem_fighting": {
+          "Name": "{{ModId}}_gem_fighting",
+          "DisplayName": "{{i18n: gem_fighting}}",
+          "Description": "{{i18n: gem_fighting.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/fighting",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_fighting",
+            "pkgem_type_fighting"
+          ]
+        },
+        "{{ModId}}_gem_poison": {
+          "Name": "{{ModId}}_gem_poison",
+          "DisplayName": "{{i18n: gem_poison}}",
+          "Description": "{{i18n: gem_poison.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/poison",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_poison",
+            "pkgem_type_poison"
+          ]
+        },
+        "{{ModId}}_gem_ground": {
+          "Name": "{{ModId}}_gem_ground",
+          "DisplayName": "{{i18n: gem_ground}}",
+          "Description": "{{i18n: gem_ground.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/ground",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_ground",
+            "pkgem_type_ground"
+          ]
+        },
+        "{{ModId}}_gem_flying": {
+          "Name": "{{ModId}}_gem_flying",
+          "DisplayName": "{{i18n: gem_flying}}",
+          "Description": "{{i18n: gem_flying.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/flying",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_flying",
+            "pkgem_type_flying"
+          ]
+        },
+        "{{ModId}}_gem_psychic": {
+          "Name": "{{ModId}}_gem_psychic",
+          "DisplayName": "{{i18n: gem_psychic}}",
+          "Description": "{{i18n: gem_psychic.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/psychic",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_psychic",
+            "pkgem_type_psychic"
+          ]
+        },
+        "{{ModId}}_gem_bug": {
+          "Name": "{{ModId}}_gem_bug",
+          "DisplayName": "{{i18n: gem_bug}}",
+          "Description": "{{i18n: gem_bug.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/bug",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_bug",
+            "pkgem_type_bug"
+          ]
+        },
+        "{{ModId}}_gem_rock": {
+          "Name": "{{ModId}}_gem_rock",
+          "DisplayName": "{{i18n: gem_rock}}",
+          "Description": "{{i18n: gem_rock.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/rock",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_rock",
+            "pkgem_type_rock"
+          ]
+        },
+        "{{ModId}}_gem_ghost": {
+          "Name": "{{ModId}}_gem_ghost",
+          "DisplayName": "{{i18n: gem_ghost}}",
+          "Description": "{{i18n: gem_ghost.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/ghost",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_ghost",
+            "pkgem_type_ghost"
+          ]
+        },
+        "{{ModId}}_gem_dragon": {
+          "Name": "{{ModId}}_gem_dragon",
+          "DisplayName": "{{i18n: gem_dragon}}",
+          "Description": "{{i18n: gem_dragon.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/dragon",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_dragon",
+            "pkgem_type_dragon"
+          ]
+        },
+        "{{ModId}}_gem_dark": {
+          "Name": "{{ModId}}_gem_dark",
+          "DisplayName": "{{i18n: gem_dark}}",
+          "Description": "{{i18n: gem_dark.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/dark",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_dark",
+            "pkgem_type_dark"
+          ]
+        },
+        "{{ModId}}_gem_steel": {
+          "Name": "{{ModId}}_gem_steel",
+          "DisplayName": "{{i18n: gem_steel}}",
+          "Description": "{{i18n: gem_steel.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/steel",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_steel",
+            "pkgem_type_steel"
+          ]
+        },
+        "{{ModId}}_gem_fairy": {
+          "Name": "{{ModId}}_gem_fairy",
+          "DisplayName": "{{i18n: gem_fairy}}",
+          "Description": "{{i18n: gem_fairy.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/gems/fairy",
+          "Price": 120,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkgem_item",
+            "pkgem_fairy",
+            "pkgem_type_fairy"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Gems in Géode",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "535",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_535_gem_normal": {
+          "Id": "{{ModId}}_535_gem_normal",
+          "ItemId": "{{ModId}}_gem_normal",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_535_gem_rock": {
+          "Id": "{{ModId}}_535_gem_rock",
+          "ItemId": "{{ModId}}_gem_rock",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_535_gem_ground": {
+          "Id": "{{ModId}}_535_gem_ground",
+          "ItemId": "{{ModId}}_gem_ground",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_535_gem_fighting": {
+          "Id": "{{ModId}}_535_gem_fighting",
+          "ItemId": "{{ModId}}_gem_fighting",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_535_gem_bug": {
+          "Id": "{{ModId}}_535_gem_bug",
+          "ItemId": "{{ModId}}_gem_bug",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_535_gem_grass": {
+          "Id": "{{ModId}}_535_gem_grass",
+          "ItemId": "{{ModId}}_gem_grass",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Gems in Géode Gelée",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "536",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_536_gem_ice": {
+          "Id": "{{ModId}}_536_gem_ice",
+          "ItemId": "{{ModId}}_gem_ice",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_gem_water": {
+          "Id": "{{ModId}}_536_gem_water",
+          "ItemId": "{{ModId}}_gem_water",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_gem_flying": {
+          "Id": "{{ModId}}_536_gem_flying",
+          "ItemId": "{{ModId}}_gem_flying",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_gem_psychic": {
+          "Id": "{{ModId}}_536_gem_psychic",
+          "ItemId": "{{ModId}}_gem_psychic",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_gem_fairy": {
+          "Id": "{{ModId}}_536_gem_fairy",
+          "ItemId": "{{ModId}}_gem_fairy",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_gem_steel": {
+          "Id": "{{ModId}}_536_gem_steel",
+          "ItemId": "{{ModId}}_gem_steel",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Gems in Géode de Magma",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "537",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_537_gem_fire": {
+          "Id": "{{ModId}}_537_gem_fire",
+          "ItemId": "{{ModId}}_gem_fire",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_gem_dragon": {
+          "Id": "{{ModId}}_537_gem_dragon",
+          "ItemId": "{{ModId}}_gem_dragon",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_gem_dark": {
+          "Id": "{{ModId}}_537_gem_dark",
+          "ItemId": "{{ModId}}_gem_dark",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_gem_poison": {
+          "Id": "{{ModId}}_537_gem_poison",
+          "ItemId": "{{ModId}}_gem_poison",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_gem_electric": {
+          "Id": "{{ModId}}_537_gem_electric",
+          "ItemId": "{{ModId}}_gem_electric",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_gem_ghost": {
+          "Id": "{{ModId}}_537_gem_ghost",
+          "ItemId": "{{ModId}}_gem_ghost",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Gems in Géode Omni",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "749",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_749_gem_normal": {
+          "Id": "{{ModId}}_749_gem_normal",
+          "ItemId": "{{ModId}}_gem_normal",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_fire": {
+          "Id": "{{ModId}}_749_gem_fire",
+          "ItemId": "{{ModId}}_gem_fire",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_water": {
+          "Id": "{{ModId}}_749_gem_water",
+          "ItemId": "{{ModId}}_gem_water",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_electric": {
+          "Id": "{{ModId}}_749_gem_electric",
+          "ItemId": "{{ModId}}_gem_electric",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_grass": {
+          "Id": "{{ModId}}_749_gem_grass",
+          "ItemId": "{{ModId}}_gem_grass",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_ice": {
+          "Id": "{{ModId}}_749_gem_ice",
+          "ItemId": "{{ModId}}_gem_ice",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_fighting": {
+          "Id": "{{ModId}}_749_gem_fighting",
+          "ItemId": "{{ModId}}_gem_fighting",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_poison": {
+          "Id": "{{ModId}}_749_gem_poison",
+          "ItemId": "{{ModId}}_gem_poison",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_ground": {
+          "Id": "{{ModId}}_749_gem_ground",
+          "ItemId": "{{ModId}}_gem_ground",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_flying": {
+          "Id": "{{ModId}}_749_gem_flying",
+          "ItemId": "{{ModId}}_gem_flying",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_psychic": {
+          "Id": "{{ModId}}_749_gem_psychic",
+          "ItemId": "{{ModId}}_gem_psychic",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_bug": {
+          "Id": "{{ModId}}_749_gem_bug",
+          "ItemId": "{{ModId}}_gem_bug",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_rock": {
+          "Id": "{{ModId}}_749_gem_rock",
+          "ItemId": "{{ModId}}_gem_rock",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_ghost": {
+          "Id": "{{ModId}}_749_gem_ghost",
+          "ItemId": "{{ModId}}_gem_ghost",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_dragon": {
+          "Id": "{{ModId}}_749_gem_dragon",
+          "ItemId": "{{ModId}}_gem_dragon",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_dark": {
+          "Id": "{{ModId}}_749_gem_dark",
+          "ItemId": "{{ModId}}_gem_dark",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_steel": {
+          "Id": "{{ModId}}_749_gem_steel",
+          "ItemId": "{{ModId}}_gem_steel",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_gem_fairy": {
+          "Id": "{{ModId}}_749_gem_fairy",
+          "ItemId": "{{ModId}}_gem_fairy",
+          "Chance": "{{RateGems}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Crystalarium duplicates type gems",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)21",
+        "OutputRules"
+      ],
+      "Entries": {
+        "{{ModId}}_crystal_normal": {
+          "Id": "{{ModId}}_crystal_normal",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_normal_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_normal",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_normal_out",
+              "ItemId": "{{ModId}}_gem_normal",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_fire": {
+          "Id": "{{ModId}}_crystal_fire",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_fire_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_fire",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_fire_out",
+              "ItemId": "{{ModId}}_gem_fire",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_water": {
+          "Id": "{{ModId}}_crystal_water",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_water_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_water",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_water_out",
+              "ItemId": "{{ModId}}_gem_water",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_electric": {
+          "Id": "{{ModId}}_crystal_electric",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_electric_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_electric",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_electric_out",
+              "ItemId": "{{ModId}}_gem_electric",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_grass": {
+          "Id": "{{ModId}}_crystal_grass",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_grass_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_grass",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_grass_out",
+              "ItemId": "{{ModId}}_gem_grass",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_ice": {
+          "Id": "{{ModId}}_crystal_ice",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_ice_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_ice",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_ice_out",
+              "ItemId": "{{ModId}}_gem_ice",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_fighting": {
+          "Id": "{{ModId}}_crystal_fighting",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_fighting_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_fighting",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_fighting_out",
+              "ItemId": "{{ModId}}_gem_fighting",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_poison": {
+          "Id": "{{ModId}}_crystal_poison",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_poison_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_poison",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_poison_out",
+              "ItemId": "{{ModId}}_gem_poison",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_ground": {
+          "Id": "{{ModId}}_crystal_ground",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_ground_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_ground",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_ground_out",
+              "ItemId": "{{ModId}}_gem_ground",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_flying": {
+          "Id": "{{ModId}}_crystal_flying",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_flying_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_flying",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_flying_out",
+              "ItemId": "{{ModId}}_gem_flying",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_psychic": {
+          "Id": "{{ModId}}_crystal_psychic",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_psychic_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_psychic",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_psychic_out",
+              "ItemId": "{{ModId}}_gem_psychic",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_bug": {
+          "Id": "{{ModId}}_crystal_bug",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_bug_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_bug",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_bug_out",
+              "ItemId": "{{ModId}}_gem_bug",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_rock": {
+          "Id": "{{ModId}}_crystal_rock",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_rock_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_rock",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_rock_out",
+              "ItemId": "{{ModId}}_gem_rock",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_ghost": {
+          "Id": "{{ModId}}_crystal_ghost",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_ghost_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_ghost",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_ghost_out",
+              "ItemId": "{{ModId}}_gem_ghost",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_dragon": {
+          "Id": "{{ModId}}_crystal_dragon",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_dragon_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_dragon",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_dragon_out",
+              "ItemId": "{{ModId}}_gem_dragon",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_dark": {
+          "Id": "{{ModId}}_crystal_dark",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_dark_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_dark",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_dark_out",
+              "ItemId": "{{ModId}}_gem_dark",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_steel": {
+          "Id": "{{ModId}}_crystal_steel",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_steel_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_steel",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_steel_out",
+              "ItemId": "{{ModId}}_gem_steel",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        },
+        "{{ModId}}_crystal_fairy": {
+          "Id": "{{ModId}}_crystal_fairy",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_crystal_fairy_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredItemId": "{{ModId}}_gem_fairy",
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_crystal_fairy_out",
+              "ItemId": "{{ModId}}_gem_fairy",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": "{{GemCrystalariumMinutes}}"
+        }
+      }
+    }
+  ]
+}

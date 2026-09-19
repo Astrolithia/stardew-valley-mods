@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mudkip textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mudkip/mudkip, {{ModId}}/mudkip/shinymudkip, {{ModId}}/mudkip/marshtomp, {{ModId}}/mudkip/shinymarshtomp, {{ModId}}/mudkip/swampert, {{ModId}}/mudkip/shinyswampert, {{ModId}}/mudkip/mudkipegg",
+      "FromFile": "assets/livestocks/mudkip/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mudkip data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mudkip": {
+          "DisplayName": "{{i18n: mudkip}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mudkipegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mudkipbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mudkip/marshtomp",
+          "BabyTexture": "{{ModId}}/mudkip/mudkip",
+          "Sound": "{{ModId}}_swampertcry",
+          "BabySound": "{{ModId}}_mudkipcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mudkipegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mudkip evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mudkip",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "mudkipevolution": {
+          "Id": "mudkipevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mudkip/swampert"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mudkip type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mudkip"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymudkip data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymudkip": {
+          "DisplayName": "{{i18n: shinymudkip}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mudkipegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymudkipbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mudkip/shinymarshtomp",
+          "BabyTexture": "{{ModId}}/mudkip/shinymudkip",
+          "Sound": "{{ModId}}_swampertcry",
+          "BabySound": "{{ModId}}_mudkipcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mudkipegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymudkip evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymudkip",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymudkipevolution": {
+          "Id": "shinymudkipevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mudkip/shinyswampert"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymudkip type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymudkip"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "mudkip cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mudkipcry": {
+          "ID": "{{ModId}}_mudkipcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mudkip/mudkipcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_swampertcry": {
+          "ID": "{{ModId}}_swampertcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mudkip/swampertcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mudkip egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mudkipegg": {
+          "Name": "{{ModId}}_mudkipegg",
+          "DisplayName": "{{i18n: mudkipegg}}",
+          "Description": "{{i18n: mudkipegg.d}}",
+          "Texture": "{{ModId}}/mudkip/mudkipegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "pkegg_panning_p5",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mudkip hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mudkipegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymudkip",
+              "AnimalId": "{{ModId}}_shinymudkip",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mudkip",
+              "AnimalId": "{{ModId}}_mudkip",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

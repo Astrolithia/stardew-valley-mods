@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load capsakid textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/capsakid/capsakid, {{ModId}}/capsakid/shinycapsakid, {{ModId}}/capsakid/scovillain, {{ModId}}/capsakid/shinyscovillain, {{ModId}}/capsakid/capsakidegg",
+      "FromFile": "assets/livestocks/capsakid/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_capsakid data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_capsakid": {
+          "DisplayName": "{{i18n: capsakid}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_capsakidegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: capsakidbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/capsakid/scovillain",
+          "BabyTexture": "{{ModId}}/capsakid/capsakid",
+          "Sound": "{{ModId}}_scovillaincry",
+          "BabySound": "{{ModId}}_capsakidcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_capsakidegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_capsakid type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_capsakid"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycapsakid data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycapsakid": {
+          "DisplayName": "{{i18n: shinycapsakid}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_capsakidegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycapsakidbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/capsakid/shinyscovillain",
+          "BabyTexture": "{{ModId}}/capsakid/shinycapsakid",
+          "Sound": "{{ModId}}_scovillaincry",
+          "BabySound": "{{ModId}}_capsakidcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_capsakidegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycapsakid type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycapsakid"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "capsakid cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_capsakidcry": {
+          "ID": "{{ModId}}_capsakidcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/capsakid/capsakidcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_scovillaincry": {
+          "ID": "{{ModId}}_scovillaincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/capsakid/scovillaincry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "capsakid egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_capsakidegg": {
+          "Name": "{{ModId}}_capsakidegg",
+          "DisplayName": "{{i18n: capsakidegg}}",
+          "Description": "{{i18n: capsakidegg.d}}",
+          "Texture": "{{ModId}}/capsakid/capsakidegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "pkegg_shake_palmdesert",
+            "pkegg_chop_palmdesert",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "capsakid hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_capsakidegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycapsakid",
+              "AnimalId": "{{ModId}}_shinycapsakid",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_capsakid",
+              "AnimalId": "{{ModId}}_capsakid",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ceruledge textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/charcadet/charcadet_ceruledge, {{ModId}}/charcadet/shinycharcadet_ceruledge, {{ModId}}/charcadet/ceruledge, {{ModId}}/charcadet/shinyceruledge, {{ModId}}/charcadet/ceruledgeegg",
+      "FromFile": "assets/livestocks/charcadet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ceruledge data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ceruledge": {
+          "DisplayName": "{{i18n: ceruledge}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ceruledgeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ceruledgebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/charcadet/ceruledge",
+          "BabyTexture": "{{ModId}}/charcadet/charcadet_ceruledge",
+          "Sound": "{{ModId}}_ceruledgecry",
+          "BabySound": "{{ModId}}_charcadetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ceruledgeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_ceruledge type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ceruledge"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyceruledge data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyceruledge": {
+          "DisplayName": "{{i18n: shinyceruledge}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ceruledgeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyceruledgebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/charcadet/shinyceruledge",
+          "BabyTexture": "{{ModId}}/charcadet/shinycharcadet_ceruledge",
+          "Sound": "{{ModId}}_ceruledgecry",
+          "BabySound": "{{ModId}}_charcadetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ceruledgeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyceruledge type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyceruledge"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "ceruledge cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_charcadetcry": {
+          "ID": "{{ModId}}_charcadetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/charcadet/charcadetcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ceruledgecry": {
+          "ID": "{{ModId}}_ceruledgecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/charcadet/ceruledgecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ceruledge egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ceruledgeegg": {
+          "Name": "{{ModId}}_ceruledgeegg",
+          "DisplayName": "{{i18n: ceruledgeegg}}",
+          "Description": "{{i18n: ceruledgeegg.d}}",
+          "Texture": "{{ModId}}/charcadet/ceruledgeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ceruledge hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ceruledgeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyceruledge",
+              "AnimalId": "{{ModId}}_shinyceruledge",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ceruledge",
+              "AnimalId": "{{ModId}}_ceruledge",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

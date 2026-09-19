@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shellder textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shellder/shellder, {{ModId}}/shellder/shinyshellder, {{ModId}}/shellder/cloyster, {{ModId}}/shellder/shinycloyster, {{ModId}}/shellder/shellderegg",
+      "FromFile": "assets/livestocks/shellder/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shellder data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shellder": {
+          "DisplayName": "{{i18n: shellder}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_shellderegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shellderbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shellder/cloyster",
+          "BabyTexture": "{{ModId}}/shellder/shellder",
+          "Sound": "{{ModId}}_cloystercry",
+          "BabySound": "{{ModId}}_shelldercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shellderegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shellder type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shellder"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshellder data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshellder": {
+          "DisplayName": "{{i18n: shinyshellder}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_shellderegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshellderbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shellder/shinycloyster",
+          "BabyTexture": "{{ModId}}/shellder/shinyshellder",
+          "Sound": "{{ModId}}_cloystercry",
+          "BabySound": "{{ModId}}_shelldercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shellderegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyshellder type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyshellder"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "shellder cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shelldercry": {
+          "ID": "{{ModId}}_shelldercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shellder/shelldercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cloystercry": {
+          "ID": "{{ModId}}_cloystercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shellder/cloystercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shellder egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shellderegg": {
+          "Name": "{{ModId}}_shellderegg",
+          "DisplayName": "{{i18n: shellderegg}}",
+          "Description": "{{i18n: shellderegg.d}}",
+          "Texture": "{{ModId}}/shellder/shellderegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shellder hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shellderegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshellder",
+              "AnimalId": "{{ModId}}_shinyshellder",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shellder",
+              "AnimalId": "{{ModId}}_shellder",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

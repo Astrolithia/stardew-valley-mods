@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sewaddle textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sewaddle/sewaddle, {{ModId}}/sewaddle/shinysewaddle, {{ModId}}/sewaddle/swadloon, {{ModId}}/sewaddle/shinyswadloon, {{ModId}}/sewaddle/leavanny, {{ModId}}/sewaddle/shinyleavanny, {{ModId}}/sewaddle/sewaddleegg",
+      "FromFile": "assets/livestocks/sewaddle/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sewaddle data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sewaddle": {
+          "DisplayName": "{{i18n: sewaddle}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sewaddleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sewaddlebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sewaddle/swadloon",
+          "BabyTexture": "{{ModId}}/sewaddle/sewaddle",
+          "Sound": "{{ModId}}_leavannycry",
+          "BabySound": "{{ModId}}_sewaddlecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sewaddleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_sewaddle evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_sewaddle",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "sewaddleevolution": {
+          "Id": "sewaddleevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/sewaddle/leavanny"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysewaddle data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysewaddle": {
+          "DisplayName": "{{i18n: shinysewaddle}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sewaddleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysewaddlebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sewaddle/shinyswadloon",
+          "BabyTexture": "{{ModId}}/sewaddle/shinysewaddle",
+          "Sound": "{{ModId}}_leavannycry",
+          "BabySound": "{{ModId}}_sewaddlecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sewaddleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysewaddle evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysewaddle",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysewaddleevolution": {
+          "Id": "shinysewaddleevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/sewaddle/shinyleavanny"
+        }
+      }
+    },
+    {
+      "LogName": "sewaddle cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sewaddlecry": {
+          "ID": "{{ModId}}_sewaddlecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sewaddle/sewaddlecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_leavannycry": {
+          "ID": "{{ModId}}_leavannycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sewaddle/leavannycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sewaddle egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sewaddleegg": {
+          "Name": "{{ModId}}_sewaddleegg",
+          "DisplayName": "{{i18n: sewaddleegg}}",
+          "Description": "{{i18n: sewaddleegg.d}}",
+          "Texture": "{{ModId}}/sewaddle/sewaddleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sewaddle hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sewaddleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysewaddle",
+              "AnimalId": "{{ModId}}_shinysewaddle",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sewaddle",
+              "AnimalId": "{{ModId}}_sewaddle",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

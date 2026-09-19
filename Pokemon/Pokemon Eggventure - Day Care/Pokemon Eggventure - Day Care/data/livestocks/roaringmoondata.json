@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load roaringmoon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/roaringmoon/roaringmoon, {{ModId}}/roaringmoon/shinyroaringmoon, {{ModId}}/roaringmoon/roaringmoonegg",
+      "FromFile": "assets/livestocks/roaringmoon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_roaringmoon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_roaringmoon": {
+          "DisplayName": "{{i18n: roaringmoon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_roaringmoonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: roaringmoonbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/roaringmoon/roaringmoon",
+          "BabyTexture": "{{ModId}}/roaringmoon/roaringmoon",
+          "Sound": "{{ModId}}_roaringmooncry",
+          "BabySound": "{{ModId}}_roaringmooncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_roaringmoonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyroaringmoon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyroaringmoon": {
+          "DisplayName": "{{i18n: shinyroaringmoon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_roaringmoonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyroaringmoonbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/roaringmoon/shinyroaringmoon",
+          "BabyTexture": "{{ModId}}/roaringmoon/shinyroaringmoon",
+          "Sound": "{{ModId}}_roaringmooncry",
+          "BabySound": "{{ModId}}_roaringmooncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_roaringmoonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "roaringmoon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_roaringmooncry": {
+          "ID": "{{ModId}}_roaringmooncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/roaringmoon/roaringmooncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "roaringmoon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_roaringmoonegg": {
+          "Name": "{{ModId}}_roaringmoonegg",
+          "DisplayName": "{{i18n: roaringmoonegg}}",
+          "Description": "{{i18n: roaringmoonegg.d}}",
+          "Texture": "{{ModId}}/roaringmoon/roaringmoonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "roaringmoon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_roaringmoonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyroaringmoon",
+              "AnimalId": "{{ModId}}_shinyroaringmoon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_roaringmoon",
+              "AnimalId": "{{ModId}}_roaringmoon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

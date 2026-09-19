@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gallade textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ralts/ralts_gallade, {{ModId}}/ralts/shinyralts_gallade, {{ModId}}/ralts/kirlia_gallade, {{ModId}}/ralts/shinykirlia_gallade, {{ModId}}/ralts/gallade, {{ModId}}/ralts/shinygallade, {{ModId}}/ralts/galladeegg",
+      "FromFile": "assets/livestocks/ralts/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gallade data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gallade": {
+          "DisplayName": "{{i18n: gallade}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galladeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galladebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ralts/kirlia_gallade",
+          "BabyTexture": "{{ModId}}/ralts/ralts_gallade",
+          "Sound": "{{ModId}}_galladecry",
+          "BabySound": "{{ModId}}_raltscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galladeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_gallade evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_gallade",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "galladeevolution": {
+          "Id": "galladeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/ralts/gallade"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygallade data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygallade": {
+          "DisplayName": "{{i18n: shinygallade}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galladeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalladebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ralts/shinykirlia_gallade",
+          "BabyTexture": "{{ModId}}/ralts/shinyralts_gallade",
+          "Sound": "{{ModId}}_galladecry",
+          "BabySound": "{{ModId}}_raltscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galladeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygallade evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygallade",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygalladeevolution": {
+          "Id": "shinygalladeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/ralts/shinygallade"
+        }
+      }
+    },
+    {
+      "LogName": "gallade cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_raltscry": {
+          "ID": "{{ModId}}_raltscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ralts/raltscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_galladecry": {
+          "ID": "{{ModId}}_galladecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ralts/galladecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gallade egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galladeegg": {
+          "Name": "{{ModId}}_galladeegg",
+          "DisplayName": "{{i18n: galladeegg}}",
+          "Description": "{{i18n: galladeegg.d}}",
+          "Texture": "{{ModId}}/ralts/galladeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gallade hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galladeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygallade",
+              "AnimalId": "{{ModId}}_shinygallade",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gallade",
+              "AnimalId": "{{ModId}}_gallade",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

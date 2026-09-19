@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load nincadaninjask textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/nincada/nincada_nincadaninjask, {{ModId}}/nincada/shinynincada_nincadaninjask, {{ModId}}/nincada/ninjask, {{ModId}}/nincada/shinyninjask, {{ModId}}/nincada/nincadaninjaskegg",
+      "FromFile": "assets/livestocks/nincada/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_nincadaninjask data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_nincadaninjask": {
+          "DisplayName": "{{i18n: nincadaninjask}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_nincadaninjaskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: nincadaninjaskbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nincada/ninjask",
+          "BabyTexture": "{{ModId}}/nincada/nincada_nincadaninjask",
+          "Sound": "{{ModId}}_ninjaskcry",
+          "BabySound": "{{ModId}}_nincadacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nincadaninjaskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinynincadaninjask data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinynincadaninjask": {
+          "DisplayName": "{{i18n: shinynincadaninjask}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_nincadaninjaskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinynincadaninjaskbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nincada/shinyninjask",
+          "BabyTexture": "{{ModId}}/nincada/shinynincada_nincadaninjask",
+          "Sound": "{{ModId}}_ninjaskcry",
+          "BabySound": "{{ModId}}_nincadacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nincadaninjaskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "nincadaninjask cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_nincadacry": {
+          "ID": "{{ModId}}_nincadacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nincada/nincadacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ninjaskcry": {
+          "ID": "{{ModId}}_ninjaskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nincada/ninjaskcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nincadaninjask egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_nincadaninjaskegg": {
+          "Name": "{{ModId}}_nincadaninjaskegg",
+          "DisplayName": "{{i18n: nincadaninjaskegg}}",
+          "Description": "{{i18n: nincadaninjaskegg.d}}",
+          "Texture": "{{ModId}}/nincada/nincadaninjaskegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nincadaninjask hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_nincadaninjaskegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinynincadaninjask",
+              "AnimalId": "{{ModId}}_shinynincadaninjask",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_nincadaninjask",
+              "AnimalId": "{{ModId}}_nincadaninjask",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load regidrago textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/regidrago/regidrago, {{ModId}}/regidrago/shinyregidrago, {{ModId}}/regidrago/regidragoegg",
+      "FromFile": "assets/livestocks/regidrago/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_regidrago data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_regidrago": {
+          "DisplayName": "{{i18n: regidrago}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_regidragoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: regidragobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/regidrago/regidrago",
+          "BabyTexture": "{{ModId}}/regidrago/regidrago",
+          "Sound": "{{ModId}}_regidragocry",
+          "BabySound": "{{ModId}}_regidragocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_regidragoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyregidrago data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyregidrago": {
+          "DisplayName": "{{i18n: shinyregidrago}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_regidragoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyregidragobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/regidrago/shinyregidrago",
+          "BabyTexture": "{{ModId}}/regidrago/shinyregidrago",
+          "Sound": "{{ModId}}_regidragocry",
+          "BabySound": "{{ModId}}_regidragocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_regidragoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "regidrago cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_regidragocry": {
+          "ID": "{{ModId}}_regidragocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/regidrago/regidragocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "regidrago egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_regidragoegg": {
+          "Name": "{{ModId}}_regidragoegg",
+          "DisplayName": "{{i18n: regidragoegg}}",
+          "Description": "{{i18n: regidragoegg.d}}",
+          "Texture": "{{ModId}}/regidrago/regidragoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "regidrago hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_regidragoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyregidrago",
+              "AnimalId": "{{ModId}}_shinyregidrago",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_regidrago",
+              "AnimalId": "{{ModId}}_regidrago",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

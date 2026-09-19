@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarmeowth textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/meowth/galarmeowth, {{ModId}}/meowth/shinygalarmeowth, {{ModId}}/meowth/perrserker, {{ModId}}/meowth/shinyperrserker, {{ModId}}/meowth/galarmeowthegg",
+      "FromFile": "assets/livestocks/meowth/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarmeowth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarmeowth": {
+          "DisplayName": "{{i18n: galarmeowth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarmeowthegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarmeowthbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meowth/perrserker",
+          "BabyTexture": "{{ModId}}/meowth/galarmeowth",
+          "Sound": "{{ModId}}_perrserkercry",
+          "BabySound": "{{ModId}}_meowthcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarmeowthegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarmeowth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarmeowth": {
+          "DisplayName": "{{i18n: shinygalarmeowth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarmeowthegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarmeowthbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meowth/shinyperrserker",
+          "BabyTexture": "{{ModId}}/meowth/shinygalarmeowth",
+          "Sound": "{{ModId}}_perrserkercry",
+          "BabySound": "{{ModId}}_meowthcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarmeowthegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarmeowth cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_meowthcry": {
+          "ID": "{{ModId}}_meowthcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meowth/meowthcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_perrserkercry": {
+          "ID": "{{ModId}}_perrserkercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meowth/perrserkercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarmeowth egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarmeowthegg": {
+          "Name": "{{ModId}}_galarmeowthegg",
+          "DisplayName": "{{i18n: galarmeowthegg}}",
+          "Description": "{{i18n: galarmeowthegg.d}}",
+          "Texture": "{{ModId}}/meowth/galarmeowthegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_verycommon",
+            "pkegg_quarry_p4",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarmeowth hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarmeowthegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarmeowth",
+              "AnimalId": "{{ModId}}_shinygalarmeowth",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarmeowth",
+              "AnimalId": "{{ModId}}_galarmeowth",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

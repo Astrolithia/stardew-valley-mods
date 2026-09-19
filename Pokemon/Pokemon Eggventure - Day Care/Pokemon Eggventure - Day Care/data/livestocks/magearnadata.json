@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load magearna textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/magearna/magearna, {{ModId}}/magearna/shinymagearna, {{ModId}}/magearna/magearnaegg",
+      "FromFile": "assets/livestocks/magearna/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_magearna data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_magearna": {
+          "DisplayName": "{{i18n: magearna}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_magearnaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: magearnabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/magearna/magearna",
+          "BabyTexture": "{{ModId}}/magearna/magearna",
+          "Sound": "{{ModId}}_magearnacry",
+          "BabySound": "{{ModId}}_magearnacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_magearnaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymagearna data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymagearna": {
+          "DisplayName": "{{i18n: shinymagearna}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_magearnaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymagearnabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/magearna/shinymagearna",
+          "BabyTexture": "{{ModId}}/magearna/shinymagearna",
+          "Sound": "{{ModId}}_magearnacry",
+          "BabySound": "{{ModId}}_magearnacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_magearnaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "magearna cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_magearnacry": {
+          "ID": "{{ModId}}_magearnacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/magearna/magearnacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "magearna egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_magearnaegg": {
+          "Name": "{{ModId}}_magearnaegg",
+          "DisplayName": "{{i18n: magearnaegg}}",
+          "Description": "{{i18n: magearnaegg.d}}",
+          "Texture": "{{ModId}}/magearna/magearnaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "magearna hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_magearnaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymagearna",
+              "AnimalId": "{{ModId}}_shinymagearna",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_magearna",
+              "AnimalId": "{{ModId}}_magearna",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

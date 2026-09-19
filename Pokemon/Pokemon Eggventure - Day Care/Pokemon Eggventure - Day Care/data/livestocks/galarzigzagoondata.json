@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarzigzagoon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zigzagoon/galarzigzagoon, {{ModId}}/zigzagoon/shinygalarzigzagoon, {{ModId}}/zigzagoon/galarlinoone, {{ModId}}/zigzagoon/shinygalarlinoone, {{ModId}}/zigzagoon/galarzigzagoonegg",
+      "FromFile": "assets/livestocks/zigzagoon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarzigzagoon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarzigzagoon": {
+          "DisplayName": "{{i18n: galarzigzagoon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarzigzagoonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarzigzagoonbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zigzagoon/galarlinoone",
+          "BabyTexture": "{{ModId}}/zigzagoon/galarzigzagoon",
+          "Sound": "{{ModId}}_galarlinoonecry",
+          "BabySound": "{{ModId}}_galarzigzagooncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarzigzagoonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarzigzagoon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarzigzagoon": {
+          "DisplayName": "{{i18n: shinygalarzigzagoon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarzigzagoonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarzigzagoonbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zigzagoon/shinygalarlinoone",
+          "BabyTexture": "{{ModId}}/zigzagoon/shinygalarzigzagoon",
+          "Sound": "{{ModId}}_galarlinoonecry",
+          "BabySound": "{{ModId}}_galarzigzagooncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarzigzagoonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarzigzagoon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarzigzagooncry": {
+          "ID": "{{ModId}}_galarzigzagooncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zigzagoon/galarzigzagooncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_galarlinoonecry": {
+          "ID": "{{ModId}}_galarlinoonecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zigzagoon/galarlinoonecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarzigzagoon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarzigzagoonegg": {
+          "Name": "{{ModId}}_galarzigzagoonegg",
+          "DisplayName": "{{i18n: galarzigzagoonegg}}",
+          "Description": "{{i18n: galarzigzagoonegg.d}}",
+          "Texture": "{{ModId}}/zigzagoon/galarzigzagoonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_verycommon",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarzigzagoon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarzigzagoonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarzigzagoon",
+              "AnimalId": "{{ModId}}_shinygalarzigzagoon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarzigzagoon",
+              "AnimalId": "{{ModId}}_galarzigzagoon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_galarzigzagoon evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_galarzigzagoon",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "galarzigzagoonevolution": {
+          "Id": "galarzigzagoonevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/zigzagoon/obstagoon"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygalarzigzagoon evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygalarzigzagoon",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygalarzigzagoonevolution": {
+          "Id": "shinygalarzigzagoonevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/zigzagoon/shinyobstagoon"
+        }
+      }
+    }
+  ]
+}

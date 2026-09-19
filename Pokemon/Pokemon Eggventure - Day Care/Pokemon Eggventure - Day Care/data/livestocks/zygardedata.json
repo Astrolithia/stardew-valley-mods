@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zygarde textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zygarde/zygarde, {{ModId}}/zygarde/shinyzygarde, {{ModId}}/zygarde/zygarde2, {{ModId}}/zygarde/zygardeegg",
+      "FromFile": "assets/livestocks/zygarde/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zygarde data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zygarde": {
+          "DisplayName": "{{i18n: zygarde}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_zygardeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zygardebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zygarde/zygarde",
+          "BabyTexture": "{{ModId}}/zygarde/zygarde",
+          "Sound": "{{ModId}}_zygardecry",
+          "BabySound": "{{ModId}}_zygardecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zygardeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zygarde2",
+              "Texture": "{{ModId}}/zygarde/zygarde2",
+              "BabyTexture": "{{ModId}}/zygarde/zygarde2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzygarde data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzygarde": {
+          "DisplayName": "{{i18n: shinyzygarde}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_zygardeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzygardebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zygarde/shinyzygarde",
+          "BabyTexture": "{{ModId}}/zygarde/shinyzygarde",
+          "Sound": "{{ModId}}_zygardecry",
+          "BabySound": "{{ModId}}_zygardecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zygardeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zygarde2",
+              "Texture": "{{ModId}}/zygarde/zygarde2",
+              "BabyTexture": "{{ModId}}/zygarde/zygarde2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zygarde cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zygardecry": {
+          "ID": "{{ModId}}_zygardecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zygarde/zygardecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zygarde egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zygardeegg": {
+          "Name": "{{ModId}}_zygardeegg",
+          "DisplayName": "{{i18n: zygardeegg}}",
+          "Description": "{{i18n: zygardeegg.d}}",
+          "Texture": "{{ModId}}/zygarde/zygardeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zygarde hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zygardeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzygarde",
+              "AnimalId": "{{ModId}}_shinyzygarde",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zygarde",
+              "AnimalId": "{{ModId}}_zygarde",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

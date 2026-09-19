@@ -1,0 +1,27 @@
+{
+  "Changes": [
+    {
+      "LogName": "Pokemon Eggventure letters",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_marniemail": "{{i18n:mail_marnie_text}}[letterbg 0][#]{{i18n:mail_marnie_title}}"
+      }
+    },
+    {
+      "LogName": "When each letter arrives",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_marniemail_trigger": {
+          "Id": "{{ModId}}_marniemail_trigger",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_marniemail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, DAYS_PLAYED 4",
+          "Actions": [
+            "AddMail Current {{ModId}}_marniemail Now"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load kleavor textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/scyther/scyther_kleavor, {{ModId}}/scyther/shinyscyther_kleavor, {{ModId}}/scyther/kleavor, {{ModId}}/scyther/shinykleavor, {{ModId}}/scyther/kleavoregg",
+      "FromFile": "assets/livestocks/scyther/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_kleavor data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_kleavor": {
+          "DisplayName": "{{i18n: kleavor}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kleavoregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: kleavorbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scyther/kleavor",
+          "BabyTexture": "{{ModId}}/scyther/scyther_kleavor",
+          "Sound": "{{ModId}}_kleavorcry",
+          "BabySound": "{{ModId}}_scythercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kleavoregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykleavor data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykleavor": {
+          "DisplayName": "{{i18n: shinykleavor}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kleavoregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykleavorbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scyther/shinykleavor",
+          "BabyTexture": "{{ModId}}/scyther/shinyscyther_kleavor",
+          "Sound": "{{ModId}}_kleavorcry",
+          "BabySound": "{{ModId}}_scythercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kleavoregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "kleavor cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_scythercry": {
+          "ID": "{{ModId}}_scythercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scyther/scythercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_kleavorcry": {
+          "ID": "{{ModId}}_kleavorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scyther/kleavorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kleavor egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_kleavoregg": {
+          "Name": "{{ModId}}_kleavoregg",
+          "DisplayName": "{{i18n: kleavoregg}}",
+          "Description": "{{i18n: kleavoregg.d}}",
+          "Texture": "{{ModId}}/scyther/kleavoregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_rare",
+            "pkegg_chop_palmisland",
+            "pkegg_shake_palmisland",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kleavor hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_kleavoregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykleavor",
+              "AnimalId": "{{ModId}}_shinykleavor",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_kleavor",
+              "AnimalId": "{{ModId}}_kleavor",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

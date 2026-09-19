@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ferroseed textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ferroseed/ferroseed, {{ModId}}/ferroseed/shinyferroseed, {{ModId}}/ferroseed/ferrothorn, {{ModId}}/ferroseed/shinyferrothorn, {{ModId}}/ferroseed/ferroseedegg",
+      "FromFile": "assets/livestocks/ferroseed/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ferroseed data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ferroseed": {
+          "DisplayName": "{{i18n: ferroseed}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ferroseedegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ferroseedbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ferroseed/ferrothorn",
+          "BabyTexture": "{{ModId}}/ferroseed/ferroseed",
+          "Sound": "{{ModId}}_ferrothorncry",
+          "BabySound": "{{ModId}}_ferroseedcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ferroseedegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyferroseed data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyferroseed": {
+          "DisplayName": "{{i18n: shinyferroseed}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_ferroseedegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyferroseedbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ferroseed/shinyferrothorn",
+          "BabyTexture": "{{ModId}}/ferroseed/shinyferroseed",
+          "Sound": "{{ModId}}_ferrothorncry",
+          "BabySound": "{{ModId}}_ferroseedcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ferroseedegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "ferroseed cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ferroseedcry": {
+          "ID": "{{ModId}}_ferroseedcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ferroseed/ferroseedcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ferrothorncry": {
+          "ID": "{{ModId}}_ferrothorncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ferroseed/ferrothorncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ferroseed egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ferroseedegg": {
+          "Name": "{{ModId}}_ferroseedegg",
+          "DisplayName": "{{i18n: ferroseedegg}}",
+          "Description": "{{i18n: ferroseedegg.d}}",
+          "Texture": "{{ModId}}/ferroseed/ferroseedegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ferroseed hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ferroseedegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyferroseed",
+              "AnimalId": "{{ModId}}_shinyferroseed",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ferroseed",
+              "AnimalId": "{{ModId}}_ferroseed",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

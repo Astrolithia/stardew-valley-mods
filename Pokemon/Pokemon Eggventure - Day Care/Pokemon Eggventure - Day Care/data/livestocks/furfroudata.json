@@ -1,0 +1,272 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load furfrou textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/furfrou/furfrou, {{ModId}}/furfrou/shinyfurfrou, {{ModId}}/furfrou/furfrou2, {{ModId}}/furfrou/shinyfurfrou2, {{ModId}}/furfrou/furfrou3, {{ModId}}/furfrou/shinyfurfrou3, {{ModId}}/furfrou/furfrou4, {{ModId}}/furfrou/shinyfurfrou4, {{ModId}}/furfrou/furfrou5, {{ModId}}/furfrou/shinyfurfrou5, {{ModId}}/furfrou/furfrou6, {{ModId}}/furfrou/shinyfurfrou6, {{ModId}}/furfrou/furfrou7, {{ModId}}/furfrou/shinyfurfrou7, {{ModId}}/furfrou/furfrou8, {{ModId}}/furfrou/shinyfurfrou8, {{ModId}}/furfrou/furfrou9, {{ModId}}/furfrou/shinyfurfrou9, {{ModId}}/furfrou/furfrou10, {{ModId}}/furfrou/shinyfurfrou10, {{ModId}}/furfrou/furfrouegg",
+      "FromFile": "assets/livestocks/furfrou/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_furfrou data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_furfrou": {
+          "DisplayName": "{{i18n: furfrou}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_furfrouegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: furfroubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/furfrou/furfrou",
+          "BabyTexture": "{{ModId}}/furfrou/furfrou",
+          "Sound": "{{ModId}}_furfroucry",
+          "BabySound": "{{ModId}}_furfroucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_furfrouegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "furfrou2",
+              "Texture": "{{ModId}}/furfrou/furfrou2",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou2"
+            },
+            {
+              "Id": "furfrou3",
+              "Texture": "{{ModId}}/furfrou/furfrou3",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou3"
+            },
+            {
+              "Id": "furfrou4",
+              "Texture": "{{ModId}}/furfrou/furfrou4",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou4"
+            },
+            {
+              "Id": "furfrou5",
+              "Texture": "{{ModId}}/furfrou/furfrou5",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou5"
+            },
+            {
+              "Id": "furfrou6",
+              "Texture": "{{ModId}}/furfrou/furfrou6",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou6"
+            },
+            {
+              "Id": "furfrou7",
+              "Texture": "{{ModId}}/furfrou/furfrou7",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou7"
+            },
+            {
+              "Id": "furfrou8",
+              "Texture": "{{ModId}}/furfrou/furfrou8",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou8"
+            },
+            {
+              "Id": "furfrou9",
+              "Texture": "{{ModId}}/furfrou/furfrou9",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou9"
+            },
+            {
+              "Id": "furfrou10",
+              "Texture": "{{ModId}}/furfrou/furfrou10",
+              "BabyTexture": "{{ModId}}/furfrou/furfrou10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfurfrou data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfurfrou": {
+          "DisplayName": "{{i18n: shinyfurfrou}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_furfrouegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfurfroubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/furfrou/shinyfurfrou",
+          "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou",
+          "Sound": "{{ModId}}_furfroucry",
+          "BabySound": "{{ModId}}_furfroucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_furfrouegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "furfrou2",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou2",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou2"
+            },
+            {
+              "Id": "furfrou3",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou3",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou3"
+            },
+            {
+              "Id": "furfrou4",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou4",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou4"
+            },
+            {
+              "Id": "furfrou5",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou5",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou5"
+            },
+            {
+              "Id": "furfrou6",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou6",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou6"
+            },
+            {
+              "Id": "furfrou7",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou7",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou7"
+            },
+            {
+              "Id": "furfrou8",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou8",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou8"
+            },
+            {
+              "Id": "furfrou9",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou9",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou9"
+            },
+            {
+              "Id": "furfrou10",
+              "Texture": "{{ModId}}/furfrou/shinyfurfrou10",
+              "BabyTexture": "{{ModId}}/furfrou/shinyfurfrou10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "furfrou cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_furfroucry": {
+          "ID": "{{ModId}}_furfroucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/furfrou/furfroucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "furfrou egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_furfrouegg": {
+          "Name": "{{ModId}}_furfrouegg",
+          "DisplayName": "{{i18n: furfrouegg}}",
+          "Description": "{{i18n: furfrouegg.d}}",
+          "Texture": "{{ModId}}/furfrou/furfrouegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "furfrou hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_furfrouegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfurfrou",
+              "AnimalId": "{{ModId}}_shinyfurfrou",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_furfrou",
+              "AnimalId": "{{ModId}}_furfrou",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

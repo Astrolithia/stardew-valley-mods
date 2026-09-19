@@ -1,0 +1,234 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rotom textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rotom/rotom, {{ModId}}/rotom/shinyrotom, {{ModId}}/rotom/rotom2, {{ModId}}/rotom/shinyrotom2, {{ModId}}/rotom/rotom3, {{ModId}}/rotom/shinyrotom3, {{ModId}}/rotom/rotom4, {{ModId}}/rotom/shinyrotom4, {{ModId}}/rotom/rotom5, {{ModId}}/rotom/shinyrotom5, {{ModId}}/rotom/rotom6, {{ModId}}/rotom/shinyrotom6, {{ModId}}/rotom/rotomegg",
+      "FromFile": "assets/livestocks/rotom/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rotom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rotom": {
+          "DisplayName": "{{i18n: rotom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rotomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rotombirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rotom/rotom",
+          "BabyTexture": "{{ModId}}/rotom/rotom",
+          "Sound": "{{ModId}}_rotomcry",
+          "BabySound": "{{ModId}}_rotomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rotomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "rotom2",
+              "Texture": "{{ModId}}/rotom/rotom2",
+              "BabyTexture": "{{ModId}}/rotom/rotom2"
+            },
+            {
+              "Id": "rotom3",
+              "Texture": "{{ModId}}/rotom/rotom3",
+              "BabyTexture": "{{ModId}}/rotom/rotom3"
+            },
+            {
+              "Id": "rotom4",
+              "Texture": "{{ModId}}/rotom/rotom4",
+              "BabyTexture": "{{ModId}}/rotom/rotom4"
+            },
+            {
+              "Id": "rotom5",
+              "Texture": "{{ModId}}/rotom/rotom5",
+              "BabyTexture": "{{ModId}}/rotom/rotom5"
+            },
+            {
+              "Id": "rotom6",
+              "Texture": "{{ModId}}/rotom/rotom6",
+              "BabyTexture": "{{ModId}}/rotom/rotom6"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrotom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrotom": {
+          "DisplayName": "{{i18n: shinyrotom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rotomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrotombirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rotom/shinyrotom",
+          "BabyTexture": "{{ModId}}/rotom/shinyrotom",
+          "Sound": "{{ModId}}_rotomcry",
+          "BabySound": "{{ModId}}_rotomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rotomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "rotom2",
+              "Texture": "{{ModId}}/rotom/shinyrotom2",
+              "BabyTexture": "{{ModId}}/rotom/shinyrotom2"
+            },
+            {
+              "Id": "rotom3",
+              "Texture": "{{ModId}}/rotom/shinyrotom3",
+              "BabyTexture": "{{ModId}}/rotom/shinyrotom3"
+            },
+            {
+              "Id": "rotom4",
+              "Texture": "{{ModId}}/rotom/shinyrotom4",
+              "BabyTexture": "{{ModId}}/rotom/shinyrotom4"
+            },
+            {
+              "Id": "rotom5",
+              "Texture": "{{ModId}}/rotom/shinyrotom5",
+              "BabyTexture": "{{ModId}}/rotom/shinyrotom5"
+            },
+            {
+              "Id": "rotom6",
+              "Texture": "{{ModId}}/rotom/shinyrotom6",
+              "BabyTexture": "{{ModId}}/rotom/shinyrotom6"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rotom cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rotomcry": {
+          "ID": "{{ModId}}_rotomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rotom/rotomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rotom egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rotomegg": {
+          "Name": "{{ModId}}_rotomegg",
+          "DisplayName": "{{i18n: rotomegg}}",
+          "Description": "{{i18n: rotomegg.d}}",
+          "Texture": "{{ModId}}/rotom/rotomegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rotom hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rotomegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrotom",
+              "AnimalId": "{{ModId}}_shinyrotom",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rotom",
+              "AnimalId": "{{ModId}}_rotom",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

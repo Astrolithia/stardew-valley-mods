@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load drowzee textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/drowzee/drowzee, {{ModId}}/drowzee/shinydrowzee, {{ModId}}/drowzee/hypno, {{ModId}}/drowzee/shinyhypno, {{ModId}}/drowzee/drowzeeegg",
+      "FromFile": "assets/livestocks/drowzee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_drowzee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_drowzee": {
+          "DisplayName": "{{i18n: drowzee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_drowzeeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: drowzeebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/drowzee/hypno",
+          "BabyTexture": "{{ModId}}/drowzee/drowzee",
+          "Sound": "{{ModId}}_hypnocry",
+          "BabySound": "{{ModId}}_drowzeecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_drowzeeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydrowzee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydrowzee": {
+          "DisplayName": "{{i18n: shinydrowzee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_drowzeeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydrowzeebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/drowzee/shinyhypno",
+          "BabyTexture": "{{ModId}}/drowzee/shinydrowzee",
+          "Sound": "{{ModId}}_hypnocry",
+          "BabySound": "{{ModId}}_drowzeecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_drowzeeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "drowzee cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_drowzeecry": {
+          "ID": "{{ModId}}_drowzeecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/drowzee/drowzeecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hypnocry": {
+          "ID": "{{ModId}}_hypnocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/drowzee/hypnocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "drowzee egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_drowzeeegg": {
+          "Name": "{{ModId}}_drowzeeegg",
+          "DisplayName": "{{i18n: drowzeeegg}}",
+          "Description": "{{i18n: drowzeeegg.d}}",
+          "Texture": "{{ModId}}/drowzee/drowzeeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "drowzee hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_drowzeeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydrowzee",
+              "AnimalId": "{{ModId}}_shinydrowzee",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_drowzee",
+              "AnimalId": "{{ModId}}_drowzee",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

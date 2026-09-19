@@ -1,0 +1,38 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O)305": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyduskull",
+              "AnimalId": "{{ModId}}_shinyduskull",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_duskull",
+              "AnimalId": "{{ModId}}_duskull",
+              "Condition": null
+            }
+          ]
+        },
+        "(O)928": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygimmighoul",
+              "AnimalId": "{{ModId}}_shinygimmighoul",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gimmighoul",
+              "AnimalId": "{{ModId}}_gimmighoul",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

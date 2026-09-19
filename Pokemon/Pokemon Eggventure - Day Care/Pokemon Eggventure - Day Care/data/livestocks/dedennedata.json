@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dedenne textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dedenne/dedenne, {{ModId}}/dedenne/shinydedenne, {{ModId}}/dedenne/dedenneegg",
+      "FromFile": "assets/livestocks/dedenne/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dedenne data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dedenne": {
+          "DisplayName": "{{i18n: dedenne}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dedenneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dedennebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dedenne/dedenne",
+          "BabyTexture": "{{ModId}}/dedenne/dedenne",
+          "Sound": "{{ModId}}_dedennecry",
+          "BabySound": "{{ModId}}_dedennecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dedenneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydedenne data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydedenne": {
+          "DisplayName": "{{i18n: shinydedenne}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dedenneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydedennebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dedenne/shinydedenne",
+          "BabyTexture": "{{ModId}}/dedenne/shinydedenne",
+          "Sound": "{{ModId}}_dedennecry",
+          "BabySound": "{{ModId}}_dedennecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dedenneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "dedenne cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dedennecry": {
+          "ID": "{{ModId}}_dedennecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dedenne/dedennecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dedenne egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dedenneegg": {
+          "Name": "{{ModId}}_dedenneegg",
+          "DisplayName": "{{i18n: dedenneegg}}",
+          "Description": "{{i18n: dedenneegg.d}}",
+          "Texture": "{{ModId}}/dedenne/dedenneegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "pkegg_chop_summer_storm",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dedenne hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dedenneegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydedenne",
+              "AnimalId": "{{ModId}}_shinydedenne",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dedenne",
+              "AnimalId": "{{ModId}}_dedenne",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

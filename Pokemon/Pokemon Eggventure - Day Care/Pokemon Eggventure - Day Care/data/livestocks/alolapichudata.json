@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load alolapichu textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pichu/alolapichu, {{ModId}}/pichu/shinyalolapichu, {{ModId}}/pichu/alolapikachu, {{ModId}}/pichu/shinyalolapikachu, {{ModId}}/pichu/alolaraichu, {{ModId}}/pichu/shinyalolaraichu, {{ModId}}/pichu/alolapichuegg",
+      "FromFile": "assets/livestocks/pichu/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_alolapichu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_alolapichu": {
+          "DisplayName": "{{i18n: alolapichu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolapichuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: alolapichubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pichu/alolapikachu",
+          "BabyTexture": "{{ModId}}/pichu/alolapichu",
+          "Sound": "{{ModId}}_alolaraichucry",
+          "BabySound": "{{ModId}}_pichucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolapichuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_alolapichu evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_alolapichu",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "alolapichuevolution": {
+          "Id": "alolapichuevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pichu/alolaraichu"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyalolapichu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyalolapichu": {
+          "DisplayName": "{{i18n: shinyalolapichu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolapichuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyalolapichubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pichu/shinyalolapikachu",
+          "BabyTexture": "{{ModId}}/pichu/shinyalolapichu",
+          "Sound": "{{ModId}}_alolaraichucry",
+          "BabySound": "{{ModId}}_pichucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolapichuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyalolapichu evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyalolapichu",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyalolapichuevolution": {
+          "Id": "shinyalolapichuevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pichu/shinyalolaraichu"
+        }
+      }
+    },
+    {
+      "LogName": "alolapichu cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pichucry": {
+          "ID": "{{ModId}}_pichucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pichu/pichucry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alolaraichucry": {
+          "ID": "{{ModId}}_alolaraichucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pichu/alolaraichucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolapichu egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_alolapichuegg": {
+          "Name": "{{ModId}}_alolapichuegg",
+          "DisplayName": "{{i18n: alolapichuegg}}",
+          "Description": "{{i18n: alolapichuegg.d}}",
+          "Texture": "{{ModId}}/pichu/alolapichuegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolapichu hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_alolapichuegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyalolapichu",
+              "AnimalId": "{{ModId}}_shinyalolapichu",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_alolapichu",
+              "AnimalId": "{{ModId}}_alolapichu",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load aloladiglett textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/diglett/aloladiglett, {{ModId}}/diglett/shinyaloladiglett, {{ModId}}/diglett/aloladugtrio, {{ModId}}/diglett/shinyaloladugtrio, {{ModId}}/diglett/aloladiglettegg",
+      "FromFile": "assets/livestocks/diglett/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_aloladiglett data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_aloladiglett": {
+          "DisplayName": "{{i18n: aloladiglett}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_aloladiglettegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: aloladiglettbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/diglett/aloladugtrio",
+          "BabyTexture": "{{ModId}}/diglett/aloladiglett",
+          "Sound": "{{ModId}}_aloladugtriocry",
+          "BabySound": "{{ModId}}_aloladiglettcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aloladiglettegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyaloladiglett data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyaloladiglett": {
+          "DisplayName": "{{i18n: shinyaloladiglett}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_aloladiglettegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyaloladiglettbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/diglett/shinyaloladugtrio",
+          "BabyTexture": "{{ModId}}/diglett/shinyaloladiglett",
+          "Sound": "{{ModId}}_aloladugtriocry",
+          "BabySound": "{{ModId}}_aloladiglettcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aloladiglettegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "aloladiglett cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_aloladiglettcry": {
+          "ID": "{{ModId}}_aloladiglettcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/diglett/aloladiglettcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_aloladugtriocry": {
+          "ID": "{{ModId}}_aloladugtriocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/diglett/aloladugtriocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aloladiglett egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_aloladiglettegg": {
+          "Name": "{{ModId}}_aloladiglettegg",
+          "DisplayName": "{{i18n: aloladiglettegg}}",
+          "Description": "{{i18n: aloladiglettegg.d}}",
+          "Texture": "{{ModId}}/diglett/aloladiglettegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_verycommon",
+            "pkegg_quarry_p4",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aloladiglett hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_aloladiglettegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyaloladiglett",
+              "AnimalId": "{{ModId}}_shinyaloladiglett",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_aloladiglett",
+              "AnimalId": "{{ModId}}_aloladiglett",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load okidogi textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/okidogi/okidogi, {{ModId}}/okidogi/shinyokidogi, {{ModId}}/okidogi/okidogiegg",
+      "FromFile": "assets/livestocks/okidogi/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_okidogi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_okidogi": {
+          "DisplayName": "{{i18n: okidogi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_okidogiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: okidogibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/okidogi/okidogi",
+          "BabyTexture": "{{ModId}}/okidogi/okidogi",
+          "Sound": "{{ModId}}_okidogicry",
+          "BabySound": "{{ModId}}_okidogicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_okidogiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyokidogi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyokidogi": {
+          "DisplayName": "{{i18n: shinyokidogi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_okidogiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyokidogibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/okidogi/shinyokidogi",
+          "BabyTexture": "{{ModId}}/okidogi/shinyokidogi",
+          "Sound": "{{ModId}}_okidogicry",
+          "BabySound": "{{ModId}}_okidogicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_okidogiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "okidogi cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_okidogicry": {
+          "ID": "{{ModId}}_okidogicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/okidogi/okidogicry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "okidogi egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_okidogiegg": {
+          "Name": "{{ModId}}_okidogiegg",
+          "DisplayName": "{{i18n: okidogiegg}}",
+          "Description": "{{i18n: okidogiegg.d}}",
+          "Texture": "{{ModId}}/okidogi/okidogiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_poison",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "okidogi hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_okidogiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyokidogi",
+              "AnimalId": "{{ModId}}_shinyokidogi",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_okidogi",
+              "AnimalId": "{{ModId}}_okidogi",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

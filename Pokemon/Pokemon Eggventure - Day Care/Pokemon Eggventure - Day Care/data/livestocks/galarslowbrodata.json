@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarslowbro textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/slowpoke/galarslowpoke_galarslowbro, {{ModId}}/slowpoke/shinygalarslowpoke_galarslowbro, {{ModId}}/slowpoke/galarslowbro, {{ModId}}/slowpoke/shinygalarslowbro, {{ModId}}/slowpoke/galarslowbroegg",
+      "FromFile": "assets/livestocks/slowpoke/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarslowbro data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarslowbro": {
+          "DisplayName": "{{i18n: galarslowbro}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galarslowbroegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarslowbrobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/slowpoke/galarslowbro",
+          "BabyTexture": "{{ModId}}/slowpoke/galarslowpoke_galarslowbro",
+          "Sound": "{{ModId}}_galarslowbrocry",
+          "BabySound": "{{ModId}}_galarslowpokecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarslowbroegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarslowbro data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarslowbro": {
+          "DisplayName": "{{i18n: shinygalarslowbro}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galarslowbroegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarslowbrobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/slowpoke/shinygalarslowbro",
+          "BabyTexture": "{{ModId}}/slowpoke/shinygalarslowpoke_galarslowbro",
+          "Sound": "{{ModId}}_galarslowbrocry",
+          "BabySound": "{{ModId}}_galarslowpokecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarslowbroegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarslowbro cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarslowpokecry": {
+          "ID": "{{ModId}}_galarslowpokecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/slowpoke/galarslowpokecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_galarslowbrocry": {
+          "ID": "{{ModId}}_galarslowbrocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/slowpoke/galarslowbrocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarslowbro egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarslowbroegg": {
+          "Name": "{{ModId}}_galarslowbroegg",
+          "DisplayName": "{{i18n: galarslowbroegg}}",
+          "Description": "{{i18n: galarslowbroegg.d}}",
+          "Texture": "{{ModId}}/slowpoke/galarslowbroegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarslowbro hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarslowbroegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarslowbro",
+              "AnimalId": "{{ModId}}_shinygalarslowbro",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarslowbro",
+              "AnimalId": "{{ModId}}_galarslowbro",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

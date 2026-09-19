@@ -1,0 +1,56 @@
+{
+  "Changes": [
+    {
+      "LogName": "Garbage - oeufs pokemon (toutes poubelles)",
+      "Action": "EditData",
+      "Target": "Data/GarbageCans",
+      "TargetField": [
+        "AfterAll"
+      ],
+      "Entries": {
+        "{{ModId}}_garbage_rattata": {
+          "ID": "{{ModId}}_garbage_rattata",
+          "ItemId": "(O){{ModId}}_rattataegg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        },
+        "{{ModId}}_garbage_grimer": {
+          "ID": "{{ModId}}_garbage_grimer",
+          "ItemId": "(O){{ModId}}_grimeregg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        },
+        "{{ModId}}_garbage_koffing": {
+          "ID": "{{ModId}}_garbage_koffing",
+          "ItemId": "(O){{ModId}}_koffingegg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        },
+        "{{ModId}}_garbage_gulpin": {
+          "ID": "{{ModId}}_garbage_gulpin",
+          "ItemId": "(O){{ModId}}_gulpinegg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        },
+        "{{ModId}}_garbage_alolameowth": {
+          "ID": "{{ModId}}_garbage_alolameowth",
+          "ItemId": "(O){{ModId}}_alolameowthegg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        },
+        "{{ModId}}_garbage_stunky": {
+          "ID": "{{ModId}}_garbage_stunky",
+          "ItemId": "(O){{ModId}}_stunkyegg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        },
+        "{{ModId}}_garbage_trubbish": {
+          "ID": "{{ModId}}_garbage_trubbish",
+          "ItemId": "(O){{ModId}}_trubbishegg",
+          "IgnoreBaseChance": true,
+          "Condition": "RANDOM {{RateGarbage}}"
+        }
+      }
+    }
+  ]
+}

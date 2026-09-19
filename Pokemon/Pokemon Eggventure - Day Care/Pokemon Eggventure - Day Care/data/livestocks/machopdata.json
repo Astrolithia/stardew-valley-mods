@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load machop textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/machop/machop, {{ModId}}/machop/shinymachop, {{ModId}}/machop/machoke, {{ModId}}/machop/shinymachoke, {{ModId}}/machop/machamp, {{ModId}}/machop/shinymachamp, {{ModId}}/machop/machopegg",
+      "FromFile": "assets/livestocks/machop/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_machop data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_machop": {
+          "DisplayName": "{{i18n: machop}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_machopegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: machopbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/machop/machoke",
+          "BabyTexture": "{{ModId}}/machop/machop",
+          "Sound": "{{ModId}}_machampcry",
+          "BabySound": "{{ModId}}_machopcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_machopegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_machop evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_machop",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "machopevolution": {
+          "Id": "machopevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/machop/machamp"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymachop data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymachop": {
+          "DisplayName": "{{i18n: shinymachop}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_machopegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymachopbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/machop/shinymachoke",
+          "BabyTexture": "{{ModId}}/machop/shinymachop",
+          "Sound": "{{ModId}}_machampcry",
+          "BabySound": "{{ModId}}_machopcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_machopegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymachop evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymachop",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymachopevolution": {
+          "Id": "shinymachopevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/machop/shinymachamp"
+        }
+      }
+    },
+    {
+      "LogName": "machop cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_machopcry": {
+          "ID": "{{ModId}}_machopcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/machop/machopcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_machampcry": {
+          "ID": "{{ModId}}_machampcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/machop/machampcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "machop egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_machopegg": {
+          "Name": "{{ModId}}_machopegg",
+          "DisplayName": "{{i18n: machopegg}}",
+          "Description": "{{i18n: machopegg.d}}",
+          "Texture": "{{ModId}}/machop/machopegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_common",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "machop hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_machopegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymachop",
+              "AnimalId": "{{ModId}}_shinymachop",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_machop",
+              "AnimalId": "{{ModId}}_machop",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

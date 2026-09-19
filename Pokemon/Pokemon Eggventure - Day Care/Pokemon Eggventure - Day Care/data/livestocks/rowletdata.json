@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rowlet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rowlet/rowlet, {{ModId}}/rowlet/shinyrowlet, {{ModId}}/rowlet/dartrix, {{ModId}}/rowlet/shinydartrix, {{ModId}}/rowlet/decidueye, {{ModId}}/rowlet/shinydecidueye, {{ModId}}/rowlet/rowletegg",
+      "FromFile": "assets/livestocks/rowlet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rowlet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rowlet": {
+          "DisplayName": "{{i18n: rowlet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_rowletegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rowletbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rowlet/dartrix",
+          "BabyTexture": "{{ModId}}/rowlet/rowlet",
+          "Sound": "{{ModId}}_decidueyecry",
+          "BabySound": "{{ModId}}_rowletcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rowletegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_rowlet evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_rowlet",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "rowletevolution": {
+          "Id": "rowletevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rowlet/decidueye"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrowlet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrowlet": {
+          "DisplayName": "{{i18n: shinyrowlet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_rowletegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrowletbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rowlet/shinydartrix",
+          "BabyTexture": "{{ModId}}/rowlet/shinyrowlet",
+          "Sound": "{{ModId}}_decidueyecry",
+          "BabySound": "{{ModId}}_rowletcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rowletegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyrowlet evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyrowlet",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyrowletevolution": {
+          "Id": "shinyrowletevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rowlet/shinydecidueye"
+        }
+      }
+    },
+    {
+      "LogName": "rowlet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rowletcry": {
+          "ID": "{{ModId}}_rowletcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rowlet/rowletcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_decidueyecry": {
+          "ID": "{{ModId}}_decidueyecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rowlet/decidueyecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rowlet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rowletegg": {
+          "Name": "{{ModId}}_rowletegg",
+          "DisplayName": "{{i18n: rowletegg}}",
+          "Description": "{{i18n: rowletegg.d}}",
+          "Texture": "{{ModId}}/rowlet/rowletegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rowlet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rowletegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrowlet",
+              "AnimalId": "{{ModId}}_shinyrowlet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rowlet",
+              "AnimalId": "{{ModId}}_rowlet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

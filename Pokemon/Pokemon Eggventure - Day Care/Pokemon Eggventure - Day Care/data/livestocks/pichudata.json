@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pichu textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pichu/pichu, {{ModId}}/pichu/shinypichu, {{ModId}}/pichu/pikachu, {{ModId}}/pichu/shinypikachu, {{ModId}}/pichu/raichu, {{ModId}}/pichu/shinyraichu, {{ModId}}/pichu/pichuegg",
+      "FromFile": "assets/livestocks/pichu/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pichu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pichu": {
+          "DisplayName": "{{i18n: pichu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pichuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pichubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pichu/pikachu",
+          "BabyTexture": "{{ModId}}/pichu/pichu",
+          "Sound": "{{ModId}}_raichucry",
+          "BabySound": "{{ModId}}_pichucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pichuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_pichu evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pichu",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "pichuevolution": {
+          "Id": "pichuevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pichu/raichu"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypichu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypichu": {
+          "DisplayName": "{{i18n: shinypichu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pichuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypichubirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pichu/shinypikachu",
+          "BabyTexture": "{{ModId}}/pichu/shinypichu",
+          "Sound": "{{ModId}}_raichucry",
+          "BabySound": "{{ModId}}_pichucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pichuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypichu evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypichu",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypichuevolution": {
+          "Id": "shinypichuevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pichu/shinyraichu"
+        }
+      }
+    },
+    {
+      "LogName": "pichu cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pichucry": {
+          "ID": "{{ModId}}_pichucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pichu/pichucry.ogg}}"
+          ]
+        },
+        "{{ModId}}_raichucry": {
+          "ID": "{{ModId}}_raichucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pichu/raichucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pichu egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pichuegg": {
+          "Name": "{{ModId}}_pichuegg",
+          "DisplayName": "{{i18n: pichuegg}}",
+          "Description": "{{i18n: pichuegg.d}}",
+          "Texture": "{{ModId}}/pichu/pichuegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pichu hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pichuegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypichu",
+              "AnimalId": "{{ModId}}_shinypichu",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pichu",
+              "AnimalId": "{{ModId}}_pichu",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

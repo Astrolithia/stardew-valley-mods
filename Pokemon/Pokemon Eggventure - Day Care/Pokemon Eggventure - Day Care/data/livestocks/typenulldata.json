@@ -1,0 +1,326 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load typenull textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/typenull/typenull, {{ModId}}/typenull/shinytypenull, {{ModId}}/typenull/silvally, {{ModId}}/typenull/shinysilvally, {{ModId}}/typenull/silvally2, {{ModId}}/typenull/silvally3, {{ModId}}/typenull/silvally4, {{ModId}}/typenull/silvally5, {{ModId}}/typenull/silvally6, {{ModId}}/typenull/silvally7, {{ModId}}/typenull/silvally8, {{ModId}}/typenull/silvally9, {{ModId}}/typenull/silvally11, {{ModId}}/typenull/silvally12, {{ModId}}/typenull/silvally13, {{ModId}}/typenull/silvally14, {{ModId}}/typenull/silvally15, {{ModId}}/typenull/silvally16, {{ModId}}/typenull/silvally17, {{ModId}}/typenull/silvally18, {{ModId}}/typenull/silvally19, {{ModId}}/typenull/typenullegg",
+      "FromFile": "assets/livestocks/typenull/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_typenull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_typenull": {
+          "DisplayName": "{{i18n: typenull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_typenullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: typenullbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/typenull/silvally",
+          "BabyTexture": "{{ModId}}/typenull/typenull",
+          "Sound": "{{ModId}}_silvallycry",
+          "BabySound": "{{ModId}}_typenullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_typenullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "silvally2",
+              "Texture": "{{ModId}}/typenull/silvally2"
+            },
+            {
+              "Id": "silvally3",
+              "Texture": "{{ModId}}/typenull/silvally3"
+            },
+            {
+              "Id": "silvally4",
+              "Texture": "{{ModId}}/typenull/silvally4"
+            },
+            {
+              "Id": "silvally5",
+              "Texture": "{{ModId}}/typenull/silvally5"
+            },
+            {
+              "Id": "silvally6",
+              "Texture": "{{ModId}}/typenull/silvally6"
+            },
+            {
+              "Id": "silvally7",
+              "Texture": "{{ModId}}/typenull/silvally7"
+            },
+            {
+              "Id": "silvally8",
+              "Texture": "{{ModId}}/typenull/silvally8"
+            },
+            {
+              "Id": "silvally9",
+              "Texture": "{{ModId}}/typenull/silvally9"
+            },
+            {
+              "Id": "silvally11",
+              "Texture": "{{ModId}}/typenull/silvally11"
+            },
+            {
+              "Id": "silvally12",
+              "Texture": "{{ModId}}/typenull/silvally12"
+            },
+            {
+              "Id": "silvally13",
+              "Texture": "{{ModId}}/typenull/silvally13"
+            },
+            {
+              "Id": "silvally14",
+              "Texture": "{{ModId}}/typenull/silvally14"
+            },
+            {
+              "Id": "silvally15",
+              "Texture": "{{ModId}}/typenull/silvally15"
+            },
+            {
+              "Id": "silvally16",
+              "Texture": "{{ModId}}/typenull/silvally16"
+            },
+            {
+              "Id": "silvally17",
+              "Texture": "{{ModId}}/typenull/silvally17"
+            },
+            {
+              "Id": "silvally18",
+              "Texture": "{{ModId}}/typenull/silvally18"
+            },
+            {
+              "Id": "silvally19",
+              "Texture": "{{ModId}}/typenull/silvally19"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytypenull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytypenull": {
+          "DisplayName": "{{i18n: shinytypenull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_typenullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytypenullbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/typenull/shinysilvally",
+          "BabyTexture": "{{ModId}}/typenull/shinytypenull",
+          "Sound": "{{ModId}}_silvallycry",
+          "BabySound": "{{ModId}}_typenullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_typenullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "silvally2",
+              "Texture": "{{ModId}}/typenull/silvally2"
+            },
+            {
+              "Id": "silvally3",
+              "Texture": "{{ModId}}/typenull/silvally3"
+            },
+            {
+              "Id": "silvally4",
+              "Texture": "{{ModId}}/typenull/silvally4"
+            },
+            {
+              "Id": "silvally5",
+              "Texture": "{{ModId}}/typenull/silvally5"
+            },
+            {
+              "Id": "silvally6",
+              "Texture": "{{ModId}}/typenull/silvally6"
+            },
+            {
+              "Id": "silvally7",
+              "Texture": "{{ModId}}/typenull/silvally7"
+            },
+            {
+              "Id": "silvally8",
+              "Texture": "{{ModId}}/typenull/silvally8"
+            },
+            {
+              "Id": "silvally9",
+              "Texture": "{{ModId}}/typenull/silvally9"
+            },
+            {
+              "Id": "silvally11",
+              "Texture": "{{ModId}}/typenull/silvally11"
+            },
+            {
+              "Id": "silvally12",
+              "Texture": "{{ModId}}/typenull/silvally12"
+            },
+            {
+              "Id": "silvally13",
+              "Texture": "{{ModId}}/typenull/silvally13"
+            },
+            {
+              "Id": "silvally14",
+              "Texture": "{{ModId}}/typenull/silvally14"
+            },
+            {
+              "Id": "silvally15",
+              "Texture": "{{ModId}}/typenull/silvally15"
+            },
+            {
+              "Id": "silvally16",
+              "Texture": "{{ModId}}/typenull/silvally16"
+            },
+            {
+              "Id": "silvally17",
+              "Texture": "{{ModId}}/typenull/silvally17"
+            },
+            {
+              "Id": "silvally18",
+              "Texture": "{{ModId}}/typenull/silvally18"
+            },
+            {
+              "Id": "silvally19",
+              "Texture": "{{ModId}}/typenull/silvally19"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "typenull cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_typenullcry": {
+          "ID": "{{ModId}}_typenullcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/typenull/typenullcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_silvallycry": {
+          "ID": "{{ModId}}_silvallycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/typenull/silvallycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "typenull egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_typenullegg": {
+          "Name": "{{ModId}}_typenullegg",
+          "DisplayName": "{{i18n: typenullegg}}",
+          "Description": "{{i18n: typenullegg.d}}",
+          "Texture": "{{ModId}}/typenull/typenullegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "typenull hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_typenullegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytypenull",
+              "AnimalId": "{{ModId}}_shinytypenull",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_typenull",
+              "AnimalId": "{{ModId}}_typenull",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

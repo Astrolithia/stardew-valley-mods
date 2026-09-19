@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load spheal textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/spheal/spheal, {{ModId}}/spheal/shinyspheal, {{ModId}}/spheal/sealeo, {{ModId}}/spheal/shinysealeo, {{ModId}}/spheal/walrein, {{ModId}}/spheal/shinywalrein, {{ModId}}/spheal/sphealegg",
+      "FromFile": "assets/livestocks/spheal/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_spheal data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_spheal": {
+          "DisplayName": "{{i18n: spheal}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sphealegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sphealbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spheal/sealeo",
+          "BabyTexture": "{{ModId}}/spheal/spheal",
+          "Sound": "{{ModId}}_walreincry",
+          "BabySound": "{{ModId}}_sphealcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sphealegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_spheal evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_spheal",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "sphealevolution": {
+          "Id": "sphealevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/spheal/walrein"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_spheal type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_spheal"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyspheal data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyspheal": {
+          "DisplayName": "{{i18n: shinyspheal}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sphealegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysphealbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spheal/shinysealeo",
+          "BabyTexture": "{{ModId}}/spheal/shinyspheal",
+          "Sound": "{{ModId}}_walreincry",
+          "BabySound": "{{ModId}}_sphealcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sphealegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyspheal evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyspheal",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysphealevolution": {
+          "Id": "shinysphealevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/spheal/shinywalrein"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyspheal type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyspheal"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "spheal cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sphealcry": {
+          "ID": "{{ModId}}_sphealcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spheal/sphealcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_walreincry": {
+          "ID": "{{ModId}}_walreincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spheal/walreincry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spheal egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sphealegg": {
+          "Name": "{{ModId}}_sphealegg",
+          "DisplayName": "{{i18n: sphealegg}}",
+          "Description": "{{i18n: sphealegg.d}}",
+          "Texture": "{{ModId}}/spheal/sphealegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spheal hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sphealegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyspheal",
+              "AnimalId": "{{ModId}}_shinyspheal",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_spheal",
+              "AnimalId": "{{ModId}}_spheal",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

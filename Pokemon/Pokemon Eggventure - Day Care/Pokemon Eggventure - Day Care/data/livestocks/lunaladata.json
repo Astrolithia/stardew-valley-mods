@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load lunala textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cosmog/cosmog_lunala, {{ModId}}/cosmog/shinycosmog_lunala, {{ModId}}/cosmog/cosmoem_lunala, {{ModId}}/cosmog/shinycosmoem_lunala, {{ModId}}/cosmog/lunala, {{ModId}}/cosmog/shinylunala, {{ModId}}/cosmog/lunalaegg",
+      "FromFile": "assets/livestocks/cosmog/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_lunala data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_lunala": {
+          "DisplayName": "{{i18n: lunala}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_lunalaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: lunalabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cosmog/cosmoem_lunala",
+          "BabyTexture": "{{ModId}}/cosmog/cosmog_lunala",
+          "Sound": "{{ModId}}_lunalacry",
+          "BabySound": "{{ModId}}_cosmogcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_lunalaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_lunala evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_lunala",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "lunalaevolution": {
+          "Id": "lunalaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cosmog/lunala"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylunala data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylunala": {
+          "DisplayName": "{{i18n: shinylunala}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_lunalaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylunalabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cosmog/shinycosmoem_lunala",
+          "BabyTexture": "{{ModId}}/cosmog/shinycosmog_lunala",
+          "Sound": "{{ModId}}_lunalacry",
+          "BabySound": "{{ModId}}_cosmogcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_lunalaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylunala evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylunala",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinylunalaevolution": {
+          "Id": "shinylunalaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cosmog/shinylunala"
+        }
+      }
+    },
+    {
+      "LogName": "lunala cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cosmogcry": {
+          "ID": "{{ModId}}_cosmogcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cosmog/cosmogcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_lunalacry": {
+          "ID": "{{ModId}}_lunalacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cosmog/lunalacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lunala egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_lunalaegg": {
+          "Name": "{{ModId}}_lunalaegg",
+          "DisplayName": "{{i18n: lunalaegg}}",
+          "Description": "{{i18n: lunalaegg.d}}",
+          "Texture": "{{ModId}}/cosmog/lunalaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lunala hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_lunalaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylunala",
+              "AnimalId": "{{ModId}}_shinylunala",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_lunala",
+              "AnimalId": "{{ModId}}_lunala",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

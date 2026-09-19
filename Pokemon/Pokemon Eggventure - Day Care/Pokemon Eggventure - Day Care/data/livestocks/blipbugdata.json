@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load blipbug textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/blipbug/blipbug, {{ModId}}/blipbug/shinyblipbug, {{ModId}}/blipbug/dottler, {{ModId}}/blipbug/shinydottler, {{ModId}}/blipbug/orbeetle, {{ModId}}/blipbug/shinyorbeetle, {{ModId}}/blipbug/blipbugegg",
+      "FromFile": "assets/livestocks/blipbug/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_blipbug data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_blipbug": {
+          "DisplayName": "{{i18n: blipbug}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_blipbugegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: blipbugbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/blipbug/dottler",
+          "BabyTexture": "{{ModId}}/blipbug/blipbug",
+          "Sound": "{{ModId}}_orbeetlecry",
+          "BabySound": "{{ModId}}_blipbugcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_blipbugegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_blipbug evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_blipbug",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "blipbugevolution": {
+          "Id": "blipbugevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/blipbug/orbeetle"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyblipbug data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyblipbug": {
+          "DisplayName": "{{i18n: shinyblipbug}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_blipbugegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyblipbugbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/blipbug/shinydottler",
+          "BabyTexture": "{{ModId}}/blipbug/shinyblipbug",
+          "Sound": "{{ModId}}_orbeetlecry",
+          "BabySound": "{{ModId}}_blipbugcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_blipbugegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyblipbug evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyblipbug",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyblipbugevolution": {
+          "Id": "shinyblipbugevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/blipbug/shinyorbeetle"
+        }
+      }
+    },
+    {
+      "LogName": "blipbug cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_blipbugcry": {
+          "ID": "{{ModId}}_blipbugcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/blipbug/blipbugcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_orbeetlecry": {
+          "ID": "{{ModId}}_orbeetlecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/blipbug/orbeetlecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "blipbug egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_blipbugegg": {
+          "Name": "{{ModId}}_blipbugegg",
+          "DisplayName": "{{i18n: blipbugegg}}",
+          "Description": "{{i18n: blipbugegg.d}}",
+          "Texture": "{{ModId}}/blipbug/blipbugegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "blipbug hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_blipbugegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyblipbug",
+              "AnimalId": "{{ModId}}_shinyblipbug",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_blipbug",
+              "AnimalId": "{{ModId}}_blipbug",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

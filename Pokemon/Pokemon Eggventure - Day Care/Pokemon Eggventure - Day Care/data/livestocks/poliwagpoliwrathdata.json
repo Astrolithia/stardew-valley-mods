@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load poliwagpoliwrath textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/poliwag/poliwag_poliwagpoliwrath, {{ModId}}/poliwag/shinypoliwag_poliwagpoliwrath, {{ModId}}/poliwag/poliwhirl_poliwagpoliwrath, {{ModId}}/poliwag/shinypoliwhirl_poliwagpoliwrath, {{ModId}}/poliwag/poliwrath, {{ModId}}/poliwag/shinypoliwrath, {{ModId}}/poliwag/poliwagpoliwrathegg",
+      "FromFile": "assets/livestocks/poliwag/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_poliwagpoliwrath data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_poliwagpoliwrath": {
+          "DisplayName": "{{i18n: poliwagpoliwrath}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_poliwagpoliwrathegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: poliwagpoliwrathbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poliwag/poliwhirl_poliwagpoliwrath",
+          "BabyTexture": "{{ModId}}/poliwag/poliwag_poliwagpoliwrath",
+          "Sound": "{{ModId}}_poliwrathcry",
+          "BabySound": "{{ModId}}_poliwagcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poliwagpoliwrathegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_poliwagpoliwrath evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_poliwagpoliwrath",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "poliwagpoliwrathevolution": {
+          "Id": "poliwagpoliwrathevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/poliwag/poliwrath"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_poliwagpoliwrath type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_poliwagpoliwrath"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypoliwagpoliwrath data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypoliwagpoliwrath": {
+          "DisplayName": "{{i18n: shinypoliwagpoliwrath}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_poliwagpoliwrathegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypoliwagpoliwrathbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poliwag/shinypoliwhirl_poliwagpoliwrath",
+          "BabyTexture": "{{ModId}}/poliwag/shinypoliwag_poliwagpoliwrath",
+          "Sound": "{{ModId}}_poliwrathcry",
+          "BabySound": "{{ModId}}_poliwagcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poliwagpoliwrathegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypoliwagpoliwrath evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypoliwagpoliwrath",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypoliwagpoliwrathevolution": {
+          "Id": "shinypoliwagpoliwrathevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/poliwag/shinypoliwrath"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypoliwagpoliwrath type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypoliwagpoliwrath"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "poliwagpoliwrath cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_poliwagcry": {
+          "ID": "{{ModId}}_poliwagcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poliwag/poliwagcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_poliwrathcry": {
+          "ID": "{{ModId}}_poliwrathcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poliwag/poliwrathcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poliwagpoliwrath egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_poliwagpoliwrathegg": {
+          "Name": "{{ModId}}_poliwagpoliwrathegg",
+          "DisplayName": "{{i18n: poliwagpoliwrathegg}}",
+          "Description": "{{i18n: poliwagpoliwrathegg.d}}",
+          "Texture": "{{ModId}}/poliwag/poliwagpoliwrathegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_verycommon",
+            "pkegg_panning_p4_rainsnow",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poliwagpoliwrath hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_poliwagpoliwrathegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypoliwagpoliwrath",
+              "AnimalId": "{{ModId}}_shinypoliwagpoliwrath",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_poliwagpoliwrath",
+              "AnimalId": "{{ModId}}_poliwagpoliwrath",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

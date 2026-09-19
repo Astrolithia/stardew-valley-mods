@@ -1,0 +1,352 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load arceus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/arceus/arceus, {{ModId}}/arceus/shinyarceus, {{ModId}}/arceus/arceus1, {{ModId}}/arceus/shinyarceus1, {{ModId}}/arceus/arceus2, {{ModId}}/arceus/shinyarceus2, {{ModId}}/arceus/arceus3, {{ModId}}/arceus/shinyarceus3, {{ModId}}/arceus/arceus4, {{ModId}}/arceus/shinyarceus4, {{ModId}}/arceus/arceus5, {{ModId}}/arceus/shinyarceus5, {{ModId}}/arceus/arceus6, {{ModId}}/arceus/shinyarceus6, {{ModId}}/arceus/arceus7, {{ModId}}/arceus/shinyarceus7, {{ModId}}/arceus/arceus8, {{ModId}}/arceus/shinyarceus8, {{ModId}}/arceus/arceus9, {{ModId}}/arceus/shinyarceus9, {{ModId}}/arceus/arceus10, {{ModId}}/arceus/shinyarceus10, {{ModId}}/arceus/arceus11, {{ModId}}/arceus/shinyarceus11, {{ModId}}/arceus/arceus12, {{ModId}}/arceus/shinyarceus12, {{ModId}}/arceus/arceus13, {{ModId}}/arceus/shinyarceus13, {{ModId}}/arceus/arceus14, {{ModId}}/arceus/shinyarceus14, {{ModId}}/arceus/arceus15, {{ModId}}/arceus/shinyarceus15, {{ModId}}/arceus/arceus16, {{ModId}}/arceus/shinyarceus16, {{ModId}}/arceus/arceus17, {{ModId}}/arceus/shinyarceus17, {{ModId}}/arceus/arceusegg",
+      "FromFile": "assets/livestocks/arceus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_arceus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_arceus": {
+          "DisplayName": "{{i18n: arceus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_arceusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: arceusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/arceus/arceus",
+          "BabyTexture": "{{ModId}}/arceus/arceus",
+          "Sound": "{{ModId}}_arceuscry",
+          "BabySound": "{{ModId}}_arceuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_arceusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "arceus1",
+              "Texture": "{{ModId}}/arceus/arceus1",
+              "BabyTexture": "{{ModId}}/arceus/arceus1"
+            },
+            {
+              "Id": "arceus2",
+              "Texture": "{{ModId}}/arceus/arceus2",
+              "BabyTexture": "{{ModId}}/arceus/arceus2"
+            },
+            {
+              "Id": "arceus3",
+              "Texture": "{{ModId}}/arceus/arceus3",
+              "BabyTexture": "{{ModId}}/arceus/arceus3"
+            },
+            {
+              "Id": "arceus4",
+              "Texture": "{{ModId}}/arceus/arceus4",
+              "BabyTexture": "{{ModId}}/arceus/arceus4"
+            },
+            {
+              "Id": "arceus5",
+              "Texture": "{{ModId}}/arceus/arceus5",
+              "BabyTexture": "{{ModId}}/arceus/arceus5"
+            },
+            {
+              "Id": "arceus6",
+              "Texture": "{{ModId}}/arceus/arceus6",
+              "BabyTexture": "{{ModId}}/arceus/arceus6"
+            },
+            {
+              "Id": "arceus7",
+              "Texture": "{{ModId}}/arceus/arceus7",
+              "BabyTexture": "{{ModId}}/arceus/arceus7"
+            },
+            {
+              "Id": "arceus8",
+              "Texture": "{{ModId}}/arceus/arceus8",
+              "BabyTexture": "{{ModId}}/arceus/arceus8"
+            },
+            {
+              "Id": "arceus9",
+              "Texture": "{{ModId}}/arceus/arceus9",
+              "BabyTexture": "{{ModId}}/arceus/arceus9"
+            },
+            {
+              "Id": "arceus10",
+              "Texture": "{{ModId}}/arceus/arceus10",
+              "BabyTexture": "{{ModId}}/arceus/arceus10"
+            },
+            {
+              "Id": "arceus11",
+              "Texture": "{{ModId}}/arceus/arceus11",
+              "BabyTexture": "{{ModId}}/arceus/arceus11"
+            },
+            {
+              "Id": "arceus12",
+              "Texture": "{{ModId}}/arceus/arceus12",
+              "BabyTexture": "{{ModId}}/arceus/arceus12"
+            },
+            {
+              "Id": "arceus13",
+              "Texture": "{{ModId}}/arceus/arceus13",
+              "BabyTexture": "{{ModId}}/arceus/arceus13"
+            },
+            {
+              "Id": "arceus14",
+              "Texture": "{{ModId}}/arceus/arceus14",
+              "BabyTexture": "{{ModId}}/arceus/arceus14"
+            },
+            {
+              "Id": "arceus15",
+              "Texture": "{{ModId}}/arceus/arceus15",
+              "BabyTexture": "{{ModId}}/arceus/arceus15"
+            },
+            {
+              "Id": "arceus16",
+              "Texture": "{{ModId}}/arceus/arceus16",
+              "BabyTexture": "{{ModId}}/arceus/arceus16"
+            },
+            {
+              "Id": "arceus17",
+              "Texture": "{{ModId}}/arceus/arceus17",
+              "BabyTexture": "{{ModId}}/arceus/arceus17"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyarceus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyarceus": {
+          "DisplayName": "{{i18n: shinyarceus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_arceusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyarceusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/arceus/shinyarceus",
+          "BabyTexture": "{{ModId}}/arceus/shinyarceus",
+          "Sound": "{{ModId}}_arceuscry",
+          "BabySound": "{{ModId}}_arceuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_arceusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "arceus1",
+              "Texture": "{{ModId}}/arceus/shinyarceus1",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus1"
+            },
+            {
+              "Id": "arceus2",
+              "Texture": "{{ModId}}/arceus/shinyarceus2",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus2"
+            },
+            {
+              "Id": "arceus3",
+              "Texture": "{{ModId}}/arceus/shinyarceus3",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus3"
+            },
+            {
+              "Id": "arceus4",
+              "Texture": "{{ModId}}/arceus/shinyarceus4",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus4"
+            },
+            {
+              "Id": "arceus5",
+              "Texture": "{{ModId}}/arceus/shinyarceus5",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus5"
+            },
+            {
+              "Id": "arceus6",
+              "Texture": "{{ModId}}/arceus/shinyarceus6",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus6"
+            },
+            {
+              "Id": "arceus7",
+              "Texture": "{{ModId}}/arceus/shinyarceus7",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus7"
+            },
+            {
+              "Id": "arceus8",
+              "Texture": "{{ModId}}/arceus/shinyarceus8",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus8"
+            },
+            {
+              "Id": "arceus9",
+              "Texture": "{{ModId}}/arceus/shinyarceus9",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus9"
+            },
+            {
+              "Id": "arceus10",
+              "Texture": "{{ModId}}/arceus/shinyarceus10",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus10"
+            },
+            {
+              "Id": "arceus11",
+              "Texture": "{{ModId}}/arceus/shinyarceus11",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus11"
+            },
+            {
+              "Id": "arceus12",
+              "Texture": "{{ModId}}/arceus/shinyarceus12",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus12"
+            },
+            {
+              "Id": "arceus13",
+              "Texture": "{{ModId}}/arceus/shinyarceus13",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus13"
+            },
+            {
+              "Id": "arceus14",
+              "Texture": "{{ModId}}/arceus/shinyarceus14",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus14"
+            },
+            {
+              "Id": "arceus15",
+              "Texture": "{{ModId}}/arceus/shinyarceus15",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus15"
+            },
+            {
+              "Id": "arceus16",
+              "Texture": "{{ModId}}/arceus/shinyarceus16",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus16"
+            },
+            {
+              "Id": "arceus17",
+              "Texture": "{{ModId}}/arceus/shinyarceus17",
+              "BabyTexture": "{{ModId}}/arceus/shinyarceus17"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arceus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_arceuscry": {
+          "ID": "{{ModId}}_arceuscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/arceus/arceuscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arceus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_arceusegg": {
+          "Name": "{{ModId}}_arceusegg",
+          "DisplayName": "{{i18n: arceusegg}}",
+          "Description": "{{i18n: arceusegg.d}}",
+          "Texture": "{{ModId}}/arceus/arceusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_legendary",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "arceus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_arceusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyarceus",
+              "AnimalId": "{{ModId}}_shinyarceus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_arceus",
+              "AnimalId": "{{ModId}}_arceus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load yamask textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/yamask/yamask, {{ModId}}/yamask/shinyyamask, {{ModId}}/yamask/cofagrigus, {{ModId}}/yamask/shinycofagrigus, {{ModId}}/yamask/yamaskegg",
+      "FromFile": "assets/livestocks/yamask/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_yamask data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_yamask": {
+          "DisplayName": "{{i18n: yamask}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_yamaskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: yamaskbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yamask/cofagrigus",
+          "BabyTexture": "{{ModId}}/yamask/yamask",
+          "Sound": "{{ModId}}_cofagriguscry",
+          "BabySound": "{{ModId}}_yamaskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yamaskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyyamask data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyyamask": {
+          "DisplayName": "{{i18n: shinyyamask}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_yamaskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyyamaskbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yamask/shinycofagrigus",
+          "BabyTexture": "{{ModId}}/yamask/shinyyamask",
+          "Sound": "{{ModId}}_cofagriguscry",
+          "BabySound": "{{ModId}}_yamaskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yamaskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "yamask cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_yamaskcry": {
+          "ID": "{{ModId}}_yamaskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yamask/yamaskcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cofagriguscry": {
+          "ID": "{{ModId}}_cofagriguscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yamask/cofagriguscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yamask egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_yamaskegg": {
+          "Name": "{{ModId}}_yamaskegg",
+          "DisplayName": "{{i18n: yamaskegg}}",
+          "Description": "{{i18n: yamaskegg.d}}",
+          "Texture": "{{ModId}}/yamask/yamaskegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yamask hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_yamaskegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyyamask",
+              "AnimalId": "{{ModId}}_shinyyamask",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_yamask",
+              "AnimalId": "{{ModId}}_yamask",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

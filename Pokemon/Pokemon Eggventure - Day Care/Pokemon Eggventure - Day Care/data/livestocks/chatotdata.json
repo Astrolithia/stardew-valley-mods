@@ -1,0 +1,181 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load chatot textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/chatot/chatot, {{ModId}}/chatot/shinychatot, {{ModId}}/chatot/chatotegg",
+      "FromFile": "assets/livestocks/chatot/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_chatot data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_chatot": {
+          "DisplayName": "{{i18n: chatot}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chatotegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: chatotbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chatot/chatot",
+          "BabyTexture": "{{ModId}}/chatot/chatot",
+          "Sound": "{{ModId}}_chatotcry",
+          "BabySound": "{{ModId}}_chatotcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chatotegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinychatot data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinychatot": {
+          "DisplayName": "{{i18n: shinychatot}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chatotegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinychatotbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chatot/shinychatot",
+          "BabyTexture": "{{ModId}}/chatot/shinychatot",
+          "Sound": "{{ModId}}_chatotcry",
+          "BabySound": "{{ModId}}_chatotcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chatotegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "chatot cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_chatotcry": {
+          "ID": "{{ModId}}_chatotcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chatot/chatotcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chatot egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_chatotegg": {
+          "Name": "{{ModId}}_chatotegg",
+          "DisplayName": "{{i18n: chatotegg}}",
+          "Description": "{{i18n: chatotegg.d}}",
+          "Texture": "{{ModId}}/chatot/chatotegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_flying",
+            "pkegg_rarity_veryrare",
+            "pkegg_chop_palmisland",
+            "pkegg_shake_palmisland",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chatot hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_chatotegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinychatot",
+              "AnimalId": "{{ModId}}_shinychatot",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_chatot",
+              "AnimalId": "{{ModId}}_chatot",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

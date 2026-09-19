@@ -1,0 +1,203 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ironbundle textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ironbundle/ironbundle, {{ModId}}/ironbundle/shinyironbundle, {{ModId}}/ironbundle/ironbundleegg",
+      "FromFile": "assets/livestocks/ironbundle/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_ironbundle data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ironbundle": {
+          "DisplayName": "{{i18n: ironbundle}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ironbundleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ironbundlebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironbundle/ironbundle",
+          "BabyTexture": "{{ModId}}/ironbundle/ironbundle",
+          "Sound": "{{ModId}}_ironbundlecry",
+          "BabySound": "{{ModId}}_ironbundlecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironbundleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_ironbundle type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ironbundle"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyironbundle data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyironbundle": {
+          "DisplayName": "{{i18n: shinyironbundle}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ironbundleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyironbundlebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ironbundle/shinyironbundle",
+          "BabyTexture": "{{ModId}}/ironbundle/shinyironbundle",
+          "Sound": "{{ModId}}_ironbundlecry",
+          "BabySound": "{{ModId}}_ironbundlecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_ironbundleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyironbundle type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyironbundle"
+      ],
+      "Entries": {
+        "IgnoreWinter": true,
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "ironbundle cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ironbundlecry": {
+          "ID": "{{ModId}}_ironbundlecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ironbundle/ironbundlecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironbundle egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ironbundleegg": {
+          "Name": "{{ModId}}_ironbundleegg",
+          "DisplayName": "{{i18n: ironbundleegg}}",
+          "Description": "{{i18n: ironbundleegg.d}}",
+          "Texture": "{{ModId}}/ironbundle/ironbundleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ice",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_futurs",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ironbundle hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ironbundleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyironbundle",
+              "AnimalId": "{{ModId}}_shinyironbundle",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ironbundle",
+              "AnimalId": "{{ModId}}_ironbundle",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

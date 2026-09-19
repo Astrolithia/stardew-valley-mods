@@ -1,0 +1,1651 @@
+{
+  "Changes": [
+    {
+      "LogName": "Create Lance record with all Pokemon gift tastes (SVE)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Lance": "Now this is a fine gift. My thanks./pkegg_type_dragon pkenergy_type_dragon pkdrop_type_dragon/Not bad at all./pkegg_type_fighting pkenergy_type_fighting pkdrop_type_fighting/I have no use for this./pkegg_type_normal pkenergy_type_normal pkdrop_type_normal/Why would you give me this?/pkegg_type_poison pkenergy_type_poison pkdrop_type_poison/Hm.///"
+      },
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "Pokemon egg gift tastes (universal, modded NPCs)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Universal_Like"
+          ],
+          "Value": "pkegg_item",
+          "Delimiter": " "
+        }
+      ]
+    },
+    {
+      "LogName": "Pokemon egg gift tastes (vanilla NPCs)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Abigail",
+            "1"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Abigail",
+            "3"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Abigail",
+            "5"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Abigail",
+            "7"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Alex",
+            "1"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Alex",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Alex",
+            "5"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Alex",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Caroline",
+            "1"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Caroline",
+            "3"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Caroline",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Caroline",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Clint",
+            "1"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Clint",
+            "3"
+          ],
+          "Value": "pkegg_type_rock",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Clint",
+            "5"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Clint",
+            "7"
+          ],
+          "Value": "pkegg_type_water",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            "1"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            "3"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            "5"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Dwarf",
+            "1"
+          ],
+          "Value": "pkegg_type_rock",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Dwarf",
+            "3"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Dwarf",
+            "5"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Dwarf",
+            "7"
+          ],
+          "Value": "pkegg_type_water",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "1"
+          ],
+          "Value": "pkegg_type_water",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "3"
+          ],
+          "Value": "pkegg_type_flying",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "5"
+          ],
+          "Value": "pkegg_type_electric",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "7"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Emily",
+            "1"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Emily",
+            "3"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Emily",
+            "5"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Emily",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Evelyn",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Evelyn",
+            "3"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Evelyn",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Evelyn",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "George",
+            "1"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "George",
+            "3"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "George",
+            "5"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "George",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Gus",
+            "1"
+          ],
+          "Value": "pkegg_type_fire",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Gus",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Gus",
+            "5"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Gus",
+            "7"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Haley",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Haley",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Haley",
+            "5"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Haley",
+            "7"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "1"
+          ],
+          "Value": "pkegg_type_flying",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jas",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jas",
+            "3"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jas",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jas",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jodi",
+            "1"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jodi",
+            "3"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jodi",
+            "5"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jodi",
+            "7"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Kent",
+            "1"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Kent",
+            "3"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Kent",
+            "5"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Kent",
+            "7"
+          ],
+          "Value": "pkegg_type_fire",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            "1"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            "3"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            "5"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Krobus",
+            "7"
+          ],
+          "Value": "pkegg_type_rock",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            "1"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            "3"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            "5"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            "7"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leo",
+            "1"
+          ],
+          "Value": "pkegg_type_flying",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leo",
+            "3"
+          ],
+          "Value": "pkegg_type_water",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leo",
+            "5"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leo",
+            "7"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Lewis",
+            "1"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Lewis",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Lewis",
+            "5"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Lewis",
+            "7"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Linus",
+            "1"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Linus",
+            "3"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Linus",
+            "5"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Linus",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Marnie",
+            "1"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Marnie",
+            "3"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Marnie",
+            "5"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Marnie",
+            "7"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Maru",
+            "1"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Maru",
+            "3"
+          ],
+          "Value": "pkegg_type_electric",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Maru",
+            "5"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Maru",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pam",
+            "1"
+          ],
+          "Value": "pkegg_type_electric",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pam",
+            "3"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pam",
+            "5"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pam",
+            "7"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pierre",
+            "1"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pierre",
+            "3"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pierre",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pierre",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Robin",
+            "1"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Robin",
+            "3"
+          ],
+          "Value": "pkegg_type_rock",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Robin",
+            "5"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Robin",
+            "7"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sam",
+            "1"
+          ],
+          "Value": "pkegg_type_electric",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sam",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sam",
+            "5"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sam",
+            "7"
+          ],
+          "Value": "pkegg_type_rock",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "1"
+          ],
+          "Value": "pkegg_type_fire",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "3"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "5"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "7"
+          ],
+          "Value": "pkegg_type_ice",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sebastian",
+            "1"
+          ],
+          "Value": "pkegg_type_ice",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sebastian",
+            "3"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sebastian",
+            "5"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sebastian",
+            "7"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Shane",
+            "1"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Shane",
+            "3"
+          ],
+          "Value": "pkegg_type_flying",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Shane",
+            "5"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Shane",
+            "7"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Vincent",
+            "1"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Vincent",
+            "3"
+          ],
+          "Value": "pkegg_type_flying",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Vincent",
+            "5"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Vincent",
+            "7"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Willy",
+            "1"
+          ],
+          "Value": "pkegg_type_water",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Willy",
+            "3"
+          ],
+          "Value": "pkegg_type_ice",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Willy",
+            "5"
+          ],
+          "Value": "pkegg_type_steel",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Willy",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            "1"
+          ],
+          "Value": "pkegg_type_dragon",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            "3"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            "5"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            "7"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        }
+      ]
+    },
+    {
+      "LogName": "Pokemon egg gift tastes (SVE NPCs)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      },
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Andy",
+            "1"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Andy",
+            "3"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Andy",
+            "5"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Andy",
+            "7"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Claire",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Claire",
+            "3"
+          ],
+          "Value": "pkegg_type_normal",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Claire",
+            "5"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Claire",
+            "7"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Olivia",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Olivia",
+            "3"
+          ],
+          "Value": "pkegg_type_grass",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Olivia",
+            "5"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Olivia",
+            "7"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sophia",
+            "1"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sophia",
+            "3"
+          ],
+          "Value": "pkegg_type_ghost",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sophia",
+            "5"
+          ],
+          "Value": "pkegg_type_fighting",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sophia",
+            "7"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Susan",
+            "1"
+          ],
+          "Value": "pkegg_type_fire",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Susan",
+            "3"
+          ],
+          "Value": "pkegg_type_fairy",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Susan",
+            "5"
+          ],
+          "Value": "pkegg_type_poison",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Susan",
+            "7"
+          ],
+          "Value": "pkegg_type_dark",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Victor",
+            "1"
+          ],
+          "Value": "pkegg_type_psychic",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Victor",
+            "3"
+          ],
+          "Value": "pkegg_type_water",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Victor",
+            "5"
+          ],
+          "Value": "pkegg_type_ground",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Victor",
+            "7"
+          ],
+          "Value": "pkegg_type_bug",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

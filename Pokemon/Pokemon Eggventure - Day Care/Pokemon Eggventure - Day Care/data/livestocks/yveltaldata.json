@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load yveltal textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/yveltal/yveltal, {{ModId}}/yveltal/shinyyveltal, {{ModId}}/yveltal/yveltalegg",
+      "FromFile": "assets/livestocks/yveltal/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_yveltal data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_yveltal": {
+          "DisplayName": "{{i18n: yveltal}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yveltalegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: yveltalbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yveltal/yveltal",
+          "BabyTexture": "{{ModId}}/yveltal/yveltal",
+          "Sound": "{{ModId}}_yveltalcry",
+          "BabySound": "{{ModId}}_yveltalcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yveltalegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyyveltal data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyyveltal": {
+          "DisplayName": "{{i18n: shinyyveltal}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yveltalegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyyveltalbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yveltal/shinyyveltal",
+          "BabyTexture": "{{ModId}}/yveltal/shinyyveltal",
+          "Sound": "{{ModId}}_yveltalcry",
+          "BabySound": "{{ModId}}_yveltalcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yveltalegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "yveltal cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_yveltalcry": {
+          "ID": "{{ModId}}_yveltalcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yveltal/yveltalcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yveltal egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_yveltalegg": {
+          "Name": "{{ModId}}_yveltalegg",
+          "DisplayName": "{{i18n: yveltalegg}}",
+          "Description": "{{i18n: yveltalegg.d}}",
+          "Texture": "{{ModId}}/yveltal/yveltalegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yveltal hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_yveltalegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyyveltal",
+              "AnimalId": "{{ModId}}_shinyyveltal",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_yveltal",
+              "AnimalId": "{{ModId}}_yveltal",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

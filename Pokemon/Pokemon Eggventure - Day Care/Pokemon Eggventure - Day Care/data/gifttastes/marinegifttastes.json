@@ -1,0 +1,71 @@
+{
+  "Changes": [
+    {
+      "LogName": "Marine item gift tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Universal_Neutral"
+          ],
+          "Value": "pkmarine_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Willy",
+            "3"
+          ],
+          "Value": "pkmarine_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "3"
+          ],
+          "Value": "pkmarine_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leo",
+            "3"
+          ],
+          "Value": "pkmarine_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            "3"
+          ],
+          "Value": "pkmarine_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "1"
+          ],
+          "Value": "pkmarine_heartscale",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

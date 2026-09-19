@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tynamo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tynamo/tynamo, {{ModId}}/tynamo/shinytynamo, {{ModId}}/tynamo/eelektrik, {{ModId}}/tynamo/shinyeelektrik, {{ModId}}/tynamo/eelektross, {{ModId}}/tynamo/shinyeelektross, {{ModId}}/tynamo/tynamoegg",
+      "FromFile": "assets/livestocks/tynamo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tynamo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tynamo": {
+          "DisplayName": "{{i18n: tynamo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tynamoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tynamobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tynamo/eelektrik",
+          "BabyTexture": "{{ModId}}/tynamo/tynamo",
+          "Sound": "{{ModId}}_eelektrosscry",
+          "BabySound": "{{ModId}}_tynamocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tynamoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_tynamo evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_tynamo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "tynamoevolution": {
+          "Id": "tynamoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/tynamo/eelektross"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytynamo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytynamo": {
+          "DisplayName": "{{i18n: shinytynamo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tynamoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytynamobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tynamo/shinyeelektrik",
+          "BabyTexture": "{{ModId}}/tynamo/shinytynamo",
+          "Sound": "{{ModId}}_eelektrosscry",
+          "BabySound": "{{ModId}}_tynamocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tynamoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytynamo evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytynamo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytynamoevolution": {
+          "Id": "shinytynamoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/tynamo/shinyeelektross"
+        }
+      }
+    },
+    {
+      "LogName": "tynamo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tynamocry": {
+          "ID": "{{ModId}}_tynamocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tynamo/tynamocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_eelektrosscry": {
+          "ID": "{{ModId}}_eelektrosscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tynamo/eelektrosscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tynamo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tynamoegg": {
+          "Name": "{{ModId}}_tynamoegg",
+          "DisplayName": "{{i18n: tynamoegg}}",
+          "Description": "{{i18n: tynamoegg.d}}",
+          "Texture": "{{ModId}}/tynamo/tynamoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tynamo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tynamoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytynamo",
+              "AnimalId": "{{ModId}}_shinytynamo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tynamo",
+              "AnimalId": "{{ModId}}_tynamo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

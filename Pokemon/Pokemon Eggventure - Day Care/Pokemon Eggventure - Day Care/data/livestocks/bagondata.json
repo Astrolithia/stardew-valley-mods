@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bagon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bagon/bagon, {{ModId}}/bagon/shinybagon, {{ModId}}/bagon/shelgon, {{ModId}}/bagon/shinyshelgon, {{ModId}}/bagon/salamence, {{ModId}}/bagon/shinysalamence, {{ModId}}/bagon/bagonegg",
+      "FromFile": "assets/livestocks/bagon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bagon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bagon": {
+          "DisplayName": "{{i18n: bagon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bagonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bagonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bagon/shelgon",
+          "BabyTexture": "{{ModId}}/bagon/bagon",
+          "Sound": "{{ModId}}_salamencecry",
+          "BabySound": "{{ModId}}_bagoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bagonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_bagon evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bagon",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "bagonevolution": {
+          "Id": "bagonevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bagon/salamence"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybagon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybagon": {
+          "DisplayName": "{{i18n: shinybagon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bagonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybagonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bagon/shinyshelgon",
+          "BabyTexture": "{{ModId}}/bagon/shinybagon",
+          "Sound": "{{ModId}}_salamencecry",
+          "BabySound": "{{ModId}}_bagoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bagonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybagon evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybagon",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybagonevolution": {
+          "Id": "shinybagonevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bagon/shinysalamence"
+        }
+      }
+    },
+    {
+      "LogName": "bagon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bagoncry": {
+          "ID": "{{ModId}}_bagoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bagon/bagoncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_salamencecry": {
+          "ID": "{{ModId}}_salamencecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bagon/salamencecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bagon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bagonegg": {
+          "Name": "{{ModId}}_bagonegg",
+          "DisplayName": "{{i18n: bagonegg}}",
+          "Description": "{{i18n: bagonegg.d}}",
+          "Texture": "{{ModId}}/bagon/bagonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p5",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bagon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bagonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybagon",
+              "AnimalId": "{{ModId}}_shinybagon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bagon",
+              "AnimalId": "{{ModId}}_bagon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

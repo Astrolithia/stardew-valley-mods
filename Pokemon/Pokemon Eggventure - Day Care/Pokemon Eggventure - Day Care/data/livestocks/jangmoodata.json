@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load jangmoo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/jangmoo/jangmoo, {{ModId}}/jangmoo/shinyjangmoo, {{ModId}}/jangmoo/hakamoo, {{ModId}}/jangmoo/shinyhakamoo, {{ModId}}/jangmoo/kommoo, {{ModId}}/jangmoo/shinykommoo, {{ModId}}/jangmoo/jangmooegg",
+      "FromFile": "assets/livestocks/jangmoo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_jangmoo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_jangmoo": {
+          "DisplayName": "{{i18n: jangmoo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_jangmooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: jangmoobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/jangmoo/hakamoo",
+          "BabyTexture": "{{ModId}}/jangmoo/jangmoo",
+          "Sound": "{{ModId}}_kommoocry",
+          "BabySound": "{{ModId}}_jangmoocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_jangmooegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_jangmoo evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_jangmoo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "jangmooevolution": {
+          "Id": "jangmooevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/jangmoo/kommoo"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyjangmoo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyjangmoo": {
+          "DisplayName": "{{i18n: shinyjangmoo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_jangmooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyjangmoobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/jangmoo/shinyhakamoo",
+          "BabyTexture": "{{ModId}}/jangmoo/shinyjangmoo",
+          "Sound": "{{ModId}}_kommoocry",
+          "BabySound": "{{ModId}}_jangmoocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_jangmooegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyjangmoo evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyjangmoo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyjangmooevolution": {
+          "Id": "shinyjangmooevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/jangmoo/shinykommoo"
+        }
+      }
+    },
+    {
+      "LogName": "jangmoo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_jangmoocry": {
+          "ID": "{{ModId}}_jangmoocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/jangmoo/jangmoocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_kommoocry": {
+          "ID": "{{ModId}}_kommoocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/jangmoo/kommoocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "jangmoo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_jangmooegg": {
+          "Name": "{{ModId}}_jangmooegg",
+          "DisplayName": "{{i18n: jangmooegg}}",
+          "Description": "{{i18n: jangmooegg.d}}",
+          "Texture": "{{ModId}}/jangmoo/jangmooegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p5",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "jangmoo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_jangmooegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyjangmoo",
+              "AnimalId": "{{ModId}}_shinyjangmoo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_jangmoo",
+              "AnimalId": "{{ModId}}_jangmoo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

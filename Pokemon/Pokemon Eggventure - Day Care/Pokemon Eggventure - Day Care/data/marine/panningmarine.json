@@ -1,0 +1,26 @@
+{
+  "Changes": [
+    {
+      "LogName": "Marine items and nuggets can be panned",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Panning",
+      "Entries": {
+        "{{ModId}}_panning_pkpan_commun": {
+          "Id": "{{ModId}}_panning_pkpan_commun",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkpan_commun",
+          "MaxItems": 1,
+          "Chance": "{{RatePanningExtras}}"
+        },
+        "{{ModId}}_panning_pkpan_rare": {
+          "Id": "{{ModId}}_panning_pkpan_rare",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkpan_rare",
+          "MaxItems": 1,
+          "Chance": "{{RatePanningExtras}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 4"
+        }
+      }
+    }
+  ]
+}

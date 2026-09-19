@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load oddishvileplume textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/oddish/oddish_oddishvileplume, {{ModId}}/oddish/shinyoddish_oddishvileplume, {{ModId}}/oddish/gloom_oddishvileplume, {{ModId}}/oddish/shinygloom_oddishvileplume, {{ModId}}/oddish/vileplume, {{ModId}}/oddish/shinyvileplume, {{ModId}}/oddish/oddishvileplumeegg",
+      "FromFile": "assets/livestocks/oddish/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_oddishvileplume data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_oddishvileplume": {
+          "DisplayName": "{{i18n: oddishvileplume}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_oddishvileplumeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: oddishvileplumebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oddish/gloom_oddishvileplume",
+          "BabyTexture": "{{ModId}}/oddish/oddish_oddishvileplume",
+          "Sound": "{{ModId}}_vileplumecry",
+          "BabySound": "{{ModId}}_oddishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oddishvileplumeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_oddishvileplume evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_oddishvileplume",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "oddishvileplumeevolution": {
+          "Id": "oddishvileplumeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oddish/vileplume"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyoddishvileplume data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyoddishvileplume": {
+          "DisplayName": "{{i18n: shinyoddishvileplume}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_oddishvileplumeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyoddishvileplumebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oddish/shinygloom_oddishvileplume",
+          "BabyTexture": "{{ModId}}/oddish/shinyoddish_oddishvileplume",
+          "Sound": "{{ModId}}_vileplumecry",
+          "BabySound": "{{ModId}}_oddishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oddishvileplumeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyoddishvileplume evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyoddishvileplume",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyoddishvileplumeevolution": {
+          "Id": "shinyoddishvileplumeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oddish/shinyvileplume"
+        }
+      }
+    },
+    {
+      "LogName": "oddishvileplume cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_oddishcry": {
+          "ID": "{{ModId}}_oddishcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oddish/oddishcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_vileplumecry": {
+          "ID": "{{ModId}}_vileplumecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oddish/vileplumecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oddishvileplume egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_oddishvileplumeegg": {
+          "Name": "{{ModId}}_oddishvileplumeegg",
+          "DisplayName": "{{i18n: oddishvileplumeegg}}",
+          "Description": "{{i18n: oddishvileplumeegg.d}}",
+          "Texture": "{{ModId}}/oddish/oddishvileplumeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oddishvileplume hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_oddishvileplumeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyoddishvileplume",
+              "AnimalId": "{{ModId}}_shinyoddishvileplume",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_oddishvileplume",
+              "AnimalId": "{{ModId}}_oddishvileplume",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

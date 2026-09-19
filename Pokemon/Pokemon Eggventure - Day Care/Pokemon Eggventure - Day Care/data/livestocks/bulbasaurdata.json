@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bulbasaur textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bulbasaur/bulbasaur, {{ModId}}/bulbasaur/shinybulbasaur, {{ModId}}/bulbasaur/ivysaur, {{ModId}}/bulbasaur/shinyivysaur, {{ModId}}/bulbasaur/venusaur, {{ModId}}/bulbasaur/shinyvenusaur, {{ModId}}/bulbasaur/bulbasauregg",
+      "FromFile": "assets/livestocks/bulbasaur/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bulbasaur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bulbasaur": {
+          "DisplayName": "{{i18n: bulbasaur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bulbasauregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bulbasaurbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bulbasaur/ivysaur",
+          "BabyTexture": "{{ModId}}/bulbasaur/bulbasaur",
+          "Sound": "{{ModId}}_venusaurcry",
+          "BabySound": "{{ModId}}_bulbasaurcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bulbasauregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_bulbasaur evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bulbasaur",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "bulbasaurevolution": {
+          "Id": "bulbasaurevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bulbasaur/venusaur"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybulbasaur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybulbasaur": {
+          "DisplayName": "{{i18n: shinybulbasaur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bulbasauregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybulbasaurbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bulbasaur/shinyivysaur",
+          "BabyTexture": "{{ModId}}/bulbasaur/shinybulbasaur",
+          "Sound": "{{ModId}}_venusaurcry",
+          "BabySound": "{{ModId}}_bulbasaurcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bulbasauregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybulbasaur evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybulbasaur",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybulbasaurevolution": {
+          "Id": "shinybulbasaurevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bulbasaur/shinyvenusaur"
+        }
+      }
+    },
+    {
+      "LogName": "bulbasaur cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bulbasaurcry": {
+          "ID": "{{ModId}}_bulbasaurcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bulbasaur/bulbasaurcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_venusaurcry": {
+          "ID": "{{ModId}}_venusaurcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bulbasaur/venusaurcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bulbasaur egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bulbasauregg": {
+          "Name": "{{ModId}}_bulbasauregg",
+          "DisplayName": "{{i18n: bulbasauregg}}",
+          "Description": "{{i18n: bulbasauregg.d}}",
+          "Texture": "{{ModId}}/bulbasaur/bulbasauregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bulbasaur hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bulbasauregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybulbasaur",
+              "AnimalId": "{{ModId}}_shinybulbasaur",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bulbasaur",
+              "AnimalId": "{{ModId}}_bulbasaur",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

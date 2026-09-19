@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load petilil textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/petilil/petilil, {{ModId}}/petilil/shinypetilil, {{ModId}}/petilil/lilligant, {{ModId}}/petilil/shinylilligant, {{ModId}}/petilil/petililegg",
+      "FromFile": "assets/livestocks/petilil/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_petilil data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_petilil": {
+          "DisplayName": "{{i18n: petilil}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_petililegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: petililbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/petilil/lilligant",
+          "BabyTexture": "{{ModId}}/petilil/petilil",
+          "Sound": "{{ModId}}_lilligantcry",
+          "BabySound": "{{ModId}}_petililcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_petililegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypetilil data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypetilil": {
+          "DisplayName": "{{i18n: shinypetilil}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_petililegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypetililbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/petilil/shinylilligant",
+          "BabyTexture": "{{ModId}}/petilil/shinypetilil",
+          "Sound": "{{ModId}}_lilligantcry",
+          "BabySound": "{{ModId}}_petililcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_petililegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "petilil cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_petililcry": {
+          "ID": "{{ModId}}_petililcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/petilil/petililcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_lilligantcry": {
+          "ID": "{{ModId}}_lilligantcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/petilil/lilligantcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "petilil egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_petililegg": {
+          "Name": "{{ModId}}_petililegg",
+          "DisplayName": "{{i18n: petililegg}}",
+          "Description": "{{i18n: petililegg.d}}",
+          "Texture": "{{ModId}}/petilil/petililegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "petilil hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_petililegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypetilil",
+              "AnimalId": "{{ModId}}_shinypetilil",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_petilil",
+              "AnimalId": "{{ModId}}_petilil",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

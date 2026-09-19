@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load raikou textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/raikou/raikou, {{ModId}}/raikou/shinyraikou, {{ModId}}/raikou/raikouegg",
+      "FromFile": "assets/livestocks/raikou/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_raikou data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_raikou": {
+          "DisplayName": "{{i18n: raikou}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_raikouegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: raikoubirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/raikou/raikou",
+          "BabyTexture": "{{ModId}}/raikou/raikou",
+          "Sound": "{{ModId}}_raikoucry",
+          "BabySound": "{{ModId}}_raikoucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_raikouegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyraikou data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyraikou": {
+          "DisplayName": "{{i18n: shinyraikou}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_raikouegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyraikoubirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/raikou/shinyraikou",
+          "BabyTexture": "{{ModId}}/raikou/shinyraikou",
+          "Sound": "{{ModId}}_raikoucry",
+          "BabySound": "{{ModId}}_raikoucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_raikouegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "raikou cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_raikoucry": {
+          "ID": "{{ModId}}_raikoucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/raikou/raikoucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "raikou egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_raikouegg": {
+          "Name": "{{ModId}}_raikouegg",
+          "DisplayName": "{{i18n: raikouegg}}",
+          "Description": "{{i18n: raikouegg.d}}",
+          "Texture": "{{ModId}}/raikou/raikouegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "raikou hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_raikouegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyraikou",
+              "AnimalId": "{{ModId}}_shinyraikou",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_raikou",
+              "AnimalId": "{{ModId}}_raikou",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

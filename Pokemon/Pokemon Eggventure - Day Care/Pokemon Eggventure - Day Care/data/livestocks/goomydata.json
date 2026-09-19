@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load goomy textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/goomy/goomy, {{ModId}}/goomy/shinygoomy, {{ModId}}/goomy/sliggoo, {{ModId}}/goomy/shinysliggoo, {{ModId}}/goomy/goodra, {{ModId}}/goomy/shinygoodra, {{ModId}}/goomy/goomyegg",
+      "FromFile": "assets/livestocks/goomy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_goomy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_goomy": {
+          "DisplayName": "{{i18n: goomy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_goomyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: goomybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/goomy/sliggoo",
+          "BabyTexture": "{{ModId}}/goomy/goomy",
+          "Sound": "{{ModId}}_goodracry",
+          "BabySound": "{{ModId}}_goomycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_goomyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_goomy evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_goomy",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "goomyevolution": {
+          "Id": "goomyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/goomy/goodra"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygoomy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygoomy": {
+          "DisplayName": "{{i18n: shinygoomy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_goomyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygoomybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/goomy/shinysliggoo",
+          "BabyTexture": "{{ModId}}/goomy/shinygoomy",
+          "Sound": "{{ModId}}_goodracry",
+          "BabySound": "{{ModId}}_goomycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_goomyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygoomy evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygoomy",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygoomyevolution": {
+          "Id": "shinygoomyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/goomy/shinygoodra"
+        }
+      }
+    },
+    {
+      "LogName": "goomy cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_goomycry": {
+          "ID": "{{ModId}}_goomycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/goomy/goomycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_goodracry": {
+          "ID": "{{ModId}}_goodracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/goomy/goodracry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "goomy egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_goomyegg": {
+          "Name": "{{ModId}}_goomyegg",
+          "DisplayName": "{{i18n: goomyegg}}",
+          "Description": "{{i18n: goomyegg.d}}",
+          "Texture": "{{ModId}}/goomy/goomyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "pkegg_panning_p4",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "goomy hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_goomyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygoomy",
+              "AnimalId": "{{ModId}}_shinygoomy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_goomy",
+              "AnimalId": "{{ModId}}_goomy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

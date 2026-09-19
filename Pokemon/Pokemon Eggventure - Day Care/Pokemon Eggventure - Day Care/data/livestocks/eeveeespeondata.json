@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load eeveeespeon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/eevee/eeveeespeon, {{ModId}}/eevee/shinyeeveeespeon, {{ModId}}/eevee/espeon, {{ModId}}/eevee/shinyespeon, {{ModId}}/eevee/eeveeespeonegg",
+      "FromFile": "assets/livestocks/eevee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_eeveeespeon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_eeveeespeon": {
+          "DisplayName": "{{i18n: eeveeespeon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eeveeespeonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: eeveeespeonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eevee/espeon",
+          "BabyTexture": "{{ModId}}/eevee/eeveeespeon",
+          "Sound": "{{ModId}}_espeoncry",
+          "BabySound": "{{ModId}}_eeveecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eeveeespeonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyeeveeespeon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyeeveeespeon": {
+          "DisplayName": "{{i18n: shinyeeveeespeon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eeveeespeonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyeeveeespeonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eevee/shinyespeon",
+          "BabyTexture": "{{ModId}}/eevee/shinyeeveeespeon",
+          "Sound": "{{ModId}}_espeoncry",
+          "BabySound": "{{ModId}}_eeveecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eeveeespeonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "eeveeespeon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_eeveecry": {
+          "ID": "{{ModId}}_eeveecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eevee/eeveecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_espeoncry": {
+          "ID": "{{ModId}}_espeoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eevee/espeoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eeveeespeon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_eeveeespeonegg": {
+          "Name": "{{ModId}}_eeveeespeonegg",
+          "DisplayName": "{{i18n: eeveeespeonegg}}",
+          "Description": "{{i18n: eeveeespeonegg.d}}",
+          "Texture": "{{ModId}}/eevee/eeveeespeonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_rare",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eeveeespeon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_eeveeespeonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyeeveeespeon",
+              "AnimalId": "{{ModId}}_shinyeeveeespeon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_eeveeespeon",
+              "AnimalId": "{{ModId}}_eeveeespeon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

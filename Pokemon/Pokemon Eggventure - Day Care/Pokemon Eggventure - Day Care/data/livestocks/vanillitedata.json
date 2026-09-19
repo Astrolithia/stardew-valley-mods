@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load vanillite textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/vanillite/vanillite, {{ModId}}/vanillite/shinyvanillite, {{ModId}}/vanillite/vanillish, {{ModId}}/vanillite/shinyvanillish, {{ModId}}/vanillite/vanilluxe, {{ModId}}/vanillite/shinyvanilluxe, {{ModId}}/vanillite/vanilliteegg",
+      "FromFile": "assets/livestocks/vanillite/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_vanillite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_vanillite": {
+          "DisplayName": "{{i18n: vanillite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_vanilliteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: vanillitebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vanillite/vanillish",
+          "BabyTexture": "{{ModId}}/vanillite/vanillite",
+          "Sound": "{{ModId}}_vanilluxecry",
+          "BabySound": "{{ModId}}_vanillitecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_vanilliteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_vanillite evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_vanillite",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "vanilliteevolution": {
+          "Id": "vanilliteevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/vanillite/vanilluxe"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_vanillite type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_vanillite"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvanillite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvanillite": {
+          "DisplayName": "{{i18n: shinyvanillite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_vanilliteegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvanillitebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vanillite/shinyvanillish",
+          "BabyTexture": "{{ModId}}/vanillite/shinyvanillite",
+          "Sound": "{{ModId}}_vanilluxecry",
+          "BabySound": "{{ModId}}_vanillitecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_vanilliteegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyvanillite evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyvanillite",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyvanilliteevolution": {
+          "Id": "shinyvanilliteevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/vanillite/shinyvanilluxe"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyvanillite type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyvanillite"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "vanillite cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_vanillitecry": {
+          "ID": "{{ModId}}_vanillitecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vanillite/vanillitecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_vanilluxecry": {
+          "ID": "{{ModId}}_vanilluxecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vanillite/vanilluxecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "vanillite egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_vanilliteegg": {
+          "Name": "{{ModId}}_vanilliteegg",
+          "DisplayName": "{{i18n: vanilliteegg}}",
+          "Description": "{{i18n: vanilliteegg.d}}",
+          "Texture": "{{ModId}}/vanillite/vanilliteegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_41_60_p3",
+            "pkegg_mine_61_80_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "vanillite hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_vanilliteegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvanillite",
+              "AnimalId": "{{ModId}}_shinyvanillite",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_vanillite",
+              "AnimalId": "{{ModId}}_vanillite",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

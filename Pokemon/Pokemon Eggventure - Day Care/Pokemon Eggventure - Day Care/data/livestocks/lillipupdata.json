@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load lillipup textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/lillipup/lillipup, {{ModId}}/lillipup/shinylillipup, {{ModId}}/lillipup/herdier, {{ModId}}/lillipup/shinyherdier, {{ModId}}/lillipup/stoutland, {{ModId}}/lillipup/shinystoutland, {{ModId}}/lillipup/lillipupegg",
+      "FromFile": "assets/livestocks/lillipup/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_lillipup data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_lillipup": {
+          "DisplayName": "{{i18n: lillipup}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_lillipupegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: lillipupbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/lillipup/herdier",
+          "BabyTexture": "{{ModId}}/lillipup/lillipup",
+          "Sound": "{{ModId}}_stoutlandcry",
+          "BabySound": "{{ModId}}_lillipupcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_lillipupegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_lillipup evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_lillipup",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "lillipupevolution": {
+          "Id": "lillipupevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/lillipup/stoutland"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylillipup data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylillipup": {
+          "DisplayName": "{{i18n: shinylillipup}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_lillipupegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylillipupbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/lillipup/shinyherdier",
+          "BabyTexture": "{{ModId}}/lillipup/shinylillipup",
+          "Sound": "{{ModId}}_stoutlandcry",
+          "BabySound": "{{ModId}}_lillipupcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_lillipupegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylillipup evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylillipup",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinylillipupevolution": {
+          "Id": "shinylillipupevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/lillipup/shinystoutland"
+        }
+      }
+    },
+    {
+      "LogName": "lillipup cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_lillipupcry": {
+          "ID": "{{ModId}}_lillipupcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/lillipup/lillipupcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_stoutlandcry": {
+          "ID": "{{ModId}}_stoutlandcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/lillipup/stoutlandcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lillipup egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_lillipupegg": {
+          "Name": "{{ModId}}_lillipupegg",
+          "DisplayName": "{{i18n: lillipupegg}}",
+          "Description": "{{i18n: lillipupegg.d}}",
+          "Texture": "{{ModId}}/lillipup/lillipupegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "lillipup hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_lillipupegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylillipup",
+              "AnimalId": "{{ModId}}_shinylillipup",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_lillipup",
+              "AnimalId": "{{ModId}}_lillipup",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load terapagos textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/terapagos/terapagos1, {{ModId}}/terapagos/shinyterapagos1, {{ModId}}/terapagos/terapagos2, {{ModId}}/terapagos/shinyterapagos2, {{ModId}}/terapagos/terapagosegg",
+      "FromFile": "assets/livestocks/terapagos/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_terapagos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_terapagos": {
+          "DisplayName": "{{i18n: terapagos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_terapagosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: terapagosbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/terapagos/terapagos1",
+          "BabyTexture": "{{ModId}}/terapagos/terapagos1",
+          "Sound": "{{ModId}}_terapagoscry",
+          "BabySound": "{{ModId}}_terapagoscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_terapagosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "terapagos2",
+              "Texture": "{{ModId}}/terapagos/terapagos2",
+              "BabyTexture": "{{ModId}}/terapagos/terapagos2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyterapagos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyterapagos": {
+          "DisplayName": "{{i18n: shinyterapagos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_terapagosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyterapagosbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/terapagos/shinyterapagos1",
+          "BabyTexture": "{{ModId}}/terapagos/shinyterapagos1",
+          "Sound": "{{ModId}}_terapagoscry",
+          "BabySound": "{{ModId}}_terapagoscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_terapagosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "terapagos2",
+              "Texture": "{{ModId}}/terapagos/shinyterapagos2",
+              "BabyTexture": "{{ModId}}/terapagos/shinyterapagos2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "terapagos cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_terapagoscry": {
+          "ID": "{{ModId}}_terapagoscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/terapagos/terapagoscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "terapagos egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_terapagosegg": {
+          "Name": "{{ModId}}_terapagosegg",
+          "DisplayName": "{{i18n: terapagosegg}}",
+          "Description": "{{i18n: terapagosegg.d}}",
+          "Texture": "{{ModId}}/terapagos/terapagosegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "terapagos hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_terapagosegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyterapagos",
+              "AnimalId": "{{ModId}}_shinyterapagos",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_terapagos",
+              "AnimalId": "{{ModId}}_terapagos",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

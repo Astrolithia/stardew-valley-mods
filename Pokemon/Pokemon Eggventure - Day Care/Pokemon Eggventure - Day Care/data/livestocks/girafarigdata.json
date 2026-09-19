@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load girafarig textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/girafarig/girafarig, {{ModId}}/girafarig/shinygirafarig, {{ModId}}/girafarig/farigiraf, {{ModId}}/girafarig/shinyfarigiraf, {{ModId}}/girafarig/girafarigegg",
+      "FromFile": "assets/livestocks/girafarig/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_girafarig data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_girafarig": {
+          "DisplayName": "{{i18n: girafarig}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_girafarigegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: girafarigbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/girafarig/farigiraf",
+          "BabyTexture": "{{ModId}}/girafarig/girafarig",
+          "Sound": "{{ModId}}_farigirafcry",
+          "BabySound": "{{ModId}}_girafarigcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_girafarigegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygirafarig data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygirafarig": {
+          "DisplayName": "{{i18n: shinygirafarig}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_girafarigegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygirafarigbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/girafarig/shinyfarigiraf",
+          "BabyTexture": "{{ModId}}/girafarig/shinygirafarig",
+          "Sound": "{{ModId}}_farigirafcry",
+          "BabySound": "{{ModId}}_girafarigcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_girafarigegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "girafarig cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_girafarigcry": {
+          "ID": "{{ModId}}_girafarigcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/girafarig/girafarigcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_farigirafcry": {
+          "ID": "{{ModId}}_farigirafcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/girafarig/farigirafcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "girafarig egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_girafarigegg": {
+          "Name": "{{ModId}}_girafarigegg",
+          "DisplayName": "{{i18n: girafarigegg}}",
+          "Description": "{{i18n: girafarigegg.d}}",
+          "Texture": "{{ModId}}/girafarig/girafarigegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "girafarig hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_girafarigegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygirafarig",
+              "AnimalId": "{{ModId}}_shinygirafarig",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_girafarig",
+              "AnimalId": "{{ModId}}_girafarig",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

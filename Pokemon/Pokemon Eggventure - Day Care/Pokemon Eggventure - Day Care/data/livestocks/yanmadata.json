@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load yanma textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/yanma/yanma, {{ModId}}/yanma/shinyyanma, {{ModId}}/yanma/yanmega, {{ModId}}/yanma/shinyyanmega, {{ModId}}/yanma/yanmaegg",
+      "FromFile": "assets/livestocks/yanma/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_yanma data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_yanma": {
+          "DisplayName": "{{i18n: yanma}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yanmaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: yanmabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yanma/yanmega",
+          "BabyTexture": "{{ModId}}/yanma/yanma",
+          "Sound": "{{ModId}}_yanmegacry",
+          "BabySound": "{{ModId}}_yanmacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yanmaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyyanma data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyyanma": {
+          "DisplayName": "{{i18n: shinyyanma}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_yanmaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyyanmabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/yanma/shinyyanmega",
+          "BabyTexture": "{{ModId}}/yanma/shinyyanma",
+          "Sound": "{{ModId}}_yanmegacry",
+          "BabySound": "{{ModId}}_yanmacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_yanmaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "yanma cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_yanmacry": {
+          "ID": "{{ModId}}_yanmacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yanma/yanmacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_yanmegacry": {
+          "ID": "{{ModId}}_yanmegacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/yanma/yanmegacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yanma egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_yanmaegg": {
+          "Name": "{{ModId}}_yanmaegg",
+          "DisplayName": "{{i18n: yanmaegg}}",
+          "Description": "{{i18n: yanmaegg.d}}",
+          "Texture": "{{ModId}}/yanma/yanmaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "yanma hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_yanmaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyyanma",
+              "AnimalId": "{{ModId}}_shinyyanma",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_yanma",
+              "AnimalId": "{{ModId}}_yanma",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

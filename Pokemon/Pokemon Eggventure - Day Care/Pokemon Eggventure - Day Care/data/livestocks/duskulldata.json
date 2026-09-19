@@ -1,0 +1,197 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load duskull textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/duskull/duskull, {{ModId}}/duskull/shinyduskull, {{ModId}}/duskull/dusclops, {{ModId}}/duskull/shinydusclops, {{ModId}}/duskull/dusknoir, {{ModId}}/duskull/shinydusknoir, {{ModId}}/duskull/duskullegg",
+      "FromFile": "assets/livestocks/duskull/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "duskull egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_duskullegg": {
+          "Name": "{{ModId}}_duskullegg",
+          "DisplayName": "{{i18n: duskullegg}}",
+          "Description": "{{i18n: duskullegg.d}}",
+          "Texture": "{{ModId}}/duskull/duskullegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 80,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "pkegg_travelingcart",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_duskull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_duskull": {
+          "DisplayName": "{{i18n: duskull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_duskullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: duskullbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/duskull/dusclops",
+          "BabyTexture": "{{ModId}}/duskull/duskull",
+          "Sound": "{{ModId}}_dusknoircry",
+          "BabySound": "{{ModId}}_duskullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_duskullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_duskull evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_duskull",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "duskullevolution": {
+          "Id": "duskullevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/duskull/dusknoir"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyduskull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyduskull": {
+          "DisplayName": "{{i18n: shinyduskull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_duskullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyduskullbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/duskull/shinydusclops",
+          "BabyTexture": "{{ModId}}/duskull/shinyduskull",
+          "Sound": "{{ModId}}_dusknoircry",
+          "BabySound": "{{ModId}}_duskullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_duskullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyduskull evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyduskull",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyduskullevolution": {
+          "Id": "shinyduskullevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/duskull/shinydusknoir"
+        }
+      }
+    },
+    {
+      "LogName": "duskull cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_duskullcry": {
+          "ID": "{{ModId}}_duskullcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/duskull/duskullcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dusknoircry": {
+          "ID": "{{ModId}}_dusknoircry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/duskull/dusknoircry.ogg}}"
+          ]
+        }
+      }
+    }
+  ]
+}

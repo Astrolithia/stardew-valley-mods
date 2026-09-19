@@ -1,0 +1,203 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load necrozma textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/necrozma/necrozma, {{ModId}}/necrozma/shinynecrozma, {{ModId}}/necrozma/necrozmasun, {{ModId}}/necrozma/shinynecrozmasun, {{ModId}}/necrozma/necrozmamoon, {{ModId}}/necrozma/shinynecrozmamoon, {{ModId}}/necrozma/necrozmaegg",
+      "FromFile": "assets/livestocks/necrozma/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_necrozma data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_necrozma": {
+          "DisplayName": "{{i18n: necrozma}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_necrozmaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: necrozmabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/necrozma/necrozma",
+          "BabyTexture": "{{ModId}}/necrozma/necrozma",
+          "Sound": "{{ModId}}_necrozmacry",
+          "BabySound": "{{ModId}}_necrozmacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_necrozmaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "necrozmasun",
+              "Texture": "{{ModId}}/necrozma/necrozmasun",
+              "BabyTexture": "{{ModId}}/necrozma/necrozmasun"
+            },
+            {
+              "Id": "necrozmamoon",
+              "Texture": "{{ModId}}/necrozma/necrozmamoon",
+              "BabyTexture": "{{ModId}}/necrozma/necrozmamoon"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinynecrozma data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinynecrozma": {
+          "DisplayName": "{{i18n: shinynecrozma}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_necrozmaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinynecrozmabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/necrozma/shinynecrozma",
+          "BabyTexture": "{{ModId}}/necrozma/shinynecrozma",
+          "Sound": "{{ModId}}_necrozmacry",
+          "BabySound": "{{ModId}}_necrozmacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_necrozmaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "necrozmasun",
+              "Texture": "{{ModId}}/necrozma/shinynecrozmasun",
+              "BabyTexture": "{{ModId}}/necrozma/shinynecrozmasun"
+            },
+            {
+              "Id": "necrozmamoon",
+              "Texture": "{{ModId}}/necrozma/shinynecrozmamoon",
+              "BabyTexture": "{{ModId}}/necrozma/shinynecrozmamoon"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "necrozma cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_necrozmacry": {
+          "ID": "{{ModId}}_necrozmacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/necrozma/necrozmacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "necrozma egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_necrozmaegg": {
+          "Name": "{{ModId}}_necrozmaegg",
+          "DisplayName": "{{i18n: necrozmaegg}}",
+          "Description": "{{i18n: necrozmaegg.d}}",
+          "Texture": "{{ModId}}/necrozma/necrozmaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "necrozma hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_necrozmaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinynecrozma",
+              "AnimalId": "{{ModId}}_shinynecrozma",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_necrozma",
+              "AnimalId": "{{ModId}}_necrozma",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

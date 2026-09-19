@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load anorith textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/anorith/anorith, {{ModId}}/anorith/shinyanorith, {{ModId}}/anorith/armaldo, {{ModId}}/anorith/shinyarmaldo, {{ModId}}/anorith/anorithegg",
+      "FromFile": "assets/livestocks/anorith/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_anorith data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_anorith": {
+          "DisplayName": "{{i18n: anorith}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_anorithegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: anorithbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/anorith/armaldo",
+          "BabyTexture": "{{ModId}}/anorith/anorith",
+          "Sound": "{{ModId}}_armaldocry",
+          "BabySound": "{{ModId}}_anorithcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_anorithegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyanorith data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyanorith": {
+          "DisplayName": "{{i18n: shinyanorith}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_anorithegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyanorithbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/anorith/shinyarmaldo",
+          "BabyTexture": "{{ModId}}/anorith/shinyanorith",
+          "Sound": "{{ModId}}_armaldocry",
+          "BabySound": "{{ModId}}_anorithcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_anorithegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "anorith cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_anorithcry": {
+          "ID": "{{ModId}}_anorithcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/anorith/anorithcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_armaldocry": {
+          "ID": "{{ModId}}_armaldocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/anorith/armaldocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "anorith egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_anorithegg": {
+          "Name": "{{ModId}}_anorithegg",
+          "DisplayName": "{{i18n: anorithegg}}",
+          "Description": "{{i18n: anorithegg.d}}",
+          "Texture": "{{ModId}}/anorith/anorithegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "anorith hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_anorithegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyanorith",
+              "AnimalId": "{{ModId}}_shinyanorith",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_anorith",
+              "AnimalId": "{{ModId}}_anorith",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cyndaquil textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cyndaquil/cyndaquil, {{ModId}}/cyndaquil/shinycyndaquil, {{ModId}}/cyndaquil/quilava, {{ModId}}/cyndaquil/shinyquilava, {{ModId}}/cyndaquil/typhlosion, {{ModId}}/cyndaquil/shinytyphlosion, {{ModId}}/cyndaquil/cyndaquilegg",
+      "FromFile": "assets/livestocks/cyndaquil/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cyndaquil data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cyndaquil": {
+          "DisplayName": "{{i18n: cyndaquil}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cyndaquilegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cyndaquilbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cyndaquil/quilava",
+          "BabyTexture": "{{ModId}}/cyndaquil/cyndaquil",
+          "Sound": "{{ModId}}_typhlosioncry",
+          "BabySound": "{{ModId}}_cyndaquilcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cyndaquilegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_cyndaquil evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_cyndaquil",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "cyndaquilevolution": {
+          "Id": "cyndaquilevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cyndaquil/typhlosion"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_cyndaquil type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_cyndaquil"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycyndaquil data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycyndaquil": {
+          "DisplayName": "{{i18n: shinycyndaquil}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cyndaquilegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycyndaquilbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cyndaquil/shinyquilava",
+          "BabyTexture": "{{ModId}}/cyndaquil/shinycyndaquil",
+          "Sound": "{{ModId}}_typhlosioncry",
+          "BabySound": "{{ModId}}_cyndaquilcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cyndaquilegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycyndaquil evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycyndaquil",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinycyndaquilevolution": {
+          "Id": "shinycyndaquilevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cyndaquil/shinytyphlosion"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycyndaquil type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycyndaquil"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "cyndaquil cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cyndaquilcry": {
+          "ID": "{{ModId}}_cyndaquilcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cyndaquil/cyndaquilcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_typhlosioncry": {
+          "ID": "{{ModId}}_typhlosioncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cyndaquil/typhlosioncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cyndaquil egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cyndaquilegg": {
+          "Name": "{{ModId}}_cyndaquilegg",
+          "DisplayName": "{{i18n: cyndaquilegg}}",
+          "Description": "{{i18n: cyndaquilegg.d}}",
+          "Texture": "{{ModId}}/cyndaquil/cyndaquilegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_mine_81_100_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cyndaquil hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cyndaquilegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycyndaquil",
+              "AnimalId": "{{ModId}}_shinycyndaquil",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cyndaquil",
+              "AnimalId": "{{ModId}}_cyndaquil",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

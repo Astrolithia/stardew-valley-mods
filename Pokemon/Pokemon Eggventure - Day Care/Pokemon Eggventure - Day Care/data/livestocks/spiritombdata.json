@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load spiritomb textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/spiritomb/spiritomb, {{ModId}}/spiritomb/shinyspiritomb, {{ModId}}/spiritomb/spiritombegg",
+      "FromFile": "assets/livestocks/spiritomb/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_spiritomb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_spiritomb": {
+          "DisplayName": "{{i18n: spiritomb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_spiritombegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: spiritombbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spiritomb/spiritomb",
+          "BabyTexture": "{{ModId}}/spiritomb/spiritomb",
+          "Sound": "{{ModId}}_spiritombcry",
+          "BabySound": "{{ModId}}_spiritombcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_spiritombegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyspiritomb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyspiritomb": {
+          "DisplayName": "{{i18n: shinyspiritomb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_spiritombegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyspiritombbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spiritomb/shinyspiritomb",
+          "BabyTexture": "{{ModId}}/spiritomb/shinyspiritomb",
+          "Sound": "{{ModId}}_spiritombcry",
+          "BabySound": "{{ModId}}_spiritombcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_spiritombegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "spiritomb cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_spiritombcry": {
+          "ID": "{{ModId}}_spiritombcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spiritomb/spiritombcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spiritomb egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_spiritombegg": {
+          "Name": "{{ModId}}_spiritombegg",
+          "DisplayName": "{{i18n: spiritombegg}}",
+          "Description": "{{i18n: spiritombegg.d}}",
+          "Texture": "{{ModId}}/spiritomb/spiritombegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_rare",
+            "pkegg_mine_31_40_p3",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spiritomb hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_spiritombegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyspiritomb",
+              "AnimalId": "{{ModId}}_shinyspiritomb",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_spiritomb",
+              "AnimalId": "{{ModId}}_spiritomb",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

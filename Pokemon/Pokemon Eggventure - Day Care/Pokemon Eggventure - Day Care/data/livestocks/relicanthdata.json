@@ -1,0 +1,201 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load relicanth textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/relicanth/relicanth, {{ModId}}/relicanth/shinyrelicanth, {{ModId}}/relicanth/relicanthegg",
+      "FromFile": "assets/livestocks/relicanth/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_relicanth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_relicanth": {
+          "DisplayName": "{{i18n: relicanth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_relicanthegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: relicanthbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/relicanth/relicanth",
+          "BabyTexture": "{{ModId}}/relicanth/relicanth",
+          "Sound": "{{ModId}}_relicanthcry",
+          "BabySound": "{{ModId}}_relicanthcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_relicanthegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_relicanth type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_relicanth"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrelicanth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrelicanth": {
+          "DisplayName": "{{i18n: shinyrelicanth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_relicanthegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrelicanthbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/relicanth/shinyrelicanth",
+          "BabyTexture": "{{ModId}}/relicanth/shinyrelicanth",
+          "Sound": "{{ModId}}_relicanthcry",
+          "BabySound": "{{ModId}}_relicanthcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_relicanthegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyrelicanth type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyrelicanth"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "relicanth cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_relicanthcry": {
+          "ID": "{{ModId}}_relicanthcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/relicanth/relicanthcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "relicanth egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_relicanthegg": {
+          "Name": "{{ModId}}_relicanthegg",
+          "DisplayName": "{{i18n: relicanthegg}}",
+          "Description": "{{i18n: relicanthegg.d}}",
+          "Texture": "{{ModId}}/relicanth/relicanthegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_veryrare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "relicanth hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_relicanthegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrelicanth",
+              "AnimalId": "{{ModId}}_shinyrelicanth",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_relicanth",
+              "AnimalId": "{{ModId}}_relicanth",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

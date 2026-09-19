@@ -1,0 +1,208 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mantyke textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mantyke/mantyke, {{ModId}}/mantyke/shinymantyke, {{ModId}}/mantyke/mantine, {{ModId}}/mantyke/shinymantine, {{ModId}}/mantyke/mantykeegg",
+      "FromFile": "assets/livestocks/mantyke/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mantyke data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mantyke": {
+          "DisplayName": "{{i18n: mantyke}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mantykeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mantykebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mantyke/mantine",
+          "BabyTexture": "{{ModId}}/mantyke/mantyke",
+          "Sound": "{{ModId}}_mantinecry",
+          "BabySound": "{{ModId}}_mantykecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mantykeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mantyke type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mantyke"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymantyke data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymantyke": {
+          "DisplayName": "{{i18n: shinymantyke}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mantykeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymantykebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mantyke/shinymantine",
+          "BabyTexture": "{{ModId}}/mantyke/shinymantyke",
+          "Sound": "{{ModId}}_mantinecry",
+          "BabySound": "{{ModId}}_mantykecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mantykeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymantyke type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymantyke"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "mantyke cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mantykecry": {
+          "ID": "{{ModId}}_mantykecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mantyke/mantykecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mantinecry": {
+          "ID": "{{ModId}}_mantinecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mantyke/mantinecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mantyke egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mantykeegg": {
+          "Name": "{{ModId}}_mantykeegg",
+          "DisplayName": "{{i18n: mantykeegg}}",
+          "Description": "{{i18n: mantykeegg.d}}",
+          "Texture": "{{ModId}}/mantyke/mantykeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_veryrare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mantyke hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mantykeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymantyke",
+              "AnimalId": "{{ModId}}_shinymantyke",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mantyke",
+              "AnimalId": "{{ModId}}_mantyke",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

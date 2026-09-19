@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuivoltorb textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/voltorb/hisuivoltorb, {{ModId}}/voltorb/shinyhisuivoltorb, {{ModId}}/voltorb/hisuielectrode, {{ModId}}/voltorb/shinyhisuielectrode, {{ModId}}/voltorb/hisuivoltorbegg",
+      "FromFile": "assets/livestocks/voltorb/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuivoltorb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuivoltorb": {
+          "DisplayName": "{{i18n: hisuivoltorb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuivoltorbegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuivoltorbbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/voltorb/hisuielectrode",
+          "BabyTexture": "{{ModId}}/voltorb/hisuivoltorb",
+          "Sound": "{{ModId}}_hisuielectrodecry",
+          "BabySound": "{{ModId}}_hisuivoltorbcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuivoltorbegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuivoltorb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuivoltorb": {
+          "DisplayName": "{{i18n: shinyhisuivoltorb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuivoltorbegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuivoltorbbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/voltorb/shinyhisuielectrode",
+          "BabyTexture": "{{ModId}}/voltorb/shinyhisuivoltorb",
+          "Sound": "{{ModId}}_hisuielectrodecry",
+          "BabySound": "{{ModId}}_hisuivoltorbcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuivoltorbegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "hisuivoltorb cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hisuivoltorbcry": {
+          "ID": "{{ModId}}_hisuivoltorbcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/voltorb/hisuivoltorbcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuielectrodecry": {
+          "ID": "{{ModId}}_hisuielectrodecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/voltorb/hisuielectrodecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuivoltorb egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuivoltorbegg": {
+          "Name": "{{ModId}}_hisuivoltorbegg",
+          "DisplayName": "{{i18n: hisuivoltorbegg}}",
+          "Description": "{{i18n: hisuivoltorbegg.d}}",
+          "Texture": "{{ModId}}/voltorb/hisuivoltorbegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "pkegg_skullcavern_p4",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuivoltorb hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuivoltorbegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuivoltorb",
+              "AnimalId": "{{ModId}}_shinyhisuivoltorb",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuivoltorb",
+              "AnimalId": "{{ModId}}_hisuivoltorb",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

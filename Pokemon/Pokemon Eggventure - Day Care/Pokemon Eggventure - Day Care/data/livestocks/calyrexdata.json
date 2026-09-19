@@ -1,0 +1,243 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load calyrex textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/calyrex/calyrex, {{ModId}}/calyrex/shinycalyrex, {{ModId}}/calyrex/calyrex2, {{ModId}}/calyrex/shinycalyrex2, {{ModId}}/calyrex/calyrex3, {{ModId}}/calyrex/shinycalyrex3, {{ModId}}/calyrex/calyrex4, {{ModId}}/calyrex/shinycalyrex4, {{ModId}}/calyrex/calyrex5, {{ModId}}/calyrex/shinycalyrex5, {{ModId}}/calyrex/calyrex6, {{ModId}}/calyrex/shinycalyrex6, {{ModId}}/calyrex/calyrex7, {{ModId}}/calyrex/shinycalyrex7, {{ModId}}/calyrex/calyrexegg",
+      "FromFile": "assets/livestocks/calyrex/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_calyrex data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_calyrex": {
+          "DisplayName": "{{i18n: calyrex}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_calyrexegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: calyrexbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/calyrex/calyrex",
+          "BabyTexture": "{{ModId}}/calyrex/calyrex",
+          "Sound": "{{ModId}}_calyrexcry",
+          "BabySound": "{{ModId}}_calyrexcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_calyrexegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "calyrex2",
+              "Texture": "{{ModId}}/calyrex/calyrex2",
+              "BabyTexture": "{{ModId}}/calyrex/calyrex2"
+            },
+            {
+              "Id": "calyrex3",
+              "Texture": "{{ModId}}/calyrex/calyrex3",
+              "BabyTexture": "{{ModId}}/calyrex/calyrex3"
+            },
+            {
+              "Id": "calyrex4",
+              "Texture": "{{ModId}}/calyrex/calyrex4",
+              "BabyTexture": "{{ModId}}/calyrex/calyrex4"
+            },
+            {
+              "Id": "calyrex5",
+              "Texture": "{{ModId}}/calyrex/calyrex5",
+              "BabyTexture": "{{ModId}}/calyrex/calyrex5"
+            },
+            {
+              "Id": "calyrex6",
+              "Texture": "{{ModId}}/calyrex/calyrex6",
+              "BabyTexture": "{{ModId}}/calyrex/calyrex6"
+            },
+            {
+              "Id": "calyrex7",
+              "Texture": "{{ModId}}/calyrex/calyrex7",
+              "BabyTexture": "{{ModId}}/calyrex/calyrex7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycalyrex data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycalyrex": {
+          "DisplayName": "{{i18n: shinycalyrex}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_calyrexegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycalyrexbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/calyrex/shinycalyrex",
+          "BabyTexture": "{{ModId}}/calyrex/shinycalyrex",
+          "Sound": "{{ModId}}_calyrexcry",
+          "BabySound": "{{ModId}}_calyrexcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_calyrexegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "calyrex2",
+              "Texture": "{{ModId}}/calyrex/shinycalyrex2",
+              "BabyTexture": "{{ModId}}/calyrex/shinycalyrex2"
+            },
+            {
+              "Id": "calyrex3",
+              "Texture": "{{ModId}}/calyrex/shinycalyrex3",
+              "BabyTexture": "{{ModId}}/calyrex/shinycalyrex3"
+            },
+            {
+              "Id": "calyrex4",
+              "Texture": "{{ModId}}/calyrex/shinycalyrex4",
+              "BabyTexture": "{{ModId}}/calyrex/shinycalyrex4"
+            },
+            {
+              "Id": "calyrex5",
+              "Texture": "{{ModId}}/calyrex/shinycalyrex5",
+              "BabyTexture": "{{ModId}}/calyrex/shinycalyrex5"
+            },
+            {
+              "Id": "calyrex6",
+              "Texture": "{{ModId}}/calyrex/shinycalyrex6",
+              "BabyTexture": "{{ModId}}/calyrex/shinycalyrex6"
+            },
+            {
+              "Id": "calyrex7",
+              "Texture": "{{ModId}}/calyrex/shinycalyrex7",
+              "BabyTexture": "{{ModId}}/calyrex/shinycalyrex7"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "calyrex cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_calyrexcry": {
+          "ID": "{{ModId}}_calyrexcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/calyrex/calyrexcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "calyrex egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_calyrexegg": {
+          "Name": "{{ModId}}_calyrexegg",
+          "DisplayName": "{{i18n: calyrexegg}}",
+          "Description": "{{i18n: calyrexegg.d}}",
+          "Texture": "{{ModId}}/calyrex/calyrexegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "calyrex hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_calyrexegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycalyrex",
+              "AnimalId": "{{ModId}}_shinycalyrex",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_calyrex",
+              "AnimalId": "{{ModId}}_calyrex",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

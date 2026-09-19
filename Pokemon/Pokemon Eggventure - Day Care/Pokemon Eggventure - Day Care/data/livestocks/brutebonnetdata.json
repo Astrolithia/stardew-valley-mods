@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load brutebonnet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/brutebonnet/brutebonnet, {{ModId}}/brutebonnet/shinybrutebonnet, {{ModId}}/brutebonnet/brutebonnetegg",
+      "FromFile": "assets/livestocks/brutebonnet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_brutebonnet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_brutebonnet": {
+          "DisplayName": "{{i18n: brutebonnet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_brutebonnetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: brutebonnetbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/brutebonnet/brutebonnet",
+          "BabyTexture": "{{ModId}}/brutebonnet/brutebonnet",
+          "Sound": "{{ModId}}_brutebonnetcry",
+          "BabySound": "{{ModId}}_brutebonnetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_brutebonnetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybrutebonnet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybrutebonnet": {
+          "DisplayName": "{{i18n: shinybrutebonnet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_brutebonnetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybrutebonnetbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/brutebonnet/shinybrutebonnet",
+          "BabyTexture": "{{ModId}}/brutebonnet/shinybrutebonnet",
+          "Sound": "{{ModId}}_brutebonnetcry",
+          "BabySound": "{{ModId}}_brutebonnetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_brutebonnetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "brutebonnet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_brutebonnetcry": {
+          "ID": "{{ModId}}_brutebonnetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/brutebonnet/brutebonnetcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "brutebonnet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_brutebonnetegg": {
+          "Name": "{{ModId}}_brutebonnetegg",
+          "DisplayName": "{{i18n: brutebonnetegg}}",
+          "Description": "{{i18n: brutebonnetegg.d}}",
+          "Texture": "{{ModId}}/brutebonnet/brutebonnetegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "brutebonnet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_brutebonnetegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybrutebonnet",
+              "AnimalId": "{{ModId}}_shinybrutebonnet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_brutebonnet",
+              "AnimalId": "{{ModId}}_brutebonnet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load alolarattata textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rattata/alolarattata, {{ModId}}/rattata/shinyalolarattata, {{ModId}}/rattata/alolaraticate, {{ModId}}/rattata/shinyalolaraticate, {{ModId}}/rattata/alolarattataegg",
+      "FromFile": "assets/livestocks/rattata/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_alolarattata data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_alolarattata": {
+          "DisplayName": "{{i18n: alolarattata}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolarattataegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: alolarattatabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rattata/alolaraticate",
+          "BabyTexture": "{{ModId}}/rattata/alolarattata",
+          "Sound": "{{ModId}}_alolaraticatecry",
+          "BabySound": "{{ModId}}_alolarattatacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolarattataegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyalolarattata data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyalolarattata": {
+          "DisplayName": "{{i18n: shinyalolarattata}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolarattataegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyalolarattatabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rattata/shinyalolaraticate",
+          "BabyTexture": "{{ModId}}/rattata/shinyalolarattata",
+          "Sound": "{{ModId}}_alolaraticatecry",
+          "BabySound": "{{ModId}}_alolarattatacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolarattataegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "alolarattata cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_alolarattatacry": {
+          "ID": "{{ModId}}_alolarattatacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rattata/alolarattatacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alolaraticatecry": {
+          "ID": "{{ModId}}_alolaraticatecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rattata/alolaraticatecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolarattata egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_alolarattataegg": {
+          "Name": "{{ModId}}_alolarattataegg",
+          "DisplayName": "{{i18n: alolarattataegg}}",
+          "Description": "{{i18n: alolarattataegg.d}}",
+          "Texture": "{{ModId}}/rattata/alolarattataegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_verycommon",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolarattata hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_alolarattataegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyalolarattata",
+              "AnimalId": "{{ModId}}_shinyalolarattata",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_alolarattata",
+              "AnimalId": "{{ModId}}_alolarattata",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

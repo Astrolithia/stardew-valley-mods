@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dwebble textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dwebble/dwebble, {{ModId}}/dwebble/shinydwebble, {{ModId}}/dwebble/crustle, {{ModId}}/dwebble/shinycrustle, {{ModId}}/dwebble/dwebbleegg",
+      "FromFile": "assets/livestocks/dwebble/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dwebble data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dwebble": {
+          "DisplayName": "{{i18n: dwebble}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dwebbleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dwebblebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dwebble/crustle",
+          "BabyTexture": "{{ModId}}/dwebble/dwebble",
+          "Sound": "{{ModId}}_crustlecry",
+          "BabySound": "{{ModId}}_dwebblecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dwebbleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydwebble data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydwebble": {
+          "DisplayName": "{{i18n: shinydwebble}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dwebbleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydwebblebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dwebble/shinycrustle",
+          "BabyTexture": "{{ModId}}/dwebble/shinydwebble",
+          "Sound": "{{ModId}}_crustlecry",
+          "BabySound": "{{ModId}}_dwebblecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dwebbleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "dwebble cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dwebblecry": {
+          "ID": "{{ModId}}_dwebblecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dwebble/dwebblecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_crustlecry": {
+          "ID": "{{ModId}}_crustlecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dwebble/crustlecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dwebble egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dwebbleegg": {
+          "Name": "{{ModId}}_dwebbleegg",
+          "DisplayName": "{{i18n: dwebbleegg}}",
+          "Description": "{{i18n: dwebbleegg.d}}",
+          "Texture": "{{ModId}}/dwebble/dwebbleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dwebble hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dwebbleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydwebble",
+              "AnimalId": "{{ModId}}_shinydwebble",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dwebble",
+              "AnimalId": "{{ModId}}_dwebble",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

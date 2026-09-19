@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load kangaskhan textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/kangaskhan/kangaskhan, {{ModId}}/kangaskhan/shinykangaskhan, {{ModId}}/kangaskhan/kangaskhanegg",
+      "FromFile": "assets/livestocks/kangaskhan/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_kangaskhan data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_kangaskhan": {
+          "DisplayName": "{{i18n: kangaskhan}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kangaskhanegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: kangaskhanbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kangaskhan/kangaskhan",
+          "BabyTexture": "{{ModId}}/kangaskhan/kangaskhan",
+          "Sound": "{{ModId}}_kangaskhancry",
+          "BabySound": "{{ModId}}_kangaskhancry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kangaskhanegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykangaskhan data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykangaskhan": {
+          "DisplayName": "{{i18n: shinykangaskhan}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kangaskhanegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykangaskhanbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kangaskhan/shinykangaskhan",
+          "BabyTexture": "{{ModId}}/kangaskhan/shinykangaskhan",
+          "Sound": "{{ModId}}_kangaskhancry",
+          "BabySound": "{{ModId}}_kangaskhancry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kangaskhanegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "kangaskhan cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_kangaskhancry": {
+          "ID": "{{ModId}}_kangaskhancry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kangaskhan/kangaskhancry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kangaskhan egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_kangaskhanegg": {
+          "Name": "{{ModId}}_kangaskhanegg",
+          "DisplayName": "{{i18n: kangaskhanegg}}",
+          "Description": "{{i18n: kangaskhanegg.d}}",
+          "Texture": "{{ModId}}/kangaskhan/kangaskhanegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kangaskhan hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_kangaskhanegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykangaskhan",
+              "AnimalId": "{{ModId}}_shinykangaskhan",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_kangaskhan",
+              "AnimalId": "{{ModId}}_kangaskhan",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

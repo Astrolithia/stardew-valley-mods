@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load thundurus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/thundurus/thundurus, {{ModId}}/thundurus/shinythundurus, {{ModId}}/thundurus/thundurus2, {{ModId}}/thundurus/shinythundurus2, {{ModId}}/thundurus/thundurusegg",
+      "FromFile": "assets/livestocks/thundurus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_thundurus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_thundurus": {
+          "DisplayName": "{{i18n: thundurus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_thundurusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: thundurusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/thundurus/thundurus",
+          "BabyTexture": "{{ModId}}/thundurus/thundurus",
+          "Sound": "{{ModId}}_thunduruscry",
+          "BabySound": "{{ModId}}_thunduruscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_thundurusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "thundurus2",
+              "Texture": "{{ModId}}/thundurus/thundurus2",
+              "BabyTexture": "{{ModId}}/thundurus/thundurus2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinythundurus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinythundurus": {
+          "DisplayName": "{{i18n: shinythundurus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_thundurusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinythundurusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/thundurus/shinythundurus",
+          "BabyTexture": "{{ModId}}/thundurus/shinythundurus",
+          "Sound": "{{ModId}}_thunduruscry",
+          "BabySound": "{{ModId}}_thunduruscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_thundurusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "thundurus2",
+              "Texture": "{{ModId}}/thundurus/shinythundurus2",
+              "BabyTexture": "{{ModId}}/thundurus/shinythundurus2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "thundurus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_thunduruscry": {
+          "ID": "{{ModId}}_thunduruscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/thundurus/thunduruscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "thundurus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_thundurusegg": {
+          "Name": "{{ModId}}_thundurusegg",
+          "DisplayName": "{{i18n: thundurusegg}}",
+          "Description": "{{i18n: thundurusegg.d}}",
+          "Texture": "{{ModId}}/thundurus/thundurusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "thundurus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_thundurusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinythundurus",
+              "AnimalId": "{{ModId}}_shinythundurus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_thundurus",
+              "AnimalId": "{{ModId}}_thundurus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

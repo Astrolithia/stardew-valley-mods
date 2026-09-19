@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load paldeawooper textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/wooper/paldeawooper, {{ModId}}/wooper/shinypaldeawooper, {{ModId}}/wooper/clodsire, {{ModId}}/wooper/shinyclodsire, {{ModId}}/wooper/paldeawooperegg",
+      "FromFile": "assets/livestocks/wooper/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_paldeawooper data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_paldeawooper": {
+          "DisplayName": "{{i18n: paldeawooper}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_paldeawooperegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: paldeawooperbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wooper/clodsire",
+          "BabyTexture": "{{ModId}}/wooper/paldeawooper",
+          "Sound": "{{ModId}}_clodsirecry",
+          "BabySound": "{{ModId}}_paldeawoopercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_paldeawooperegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypaldeawooper data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypaldeawooper": {
+          "DisplayName": "{{i18n: shinypaldeawooper}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_paldeawooperegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypaldeawooperbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wooper/shinyclodsire",
+          "BabyTexture": "{{ModId}}/wooper/shinypaldeawooper",
+          "Sound": "{{ModId}}_clodsirecry",
+          "BabySound": "{{ModId}}_paldeawoopercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_paldeawooperegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "paldeawooper cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_paldeawoopercry": {
+          "ID": "{{ModId}}_paldeawoopercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wooper/paldeawoopercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_clodsirecry": {
+          "ID": "{{ModId}}_clodsirecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wooper/clodsirecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "paldeawooper egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_paldeawooperegg": {
+          "Name": "{{ModId}}_paldeawooperegg",
+          "DisplayName": "{{i18n: paldeawooperegg}}",
+          "Description": "{{i18n: paldeawooperegg.d}}",
+          "Texture": "{{ModId}}/wooper/paldeawooperegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "paldeawooper hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_paldeawooperegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypaldeawooper",
+              "AnimalId": "{{ModId}}_shinypaldeawooper",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_paldeawooper",
+              "AnimalId": "{{ModId}}_paldeawooper",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

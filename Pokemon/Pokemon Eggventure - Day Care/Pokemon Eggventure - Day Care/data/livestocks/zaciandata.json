@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zacian textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zacian/zacian, {{ModId}}/zacian/shinyzacian, {{ModId}}/zacian/zacian2, {{ModId}}/zacian/shinyzacian2, {{ModId}}/zacian/zacianegg",
+      "FromFile": "assets/livestocks/zacian/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zacian data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zacian": {
+          "DisplayName": "{{i18n: zacian}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zacianegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zacianbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zacian/zacian",
+          "BabyTexture": "{{ModId}}/zacian/zacian",
+          "Sound": "{{ModId}}_zaciancry",
+          "BabySound": "{{ModId}}_zaciancry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zacianegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zacian2",
+              "Texture": "{{ModId}}/zacian/zacian2",
+              "BabyTexture": "{{ModId}}/zacian/zacian2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzacian data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzacian": {
+          "DisplayName": "{{i18n: shinyzacian}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zacianegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzacianbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zacian/shinyzacian",
+          "BabyTexture": "{{ModId}}/zacian/shinyzacian",
+          "Sound": "{{ModId}}_zaciancry",
+          "BabySound": "{{ModId}}_zaciancry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zacianegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zacian2",
+              "Texture": "{{ModId}}/zacian/shinyzacian2",
+              "BabyTexture": "{{ModId}}/zacian/shinyzacian2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zacian cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zaciancry": {
+          "ID": "{{ModId}}_zaciancry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zacian/zaciancry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zacian egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zacianegg": {
+          "Name": "{{ModId}}_zacianegg",
+          "DisplayName": "{{i18n: zacianegg}}",
+          "Description": "{{i18n: zacianegg.d}}",
+          "Texture": "{{ModId}}/zacian/zacianegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fairy",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zacian hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zacianegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzacian",
+              "AnimalId": "{{ModId}}_shinyzacian",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zacian",
+              "AnimalId": "{{ModId}}_zacian",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

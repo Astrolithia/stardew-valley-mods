@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load solosis textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/solosis/solosis, {{ModId}}/solosis/shinysolosis, {{ModId}}/solosis/duosion, {{ModId}}/solosis/shinyduosion, {{ModId}}/solosis/reuniclus, {{ModId}}/solosis/shinyreuniclus, {{ModId}}/solosis/solosisegg",
+      "FromFile": "assets/livestocks/solosis/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_solosis data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_solosis": {
+          "DisplayName": "{{i18n: solosis}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_solosisegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: solosisbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/solosis/duosion",
+          "BabyTexture": "{{ModId}}/solosis/solosis",
+          "Sound": "{{ModId}}_reunicluscry",
+          "BabySound": "{{ModId}}_solosiscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_solosisegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_solosis evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_solosis",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "solosisevolution": {
+          "Id": "solosisevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/solosis/reuniclus"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysolosis data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysolosis": {
+          "DisplayName": "{{i18n: shinysolosis}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_solosisegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysolosisbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/solosis/shinyduosion",
+          "BabyTexture": "{{ModId}}/solosis/shinysolosis",
+          "Sound": "{{ModId}}_reunicluscry",
+          "BabySound": "{{ModId}}_solosiscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_solosisegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysolosis evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysolosis",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysolosisevolution": {
+          "Id": "shinysolosisevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/solosis/shinyreuniclus"
+        }
+      }
+    },
+    {
+      "LogName": "solosis cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_solosiscry": {
+          "ID": "{{ModId}}_solosiscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/solosis/solosiscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_reunicluscry": {
+          "ID": "{{ModId}}_reunicluscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/solosis/reunicluscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "solosis egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_solosisegg": {
+          "Name": "{{ModId}}_solosisegg",
+          "DisplayName": "{{i18n: solosisegg}}",
+          "Description": "{{i18n: solosisegg.d}}",
+          "Texture": "{{ModId}}/solosis/solosisegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "solosis hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_solosisegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysolosis",
+              "AnimalId": "{{ModId}}_shinysolosis",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_solosis",
+              "AnimalId": "{{ModId}}_solosis",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

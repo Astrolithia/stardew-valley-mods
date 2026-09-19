@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load chikorita textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/chikorita/chikorita, {{ModId}}/chikorita/shinychikorita, {{ModId}}/chikorita/bayleef, {{ModId}}/chikorita/shinybayleef, {{ModId}}/chikorita/meganium, {{ModId}}/chikorita/shinymeganium, {{ModId}}/chikorita/chikoritaegg",
+      "FromFile": "assets/livestocks/chikorita/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_chikorita data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_chikorita": {
+          "DisplayName": "{{i18n: chikorita}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_chikoritaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: chikoritabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chikorita/bayleef",
+          "BabyTexture": "{{ModId}}/chikorita/chikorita",
+          "Sound": "{{ModId}}_meganiumcry",
+          "BabySound": "{{ModId}}_chikoritacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chikoritaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_chikorita evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_chikorita",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "chikoritaevolution": {
+          "Id": "chikoritaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/chikorita/meganium"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinychikorita data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinychikorita": {
+          "DisplayName": "{{i18n: shinychikorita}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_chikoritaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinychikoritabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chikorita/shinybayleef",
+          "BabyTexture": "{{ModId}}/chikorita/shinychikorita",
+          "Sound": "{{ModId}}_meganiumcry",
+          "BabySound": "{{ModId}}_chikoritacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chikoritaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinychikorita evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinychikorita",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinychikoritaevolution": {
+          "Id": "shinychikoritaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/chikorita/shinymeganium"
+        }
+      }
+    },
+    {
+      "LogName": "chikorita cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_chikoritacry": {
+          "ID": "{{ModId}}_chikoritacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chikorita/chikoritacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_meganiumcry": {
+          "ID": "{{ModId}}_meganiumcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chikorita/meganiumcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chikorita egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_chikoritaegg": {
+          "Name": "{{ModId}}_chikoritaegg",
+          "DisplayName": "{{i18n: chikoritaegg}}",
+          "Description": "{{i18n: chikoritaegg.d}}",
+          "Texture": "{{ModId}}/chikorita/chikoritaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chikorita hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_chikoritaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinychikorita",
+              "AnimalId": "{{ModId}}_shinychikorita",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_chikorita",
+              "AnimalId": "{{ModId}}_chikorita",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

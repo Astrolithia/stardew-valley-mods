@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load aerodactyl textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/aerodactyl/aerodactyl, {{ModId}}/aerodactyl/shinyaerodactyl, {{ModId}}/aerodactyl/aerodactylegg",
+      "FromFile": "assets/livestocks/aerodactyl/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_aerodactyl data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_aerodactyl": {
+          "DisplayName": "{{i18n: aerodactyl}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_aerodactylegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: aerodactylbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/aerodactyl/aerodactyl",
+          "BabyTexture": "{{ModId}}/aerodactyl/aerodactyl",
+          "Sound": "{{ModId}}_aerodactylcry",
+          "BabySound": "{{ModId}}_aerodactylcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aerodactylegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyaerodactyl data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyaerodactyl": {
+          "DisplayName": "{{i18n: shinyaerodactyl}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_aerodactylegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyaerodactylbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/aerodactyl/shinyaerodactyl",
+          "BabyTexture": "{{ModId}}/aerodactyl/shinyaerodactyl",
+          "Sound": "{{ModId}}_aerodactylcry",
+          "BabySound": "{{ModId}}_aerodactylcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aerodactylegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "aerodactyl cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_aerodactylcry": {
+          "ID": "{{ModId}}_aerodactylcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/aerodactyl/aerodactylcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aerodactyl egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_aerodactylegg": {
+          "Name": "{{ModId}}_aerodactylegg",
+          "DisplayName": "{{i18n: aerodactylegg}}",
+          "Description": "{{i18n: aerodactylegg.d}}",
+          "Texture": "{{ModId}}/aerodactyl/aerodactylegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aerodactyl hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_aerodactylegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyaerodactyl",
+              "AnimalId": "{{ModId}}_shinyaerodactyl",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_aerodactyl",
+              "AnimalId": "{{ModId}}_aerodactyl",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

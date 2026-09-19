@@ -1,0 +1,268 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add Pokemon loots",
+      "Action": "Load",
+      "Target": "{{ModId}}/pokemondrop/blackbelt, {{ModId}}/pokemondrop/blackglasses, {{ModId}}/pokemondrop/blacksludge, {{ModId}}/pokemondrop/twistedspoon, {{ModId}}/pokemondrop/dragonfang, {{ModId}}/pokemondrop/firecoal, {{ModId}}/pokemondrop/hardstone, {{ModId}}/pokemondrop/lovesweet, {{ModId}}/pokemondrop/magnet, {{ModId}}/pokemondrop/metalcoat, {{ModId}}/pokemondrop/miracleseed, {{ModId}}/pokemondrop/mysticwater, {{ModId}}/pokemondrop/nevermeltice, {{ModId}}/pokemondrop/prettyfeather, {{ModId}}/pokemondrop/quickclaw, {{ModId}}/pokemondrop/reapercloth, {{ModId}}/pokemondrop/shedshell, {{ModId}}/pokemondrop/softsand",
+      "FromFile": "assets/pokemondrop/{{TargetWithoutPath}}.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_blackbelt": {
+          "Name": "{{ModId}}_blackbelt",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:blackbelt}}",
+          "Description": "{{i18n:blackbelt_d}}",
+          "Texture": "{{ModId}}/pokemondrop/blackbelt",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_fighting",
+            "color_iron"
+          ]
+        },
+        "{{ModId}}_blackglasses": {
+          "Name": "{{ModId}}_blackglasses",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:blackglasses}}",
+          "Description": "{{i18n:blackglasses_d}}",
+          "Texture": "{{ModId}}/pokemondrop/blackglasses",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_dark",
+            "color_gray"
+          ]
+        },
+        "{{ModId}}_blacksludge": {
+          "Name": "{{ModId}}_blacksludge",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:blacksludge}}",
+          "Description": "{{i18n:blacksludge_d}}",
+          "Texture": "{{ModId}}/pokemondrop/blacksludge",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_poison",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_twistedspoon": {
+          "Name": "{{ModId}}_twistedspoon",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:twistedspoon}}",
+          "Description": "{{i18n:twistedspoon_d}}",
+          "Texture": "{{ModId}}/pokemondrop/twistedspoon",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_psychic",
+            "color_gray"
+          ]
+        },
+        "{{ModId}}_dragonfang": {
+          "Name": "{{ModId}}_dragonfang",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:dragonfang}}",
+          "Description": "{{i18n:dragonfang_d}}",
+          "Texture": "{{ModId}}/pokemondrop/dragonfang",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_dragon",
+            "color_gray"
+          ]
+        },
+        "{{ModId}}_firecoal": {
+          "Name": "{{ModId}}_firecoal",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:firecoal}}",
+          "Description": "{{i18n:firecoal_d}}",
+          "Texture": "{{ModId}}/pokemondrop/firecoal",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_fire",
+            "color_iron"
+          ]
+        },
+        "{{ModId}}_hardstone": {
+          "Name": "{{ModId}}_hardstone",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:hardstone}}",
+          "Description": "{{i18n:hardstone_d}}",
+          "Texture": "{{ModId}}/pokemondrop/hardstone",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_rock",
+            "color_iron"
+          ]
+        },
+        "{{ModId}}_lovesweet": {
+          "Name": "{{ModId}}_lovesweet",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:lovesweet}}",
+          "Description": "{{i18n:lovesweet_d}}",
+          "Texture": "{{ModId}}/pokemondrop/lovesweet",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_fairy",
+            "color_salmon"
+          ]
+        },
+        "{{ModId}}_magnet": {
+          "Name": "{{ModId}}_magnet",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:magnet}}",
+          "Description": "{{i18n:magnet_d}}",
+          "Texture": "{{ModId}}/pokemondrop/magnet",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_electric",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_metalcoat": {
+          "Name": "{{ModId}}_metalcoat",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:metalcoat}}",
+          "Description": "{{i18n:metalcoat_d}}",
+          "Texture": "{{ModId}}/pokemondrop/metalcoat",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_steel",
+            "color_light_cyan"
+          ]
+        },
+        "{{ModId}}_miracleseed": {
+          "Name": "{{ModId}}_miracleseed",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:miracleseed}}",
+          "Description": "{{i18n:miracleseed_d}}",
+          "Texture": "{{ModId}}/pokemondrop/miracleseed",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_grass",
+            "color_yellow"
+          ]
+        },
+        "{{ModId}}_mysticwater": {
+          "Name": "{{ModId}}_mysticwater",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:mysticwater}}",
+          "Description": "{{i18n:mysticwater_d}}",
+          "Texture": "{{ModId}}/pokemondrop/mysticwater",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_water",
+            "color_blue"
+          ]
+        },
+        "{{ModId}}_nevermeltice": {
+          "Name": "{{ModId}}_nevermeltice",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:nevermeltice}}",
+          "Description": "{{i18n:nevermeltice_d}}",
+          "Texture": "{{ModId}}/pokemondrop/nevermeltice",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_ice",
+            "color_light_cyan"
+          ]
+        },
+        "{{ModId}}_prettyfeather": {
+          "Name": "{{ModId}}_prettyfeather",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:prettyfeather}}",
+          "Description": "{{i18n:prettyfeather_d}}",
+          "Texture": "{{ModId}}/pokemondrop/prettyfeather",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_flying",
+            "color_light_cyan"
+          ]
+        },
+        "{{ModId}}_quickclaw": {
+          "Name": "{{ModId}}_quickclaw",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:quickclaw}}",
+          "Description": "{{i18n:quickclaw_d}}",
+          "Texture": "{{ModId}}/pokemondrop/quickclaw",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_normal",
+            "color_brown"
+          ]
+        },
+        "{{ModId}}_reapercloth": {
+          "Name": "{{ModId}}_reapercloth",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:reapercloth}}",
+          "Description": "{{i18n:reapercloth_d}}",
+          "Texture": "{{ModId}}/pokemondrop/reapercloth",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_ghost",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_shedshell": {
+          "Name": "{{ModId}}_shedshell",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:shedshell}}",
+          "Description": "{{i18n:shedshell_d}}",
+          "Texture": "{{ModId}}/pokemondrop/shedshell",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_bug",
+            "color_yellow"
+          ]
+        },
+        "{{ModId}}_softsand": {
+          "Name": "{{ModId}}_softsand",
+          "Category": -16,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:softsand}}",
+          "Description": "{{i18n:softsand_d}}",
+          "Texture": "{{ModId}}/pokemondrop/softsand",
+          "Price": 100,
+          "ContextTags": [
+            "pkdrop_item",
+            "pkdrop_type_ground",
+            "color_purple"
+          ]
+        }
+      }
+    }
+  ]
+}

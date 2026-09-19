@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cutiefly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cutiefly/cutiefly, {{ModId}}/cutiefly/shinycutiefly, {{ModId}}/cutiefly/ribombee, {{ModId}}/cutiefly/shinyribombee, {{ModId}}/cutiefly/cutieflyegg",
+      "FromFile": "assets/livestocks/cutiefly/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cutiefly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cutiefly": {
+          "DisplayName": "{{i18n: cutiefly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cutieflyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cutieflybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cutiefly/ribombee",
+          "BabyTexture": "{{ModId}}/cutiefly/cutiefly",
+          "Sound": "{{ModId}}_ribombeecry",
+          "BabySound": "{{ModId}}_cutieflycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cutieflyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycutiefly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycutiefly": {
+          "DisplayName": "{{i18n: shinycutiefly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_cutieflyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycutieflybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cutiefly/shinyribombee",
+          "BabyTexture": "{{ModId}}/cutiefly/shinycutiefly",
+          "Sound": "{{ModId}}_ribombeecry",
+          "BabySound": "{{ModId}}_cutieflycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cutieflyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "cutiefly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cutieflycry": {
+          "ID": "{{ModId}}_cutieflycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cutiefly/cutieflycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ribombeecry": {
+          "ID": "{{ModId}}_ribombeecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cutiefly/ribombeecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cutiefly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cutieflyegg": {
+          "Name": "{{ModId}}_cutieflyegg",
+          "DisplayName": "{{i18n: cutieflyegg}}",
+          "Description": "{{i18n: cutieflyegg.d}}",
+          "Texture": "{{ModId}}/cutiefly/cutieflyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cutiefly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cutieflyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycutiefly",
+              "AnimalId": "{{ModId}}_shinycutiefly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cutiefly",
+              "AnimalId": "{{ModId}}_cutiefly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

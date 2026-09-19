@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load caterpie textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/caterpie/caterpie, {{ModId}}/caterpie/shinycaterpie, {{ModId}}/caterpie/metapod, {{ModId}}/caterpie/shinymetapod, {{ModId}}/caterpie/butterfree, {{ModId}}/caterpie/shinybutterfree, {{ModId}}/caterpie/caterpieegg",
+      "FromFile": "assets/livestocks/caterpie/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_caterpie data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_caterpie": {
+          "DisplayName": "{{i18n: caterpie}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_caterpieegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: caterpiebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/caterpie/metapod",
+          "BabyTexture": "{{ModId}}/caterpie/caterpie",
+          "Sound": "{{ModId}}_butterfreecry",
+          "BabySound": "{{ModId}}_caterpiecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_caterpieegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_caterpie evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_caterpie",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "caterpieevolution": {
+          "Id": "caterpieevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/caterpie/butterfree"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycaterpie data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycaterpie": {
+          "DisplayName": "{{i18n: shinycaterpie}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_caterpieegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycaterpiebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/caterpie/shinymetapod",
+          "BabyTexture": "{{ModId}}/caterpie/shinycaterpie",
+          "Sound": "{{ModId}}_butterfreecry",
+          "BabySound": "{{ModId}}_caterpiecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_caterpieegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycaterpie evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycaterpie",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinycaterpieevolution": {
+          "Id": "shinycaterpieevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/caterpie/shinybutterfree"
+        }
+      }
+    },
+    {
+      "LogName": "caterpie cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_caterpiecry": {
+          "ID": "{{ModId}}_caterpiecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/caterpie/caterpiecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_butterfreecry": {
+          "ID": "{{ModId}}_butterfreecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/caterpie/butterfreecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "caterpie egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_caterpieegg": {
+          "Name": "{{ModId}}_caterpieegg",
+          "DisplayName": "{{i18n: caterpieegg}}",
+          "Description": "{{i18n: caterpieegg.d}}",
+          "Texture": "{{ModId}}/caterpie/caterpieegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "caterpie hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_caterpieegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycaterpie",
+              "AnimalId": "{{ModId}}_shinycaterpie",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_caterpie",
+              "AnimalId": "{{ModId}}_caterpie",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

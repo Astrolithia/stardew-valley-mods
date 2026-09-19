@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_Welcome": "{{i18n:mail_welcome_text}}[letterbg 0][#]{{i18n:mail_welcome_title}}",
+        "{{ModId}}_incubatormail": "{{i18n:mail_incubator_text}}%item craftingRecipe {{ModId}}_Incubator %%[letterbg 0][#]{{i18n:mail_incubator_title}}",
+        "{{ModId}}_energyextractormail": "{{i18n:mail_energyextractor_description}}%item craftingRecipe {{ModId}}_EnergyExtractor %%[letterbg 0][#]{{i18n:mail_energyextractor_title}}",
+        "{{ModId}}_ReanimationRecipe": "{{i18n:mail_reanimation_text}}%item craftingRecipe {{ModId}}_ReanimationMachine %%[letterbg 2][#]{{i18n:mail_reanimation_title}}"
+      }
+    }
+  ]
+}

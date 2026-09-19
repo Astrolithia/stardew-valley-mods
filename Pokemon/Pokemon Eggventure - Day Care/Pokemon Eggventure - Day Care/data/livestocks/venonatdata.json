@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load venonat textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/venonat/venonat, {{ModId}}/venonat/shinyvenonat, {{ModId}}/venonat/venomoth, {{ModId}}/venonat/shinyvenomoth, {{ModId}}/venonat/venonategg",
+      "FromFile": "assets/livestocks/venonat/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_venonat data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_venonat": {
+          "DisplayName": "{{i18n: venonat}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_venonategg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: venonatbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/venonat/venomoth",
+          "BabyTexture": "{{ModId}}/venonat/venonat",
+          "Sound": "{{ModId}}_venomothcry",
+          "BabySound": "{{ModId}}_venonatcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_venonategg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvenonat data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvenonat": {
+          "DisplayName": "{{i18n: shinyvenonat}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_venonategg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvenonatbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/venonat/shinyvenomoth",
+          "BabyTexture": "{{ModId}}/venonat/shinyvenonat",
+          "Sound": "{{ModId}}_venomothcry",
+          "BabySound": "{{ModId}}_venonatcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_venonategg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "venonat cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_venonatcry": {
+          "ID": "{{ModId}}_venonatcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/venonat/venonatcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_venomothcry": {
+          "ID": "{{ModId}}_venomothcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/venonat/venomothcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "venonat egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_venonategg": {
+          "Name": "{{ModId}}_venonategg",
+          "DisplayName": "{{i18n: venonategg}}",
+          "Description": "{{i18n: venonategg.d}}",
+          "Texture": "{{ModId}}/venonat/venonategg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "venonat hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_venonategg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvenonat",
+              "AnimalId": "{{ModId}}_shinyvenonat",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_venonat",
+              "AnimalId": "{{ModId}}_venonat",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

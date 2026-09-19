@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load togepi textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/togepi/togepi, {{ModId}}/togepi/shinytogepi, {{ModId}}/togepi/togetic, {{ModId}}/togepi/shinytogetic, {{ModId}}/togepi/togekiss, {{ModId}}/togepi/shinytogekiss, {{ModId}}/togepi/togepiegg",
+      "FromFile": "assets/livestocks/togepi/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_togepi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_togepi": {
+          "DisplayName": "{{i18n: togepi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_togepiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: togepibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/togepi/togetic",
+          "BabyTexture": "{{ModId}}/togepi/togepi",
+          "Sound": "{{ModId}}_togekisscry",
+          "BabySound": "{{ModId}}_togepicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_togepiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_togepi evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_togepi",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "togepievolution": {
+          "Id": "togepievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/togepi/togekiss"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytogepi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytogepi": {
+          "DisplayName": "{{i18n: shinytogepi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_togepiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytogepibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/togepi/shinytogetic",
+          "BabyTexture": "{{ModId}}/togepi/shinytogepi",
+          "Sound": "{{ModId}}_togekisscry",
+          "BabySound": "{{ModId}}_togepicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_togepiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytogepi evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytogepi",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytogepievolution": {
+          "Id": "shinytogepievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/togepi/shinytogekiss"
+        }
+      }
+    },
+    {
+      "LogName": "togepi cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_togepicry": {
+          "ID": "{{ModId}}_togepicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/togepi/togepicry.ogg}}"
+          ]
+        },
+        "{{ModId}}_togekisscry": {
+          "ID": "{{ModId}}_togekisscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/togepi/togekisscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "togepi egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_togepiegg": {
+          "Name": "{{ModId}}_togepiegg",
+          "DisplayName": "{{i18n: togepiegg}}",
+          "Description": "{{i18n: togepiegg.d}}",
+          "Texture": "{{ModId}}/togepi/togepiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fairy",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "togepi hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_togepiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytogepi",
+              "AnimalId": "{{ModId}}_shinytogepi",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_togepi",
+              "AnimalId": "{{ModId}}_togepi",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

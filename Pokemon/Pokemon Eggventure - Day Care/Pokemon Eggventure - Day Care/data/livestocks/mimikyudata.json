@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mimikyu textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mimikyu/mimikyu, {{ModId}}/mimikyu/shinymimikyu, {{ModId}}/mimikyu/mimikyuegg",
+      "FromFile": "assets/livestocks/mimikyu/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mimikyu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mimikyu": {
+          "DisplayName": "{{i18n: mimikyu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mimikyuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mimikyubirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mimikyu/mimikyu",
+          "BabyTexture": "{{ModId}}/mimikyu/mimikyu",
+          "Sound": "{{ModId}}_mimikyucry",
+          "BabySound": "{{ModId}}_mimikyucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mimikyuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymimikyu data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymimikyu": {
+          "DisplayName": "{{i18n: shinymimikyu}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mimikyuegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymimikyubirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mimikyu/shinymimikyu",
+          "BabyTexture": "{{ModId}}/mimikyu/shinymimikyu",
+          "Sound": "{{ModId}}_mimikyucry",
+          "BabySound": "{{ModId}}_mimikyucry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mimikyuegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "mimikyu cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mimikyucry": {
+          "ID": "{{ModId}}_mimikyucry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mimikyu/mimikyucry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mimikyu egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mimikyuegg": {
+          "Name": "{{ModId}}_mimikyuegg",
+          "DisplayName": "{{i18n: mimikyuegg}}",
+          "Description": "{{i18n: mimikyuegg.d}}",
+          "Texture": "{{ModId}}/mimikyu/mimikyuegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_rare",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mimikyu hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mimikyuegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymimikyu",
+              "AnimalId": "{{ModId}}_shinymimikyu",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mimikyu",
+              "AnimalId": "{{ModId}}_mimikyu",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

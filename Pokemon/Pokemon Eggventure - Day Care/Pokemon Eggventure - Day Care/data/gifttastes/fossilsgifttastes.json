@@ -1,0 +1,170 @@
+{
+  "Changes": [
+    {
+      "LogName": "Fossil gift tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Universal_Neutral"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Dwarf",
+            "1"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Demetrius",
+            "1"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Maru",
+            "1"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leah",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sebastian",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Linus",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Marnie",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Clint",
+            "3"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Haley",
+            "5"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Alex",
+            "5"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Pierre",
+            "5"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Jodi",
+            "5"
+          ],
+          "Value": "pkfossil_item",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

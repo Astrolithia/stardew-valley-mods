@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load phanpy textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/phanpy/phanpy, {{ModId}}/phanpy/shinyphanpy, {{ModId}}/phanpy/donphan, {{ModId}}/phanpy/shinydonphan, {{ModId}}/phanpy/phanpyegg",
+      "FromFile": "assets/livestocks/phanpy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_phanpy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_phanpy": {
+          "DisplayName": "{{i18n: phanpy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_phanpyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: phanpybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/phanpy/donphan",
+          "BabyTexture": "{{ModId}}/phanpy/phanpy",
+          "Sound": "{{ModId}}_donphancry",
+          "BabySound": "{{ModId}}_phanpycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_phanpyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyphanpy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyphanpy": {
+          "DisplayName": "{{i18n: shinyphanpy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_phanpyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyphanpybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/phanpy/shinydonphan",
+          "BabyTexture": "{{ModId}}/phanpy/shinyphanpy",
+          "Sound": "{{ModId}}_donphancry",
+          "BabySound": "{{ModId}}_phanpycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_phanpyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "phanpy cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_phanpycry": {
+          "ID": "{{ModId}}_phanpycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/phanpy/phanpycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_donphancry": {
+          "ID": "{{ModId}}_donphancry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/phanpy/donphancry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "phanpy egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_phanpyegg": {
+          "Name": "{{ModId}}_phanpyegg",
+          "DisplayName": "{{i18n: phanpyegg}}",
+          "Description": "{{i18n: phanpyegg.d}}",
+          "Texture": "{{ModId}}/phanpy/phanpyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "phanpy hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_phanpyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyphanpy",
+              "AnimalId": "{{ModId}}_shinyphanpy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_phanpy",
+              "AnimalId": "{{ModId}}_phanpy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load scorbunny textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/scorbunny/scorbunny, {{ModId}}/scorbunny/shinyscorbunny, {{ModId}}/scorbunny/raboot, {{ModId}}/scorbunny/shinyraboot, {{ModId}}/scorbunny/cinderace, {{ModId}}/scorbunny/shinycinderace, {{ModId}}/scorbunny/scorbunnyegg",
+      "FromFile": "assets/livestocks/scorbunny/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_scorbunny data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_scorbunny": {
+          "DisplayName": "{{i18n: scorbunny}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_scorbunnyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: scorbunnybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scorbunny/raboot",
+          "BabyTexture": "{{ModId}}/scorbunny/scorbunny",
+          "Sound": "{{ModId}}_cinderacecry",
+          "BabySound": "{{ModId}}_scorbunnycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_scorbunny",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_scorbunnyegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_scorbunny type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_scorbunny"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyscorbunny data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyscorbunny": {
+          "DisplayName": "{{i18n: shinyscorbunny}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_scorbunnyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyscorbunnybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scorbunny/shinyraboot",
+          "BabyTexture": "{{ModId}}/scorbunny/shinyscorbunny",
+          "Sound": "{{ModId}}_cinderacecry",
+          "BabySound": "{{ModId}}_scorbunnycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_scorbunny",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_scorbunnyegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyscorbunny evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyscorbunny",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyscorbunnyevolution": {
+          "Id": "shinyscorbunnyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/scorbunny/shinycinderace"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyscorbunny type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyscorbunny"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "scorbunny cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_scorbunnycry": {
+          "ID": "{{ModId}}_scorbunnycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scorbunny/scorbunnycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cinderacecry": {
+          "ID": "{{ModId}}_cinderacecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scorbunny/cinderacecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scorbunny egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_scorbunnyegg": {
+          "Name": "{{ModId}}_scorbunnyegg",
+          "DisplayName": "{{i18n: scorbunnyegg}}",
+          "Description": "{{i18n: scorbunnyegg.d}}",
+          "Texture": "{{ModId}}/scorbunny/scorbunnyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_mine_81_100_p4",
+            "pkegg_mine_101_120_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scorbunny hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_scorbunnyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyscorbunny",
+              "AnimalId": "{{ModId}}_shinyscorbunny",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_scorbunny",
+              "AnimalId": "{{ModId}}_scorbunny",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_scorbunny",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_scorbunny",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_scorbunny_dailydrop": {
+          "Id": "{{ModId}}_scorbunny_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_scorbunny_dailydrop_item",
+              "ItemId": "{{ModId}}_firecoal",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - scorbunny",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_scorbunny",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_firecoal": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinyscorbunny",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyscorbunny",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinyscorbunny_dailydrop": {
+          "Id": "{{ModId}}_shinyscorbunny_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinyscorbunny_dailydrop_item",
+              "ItemId": "{{ModId}}_firecoal",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyscorbunny",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyscorbunny",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_firecoal": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

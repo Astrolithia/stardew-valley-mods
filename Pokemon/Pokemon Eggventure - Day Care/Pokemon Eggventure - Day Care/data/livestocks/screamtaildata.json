@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load screamtail textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/screamtail/screamtail, {{ModId}}/screamtail/shinyscreamtail, {{ModId}}/screamtail/screamtailegg",
+      "FromFile": "assets/livestocks/screamtail/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_screamtail data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_screamtail": {
+          "DisplayName": "{{i18n: screamtail}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_screamtailegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: screamtailbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/screamtail/screamtail",
+          "BabyTexture": "{{ModId}}/screamtail/screamtail",
+          "Sound": "{{ModId}}_screamtailcry",
+          "BabySound": "{{ModId}}_screamtailcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_screamtailegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyscreamtail data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyscreamtail": {
+          "DisplayName": "{{i18n: shinyscreamtail}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_screamtailegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyscreamtailbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/screamtail/shinyscreamtail",
+          "BabyTexture": "{{ModId}}/screamtail/shinyscreamtail",
+          "Sound": "{{ModId}}_screamtailcry",
+          "BabySound": "{{ModId}}_screamtailcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_screamtailegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "screamtail cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_screamtailcry": {
+          "ID": "{{ModId}}_screamtailcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/screamtail/screamtailcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "screamtail egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_screamtailegg": {
+          "Name": "{{ModId}}_screamtailegg",
+          "DisplayName": "{{i18n: screamtailegg}}",
+          "Description": "{{i18n: screamtailegg.d}}",
+          "Texture": "{{ModId}}/screamtail/screamtailegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fairy",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "screamtail hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_screamtailegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyscreamtail",
+              "AnimalId": "{{ModId}}_shinyscreamtail",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_screamtail",
+              "AnimalId": "{{ModId}}_screamtail",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

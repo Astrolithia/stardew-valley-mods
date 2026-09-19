@@ -1,0 +1,45 @@
+{
+  "Changes": [
+    {
+      "LogName": "Explanatory letters",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_marniemayo": "{{i18n:mail_marniemayo_text}}[letterbg 0][#]{{i18n:mail_marniemayo_title}}",
+        "{{ModId}}_pierreapricorn": "{{i18n:mail_pierreapricorn_text}}[letterbg 0][#]{{i18n:mail_pierreapricorn_title}}",
+        "{{ModId}}_willytreasure": "{{i18n:mail_willytreasure_text}}[letterbg 0][#]{{i18n:mail_willytreasure_title}}"
+      }
+    },
+    {
+      "LogName": "When each letter arrives",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_marniemayo_trigger": {
+          "Id": "{{ModId}}_marniemayo_trigger",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_marniemayo Any, PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_FARMING_LEVEL Current 2",
+          "Actions": [
+            "AddMail Current {{ModId}}_marniemayo Now"
+          ]
+        },
+        "{{ModId}}_pierreapricorn_trigger": {
+          "Id": "{{ModId}}_pierreapricorn_trigger",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_pierreapricorn Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, DAYS_PLAYED 7",
+          "Actions": [
+            "AddMail Current {{ModId}}_pierreapricorn Now"
+          ]
+        },
+        "{{ModId}}_willytreasure_trigger": {
+          "Id": "{{ModId}}_willytreasure_trigger",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_willytreasure Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FISHING_LEVEL Current 3",
+          "Actions": [
+            "AddMail Current {{ModId}}_willytreasure Now"
+          ]
+        }
+      }
+    }
+  ]
+}

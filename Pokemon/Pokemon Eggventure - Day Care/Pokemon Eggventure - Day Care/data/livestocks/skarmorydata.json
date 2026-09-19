@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load skarmory textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/skarmory/skarmory, {{ModId}}/skarmory/shinyskarmory, {{ModId}}/skarmory/skarmoryegg",
+      "FromFile": "assets/livestocks/skarmory/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_skarmory data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_skarmory": {
+          "DisplayName": "{{i18n: skarmory}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_skarmoryegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: skarmorybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skarmory/skarmory",
+          "BabyTexture": "{{ModId}}/skarmory/skarmory",
+          "Sound": "{{ModId}}_skarmorycry",
+          "BabySound": "{{ModId}}_skarmorycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skarmoryegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyskarmory data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyskarmory": {
+          "DisplayName": "{{i18n: shinyskarmory}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_skarmoryegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyskarmorybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skarmory/shinyskarmory",
+          "BabyTexture": "{{ModId}}/skarmory/shinyskarmory",
+          "Sound": "{{ModId}}_skarmorycry",
+          "BabySound": "{{ModId}}_skarmorycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skarmoryegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "skarmory cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_skarmorycry": {
+          "ID": "{{ModId}}_skarmorycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skarmory/skarmorycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skarmory egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_skarmoryegg": {
+          "Name": "{{ModId}}_skarmoryegg",
+          "DisplayName": "{{i18n: skarmoryegg}}",
+          "Description": "{{i18n: skarmoryegg.d}}",
+          "Texture": "{{ModId}}/skarmory/skarmoryegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_veryrare",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skarmory hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_skarmoryegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyskarmory",
+              "AnimalId": "{{ModId}}_shinyskarmory",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_skarmory",
+              "AnimalId": "{{ModId}}_skarmory",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

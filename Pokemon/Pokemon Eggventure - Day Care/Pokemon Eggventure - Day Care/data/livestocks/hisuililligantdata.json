@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuililligant textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/petilil/petilil_hisuililligant, {{ModId}}/petilil/shinypetilil_hisuililligant, {{ModId}}/petilil/hisuililligant, {{ModId}}/petilil/shinyhisuililligant, {{ModId}}/petilil/hisuililligantegg",
+      "FromFile": "assets/livestocks/petilil/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuililligant data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuililligant": {
+          "DisplayName": "{{i18n: hisuililligant}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hisuililligantegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuililligantbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/petilil/hisuililligant",
+          "BabyTexture": "{{ModId}}/petilil/petilil_hisuililligant",
+          "Sound": "{{ModId}}_hisuililligantcry",
+          "BabySound": "{{ModId}}_petililcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuililligantegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuililligant data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuililligant": {
+          "DisplayName": "{{i18n: shinyhisuililligant}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hisuililligantegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuililligantbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/petilil/shinyhisuililligant",
+          "BabyTexture": "{{ModId}}/petilil/shinypetilil_hisuililligant",
+          "Sound": "{{ModId}}_hisuililligantcry",
+          "BabySound": "{{ModId}}_petililcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuililligantegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "hisuililligant cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_petililcry": {
+          "ID": "{{ModId}}_petililcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/petilil/petililcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuililligantcry": {
+          "ID": "{{ModId}}_hisuililligantcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/petilil/hisuililligantcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuililligant egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuililligantegg": {
+          "Name": "{{ModId}}_hisuililligantegg",
+          "DisplayName": "{{i18n: hisuililligantegg}}",
+          "Description": "{{i18n: hisuililligantegg.d}}",
+          "Texture": "{{ModId}}/petilil/hisuililligantegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuililligant hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuililligantegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuililligant",
+              "AnimalId": "{{ModId}}_shinyhisuililligant",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuililligant",
+              "AnimalId": "{{ModId}}_hisuililligant",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

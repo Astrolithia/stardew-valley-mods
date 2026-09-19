@@ -1,0 +1,143 @@
+{
+  "Changes": [
+    {
+      "LogName": "Beehouse - oeufs pokemon",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)10",
+        "OutputRules"
+      ],
+      "Entries": {
+        "{{ModId}}_beehouse_combee": {
+          "Id": "{{ModId}}_beehouse_combee",
+          "Triggers": [
+            {
+              "Id": "Default",
+              "Trigger": "OutputCollected,DayUpdate",
+              "Condition": "RANDOM {{RateBeehouse}}"
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_beehouse_combee_item",
+              "ItemId": "(O){{ModId}}_combeeegg"
+            }
+          ],
+          "MinutesUntilReady": 5760
+        },
+        "{{ModId}}_beehouse_cutiefly": {
+          "Id": "{{ModId}}_beehouse_cutiefly",
+          "Triggers": [
+            {
+              "Id": "Default",
+              "Trigger": "OutputCollected,DayUpdate",
+              "Condition": "RANDOM {{RateBeehouse}}"
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_beehouse_cutiefly_item",
+              "ItemId": "(O){{ModId}}_cutieflyegg"
+            }
+          ],
+          "MinutesUntilReady": 5760
+        },
+        "{{ModId}}_beehouse_weedle": {
+          "Id": "{{ModId}}_beehouse_weedle",
+          "Triggers": [
+            {
+              "Id": "Default",
+              "Trigger": "OutputCollected,DayUpdate",
+              "Condition": "RANDOM {{RateBeehouse}}"
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_beehouse_weedle_item",
+              "ItemId": "(O){{ModId}}_weedleegg"
+            }
+          ],
+          "MinutesUntilReady": 5760
+        },
+        "{{ModId}}_beehouse_teddiursa": {
+          "Id": "{{ModId}}_beehouse_teddiursa",
+          "Triggers": [
+            {
+              "Id": "Default",
+              "Trigger": "OutputCollected,DayUpdate",
+              "Condition": "RANDOM {{RateBeehouse}}"
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_beehouse_teddiursa_item",
+              "ItemId": "(O){{ModId}}_teddiursaegg"
+            }
+          ],
+          "MinutesUntilReady": 5760
+        },
+        "{{ModId}}_beehouse_munchlax": {
+          "Id": "{{ModId}}_beehouse_munchlax",
+          "Triggers": [
+            {
+              "Id": "Default",
+              "Trigger": "OutputCollected,DayUpdate",
+              "Condition": "RANDOM {{RateBeehouse}}"
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_beehouse_munchlax_item",
+              "ItemId": "(O){{ModId}}_munchlaxegg"
+            }
+          ],
+          "MinutesUntilReady": 5760
+        },
+        "{{ModId}}_beehouse_nincadaninjask": {
+          "Id": "{{ModId}}_beehouse_nincadaninjask",
+          "Triggers": [
+            {
+              "Id": "Default",
+              "Trigger": "OutputCollected,DayUpdate",
+              "Condition": "RANDOM {{RateBeehouse}}"
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_beehouse_nincadaninjask_item",
+              "ItemId": "(O){{ModId}}_nincadaninjaskegg"
+            }
+          ],
+          "MinutesUntilReady": 5760
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_beehouse_combee",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_beehouse_cutiefly",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_beehouse_weedle",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_beehouse_teddiursa",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_beehouse_munchlax",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_beehouse_nincadaninjask",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

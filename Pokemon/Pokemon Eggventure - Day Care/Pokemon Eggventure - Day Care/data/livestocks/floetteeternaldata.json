@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load floetteeternal textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/flabebe/floette6, {{ModId}}/flabebe/shinyfloette6",
+      "FromFile": "assets/livestocks/flabebe/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_floetteeternal data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_floetteeternal": {
+          "DisplayName": "{{i18n: floetteeternal}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_floetteeternalegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: floetteeternalbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/flabebe/floette6",
+          "BabyTexture": "{{ModId}}/flabebe/flabebe",
+          "Sound": "{{ModId}}_floetteeternalcry",
+          "BabySound": "{{ModId}}_flabebecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_floetteeternalegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfloetteeternal data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfloetteeternal": {
+          "DisplayName": "{{i18n: shinyfloetteeternal}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_floetteeternalegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfloetteeternalbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/flabebe/shinyfloette6",
+          "BabyTexture": "{{ModId}}/flabebe/shinyflabebe",
+          "Sound": "{{ModId}}_floetteeternalcry",
+          "BabySound": "{{ModId}}_flabebecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_floetteeternalegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "floetteeternal cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_floetteeternalcry": {
+          "ID": "{{ModId}}_floetteeternalcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/flabebe/floetteeternalcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_flabebecry": {
+          "ID": "{{ModId}}_flabebecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/flabebe/flabebecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "floetteeternal egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_floetteeternalegg": {
+          "Name": "{{ModId}}_floetteeternalegg",
+          "DisplayName": "{{i18n: floetteeternalegg}}",
+          "Description": "{{i18n: floetteeternalegg.d}}",
+          "Texture": "{{ModId}}/flabebe/flabebeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fairy",
+            "pkegg_rarity_rare",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "floetteeternal hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_floetteeternalegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfloetteeternal",
+              "AnimalId": "{{ModId}}_shinyfloetteeternal",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_floetteeternal",
+              "AnimalId": "{{ModId}}_floetteeternal",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

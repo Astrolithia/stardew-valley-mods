@@ -1,0 +1,214 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load eiscue textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/eiscue/eiscue, {{ModId}}/eiscue/shinyeiscue, {{ModId}}/eiscue/eiscue2, {{ModId}}/eiscue/shinyeiscue2, {{ModId}}/eiscue/eiscueegg",
+      "FromFile": "assets/livestocks/eiscue/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_eiscue data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_eiscue": {
+          "DisplayName": "{{i18n: eiscue}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eiscueegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: eiscuebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eiscue/eiscue",
+          "BabyTexture": "{{ModId}}/eiscue/eiscue",
+          "Sound": "{{ModId}}_eiscuecry",
+          "BabySound": "{{ModId}}_eiscuecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eiscueegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "eiscue2",
+              "Texture": "{{ModId}}/eiscue/eiscue2",
+              "BabyTexture": "{{ModId}}/eiscue/eiscue2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_eiscue type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_eiscue"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyeiscue data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyeiscue": {
+          "DisplayName": "{{i18n: shinyeiscue}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_eiscueegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyeiscuebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/eiscue/shinyeiscue",
+          "BabyTexture": "{{ModId}}/eiscue/shinyeiscue",
+          "Sound": "{{ModId}}_eiscuecry",
+          "BabySound": "{{ModId}}_eiscuecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_eiscueegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "eiscue2",
+              "Texture": "{{ModId}}/eiscue/shinyeiscue2",
+              "BabyTexture": "{{ModId}}/eiscue/shinyeiscue2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyeiscue type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyeiscue"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "eiscue cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_eiscuecry": {
+          "ID": "{{ModId}}_eiscuecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/eiscue/eiscuecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eiscue egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_eiscueegg": {
+          "Name": "{{ModId}}_eiscueegg",
+          "DisplayName": "{{i18n: eiscueegg}}",
+          "Description": "{{i18n: eiscueegg.d}}",
+          "Texture": "{{ModId}}/eiscue/eiscueegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ice",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "eiscue hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_eiscueegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyeiscue",
+              "AnimalId": "{{ModId}}_shinyeiscue",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_eiscue",
+              "AnimalId": "{{ModId}}_eiscue",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

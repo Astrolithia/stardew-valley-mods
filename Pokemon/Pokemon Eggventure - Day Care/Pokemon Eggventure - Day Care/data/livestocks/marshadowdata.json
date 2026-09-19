@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load marshadow textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/marshadow/marshadow, {{ModId}}/marshadow/shinymarshadow, {{ModId}}/marshadow/marshadowegg",
+      "FromFile": "assets/livestocks/marshadow/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_marshadow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_marshadow": {
+          "DisplayName": "{{i18n: marshadow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_marshadowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: marshadowbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/marshadow/marshadow",
+          "BabyTexture": "{{ModId}}/marshadow/marshadow",
+          "Sound": "{{ModId}}_marshadowcry",
+          "BabySound": "{{ModId}}_marshadowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_marshadowegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymarshadow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymarshadow": {
+          "DisplayName": "{{i18n: shinymarshadow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_marshadowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymarshadowbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/marshadow/shinymarshadow",
+          "BabyTexture": "{{ModId}}/marshadow/shinymarshadow",
+          "Sound": "{{ModId}}_marshadowcry",
+          "BabySound": "{{ModId}}_marshadowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_marshadowegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "marshadow cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_marshadowcry": {
+          "ID": "{{ModId}}_marshadowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/marshadow/marshadowcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "marshadow egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_marshadowegg": {
+          "Name": "{{ModId}}_marshadowegg",
+          "DisplayName": "{{i18n: marshadowegg}}",
+          "Description": "{{i18n: marshadowegg.d}}",
+          "Texture": "{{ModId}}/marshadow/marshadowegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fighting",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "marshadow hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_marshadowegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymarshadow",
+              "AnimalId": "{{ModId}}_shinymarshadow",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_marshadow",
+              "AnimalId": "{{ModId}}_marshadow",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

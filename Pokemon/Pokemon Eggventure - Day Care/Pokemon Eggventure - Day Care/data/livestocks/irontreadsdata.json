@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load irontreads textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/irontreads/irontreads, {{ModId}}/irontreads/shinyirontreads, {{ModId}}/irontreads/irontreadsegg",
+      "FromFile": "assets/livestocks/irontreads/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_irontreads data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_irontreads": {
+          "DisplayName": "{{i18n: irontreads}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_irontreadsegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: irontreadsbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/irontreads/irontreads",
+          "BabyTexture": "{{ModId}}/irontreads/irontreads",
+          "Sound": "{{ModId}}_irontreadscry",
+          "BabySound": "{{ModId}}_irontreadscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_irontreadsegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyirontreads data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyirontreads": {
+          "DisplayName": "{{i18n: shinyirontreads}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_irontreadsegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyirontreadsbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/irontreads/shinyirontreads",
+          "BabyTexture": "{{ModId}}/irontreads/shinyirontreads",
+          "Sound": "{{ModId}}_irontreadscry",
+          "BabySound": "{{ModId}}_irontreadscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_irontreadsegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "irontreads cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_irontreadscry": {
+          "ID": "{{ModId}}_irontreadscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/irontreads/irontreadscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "irontreads egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_irontreadsegg": {
+          "Name": "{{ModId}}_irontreadsegg",
+          "DisplayName": "{{i18n: irontreadsegg}}",
+          "Description": "{{i18n: irontreadsegg.d}}",
+          "Texture": "{{ModId}}/irontreads/irontreadsegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ground",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_futurs",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "irontreads hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_irontreadsegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyirontreads",
+              "AnimalId": "{{ModId}}_shinyirontreads",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_irontreads",
+              "AnimalId": "{{ModId}}_irontreads",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

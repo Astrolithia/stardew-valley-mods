@@ -1,0 +1,222 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shellos textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shellos/shellos, {{ModId}}/shellos/shinyshellos, {{ModId}}/shellos/gastrodon, {{ModId}}/shellos/shinygastrodon, {{ModId}}/shellos/shellosegg, {{ModId}}/shellos/shellos2, {{ModId}}/shellos/shinyshellos2, {{ModId}}/shellos/gastrodon2, {{ModId}}/shellos/shinygastrodon2",
+      "FromFile": "assets/livestocks/shellos/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shellos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shellos": {
+          "DisplayName": "{{i18n: shellos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shellosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shellosbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shellos/gastrodon",
+          "BabyTexture": "{{ModId}}/shellos/shellos",
+          "Sound": "{{ModId}}_gastrodoncry",
+          "BabySound": "{{ModId}}_shelloscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shellosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "shellos2",
+              "Texture": "{{ModId}}/shellos/gastrodon2",
+              "BabyTexture": "{{ModId}}/shellos/shellos2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shellos type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shellos"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshellos data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshellos": {
+          "DisplayName": "{{i18n: shinyshellos}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_shellosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshellosbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shellos/shinygastrodon",
+          "BabyTexture": "{{ModId}}/shellos/shinyshellos",
+          "Sound": "{{ModId}}_gastrodoncry",
+          "BabySound": "{{ModId}}_shelloscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shellosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "shellos2",
+              "Texture": "{{ModId}}/shellos/shinygastrodon2",
+              "BabyTexture": "{{ModId}}/shellos/shinyshellos2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyshellos type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyshellos"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "shellos cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shelloscry": {
+          "ID": "{{ModId}}_shelloscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shellos/shelloscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gastrodoncry": {
+          "ID": "{{ModId}}_gastrodoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shellos/gastrodoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shellos egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shellosegg": {
+          "Name": "{{ModId}}_shellosegg",
+          "DisplayName": "{{i18n: shellosegg}}",
+          "Description": "{{i18n: shellosegg.d}}",
+          "Texture": "{{ModId}}/shellos/shellosegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_common",
+            "pkegg_panning_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shellos hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shellosegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshellos",
+              "AnimalId": "{{ModId}}_shinyshellos",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shellos",
+              "AnimalId": "{{ModId}}_shellos",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

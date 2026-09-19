@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load froslass textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/snorunt/snorunt_froslass, {{ModId}}/snorunt/shinysnorunt_froslass, {{ModId}}/snorunt/froslass, {{ModId}}/snorunt/shinyfroslass, {{ModId}}/snorunt/froslassegg",
+      "FromFile": "assets/livestocks/snorunt/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_froslass data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_froslass": {
+          "DisplayName": "{{i18n: froslass}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_froslassegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: froslassbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snorunt/froslass",
+          "BabyTexture": "{{ModId}}/snorunt/snorunt_froslass",
+          "Sound": "{{ModId}}_froslasscry",
+          "BabySound": "{{ModId}}_snoruntcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_froslassegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_froslass type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_froslass"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfroslass data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfroslass": {
+          "DisplayName": "{{i18n: shinyfroslass}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_froslassegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfroslassbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snorunt/shinyfroslass",
+          "BabyTexture": "{{ModId}}/snorunt/shinysnorunt_froslass",
+          "Sound": "{{ModId}}_froslasscry",
+          "BabySound": "{{ModId}}_snoruntcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_froslassegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfroslass type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfroslass"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "froslass cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_snoruntcry": {
+          "ID": "{{ModId}}_snoruntcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snorunt/snoruntcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_froslasscry": {
+          "ID": "{{ModId}}_froslasscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snorunt/froslasscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "froslass egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_froslassegg": {
+          "Name": "{{ModId}}_froslassegg",
+          "DisplayName": "{{i18n: froslassegg}}",
+          "Description": "{{i18n: froslassegg.d}}",
+          "Texture": "{{ModId}}/snorunt/froslassegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_common",
+            "pkegg_mine_41_60_p4",
+            "pkegg_mine_61_80_p4",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "froslass hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_froslassegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfroslass",
+              "AnimalId": "{{ModId}}_shinyfroslass",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_froslass",
+              "AnimalId": "{{ModId}}_froslass",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

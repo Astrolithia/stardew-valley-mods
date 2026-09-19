@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load xurkitree textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/xurkitree/xurkitree, {{ModId}}/xurkitree/shinyxurkitree, {{ModId}}/xurkitree/xurkitreeegg",
+      "FromFile": "assets/livestocks/xurkitree/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_xurkitree data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_xurkitree": {
+          "DisplayName": "{{i18n: xurkitree}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_xurkitreeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: xurkitreebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/xurkitree/xurkitree",
+          "BabyTexture": "{{ModId}}/xurkitree/xurkitree",
+          "Sound": "{{ModId}}_xurkitreecry",
+          "BabySound": "{{ModId}}_xurkitreecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_xurkitreeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyxurkitree data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyxurkitree": {
+          "DisplayName": "{{i18n: shinyxurkitree}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_xurkitreeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyxurkitreebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/xurkitree/shinyxurkitree",
+          "BabyTexture": "{{ModId}}/xurkitree/shinyxurkitree",
+          "Sound": "{{ModId}}_xurkitreecry",
+          "BabySound": "{{ModId}}_xurkitreecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_xurkitreeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "xurkitree cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_xurkitreecry": {
+          "ID": "{{ModId}}_xurkitreecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/xurkitree/xurkitreecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "xurkitree egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_xurkitreeegg": {
+          "Name": "{{ModId}}_xurkitreeegg",
+          "DisplayName": "{{i18n: xurkitreeegg}}",
+          "Description": "{{i18n: xurkitreeegg.d}}",
+          "Texture": "{{ModId}}/xurkitree/xurkitreeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "xurkitree hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_xurkitreeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyxurkitree",
+              "AnimalId": "{{ModId}}_shinyxurkitree",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_xurkitree",
+              "AnimalId": "{{ModId}}_xurkitree",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

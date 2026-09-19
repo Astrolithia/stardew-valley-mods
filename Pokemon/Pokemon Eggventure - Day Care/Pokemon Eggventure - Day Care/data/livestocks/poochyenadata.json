@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load poochyena textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/poochyena/poochyena, {{ModId}}/poochyena/shinypoochyena, {{ModId}}/poochyena/mightyena, {{ModId}}/poochyena/shinymightyena, {{ModId}}/poochyena/poochyenaegg",
+      "FromFile": "assets/livestocks/poochyena/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_poochyena data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_poochyena": {
+          "DisplayName": "{{i18n: poochyena}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_poochyenaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: poochyenabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poochyena/mightyena",
+          "BabyTexture": "{{ModId}}/poochyena/poochyena",
+          "Sound": "{{ModId}}_mightyenacry",
+          "BabySound": "{{ModId}}_poochyenacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poochyenaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypoochyena data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypoochyena": {
+          "DisplayName": "{{i18n: shinypoochyena}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_poochyenaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypoochyenabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poochyena/shinymightyena",
+          "BabyTexture": "{{ModId}}/poochyena/shinypoochyena",
+          "Sound": "{{ModId}}_mightyenacry",
+          "BabySound": "{{ModId}}_poochyenacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poochyenaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "poochyena cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_poochyenacry": {
+          "ID": "{{ModId}}_poochyenacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poochyena/poochyenacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mightyenacry": {
+          "ID": "{{ModId}}_mightyenacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poochyena/mightyenacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poochyena egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_poochyenaegg": {
+          "Name": "{{ModId}}_poochyenaegg",
+          "DisplayName": "{{i18n: poochyenaegg}}",
+          "Description": "{{i18n: poochyenaegg.d}}",
+          "Texture": "{{ModId}}/poochyena/poochyenaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_verycommon",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poochyena hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_poochyenaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypoochyena",
+              "AnimalId": "{{ModId}}_shinypoochyena",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_poochyena",
+              "AnimalId": "{{ModId}}_poochyena",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

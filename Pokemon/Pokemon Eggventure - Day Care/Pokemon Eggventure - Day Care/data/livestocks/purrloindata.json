@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load purrloin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/purrloin/purrloin, {{ModId}}/purrloin/shinypurrloin, {{ModId}}/purrloin/liepard, {{ModId}}/purrloin/shinyliepard, {{ModId}}/purrloin/purrloinegg",
+      "FromFile": "assets/livestocks/purrloin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_purrloin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_purrloin": {
+          "DisplayName": "{{i18n: purrloin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_purrloinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: purrloinbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/purrloin/liepard",
+          "BabyTexture": "{{ModId}}/purrloin/purrloin",
+          "Sound": "{{ModId}}_liepardcry",
+          "BabySound": "{{ModId}}_purrloincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_purrloinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypurrloin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypurrloin": {
+          "DisplayName": "{{i18n: shinypurrloin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_purrloinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypurrloinbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/purrloin/shinyliepard",
+          "BabyTexture": "{{ModId}}/purrloin/shinypurrloin",
+          "Sound": "{{ModId}}_liepardcry",
+          "BabySound": "{{ModId}}_purrloincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_purrloinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "purrloin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_purrloincry": {
+          "ID": "{{ModId}}_purrloincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/purrloin/purrloincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_liepardcry": {
+          "ID": "{{ModId}}_liepardcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/purrloin/liepardcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "purrloin egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_purrloinegg": {
+          "Name": "{{ModId}}_purrloinegg",
+          "DisplayName": "{{i18n: purrloinegg}}",
+          "Description": "{{i18n: purrloinegg.d}}",
+          "Texture": "{{ModId}}/purrloin/purrloinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_verycommon",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "purrloin hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_purrloinegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypurrloin",
+              "AnimalId": "{{ModId}}_shinypurrloin",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_purrloin",
+              "AnimalId": "{{ModId}}_purrloin",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

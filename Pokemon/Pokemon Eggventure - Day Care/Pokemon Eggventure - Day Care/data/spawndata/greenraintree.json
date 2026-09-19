@@ -1,0 +1,373 @@
+{
+  "Changes": [
+    {
+      "LogName": "Green rain tree 10 - CHOP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "10",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_greenrain_carnivine_t10_chop": {
+          "Id": "{{ModId}}_greenrain_carnivine_t10_chop",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_fomantis_t10_chop": {
+          "Id": "{{ModId}}_greenrain_fomantis_t10_chop",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_oddishvileplume_t10_chop": {
+          "Id": "{{ModId}}_greenrain_oddishvileplume_t10_chop",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_scyther_t10_chop": {
+          "Id": "{{ModId}}_greenrain_scyther_t10_chop",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_sewaddle_t10_chop": {
+          "Id": "{{ModId}}_greenrain_sewaddle_t10_chop",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_tangela_t10_chop": {
+          "Id": "{{ModId}}_greenrain_tangela_t10_chop",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 10 - SHAKE",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "10",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_greenrain_carnivine_t10_shake": {
+          "Id": "{{ModId}}_greenrain_carnivine_t10_shake",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_fomantis_t10_shake": {
+          "Id": "{{ModId}}_greenrain_fomantis_t10_shake",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_oddishvileplume_t10_shake": {
+          "Id": "{{ModId}}_greenrain_oddishvileplume_t10_shake",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_scyther_t10_shake": {
+          "Id": "{{ModId}}_greenrain_scyther_t10_shake",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_sewaddle_t10_shake": {
+          "Id": "{{ModId}}_greenrain_sewaddle_t10_shake",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_tangela_t10_shake": {
+          "Id": "{{ModId}}_greenrain_tangela_t10_shake",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainShake}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 10 - TAP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "10",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_10_oddishvileplumeegg": {
+          "Id": "{{ModId}}_chop_10_oddishvileplumeegg",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_10_sewaddleegg": {
+          "Id": "{{ModId}}_chop_10_sewaddleegg",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_10_carnivineegg": {
+          "Id": "{{ModId}}_chop_10_carnivineegg",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_10_fomantisegg": {
+          "Id": "{{ModId}}_chop_10_fomantisegg",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_10_tangelaegg": {
+          "Id": "{{ModId}}_chop_10_tangelaegg",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_10_scytheregg": {
+          "Id": "{{ModId}}_chop_10_scytheregg",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 11 - CHOP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "11",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_greenrain_carnivine_t11_chop": {
+          "Id": "{{ModId}}_greenrain_carnivine_t11_chop",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_fomantis_t11_chop": {
+          "Id": "{{ModId}}_greenrain_fomantis_t11_chop",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_oddishvileplume_t11_chop": {
+          "Id": "{{ModId}}_greenrain_oddishvileplume_t11_chop",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_scyther_t11_chop": {
+          "Id": "{{ModId}}_greenrain_scyther_t11_chop",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_sewaddle_t11_chop": {
+          "Id": "{{ModId}}_greenrain_sewaddle_t11_chop",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_tangela_t11_chop": {
+          "Id": "{{ModId}}_greenrain_tangela_t11_chop",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 11 - SHAKE",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "11",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_greenrain_carnivine_t11_shake": {
+          "Id": "{{ModId}}_greenrain_carnivine_t11_shake",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_fomantis_t11_shake": {
+          "Id": "{{ModId}}_greenrain_fomantis_t11_shake",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_oddishvileplume_t11_shake": {
+          "Id": "{{ModId}}_greenrain_oddishvileplume_t11_shake",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_scyther_t11_shake": {
+          "Id": "{{ModId}}_greenrain_scyther_t11_shake",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_sewaddle_t11_shake": {
+          "Id": "{{ModId}}_greenrain_sewaddle_t11_shake",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_tangela_t11_shake": {
+          "Id": "{{ModId}}_greenrain_tangela_t11_shake",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainShake}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 11 - TAP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "11",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_11_oddishvileplumeegg": {
+          "Id": "{{ModId}}_chop_11_oddishvileplumeegg",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_11_sewaddleegg": {
+          "Id": "{{ModId}}_chop_11_sewaddleegg",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_11_carnivineegg": {
+          "Id": "{{ModId}}_chop_11_carnivineegg",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_11_fomantisegg": {
+          "Id": "{{ModId}}_chop_11_fomantisegg",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_11_tangelaegg": {
+          "Id": "{{ModId}}_chop_11_tangelaegg",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_11_scytheregg": {
+          "Id": "{{ModId}}_chop_11_scytheregg",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 12 (fougeres) - CHOP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "12",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_greenrain_carnivine_t12_chop": {
+          "Id": "{{ModId}}_greenrain_carnivine_t12_chop",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_fomantis_t12_chop": {
+          "Id": "{{ModId}}_greenrain_fomantis_t12_chop",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_oddishvileplume_t12_chop": {
+          "Id": "{{ModId}}_greenrain_oddishvileplume_t12_chop",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_scyther_t12_chop": {
+          "Id": "{{ModId}}_greenrain_scyther_t12_chop",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_sewaddle_t12_chop": {
+          "Id": "{{ModId}}_greenrain_sewaddle_t12_chop",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_greenrain_tangela_t12_chop": {
+          "Id": "{{ModId}}_greenrain_tangela_t12_chop",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 12 (fougeres) - SHAKE",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "12",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_greenrain_carnivine_t12_shake": {
+          "Id": "{{ModId}}_greenrain_carnivine_t12_shake",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_fomantis_t12_shake": {
+          "Id": "{{ModId}}_greenrain_fomantis_t12_shake",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_oddishvileplume_t12_shake": {
+          "Id": "{{ModId}}_greenrain_oddishvileplume_t12_shake",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_scyther_t12_shake": {
+          "Id": "{{ModId}}_greenrain_scyther_t12_shake",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_sewaddle_t12_shake": {
+          "Id": "{{ModId}}_greenrain_sewaddle_t12_shake",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainShake}}"
+        },
+        "{{ModId}}_greenrain_tangela_t12_shake": {
+          "Id": "{{ModId}}_greenrain_tangela_t12_shake",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainShake}}"
+        }
+      }
+    },
+    {
+      "LogName": "Green rain tree 12 (fougeres) - TAP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "12",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_12_oddishvileplumeegg": {
+          "Id": "{{ModId}}_chop_12_oddishvileplumeegg",
+          "ItemId": "{{ModId}}_oddishvileplumeegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_12_sewaddleegg": {
+          "Id": "{{ModId}}_chop_12_sewaddleegg",
+          "ItemId": "{{ModId}}_sewaddleegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_12_carnivineegg": {
+          "Id": "{{ModId}}_chop_12_carnivineegg",
+          "ItemId": "{{ModId}}_carnivineegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_12_fomantisegg": {
+          "Id": "{{ModId}}_chop_12_fomantisegg",
+          "ItemId": "{{ModId}}_fomantisegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_12_tangelaegg": {
+          "Id": "{{ModId}}_chop_12_tangelaegg",
+          "ItemId": "{{ModId}}_tangelaegg",
+          "Chance": "{{RateGreenRainChop}}"
+        },
+        "{{ModId}}_chop_12_scytheregg": {
+          "Id": "{{ModId}}_chop_12_scytheregg",
+          "ItemId": "{{ModId}}_scytheregg",
+          "Chance": "{{RateGreenRainChop}}"
+        }
+      }
+    }
+  ]
+}

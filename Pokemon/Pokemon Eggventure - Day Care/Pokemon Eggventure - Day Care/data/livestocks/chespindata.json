@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load chespin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/chespin/chespin, {{ModId}}/chespin/shinychespin, {{ModId}}/chespin/quilladin, {{ModId}}/chespin/shinyquilladin, {{ModId}}/chespin/chesnaught, {{ModId}}/chespin/shinychesnaught, {{ModId}}/chespin/chespinegg",
+      "FromFile": "assets/livestocks/chespin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_chespin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_chespin": {
+          "DisplayName": "{{i18n: chespin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_chespinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: chespinbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chespin/quilladin",
+          "BabyTexture": "{{ModId}}/chespin/chespin",
+          "Sound": "{{ModId}}_chesnaughtcry",
+          "BabySound": "{{ModId}}_chespincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chespinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_chespin evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_chespin",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "chespinevolution": {
+          "Id": "chespinevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/chespin/chesnaught"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinychespin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinychespin": {
+          "DisplayName": "{{i18n: shinychespin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_chespinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinychespinbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chespin/shinyquilladin",
+          "BabyTexture": "{{ModId}}/chespin/shinychespin",
+          "Sound": "{{ModId}}_chesnaughtcry",
+          "BabySound": "{{ModId}}_chespincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chespinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinychespin evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinychespin",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinychespinevolution": {
+          "Id": "shinychespinevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/chespin/shinychesnaught"
+        }
+      }
+    },
+    {
+      "LogName": "chespin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_chespincry": {
+          "ID": "{{ModId}}_chespincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chespin/chespincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_chesnaughtcry": {
+          "ID": "{{ModId}}_chesnaughtcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chespin/chesnaughtcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chespin egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_chespinegg": {
+          "Name": "{{ModId}}_chespinegg",
+          "DisplayName": "{{i18n: chespinegg}}",
+          "Description": "{{i18n: chespinegg.d}}",
+          "Texture": "{{ModId}}/chespin/chespinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chespin hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_chespinegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinychespin",
+              "AnimalId": "{{ModId}}_shinychespin",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_chespin",
+              "AnimalId": "{{ModId}}_chespin",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mothim textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/burmy/burmy_mothim, {{ModId}}/burmy/shinyburmy_mothim, {{ModId}}/burmy/burmy2_mothim, {{ModId}}/burmy/shinyburmy2_mothim, {{ModId}}/burmy/burmy3_mothim, {{ModId}}/burmy/shinyburmy3_mothim, {{ModId}}/burmy/mothim, {{ModId}}/burmy/shinymothim, {{ModId}}/burmy/mothimegg",
+      "FromFile": "assets/livestocks/burmy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mothim data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mothim": {
+          "DisplayName": "{{i18n: mothim}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mothimegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mothimbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/mothim",
+          "BabyTexture": "{{ModId}}/burmy/burmy_mothim",
+          "Sound": "{{ModId}}_mothimcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mothimegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymothim data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymothim": {
+          "DisplayName": "{{i18n: shinymothim}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_mothimegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymothimbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/burmy/shinymothim",
+          "BabyTexture": "{{ModId}}/burmy/shinyburmy_mothim",
+          "Sound": "{{ModId}}_mothimcry",
+          "BabySound": "{{ModId}}_burmycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mothimegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "mothim cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_burmycry": {
+          "ID": "{{ModId}}_burmycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/burmy/burmycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mothimcry": {
+          "ID": "{{ModId}}_mothimcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/burmy/mothimcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mothim egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mothimegg": {
+          "Name": "{{ModId}}_mothimegg",
+          "DisplayName": "{{i18n: mothimegg}}",
+          "Description": "{{i18n: mothimegg.d}}",
+          "Texture": "{{ModId}}/burmy/mothimegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mothim hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mothimegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymothim",
+              "AnimalId": "{{ModId}}_shinymothim",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mothim",
+              "AnimalId": "{{ModId}}_mothim",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

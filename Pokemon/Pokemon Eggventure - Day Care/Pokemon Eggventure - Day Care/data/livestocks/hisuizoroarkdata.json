@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuizoroark textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zorua/hisuizorua, {{ModId}}/zorua/shinyhisuizorua, {{ModId}}/zorua/hisuizoroark, {{ModId}}/zorua/shinyhisuizoroark, {{ModId}}/zorua/hisuizoroarkegg",
+      "FromFile": "assets/livestocks/zorua/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuizoroark data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuizoroark": {
+          "DisplayName": "{{i18n: hisuizoroark}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuizoroarkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuizoroarkbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zorua/hisuizoroark",
+          "BabyTexture": "{{ModId}}/zorua/hisuizorua",
+          "Sound": "{{ModId}}_hisuizoroarkcry",
+          "BabySound": "{{ModId}}_hisuizoruacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuizoroarkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuizoroark data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuizoroark": {
+          "DisplayName": "{{i18n: shinyhisuizoroark}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuizoroarkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuizoroarkbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zorua/shinyhisuizoroark",
+          "BabyTexture": "{{ModId}}/zorua/shinyhisuizorua",
+          "Sound": "{{ModId}}_hisuizoroarkcry",
+          "BabySound": "{{ModId}}_hisuizoruacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuizoroarkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hisuizoroark cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hisuizoruacry": {
+          "ID": "{{ModId}}_hisuizoruacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zorua/hisuizoruacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuizoroarkcry": {
+          "ID": "{{ModId}}_hisuizoroarkcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zorua/hisuizoroarkcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuizoroark egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuizoroarkegg": {
+          "Name": "{{ModId}}_hisuizoroarkegg",
+          "DisplayName": "{{i18n: hisuizoroarkegg}}",
+          "Description": "{{i18n: hisuizoroarkegg.d}}",
+          "Texture": "{{ModId}}/zorua/hisuizoroarkegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuizoroark hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuizoroarkegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuizoroark",
+              "AnimalId": "{{ModId}}_shinyhisuizoroark",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuizoroark",
+              "AnimalId": "{{ModId}}_hisuizoroark",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load deoxys textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/deoxys/deoxys, {{ModId}}/deoxys/shinydeoxys, {{ModId}}/deoxys/deoxysspeed, {{ModId}}/deoxys/shinydeoxysspeed, {{ModId}}/deoxys/deoxysattack, {{ModId}}/deoxys/shinydeoxysattack, {{ModId}}/deoxys/deoxysdefense, {{ModId}}/deoxys/shinydeoxysdefense, {{ModId}}/deoxys/deoxysegg",
+      "FromFile": "assets/livestocks/deoxys/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_deoxys data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_deoxys": {
+          "DisplayName": "{{i18n: deoxys}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_deoxysegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: deoxysbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/deoxys/deoxys",
+          "BabyTexture": "{{ModId}}/deoxys/deoxys",
+          "Sound": "{{ModId}}_deoxyscry",
+          "BabySound": "{{ModId}}_deoxyscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_deoxysegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "deoxysspeed",
+              "Texture": "{{ModId}}/deoxys/deoxysspeed",
+              "BabyTexture": "{{ModId}}/deoxys/deoxysspeed"
+            },
+            {
+              "Id": "deoxysattack",
+              "Texture": "{{ModId}}/deoxys/deoxysattack",
+              "BabyTexture": "{{ModId}}/deoxys/deoxysattack"
+            },
+            {
+              "Id": "deoxysdefense",
+              "Texture": "{{ModId}}/deoxys/deoxysdefense",
+              "BabyTexture": "{{ModId}}/deoxys/deoxysdefense"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydeoxys data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydeoxys": {
+          "DisplayName": "{{i18n: shinydeoxys}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_deoxysegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydeoxysbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/deoxys/shinydeoxys",
+          "BabyTexture": "{{ModId}}/deoxys/shinydeoxys",
+          "Sound": "{{ModId}}_deoxyscry",
+          "BabySound": "{{ModId}}_deoxyscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_deoxysegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "deoxysspeed",
+              "Texture": "{{ModId}}/deoxys/shinydeoxysspeed",
+              "BabyTexture": "{{ModId}}/deoxys/shinydeoxysspeed"
+            },
+            {
+              "Id": "deoxysattack",
+              "Texture": "{{ModId}}/deoxys/shinydeoxysattack",
+              "BabyTexture": "{{ModId}}/deoxys/shinydeoxysattack"
+            },
+            {
+              "Id": "deoxysdefense",
+              "Texture": "{{ModId}}/deoxys/shinydeoxysdefense",
+              "BabyTexture": "{{ModId}}/deoxys/shinydeoxysdefense"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "deoxys cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_deoxyscry": {
+          "ID": "{{ModId}}_deoxyscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/deoxys/deoxyscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "deoxys egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_deoxysegg": {
+          "Name": "{{ModId}}_deoxysegg",
+          "DisplayName": "{{i18n: deoxysegg}}",
+          "Description": "{{i18n: deoxysegg.d}}",
+          "Texture": "{{ModId}}/deoxys/deoxysegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "deoxys hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_deoxysegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydeoxys",
+              "AnimalId": "{{ModId}}_shinydeoxys",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_deoxys",
+              "AnimalId": "{{ModId}}_deoxys",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

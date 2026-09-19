@@ -1,0 +1,203 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load paldeatauros textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tauros/paldeatauros, {{ModId}}/tauros/shinypaldeatauros, {{ModId}}/tauros/paldeatauros2, {{ModId}}/tauros/shinypaldeatauros2, {{ModId}}/tauros/paldeatauros3, {{ModId}}/tauros/shinypaldeatauros3, {{ModId}}/tauros/paldeataurosegg",
+      "FromFile": "assets/livestocks/tauros/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_paldeatauros data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_paldeatauros": {
+          "DisplayName": "{{i18n: paldeatauros}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_paldeataurosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: paldeataurosbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tauros/paldeatauros",
+          "BabyTexture": "{{ModId}}/tauros/paldeatauros",
+          "Sound": "{{ModId}}_tauroscry",
+          "BabySound": "{{ModId}}_tauroscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_paldeataurosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "paldeatauros2",
+              "Texture": "{{ModId}}/tauros/paldeatauros2",
+              "BabyTexture": "{{ModId}}/tauros/paldeatauros2"
+            },
+            {
+              "Id": "paldeatauros3",
+              "Texture": "{{ModId}}/tauros/paldeatauros3",
+              "BabyTexture": "{{ModId}}/tauros/paldeatauros3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypaldeatauros data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypaldeatauros": {
+          "DisplayName": "{{i18n: shinypaldeatauros}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_paldeataurosegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypaldeataurosbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tauros/shinypaldeatauros",
+          "BabyTexture": "{{ModId}}/tauros/shinypaldeatauros",
+          "Sound": "{{ModId}}_tauroscry",
+          "BabySound": "{{ModId}}_tauroscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_paldeataurosegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "paldeatauros2",
+              "Texture": "{{ModId}}/tauros/shinypaldeatauros2",
+              "BabyTexture": "{{ModId}}/tauros/shinypaldeatauros2"
+            },
+            {
+              "Id": "paldeatauros3",
+              "Texture": "{{ModId}}/tauros/shinypaldeatauros3",
+              "BabyTexture": "{{ModId}}/tauros/shinypaldeatauros3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "paldeatauros cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tauroscry": {
+          "ID": "{{ModId}}_tauroscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tauros/tauroscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "paldeatauros egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_paldeataurosegg": {
+          "Name": "{{ModId}}_paldeataurosegg",
+          "DisplayName": "{{i18n: paldeataurosegg}}",
+          "Description": "{{i18n: paldeataurosegg.d}}",
+          "Texture": "{{ModId}}/tauros/paldeataurosegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "paldeatauros hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_paldeataurosegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypaldeatauros",
+              "AnimalId": "{{ModId}}_shinypaldeatauros",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_paldeatauros",
+              "AnimalId": "{{ModId}}_paldeatauros",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

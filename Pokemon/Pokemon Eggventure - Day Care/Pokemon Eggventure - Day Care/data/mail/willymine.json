@@ -1,0 +1,27 @@
+{
+  "Changes": [
+    {
+      "LogName": "Willy mine fishing letter",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_willyminemail": "{{i18n:mail_willy_text}}[#]{{i18n:mail_willy_title}}"
+      }
+    },
+    {
+      "LogName": "Willy mine fishing trigger",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_WillyMineMailTrigger": {
+          "Id": "{{ModId}}_WillyMineMailTrigger",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_VISITED_LOCATION Current Mine, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, !PLAYER_HAS_MAIL Current {{ModId}}_willyminemail Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_willyminemail Now"
+          ]
+        }
+      }
+    }
+  ]
+}

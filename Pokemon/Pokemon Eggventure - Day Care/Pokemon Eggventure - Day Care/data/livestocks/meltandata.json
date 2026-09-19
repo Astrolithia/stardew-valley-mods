@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load meltan textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/meltan/meltan, {{ModId}}/meltan/shinymeltan, {{ModId}}/meltan/melmetal, {{ModId}}/meltan/shinymelmetal, {{ModId}}/meltan/meltanegg",
+      "FromFile": "assets/livestocks/meltan/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_meltan data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_meltan": {
+          "DisplayName": "{{i18n: meltan}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_meltanegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: meltanbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meltan/melmetal",
+          "BabyTexture": "{{ModId}}/meltan/meltan",
+          "Sound": "{{ModId}}_melmetalcry",
+          "BabySound": "{{ModId}}_meltancry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_meltanegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymeltan data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymeltan": {
+          "DisplayName": "{{i18n: shinymeltan}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_meltanegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymeltanbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meltan/shinymelmetal",
+          "BabyTexture": "{{ModId}}/meltan/shinymeltan",
+          "Sound": "{{ModId}}_melmetalcry",
+          "BabySound": "{{ModId}}_meltancry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_meltanegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "meltan cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_meltancry": {
+          "ID": "{{ModId}}_meltancry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meltan/meltancry.ogg}}"
+          ]
+        },
+        "{{ModId}}_melmetalcry": {
+          "ID": "{{ModId}}_melmetalcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meltan/melmetalcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meltan egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_meltanegg": {
+          "Name": "{{ModId}}_meltanegg",
+          "DisplayName": "{{i18n: meltanegg}}",
+          "Description": "{{i18n: meltanegg.d}}",
+          "Texture": "{{ModId}}/meltan/meltanegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meltan hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_meltanegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymeltan",
+              "AnimalId": "{{ModId}}_shinymeltan",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_meltan",
+              "AnimalId": "{{ModId}}_meltan",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

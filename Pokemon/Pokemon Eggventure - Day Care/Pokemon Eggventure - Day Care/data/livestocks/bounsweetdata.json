@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bounsweet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bounsweet/bounsweet, {{ModId}}/bounsweet/shinybounsweet, {{ModId}}/bounsweet/steenee, {{ModId}}/bounsweet/shinysteenee, {{ModId}}/bounsweet/tsareena, {{ModId}}/bounsweet/shinytsareena, {{ModId}}/bounsweet/bounsweetegg",
+      "FromFile": "assets/livestocks/bounsweet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bounsweet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bounsweet": {
+          "DisplayName": "{{i18n: bounsweet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bounsweetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bounsweetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bounsweet/steenee",
+          "BabyTexture": "{{ModId}}/bounsweet/bounsweet",
+          "Sound": "{{ModId}}_tsareenacry",
+          "BabySound": "{{ModId}}_bounsweetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bounsweetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_bounsweet evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bounsweet",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "bounsweetevolution": {
+          "Id": "bounsweetevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bounsweet/tsareena"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybounsweet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybounsweet": {
+          "DisplayName": "{{i18n: shinybounsweet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bounsweetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybounsweetbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bounsweet/shinysteenee",
+          "BabyTexture": "{{ModId}}/bounsweet/shinybounsweet",
+          "Sound": "{{ModId}}_tsareenacry",
+          "BabySound": "{{ModId}}_bounsweetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bounsweetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybounsweet evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybounsweet",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybounsweetevolution": {
+          "Id": "shinybounsweetevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bounsweet/shinytsareena"
+        }
+      }
+    },
+    {
+      "LogName": "bounsweet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bounsweetcry": {
+          "ID": "{{ModId}}_bounsweetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bounsweet/bounsweetcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_tsareenacry": {
+          "ID": "{{ModId}}_tsareenacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bounsweet/tsareenacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bounsweet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bounsweetegg": {
+          "Name": "{{ModId}}_bounsweetegg",
+          "DisplayName": "{{i18n: bounsweetegg}}",
+          "Description": "{{i18n: bounsweetegg.d}}",
+          "Texture": "{{ModId}}/bounsweet/bounsweetegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bounsweet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bounsweetegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybounsweet",
+              "AnimalId": "{{ModId}}_shinybounsweet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bounsweet",
+              "AnimalId": "{{ModId}}_bounsweet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load geodude textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/geodude/geodude, {{ModId}}/geodude/shinygeodude, {{ModId}}/geodude/graveler, {{ModId}}/geodude/shinygraveler, {{ModId}}/geodude/golem, {{ModId}}/geodude/shinygolem, {{ModId}}/geodude/geodudeegg",
+      "FromFile": "assets/livestocks/geodude/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_geodude data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_geodude": {
+          "DisplayName": "{{i18n: geodude}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_geodudeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: geodudebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/geodude/graveler",
+          "BabyTexture": "{{ModId}}/geodude/geodude",
+          "Sound": "{{ModId}}_golemcry",
+          "BabySound": "{{ModId}}_geodudecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_geodudeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_geodude evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_geodude",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "geodudeevolution": {
+          "Id": "geodudeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/geodude/golem"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygeodude data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygeodude": {
+          "DisplayName": "{{i18n: shinygeodude}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_geodudeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygeodudebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/geodude/shinygraveler",
+          "BabyTexture": "{{ModId}}/geodude/shinygeodude",
+          "Sound": "{{ModId}}_golemcry",
+          "BabySound": "{{ModId}}_geodudecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_geodudeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygeodude evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygeodude",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygeodudeevolution": {
+          "Id": "shinygeodudeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/geodude/shinygolem"
+        }
+      }
+    },
+    {
+      "LogName": "geodude cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_geodudecry": {
+          "ID": "{{ModId}}_geodudecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/geodude/geodudecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_golemcry": {
+          "ID": "{{ModId}}_golemcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/geodude/golemcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "geodude egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_geodudeegg": {
+          "Name": "{{ModId}}_geodudeegg",
+          "DisplayName": "{{i18n: geodudeegg}}",
+          "Description": "{{i18n: geodudeegg.d}}",
+          "Texture": "{{ModId}}/geodude/geodudeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_1_30_p1",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "geodude hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_geodudeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygeodude",
+              "AnimalId": "{{ModId}}_shinygeodude",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_geodude",
+              "AnimalId": "{{ModId}}_geodude",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

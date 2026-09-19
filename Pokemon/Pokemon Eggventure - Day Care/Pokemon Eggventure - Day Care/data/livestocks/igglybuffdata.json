@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load igglybuff textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/igglybuff/igglybuff, {{ModId}}/igglybuff/shinyigglybuff, {{ModId}}/igglybuff/jigglypuff, {{ModId}}/igglybuff/shinyjigglypuff, {{ModId}}/igglybuff/wigglytuff, {{ModId}}/igglybuff/shinywigglytuff, {{ModId}}/igglybuff/igglybuffegg",
+      "FromFile": "assets/livestocks/igglybuff/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_igglybuff data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_igglybuff": {
+          "DisplayName": "{{i18n: igglybuff}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_igglybuffegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: igglybuffbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/igglybuff/jigglypuff",
+          "BabyTexture": "{{ModId}}/igglybuff/igglybuff",
+          "Sound": "{{ModId}}_wigglytuffcry",
+          "BabySound": "{{ModId}}_igglybuffcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_igglybuffegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_igglybuff evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_igglybuff",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "igglybuffevolution": {
+          "Id": "igglybuffevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/igglybuff/wigglytuff"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyigglybuff data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyigglybuff": {
+          "DisplayName": "{{i18n: shinyigglybuff}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_igglybuffegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyigglybuffbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/igglybuff/shinyjigglypuff",
+          "BabyTexture": "{{ModId}}/igglybuff/shinyigglybuff",
+          "Sound": "{{ModId}}_wigglytuffcry",
+          "BabySound": "{{ModId}}_igglybuffcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_igglybuffegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyigglybuff evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyigglybuff",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyigglybuffevolution": {
+          "Id": "shinyigglybuffevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/igglybuff/shinywigglytuff"
+        }
+      }
+    },
+    {
+      "LogName": "igglybuff cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_igglybuffcry": {
+          "ID": "{{ModId}}_igglybuffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/igglybuff/igglybuffcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_wigglytuffcry": {
+          "ID": "{{ModId}}_wigglytuffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/igglybuff/wigglytuffcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "igglybuff egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_igglybuffegg": {
+          "Name": "{{ModId}}_igglybuffegg",
+          "DisplayName": "{{i18n: igglybuffegg}}",
+          "Description": "{{i18n: igglybuffegg.d}}",
+          "Texture": "{{ModId}}/igglybuff/igglybuffegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "igglybuff hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_igglybuffegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyigglybuff",
+              "AnimalId": "{{ModId}}_shinyigglybuff",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_igglybuff",
+              "AnimalId": "{{ModId}}_igglybuff",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load inkay textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/inkay/inkay, {{ModId}}/inkay/shinyinkay, {{ModId}}/inkay/malamar, {{ModId}}/inkay/shinymalamar, {{ModId}}/inkay/inkayegg",
+      "FromFile": "assets/livestocks/inkay/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_inkay data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_inkay": {
+          "DisplayName": "{{i18n: inkay}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_inkayegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: inkaybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/inkay/malamar",
+          "BabyTexture": "{{ModId}}/inkay/inkay",
+          "Sound": "{{ModId}}_malamarcry",
+          "BabySound": "{{ModId}}_inkaycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_inkayegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyinkay data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyinkay": {
+          "DisplayName": "{{i18n: shinyinkay}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_inkayegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyinkaybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/inkay/shinymalamar",
+          "BabyTexture": "{{ModId}}/inkay/shinyinkay",
+          "Sound": "{{ModId}}_malamarcry",
+          "BabySound": "{{ModId}}_inkaycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_inkayegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "inkay cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_inkaycry": {
+          "ID": "{{ModId}}_inkaycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/inkay/inkaycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_malamarcry": {
+          "ID": "{{ModId}}_malamarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/inkay/malamarcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "inkay egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_inkayegg": {
+          "Name": "{{ModId}}_inkayegg",
+          "DisplayName": "{{i18n: inkayegg}}",
+          "Description": "{{i18n: inkayegg.d}}",
+          "Texture": "{{ModId}}/inkay/inkayegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_common",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "inkay hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_inkayegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyinkay",
+              "AnimalId": "{{ModId}}_shinyinkay",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_inkay",
+              "AnimalId": "{{ModId}}_inkay",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

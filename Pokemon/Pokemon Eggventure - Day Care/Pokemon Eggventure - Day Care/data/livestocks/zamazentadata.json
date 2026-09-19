@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zamazenta textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zamazenta/zamazenta, {{ModId}}/zamazenta/shinyzamazenta, {{ModId}}/zamazenta/zamazenta2, {{ModId}}/zamazenta/shinyzamazenta2, {{ModId}}/zamazenta/zamazentaegg",
+      "FromFile": "assets/livestocks/zamazenta/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zamazenta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zamazenta": {
+          "DisplayName": "{{i18n: zamazenta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zamazentaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zamazentabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zamazenta/zamazenta",
+          "BabyTexture": "{{ModId}}/zamazenta/zamazenta",
+          "Sound": "{{ModId}}_zamazentacry",
+          "BabySound": "{{ModId}}_zamazentacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zamazentaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zamazenta2",
+              "Texture": "{{ModId}}/zamazenta/zamazenta2",
+              "BabyTexture": "{{ModId}}/zamazenta/zamazenta2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzamazenta data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzamazenta": {
+          "DisplayName": "{{i18n: shinyzamazenta}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zamazentaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzamazentabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zamazenta/shinyzamazenta",
+          "BabyTexture": "{{ModId}}/zamazenta/shinyzamazenta",
+          "Sound": "{{ModId}}_zamazentacry",
+          "BabySound": "{{ModId}}_zamazentacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zamazentaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zamazenta2",
+              "Texture": "{{ModId}}/zamazenta/shinyzamazenta2",
+              "BabyTexture": "{{ModId}}/zamazenta/shinyzamazenta2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zamazenta cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zamazentacry": {
+          "ID": "{{ModId}}_zamazentacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zamazenta/zamazentacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zamazenta egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zamazentaegg": {
+          "Name": "{{ModId}}_zamazentaegg",
+          "DisplayName": "{{i18n: zamazentaegg}}",
+          "Description": "{{i18n: zamazentaegg.d}}",
+          "Texture": "{{ModId}}/zamazenta/zamazentaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fighting",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zamazenta hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zamazentaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzamazenta",
+              "AnimalId": "{{ModId}}_shinyzamazenta",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zamazenta",
+              "AnimalId": "{{ModId}}_zamazenta",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

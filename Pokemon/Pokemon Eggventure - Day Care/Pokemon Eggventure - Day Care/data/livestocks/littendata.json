@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load litten textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/litten/litten, {{ModId}}/litten/shinylitten, {{ModId}}/litten/torracat, {{ModId}}/litten/shinytorracat, {{ModId}}/litten/incineroar, {{ModId}}/litten/shinyincineroar, {{ModId}}/litten/littenegg",
+      "FromFile": "assets/livestocks/litten/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_litten data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_litten": {
+          "DisplayName": "{{i18n: litten}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_littenegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: littenbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/litten/torracat",
+          "BabyTexture": "{{ModId}}/litten/litten",
+          "Sound": "{{ModId}}_incineroarcry",
+          "BabySound": "{{ModId}}_littencry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_littenegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_litten evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_litten",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "littenevolution": {
+          "Id": "littenevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/litten/incineroar"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_litten type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_litten"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylitten data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylitten": {
+          "DisplayName": "{{i18n: shinylitten}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_littenegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylittenbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/litten/shinytorracat",
+          "BabyTexture": "{{ModId}}/litten/shinylitten",
+          "Sound": "{{ModId}}_incineroarcry",
+          "BabySound": "{{ModId}}_littencry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_littenegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylitten evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylitten",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinylittenevolution": {
+          "Id": "shinylittenevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/litten/shinyincineroar"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinylitten type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinylitten"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "litten cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_littencry": {
+          "ID": "{{ModId}}_littencry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/litten/littencry.ogg}}"
+          ]
+        },
+        "{{ModId}}_incineroarcry": {
+          "ID": "{{ModId}}_incineroarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/litten/incineroarcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "litten egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_littenegg": {
+          "Name": "{{ModId}}_littenegg",
+          "DisplayName": "{{i18n: littenegg}}",
+          "Description": "{{i18n: littenegg.d}}",
+          "Texture": "{{ModId}}/litten/littenegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p3",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "litten hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_littenegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylitten",
+              "AnimalId": "{{ModId}}_shinylitten",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_litten",
+              "AnimalId": "{{ModId}}_litten",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

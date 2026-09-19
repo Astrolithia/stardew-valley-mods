@@ -1,0 +1,210 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load vulpix textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/vulpix/vulpix, {{ModId}}/vulpix/shinyvulpix, {{ModId}}/vulpix/ninetales, {{ModId}}/vulpix/shinyninetales, {{ModId}}/vulpix/vulpixegg",
+      "FromFile": "assets/livestocks/vulpix/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_vulpix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_vulpix": {
+          "DisplayName": "{{i18n: vulpix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_vulpixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: vulpixbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vulpix/ninetales",
+          "BabyTexture": "{{ModId}}/vulpix/vulpix",
+          "Sound": "{{ModId}}_ninetalescry",
+          "BabySound": "{{ModId}}_vulpixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_vulpixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_vulpix type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_vulpix"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvulpix data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvulpix": {
+          "DisplayName": "{{i18n: shinyvulpix}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_vulpixegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvulpixbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vulpix/shinyninetales",
+          "BabyTexture": "{{ModId}}/vulpix/shinyvulpix",
+          "Sound": "{{ModId}}_ninetalescry",
+          "BabySound": "{{ModId}}_vulpixcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_vulpixegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyvulpix type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyvulpix"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "vulpix cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_vulpixcry": {
+          "ID": "{{ModId}}_vulpixcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vulpix/vulpixcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ninetalescry": {
+          "ID": "{{ModId}}_ninetalescry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vulpix/ninetalescry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "vulpix egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_vulpixegg": {
+          "Name": "{{ModId}}_vulpixegg",
+          "DisplayName": "{{i18n: vulpixegg}}",
+          "Description": "{{i18n: vulpixegg.d}}",
+          "Texture": "{{ModId}}/vulpix/vulpixegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_common",
+            "pkegg_mine_81_100_p5",
+            "pkegg_mine_101_120_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "vulpix hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_vulpixegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvulpix",
+              "AnimalId": "{{ModId}}_shinyvulpix",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_vulpix",
+              "AnimalId": "{{ModId}}_vulpix",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

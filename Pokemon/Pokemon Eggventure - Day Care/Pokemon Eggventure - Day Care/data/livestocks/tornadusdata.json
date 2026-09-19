@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tornadus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tornadus/tornadus, {{ModId}}/tornadus/shinytornadus, {{ModId}}/tornadus/tornadus2, {{ModId}}/tornadus/shinytornadus2, {{ModId}}/tornadus/tornadusegg",
+      "FromFile": "assets/livestocks/tornadus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tornadus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tornadus": {
+          "DisplayName": "{{i18n: tornadus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_tornadusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tornadusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tornadus/tornadus",
+          "BabyTexture": "{{ModId}}/tornadus/tornadus",
+          "Sound": "{{ModId}}_tornaduscry",
+          "BabySound": "{{ModId}}_tornaduscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tornadusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "tornadus2",
+              "Texture": "{{ModId}}/tornadus/tornadus2",
+              "BabyTexture": "{{ModId}}/tornadus/tornadus2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytornadus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytornadus": {
+          "DisplayName": "{{i18n: shinytornadus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_tornadusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytornadusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tornadus/shinytornadus",
+          "BabyTexture": "{{ModId}}/tornadus/shinytornadus",
+          "Sound": "{{ModId}}_tornaduscry",
+          "BabySound": "{{ModId}}_tornaduscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tornadusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "tornadus2",
+              "Texture": "{{ModId}}/tornadus/shinytornadus2",
+              "BabyTexture": "{{ModId}}/tornadus/shinytornadus2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tornadus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tornaduscry": {
+          "ID": "{{ModId}}_tornaduscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tornadus/tornaduscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tornadus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tornadusegg": {
+          "Name": "{{ModId}}_tornadusegg",
+          "DisplayName": "{{i18n: tornadusegg}}",
+          "Description": "{{i18n: tornadusegg.d}}",
+          "Texture": "{{ModId}}/tornadus/tornadusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_flying",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tornadus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tornadusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytornadus",
+              "AnimalId": "{{ModId}}_shinytornadus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tornadus",
+              "AnimalId": "{{ModId}}_tornadus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

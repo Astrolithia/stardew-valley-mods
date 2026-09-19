@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hitmonlee textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tyrogue/tyrogue_hitmonlee, {{ModId}}/tyrogue/shinytyrogue_hitmonlee, {{ModId}}/tyrogue/hitmonlee, {{ModId}}/tyrogue/shinyhitmonlee, {{ModId}}/tyrogue/hitmonleeegg",
+      "FromFile": "assets/livestocks/tyrogue/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hitmonlee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hitmonlee": {
+          "DisplayName": "{{i18n: hitmonlee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hitmonleeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hitmonleebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrogue/hitmonlee",
+          "BabyTexture": "{{ModId}}/tyrogue/tyrogue_hitmonlee",
+          "Sound": "{{ModId}}_hitmonleecry",
+          "BabySound": "{{ModId}}_tyroguecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hitmonleeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhitmonlee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhitmonlee": {
+          "DisplayName": "{{i18n: shinyhitmonlee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hitmonleeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhitmonleebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrogue/shinyhitmonlee",
+          "BabyTexture": "{{ModId}}/tyrogue/shinytyrogue_hitmonlee",
+          "Sound": "{{ModId}}_hitmonleecry",
+          "BabySound": "{{ModId}}_tyroguecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hitmonleeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hitmonlee cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tyroguecry": {
+          "ID": "{{ModId}}_tyroguecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrogue/tyroguecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hitmonleecry": {
+          "ID": "{{ModId}}_hitmonleecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrogue/hitmonleecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hitmonlee egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hitmonleeegg": {
+          "Name": "{{ModId}}_hitmonleeegg",
+          "DisplayName": "{{i18n: hitmonleeegg}}",
+          "Description": "{{i18n: hitmonleeegg.d}}",
+          "Texture": "{{ModId}}/tyrogue/hitmonleeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hitmonlee hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hitmonleeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhitmonlee",
+              "AnimalId": "{{ModId}}_shinyhitmonlee",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hitmonlee",
+              "AnimalId": "{{ModId}}_hitmonlee",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

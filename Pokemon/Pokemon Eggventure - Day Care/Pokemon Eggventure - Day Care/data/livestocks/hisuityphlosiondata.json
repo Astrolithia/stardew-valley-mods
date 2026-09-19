@@ -1,0 +1,240 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuityphlosion textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cyndaquil/cyndaquil_hisuityphlosion, {{ModId}}/cyndaquil/shinycyndaquil_hisuityphlosion, {{ModId}}/cyndaquil/quilava_hisuityphlosion, {{ModId}}/cyndaquil/shinyquilava_hisuityphlosion, {{ModId}}/cyndaquil/hisuityphlosion, {{ModId}}/cyndaquil/shinyhisuityphlosion, {{ModId}}/cyndaquil/hisuityphlosionegg",
+      "FromFile": "assets/livestocks/cyndaquil/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuityphlosion data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuityphlosion": {
+          "DisplayName": "{{i18n: hisuityphlosion}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuityphlosionegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuityphlosionbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cyndaquil/quilava_hisuityphlosion",
+          "BabyTexture": "{{ModId}}/cyndaquil/cyndaquil_hisuityphlosion",
+          "Sound": "{{ModId}}_hisuityphlosioncry",
+          "BabySound": "{{ModId}}_cyndaquilcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuityphlosionegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hisuityphlosion evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hisuityphlosion",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "hisuityphlosionevolution": {
+          "Id": "hisuityphlosionevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cyndaquil/hisuityphlosion"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hisuityphlosion type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hisuityphlosion"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuityphlosion data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuityphlosion": {
+          "DisplayName": "{{i18n: shinyhisuityphlosion}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuityphlosionegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuityphlosionbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cyndaquil/shinyquilava_hisuityphlosion",
+          "BabyTexture": "{{ModId}}/cyndaquil/shinycyndaquil_hisuityphlosion",
+          "Sound": "{{ModId}}_hisuityphlosioncry",
+          "BabySound": "{{ModId}}_cyndaquilcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuityphlosionegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhisuityphlosion evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhisuityphlosion",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhisuityphlosionevolution": {
+          "Id": "shinyhisuityphlosionevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cyndaquil/shinyhisuityphlosion"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhisuityphlosion type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhisuityphlosion"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "hisuityphlosion cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cyndaquilcry": {
+          "ID": "{{ModId}}_cyndaquilcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cyndaquil/cyndaquilcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuityphlosioncry": {
+          "ID": "{{ModId}}_hisuityphlosioncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cyndaquil/hisuityphlosioncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuityphlosion egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuityphlosionegg": {
+          "Name": "{{ModId}}_hisuityphlosionegg",
+          "DisplayName": "{{i18n: hisuityphlosionegg}}",
+          "Description": "{{i18n: hisuityphlosionegg.d}}",
+          "Texture": "{{ModId}}/cyndaquil/hisuityphlosionegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuityphlosion hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuityphlosionegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuityphlosion",
+              "AnimalId": "{{ModId}}_shinyhisuityphlosion",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuityphlosion",
+              "AnimalId": "{{ModId}}_hisuityphlosion",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

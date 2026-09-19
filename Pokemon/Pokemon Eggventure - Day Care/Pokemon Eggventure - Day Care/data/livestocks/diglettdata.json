@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load diglett textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/diglett/diglett, {{ModId}}/diglett/shinydiglett, {{ModId}}/diglett/dugtrio, {{ModId}}/diglett/shinydugtrio, {{ModId}}/diglett/diglettegg",
+      "FromFile": "assets/livestocks/diglett/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_diglett data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_diglett": {
+          "DisplayName": "{{i18n: diglett}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_diglettegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: diglettbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/diglett/dugtrio",
+          "BabyTexture": "{{ModId}}/diglett/diglett",
+          "Sound": "{{ModId}}_dugtriocry",
+          "BabySound": "{{ModId}}_diglettcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_diglettegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydiglett data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydiglett": {
+          "DisplayName": "{{i18n: shinydiglett}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_diglettegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydiglettbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/diglett/shinydugtrio",
+          "BabyTexture": "{{ModId}}/diglett/shinydiglett",
+          "Sound": "{{ModId}}_dugtriocry",
+          "BabySound": "{{ModId}}_diglettcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_diglettegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "diglett cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_diglettcry": {
+          "ID": "{{ModId}}_diglettcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/diglett/diglettcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dugtriocry": {
+          "ID": "{{ModId}}_dugtriocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/diglett/dugtriocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "diglett egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_diglettegg": {
+          "Name": "{{ModId}}_diglettegg",
+          "DisplayName": "{{i18n: diglettegg}}",
+          "Description": "{{i18n: diglettegg.d}}",
+          "Texture": "{{ModId}}/diglett/diglettegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_1_30_p1",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "diglett hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_diglettegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydiglett",
+              "AnimalId": "{{ModId}}_shinydiglett",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_diglett",
+              "AnimalId": "{{ModId}}_diglett",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

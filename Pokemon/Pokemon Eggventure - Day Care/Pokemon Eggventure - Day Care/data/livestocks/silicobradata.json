@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load silicobra textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/silicobra/silicobra, {{ModId}}/silicobra/shinysilicobra, {{ModId}}/silicobra/sandaconda, {{ModId}}/silicobra/shinysandaconda, {{ModId}}/silicobra/silicobraegg",
+      "FromFile": "assets/livestocks/silicobra/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_silicobra data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_silicobra": {
+          "DisplayName": "{{i18n: silicobra}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_silicobraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: silicobrabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/silicobra/sandaconda",
+          "BabyTexture": "{{ModId}}/silicobra/silicobra",
+          "Sound": "{{ModId}}_sandacondacry",
+          "BabySound": "{{ModId}}_silicobracry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_silicobraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysilicobra data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysilicobra": {
+          "DisplayName": "{{i18n: shinysilicobra}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_silicobraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysilicobrabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/silicobra/shinysandaconda",
+          "BabyTexture": "{{ModId}}/silicobra/shinysilicobra",
+          "Sound": "{{ModId}}_sandacondacry",
+          "BabySound": "{{ModId}}_silicobracry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_silicobraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "silicobra cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_silicobracry": {
+          "ID": "{{ModId}}_silicobracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/silicobra/silicobracry.ogg}}"
+          ]
+        },
+        "{{ModId}}_sandacondacry": {
+          "ID": "{{ModId}}_sandacondacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/silicobra/sandacondacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "silicobra egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_silicobraegg": {
+          "Name": "{{ModId}}_silicobraegg",
+          "DisplayName": "{{i18n: silicobraegg}}",
+          "Description": "{{i18n: silicobraegg.d}}",
+          "Texture": "{{ModId}}/silicobra/silicobraegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "silicobra hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_silicobraegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysilicobra",
+              "AnimalId": "{{ModId}}_shinysilicobra",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_silicobra",
+              "AnimalId": "{{ModId}}_silicobra",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

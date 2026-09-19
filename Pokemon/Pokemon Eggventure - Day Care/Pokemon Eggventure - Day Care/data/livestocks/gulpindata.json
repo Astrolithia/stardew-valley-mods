@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gulpin textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/gulpin/gulpin, {{ModId}}/gulpin/shinygulpin, {{ModId}}/gulpin/swalot, {{ModId}}/gulpin/shinyswalot, {{ModId}}/gulpin/gulpinegg",
+      "FromFile": "assets/livestocks/gulpin/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gulpin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gulpin": {
+          "DisplayName": "{{i18n: gulpin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gulpinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gulpinbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gulpin/swalot",
+          "BabyTexture": "{{ModId}}/gulpin/gulpin",
+          "Sound": "{{ModId}}_swalotcry",
+          "BabySound": "{{ModId}}_gulpincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gulpinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygulpin data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygulpin": {
+          "DisplayName": "{{i18n: shinygulpin}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gulpinegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygulpinbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gulpin/shinyswalot",
+          "BabyTexture": "{{ModId}}/gulpin/shinygulpin",
+          "Sound": "{{ModId}}_swalotcry",
+          "BabySound": "{{ModId}}_gulpincry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gulpinegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "gulpin cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_gulpincry": {
+          "ID": "{{ModId}}_gulpincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gulpin/gulpincry.ogg}}"
+          ]
+        },
+        "{{ModId}}_swalotcry": {
+          "ID": "{{ModId}}_swalotcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gulpin/swalotcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gulpin egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gulpinegg": {
+          "Name": "{{ModId}}_gulpinegg",
+          "DisplayName": "{{i18n: gulpinegg}}",
+          "Description": "{{i18n: gulpinegg.d}}",
+          "Texture": "{{ModId}}/gulpin/gulpinegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_verycommon",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gulpin hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_gulpinegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygulpin",
+              "AnimalId": "{{ModId}}_shinygulpin",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gulpin",
+              "AnimalId": "{{ModId}}_gulpin",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

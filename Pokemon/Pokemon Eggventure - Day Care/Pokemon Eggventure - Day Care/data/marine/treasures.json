@@ -1,0 +1,94 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load desert treasure sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/treasure/stardust, {{ModId}}/treasure/nugget, {{ModId}}/treasure/starpiece, {{ModId}}/treasure/bignugget, {{ModId}}/treasure/cometshard",
+      "FromFile": "assets/treasure/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add desert treasures",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_treasure_stardust": {
+          "Name": "{{ModId}}_treasure_stardust",
+          "DisplayName": "{{i18n: treasure_stardust}}",
+          "Description": "{{i18n: treasure_stardust.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/treasure/stardust",
+          "Price": 300,
+          "Edibility": -300,
+          "ContextTags": [
+            "pktreasure_item",
+            "pktreasure_stardust",
+            "color_yellow"
+          ]
+        },
+        "{{ModId}}_treasure_nugget": {
+          "Name": "{{ModId}}_treasure_nugget",
+          "DisplayName": "{{i18n: treasure_nugget}}",
+          "Description": "{{i18n: treasure_nugget.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/treasure/nugget",
+          "Price": 500,
+          "Edibility": -300,
+          "ContextTags": [
+            "pktreasure_item",
+            "pktreasure_nugget",
+            "color_gold",
+            "pkpan_commun"
+          ]
+        },
+        "{{ModId}}_treasure_starpiece": {
+          "Name": "{{ModId}}_treasure_starpiece",
+          "DisplayName": "{{i18n: treasure_starpiece}}",
+          "Description": "{{i18n: treasure_starpiece.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/treasure/starpiece",
+          "Price": 1200,
+          "Edibility": -300,
+          "ContextTags": [
+            "pktreasure_item",
+            "pktreasure_starpiece",
+            "color_yellow"
+          ]
+        },
+        "{{ModId}}_treasure_bignugget": {
+          "Name": "{{ModId}}_treasure_bignugget",
+          "DisplayName": "{{i18n: treasure_bignugget}}",
+          "Description": "{{i18n: treasure_bignugget.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/treasure/bignugget",
+          "Price": 1600,
+          "Edibility": -300,
+          "ContextTags": [
+            "pktreasure_item",
+            "pktreasure_bignugget",
+            "color_gold",
+            "pkpan_rare"
+          ]
+        },
+        "{{ModId}}_treasure_cometshard": {
+          "Name": "{{ModId}}_treasure_cometshard",
+          "DisplayName": "{{i18n: treasure_cometshard}}",
+          "Description": "{{i18n: treasure_cometshard.d}}",
+          "Type": "Minerals",
+          "Category": -2,
+          "Texture": "{{ModId}}/treasure/cometshard",
+          "Price": 3000,
+          "Edibility": -300,
+          "ContextTags": [
+            "pktreasure_item",
+            "pktreasure_cometshard",
+            "color_light_cyan"
+          ]
+        }
+      }
+    }
+  ]
+}

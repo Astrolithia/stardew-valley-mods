@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dhelmise textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dhelmise/dhelmise, {{ModId}}/dhelmise/shinydhelmise, {{ModId}}/dhelmise/dhelmiseegg",
+      "FromFile": "assets/livestocks/dhelmise/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dhelmise data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dhelmise": {
+          "DisplayName": "{{i18n: dhelmise}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dhelmiseegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dhelmisebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dhelmise/dhelmise",
+          "BabyTexture": "{{ModId}}/dhelmise/dhelmise",
+          "Sound": "{{ModId}}_dhelmisecry",
+          "BabySound": "{{ModId}}_dhelmisecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dhelmiseegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydhelmise data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydhelmise": {
+          "DisplayName": "{{i18n: shinydhelmise}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dhelmiseegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydhelmisebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dhelmise/shinydhelmise",
+          "BabyTexture": "{{ModId}}/dhelmise/shinydhelmise",
+          "Sound": "{{ModId}}_dhelmisecry",
+          "BabySound": "{{ModId}}_dhelmisecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dhelmiseegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "dhelmise cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dhelmisecry": {
+          "ID": "{{ModId}}_dhelmisecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dhelmise/dhelmisecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dhelmise egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dhelmiseegg": {
+          "Name": "{{ModId}}_dhelmiseegg",
+          "DisplayName": "{{i18n: dhelmiseegg}}",
+          "Description": "{{i18n: dhelmiseegg.d}}",
+          "Texture": "{{ModId}}/dhelmise/dhelmiseegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_veryrare",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dhelmise hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dhelmiseegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydhelmise",
+              "AnimalId": "{{ModId}}_shinydhelmise",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dhelmise",
+              "AnimalId": "{{ModId}}_dhelmise",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

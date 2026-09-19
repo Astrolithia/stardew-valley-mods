@@ -1,0 +1,984 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_Luau_Pierre",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_luau_cramorant_egg": {
+          "Id": "{{ModId}}_luau_cramorant_egg",
+          "ItemId": "{{ModId}}_cramorantegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year luau_pick_0 0.333"
+        },
+        "{{ModId}}_luau_farfetchd_egg": {
+          "Id": "{{ModId}}_luau_farfetchd_egg",
+          "ItemId": "{{ModId}}_farfetchdegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year luau_pick_0 0.333, SYNCED_RANDOM year luau_pick_1 0.5"
+        },
+        "{{ModId}}_luau_skwovet_egg": {
+          "Id": "{{ModId}}_luau_skwovet_egg",
+          "ItemId": "{{ModId}}_skwovetegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year luau_pick_0 0.333, !SYNCED_RANDOM year luau_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_luau_cramorant_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_luau_farfetchd_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_luau_skwovet_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_FlowerDance_Pierre",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_flowerdance_oddishbellossom_egg": {
+          "Id": "{{ModId}}_flowerdance_oddishbellossom_egg",
+          "ItemId": "{{ModId}}_oddishbellossomegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year flowerdance_pick_0 0.333"
+        },
+        "{{ModId}}_flowerdance_petilil_egg": {
+          "Id": "{{ModId}}_flowerdance_petilil_egg",
+          "ItemId": "{{ModId}}_petililegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year flowerdance_pick_0 0.333, SYNCED_RANDOM year flowerdance_pick_1 0.5"
+        },
+        "{{ModId}}_flowerdance_sunkern_egg": {
+          "Id": "{{ModId}}_flowerdance_sunkern_egg",
+          "ItemId": "{{ModId}}_sunkernegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year flowerdance_pick_0 0.333, !SYNCED_RANDOM year flowerdance_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_flowerdance_oddishbellossom_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_flowerdance_petilil_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_flowerdance_sunkern_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_EggFestival_Pierre",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_eggfest_happiny_egg": {
+          "Id": "{{ModId}}_eggfest_happiny_egg",
+          "ItemId": "{{ModId}}_happinyegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year eggfest_pick_0 0.333"
+        },
+        "{{ModId}}_eggfest_togepi_egg": {
+          "Id": "{{ModId}}_eggfest_togepi_egg",
+          "ItemId": "{{ModId}}_togepiegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year eggfest_pick_0 0.333, SYNCED_RANDOM year eggfest_pick_1 0.5"
+        },
+        "{{ModId}}_eggfest_wynaut_egg": {
+          "Id": "{{ModId}}_eggfest_wynaut_egg",
+          "ItemId": "{{ModId}}_wynautegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year eggfest_pick_0 0.333, !SYNCED_RANDOM year eggfest_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_eggfest_happiny_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_eggfest_togepi_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_eggfest_wynaut_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_FestivalOfIce_TravelingMerchant",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_icefest_bergmite_egg": {
+          "Id": "{{ModId}}_icefest_bergmite_egg",
+          "ItemId": "{{ModId}}_bergmiteegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year icefest_pick_0 0.333"
+        },
+        "{{ModId}}_icefest_cetoddle_egg": {
+          "Id": "{{ModId}}_icefest_cetoddle_egg",
+          "ItemId": "{{ModId}}_cetoddleegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year icefest_pick_0 0.333, SYNCED_RANDOM year icefest_pick_1 0.5"
+        },
+        "{{ModId}}_icefest_eiscue_egg": {
+          "Id": "{{ModId}}_icefest_eiscue_egg",
+          "ItemId": "{{ModId}}_eiscueegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year icefest_pick_0 0.333, !SYNCED_RANDOM year icefest_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_icefest_bergmite_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_icefest_cetoddle_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_icefest_eiscue_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_FeastOfTheWinterStar_Pierre",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_winterstar_cryogonal_egg": {
+          "Id": "{{ModId}}_winterstar_cryogonal_egg",
+          "ItemId": "{{ModId}}_cryogonalegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year winterstar_pick_0 0.333"
+        },
+        "{{ModId}}_winterstar_cubchoo_egg": {
+          "Id": "{{ModId}}_winterstar_cubchoo_egg",
+          "ItemId": "{{ModId}}_cubchooegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year winterstar_pick_0 0.333, SYNCED_RANDOM year winterstar_pick_1 0.5"
+        },
+        "{{ModId}}_winterstar_delibird_egg": {
+          "Id": "{{ModId}}_winterstar_delibird_egg",
+          "ItemId": "{{ModId}}_delibirdegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year winterstar_pick_0 0.333, !SYNCED_RANDOM year winterstar_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_winterstar_cryogonal_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_winterstar_cubchoo_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_winterstar_delibird_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "DesertFestival_EggShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_desertfest_flittle_egg": {
+          "Id": "{{ModId}}_desertfest_flittle_egg",
+          "ItemId": "{{ModId}}_flittleegg",
+          "Price": 800,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "Condition": "SYNCED_RANDOM year desertfest_pick_0 0.333"
+        },
+        "{{ModId}}_desertfest_oricorio_egg": {
+          "Id": "{{ModId}}_desertfest_oricorio_egg",
+          "ItemId": "{{ModId}}_oricorioegg",
+          "Price": 800,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "Condition": "!SYNCED_RANDOM year desertfest_pick_0 0.333, SYNCED_RANDOM year desertfest_pick_1 0.5"
+        },
+        "{{ModId}}_desertfest_rockruff_egg": {
+          "Id": "{{ModId}}_desertfest_rockruff_egg",
+          "ItemId": "{{ModId}}_rockruffegg",
+          "Price": 800,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "Condition": "!SYNCED_RANDOM year desertfest_pick_0 0.333, !SYNCED_RANDOM year desertfest_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_desertfest_flittle_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_desertfest_oricorio_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_desertfest_rockruff_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_StardewValleyFair_StarTokens",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_fair_aipom_egg": {
+          "Id": "{{ModId}}_fair_aipom_egg",
+          "ItemId": "{{ModId}}_aipomegg",
+          "Price": 1500,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "Condition": "SYNCED_RANDOM year fair_pick_0 0.5"
+        },
+        "{{ModId}}_fair_spinda_egg": {
+          "Id": "{{ModId}}_fair_spinda_egg",
+          "ItemId": "{{ModId}}_spindaegg",
+          "Price": 1500,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "Condition": "!SYNCED_RANDOM year fair_pick_0 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_fair_aipom_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_fair_spinda_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_spiritseve_litwick_egg": {
+          "Id": "{{ModId}}_spiritseve_litwick_egg",
+          "ItemId": "{{ModId}}_litwickegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year spiritseve_pick_0 0.333"
+        },
+        "{{ModId}}_spiritseve_phantump_egg": {
+          "Id": "{{ModId}}_spiritseve_phantump_egg",
+          "ItemId": "{{ModId}}_phantumpegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year spiritseve_pick_0 0.333, SYNCED_RANDOM year spiritseve_pick_1 0.5"
+        },
+        "{{ModId}}_spiritseve_pumpkaboo_egg": {
+          "Id": "{{ModId}}_spiritseve_pumpkaboo_egg",
+          "ItemId": "{{ModId}}_pumpkabooegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year spiritseve_pick_0 0.333, !SYNCED_RANDOM year spiritseve_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_spiritseve_litwick_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_spiritseve_phantump_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_spiritseve_pumpkaboo_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_DanceOfTheMoonlightJellies_Pierre",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_moonjellies_chinchou_egg": {
+          "Id": "{{ModId}}_moonjellies_chinchou_egg",
+          "ItemId": "{{ModId}}_chinchouegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year moonjellies_pick_0 0.25"
+        },
+        "{{ModId}}_moonjellies_frillish_egg": {
+          "Id": "{{ModId}}_moonjellies_frillish_egg",
+          "ItemId": "{{ModId}}_frillishegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year moonjellies_pick_0 0.25, SYNCED_RANDOM year moonjellies_pick_1 0.333"
+        },
+        "{{ModId}}_moonjellies_frillish2_egg": {
+          "Id": "{{ModId}}_moonjellies_frillish2_egg",
+          "ItemId": "{{ModId}}_frillish2egg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year moonjellies_pick_0 0.25, !SYNCED_RANDOM year moonjellies_pick_1 0.333, SYNCED_RANDOM year moonjellies_pick_2 0.5"
+        },
+        "{{ModId}}_moonjellies_inkay_egg": {
+          "Id": "{{ModId}}_moonjellies_inkay_egg",
+          "ItemId": "{{ModId}}_inkayegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year moonjellies_pick_0 0.25, !SYNCED_RANDOM year moonjellies_pick_1 0.333, !SYNCED_RANDOM year moonjellies_pick_2 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_moonjellies_chinchou_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_moonjellies_frillish_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_moonjellies_frillish2_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_moonjellies_inkay_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_NightMarket_DecorationBoat",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_nightmarket_dhelmise_egg": {
+          "Id": "{{ModId}}_nightmarket_dhelmise_egg",
+          "ItemId": "{{ModId}}_dhelmiseegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "SYNCED_RANDOM year nightmarket_pick_0 0.333"
+        },
+        "{{ModId}}_nightmarket_galarcorsola_egg": {
+          "Id": "{{ModId}}_nightmarket_galarcorsola_egg",
+          "ItemId": "{{ModId}}_galarcorsolaegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year nightmarket_pick_0 0.333, SYNCED_RANDOM year nightmarket_pick_1 0.5"
+        },
+        "{{ModId}}_nightmarket_tatsugiri_egg": {
+          "Id": "{{ModId}}_nightmarket_tatsugiri_egg",
+          "ItemId": "{{ModId}}_tatsugiriegg",
+          "Price": 5000,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player",
+          "PriceModifiers": [
+            {
+              "Id": "y1",
+              "Condition": "YEAR 1",
+              "Modification": "Set",
+              "Amount": 3000
+            },
+            {
+              "Id": "y2",
+              "Condition": "YEAR 2 2",
+              "Modification": "Set",
+              "Amount": 5000
+            },
+            {
+              "Id": "y3",
+              "Condition": "YEAR 3",
+              "Modification": "Set",
+              "Amount": 10000
+            }
+          ],
+          "Condition": "!SYNCED_RANDOM year nightmarket_pick_0 0.333, !SYNCED_RANDOM year nightmarket_pick_1 0.5"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_nightmarket_dhelmise_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_nightmarket_galarcorsola_egg",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_nightmarket_tatsugiri_egg",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

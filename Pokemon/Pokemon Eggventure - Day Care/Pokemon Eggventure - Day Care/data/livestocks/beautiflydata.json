@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load beautifly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/wurmple/wurmple_beautifly, {{ModId}}/wurmple/shinywurmple_beautifly, {{ModId}}/wurmple/silcoon, {{ModId}}/wurmple/shinysilcoon, {{ModId}}/wurmple/beautifly, {{ModId}}/wurmple/shinybeautifly, {{ModId}}/wurmple/beautiflyegg",
+      "FromFile": "assets/livestocks/wurmple/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_beautifly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_beautifly": {
+          "DisplayName": "{{i18n: beautifly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_beautiflyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: beautiflybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wurmple/silcoon",
+          "BabyTexture": "{{ModId}}/wurmple/wurmple_beautifly",
+          "Sound": "{{ModId}}_beautiflycry",
+          "BabySound": "{{ModId}}_wurmplecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_beautiflyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_beautifly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_beautifly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "beautiflyevolution": {
+          "Id": "beautiflyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/wurmple/beautifly"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybeautifly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybeautifly": {
+          "DisplayName": "{{i18n: shinybeautifly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_beautiflyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybeautiflybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wurmple/shinysilcoon",
+          "BabyTexture": "{{ModId}}/wurmple/shinywurmple_beautifly",
+          "Sound": "{{ModId}}_beautiflycry",
+          "BabySound": "{{ModId}}_wurmplecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_beautiflyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybeautifly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybeautifly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybeautiflyevolution": {
+          "Id": "shinybeautiflyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/wurmple/shinybeautifly"
+        }
+      }
+    },
+    {
+      "LogName": "beautifly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_wurmplecry": {
+          "ID": "{{ModId}}_wurmplecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wurmple/wurmplecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_beautiflycry": {
+          "ID": "{{ModId}}_beautiflycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wurmple/beautiflycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "beautifly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_beautiflyegg": {
+          "Name": "{{ModId}}_beautiflyegg",
+          "DisplayName": "{{i18n: beautiflyegg}}",
+          "Description": "{{i18n: beautiflyegg.d}}",
+          "Texture": "{{ModId}}/wurmple/beautiflyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "beautifly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_beautiflyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybeautifly",
+              "AnimalId": "{{ModId}}_shinybeautifly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_beautifly",
+              "AnimalId": "{{ModId}}_beautifly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1033 @@
+{
+  "Changes": [
+    {
+      "LogName": "Peche - oeufs pokemon (Beach)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "Beach",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_ocean_alomomola": {
+          "Id": "{{ModId}}_fish_ocean_alomomola",
+          "ItemId": "{{ModId}}_alomomolaegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_ocean_arrokuda": {
+          "Id": "{{ModId}}_fish_ocean_arrokuda",
+          "ItemId": "{{ModId}}_arrokudaegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_ocean_carvanha": {
+          "Id": "{{ModId}}_fish_ocean_carvanha",
+          "ItemId": "{{ModId}}_carvanhaegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_ocean_galarslowbro": {
+          "Id": "{{ModId}}_fish_ocean_galarslowbro",
+          "ItemId": "{{ModId}}_galarslowbroegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_ocean_galarslowking": {
+          "Id": "{{ModId}}_fish_ocean_galarslowking",
+          "ItemId": "{{ModId}}_galarslowkingegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_ocean_horsea": {
+          "Id": "{{ModId}}_fish_ocean_horsea",
+          "ItemId": "{{ModId}}_horseaegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_ocean_lapras": {
+          "Id": "{{ModId}}_fish_ocean_lapras",
+          "ItemId": "{{ModId}}_laprasegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 8,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_ocean_luvdisc": {
+          "Id": "{{ModId}}_fish_ocean_luvdisc",
+          "ItemId": "{{ModId}}_luvdiscegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_ocean_qwilfish": {
+          "Id": "{{ModId}}_fish_ocean_qwilfish",
+          "ItemId": "{{ModId}}_qwilfishegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_ocean_remoraid": {
+          "Id": "{{ModId}}_fish_ocean_remoraid",
+          "ItemId": "{{ModId}}_remoraidegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_ocean_rosabyss": {
+          "Id": "{{ModId}}_fish_ocean_rosabyss",
+          "ItemId": "{{ModId}}_rosabyssegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_ocean_seel": {
+          "Id": "{{ModId}}_fish_ocean_seel",
+          "ItemId": "{{ModId}}_seelegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_ocean_serpang": {
+          "Id": "{{ModId}}_fish_ocean_serpang",
+          "ItemId": "{{ModId}}_serpangegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_ocean_slowbro": {
+          "Id": "{{ModId}}_fish_ocean_slowbro",
+          "ItemId": "{{ModId}}_slowbroegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_ocean_slowking": {
+          "Id": "{{ModId}}_fish_ocean_slowking",
+          "ItemId": "{{ModId}}_slowkingegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_ocean_staryu": {
+          "Id": "{{ModId}}_fish_ocean_staryu",
+          "ItemId": "{{ModId}}_staryuegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_ocean_tentacool": {
+          "Id": "{{ModId}}_fish_ocean_tentacool",
+          "ItemId": "{{ModId}}_tentacoolegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_ocean_tynamo": {
+          "Id": "{{ModId}}_fish_ocean_tynamo",
+          "ItemId": "{{ModId}}_tynamoegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_ocean_veluza": {
+          "Id": "{{ModId}}_fish_ocean_veluza",
+          "ItemId": "{{ModId}}_veluzaegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_ocean_wailmer": {
+          "Id": "{{ModId}}_fish_ocean_wailmer",
+          "ItemId": "{{ModId}}_wailmeregg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_ocean_wishiwashi": {
+          "Id": "{{ModId}}_fish_ocean_wishiwashi",
+          "ItemId": "{{ModId}}_wishiwashiegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 2,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_ocean_magikarp": {
+          "Id": "{{ModId}}_fish_ocean_magikarp",
+          "ItemId": "{{ModId}}_magikarpegg",
+          "Chance": "{{RateFishingOcean}}",
+          "MinFishingLevel": 0
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (Town)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "Town",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_freshwater_azurill": {
+          "Id": "{{ModId}}_fish_freshwater_azurill",
+          "ItemId": "{{ModId}}_azurillegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_freshwater_buizel": {
+          "Id": "{{ModId}}_fish_freshwater_buizel",
+          "ItemId": "{{ModId}}_buizelegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_chewtle": {
+          "Id": "{{ModId}}_fish_freshwater_chewtle",
+          "ItemId": "{{ModId}}_chewtleegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_clauncher": {
+          "Id": "{{ModId}}_fish_freshwater_clauncher",
+          "ItemId": "{{ModId}}_clauncheregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_corphish": {
+          "Id": "{{ModId}}_fish_freshwater_corphish",
+          "ItemId": "{{ModId}}_corphishegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_dewpider": {
+          "Id": "{{ModId}}_fish_freshwater_dewpider",
+          "ItemId": "{{ModId}}_dewpideregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_froakie": {
+          "Id": "{{ModId}}_fish_freshwater_froakie",
+          "ItemId": "{{ModId}}_froakieegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_goldeen": {
+          "Id": "{{ModId}}_fish_freshwater_goldeen",
+          "ItemId": "{{ModId}}_goldeenegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_freshwater_goomy": {
+          "Id": "{{ModId}}_fish_freshwater_goomy",
+          "ItemId": "{{ModId}}_goomyegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_lotad": {
+          "Id": "{{ModId}}_fish_freshwater_lotad",
+          "ItemId": "{{ModId}}_lotadegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_mudkip": {
+          "Id": "{{ModId}}_fish_freshwater_mudkip",
+          "ItemId": "{{ModId}}_mudkipegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_oshawott": {
+          "Id": "{{ModId}}_fish_freshwater_oshawott",
+          "ItemId": "{{ModId}}_oshawottegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_panpour": {
+          "Id": "{{ModId}}_fish_freshwater_panpour",
+          "ItemId": "{{ModId}}_panpouregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_poliwagpolitoed": {
+          "Id": "{{ModId}}_fish_freshwater_poliwagpolitoed",
+          "ItemId": "{{ModId}}_poliwagpolitoedegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_poliwagpoliwrath": {
+          "Id": "{{ModId}}_fish_freshwater_poliwagpoliwrath",
+          "ItemId": "{{ModId}}_poliwagpoliwrathegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_psyduck": {
+          "Id": "{{ModId}}_fish_freshwater_psyduck",
+          "ItemId": "{{ModId}}_psyduckegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0,
+          "Condition": "WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_fish_freshwater_quaxly": {
+          "Id": "{{ModId}}_fish_freshwater_quaxly",
+          "ItemId": "{{ModId}}_quaxlyegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_shellos": {
+          "Id": "{{ModId}}_fish_freshwater_shellos",
+          "ItemId": "{{ModId}}_shellosegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_sobble": {
+          "Id": "{{ModId}}_fish_freshwater_sobble",
+          "ItemId": "{{ModId}}_sobbleegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_surskit": {
+          "Id": "{{ModId}}_fish_freshwater_surskit",
+          "ItemId": "{{ModId}}_surskitegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_tadbulb": {
+          "Id": "{{ModId}}_fish_freshwater_tadbulb",
+          "ItemId": "{{ModId}}_tadbulbegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_totodile": {
+          "Id": "{{ModId}}_fish_freshwater_totodile",
+          "ItemId": "{{ModId}}_totodileegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_basculinred": {
+          "Id": "{{ModId}}_fish_freshwater_basculinred",
+          "ItemId": "{{ModId}}_basculinredegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "fall"
+        },
+        "{{ModId}}_fish_freshwater_basculinblue": {
+          "Id": "{{ModId}}_fish_freshwater_basculinblue",
+          "ItemId": "{{ModId}}_basculinblueegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "summer"
+        },
+        "{{ModId}}_fish_freshwater_basculinwhite": {
+          "Id": "{{ModId}}_fish_freshwater_basculinwhite",
+          "ItemId": "{{ModId}}_basculinwhiteegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "winter"
+        },
+        "{{ModId}}_fish_freshwater_town_magikarp": {
+          "Id": "{{ModId}}_fish_freshwater_town_magikarp",
+          "ItemId": "{{ModId}}_magikarpegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (Mountain)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "Mountain",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_freshwater_azurill": {
+          "Id": "{{ModId}}_fish_freshwater_azurill",
+          "ItemId": "{{ModId}}_azurillegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_freshwater_buizel": {
+          "Id": "{{ModId}}_fish_freshwater_buizel",
+          "ItemId": "{{ModId}}_buizelegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_chewtle": {
+          "Id": "{{ModId}}_fish_freshwater_chewtle",
+          "ItemId": "{{ModId}}_chewtleegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_clauncher": {
+          "Id": "{{ModId}}_fish_freshwater_clauncher",
+          "ItemId": "{{ModId}}_clauncheregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_corphish": {
+          "Id": "{{ModId}}_fish_freshwater_corphish",
+          "ItemId": "{{ModId}}_corphishegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_dewpider": {
+          "Id": "{{ModId}}_fish_freshwater_dewpider",
+          "ItemId": "{{ModId}}_dewpideregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_froakie": {
+          "Id": "{{ModId}}_fish_freshwater_froakie",
+          "ItemId": "{{ModId}}_froakieegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_goldeen": {
+          "Id": "{{ModId}}_fish_freshwater_goldeen",
+          "ItemId": "{{ModId}}_goldeenegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_freshwater_goomy": {
+          "Id": "{{ModId}}_fish_freshwater_goomy",
+          "ItemId": "{{ModId}}_goomyegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_lotad": {
+          "Id": "{{ModId}}_fish_freshwater_lotad",
+          "ItemId": "{{ModId}}_lotadegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_mudkip": {
+          "Id": "{{ModId}}_fish_freshwater_mudkip",
+          "ItemId": "{{ModId}}_mudkipegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_oshawott": {
+          "Id": "{{ModId}}_fish_freshwater_oshawott",
+          "ItemId": "{{ModId}}_oshawottegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_panpour": {
+          "Id": "{{ModId}}_fish_freshwater_panpour",
+          "ItemId": "{{ModId}}_panpouregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_poliwagpolitoed": {
+          "Id": "{{ModId}}_fish_freshwater_poliwagpolitoed",
+          "ItemId": "{{ModId}}_poliwagpolitoedegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_poliwagpoliwrath": {
+          "Id": "{{ModId}}_fish_freshwater_poliwagpoliwrath",
+          "ItemId": "{{ModId}}_poliwagpoliwrathegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_psyduck": {
+          "Id": "{{ModId}}_fish_freshwater_psyduck",
+          "ItemId": "{{ModId}}_psyduckegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0,
+          "Condition": "WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_fish_freshwater_quaxly": {
+          "Id": "{{ModId}}_fish_freshwater_quaxly",
+          "ItemId": "{{ModId}}_quaxlyegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_shellos": {
+          "Id": "{{ModId}}_fish_freshwater_shellos",
+          "ItemId": "{{ModId}}_shellosegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_sobble": {
+          "Id": "{{ModId}}_fish_freshwater_sobble",
+          "ItemId": "{{ModId}}_sobbleegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_surskit": {
+          "Id": "{{ModId}}_fish_freshwater_surskit",
+          "ItemId": "{{ModId}}_surskitegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_tadbulb": {
+          "Id": "{{ModId}}_fish_freshwater_tadbulb",
+          "ItemId": "{{ModId}}_tadbulbegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_totodile": {
+          "Id": "{{ModId}}_fish_freshwater_totodile",
+          "ItemId": "{{ModId}}_totodileegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_basculinred": {
+          "Id": "{{ModId}}_fish_freshwater_basculinred",
+          "ItemId": "{{ModId}}_basculinredegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "fall"
+        },
+        "{{ModId}}_fish_freshwater_basculinblue": {
+          "Id": "{{ModId}}_fish_freshwater_basculinblue",
+          "ItemId": "{{ModId}}_basculinblueegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "summer"
+        },
+        "{{ModId}}_fish_freshwater_basculinwhite": {
+          "Id": "{{ModId}}_fish_freshwater_basculinwhite",
+          "ItemId": "{{ModId}}_basculinwhiteegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "winter"
+        },
+        "{{ModId}}_fish_freshwater_mountain_magikarp": {
+          "Id": "{{ModId}}_fish_freshwater_mountain_magikarp",
+          "ItemId": "{{ModId}}_magikarpegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (Forest)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "Forest",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_freshwater_azurill": {
+          "Id": "{{ModId}}_fish_freshwater_azurill",
+          "ItemId": "{{ModId}}_azurillegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_freshwater_buizel": {
+          "Id": "{{ModId}}_fish_freshwater_buizel",
+          "ItemId": "{{ModId}}_buizelegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_chewtle": {
+          "Id": "{{ModId}}_fish_freshwater_chewtle",
+          "ItemId": "{{ModId}}_chewtleegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_clauncher": {
+          "Id": "{{ModId}}_fish_freshwater_clauncher",
+          "ItemId": "{{ModId}}_clauncheregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_corphish": {
+          "Id": "{{ModId}}_fish_freshwater_corphish",
+          "ItemId": "{{ModId}}_corphishegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_dewpider": {
+          "Id": "{{ModId}}_fish_freshwater_dewpider",
+          "ItemId": "{{ModId}}_dewpideregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_froakie": {
+          "Id": "{{ModId}}_fish_freshwater_froakie",
+          "ItemId": "{{ModId}}_froakieegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_goldeen": {
+          "Id": "{{ModId}}_fish_freshwater_goldeen",
+          "ItemId": "{{ModId}}_goldeenegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        },
+        "{{ModId}}_fish_freshwater_goomy": {
+          "Id": "{{ModId}}_fish_freshwater_goomy",
+          "ItemId": "{{ModId}}_goomyegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_lotad": {
+          "Id": "{{ModId}}_fish_freshwater_lotad",
+          "ItemId": "{{ModId}}_lotadegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_mudkip": {
+          "Id": "{{ModId}}_fish_freshwater_mudkip",
+          "ItemId": "{{ModId}}_mudkipegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_oshawott": {
+          "Id": "{{ModId}}_fish_freshwater_oshawott",
+          "ItemId": "{{ModId}}_oshawottegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_panpour": {
+          "Id": "{{ModId}}_fish_freshwater_panpour",
+          "ItemId": "{{ModId}}_panpouregg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_poliwagpolitoed": {
+          "Id": "{{ModId}}_fish_freshwater_poliwagpolitoed",
+          "ItemId": "{{ModId}}_poliwagpolitoedegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_poliwagpoliwrath": {
+          "Id": "{{ModId}}_fish_freshwater_poliwagpoliwrath",
+          "ItemId": "{{ModId}}_poliwagpoliwrathegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_psyduck": {
+          "Id": "{{ModId}}_fish_freshwater_psyduck",
+          "ItemId": "{{ModId}}_psyduckegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0,
+          "Condition": "WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_fish_freshwater_quaxly": {
+          "Id": "{{ModId}}_fish_freshwater_quaxly",
+          "ItemId": "{{ModId}}_quaxlyegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_shellos": {
+          "Id": "{{ModId}}_fish_freshwater_shellos",
+          "ItemId": "{{ModId}}_shellosegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_freshwater_sobble": {
+          "Id": "{{ModId}}_fish_freshwater_sobble",
+          "ItemId": "{{ModId}}_sobbleegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_surskit": {
+          "Id": "{{ModId}}_fish_freshwater_surskit",
+          "ItemId": "{{ModId}}_surskitegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "WEATHER Here Rain Storm Snow, PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_freshwater_tadbulb": {
+          "Id": "{{ModId}}_fish_freshwater_tadbulb",
+          "ItemId": "{{ModId}}_tadbulbegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_freshwater_totodile": {
+          "Id": "{{ModId}}_fish_freshwater_totodile",
+          "ItemId": "{{ModId}}_totodileegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_freshwater_basculinred": {
+          "Id": "{{ModId}}_fish_freshwater_basculinred",
+          "ItemId": "{{ModId}}_basculinredegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "fall"
+        },
+        "{{ModId}}_fish_freshwater_basculinblue": {
+          "Id": "{{ModId}}_fish_freshwater_basculinblue",
+          "ItemId": "{{ModId}}_basculinblueegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "summer"
+        },
+        "{{ModId}}_fish_freshwater_basculinwhite": {
+          "Id": "{{ModId}}_fish_freshwater_basculinwhite",
+          "ItemId": "{{ModId}}_basculinwhiteegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2",
+          "Season": "winter"
+        },
+        "{{ModId}}_fish_freshwater_forest_magikarp": {
+          "Id": "{{ModId}}_fish_freshwater_forest_magikarp",
+          "ItemId": "{{ModId}}_magikarpegg",
+          "Chance": "{{RateFishingFreshwater}}",
+          "MinFishingLevel": 0
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (Desert)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "Desert",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_desert_barboach": {
+          "Id": "{{ModId}}_fish_desert_barboach",
+          "ItemId": "{{ModId}}_barboachegg",
+          "Chance": "{{RateFishingDesert}}",
+          "MinFishingLevel": 2,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_fish_desert_stunfisk": {
+          "Id": "{{ModId}}_fish_desert_stunfisk",
+          "ItemId": "{{ModId}}_stunfiskegg",
+          "Chance": "{{RateFishingDesert}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_desert_wooper": {
+          "Id": "{{ModId}}_fish_desert_wooper",
+          "ItemId": "{{ModId}}_wooperegg",
+          "Chance": "{{RateFishingDesert}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (IslandWest)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "IslandWest",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_island_bruxish": {
+          "Id": "{{ModId}}_fish_island_bruxish",
+          "ItemId": "{{ModId}}_bruxishegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 8,
+          "FishAreaId": "Freshwater",
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_island_finizen": {
+          "Id": "{{ModId}}_fish_island_finizen",
+          "ItemId": "{{ModId}}_finizenegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 6,
+          "FishAreaId": "Freshwater",
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_island_finneon": {
+          "Id": "{{ModId}}_fish_island_finneon",
+          "ItemId": "{{ModId}}_finneonegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 6,
+          "FishAreaId": "Freshwater",
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_island_mantyke": {
+          "Id": "{{ModId}}_fish_island_mantyke",
+          "ItemId": "{{ModId}}_mantykeegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 8,
+          "FishAreaId": "Freshwater",
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_island_popplio": {
+          "Id": "{{ModId}}_fish_island_popplio",
+          "ItemId": "{{ModId}}_popplioegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 6,
+          "FishAreaId": "Freshwater",
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_island_west_magikarp": {
+          "Id": "{{ModId}}_fish_island_west_magikarp",
+          "ItemId": "{{ModId}}_magikarpegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 0
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (IslandNorth)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "IslandNorth",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_island_bruxish": {
+          "Id": "{{ModId}}_fish_island_bruxish",
+          "ItemId": "{{ModId}}_bruxishegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_island_finizen": {
+          "Id": "{{ModId}}_fish_island_finizen",
+          "ItemId": "{{ModId}}_finizenegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_island_finneon": {
+          "Id": "{{ModId}}_fish_island_finneon",
+          "ItemId": "{{ModId}}_finneonegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_island_mantyke": {
+          "Id": "{{ModId}}_fish_island_mantyke",
+          "ItemId": "{{ModId}}_mantykeegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_island_popplio": {
+          "Id": "{{ModId}}_fish_island_popplio",
+          "ItemId": "{{ModId}}_popplioegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_island_north_magikarp": {
+          "Id": "{{ModId}}_fish_island_north_magikarp",
+          "ItemId": "{{ModId}}_magikarpegg",
+          "Chance": "{{RateFishingIsland}}",
+          "MinFishingLevel": 0
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (Sewer)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "Sewer",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_sewer_galarstunfisk": {
+          "Id": "{{ModId}}_fish_sewer_galarstunfisk",
+          "ItemId": "{{ModId}}_galarstunfiskegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_sewer_hisuiqwilfish": {
+          "Id": "{{ModId}}_fish_sewer_hisuiqwilfish",
+          "ItemId": "{{ModId}}_hisuiqwilfishegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_sewer_hisuisamurott": {
+          "Id": "{{ModId}}_fish_sewer_hisuisamurott",
+          "ItemId": "{{ModId}}_hisuisamurottegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_sewer_mareanie": {
+          "Id": "{{ModId}}_fish_sewer_mareanie",
+          "ItemId": "{{ModId}}_mareanieegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_sewer_paldeawooper": {
+          "Id": "{{ModId}}_fish_sewer_paldeawooper",
+          "ItemId": "{{ModId}}_paldeawooperegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_sewer_skrelp": {
+          "Id": "{{ModId}}_fish_sewer_skrelp",
+          "ItemId": "{{ModId}}_skrelpegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_sewer_tympole": {
+          "Id": "{{ModId}}_fish_sewer_tympole",
+          "ItemId": "{{ModId}}_tympoleegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_sewer_alolagrimer": {
+          "Id": "{{ModId}}_fish_sewer_alolagrimer",
+          "ItemId": "{{ModId}}_alolagrimeregg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_sewer_alolarattata": {
+          "Id": "{{ModId}}_fish_sewer_alolarattata",
+          "ItemId": "{{ModId}}_alolarattataegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 4,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_fish_sewer_croagunk": {
+          "Id": "{{ModId}}_fish_sewer_croagunk",
+          "ItemId": "{{ModId}}_croagunkegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 6,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_fish_sewer_shroodle": {
+          "Id": "{{ModId}}_fish_sewer_shroodle",
+          "ItemId": "{{ModId}}_shroodleegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 8,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_fish_sewer_missigno": {
+          "Id": "{{ModId}}_fish_sewer_missigno",
+          "ItemId": "{{ModId}}_missignoegg",
+          "Chance": "{{RateFishingSewer}}",
+          "MinFishingLevel": 10,
+          "Condition": "PLAYER_BASE_FISHING_LEVEL Current 10"
+        }
+      }
+    },
+    {
+      "LogName": "Peche - oeufs pokemon (lacs de mine)",
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [
+        "UndergroundMine",
+        "Fish"
+      ],
+      "Entries": {
+        "{{ModId}}_fish_minelevel20_binacle": {
+          "Id": "{{ModId}}_fish_minelevel20_binacle",
+          "ItemId": "{{ModId}}_binacleegg",
+          "Chance": "{{RateFishingMine}}",
+          "MinFishingLevel": 0,
+          "Condition": "LOCATION_NAME Here UndergroundMine20"
+        },
+        "{{ModId}}_fish_minelevel20_wimpod": {
+          "Id": "{{ModId}}_fish_minelevel20_wimpod",
+          "ItemId": "{{ModId}}_wimpodegg",
+          "Chance": "{{RateFishingMine}}",
+          "MinFishingLevel": 2,
+          "Condition": "LOCATION_NAME Here UndergroundMine20"
+        },
+        "{{ModId}}_fish_minefrozen_feebas": {
+          "Id": "{{ModId}}_fish_minefrozen_feebas",
+          "ItemId": "{{ModId}}_feebasegg",
+          "Chance": "{{RateFishingMine}}",
+          "MinFishingLevel": 6,
+          "Condition": "LOCATION_NAME Here UndergroundMine60"
+        },
+        "{{ModId}}_fish_minefrozen_spheal": {
+          "Id": "{{ModId}}_fish_minefrozen_spheal",
+          "ItemId": "{{ModId}}_sphealegg",
+          "Chance": "{{RateFishingMine}}",
+          "MinFishingLevel": 4,
+          "Condition": "LOCATION_NAME Here UndergroundMine60"
+        },
+        "{{ModId}}_fish_minefrozen_kyogre": {
+          "Id": "{{ModId}}_fish_minefrozen_kyogre",
+          "ItemId": "{{ModId}}_kyogreegg",
+          "Chance": "{{RateFishingMine}}",
+          "MinFishingLevel": 10,
+          "Condition": "LOCATION_NAME Here UndergroundMine60, PLAYER_BASE_FISHING_LEVEL Current 10"
+        },
+        "{{ModId}}_fish_minelevel20_relicanth": {
+          "Id": "{{ModId}}_fish_minelevel20_relicanth",
+          "ItemId": "{{ModId}}_relicanthegg",
+          "Chance": "{{RateFishingMine}}",
+          "MinFishingLevel": 8,
+          "Condition": "LOCATION_NAME Here UndergroundMine20"
+        }
+      }
+    }
+  ]
+}

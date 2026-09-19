@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load farfetchd textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/farfetchd/farfetchd, {{ModId}}/farfetchd/shinyfarfetchd, {{ModId}}/farfetchd/sirfetchd, {{ModId}}/farfetchd/shinysirfetchd, {{ModId}}/farfetchd/farfetchdegg",
+      "FromFile": "assets/livestocks/farfetchd/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_farfetchd data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_farfetchd": {
+          "DisplayName": "{{i18n: farfetchd}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_farfetchdegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: farfetchdbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/farfetchd/sirfetchd",
+          "BabyTexture": "{{ModId}}/farfetchd/farfetchd",
+          "Sound": "{{ModId}}_sirfetchdcry",
+          "BabySound": "{{ModId}}_farfetchdcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_farfetchdegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfarfetchd data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfarfetchd": {
+          "DisplayName": "{{i18n: shinyfarfetchd}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_farfetchdegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfarfetchdbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/farfetchd/shinysirfetchd",
+          "BabyTexture": "{{ModId}}/farfetchd/shinyfarfetchd",
+          "Sound": "{{ModId}}_sirfetchdcry",
+          "BabySound": "{{ModId}}_farfetchdcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_farfetchdegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "farfetchd cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_farfetchdcry": {
+          "ID": "{{ModId}}_farfetchdcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/farfetchd/farfetchdcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_sirfetchdcry": {
+          "ID": "{{ModId}}_sirfetchdcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/farfetchd/sirfetchdcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "farfetchd egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_farfetchdegg": {
+          "Name": "{{ModId}}_farfetchdegg",
+          "DisplayName": "{{i18n: farfetchdegg}}",
+          "Description": "{{i18n: farfetchdegg.d}}",
+          "Texture": "{{ModId}}/farfetchd/farfetchdegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "farfetchd hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_farfetchdegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfarfetchd",
+              "AnimalId": "{{ModId}}_shinyfarfetchd",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_farfetchd",
+              "AnimalId": "{{ModId}}_farfetchd",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

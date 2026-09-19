@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bellsprout textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bellsprout/bellsprout, {{ModId}}/bellsprout/shinybellsprout, {{ModId}}/bellsprout/weepinbell, {{ModId}}/bellsprout/shinyweepinbell, {{ModId}}/bellsprout/victreebel, {{ModId}}/bellsprout/shinyvictreebel, {{ModId}}/bellsprout/bellsproutegg",
+      "FromFile": "assets/livestocks/bellsprout/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bellsprout data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bellsprout": {
+          "DisplayName": "{{i18n: bellsprout}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bellsproutegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bellsproutbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bellsprout/weepinbell",
+          "BabyTexture": "{{ModId}}/bellsprout/bellsprout",
+          "Sound": "{{ModId}}_victreebelcry",
+          "BabySound": "{{ModId}}_bellsproutcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bellsproutegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_bellsprout evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bellsprout",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "bellsproutevolution": {
+          "Id": "bellsproutevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bellsprout/victreebel"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybellsprout data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybellsprout": {
+          "DisplayName": "{{i18n: shinybellsprout}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bellsproutegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybellsproutbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bellsprout/shinyweepinbell",
+          "BabyTexture": "{{ModId}}/bellsprout/shinybellsprout",
+          "Sound": "{{ModId}}_victreebelcry",
+          "BabySound": "{{ModId}}_bellsproutcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bellsproutegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybellsprout evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybellsprout",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybellsproutevolution": {
+          "Id": "shinybellsproutevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/bellsprout/shinyvictreebel"
+        }
+      }
+    },
+    {
+      "LogName": "bellsprout cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bellsproutcry": {
+          "ID": "{{ModId}}_bellsproutcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bellsprout/bellsproutcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_victreebelcry": {
+          "ID": "{{ModId}}_victreebelcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bellsprout/victreebelcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bellsprout egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bellsproutegg": {
+          "Name": "{{ModId}}_bellsproutegg",
+          "DisplayName": "{{i18n: bellsproutegg}}",
+          "Description": "{{i18n: bellsproutegg.d}}",
+          "Texture": "{{ModId}}/bellsprout/bellsproutegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bellsprout hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bellsproutegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybellsprout",
+              "AnimalId": "{{ModId}}_shinybellsprout",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bellsprout",
+              "AnimalId": "{{ModId}}_bellsprout",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

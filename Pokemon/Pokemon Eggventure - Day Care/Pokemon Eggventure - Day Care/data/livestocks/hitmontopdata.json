@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hitmontop textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tyrogue/tyrogue_hitmontop, {{ModId}}/tyrogue/shinytyrogue_hitmontop, {{ModId}}/tyrogue/hitmontop, {{ModId}}/tyrogue/shinyhitmontop, {{ModId}}/tyrogue/hitmontopegg",
+      "FromFile": "assets/livestocks/tyrogue/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hitmontop data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hitmontop": {
+          "DisplayName": "{{i18n: hitmontop}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hitmontopegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hitmontopbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrogue/hitmontop",
+          "BabyTexture": "{{ModId}}/tyrogue/tyrogue_hitmontop",
+          "Sound": "{{ModId}}_hitmontopcry",
+          "BabySound": "{{ModId}}_tyroguecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hitmontopegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhitmontop data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhitmontop": {
+          "DisplayName": "{{i18n: shinyhitmontop}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hitmontopegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhitmontopbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tyrogue/shinyhitmontop",
+          "BabyTexture": "{{ModId}}/tyrogue/shinytyrogue_hitmontop",
+          "Sound": "{{ModId}}_hitmontopcry",
+          "BabySound": "{{ModId}}_tyroguecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hitmontopegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hitmontop cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tyroguecry": {
+          "ID": "{{ModId}}_tyroguecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrogue/tyroguecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hitmontopcry": {
+          "ID": "{{ModId}}_hitmontopcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tyrogue/hitmontopcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hitmontop egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hitmontopegg": {
+          "Name": "{{ModId}}_hitmontopegg",
+          "DisplayName": "{{i18n: hitmontopegg}}",
+          "Description": "{{i18n: hitmontopegg.d}}",
+          "Texture": "{{ModId}}/tyrogue/hitmontopegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hitmontop hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hitmontopegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhitmontop",
+              "AnimalId": "{{ModId}}_shinyhitmontop",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hitmontop",
+              "AnimalId": "{{ModId}}_hitmontop",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_berrymail": "{{i18n:mail_berry_text}}%item craftingRecipe {{ModId}}_BerryPress %%[letterbg 0][#]{{i18n:mail_berry_title}}"
+      },
+      "LogName": "Berry introduction mail"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_berrymail_trigger": {
+          "Id": "{{ModId}}_berrymail_trigger",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_berrymail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FARMING_LEVEL Current 2",
+          "Actions": [
+            "AddMail Current {{ModId}}_berrymail Now"
+          ]
+        }
+      }
+    }
+  ]
+}

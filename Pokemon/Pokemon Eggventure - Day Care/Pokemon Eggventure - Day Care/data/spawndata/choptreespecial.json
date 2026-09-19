@@ -1,0 +1,488 @@
+{
+  "Changes": [
+    {
+      "LogName": "TAP arbre 1",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_1_venonategg": {
+          "Id": "{{ModId}}_chop_1_venonategg",
+          "ItemId": "{{ModId}}_venonategg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_yanmaegg": {
+          "Id": "{{ModId}}_chop_1_yanmaegg",
+          "ItemId": "{{ModId}}_yanmaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_nincadashedinjaegg": {
+          "Id": "{{ModId}}_chop_1_nincadashedinjaegg",
+          "ItemId": "{{ModId}}_nincadashedinjaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_caterpieegg": {
+          "Id": "{{ModId}}_chop_1_caterpieegg",
+          "ItemId": "{{ModId}}_caterpieegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_ledybaegg": {
+          "Id": "{{ModId}}_chop_1_ledybaegg",
+          "ItemId": "{{ModId}}_ledybaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_pinsiregg": {
+          "Id": "{{ModId}}_chop_1_pinsiregg",
+          "ItemId": "{{ModId}}_pinsiregg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_karrablastegg": {
+          "Id": "{{ModId}}_chop_1_karrablastegg",
+          "ItemId": "{{ModId}}_karrablastegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_blipbugegg": {
+          "Id": "{{ModId}}_chop_1_blipbugegg",
+          "ItemId": "{{ModId}}_blipbugegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_kricketotegg": {
+          "Id": "{{ModId}}_chop_1_kricketotegg",
+          "ItemId": "{{ModId}}_kricketotegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_spinarakegg": {
+          "Id": "{{ModId}}_chop_1_spinarakegg",
+          "ItemId": "{{ModId}}_spinarakegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_1_heracrossegg": {
+          "Id": "{{ModId}}_chop_1_heracrossegg",
+          "ItemId": "{{ModId}}_heracrossegg",
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      }
+    },
+    {
+      "LogName": "TAP arbre 2",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_2_venonategg": {
+          "Id": "{{ModId}}_chop_2_venonategg",
+          "ItemId": "{{ModId}}_venonategg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_yanmaegg": {
+          "Id": "{{ModId}}_chop_2_yanmaegg",
+          "ItemId": "{{ModId}}_yanmaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_nincadashedinjaegg": {
+          "Id": "{{ModId}}_chop_2_nincadashedinjaegg",
+          "ItemId": "{{ModId}}_nincadashedinjaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_caterpieegg": {
+          "Id": "{{ModId}}_chop_2_caterpieegg",
+          "ItemId": "{{ModId}}_caterpieegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_ledybaegg": {
+          "Id": "{{ModId}}_chop_2_ledybaegg",
+          "ItemId": "{{ModId}}_ledybaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_pinsiregg": {
+          "Id": "{{ModId}}_chop_2_pinsiregg",
+          "ItemId": "{{ModId}}_pinsiregg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_karrablastegg": {
+          "Id": "{{ModId}}_chop_2_karrablastegg",
+          "ItemId": "{{ModId}}_karrablastegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_blipbugegg": {
+          "Id": "{{ModId}}_chop_2_blipbugegg",
+          "ItemId": "{{ModId}}_blipbugegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_kricketotegg": {
+          "Id": "{{ModId}}_chop_2_kricketotegg",
+          "ItemId": "{{ModId}}_kricketotegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_spinarakegg": {
+          "Id": "{{ModId}}_chop_2_spinarakegg",
+          "ItemId": "{{ModId}}_spinarakegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_2_heracrossegg": {
+          "Id": "{{ModId}}_chop_2_heracrossegg",
+          "ItemId": "{{ModId}}_heracrossegg",
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      }
+    },
+    {
+      "LogName": "TAP arbre 3",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_3_venonategg": {
+          "Id": "{{ModId}}_chop_3_venonategg",
+          "ItemId": "{{ModId}}_venonategg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_yanmaegg": {
+          "Id": "{{ModId}}_chop_3_yanmaegg",
+          "ItemId": "{{ModId}}_yanmaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_nincadashedinjaegg": {
+          "Id": "{{ModId}}_chop_3_nincadashedinjaegg",
+          "ItemId": "{{ModId}}_nincadashedinjaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_caterpieegg": {
+          "Id": "{{ModId}}_chop_3_caterpieegg",
+          "ItemId": "{{ModId}}_caterpieegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_ledybaegg": {
+          "Id": "{{ModId}}_chop_3_ledybaegg",
+          "ItemId": "{{ModId}}_ledybaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_pinsiregg": {
+          "Id": "{{ModId}}_chop_3_pinsiregg",
+          "ItemId": "{{ModId}}_pinsiregg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_karrablastegg": {
+          "Id": "{{ModId}}_chop_3_karrablastegg",
+          "ItemId": "{{ModId}}_karrablastegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_blipbugegg": {
+          "Id": "{{ModId}}_chop_3_blipbugegg",
+          "ItemId": "{{ModId}}_blipbugegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_kricketotegg": {
+          "Id": "{{ModId}}_chop_3_kricketotegg",
+          "ItemId": "{{ModId}}_kricketotegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_spinarakegg": {
+          "Id": "{{ModId}}_chop_3_spinarakegg",
+          "ItemId": "{{ModId}}_spinarakegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_3_heracrossegg": {
+          "Id": "{{ModId}}_chop_3_heracrossegg",
+          "ItemId": "{{ModId}}_heracrossegg",
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      }
+    },
+    {
+      "LogName": "TAP arbre 8",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_8_venonategg": {
+          "Id": "{{ModId}}_chop_8_venonategg",
+          "ItemId": "{{ModId}}_venonategg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_yanmaegg": {
+          "Id": "{{ModId}}_chop_8_yanmaegg",
+          "ItemId": "{{ModId}}_yanmaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_nincadashedinjaegg": {
+          "Id": "{{ModId}}_chop_8_nincadashedinjaegg",
+          "ItemId": "{{ModId}}_nincadashedinjaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_caterpieegg": {
+          "Id": "{{ModId}}_chop_8_caterpieegg",
+          "ItemId": "{{ModId}}_caterpieegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_ledybaegg": {
+          "Id": "{{ModId}}_chop_8_ledybaegg",
+          "ItemId": "{{ModId}}_ledybaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_pinsiregg": {
+          "Id": "{{ModId}}_chop_8_pinsiregg",
+          "ItemId": "{{ModId}}_pinsiregg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_karrablastegg": {
+          "Id": "{{ModId}}_chop_8_karrablastegg",
+          "ItemId": "{{ModId}}_karrablastegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_blipbugegg": {
+          "Id": "{{ModId}}_chop_8_blipbugegg",
+          "ItemId": "{{ModId}}_blipbugegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_kricketotegg": {
+          "Id": "{{ModId}}_chop_8_kricketotegg",
+          "ItemId": "{{ModId}}_kricketotegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_spinarakegg": {
+          "Id": "{{ModId}}_chop_8_spinarakegg",
+          "ItemId": "{{ModId}}_spinarakegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_8_heracrossegg": {
+          "Id": "{{ModId}}_chop_8_heracrossegg",
+          "ItemId": "{{ModId}}_heracrossegg",
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      }
+    },
+    {
+      "LogName": "TAP arbre SVE birch",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_venonategg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_venonategg",
+          "ItemId": "{{ModId}}_venonategg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_yanmaegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_yanmaegg",
+          "ItemId": "{{ModId}}_yanmaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_nincadashedinjaegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_nincadashedinjaegg",
+          "ItemId": "{{ModId}}_nincadashedinjaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_caterpieegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_caterpieegg",
+          "ItemId": "{{ModId}}_caterpieegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_ledybaegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_ledybaegg",
+          "ItemId": "{{ModId}}_ledybaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_pinsiregg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_pinsiregg",
+          "ItemId": "{{ModId}}_pinsiregg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_karrablastegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_karrablastegg",
+          "ItemId": "{{ModId}}_karrablastegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_blipbugegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_blipbugegg",
+          "ItemId": "{{ModId}}_blipbugegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_kricketotegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_kricketotegg",
+          "ItemId": "{{ModId}}_kricketotegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_spinarakegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_spinarakegg",
+          "ItemId": "{{ModId}}_spinarakegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_heracrossegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Birch_Tree_heracrossegg",
+          "ItemId": "{{ModId}}_heracrossegg",
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "TAP arbre SVE fir",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_venonategg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_venonategg",
+          "ItemId": "{{ModId}}_venonategg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_yanmaegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_yanmaegg",
+          "ItemId": "{{ModId}}_yanmaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_nincadashedinjaegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_nincadashedinjaegg",
+          "ItemId": "{{ModId}}_nincadashedinjaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_caterpieegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_caterpieegg",
+          "ItemId": "{{ModId}}_caterpieegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_ledybaegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_ledybaegg",
+          "ItemId": "{{ModId}}_ledybaegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_pinsiregg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_pinsiregg",
+          "ItemId": "{{ModId}}_pinsiregg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_karrablastegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_karrablastegg",
+          "ItemId": "{{ModId}}_karrablastegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_blipbugegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_blipbugegg",
+          "ItemId": "{{ModId}}_blipbugegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_kricketotegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_kricketotegg",
+          "ItemId": "{{ModId}}_kricketotegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_spinarakegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_spinarakegg",
+          "ItemId": "{{ModId}}_spinarakegg",
+          "Chance": "{{RateChopValleyTree}}"
+        },
+        "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_heracrossegg": {
+          "Id": "{{ModId}}_chop_FlashShifter_StardewValleyExpandedCP_Fir_Tree_heracrossegg",
+          "ItemId": "{{ModId}}_heracrossegg",
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "TAP palmier 6",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "6",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_6_cacneaegg": {
+          "Id": "{{ModId}}_chop_6_cacneaegg",
+          "ItemId": "{{ModId}}_cacneaegg",
+          "Chance": "{{RateChopDesertPalm}}"
+        },
+        "{{ModId}}_chop_6_durantegg": {
+          "Id": "{{ModId}}_chop_6_durantegg",
+          "ItemId": "{{ModId}}_durantegg",
+          "Chance": "{{RateChopDesertPalm}}"
+        },
+        "{{ModId}}_chop_6_vullabyegg": {
+          "Id": "{{ModId}}_chop_6_vullabyegg",
+          "ItemId": "{{ModId}}_vullabyegg",
+          "Chance": "{{RateChopDesertPalm}}"
+        },
+        "{{ModId}}_chop_6_capsakidegg": {
+          "Id": "{{ModId}}_chop_6_capsakidegg",
+          "ItemId": "{{ModId}}_capsakidegg",
+          "Chance": "{{RateChopDesertPalm}}"
+        },
+        "{{ModId}}_chop_6_gligaregg": {
+          "Id": "{{ModId}}_chop_6_gligaregg",
+          "ItemId": "{{ModId}}_gligaregg",
+          "Chance": "{{RateChopDesertPalm}}"
+        }
+      }
+    },
+    {
+      "LogName": "TAP palmier 9",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "9",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_9_squawkabillyegg": {
+          "Id": "{{ModId}}_chop_9_squawkabillyegg",
+          "ItemId": "{{ModId}}_squawkabillyegg",
+          "Chance": "{{RateChopIslandPalm}}"
+        },
+        "{{ModId}}_chop_9_tropiusegg": {
+          "Id": "{{ModId}}_chop_9_tropiusegg",
+          "ItemId": "{{ModId}}_tropiusegg",
+          "Chance": "{{RateChopIslandPalm}}"
+        },
+        "{{ModId}}_chop_9_oranguruegg": {
+          "Id": "{{ModId}}_chop_9_oranguruegg",
+          "ItemId": "{{ModId}}_oranguruegg",
+          "Chance": "{{RateChopIslandPalm}}"
+        },
+        "{{ModId}}_chop_9_exeggcuteegg": {
+          "Id": "{{ModId}}_chop_9_exeggcuteegg",
+          "ItemId": "{{ModId}}_exeggcuteegg",
+          "Chance": "{{RateChopIslandPalm}}"
+        },
+        "{{ModId}}_chop_9_kleavoregg": {
+          "Id": "{{ModId}}_chop_9_kleavoregg",
+          "ItemId": "{{ModId}}_kleavoregg",
+          "Chance": "{{RateChopIslandPalm}}"
+        },
+        "{{ModId}}_chop_9_komalaegg": {
+          "Id": "{{ModId}}_chop_9_komalaegg",
+          "ItemId": "{{ModId}}_komalaegg",
+          "Chance": "{{RateChopIslandPalm}}"
+        },
+        "{{ModId}}_chop_9_chatotegg": {
+          "Id": "{{ModId}}_chop_9_chatotegg",
+          "ItemId": "{{ModId}}_chatotegg",
+          "Chance": "{{RateChopIslandPalm}}"
+        }
+      }
+    }
+  ]
+}

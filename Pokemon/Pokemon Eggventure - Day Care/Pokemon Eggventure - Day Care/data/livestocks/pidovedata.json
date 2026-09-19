@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pidove textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pidove/pidove, {{ModId}}/pidove/shinypidove, {{ModId}}/pidove/tranquill, {{ModId}}/pidove/shinytranquill, {{ModId}}/pidove/unfezant, {{ModId}}/pidove/shinyunfezant, {{ModId}}/pidove/pidoveegg",
+      "FromFile": "assets/livestocks/pidove/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pidove data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pidove": {
+          "DisplayName": "{{i18n: pidove}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pidoveegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pidovebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pidove/tranquill",
+          "BabyTexture": "{{ModId}}/pidove/pidove",
+          "Sound": "{{ModId}}_unfezantcry",
+          "BabySound": "{{ModId}}_pidovecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pidoveegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_pidove evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pidove",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "pidoveevolution": {
+          "Id": "pidoveevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pidove/unfezant"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypidove data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypidove": {
+          "DisplayName": "{{i18n: shinypidove}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pidoveegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypidovebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pidove/shinytranquill",
+          "BabyTexture": "{{ModId}}/pidove/shinypidove",
+          "Sound": "{{ModId}}_unfezantcry",
+          "BabySound": "{{ModId}}_pidovecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pidoveegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypidove evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypidove",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypidoveevolution": {
+          "Id": "shinypidoveevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pidove/shinyunfezant"
+        }
+      }
+    },
+    {
+      "LogName": "pidove cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pidovecry": {
+          "ID": "{{ModId}}_pidovecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pidove/pidovecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_unfezantcry": {
+          "ID": "{{ModId}}_unfezantcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pidove/unfezantcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pidove egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pidoveegg": {
+          "Name": "{{ModId}}_pidoveegg",
+          "DisplayName": "{{i18n: pidoveegg}}",
+          "Description": "{{i18n: pidoveegg.d}}",
+          "Texture": "{{ModId}}/pidove/pidoveegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_general",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pidove hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pidoveegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypidove",
+              "AnimalId": "{{ModId}}_shinypidove",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pidove",
+              "AnimalId": "{{ModId}}_pidove",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

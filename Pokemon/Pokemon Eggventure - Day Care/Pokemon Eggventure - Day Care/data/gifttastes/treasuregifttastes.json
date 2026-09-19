@@ -1,0 +1,51 @@
+{
+  "Changes": [
+    {
+      "LogName": "Desert treasure gift tastes",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Entries",
+            "Universal_Like"
+          ],
+          "Value": "pktreasure_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Wizard",
+            "1"
+          ],
+          "Value": "pktreasure_cometshard",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Emily",
+            "1"
+          ],
+          "Value": "pktreasure_cometshard",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Abigail",
+            "1"
+          ],
+          "Value": "pktreasure_cometshard",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

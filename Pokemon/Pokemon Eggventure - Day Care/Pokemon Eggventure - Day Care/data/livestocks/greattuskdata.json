@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load greattusk textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/greattusk/greattusk, {{ModId}}/greattusk/shinygreattusk, {{ModId}}/greattusk/greattuskegg",
+      "FromFile": "assets/livestocks/greattusk/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_greattusk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_greattusk": {
+          "DisplayName": "{{i18n: greattusk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_greattuskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: greattuskbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/greattusk/greattusk",
+          "BabyTexture": "{{ModId}}/greattusk/greattusk",
+          "Sound": "{{ModId}}_greattuskcry",
+          "BabySound": "{{ModId}}_greattuskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_greattuskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygreattusk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygreattusk": {
+          "DisplayName": "{{i18n: shinygreattusk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_greattuskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygreattuskbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/greattusk/shinygreattusk",
+          "BabyTexture": "{{ModId}}/greattusk/shinygreattusk",
+          "Sound": "{{ModId}}_greattuskcry",
+          "BabySound": "{{ModId}}_greattuskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_greattuskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "greattusk cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_greattuskcry": {
+          "ID": "{{ModId}}_greattuskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/greattusk/greattuskcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "greattusk egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_greattuskegg": {
+          "Name": "{{ModId}}_greattuskegg",
+          "DisplayName": "{{i18n: greattuskegg}}",
+          "Description": "{{i18n: greattuskegg.d}}",
+          "Texture": "{{ModId}}/greattusk/greattuskegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ground",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "greattusk hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_greattuskegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygreattusk",
+              "AnimalId": "{{ModId}}_shinygreattusk",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_greattusk",
+              "AnimalId": "{{ModId}}_greattusk",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

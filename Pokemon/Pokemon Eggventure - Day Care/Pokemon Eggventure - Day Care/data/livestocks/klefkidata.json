@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load klefki textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/klefki/klefki, {{ModId}}/klefki/shinyklefki, {{ModId}}/klefki/klefkiegg",
+      "FromFile": "assets/livestocks/klefki/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_klefki data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_klefki": {
+          "DisplayName": "{{i18n: klefki}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_klefkiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: klefkibirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/klefki/klefki",
+          "BabyTexture": "{{ModId}}/klefki/klefki",
+          "Sound": "{{ModId}}_klefkicry",
+          "BabySound": "{{ModId}}_klefkicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_klefkiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyklefki data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyklefki": {
+          "DisplayName": "{{i18n: shinyklefki}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_klefkiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyklefkibirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/klefki/shinyklefki",
+          "BabyTexture": "{{ModId}}/klefki/shinyklefki",
+          "Sound": "{{ModId}}_klefkicry",
+          "BabySound": "{{ModId}}_klefkicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_klefkiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "klefki cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_klefkicry": {
+          "ID": "{{ModId}}_klefkicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/klefki/klefkicry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "klefki egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_klefkiegg": {
+          "Name": "{{ModId}}_klefkiegg",
+          "DisplayName": "{{i18n: klefkiegg}}",
+          "Description": "{{i18n: klefkiegg.d}}",
+          "Texture": "{{ModId}}/klefki/klefkiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_rare",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "klefki hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_klefkiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyklefki",
+              "AnimalId": "{{ModId}}_shinyklefki",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_klefki",
+              "AnimalId": "{{ModId}}_klefki",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

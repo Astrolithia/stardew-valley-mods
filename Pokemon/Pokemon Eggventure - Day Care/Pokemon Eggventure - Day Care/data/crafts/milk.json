@@ -1,0 +1,188 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load milk sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/milk/moomoo, {{ModId}}/milk/moomoolarge, {{ModId}}/milk/skiddo, {{ModId}}/milk/skiddolarge",
+      "FromFile": "assets/milk/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add Pokemon milks",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_milk_moomoo": {
+          "Name": "{{ModId}}_milk_moomoo",
+          "DisplayName": "{{i18n: milk_moomoo}}",
+          "Description": "{{i18n: milk_moomoo.d}}",
+          "Type": "Basic",
+          "Category": -6,
+          "Texture": "{{ModId}}/milk/moomoo",
+          "Price": 125,
+          "Edibility": 15,
+          "ContextTags": [
+            "pkmilk_item",
+            "pkmilk_cow",
+            "color_white",
+            "item_milk",
+            "milk_item",
+            "cow_milk_item",
+            "drink_item"
+          ]
+        },
+        "{{ModId}}_milk_moomoolarge": {
+          "Name": "{{ModId}}_milk_moomoolarge",
+          "DisplayName": "{{i18n: milk_moomoolarge}}",
+          "Description": "{{i18n: milk_moomoolarge.d}}",
+          "Type": "Basic",
+          "Category": -6,
+          "Texture": "{{ModId}}/milk/moomoolarge",
+          "Price": 190,
+          "Edibility": 20,
+          "ContextTags": [
+            "pkmilk_item",
+            "pkmilk_cow_large",
+            "color_white",
+            "item_large_milk",
+            "milk_item",
+            "cow_milk_item",
+            "large_milk_item",
+            "drink_item"
+          ]
+        },
+        "{{ModId}}_milk_skiddo": {
+          "Name": "{{ModId}}_milk_skiddo",
+          "DisplayName": "{{i18n: milk_skiddo}}",
+          "Description": "{{i18n: milk_skiddo.d}}",
+          "Type": "Basic",
+          "Category": -6,
+          "Texture": "{{ModId}}/milk/skiddo",
+          "Price": 225,
+          "Edibility": 20,
+          "ContextTags": [
+            "pkmilk_item",
+            "pkmilk_goat",
+            "color_white",
+            "item_goat_milk",
+            "milk_item",
+            "goat_milk_item"
+          ]
+        },
+        "{{ModId}}_milk_skiddolarge": {
+          "Name": "{{ModId}}_milk_skiddolarge",
+          "DisplayName": "{{i18n: milk_skiddolarge}}",
+          "Description": "{{i18n: milk_skiddolarge.d}}",
+          "Type": "Basic",
+          "Category": -6,
+          "Texture": "{{ModId}}/milk/skiddolarge",
+          "Price": 345,
+          "Edibility": 15,
+          "ContextTags": [
+            "pkmilk_item",
+            "pkmilk_goat_large",
+            "color_white",
+            "item_l._goat_milk",
+            "milk_item",
+            "goat_milk_item",
+            "large_milk_item"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "The Cheese Press accepts Pokemon milk",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)16",
+        "OutputRules"
+      ],
+      "Entries": {
+        "{{ModId}}_press_pkmilk_cow": {
+          "Id": "{{ModId}}_press_pkmilk_cow",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_cow_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkmilk_cow"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_cow_out",
+              "ItemId": "(O)424",
+              "Quality": 0
+            }
+          ],
+          "MinutesUntilReady": 200
+        },
+        "{{ModId}}_press_pkmilk_cow_large": {
+          "Id": "{{ModId}}_press_pkmilk_cow_large",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_cow_large_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkmilk_cow_large"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_cow_large_out",
+              "ItemId": "(O)424",
+              "Quality": 2
+            }
+          ],
+          "MinutesUntilReady": 200
+        },
+        "{{ModId}}_press_pkmilk_goat": {
+          "Id": "{{ModId}}_press_pkmilk_goat",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_goat_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkmilk_goat"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_goat_out",
+              "ItemId": "(O)426",
+              "Quality": 0
+            }
+          ],
+          "MinutesUntilReady": 200
+        },
+        "{{ModId}}_press_pkmilk_goat_large": {
+          "Id": "{{ModId}}_press_pkmilk_goat_large",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_goat_large_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkmilk_goat_large"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_press_pkmilk_goat_large_out",
+              "ItemId": "(O)426",
+              "Quality": 2
+            }
+          ],
+          "MinutesUntilReady": 200
+        }
+      }
+    }
+  ]
+}

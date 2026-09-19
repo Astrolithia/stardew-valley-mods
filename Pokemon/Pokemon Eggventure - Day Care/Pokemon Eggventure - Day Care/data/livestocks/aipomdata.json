@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load aipom textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/aipom/aipom, {{ModId}}/aipom/shinyaipom, {{ModId}}/aipom/ambipom, {{ModId}}/aipom/shinyambipom, {{ModId}}/aipom/aipomegg",
+      "FromFile": "assets/livestocks/aipom/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_aipom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_aipom": {
+          "DisplayName": "{{i18n: aipom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_aipomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: aipombirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/aipom/ambipom",
+          "BabyTexture": "{{ModId}}/aipom/aipom",
+          "Sound": "{{ModId}}_ambipomcry",
+          "BabySound": "{{ModId}}_aipomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aipomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyaipom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyaipom": {
+          "DisplayName": "{{i18n: shinyaipom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_aipomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyaipombirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/aipom/shinyambipom",
+          "BabyTexture": "{{ModId}}/aipom/shinyaipom",
+          "Sound": "{{ModId}}_ambipomcry",
+          "BabySound": "{{ModId}}_aipomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aipomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "aipom cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_aipomcry": {
+          "ID": "{{ModId}}_aipomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/aipom/aipomcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ambipomcry": {
+          "ID": "{{ModId}}_ambipomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/aipom/ambipomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aipom egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_aipomegg": {
+          "Name": "{{ModId}}_aipomegg",
+          "DisplayName": "{{i18n: aipomegg}}",
+          "Description": "{{i18n: aipomegg.d}}",
+          "Texture": "{{ModId}}/aipom/aipomegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aipom hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_aipomegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyaipom",
+              "AnimalId": "{{ModId}}_shinyaipom",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_aipom",
+              "AnimalId": "{{ModId}}_aipom",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

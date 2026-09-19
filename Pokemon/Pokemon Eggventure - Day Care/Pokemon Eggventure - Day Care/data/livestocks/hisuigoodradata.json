@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuigoodra textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/goomy/goomy_hisuigoodra, {{ModId}}/goomy/shinygoomy_hisuigoodra, {{ModId}}/goomy/hisuisliggoo, {{ModId}}/goomy/shinyhisuisliggoo, {{ModId}}/goomy/hisuigoodra, {{ModId}}/goomy/shinyhisuigoodra, {{ModId}}/goomy/hisuigoodraegg",
+      "FromFile": "assets/livestocks/goomy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuigoodra data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuigoodra": {
+          "DisplayName": "{{i18n: hisuigoodra}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuigoodraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuigoodrabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/goomy/hisuisliggoo",
+          "BabyTexture": "{{ModId}}/goomy/goomy_hisuigoodra",
+          "Sound": "{{ModId}}_hisuigoodracry",
+          "BabySound": "{{ModId}}_goomycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuigoodraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hisuigoodra evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hisuigoodra",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "hisuigoodraevolution": {
+          "Id": "hisuigoodraevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/goomy/hisuigoodra"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuigoodra data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuigoodra": {
+          "DisplayName": "{{i18n: shinyhisuigoodra}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuigoodraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuigoodrabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/goomy/shinyhisuisliggoo",
+          "BabyTexture": "{{ModId}}/goomy/shinygoomy_hisuigoodra",
+          "Sound": "{{ModId}}_hisuigoodracry",
+          "BabySound": "{{ModId}}_goomycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuigoodraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhisuigoodra evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhisuigoodra",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhisuigoodraevolution": {
+          "Id": "shinyhisuigoodraevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/goomy/shinyhisuigoodra"
+        }
+      }
+    },
+    {
+      "LogName": "hisuigoodra cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_goomycry": {
+          "ID": "{{ModId}}_goomycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/goomy/goomycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuigoodracry": {
+          "ID": "{{ModId}}_hisuigoodracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/goomy/hisuigoodracry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuigoodra egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuigoodraegg": {
+          "Name": "{{ModId}}_hisuigoodraegg",
+          "DisplayName": "{{i18n: hisuigoodraegg}}",
+          "Description": "{{i18n: hisuigoodraegg.d}}",
+          "Texture": "{{ModId}}/goomy/hisuigoodraegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p5",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuigoodra hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuigoodraegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuigoodra",
+              "AnimalId": "{{ModId}}_shinyhisuigoodra",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuigoodra",
+              "AnimalId": "{{ModId}}_hisuigoodra",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

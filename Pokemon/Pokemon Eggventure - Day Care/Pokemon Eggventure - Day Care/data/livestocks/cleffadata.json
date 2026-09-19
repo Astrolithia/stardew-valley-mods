@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cleffa textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cleffa/cleffa, {{ModId}}/cleffa/shinycleffa, {{ModId}}/cleffa/clefairy, {{ModId}}/cleffa/shinyclefairy, {{ModId}}/cleffa/clefable, {{ModId}}/cleffa/shinyclefable, {{ModId}}/cleffa/cleffaegg",
+      "FromFile": "assets/livestocks/cleffa/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cleffa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cleffa": {
+          "DisplayName": "{{i18n: cleffa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cleffaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cleffabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cleffa/clefairy",
+          "BabyTexture": "{{ModId}}/cleffa/cleffa",
+          "Sound": "{{ModId}}_clefablecry",
+          "BabySound": "{{ModId}}_cleffacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cleffaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_cleffa evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_cleffa",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "cleffaevolution": {
+          "Id": "cleffaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cleffa/clefable"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycleffa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycleffa": {
+          "DisplayName": "{{i18n: shinycleffa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cleffaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycleffabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cleffa/shinyclefairy",
+          "BabyTexture": "{{ModId}}/cleffa/shinycleffa",
+          "Sound": "{{ModId}}_clefablecry",
+          "BabySound": "{{ModId}}_cleffacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cleffaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycleffa evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycleffa",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinycleffaevolution": {
+          "Id": "shinycleffaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cleffa/shinyclefable"
+        }
+      }
+    },
+    {
+      "LogName": "cleffa cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cleffacry": {
+          "ID": "{{ModId}}_cleffacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cleffa/cleffacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_clefablecry": {
+          "ID": "{{ModId}}_clefablecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cleffa/clefablecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cleffa egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cleffaegg": {
+          "Name": "{{ModId}}_cleffaegg",
+          "DisplayName": "{{i18n: cleffaegg}}",
+          "Description": "{{i18n: cleffaegg.d}}",
+          "Texture": "{{ModId}}/cleffa/cleffaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_common",
+            "pkegg_mine_1_30_p2",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cleffa hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cleffaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycleffa",
+              "AnimalId": "{{ModId}}_shinycleffa",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cleffa",
+              "AnimalId": "{{ModId}}_cleffa",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

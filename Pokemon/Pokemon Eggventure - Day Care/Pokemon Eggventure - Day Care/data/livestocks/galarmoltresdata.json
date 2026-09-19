@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarmoltres textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/moltres/galarmoltres, {{ModId}}/moltres/shinygalarmoltres, {{ModId}}/moltres/galarmoltresegg",
+      "FromFile": "assets/livestocks/moltres/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarmoltres data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarmoltres": {
+          "DisplayName": "{{i18n: galarmoltres}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarmoltresegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarmoltresbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/moltres/galarmoltres",
+          "BabyTexture": "{{ModId}}/moltres/galarmoltres",
+          "Sound": "{{ModId}}_galarmoltrescry",
+          "BabySound": "{{ModId}}_galarmoltrescry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarmoltresegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarmoltres data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarmoltres": {
+          "DisplayName": "{{i18n: shinygalarmoltres}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarmoltresegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarmoltresbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/moltres/shinygalarmoltres",
+          "BabyTexture": "{{ModId}}/moltres/shinygalarmoltres",
+          "Sound": "{{ModId}}_galarmoltrescry",
+          "BabySound": "{{ModId}}_galarmoltrescry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarmoltresegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarmoltres cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarmoltrescry": {
+          "ID": "{{ModId}}_galarmoltrescry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/moltres/galarmoltrescry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarmoltres egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarmoltresegg": {
+          "Name": "{{ModId}}_galarmoltresegg",
+          "DisplayName": "{{i18n: galarmoltresegg}}",
+          "Description": "{{i18n: galarmoltresegg.d}}",
+          "Texture": "{{ModId}}/moltres/galarmoltresegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarmoltres hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarmoltresegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarmoltres",
+              "AnimalId": "{{ModId}}_shinygalarmoltres",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarmoltres",
+              "AnimalId": "{{ModId}}_galarmoltres",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

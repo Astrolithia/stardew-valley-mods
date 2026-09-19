@@ -1,0 +1,331 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_SableyeMail": {
+          "Id": "{{ModId}}_SableyeMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_sableyemail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Abigail 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_sableyemail Now"
+          ]
+        },
+        "{{ModId}}_EeveeflareonMail": {
+          "Id": "{{ModId}}_EeveeflareonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveeflareonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Alex 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveeflareonmail Now"
+          ]
+        },
+        "{{ModId}}_EeveevaporeonMail": {
+          "Id": "{{ModId}}_EeveevaporeonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveevaporeonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Elliott 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveevaporeonmail Now"
+          ]
+        },
+        "{{ModId}}_EeveeespeonMail": {
+          "Id": "{{ModId}}_EeveeespeonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveeespeonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Emily 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveeespeonmail Now"
+          ]
+        },
+        "{{ModId}}_EeveesylveonMail": {
+          "Id": "{{ModId}}_EeveesylveonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveesylveonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Haley 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveesylveonmail Now"
+          ]
+        },
+        "{{ModId}}_EeveeglaceonMail": {
+          "Id": "{{ModId}}_EeveeglaceonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveeglaceonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Harvey 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveeglaceonmail Now"
+          ]
+        },
+        "{{ModId}}_SmeargleMail": {
+          "Id": "{{ModId}}_SmeargleMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_smearglemail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Leah 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_smearglemail Now"
+          ]
+        },
+        "{{ModId}}_EeveejolteonMail": {
+          "Id": "{{ModId}}_EeveejolteonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveejolteonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Maru 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveejolteonmail Now"
+          ]
+        },
+        "{{ModId}}_EeveeleafeonMail": {
+          "Id": "{{ModId}}_EeveeleafeonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveeleafeonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Penny 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveeleafeonmail Now"
+          ]
+        },
+        "{{ModId}}_ToxelMail": {
+          "Id": "{{ModId}}_ToxelMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_toxelmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Sam 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_toxelmail Now"
+          ]
+        },
+        "{{ModId}}_EeveeumbreonMail": {
+          "Id": "{{ModId}}_EeveeumbreonMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_eeveeumbreonmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Sebastian 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_eeveeumbreonmail Now"
+          ]
+        },
+        "{{ModId}}_RookideeMail": {
+          "Id": "{{ModId}}_RookideeMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_rookideemail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Shane 2000",
+          "Actions": [
+            "AddMail Current {{ModId}}_rookideemail Now"
+          ]
+        },
+        "{{ModId}}_PoltchageistMail": {
+          "Id": "{{ModId}}_PoltchageistMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_poltchageistmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Caroline 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_poltchageistmail Now"
+          ]
+        },
+        "{{ModId}}_NosepassMail": {
+          "Id": "{{ModId}}_NosepassMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_nosepassmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Clint 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_nosepassmail Now"
+          ]
+        },
+        "{{ModId}}_WoobatMail": {
+          "Id": "{{ModId}}_WoobatMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_woobatmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Demetrius 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_woobatmail Now"
+          ]
+        },
+        "{{ModId}}_AudinoMail": {
+          "Id": "{{ModId}}_AudinoMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_audinomail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Evelyn 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_audinomail Now"
+          ]
+        },
+        "{{ModId}}_CufantMail": {
+          "Id": "{{ModId}}_CufantMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_cufantmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current George 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_cufantmail Now"
+          ]
+        },
+        "{{ModId}}_LickitungMail": {
+          "Id": "{{ModId}}_LickitungMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_lickitungmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Gus 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_lickitungmail Now"
+          ]
+        },
+        "{{ModId}}_MinunMail": {
+          "Id": "{{ModId}}_MinunMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_minunmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Jas 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_minunmail Now"
+          ]
+        },
+        "{{ModId}}_MinccinoMail": {
+          "Id": "{{ModId}}_MinccinoMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_minccinomail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Jodi 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_minccinomail Now"
+          ]
+        },
+        "{{ModId}}_SkarmoryMail": {
+          "Id": "{{ModId}}_SkarmoryMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_skarmorymail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Kent 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_skarmorymail Now"
+          ]
+        },
+        "{{ModId}}_MimikyuMail": {
+          "Id": "{{ModId}}_MimikyuMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_mimikyumail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Krobus 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_mimikyumail Now"
+          ]
+        },
+        "{{ModId}}_NatuMail": {
+          "Id": "{{ModId}}_NatuMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_natumail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Leo 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_natumail Now"
+          ]
+        },
+        "{{ModId}}_StantlerMail": {
+          "Id": "{{ModId}}_StantlerMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_stantlermail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Linus 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_stantlermail Now"
+          ]
+        },
+        "{{ModId}}_HonedgeMail": {
+          "Id": "{{ModId}}_HonedgeMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_honedgemail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Marlon 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_honedgemail Now"
+          ]
+        },
+        "{{ModId}}_FurfrouMail": {
+          "Id": "{{ModId}}_FurfrouMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_furfroumail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Marnie 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_furfroumail Now"
+          ]
+        },
+        "{{ModId}}_GolettMail": {
+          "Id": "{{ModId}}_GolettMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_golettmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Nain 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_golettmail Now"
+          ]
+        },
+        "{{ModId}}_WhismurMail": {
+          "Id": "{{ModId}}_WhismurMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_whismurmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Pam 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_whismurmail Now"
+          ]
+        },
+        "{{ModId}}_MeowthMail": {
+          "Id": "{{ModId}}_MeowthMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_meowthmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Pierre 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_meowthmail Now"
+          ]
+        },
+        "{{ModId}}_HatennaMail": {
+          "Id": "{{ModId}}_HatennaMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_hatennamail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Rasmodius 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_hatennamail Now"
+          ]
+        },
+        "{{ModId}}_TimburrMail": {
+          "Id": "{{ModId}}_TimburrMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_timburrmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Robin 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_timburrmail Now"
+          ]
+        },
+        "{{ModId}}_MaractusMail": {
+          "Id": "{{ModId}}_MaractusMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_maractusmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Sandy 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_maractusmail Now"
+          ]
+        },
+        "{{ModId}}_PlusleMail": {
+          "Id": "{{ModId}}_PlusleMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_pluslemail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Vincent 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_pluslemail Now"
+          ]
+        },
+        "{{ModId}}_WingullMail": {
+          "Id": "{{ModId}}_WingullMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_wingullmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Willy 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_wingullmail Now"
+          ]
+        },
+        "{{ModId}}_GimmighoulMail": {
+          "Id": "{{ModId}}_GimmighoulMail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_gimmighoulmail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, PLAYER_FRIENDSHIP_POINTS Current Lewis 2500",
+          "Actions": [
+            "AddMail Current {{ModId}}_gimmighoulmail Now"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_sableyemail": "{{i18n:mail_sableye_text}}%item id (O){{ModId}}_sableyeegg 1 %%[letterbg 0][#]{{i18n:mail_sableye_title}}",
+        "{{ModId}}_eeveeflareonmail": "{{i18n:mail_eeveeflareon_text}}%item id (O){{ModId}}_eeveeflareonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveeflareon_title}}",
+        "{{ModId}}_eeveevaporeonmail": "{{i18n:mail_eeveevaporeon_text}}%item id (O){{ModId}}_eeveevaporeonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveevaporeon_title}}",
+        "{{ModId}}_eeveeespeonmail": "{{i18n:mail_eeveeespeon_text}}%item id (O){{ModId}}_eeveeespeonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveeespeon_title}}",
+        "{{ModId}}_eeveesylveonmail": "{{i18n:mail_eeveesylveon_text}}%item id (O){{ModId}}_eeveesylveonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveesylveon_title}}",
+        "{{ModId}}_eeveeglaceonmail": "{{i18n:mail_eeveeglaceon_text}}%item id (O){{ModId}}_eeveeglaceonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveeglaceon_title}}",
+        "{{ModId}}_smearglemail": "{{i18n:mail_smeargle_text}}%item id (O){{ModId}}_smeargleegg 1 %%[letterbg 0][#]{{i18n:mail_smeargle_title}}",
+        "{{ModId}}_eeveejolteonmail": "{{i18n:mail_eeveejolteon_text}}%item id (O){{ModId}}_eeveejolteonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveejolteon_title}}",
+        "{{ModId}}_eeveeleafeonmail": "{{i18n:mail_eeveeleafeon_text}}%item id (O){{ModId}}_eeveeleafeonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveeleafeon_title}}",
+        "{{ModId}}_toxelmail": "{{i18n:mail_toxel_text}}%item id (O){{ModId}}_toxelegg 1 %%[letterbg 0][#]{{i18n:mail_toxel_title}}",
+        "{{ModId}}_eeveeumbreonmail": "{{i18n:mail_eeveeumbreon_text}}%item id (O){{ModId}}_eeveeumbreonegg 1 %%[letterbg 0][#]{{i18n:mail_eeveeumbreon_title}}",
+        "{{ModId}}_rookideemail": "{{i18n:mail_rookidee_text}}%item id (O){{ModId}}_rookideeegg 1 %%[letterbg 0][#]{{i18n:mail_rookidee_title}}",
+        "{{ModId}}_poltchageistmail": "{{i18n:mail_poltchageist_text}}%item id (O){{ModId}}_poltchageistegg 1 %%[letterbg 0][#]{{i18n:mail_poltchageist_title}}",
+        "{{ModId}}_nosepassmail": "{{i18n:mail_nosepass_text}}%item id (O){{ModId}}_nosepassegg 1 %%[letterbg 0][#]{{i18n:mail_nosepass_title}}",
+        "{{ModId}}_woobatmail": "{{i18n:mail_woobat_text}}%item id (O){{ModId}}_woobategg 1 %%[letterbg 0][#]{{i18n:mail_woobat_title}}",
+        "{{ModId}}_audinomail": "{{i18n:mail_audino_text}}%item id (O){{ModId}}_audinoegg 1 %%[letterbg 0][#]{{i18n:mail_audino_title}}",
+        "{{ModId}}_cufantmail": "{{i18n:mail_cufant_text}}%item id (O){{ModId}}_cufantegg 1 %%[letterbg 0][#]{{i18n:mail_cufant_title}}",
+        "{{ModId}}_lickitungmail": "{{i18n:mail_lickitung_text}}%item id (O){{ModId}}_lickitungegg 1 %%[letterbg 0][#]{{i18n:mail_lickitung_title}}",
+        "{{ModId}}_minunmail": "{{i18n:mail_minun_text}}%item id (O){{ModId}}_minunegg 1 %%[letterbg 0][#]{{i18n:mail_minun_title}}",
+        "{{ModId}}_minccinomail": "{{i18n:mail_minccino_text}}%item id (O){{ModId}}_minccinoegg 1 %%[letterbg 0][#]{{i18n:mail_minccino_title}}",
+        "{{ModId}}_skarmorymail": "{{i18n:mail_skarmory_text}}%item id (O){{ModId}}_skarmoryegg 1 %%[letterbg 0][#]{{i18n:mail_skarmory_title}}",
+        "{{ModId}}_mimikyumail": "{{i18n:mail_mimikyu_text}}%item id (O){{ModId}}_mimikyuegg 1 %%[letterbg 0][#]{{i18n:mail_mimikyu_title}}",
+        "{{ModId}}_natumail": "{{i18n:mail_natu_text}}%item id (O){{ModId}}_natuegg 1 %%[letterbg 0][#]{{i18n:mail_natu_title}}",
+        "{{ModId}}_stantlermail": "{{i18n:mail_stantler_text}}%item id (O){{ModId}}_stantleregg 1 %%[letterbg 0][#]{{i18n:mail_stantler_title}}",
+        "{{ModId}}_honedgemail": "{{i18n:mail_honedge_text}}%item id (O){{ModId}}_honedgeegg 1 %%[letterbg 0][#]{{i18n:mail_honedge_title}}",
+        "{{ModId}}_furfroumail": "{{i18n:mail_furfrou_text}}%item id (O){{ModId}}_furfrouegg 1 %%[letterbg 0][#]{{i18n:mail_furfrou_title}}",
+        "{{ModId}}_golettmail": "{{i18n:mail_golett_text}}%item id (O){{ModId}}_golettegg 1 %%[letterbg 0][#]{{i18n:mail_golett_title}}",
+        "{{ModId}}_whismurmail": "{{i18n:mail_whismur_text}}%item id (O){{ModId}}_whismuregg 1 %%[letterbg 0][#]{{i18n:mail_whismur_title}}",
+        "{{ModId}}_meowthmail": "{{i18n:mail_meowth_text}}%item id (O){{ModId}}_meowthegg 1 %%[letterbg 0][#]{{i18n:mail_meowth_title}}",
+        "{{ModId}}_hatennamail": "{{i18n:mail_hatenna_text}}%item id (O){{ModId}}_hatennaegg 1 %%[letterbg 0][#]{{i18n:mail_hatenna_title}}",
+        "{{ModId}}_timburrmail": "{{i18n:mail_timburr_text}}%item id (O){{ModId}}_timburregg 1 %%[letterbg 0][#]{{i18n:mail_timburr_title}}",
+        "{{ModId}}_maractusmail": "{{i18n:mail_maractus_text}}%item id (O){{ModId}}_maractusegg 1 %%[letterbg 0][#]{{i18n:mail_maractus_title}}",
+        "{{ModId}}_pluslemail": "{{i18n:mail_plusle_text}}%item id (O){{ModId}}_plusleegg 1 %%[letterbg 0][#]{{i18n:mail_plusle_title}}",
+        "{{ModId}}_wingullmail": "{{i18n:mail_wingull_text}}%item id (O){{ModId}}_wingullegg 1 %%[letterbg 0][#]{{i18n:mail_wingull_title}}",
+        "{{ModId}}_gimmighoulmail": "{{i18n:mail_gimmighoul_text}}%item id (O){{ModId}}_gimmighoulegg 1 %%[letterbg 0][#]{{i18n:mail_gimmighoul_title}}"
+      }
+    }
+  ]
+}

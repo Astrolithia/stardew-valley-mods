@@ -1,0 +1,42 @@
+{
+  "Changes": [
+    {
+      "LogName": "Hardmode Mine - Legendaires (noeud)",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Resources",
+      "Entries": {
+        "{{ModId}}_EggNode_hardmine": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 5,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone #B388FF",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_hardmine_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_hardmine",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Qi",
+              "SpawnFrequency": "{{RateHardmodeMine}}"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

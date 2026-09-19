@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load budew textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/budew/budew, {{ModId}}/budew/shinybudew, {{ModId}}/budew/roselia, {{ModId}}/budew/shinyroselia, {{ModId}}/budew/roserade, {{ModId}}/budew/shinyroserade, {{ModId}}/budew/budewegg",
+      "FromFile": "assets/livestocks/budew/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_budew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_budew": {
+          "DisplayName": "{{i18n: budew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_budewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: budewbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/budew/roselia",
+          "BabyTexture": "{{ModId}}/budew/budew",
+          "Sound": "{{ModId}}_roseradecry",
+          "BabySound": "{{ModId}}_budewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_budewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_budew evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_budew",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "budewevolution": {
+          "Id": "budewevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/budew/roserade"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybudew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybudew": {
+          "DisplayName": "{{i18n: shinybudew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_budewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybudewbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/budew/shinyroselia",
+          "BabyTexture": "{{ModId}}/budew/shinybudew",
+          "Sound": "{{ModId}}_roseradecry",
+          "BabySound": "{{ModId}}_budewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_budewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybudew evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybudew",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybudewevolution": {
+          "Id": "shinybudewevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/budew/shinyroserade"
+        }
+      }
+    },
+    {
+      "LogName": "budew cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_budewcry": {
+          "ID": "{{ModId}}_budewcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/budew/budewcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_roseradecry": {
+          "ID": "{{ModId}}_roseradecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/budew/roseradecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "budew egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_budewegg": {
+          "Name": "{{ModId}}_budewegg",
+          "DisplayName": "{{i18n: budewegg}}",
+          "Description": "{{i18n: budewegg.d}}",
+          "Texture": "{{ModId}}/budew/budewegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "budew hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_budewegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybudew",
+              "AnimalId": "{{ModId}}_shinybudew",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_budew",
+              "AnimalId": "{{ModId}}_budew",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

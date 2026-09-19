@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pumpkaboo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pumpkaboo/pumpkaboo, {{ModId}}/pumpkaboo/shinypumpkaboo, {{ModId}}/pumpkaboo/gourgeist, {{ModId}}/pumpkaboo/shinygourgeist, {{ModId}}/pumpkaboo/pumpkabooegg",
+      "FromFile": "assets/livestocks/pumpkaboo/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pumpkaboo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pumpkaboo": {
+          "DisplayName": "{{i18n: pumpkaboo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pumpkabooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pumpkaboobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pumpkaboo/gourgeist",
+          "BabyTexture": "{{ModId}}/pumpkaboo/pumpkaboo",
+          "Sound": "{{ModId}}_gourgeistcry",
+          "BabySound": "{{ModId}}_pumpkaboocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pumpkabooegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypumpkaboo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypumpkaboo": {
+          "DisplayName": "{{i18n: shinypumpkaboo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pumpkabooegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypumpkaboobirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pumpkaboo/shinygourgeist",
+          "BabyTexture": "{{ModId}}/pumpkaboo/shinypumpkaboo",
+          "Sound": "{{ModId}}_gourgeistcry",
+          "BabySound": "{{ModId}}_pumpkaboocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pumpkabooegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "pumpkaboo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pumpkaboocry": {
+          "ID": "{{ModId}}_pumpkaboocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pumpkaboo/pumpkaboocry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gourgeistcry": {
+          "ID": "{{ModId}}_gourgeistcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pumpkaboo/gourgeistcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pumpkaboo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pumpkabooegg": {
+          "Name": "{{ModId}}_pumpkabooegg",
+          "DisplayName": "{{i18n: pumpkabooegg}}",
+          "Description": "{{i18n: pumpkabooegg.d}}",
+          "Texture": "{{ModId}}/pumpkaboo/pumpkabooegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pumpkaboo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pumpkabooegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypumpkaboo",
+              "AnimalId": "{{ModId}}_shinypumpkaboo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pumpkaboo",
+              "AnimalId": "{{ModId}}_pumpkaboo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

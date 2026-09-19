@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load happiny textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/happiny/happiny, {{ModId}}/happiny/shinyhappiny, {{ModId}}/happiny/chansey, {{ModId}}/happiny/shinychansey, {{ModId}}/happiny/blissey, {{ModId}}/happiny/shinyblissey, {{ModId}}/happiny/happinyegg",
+      "FromFile": "assets/livestocks/happiny/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_happiny data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_happiny": {
+          "DisplayName": "{{i18n: happiny}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_happinyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: happinybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/happiny/chansey",
+          "BabyTexture": "{{ModId}}/happiny/happiny",
+          "Sound": "{{ModId}}_blisseycry",
+          "BabySound": "{{ModId}}_happinycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_happinyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_happiny evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_happiny",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "happinyevolution": {
+          "Id": "happinyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/happiny/blissey"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhappiny data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhappiny": {
+          "DisplayName": "{{i18n: shinyhappiny}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_happinyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhappinybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/happiny/shinychansey",
+          "BabyTexture": "{{ModId}}/happiny/shinyhappiny",
+          "Sound": "{{ModId}}_blisseycry",
+          "BabySound": "{{ModId}}_happinycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_happinyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhappiny evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhappiny",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhappinyevolution": {
+          "Id": "shinyhappinyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/happiny/shinyblissey"
+        }
+      }
+    },
+    {
+      "LogName": "happiny cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_happinycry": {
+          "ID": "{{ModId}}_happinycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/happiny/happinycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_blisseycry": {
+          "ID": "{{ModId}}_blisseycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/happiny/blisseycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "happiny egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_happinyegg": {
+          "Name": "{{ModId}}_happinyegg",
+          "DisplayName": "{{i18n: happinyegg}}",
+          "Description": "{{i18n: happinyegg.d}}",
+          "Texture": "{{ModId}}/happiny/happinyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "happiny hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_happinyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhappiny",
+              "AnimalId": "{{ModId}}_shinyhappiny",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_happiny",
+              "AnimalId": "{{ModId}}_happiny",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

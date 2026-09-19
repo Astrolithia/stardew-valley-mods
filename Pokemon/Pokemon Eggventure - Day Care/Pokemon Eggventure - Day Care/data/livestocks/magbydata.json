@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load magby textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/magby/magby, {{ModId}}/magby/shinymagby, {{ModId}}/magby/magmar, {{ModId}}/magby/shinymagmar, {{ModId}}/magby/magmortar, {{ModId}}/magby/shinymagmortar, {{ModId}}/magby/magbyegg",
+      "FromFile": "assets/livestocks/magby/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_magby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_magby": {
+          "DisplayName": "{{i18n: magby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_magbyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: magbybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/magby/magmar",
+          "BabyTexture": "{{ModId}}/magby/magby",
+          "Sound": "{{ModId}}_magmortarcry",
+          "BabySound": "{{ModId}}_magbycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_magbyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_magby evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_magby",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "magbyevolution": {
+          "Id": "magbyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/magby/magmortar"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_magby type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_magby"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymagby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymagby": {
+          "DisplayName": "{{i18n: shinymagby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_magbyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymagbybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/magby/shinymagmar",
+          "BabyTexture": "{{ModId}}/magby/shinymagby",
+          "Sound": "{{ModId}}_magmortarcry",
+          "BabySound": "{{ModId}}_magbycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_magbyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymagby evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymagby",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymagbyevolution": {
+          "Id": "shinymagbyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/magby/shinymagmortar"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymagby type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymagby"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "magby cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_magbycry": {
+          "ID": "{{ModId}}_magbycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/magby/magbycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_magmortarcry": {
+          "ID": "{{ModId}}_magmortarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/magby/magmortarcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "magby egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_magbyegg": {
+          "Name": "{{ModId}}_magbyegg",
+          "DisplayName": "{{i18n: magbyegg}}",
+          "Description": "{{i18n: magbyegg.d}}",
+          "Texture": "{{ModId}}/magby/magbyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_mine_81_100_p4",
+            "pkegg_mine_101_120_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "magby hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_magbyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymagby",
+              "AnimalId": "{{ModId}}_shinymagby",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_magby",
+              "AnimalId": "{{ModId}}_magby",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

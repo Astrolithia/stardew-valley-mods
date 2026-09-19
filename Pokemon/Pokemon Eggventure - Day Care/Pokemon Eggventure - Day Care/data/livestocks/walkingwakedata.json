@@ -1,0 +1,201 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load walkingwake textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/walkingwake/walkingwake, {{ModId}}/walkingwake/shinywalkingwake, {{ModId}}/walkingwake/walkingwakeegg",
+      "FromFile": "assets/livestocks/walkingwake/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_walkingwake data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_walkingwake": {
+          "DisplayName": "{{i18n: walkingwake}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_walkingwakeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: walkingwakebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/walkingwake/walkingwake",
+          "BabyTexture": "{{ModId}}/walkingwake/walkingwake",
+          "Sound": "{{ModId}}_walkingwakecry",
+          "BabySound": "{{ModId}}_walkingwakecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_walkingwakeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_walkingwake type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_walkingwake"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywalkingwake data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywalkingwake": {
+          "DisplayName": "{{i18n: shinywalkingwake}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_walkingwakeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywalkingwakebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/walkingwake/shinywalkingwake",
+          "BabyTexture": "{{ModId}}/walkingwake/shinywalkingwake",
+          "Sound": "{{ModId}}_walkingwakecry",
+          "BabySound": "{{ModId}}_walkingwakecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_walkingwakeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinywalkingwake type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinywalkingwake"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "walkingwake cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_walkingwakecry": {
+          "ID": "{{ModId}}_walkingwakecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/walkingwake/walkingwakecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "walkingwake egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_walkingwakeegg": {
+          "Name": "{{ModId}}_walkingwakeegg",
+          "DisplayName": "{{i18n: walkingwakeegg}}",
+          "Description": "{{i18n: walkingwakeegg.d}}",
+          "Texture": "{{ModId}}/walkingwake/walkingwakeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_water",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "walkingwake hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_walkingwakeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywalkingwake",
+              "AnimalId": "{{ModId}}_shinywalkingwake",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_walkingwake",
+              "AnimalId": "{{ModId}}_walkingwake",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

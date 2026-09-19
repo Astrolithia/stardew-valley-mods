@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load giratina textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/giratina/giratina, {{ModId}}/giratina/shinygiratina, {{ModId}}/giratina/giratinaorigin, {{ModId}}/giratina/shinygiratinaorigin, {{ModId}}/giratina/giratinaegg",
+      "FromFile": "assets/livestocks/giratina/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_giratina data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_giratina": {
+          "DisplayName": "{{i18n: giratina}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_giratinaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: giratinabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/giratina/giratina",
+          "BabyTexture": "{{ModId}}/giratina/giratina",
+          "Sound": "{{ModId}}_giratinacry",
+          "BabySound": "{{ModId}}_giratinacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_giratinaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "giratinaorigin",
+              "Texture": "{{ModId}}/giratina/giratinaorigin",
+              "BabyTexture": "{{ModId}}/giratina/giratinaorigin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygiratina data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygiratina": {
+          "DisplayName": "{{i18n: shinygiratina}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_giratinaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygiratinabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/giratina/shinygiratina",
+          "BabyTexture": "{{ModId}}/giratina/shinygiratina",
+          "Sound": "{{ModId}}_giratinacry",
+          "BabySound": "{{ModId}}_giratinacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_giratinaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "giratinaorigin",
+              "Texture": "{{ModId}}/giratina/shinygiratinaorigin",
+              "BabyTexture": "{{ModId}}/giratina/shinygiratinaorigin"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "giratina cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_giratinacry": {
+          "ID": "{{ModId}}_giratinacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/giratina/giratinacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "giratina egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_giratinaegg": {
+          "Name": "{{ModId}}_giratinaegg",
+          "DisplayName": "{{i18n: giratinaegg}}",
+          "Description": "{{i18n: giratinaegg.d}}",
+          "Texture": "{{ModId}}/giratina/giratinaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "giratina hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_giratinaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygiratina",
+              "AnimalId": "{{ModId}}_shinygiratina",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_giratina",
+              "AnimalId": "{{ModId}}_giratina",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

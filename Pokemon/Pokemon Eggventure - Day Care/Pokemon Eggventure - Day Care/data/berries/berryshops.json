@@ -1,0 +1,236 @@
+{
+  "Changes": [
+    {
+      "LogName": "Sell easy berry seeds at Pierre",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "SeedShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_berryseed_framby": {
+          "Id": "{{ModId}}_berryseed_framby",
+          "ItemId": "{{ModId}}_berryseed_framby",
+          "Price": 80,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_remu": {
+          "Id": "{{ModId}}_berryseed_remu",
+          "ItemId": "{{ModId}}_berryseed_remu",
+          "Price": 80,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_nanab": {
+          "Id": "{{ModId}}_berryseed_nanab",
+          "ItemId": "{{ModId}}_berryseed_nanab",
+          "Price": 80,
+          "Condition": "SEASON fall"
+        },
+        "{{ModId}}_berryseed_repoi": {
+          "Id": "{{ModId}}_berryseed_repoi",
+          "ItemId": "{{ModId}}_berryseed_repoi",
+          "Price": 80,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_nanana": {
+          "Id": "{{ModId}}_berryseed_nanana",
+          "ItemId": "{{ModId}}_berryseed_nanana",
+          "Price": 80,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_ceriz": {
+          "Id": "{{ModId}}_berryseed_ceriz",
+          "ItemId": "{{ModId}}_berryseed_ceriz",
+          "Price": 120,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_maron": {
+          "Id": "{{ModId}}_berryseed_maron",
+          "ItemId": "{{ModId}}_berryseed_maron",
+          "Price": 120,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_pecha": {
+          "Id": "{{ModId}}_berryseed_pecha",
+          "ItemId": "{{ModId}}_berryseed_pecha",
+          "Price": 120,
+          "Condition": "SEASON fall"
+        },
+        "{{ModId}}_berryseed_fraive": {
+          "Id": "{{ModId}}_berryseed_fraive",
+          "ItemId": "{{ModId}}_berryseed_fraive",
+          "Price": 120,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_willia": {
+          "Id": "{{ModId}}_berryseed_willia",
+          "ItemId": "{{ModId}}_berryseed_willia",
+          "Price": 120,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_mepo": {
+          "Id": "{{ModId}}_berryseed_mepo",
+          "ItemId": "{{ModId}}_berryseed_mepo",
+          "Price": 120,
+          "Condition": "SEASON fall"
+        },
+        "{{ModId}}_berryseed_oran": {
+          "Id": "{{ModId}}_berryseed_oran",
+          "ItemId": "{{ModId}}_berryseed_oran",
+          "Price": 120,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_kika": {
+          "Id": "{{ModId}}_berryseed_kika",
+          "ItemId": "{{ModId}}_berryseed_kika",
+          "Price": 120,
+          "Condition": "SEASON summer"
+        }
+      },
+      "MoveEntries": [
+        {
+          "ID": "{{ModId}}_berryseed_ceriz",
+          "BeforeID": "GrassStarter"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_fraive",
+          "AfterID": "{{ModId}}_berryseed_ceriz"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_framby",
+          "AfterID": "{{ModId}}_berryseed_fraive"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_oran",
+          "AfterID": "{{ModId}}_berryseed_framby"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_repoi",
+          "AfterID": "{{ModId}}_berryseed_oran"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_kika",
+          "AfterID": "{{ModId}}_berryseed_repoi"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_maron",
+          "AfterID": "{{ModId}}_berryseed_kika"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_nanana",
+          "AfterID": "{{ModId}}_berryseed_maron"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_remu",
+          "AfterID": "{{ModId}}_berryseed_nanana"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_willia",
+          "AfterID": "{{ModId}}_berryseed_remu"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_mepo",
+          "AfterID": "{{ModId}}_berryseed_willia"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_nanab",
+          "AfterID": "{{ModId}}_berryseed_mepo"
+        },
+        {
+          "ID": "{{ModId}}_berryseed_pecha",
+          "AfterID": "{{ModId}}_berryseed_nanab"
+        }
+      ]
+    },
+    {
+      "LogName": "Sell easy berry seeds at Joja",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Joja",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_berryseed_framby": {
+          "Id": "{{ModId}}_berryseed_framby",
+          "ItemId": "{{ModId}}_berryseed_framby",
+          "Price": 104,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_remu": {
+          "Id": "{{ModId}}_berryseed_remu",
+          "ItemId": "{{ModId}}_berryseed_remu",
+          "Price": 104,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_nanab": {
+          "Id": "{{ModId}}_berryseed_nanab",
+          "ItemId": "{{ModId}}_berryseed_nanab",
+          "Price": 104,
+          "Condition": "SEASON fall"
+        },
+        "{{ModId}}_berryseed_repoi": {
+          "Id": "{{ModId}}_berryseed_repoi",
+          "ItemId": "{{ModId}}_berryseed_repoi",
+          "Price": 104,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_nanana": {
+          "Id": "{{ModId}}_berryseed_nanana",
+          "ItemId": "{{ModId}}_berryseed_nanana",
+          "Price": 104,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_ceriz": {
+          "Id": "{{ModId}}_berryseed_ceriz",
+          "ItemId": "{{ModId}}_berryseed_ceriz",
+          "Price": 156,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_maron": {
+          "Id": "{{ModId}}_berryseed_maron",
+          "ItemId": "{{ModId}}_berryseed_maron",
+          "Price": 156,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_pecha": {
+          "Id": "{{ModId}}_berryseed_pecha",
+          "ItemId": "{{ModId}}_berryseed_pecha",
+          "Price": 156,
+          "Condition": "SEASON fall"
+        },
+        "{{ModId}}_berryseed_fraive": {
+          "Id": "{{ModId}}_berryseed_fraive",
+          "ItemId": "{{ModId}}_berryseed_fraive",
+          "Price": 156,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_willia": {
+          "Id": "{{ModId}}_berryseed_willia",
+          "ItemId": "{{ModId}}_berryseed_willia",
+          "Price": 156,
+          "Condition": "SEASON summer"
+        },
+        "{{ModId}}_berryseed_mepo": {
+          "Id": "{{ModId}}_berryseed_mepo",
+          "ItemId": "{{ModId}}_berryseed_mepo",
+          "Price": 156,
+          "Condition": "SEASON fall"
+        },
+        "{{ModId}}_berryseed_oran": {
+          "Id": "{{ModId}}_berryseed_oran",
+          "ItemId": "{{ModId}}_berryseed_oran",
+          "Price": 156,
+          "Condition": "SEASON spring"
+        },
+        "{{ModId}}_berryseed_kika": {
+          "Id": "{{ModId}}_berryseed_kika",
+          "ItemId": "{{ModId}}_berryseed_kika",
+          "Price": 156,
+          "Condition": "SEASON summer"
+        }
+      }
+    }
+  ]
+}

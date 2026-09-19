@@ -1,0 +1,130 @@
+{
+  "Changes": [
+    {
+      "LogName": "Skull rift nodes",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Resources",
+      "Entries": {
+        "{{ModId}}_RiftNode_ultra": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 3,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone #B388FF",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_RiftNode_ultra_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_skullrift_ultra",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "121/200",
+              "Type": "All",
+              "SpawnFrequency": "{{RateSkullRift}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 8, PLAYER_HAS_MAIL Current {{ModId}}_riftmail Any"
+            }
+          ]
+        },
+        "{{ModId}}_RiftNode_anciens": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 3,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone #B388FF",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_RiftNode_anciens_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_skullrift_anciens",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "201/300",
+              "Type": "All",
+              "SpawnFrequency": "{{RateSkullRift}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 9, PLAYER_HAS_MAIL Current {{ModId}}_riftmail Any"
+            }
+          ]
+        },
+        "{{ModId}}_RiftNode_futurs": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 3,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone #B388FF",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_RiftNode_futurs_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_skullrift_futurs",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "301/-999",
+              "Type": "All",
+              "SpawnFrequency": "{{RateSkullRift}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 10, PLAYER_HAS_MAIL Current {{ModId}}_riftmail Any"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Sandy rift letter",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_riftmail": "{{i18n:mail_rift_text}}[#]{{i18n:mail_rift_title}}"
+      }
+    },
+    {
+      "LogName": "Sandy rift trigger",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_RiftMailTrigger": {
+          "Id": "{{ModId}}_RiftMailTrigger",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_VISITED_LOCATION Current SkullCave, !PLAYER_HAS_MAIL Current {{ModId}}_riftmail Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_riftmail Now"
+          ]
+        }
+      }
+    }
+  ]
+}

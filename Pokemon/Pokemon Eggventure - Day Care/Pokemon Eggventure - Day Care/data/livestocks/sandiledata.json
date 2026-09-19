@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sandile textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sandile/sandile, {{ModId}}/sandile/shinysandile, {{ModId}}/sandile/krokorok, {{ModId}}/sandile/shinykrokorok, {{ModId}}/sandile/krookodile, {{ModId}}/sandile/shinykrookodile, {{ModId}}/sandile/sandileegg",
+      "FromFile": "assets/livestocks/sandile/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sandile data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sandile": {
+          "DisplayName": "{{i18n: sandile}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sandileegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sandilebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandile/krokorok",
+          "BabyTexture": "{{ModId}}/sandile/sandile",
+          "Sound": "{{ModId}}_krookodilecry",
+          "BabySound": "{{ModId}}_sandilecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandileegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_sandile evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_sandile",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "sandileevolution": {
+          "Id": "sandileevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/sandile/krookodile"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysandile data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysandile": {
+          "DisplayName": "{{i18n: shinysandile}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sandileegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysandilebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandile/shinykrokorok",
+          "BabyTexture": "{{ModId}}/sandile/shinysandile",
+          "Sound": "{{ModId}}_krookodilecry",
+          "BabySound": "{{ModId}}_sandilecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandileegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysandile evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysandile",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysandileevolution": {
+          "Id": "shinysandileevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/sandile/shinykrookodile"
+        }
+      }
+    },
+    {
+      "LogName": "sandile cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sandilecry": {
+          "ID": "{{ModId}}_sandilecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandile/sandilecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_krookodilecry": {
+          "ID": "{{ModId}}_krookodilecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandile/krookodilecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandile egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sandileegg": {
+          "Name": "{{ModId}}_sandileegg",
+          "DisplayName": "{{i18n: sandileegg}}",
+          "Description": "{{i18n: sandileegg.d}}",
+          "Texture": "{{ModId}}/sandile/sandileegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandile hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sandileegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysandile",
+              "AnimalId": "{{ModId}}_shinysandile",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sandile",
+              "AnimalId": "{{ModId}}_sandile",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

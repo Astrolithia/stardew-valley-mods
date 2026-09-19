@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fidough textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fidough/fidough, {{ModId}}/fidough/shinyfidough, {{ModId}}/fidough/dachsbun, {{ModId}}/fidough/shinydachsbun, {{ModId}}/fidough/fidoughegg",
+      "FromFile": "assets/livestocks/fidough/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_fidough data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_fidough": {
+          "DisplayName": "{{i18n: fidough}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_fidoughegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: fidoughbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fidough/dachsbun",
+          "BabyTexture": "{{ModId}}/fidough/fidough",
+          "Sound": "{{ModId}}_dachsbuncry",
+          "BabySound": "{{ModId}}_fidoughcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fidoughegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfidough data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfidough": {
+          "DisplayName": "{{i18n: shinyfidough}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_fidoughegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfidoughbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fidough/shinydachsbun",
+          "BabyTexture": "{{ModId}}/fidough/shinyfidough",
+          "Sound": "{{ModId}}_dachsbuncry",
+          "BabySound": "{{ModId}}_fidoughcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fidoughegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "fidough cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_fidoughcry": {
+          "ID": "{{ModId}}_fidoughcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fidough/fidoughcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dachsbuncry": {
+          "ID": "{{ModId}}_dachsbuncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fidough/dachsbuncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fidough egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fidoughegg": {
+          "Name": "{{ModId}}_fidoughegg",
+          "DisplayName": "{{i18n: fidoughegg}}",
+          "Description": "{{i18n: fidoughegg.d}}",
+          "Texture": "{{ModId}}/fidough/fidoughegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fidough hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_fidoughegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfidough",
+              "AnimalId": "{{ModId}}_shinyfidough",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_fidough",
+              "AnimalId": "{{ModId}}_fidough",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

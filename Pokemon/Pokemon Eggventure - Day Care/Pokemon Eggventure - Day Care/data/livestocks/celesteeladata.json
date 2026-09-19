@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load celesteela textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/celesteela/celesteela, {{ModId}}/celesteela/shinycelesteela, {{ModId}}/celesteela/celesteelaegg",
+      "FromFile": "assets/livestocks/celesteela/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_celesteela data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_celesteela": {
+          "DisplayName": "{{i18n: celesteela}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_celesteelaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: celesteelabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/celesteela/celesteela",
+          "BabyTexture": "{{ModId}}/celesteela/celesteela",
+          "Sound": "{{ModId}}_celesteelacry",
+          "BabySound": "{{ModId}}_celesteelacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_celesteelaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycelesteela data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycelesteela": {
+          "DisplayName": "{{i18n: shinycelesteela}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_celesteelaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycelesteelabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/celesteela/shinycelesteela",
+          "BabyTexture": "{{ModId}}/celesteela/shinycelesteela",
+          "Sound": "{{ModId}}_celesteelacry",
+          "BabySound": "{{ModId}}_celesteelacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_celesteelaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "celesteela cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_celesteelacry": {
+          "ID": "{{ModId}}_celesteelacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/celesteela/celesteelacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "celesteela egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_celesteelaegg": {
+          "Name": "{{ModId}}_celesteelaegg",
+          "DisplayName": "{{i18n: celesteelaegg}}",
+          "Description": "{{i18n: celesteelaegg.d}}",
+          "Texture": "{{ModId}}/celesteela/celesteelaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "celesteela hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_celesteelaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycelesteela",
+              "AnimalId": "{{ModId}}_shinycelesteela",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_celesteela",
+              "AnimalId": "{{ModId}}_celesteela",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

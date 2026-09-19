@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load roggenrola textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/roggenrola/roggenrola, {{ModId}}/roggenrola/shinyroggenrola, {{ModId}}/roggenrola/boldore, {{ModId}}/roggenrola/shinyboldore, {{ModId}}/roggenrola/gigalith, {{ModId}}/roggenrola/shinygigalith, {{ModId}}/roggenrola/roggenrolaegg",
+      "FromFile": "assets/livestocks/roggenrola/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_roggenrola data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_roggenrola": {
+          "DisplayName": "{{i18n: roggenrola}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_roggenrolaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: roggenrolabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/roggenrola/boldore",
+          "BabyTexture": "{{ModId}}/roggenrola/roggenrola",
+          "Sound": "{{ModId}}_gigalithcry",
+          "BabySound": "{{ModId}}_roggenrolacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_roggenrolaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_roggenrola evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_roggenrola",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "roggenrolaevolution": {
+          "Id": "roggenrolaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/roggenrola/gigalith"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyroggenrola data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyroggenrola": {
+          "DisplayName": "{{i18n: shinyroggenrola}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_roggenrolaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyroggenrolabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/roggenrola/shinyboldore",
+          "BabyTexture": "{{ModId}}/roggenrola/shinyroggenrola",
+          "Sound": "{{ModId}}_gigalithcry",
+          "BabySound": "{{ModId}}_roggenrolacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_roggenrolaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyroggenrola evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyroggenrola",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyroggenrolaevolution": {
+          "Id": "shinyroggenrolaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/roggenrola/shinygigalith"
+        }
+      }
+    },
+    {
+      "LogName": "roggenrola cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_roggenrolacry": {
+          "ID": "{{ModId}}_roggenrolacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/roggenrola/roggenrolacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gigalithcry": {
+          "ID": "{{ModId}}_gigalithcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/roggenrola/gigalithcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "roggenrola egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_roggenrolaegg": {
+          "Name": "{{ModId}}_roggenrolaegg",
+          "DisplayName": "{{i18n: roggenrolaegg}}",
+          "Description": "{{i18n: roggenrolaegg.d}}",
+          "Texture": "{{ModId}}/roggenrola/roggenrolaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_verycommon",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "roggenrola hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_roggenrolaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyroggenrola",
+              "AnimalId": "{{ModId}}_shinyroggenrola",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_roggenrola",
+              "AnimalId": "{{ModId}}_roggenrola",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

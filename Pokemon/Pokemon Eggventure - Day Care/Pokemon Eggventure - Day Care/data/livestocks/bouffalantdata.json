@@ -1,0 +1,265 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bouffalant textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bouffalant/bouffalant, {{ModId}}/bouffalant/shinybouffalant, {{ModId}}/bouffalant/bouffalantegg",
+      "FromFile": "assets/livestocks/bouffalant/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bouffalant data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bouffalant": {
+          "DisplayName": "{{i18n: bouffalant}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bouffalantegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bouffalantbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bouffalant/bouffalant",
+          "BabyTexture": "{{ModId}}/bouffalant/bouffalant",
+          "Sound": "{{ModId}}_bouffalantcry",
+          "BabySound": "{{ModId}}_bouffalantcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_moomoo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_bouffalantegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_moomoolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybouffalant data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybouffalant": {
+          "DisplayName": "{{i18n: shinybouffalant}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bouffalantegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybouffalantbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bouffalant/shinybouffalant",
+          "BabyTexture": "{{ModId}}/bouffalant/shinybouffalant",
+          "Sound": "{{ModId}}_bouffalantcry",
+          "BabySound": "{{ModId}}_bouffalantcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_moomoo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_bouffalantegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_moomoolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "bouffalant cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bouffalantcry": {
+          "ID": "{{ModId}}_bouffalantcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bouffalant/bouffalantcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bouffalant egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bouffalantegg": {
+          "Name": "{{ModId}}_bouffalantegg",
+          "DisplayName": "{{i18n: bouffalantegg}}",
+          "Description": "{{i18n: bouffalantegg.d}}",
+          "Texture": "{{ModId}}/bouffalant/bouffalantegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bouffalant hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bouffalantegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybouffalant",
+              "AnimalId": "{{ModId}}_shinybouffalant",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bouffalant",
+              "AnimalId": "{{ModId}}_bouffalant",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_bouffalant",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bouffalant",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_bouffalant_dailydrop": {
+          "Id": "{{ModId}}_bouffalant_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_bouffalant_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - bouffalant",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_bouffalant",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinybouffalant",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybouffalant",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinybouffalant_dailydrop": {
+          "Id": "{{ModId}}_shinybouffalant_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinybouffalant_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinybouffalant",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybouffalant",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

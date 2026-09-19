@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hoopa textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/hoopa/hoopa, {{ModId}}/hoopa/shinyhoopa, {{ModId}}/hoopa/hoopa2, {{ModId}}/hoopa/hoopaegg",
+      "FromFile": "assets/livestocks/hoopa/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hoopa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hoopa": {
+          "DisplayName": "{{i18n: hoopa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hoopaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hoopabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hoopa/hoopa",
+          "BabyTexture": "{{ModId}}/hoopa/hoopa",
+          "Sound": "{{ModId}}_hoopacry",
+          "BabySound": "{{ModId}}_hoopacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hoopaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "hoopa2",
+              "Texture": "{{ModId}}/hoopa/hoopa2",
+              "BabyTexture": "{{ModId}}/hoopa/hoopa2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhoopa data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhoopa": {
+          "DisplayName": "{{i18n: shinyhoopa}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hoopaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhoopabirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hoopa/shinyhoopa",
+          "BabyTexture": "{{ModId}}/hoopa/shinyhoopa",
+          "Sound": "{{ModId}}_hoopacry",
+          "BabySound": "{{ModId}}_hoopacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hoopaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "hoopa2",
+              "Texture": "{{ModId}}/hoopa/hoopa2",
+              "BabyTexture": "{{ModId}}/hoopa/hoopa2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hoopa cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hoopacry": {
+          "ID": "{{ModId}}_hoopacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hoopa/hoopacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hoopa egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hoopaegg": {
+          "Name": "{{ModId}}_hoopaegg",
+          "DisplayName": "{{i18n: hoopaegg}}",
+          "Description": "{{i18n: hoopaegg.d}}",
+          "Texture": "{{ModId}}/hoopa/hoopaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hoopa hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hoopaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhoopa",
+              "AnimalId": "{{ModId}}_shinyhoopa",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hoopa",
+              "AnimalId": "{{ModId}}_hoopa",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

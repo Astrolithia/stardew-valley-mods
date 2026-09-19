@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rookidee textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rookidee/rookidee, {{ModId}}/rookidee/shinyrookidee, {{ModId}}/rookidee/corvisquire, {{ModId}}/rookidee/shinycorvisquire, {{ModId}}/rookidee/corviknight, {{ModId}}/rookidee/shinycorviknight, {{ModId}}/rookidee/rookideeegg",
+      "FromFile": "assets/livestocks/rookidee/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rookidee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rookidee": {
+          "DisplayName": "{{i18n: rookidee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rookideeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rookideebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rookidee/corvisquire",
+          "BabyTexture": "{{ModId}}/rookidee/rookidee",
+          "Sound": "{{ModId}}_corviknightcry",
+          "BabySound": "{{ModId}}_rookideecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rookideeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_rookidee evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_rookidee",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "rookideeevolution": {
+          "Id": "rookideeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rookidee/corviknight"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrookidee data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrookidee": {
+          "DisplayName": "{{i18n: shinyrookidee}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rookideeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrookideebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rookidee/shinycorvisquire",
+          "BabyTexture": "{{ModId}}/rookidee/shinyrookidee",
+          "Sound": "{{ModId}}_corviknightcry",
+          "BabySound": "{{ModId}}_rookideecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rookideeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyrookidee evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyrookidee",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyrookideeevolution": {
+          "Id": "shinyrookideeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rookidee/shinycorviknight"
+        }
+      }
+    },
+    {
+      "LogName": "rookidee cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rookideecry": {
+          "ID": "{{ModId}}_rookideecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rookidee/rookideecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_corviknightcry": {
+          "ID": "{{ModId}}_corviknightcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rookidee/corviknightcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rookidee egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rookideeegg": {
+          "Name": "{{ModId}}_rookideeegg",
+          "DisplayName": "{{i18n: rookideeegg}}",
+          "Description": "{{i18n: rookideeegg.d}}",
+          "Texture": "{{ModId}}/rookidee/rookideeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rookidee hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rookideeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrookidee",
+              "AnimalId": "{{ModId}}_shinyrookidee",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rookidee",
+              "AnimalId": "{{ModId}}_rookidee",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

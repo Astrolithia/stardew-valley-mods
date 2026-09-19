@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gardevoir textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ralts/ralts_gardevoir, {{ModId}}/ralts/shinyralts_gardevoir, {{ModId}}/ralts/kirlia_gardevoir, {{ModId}}/ralts/shinykirlia_gardevoir, {{ModId}}/ralts/gardevoir, {{ModId}}/ralts/shinygardevoir, {{ModId}}/ralts/gardevoiregg",
+      "FromFile": "assets/livestocks/ralts/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gardevoir data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gardevoir": {
+          "DisplayName": "{{i18n: gardevoir}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gardevoiregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gardevoirbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ralts/kirlia_gardevoir",
+          "BabyTexture": "{{ModId}}/ralts/ralts_gardevoir",
+          "Sound": "{{ModId}}_gardevoircry",
+          "BabySound": "{{ModId}}_raltscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gardevoiregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_gardevoir evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_gardevoir",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "gardevoirevolution": {
+          "Id": "gardevoirevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/ralts/gardevoir"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygardevoir data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygardevoir": {
+          "DisplayName": "{{i18n: shinygardevoir}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gardevoiregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygardevoirbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ralts/shinykirlia_gardevoir",
+          "BabyTexture": "{{ModId}}/ralts/shinyralts_gardevoir",
+          "Sound": "{{ModId}}_gardevoircry",
+          "BabySound": "{{ModId}}_raltscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gardevoiregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygardevoir evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygardevoir",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygardevoirevolution": {
+          "Id": "shinygardevoirevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/ralts/shinygardevoir"
+        }
+      }
+    },
+    {
+      "LogName": "gardevoir cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_raltscry": {
+          "ID": "{{ModId}}_raltscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ralts/raltscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gardevoircry": {
+          "ID": "{{ModId}}_gardevoircry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ralts/gardevoircry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gardevoir egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gardevoiregg": {
+          "Name": "{{ModId}}_gardevoiregg",
+          "DisplayName": "{{i18n: gardevoiregg}}",
+          "Description": "{{i18n: gardevoiregg.d}}",
+          "Texture": "{{ModId}}/ralts/gardevoiregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gardevoir hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_gardevoiregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygardevoir",
+              "AnimalId": "{{ModId}}_shinygardevoir",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gardevoir",
+              "AnimalId": "{{ModId}}_gardevoir",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

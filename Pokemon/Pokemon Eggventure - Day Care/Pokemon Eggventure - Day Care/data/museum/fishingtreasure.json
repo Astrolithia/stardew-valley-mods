@@ -1,0 +1,88 @@
+{
+  "Changes": [
+    {
+      "LogName": "Marine fossils in fishing treasure chests",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Treasure",
+      "Entries": {
+        "{{ModId}}_treasure_fossilnautile": {
+          "Id": "{{ModId}}_treasure_fossilnautile",
+          "ItemId": "(O){{ModId}}_fossilnautile",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_fossildome": {
+          "Id": "{{ModId}}_treasure_fossildome",
+          "ItemId": "(O){{ModId}}_fossildome",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_fossilgriffe": {
+          "Id": "{{ModId}}_treasure_fossilgriffe",
+          "ItemId": "(O){{ModId}}_fossilgriffe",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_fossilracine": {
+          "Id": "{{ModId}}_treasure_fossilracine",
+          "ItemId": "(O){{ModId}}_fossilracine",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_fossilplaque": {
+          "Id": "{{ModId}}_treasure_fossilplaque",
+          "ItemId": "(O){{ModId}}_fossilplaque",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_fossilvish": {
+          "Id": "{{ModId}}_treasure_fossilvish",
+          "ItemId": "(O){{ModId}}_fossilvish",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_fossilarcto": {
+          "Id": "{{ModId}}_treasure_fossilarcto",
+          "ItemId": "(O){{ModId}}_fossilarcto",
+          "Chance": "{{RateFishingTreasure}}",
+          "MinStack": 1,
+          "MaxStack": 1
+        }
+      }
+    },
+    {
+      "LogName": "Rare marine scales in fishing treasure",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Treasure",
+      "Entries": {
+        "{{ModId}}_treasure_prismscale": {
+          "Id": "{{ModId}}_treasure_prismscale",
+          "ItemId": "(O){{ModId}}_marine_prismscale",
+          "Chance": 0.03,
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_dragonscale": {
+          "Id": "{{ModId}}_treasure_dragonscale",
+          "ItemId": "(O){{ModId}}_marine_dragonscale",
+          "Chance": 0.025,
+          "MinStack": 1,
+          "MaxStack": 1
+        },
+        "{{ModId}}_treasure_bigpearl": {
+          "Id": "{{ModId}}_treasure_bigpearl",
+          "ItemId": "(O){{ModId}}_marine_bigpearl",
+          "Chance": 0.015,
+          "MinStack": 1,
+          "MaxStack": 1
+        }
+      }
+    }
+  ]
+}

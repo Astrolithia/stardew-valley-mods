@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load toedscool textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/toedscool/toedscool, {{ModId}}/toedscool/shinytoedscool, {{ModId}}/toedscool/toedscruel, {{ModId}}/toedscool/shinytoedscruel, {{ModId}}/toedscool/toedscoolegg",
+      "FromFile": "assets/livestocks/toedscool/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_toedscool data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_toedscool": {
+          "DisplayName": "{{i18n: toedscool}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_toedscoolegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: toedscoolbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/toedscool/toedscruel",
+          "BabyTexture": "{{ModId}}/toedscool/toedscool",
+          "Sound": "{{ModId}}_toedscruelcry",
+          "BabySound": "{{ModId}}_toedscoolcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_toedscoolegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytoedscool data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytoedscool": {
+          "DisplayName": "{{i18n: shinytoedscool}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_toedscoolegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytoedscoolbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/toedscool/shinytoedscruel",
+          "BabyTexture": "{{ModId}}/toedscool/shinytoedscool",
+          "Sound": "{{ModId}}_toedscruelcry",
+          "BabySound": "{{ModId}}_toedscoolcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_toedscoolegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "toedscool cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_toedscoolcry": {
+          "ID": "{{ModId}}_toedscoolcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/toedscool/toedscoolcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_toedscruelcry": {
+          "ID": "{{ModId}}_toedscruelcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/toedscool/toedscruelcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "toedscool egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_toedscoolegg": {
+          "Name": "{{ModId}}_toedscoolegg",
+          "DisplayName": "{{i18n: toedscoolegg}}",
+          "Description": "{{i18n: toedscoolegg.d}}",
+          "Texture": "{{ModId}}/toedscool/toedscoolegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "toedscool hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_toedscoolegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytoedscool",
+              "AnimalId": "{{ModId}}_shinytoedscool",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_toedscool",
+              "AnimalId": "{{ModId}}_toedscool",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

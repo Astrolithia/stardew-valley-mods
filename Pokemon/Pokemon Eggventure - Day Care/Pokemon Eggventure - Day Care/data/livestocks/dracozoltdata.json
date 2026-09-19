@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dracozolt textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dracozolt/dracozolt, {{ModId}}/dracozolt/shinydracozolt, {{ModId}}/dracozolt/dracozoltegg",
+      "FromFile": "assets/livestocks/dracozolt/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dracozolt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dracozolt": {
+          "DisplayName": "{{i18n: dracozolt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dracozoltegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dracozoltbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dracozolt/dracozolt",
+          "BabyTexture": "{{ModId}}/dracozolt/dracozolt",
+          "Sound": "{{ModId}}_dracozoltcry",
+          "BabySound": "{{ModId}}_dracozoltcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dracozoltegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydracozolt data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydracozolt": {
+          "DisplayName": "{{i18n: shinydracozolt}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dracozoltegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydracozoltbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dracozolt/shinydracozolt",
+          "BabyTexture": "{{ModId}}/dracozolt/shinydracozolt",
+          "Sound": "{{ModId}}_dracozoltcry",
+          "BabySound": "{{ModId}}_dracozoltcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dracozoltegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "dracozolt cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dracozoltcry": {
+          "ID": "{{ModId}}_dracozoltcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dracozolt/dracozoltcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dracozolt egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dracozoltegg": {
+          "Name": "{{ModId}}_dracozoltegg",
+          "DisplayName": "{{i18n: dracozoltegg}}",
+          "Description": "{{i18n: dracozoltegg.d}}",
+          "Texture": "{{ModId}}/dracozolt/dracozoltegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dracozolt hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dracozoltegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydracozolt",
+              "AnimalId": "{{ModId}}_shinydracozolt",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dracozolt",
+              "AnimalId": "{{ModId}}_dracozolt",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

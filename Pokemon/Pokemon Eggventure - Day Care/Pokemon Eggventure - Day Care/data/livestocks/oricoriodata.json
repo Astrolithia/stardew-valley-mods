@@ -1,0 +1,234 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load oricorio textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/oricorio/oricorio, {{ModId}}/oricorio/shinyoricorio, {{ModId}}/oricorio/oricorio2, {{ModId}}/oricorio/oricorio3, {{ModId}}/oricorio/oricorio4, {{ModId}}/oricorio/oricorioegg",
+      "FromFile": "assets/livestocks/oricorio/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_oricorio data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_oricorio": {
+          "DisplayName": "{{i18n: oricorio}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_oricorioegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: oricoriobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oricorio/oricorio",
+          "BabyTexture": "{{ModId}}/oricorio/oricorio",
+          "Sound": "{{ModId}}_oricoriocry",
+          "BabySound": "{{ModId}}_oricoriocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oricorioegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "oricorio2",
+              "Texture": "{{ModId}}/oricorio/oricorio2",
+              "BabyTexture": "{{ModId}}/oricorio/oricorio2"
+            },
+            {
+              "Id": "oricorio3",
+              "Texture": "{{ModId}}/oricorio/oricorio3",
+              "BabyTexture": "{{ModId}}/oricorio/oricorio3"
+            },
+            {
+              "Id": "oricorio4",
+              "Texture": "{{ModId}}/oricorio/oricorio4",
+              "BabyTexture": "{{ModId}}/oricorio/oricorio4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_oricorio type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_oricorio"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyoricorio data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyoricorio": {
+          "DisplayName": "{{i18n: shinyoricorio}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_oricorioegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyoricoriobirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oricorio/shinyoricorio",
+          "BabyTexture": "{{ModId}}/oricorio/shinyoricorio",
+          "Sound": "{{ModId}}_oricoriocry",
+          "BabySound": "{{ModId}}_oricoriocry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oricorioegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "Skins": [
+            {
+              "Id": "oricorio2",
+              "Texture": "{{ModId}}/oricorio/oricorio2",
+              "BabyTexture": "{{ModId}}/oricorio/oricorio2"
+            },
+            {
+              "Id": "oricorio3",
+              "Texture": "{{ModId}}/oricorio/oricorio3",
+              "BabyTexture": "{{ModId}}/oricorio/oricorio3"
+            },
+            {
+              "Id": "oricorio4",
+              "Texture": "{{ModId}}/oricorio/oricorio4",
+              "BabyTexture": "{{ModId}}/oricorio/oricorio4"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyoricorio type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyoricorio"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "oricorio cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_oricoriocry": {
+          "ID": "{{ModId}}_oricoriocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oricorio/oricoriocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oricorio egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_oricorioegg": {
+          "Name": "{{ModId}}_oricorioegg",
+          "DisplayName": "{{i18n: oricorioegg}}",
+          "Description": "{{i18n: oricorioegg.d}}",
+          "Texture": "{{ModId}}/oricorio/oricorioegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oricorio hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_oricorioegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyoricorio",
+              "AnimalId": "{{ModId}}_shinyoricorio",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_oricorio",
+              "AnimalId": "{{ModId}}_oricorio",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

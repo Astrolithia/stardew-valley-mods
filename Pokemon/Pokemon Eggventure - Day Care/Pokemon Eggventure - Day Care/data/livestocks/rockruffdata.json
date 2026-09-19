@@ -1,0 +1,197 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rockruff textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rockruff/rockruff, {{ModId}}/rockruff/shinyrockruff, {{ModId}}/rockruff/lycanrocday, {{ModId}}/rockruff/shinylycanrocday, {{ModId}}/rockruff/lycanrocnight, {{ModId}}/rockruff/shinylycanrocnight, {{ModId}}/rockruff/rockruffegg",
+      "FromFile": "assets/livestocks/rockruff/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rockruff data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rockruff": {
+          "DisplayName": "{{i18n: rockruff}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rockruffegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rockruffbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rockruff/lycanrocday",
+          "BabyTexture": "{{ModId}}/rockruff/rockruff",
+          "Sound": "{{ModId}}_lycanrocdaycry",
+          "BabySound": "{{ModId}}_rockruffcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rockruffegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "lycanrocnight",
+              "Texture": "{{ModId}}/rockruff/lycanrocnight"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrockruff data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrockruff": {
+          "DisplayName": "{{i18n: shinyrockruff}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_rockruffegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrockruffbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rockruff/shinylycanrocday",
+          "BabyTexture": "{{ModId}}/rockruff/shinyrockruff",
+          "Sound": "{{ModId}}_lycanrocdaycry",
+          "BabySound": "{{ModId}}_rockruffcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rockruffegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "lycanrocnight",
+              "Texture": "{{ModId}}/rockruff/shinylycanrocnight"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rockruff cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rockruffcry": {
+          "ID": "{{ModId}}_rockruffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rockruff/rockruffcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_lycanrocdaycry": {
+          "ID": "{{ModId}}_lycanrocdaycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rockruff/lycanrocdaycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rockruff egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rockruffegg": {
+          "Name": "{{ModId}}_rockruffegg",
+          "DisplayName": "{{i18n: rockruffegg}}",
+          "Description": "{{i18n: rockruffegg.d}}",
+          "Texture": "{{ModId}}/rockruff/rockruffegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_rock",
+            "pkegg_rarity_common",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rockruff hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rockruffegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrockruff",
+              "AnimalId": "{{ModId}}_shinyrockruff",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rockruff",
+              "AnimalId": "{{ModId}}_rockruff",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

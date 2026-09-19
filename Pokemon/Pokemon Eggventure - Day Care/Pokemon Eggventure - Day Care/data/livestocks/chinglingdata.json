@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load chingling textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/chingling/chingling, {{ModId}}/chingling/shinychingling, {{ModId}}/chingling/chimecho, {{ModId}}/chingling/shinychimecho, {{ModId}}/chingling/chinglingegg",
+      "FromFile": "assets/livestocks/chingling/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_chingling data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_chingling": {
+          "DisplayName": "{{i18n: chingling}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chinglingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: chinglingbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chingling/chimecho",
+          "BabyTexture": "{{ModId}}/chingling/chingling",
+          "Sound": "{{ModId}}_chimechocry",
+          "BabySound": "{{ModId}}_chinglingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chinglingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinychingling data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinychingling": {
+          "DisplayName": "{{i18n: shinychingling}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chinglingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinychinglingbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chingling/shinychimecho",
+          "BabyTexture": "{{ModId}}/chingling/shinychingling",
+          "Sound": "{{ModId}}_chimechocry",
+          "BabySound": "{{ModId}}_chinglingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chinglingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "chingling cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_chinglingcry": {
+          "ID": "{{ModId}}_chinglingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chingling/chinglingcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_chimechocry": {
+          "ID": "{{ModId}}_chimechocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chingling/chimechocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chingling egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_chinglingegg": {
+          "Name": "{{ModId}}_chinglingegg",
+          "DisplayName": "{{i18n: chinglingegg}}",
+          "Description": "{{i18n: chinglingegg.d}}",
+          "Texture": "{{ModId}}/chingling/chinglingegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chingling hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_chinglingegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinychingling",
+              "AnimalId": "{{ModId}}_shinychingling",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_chingling",
+              "AnimalId": "{{ModId}}_chingling",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tinkatink textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tinkatink/tinkatink, {{ModId}}/tinkatink/shinytinkatink, {{ModId}}/tinkatink/tinkatuff, {{ModId}}/tinkatink/shinytinkatuff, {{ModId}}/tinkatink/tinkaton, {{ModId}}/tinkatink/shinytinkaton, {{ModId}}/tinkatink/tinkatinkegg",
+      "FromFile": "assets/livestocks/tinkatink/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tinkatink data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tinkatink": {
+          "DisplayName": "{{i18n: tinkatink}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tinkatinkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tinkatinkbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tinkatink/tinkatuff",
+          "BabyTexture": "{{ModId}}/tinkatink/tinkatink",
+          "Sound": "{{ModId}}_tinkatoncry",
+          "BabySound": "{{ModId}}_tinkatinkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tinkatinkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_tinkatink evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_tinkatink",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "tinkatinkevolution": {
+          "Id": "tinkatinkevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/tinkatink/tinkaton"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytinkatink data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytinkatink": {
+          "DisplayName": "{{i18n: shinytinkatink}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tinkatinkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytinkatinkbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tinkatink/shinytinkatuff",
+          "BabyTexture": "{{ModId}}/tinkatink/shinytinkatink",
+          "Sound": "{{ModId}}_tinkatoncry",
+          "BabySound": "{{ModId}}_tinkatinkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tinkatinkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytinkatink evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytinkatink",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytinkatinkevolution": {
+          "Id": "shinytinkatinkevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/tinkatink/shinytinkaton"
+        }
+      }
+    },
+    {
+      "LogName": "tinkatink cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tinkatinkcry": {
+          "ID": "{{ModId}}_tinkatinkcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tinkatink/tinkatinkcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_tinkatoncry": {
+          "ID": "{{ModId}}_tinkatoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tinkatink/tinkatoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tinkatink egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tinkatinkegg": {
+          "Name": "{{ModId}}_tinkatinkegg",
+          "DisplayName": "{{i18n: tinkatinkegg}}",
+          "Description": "{{i18n: tinkatinkegg.d}}",
+          "Texture": "{{ModId}}/tinkatink/tinkatinkegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tinkatink hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tinkatinkegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytinkatink",
+              "AnimalId": "{{ModId}}_shinytinkatink",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tinkatink",
+              "AnimalId": "{{ModId}}_tinkatink",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

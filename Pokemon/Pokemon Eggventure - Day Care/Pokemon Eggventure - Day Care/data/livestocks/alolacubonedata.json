@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load alolacubone textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cubone/alolacubone, {{ModId}}/cubone/shinyalolacubone, {{ModId}}/cubone/alolamarowak, {{ModId}}/cubone/shinyalolamarowak, {{ModId}}/cubone/alolacuboneegg",
+      "FromFile": "assets/livestocks/cubone/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_alolacubone data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_alolacubone": {
+          "DisplayName": "{{i18n: alolacubone}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolacuboneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: alolacubonebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cubone/alolamarowak",
+          "BabyTexture": "{{ModId}}/cubone/alolacubone",
+          "Sound": "{{ModId}}_alolamarowakcry",
+          "BabySound": "{{ModId}}_cubonecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolacuboneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_alolacubone type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_alolacubone"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyalolacubone data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyalolacubone": {
+          "DisplayName": "{{i18n: shinyalolacubone}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolacuboneegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyalolacubonebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cubone/shinyalolamarowak",
+          "BabyTexture": "{{ModId}}/cubone/shinyalolacubone",
+          "Sound": "{{ModId}}_alolamarowakcry",
+          "BabySound": "{{ModId}}_cubonecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolacuboneegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyalolacubone type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyalolacubone"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "alolacubone cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cubonecry": {
+          "ID": "{{ModId}}_cubonecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cubone/cubonecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alolamarowakcry": {
+          "ID": "{{ModId}}_alolamarowakcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cubone/alolamarowakcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolacubone egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_alolacuboneegg": {
+          "Name": "{{ModId}}_alolacuboneegg",
+          "DisplayName": "{{i18n: alolacuboneegg}}",
+          "Description": "{{i18n: alolacuboneegg.d}}",
+          "Texture": "{{ModId}}/cubone/alolacuboneegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_common",
+            "pkegg_volcano_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolacubone hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_alolacuboneegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyalolacubone",
+              "AnimalId": "{{ModId}}_shinyalolacubone",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_alolacubone",
+              "AnimalId": "{{ModId}}_alolacubone",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

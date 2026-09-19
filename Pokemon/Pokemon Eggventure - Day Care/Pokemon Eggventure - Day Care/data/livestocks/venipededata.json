@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load venipede textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/venipede/venipede, {{ModId}}/venipede/shinyvenipede, {{ModId}}/venipede/whirlipede, {{ModId}}/venipede/shinywhirlipede, {{ModId}}/venipede/scolipede, {{ModId}}/venipede/shinyscolipede, {{ModId}}/venipede/venipedeegg",
+      "FromFile": "assets/livestocks/venipede/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_venipede data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_venipede": {
+          "DisplayName": "{{i18n: venipede}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_venipedeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: venipedebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/venipede/whirlipede",
+          "BabyTexture": "{{ModId}}/venipede/venipede",
+          "Sound": "{{ModId}}_scolipedecry",
+          "BabySound": "{{ModId}}_venipedecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_venipedeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_venipede evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_venipede",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "venipedeevolution": {
+          "Id": "venipedeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/venipede/scolipede"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvenipede data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvenipede": {
+          "DisplayName": "{{i18n: shinyvenipede}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_venipedeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvenipedebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/venipede/shinywhirlipede",
+          "BabyTexture": "{{ModId}}/venipede/shinyvenipede",
+          "Sound": "{{ModId}}_scolipedecry",
+          "BabySound": "{{ModId}}_venipedecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_venipedeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyvenipede evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyvenipede",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyvenipedeevolution": {
+          "Id": "shinyvenipedeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/venipede/shinyscolipede"
+        }
+      }
+    },
+    {
+      "LogName": "venipede cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_venipedecry": {
+          "ID": "{{ModId}}_venipedecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/venipede/venipedecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_scolipedecry": {
+          "ID": "{{ModId}}_scolipedecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/venipede/scolipedecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "venipede egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_venipedeegg": {
+          "Name": "{{ModId}}_venipedeegg",
+          "DisplayName": "{{i18n: venipedeegg}}",
+          "Description": "{{i18n: venipedeegg.d}}",
+          "Texture": "{{ModId}}/venipede/venipedeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "venipede hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_venipedeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvenipede",
+              "AnimalId": "{{ModId}}_shinyvenipede",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_venipede",
+              "AnimalId": "{{ModId}}_venipede",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

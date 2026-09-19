@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load beldum textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/beldum/beldum, {{ModId}}/beldum/shinybeldum, {{ModId}}/beldum/metang, {{ModId}}/beldum/shinymetang, {{ModId}}/beldum/metagross, {{ModId}}/beldum/shinymetagross, {{ModId}}/beldum/beldumegg",
+      "FromFile": "assets/livestocks/beldum/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_beldum data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_beldum": {
+          "DisplayName": "{{i18n: beldum}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_beldumegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: beldumbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/beldum/metang",
+          "BabyTexture": "{{ModId}}/beldum/beldum",
+          "Sound": "{{ModId}}_metagrosscry",
+          "BabySound": "{{ModId}}_beldumcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_beldumegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_beldum evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_beldum",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "beldumevolution": {
+          "Id": "beldumevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/beldum/metagross"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybeldum data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybeldum": {
+          "DisplayName": "{{i18n: shinybeldum}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_beldumegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybeldumbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/beldum/shinymetang",
+          "BabyTexture": "{{ModId}}/beldum/shinybeldum",
+          "Sound": "{{ModId}}_metagrosscry",
+          "BabySound": "{{ModId}}_beldumcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_beldumegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinybeldum evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinybeldum",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinybeldumevolution": {
+          "Id": "shinybeldumevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/beldum/shinymetagross"
+        }
+      }
+    },
+    {
+      "LogName": "beldum cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_beldumcry": {
+          "ID": "{{ModId}}_beldumcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/beldum/beldumcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_metagrosscry": {
+          "ID": "{{ModId}}_metagrosscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/beldum/metagrosscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "beldum egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_beldumegg": {
+          "Name": "{{ModId}}_beldumegg",
+          "DisplayName": "{{i18n: beldumegg}}",
+          "Description": "{{i18n: beldumegg.d}}",
+          "Texture": "{{ModId}}/beldum/beldumegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_veryrare",
+            "pkegg_skullcavern_p5",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "beldum hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_beldumegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybeldum",
+              "AnimalId": "{{ModId}}_shinybeldum",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_beldum",
+              "AnimalId": "{{ModId}}_beldum",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

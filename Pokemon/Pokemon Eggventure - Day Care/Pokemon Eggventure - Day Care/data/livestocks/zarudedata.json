@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zarude textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zarude/zarude, {{ModId}}/zarude/shinyzarude, {{ModId}}/zarude/zarude2, {{ModId}}/zarude/shinyzarude2, {{ModId}}/zarude/zarudeegg",
+      "FromFile": "assets/livestocks/zarude/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zarude data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zarude": {
+          "DisplayName": "{{i18n: zarude}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zarudeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zarudebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zarude/zarude",
+          "BabyTexture": "{{ModId}}/zarude/zarude",
+          "Sound": "{{ModId}}_zarudecry",
+          "BabySound": "{{ModId}}_zarudecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zarudeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zarude2",
+              "Texture": "{{ModId}}/zarude/zarude2",
+              "BabyTexture": "{{ModId}}/zarude/zarude2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzarude data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzarude": {
+          "DisplayName": "{{i18n: shinyzarude}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zarudeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzarudebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zarude/shinyzarude",
+          "BabyTexture": "{{ModId}}/zarude/shinyzarude",
+          "Sound": "{{ModId}}_zarudecry",
+          "BabySound": "{{ModId}}_zarudecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zarudeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "zarude2",
+              "Texture": "{{ModId}}/zarude/shinyzarude2",
+              "BabyTexture": "{{ModId}}/zarude/shinyzarude2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zarude cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zarudecry": {
+          "ID": "{{ModId}}_zarudecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zarude/zarudecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zarude egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zarudeegg": {
+          "Name": "{{ModId}}_zarudeegg",
+          "DisplayName": "{{i18n: zarudeegg}}",
+          "Description": "{{i18n: zarudeegg.d}}",
+          "Texture": "{{ModId}}/zarude/zarudeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zarude hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zarudeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzarude",
+              "AnimalId": "{{ModId}}_shinyzarude",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zarude",
+              "AnimalId": "{{ModId}}_zarude",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

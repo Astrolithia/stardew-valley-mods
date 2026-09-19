@@ -1,0 +1,188 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gligar textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/gligar/gligar, {{ModId}}/gligar/shinygligar, {{ModId}}/gligar/gliscor, {{ModId}}/gligar/shinygliscor, {{ModId}}/gligar/gligaregg",
+      "FromFile": "assets/livestocks/gligar/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gligar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gligar": {
+          "DisplayName": "{{i18n: gligar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_gligaregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gligarbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gligar/gliscor",
+          "BabyTexture": "{{ModId}}/gligar/gligar",
+          "Sound": "{{ModId}}_gliscorcry",
+          "BabySound": "{{ModId}}_gligarcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gligaregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygligar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygligar": {
+          "DisplayName": "{{i18n: shinygligar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_gligaregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygligarbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gligar/shinygliscor",
+          "BabyTexture": "{{ModId}}/gligar/shinygligar",
+          "Sound": "{{ModId}}_gliscorcry",
+          "BabySound": "{{ModId}}_gligarcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gligaregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "gligar cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_gligarcry": {
+          "ID": "{{ModId}}_gligarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gligar/gligarcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gliscorcry": {
+          "ID": "{{ModId}}_gliscorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gligar/gliscorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gligar egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gligaregg": {
+          "Name": "{{ModId}}_gligaregg",
+          "DisplayName": "{{i18n: gligaregg}}",
+          "Description": "{{i18n: gligaregg.d}}",
+          "Texture": "{{ModId}}/gligar/gligaregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_rare",
+            "pkegg_shake_palmdesert",
+            "pkegg_chop_palmdesert",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gligar hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_gligaregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygligar",
+              "AnimalId": "{{ModId}}_shinygligar",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gligar",
+              "AnimalId": "{{ModId}}_gligar",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

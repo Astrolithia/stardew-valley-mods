@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load solgaleo textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cosmog/cosmog_solgaleo, {{ModId}}/cosmog/shinycosmog_solgaleo, {{ModId}}/cosmog/cosmoem_solgaleo, {{ModId}}/cosmog/shinycosmoem_solgaleo, {{ModId}}/cosmog/solgaleo, {{ModId}}/cosmog/shinysolgaleo, {{ModId}}/cosmog/solgaleoegg",
+      "FromFile": "assets/livestocks/cosmog/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_solgaleo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_solgaleo": {
+          "DisplayName": "{{i18n: solgaleo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_solgaleoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: solgaleobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cosmog/cosmoem_solgaleo",
+          "BabyTexture": "{{ModId}}/cosmog/cosmog_solgaleo",
+          "Sound": "{{ModId}}_solgaleocry",
+          "BabySound": "{{ModId}}_cosmogcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_solgaleoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_solgaleo evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_solgaleo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "solgaleoevolution": {
+          "Id": "solgaleoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cosmog/solgaleo"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysolgaleo data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysolgaleo": {
+          "DisplayName": "{{i18n: shinysolgaleo}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_solgaleoegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysolgaleobirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cosmog/shinycosmoem_solgaleo",
+          "BabyTexture": "{{ModId}}/cosmog/shinycosmog_solgaleo",
+          "Sound": "{{ModId}}_solgaleocry",
+          "BabySound": "{{ModId}}_cosmogcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_solgaleoegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysolgaleo evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysolgaleo",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysolgaleoevolution": {
+          "Id": "shinysolgaleoevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/cosmog/shinysolgaleo"
+        }
+      }
+    },
+    {
+      "LogName": "solgaleo cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cosmogcry": {
+          "ID": "{{ModId}}_cosmogcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cosmog/cosmogcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_solgaleocry": {
+          "ID": "{{ModId}}_solgaleocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cosmog/solgaleocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "solgaleo egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_solgaleoegg": {
+          "Name": "{{ModId}}_solgaleoegg",
+          "DisplayName": "{{i18n: solgaleoegg}}",
+          "Description": "{{i18n: solgaleoegg.d}}",
+          "Texture": "{{ModId}}/cosmog/solgaleoegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "solgaleo hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_solgaleoegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysolgaleo",
+              "AnimalId": "{{ModId}}_shinysolgaleo",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_solgaleo",
+              "AnimalId": "{{ModId}}_solgaleo",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

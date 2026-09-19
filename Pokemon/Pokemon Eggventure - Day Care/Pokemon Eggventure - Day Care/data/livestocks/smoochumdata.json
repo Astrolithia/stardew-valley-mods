@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load smoochum textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/smoochum/smoochum, {{ModId}}/smoochum/shinysmoochum, {{ModId}}/smoochum/jynx, {{ModId}}/smoochum/shinyjynx, {{ModId}}/smoochum/smoochumegg",
+      "FromFile": "assets/livestocks/smoochum/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_smoochum data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_smoochum": {
+          "DisplayName": "{{i18n: smoochum}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_smoochumegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: smoochumbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/smoochum/jynx",
+          "BabyTexture": "{{ModId}}/smoochum/smoochum",
+          "Sound": "{{ModId}}_jynxcry",
+          "BabySound": "{{ModId}}_smoochumcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_smoochumegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_smoochum type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_smoochum"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysmoochum data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysmoochum": {
+          "DisplayName": "{{i18n: shinysmoochum}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_smoochumegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysmoochumbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/smoochum/shinyjynx",
+          "BabyTexture": "{{ModId}}/smoochum/shinysmoochum",
+          "Sound": "{{ModId}}_jynxcry",
+          "BabySound": "{{ModId}}_smoochumcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_smoochumegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysmoochum type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysmoochum"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "smoochum cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_smoochumcry": {
+          "ID": "{{ModId}}_smoochumcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/smoochum/smoochumcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_jynxcry": {
+          "ID": "{{ModId}}_jynxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/smoochum/jynxcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "smoochum egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_smoochumegg": {
+          "Name": "{{ModId}}_smoochumegg",
+          "DisplayName": "{{i18n: smoochumegg}}",
+          "Description": "{{i18n: smoochumegg.d}}",
+          "Texture": "{{ModId}}/smoochum/smoochumegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_rare",
+            "pkegg_mine_41_60_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "smoochum hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_smoochumegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysmoochum",
+              "AnimalId": "{{ModId}}_shinysmoochum",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_smoochum",
+              "AnimalId": "{{ModId}}_smoochum",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

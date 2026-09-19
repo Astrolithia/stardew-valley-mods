@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load duraludon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/duraludon/duraludon, {{ModId}}/duraludon/shinyduraludon, {{ModId}}/duraludon/archaludon, {{ModId}}/duraludon/shinyarchaludon, {{ModId}}/duraludon/duraludonegg",
+      "FromFile": "assets/livestocks/duraludon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_duraludon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_duraludon": {
+          "DisplayName": "{{i18n: duraludon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_duraludonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: duraludonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/duraludon/archaludon",
+          "BabyTexture": "{{ModId}}/duraludon/duraludon",
+          "Sound": "{{ModId}}_archaludoncry",
+          "BabySound": "{{ModId}}_duraludoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_duraludonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyduraludon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyduraludon": {
+          "DisplayName": "{{i18n: shinyduraludon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_duraludonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyduraludonbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/duraludon/shinyarchaludon",
+          "BabyTexture": "{{ModId}}/duraludon/shinyduraludon",
+          "Sound": "{{ModId}}_archaludoncry",
+          "BabySound": "{{ModId}}_duraludoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_duraludonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "duraludon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_duraludoncry": {
+          "ID": "{{ModId}}_duraludoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/duraludon/duraludoncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_archaludoncry": {
+          "ID": "{{ModId}}_archaludoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/duraludon/archaludoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "duraludon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_duraludonegg": {
+          "Name": "{{ModId}}_duraludonegg",
+          "DisplayName": "{{i18n: duraludonegg}}",
+          "Description": "{{i18n: duraludonegg.d}}",
+          "Texture": "{{ModId}}/duraludon/duraludonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p5",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "duraludon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_duraludonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyduraludon",
+              "AnimalId": "{{ModId}}_shinyduraludon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_duraludon",
+              "AnimalId": "{{ModId}}_duraludon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

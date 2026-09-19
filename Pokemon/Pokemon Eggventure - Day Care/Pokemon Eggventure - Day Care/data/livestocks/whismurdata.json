@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load whismur textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/whismur/whismur, {{ModId}}/whismur/shinywhismur, {{ModId}}/whismur/loudred, {{ModId}}/whismur/shinyloudred, {{ModId}}/whismur/exploud, {{ModId}}/whismur/shinyexploud, {{ModId}}/whismur/whismuregg",
+      "FromFile": "assets/livestocks/whismur/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_whismur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_whismur": {
+          "DisplayName": "{{i18n: whismur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_whismuregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: whismurbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/whismur/loudred",
+          "BabyTexture": "{{ModId}}/whismur/whismur",
+          "Sound": "{{ModId}}_exploudcry",
+          "BabySound": "{{ModId}}_whismurcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_whismuregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_whismur evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_whismur",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "whismurevolution": {
+          "Id": "whismurevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/whismur/exploud"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinywhismur data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinywhismur": {
+          "DisplayName": "{{i18n: shinywhismur}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_whismuregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinywhismurbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/whismur/shinyloudred",
+          "BabyTexture": "{{ModId}}/whismur/shinywhismur",
+          "Sound": "{{ModId}}_exploudcry",
+          "BabySound": "{{ModId}}_whismurcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_whismuregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinywhismur evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinywhismur",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinywhismurevolution": {
+          "Id": "shinywhismurevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/whismur/shinyexploud"
+        }
+      }
+    },
+    {
+      "LogName": "whismur cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_whismurcry": {
+          "ID": "{{ModId}}_whismurcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/whismur/whismurcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_exploudcry": {
+          "ID": "{{ModId}}_exploudcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/whismur/exploudcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "whismur egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_whismuregg": {
+          "Name": "{{ModId}}_whismuregg",
+          "DisplayName": "{{i18n: whismuregg}}",
+          "Description": "{{i18n: whismuregg.d}}",
+          "Texture": "{{ModId}}/whismur/whismuregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "whismur hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_whismuregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinywhismur",
+              "AnimalId": "{{ModId}}_shinywhismur",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_whismur",
+              "AnimalId": "{{ModId}}_whismur",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

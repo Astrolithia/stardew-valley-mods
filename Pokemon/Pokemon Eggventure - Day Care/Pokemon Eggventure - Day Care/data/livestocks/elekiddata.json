@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load elekid textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/elekid/elekid, {{ModId}}/elekid/shinyelekid, {{ModId}}/elekid/electabuzz, {{ModId}}/elekid/shinyelectabuzz, {{ModId}}/elekid/electivire, {{ModId}}/elekid/shinyelectivire, {{ModId}}/elekid/elekidegg",
+      "FromFile": "assets/livestocks/elekid/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_elekid data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_elekid": {
+          "DisplayName": "{{i18n: elekid}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_elekidegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: elekidbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/elekid/electabuzz",
+          "BabyTexture": "{{ModId}}/elekid/elekid",
+          "Sound": "{{ModId}}_electivirecry",
+          "BabySound": "{{ModId}}_elekidcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_elekidegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_elekid evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_elekid",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "elekidevolution": {
+          "Id": "elekidevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/elekid/electivire"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyelekid data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyelekid": {
+          "DisplayName": "{{i18n: shinyelekid}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_elekidegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyelekidbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/elekid/shinyelectabuzz",
+          "BabyTexture": "{{ModId}}/elekid/shinyelekid",
+          "Sound": "{{ModId}}_electivirecry",
+          "BabySound": "{{ModId}}_elekidcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_elekidegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyelekid evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyelekid",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyelekidevolution": {
+          "Id": "shinyelekidevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/elekid/shinyelectivire"
+        }
+      }
+    },
+    {
+      "LogName": "elekid cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_elekidcry": {
+          "ID": "{{ModId}}_elekidcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/elekid/elekidcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_electivirecry": {
+          "ID": "{{ModId}}_electivirecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/elekid/electivirecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "elekid egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_elekidegg": {
+          "Name": "{{ModId}}_elekidegg",
+          "DisplayName": "{{i18n: elekidegg}}",
+          "Description": "{{i18n: elekidegg.d}}",
+          "Texture": "{{ModId}}/elekid/elekidegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "elekid hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_elekidegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyelekid",
+              "AnimalId": "{{ModId}}_shinyelekid",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_elekid",
+              "AnimalId": "{{ModId}}_elekid",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

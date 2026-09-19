@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load oshawott textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/oshawott/oshawott, {{ModId}}/oshawott/shinyoshawott, {{ModId}}/oshawott/dewott, {{ModId}}/oshawott/shinydewott, {{ModId}}/oshawott/samurott, {{ModId}}/oshawott/shinysamurott, {{ModId}}/oshawott/oshawottegg",
+      "FromFile": "assets/livestocks/oshawott/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_oshawott data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_oshawott": {
+          "DisplayName": "{{i18n: oshawott}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_oshawottegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: oshawottbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oshawott/dewott",
+          "BabyTexture": "{{ModId}}/oshawott/oshawott",
+          "Sound": "{{ModId}}_samurottcry",
+          "BabySound": "{{ModId}}_oshawottcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oshawottegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_oshawott evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_oshawott",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "oshawottevolution": {
+          "Id": "oshawottevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oshawott/samurott"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_oshawott type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_oshawott"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyoshawott data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyoshawott": {
+          "DisplayName": "{{i18n: shinyoshawott}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_oshawottegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyoshawottbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oshawott/shinydewott",
+          "BabyTexture": "{{ModId}}/oshawott/shinyoshawott",
+          "Sound": "{{ModId}}_samurottcry",
+          "BabySound": "{{ModId}}_oshawottcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oshawottegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyoshawott evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyoshawott",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyoshawottevolution": {
+          "Id": "shinyoshawottevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oshawott/shinysamurott"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyoshawott type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyoshawott"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "oshawott cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_oshawottcry": {
+          "ID": "{{ModId}}_oshawottcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oshawott/oshawottcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_samurottcry": {
+          "ID": "{{ModId}}_samurottcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oshawott/samurottcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oshawott egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_oshawottegg": {
+          "Name": "{{ModId}}_oshawottegg",
+          "DisplayName": "{{i18n: oshawottegg}}",
+          "Description": "{{i18n: oshawottegg.d}}",
+          "Texture": "{{ModId}}/oshawott/oshawottegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_rare",
+            "pkegg_panning_p5",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oshawott hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_oshawottegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyoshawott",
+              "AnimalId": "{{ModId}}_shinyoshawott",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_oshawott",
+              "AnimalId": "{{ModId}}_oshawott",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load oddishbellossom textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/oddish/oddish_oddishbellossom, {{ModId}}/oddish/shinyoddish_oddishbellossom, {{ModId}}/oddish/gloom_oddishbellossom, {{ModId}}/oddish/shinygloom_oddishbellossom, {{ModId}}/oddish/bellossom, {{ModId}}/oddish/shinybellossom, {{ModId}}/oddish/oddishbellossomegg",
+      "FromFile": "assets/livestocks/oddish/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_oddishbellossom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_oddishbellossom": {
+          "DisplayName": "{{i18n: oddishbellossom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_oddishbellossomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: oddishbellossombirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oddish/gloom_oddishbellossom",
+          "BabyTexture": "{{ModId}}/oddish/oddish_oddishbellossom",
+          "Sound": "{{ModId}}_bellossomcry",
+          "BabySound": "{{ModId}}_oddishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oddishbellossomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_oddishbellossom evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_oddishbellossom",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "oddishbellossomevolution": {
+          "Id": "oddishbellossomevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oddish/bellossom"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyoddishbellossom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyoddishbellossom": {
+          "DisplayName": "{{i18n: shinyoddishbellossom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_oddishbellossomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyoddishbellossombirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/oddish/shinygloom_oddishbellossom",
+          "BabyTexture": "{{ModId}}/oddish/shinyoddish_oddishbellossom",
+          "Sound": "{{ModId}}_bellossomcry",
+          "BabySound": "{{ModId}}_oddishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_oddishbellossomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyoddishbellossom evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyoddishbellossom",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyoddishbellossomevolution": {
+          "Id": "shinyoddishbellossomevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/oddish/shinybellossom"
+        }
+      }
+    },
+    {
+      "LogName": "oddishbellossom cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_oddishcry": {
+          "ID": "{{ModId}}_oddishcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oddish/oddishcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_bellossomcry": {
+          "ID": "{{ModId}}_bellossomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/oddish/bellossomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oddishbellossom egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_oddishbellossomegg": {
+          "Name": "{{ModId}}_oddishbellossomegg",
+          "DisplayName": "{{i18n: oddishbellossomegg}}",
+          "Description": "{{i18n: oddishbellossomegg.d}}",
+          "Texture": "{{ModId}}/oddish/oddishbellossomegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "oddishbellossom hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_oddishbellossomegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyoddishbellossom",
+              "AnimalId": "{{ModId}}_shinyoddishbellossom",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_oddishbellossom",
+              "AnimalId": "{{ModId}}_oddishbellossom",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

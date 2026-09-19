@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load charmander textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/charmander/charmander, {{ModId}}/charmander/shinycharmander, {{ModId}}/charmander/charmeleon, {{ModId}}/charmander/shinycharmeleon, {{ModId}}/charmander/charizard, {{ModId}}/charmander/shinycharizard, {{ModId}}/charmander/charmanderegg",
+      "FromFile": "assets/livestocks/charmander/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_charmander data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_charmander": {
+          "DisplayName": "{{i18n: charmander}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_charmanderegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: charmanderbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/charmander/charmeleon",
+          "BabyTexture": "{{ModId}}/charmander/charmander",
+          "Sound": "{{ModId}}_charizardcry",
+          "BabySound": "{{ModId}}_charmandercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_charmanderegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_charmander evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_charmander",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "charmanderevolution": {
+          "Id": "charmanderevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/charmander/charizard"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_charmander type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_charmander"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycharmander data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycharmander": {
+          "DisplayName": "{{i18n: shinycharmander}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_charmanderegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycharmanderbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/charmander/shinycharmeleon",
+          "BabyTexture": "{{ModId}}/charmander/shinycharmander",
+          "Sound": "{{ModId}}_charizardcry",
+          "BabySound": "{{ModId}}_charmandercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_charmanderegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycharmander evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycharmander",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinycharmanderevolution": {
+          "Id": "shinycharmanderevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/charmander/shinycharizard"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycharmander type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycharmander"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "charmander cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_charmandercry": {
+          "ID": "{{ModId}}_charmandercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/charmander/charmandercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_charizardcry": {
+          "ID": "{{ModId}}_charizardcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/charmander/charizardcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "charmander egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_charmanderegg": {
+          "Name": "{{ModId}}_charmanderegg",
+          "DisplayName": "{{i18n: charmanderegg}}",
+          "Description": "{{i18n: charmanderegg.d}}",
+          "Texture": "{{ModId}}/charmander/charmanderegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_mine_81_100_p5",
+            "pkegg_mine_101_120_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "charmander hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_charmanderegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycharmander",
+              "AnimalId": "{{ModId}}_shinycharmander",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_charmander",
+              "AnimalId": "{{ModId}}_charmander",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

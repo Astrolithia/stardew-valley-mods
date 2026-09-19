@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dratini textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dratini/dratini, {{ModId}}/dratini/shinydratini, {{ModId}}/dratini/dragonair, {{ModId}}/dratini/shinydragonair, {{ModId}}/dratini/dragonite, {{ModId}}/dratini/shinydragonite, {{ModId}}/dratini/dratiniegg",
+      "FromFile": "assets/livestocks/dratini/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dratini data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dratini": {
+          "DisplayName": "{{i18n: dratini}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dratiniegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dratinibirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dratini/dragonair",
+          "BabyTexture": "{{ModId}}/dratini/dratini",
+          "Sound": "{{ModId}}_dragonitecry",
+          "BabySound": "{{ModId}}_dratinicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dratiniegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_dratini evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_dratini",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "dratinievolution": {
+          "Id": "dratinievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/dratini/dragonite"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydratini data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydratini": {
+          "DisplayName": "{{i18n: shinydratini}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dratiniegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydratinibirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dratini/shinydragonair",
+          "BabyTexture": "{{ModId}}/dratini/shinydratini",
+          "Sound": "{{ModId}}_dragonitecry",
+          "BabySound": "{{ModId}}_dratinicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dratiniegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinydratini evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinydratini",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinydratinievolution": {
+          "Id": "shinydratinievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/dratini/shinydragonite"
+        }
+      }
+    },
+    {
+      "LogName": "dratini cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dratinicry": {
+          "ID": "{{ModId}}_dratinicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dratini/dratinicry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dragonitecry": {
+          "ID": "{{ModId}}_dragonitecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dratini/dragonitecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dratini egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dratiniegg": {
+          "Name": "{{ModId}}_dratiniegg",
+          "DisplayName": "{{i18n: dratiniegg}}",
+          "Description": "{{i18n: dratiniegg.d}}",
+          "Texture": "{{ModId}}/dratini/dratiniegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dratini hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dratiniegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydratini",
+              "AnimalId": "{{ModId}}_shinydratini",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dratini",
+              "AnimalId": "{{ModId}}_dratini",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "Changes": [
+    {
+      "LogName": "CC / Joja reward mail",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_ccmail": "{{i18n:mail_cc_text}}%item id (O){{ModId}}_mewegg 1 %%[letterbg 2][#]{{i18n:mail_cc_title}}",
+        "{{ModId}}_jojamail": "{{i18n:mail_joja_text}}%item id (O){{ModId}}_armoredmewtwoegg 1 %%[letterbg 1][#]{{i18n:mail_joja_title}}"
+      }
+    },
+    {
+      "LogName": "CC / Joja reward triggers",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_CCReward": {
+          "Id": "{{ModId}}_CCReward",
+          "Trigger": "DayStarted",
+          "Condition": "IS_COMMUNITY_CENTER_COMPLETE, !PLAYER_HAS_MAIL Current {{ModId}}_ccmail Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_ccmail Now"
+          ]
+        },
+        "{{ModId}}_JojaReward": {
+          "Id": "{{ModId}}_JojaReward",
+          "Trigger": "DayStarted",
+          "Condition": "IS_JOJA_MART_COMPLETE, !PLAYER_HAS_MAIL Current {{ModId}}_jojamail Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_jojamail Now"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load murkrow textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/murkrow/murkrow, {{ModId}}/murkrow/shinymurkrow, {{ModId}}/murkrow/honchkrow, {{ModId}}/murkrow/shinyhonchkrow, {{ModId}}/murkrow/murkrowegg",
+      "FromFile": "assets/livestocks/murkrow/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_murkrow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_murkrow": {
+          "DisplayName": "{{i18n: murkrow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_murkrowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: murkrowbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/murkrow/honchkrow",
+          "BabyTexture": "{{ModId}}/murkrow/murkrow",
+          "Sound": "{{ModId}}_honchkrowcry",
+          "BabySound": "{{ModId}}_murkrowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_murkrowegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymurkrow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymurkrow": {
+          "DisplayName": "{{i18n: shinymurkrow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_murkrowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymurkrowbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/murkrow/shinyhonchkrow",
+          "BabyTexture": "{{ModId}}/murkrow/shinymurkrow",
+          "Sound": "{{ModId}}_honchkrowcry",
+          "BabySound": "{{ModId}}_murkrowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_murkrowegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "murkrow cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_murkrowcry": {
+          "ID": "{{ModId}}_murkrowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/murkrow/murkrowcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_honchkrowcry": {
+          "ID": "{{ModId}}_honchkrowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/murkrow/honchkrowcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "murkrow egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_murkrowegg": {
+          "Name": "{{ModId}}_murkrowegg",
+          "DisplayName": "{{i18n: murkrowegg}}",
+          "Description": "{{i18n: murkrowegg.d}}",
+          "Texture": "{{ModId}}/murkrow/murkrowegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_veryrare",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "murkrow hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_murkrowegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymurkrow",
+              "AnimalId": "{{ModId}}_shinymurkrow",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_murkrow",
+              "AnimalId": "{{ModId}}_murkrow",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

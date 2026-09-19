@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load seedot textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/seedot/seedot, {{ModId}}/seedot/shinyseedot, {{ModId}}/seedot/nuzleaf, {{ModId}}/seedot/shinynuzleaf, {{ModId}}/seedot/shiftry, {{ModId}}/seedot/shinyshiftry, {{ModId}}/seedot/seedotegg",
+      "FromFile": "assets/livestocks/seedot/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_seedot data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_seedot": {
+          "DisplayName": "{{i18n: seedot}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_seedotegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: seedotbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/seedot/nuzleaf",
+          "BabyTexture": "{{ModId}}/seedot/seedot",
+          "Sound": "{{ModId}}_shiftrycry",
+          "BabySound": "{{ModId}}_seedotcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_seedotegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_seedot evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_seedot",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "seedotevolution": {
+          "Id": "seedotevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/seedot/shiftry"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyseedot data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyseedot": {
+          "DisplayName": "{{i18n: shinyseedot}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_seedotegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyseedotbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/seedot/shinynuzleaf",
+          "BabyTexture": "{{ModId}}/seedot/shinyseedot",
+          "Sound": "{{ModId}}_shiftrycry",
+          "BabySound": "{{ModId}}_seedotcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_seedotegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyseedot evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyseedot",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyseedotevolution": {
+          "Id": "shinyseedotevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/seedot/shinyshiftry"
+        }
+      }
+    },
+    {
+      "LogName": "seedot cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_seedotcry": {
+          "ID": "{{ModId}}_seedotcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/seedot/seedotcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_shiftrycry": {
+          "ID": "{{ModId}}_shiftrycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/seedot/shiftrycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "seedot egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_seedotegg": {
+          "Name": "{{ModId}}_seedotegg",
+          "DisplayName": "{{i18n: seedotegg}}",
+          "Description": "{{i18n: seedotegg.d}}",
+          "Texture": "{{ModId}}/seedot/seedotegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "seedot hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_seedotegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyseedot",
+              "AnimalId": "{{ModId}}_shinyseedot",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_seedot",
+              "AnimalId": "{{ModId}}_seedot",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

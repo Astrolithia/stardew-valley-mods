@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load corsola textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/corsola/corsola, {{ModId}}/corsola/shinycorsola, {{ModId}}/corsola/cursola, {{ModId}}/corsola/shinycursola, {{ModId}}/corsola/corsolaegg",
+      "FromFile": "assets/livestocks/corsola/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_corsola data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_corsola": {
+          "DisplayName": "{{i18n: corsola}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_corsolaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: corsolabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/corsola/cursola",
+          "BabyTexture": "{{ModId}}/corsola/corsola",
+          "Sound": "{{ModId}}_cursolacry",
+          "BabySound": "{{ModId}}_corsolacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_corsolaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycorsola data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycorsola": {
+          "DisplayName": "{{i18n: shinycorsola}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_corsolaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycorsolabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/corsola/shinycursola",
+          "BabyTexture": "{{ModId}}/corsola/shinycorsola",
+          "Sound": "{{ModId}}_cursolacry",
+          "BabySound": "{{ModId}}_corsolacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_corsolaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "corsola cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_corsolacry": {
+          "ID": "{{ModId}}_corsolacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/corsola/corsolacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cursolacry": {
+          "ID": "{{ModId}}_cursolacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/corsola/cursolacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "corsola egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_corsolaegg": {
+          "Name": "{{ModId}}_corsolaegg",
+          "DisplayName": "{{i18n: corsolaegg}}",
+          "Description": "{{i18n: corsolaegg.d}}",
+          "Texture": "{{ModId}}/corsola/corsolaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "corsola hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_corsolaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycorsola",
+              "AnimalId": "{{ModId}}_shinycorsola",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_corsola",
+              "AnimalId": "{{ModId}}_corsola",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

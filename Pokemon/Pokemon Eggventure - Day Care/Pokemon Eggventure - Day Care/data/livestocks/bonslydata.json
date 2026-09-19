@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bonsly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bonsly/bonsly, {{ModId}}/bonsly/shinybonsly, {{ModId}}/bonsly/sudowoodo, {{ModId}}/bonsly/shinysudowoodo, {{ModId}}/bonsly/bonslyegg",
+      "FromFile": "assets/livestocks/bonsly/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bonsly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bonsly": {
+          "DisplayName": "{{i18n: bonsly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bonslyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bonslybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bonsly/sudowoodo",
+          "BabyTexture": "{{ModId}}/bonsly/bonsly",
+          "Sound": "{{ModId}}_sudowoodocry",
+          "BabySound": "{{ModId}}_bonslycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bonslyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybonsly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybonsly": {
+          "DisplayName": "{{i18n: shinybonsly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bonslyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybonslybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bonsly/shinysudowoodo",
+          "BabyTexture": "{{ModId}}/bonsly/shinybonsly",
+          "Sound": "{{ModId}}_sudowoodocry",
+          "BabySound": "{{ModId}}_bonslycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bonslyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "bonsly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bonslycry": {
+          "ID": "{{ModId}}_bonslycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bonsly/bonslycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_sudowoodocry": {
+          "ID": "{{ModId}}_sudowoodocry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bonsly/sudowoodocry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bonsly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bonslyegg": {
+          "Name": "{{ModId}}_bonslyegg",
+          "DisplayName": "{{i18n: bonslyegg}}",
+          "Description": "{{i18n: bonslyegg.d}}",
+          "Texture": "{{ModId}}/bonsly/bonslyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_verycommon",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bonsly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bonslyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybonsly",
+              "AnimalId": "{{ModId}}_shinybonsly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bonsly",
+              "AnimalId": "{{ModId}}_bonsly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

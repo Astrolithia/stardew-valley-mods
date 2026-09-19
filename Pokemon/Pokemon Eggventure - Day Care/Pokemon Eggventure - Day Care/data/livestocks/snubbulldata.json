@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load snubbull textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/snubbull/snubbull, {{ModId}}/snubbull/shinysnubbull, {{ModId}}/snubbull/granbull, {{ModId}}/snubbull/shinygranbull, {{ModId}}/snubbull/snubbullegg",
+      "FromFile": "assets/livestocks/snubbull/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_snubbull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_snubbull": {
+          "DisplayName": "{{i18n: snubbull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_snubbullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: snubbullbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snubbull/granbull",
+          "BabyTexture": "{{ModId}}/snubbull/snubbull",
+          "Sound": "{{ModId}}_granbullcry",
+          "BabySound": "{{ModId}}_snubbullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_snubbullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysnubbull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysnubbull": {
+          "DisplayName": "{{i18n: shinysnubbull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_snubbullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysnubbullbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snubbull/shinygranbull",
+          "BabyTexture": "{{ModId}}/snubbull/shinysnubbull",
+          "Sound": "{{ModId}}_granbullcry",
+          "BabySound": "{{ModId}}_snubbullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_snubbullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "snubbull cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_snubbullcry": {
+          "ID": "{{ModId}}_snubbullcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snubbull/snubbullcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_granbullcry": {
+          "ID": "{{ModId}}_granbullcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snubbull/granbullcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "snubbull egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_snubbullegg": {
+          "Name": "{{ModId}}_snubbullegg",
+          "DisplayName": "{{i18n: snubbullegg}}",
+          "Description": "{{i18n: snubbullegg.d}}",
+          "Texture": "{{ModId}}/snubbull/snubbullegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "snubbull hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_snubbullegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysnubbull",
+              "AnimalId": "{{ModId}}_shinysnubbull",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_snubbull",
+              "AnimalId": "{{ModId}}_snubbull",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bronzor textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bronzor/bronzor, {{ModId}}/bronzor/shinybronzor, {{ModId}}/bronzor/bronzong, {{ModId}}/bronzor/shinybronzong, {{ModId}}/bronzor/bronzoregg",
+      "FromFile": "assets/livestocks/bronzor/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bronzor data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bronzor": {
+          "DisplayName": "{{i18n: bronzor}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bronzoregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bronzorbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bronzor/bronzong",
+          "BabyTexture": "{{ModId}}/bronzor/bronzor",
+          "Sound": "{{ModId}}_bronzongcry",
+          "BabySound": "{{ModId}}_bronzorcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bronzoregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybronzor data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybronzor": {
+          "DisplayName": "{{i18n: shinybronzor}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_bronzoregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybronzorbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bronzor/shinybronzong",
+          "BabyTexture": "{{ModId}}/bronzor/shinybronzor",
+          "Sound": "{{ModId}}_bronzongcry",
+          "BabySound": "{{ModId}}_bronzorcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bronzoregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "bronzor cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bronzorcry": {
+          "ID": "{{ModId}}_bronzorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bronzor/bronzorcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_bronzongcry": {
+          "ID": "{{ModId}}_bronzongcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bronzor/bronzongcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bronzor egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bronzoregg": {
+          "Name": "{{ModId}}_bronzoregg",
+          "DisplayName": "{{i18n: bronzoregg}}",
+          "Description": "{{i18n: bronzoregg.d}}",
+          "Texture": "{{ModId}}/bronzor/bronzoregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_verycommon",
+            "pkegg_quarry_p2",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bronzor hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bronzoregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybronzor",
+              "AnimalId": "{{ModId}}_shinybronzor",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bronzor",
+              "AnimalId": "{{ModId}}_bronzor",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

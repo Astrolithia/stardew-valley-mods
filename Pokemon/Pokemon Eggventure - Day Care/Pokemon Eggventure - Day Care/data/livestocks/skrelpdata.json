@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load skrelp textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/skrelp/skrelp, {{ModId}}/skrelp/shinyskrelp, {{ModId}}/skrelp/dragalge, {{ModId}}/skrelp/shinydragalge, {{ModId}}/skrelp/skrelpegg",
+      "FromFile": "assets/livestocks/skrelp/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_skrelp data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_skrelp": {
+          "DisplayName": "{{i18n: skrelp}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_skrelpegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: skrelpbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skrelp/dragalge",
+          "BabyTexture": "{{ModId}}/skrelp/skrelp",
+          "Sound": "{{ModId}}_dragalgecry",
+          "BabySound": "{{ModId}}_skrelpcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skrelpegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyskrelp data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyskrelp": {
+          "DisplayName": "{{i18n: shinyskrelp}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_skrelpegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyskrelpbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/skrelp/shinydragalge",
+          "BabyTexture": "{{ModId}}/skrelp/shinyskrelp",
+          "Sound": "{{ModId}}_dragalgecry",
+          "BabySound": "{{ModId}}_skrelpcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_skrelpegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "skrelp cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_skrelpcry": {
+          "ID": "{{ModId}}_skrelpcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skrelp/skrelpcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dragalgecry": {
+          "ID": "{{ModId}}_dragalgecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/skrelp/dragalgecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skrelp egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_skrelpegg": {
+          "Name": "{{ModId}}_skrelpegg",
+          "DisplayName": "{{i18n: skrelpegg}}",
+          "Description": "{{i18n: skrelpegg.d}}",
+          "Texture": "{{ModId}}/skrelp/skrelpegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_verycommon",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "skrelp hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_skrelpegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyskrelp",
+              "AnimalId": "{{ModId}}_shinyskrelp",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_skrelp",
+              "AnimalId": "{{ModId}}_skrelp",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

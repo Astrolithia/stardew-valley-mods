@@ -1,0 +1,52 @@
+{
+  "Changes": [
+    {
+      "LogName": "Ducklett feather gift tastes (copied from vanilla Duck Feather)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Elliott",
+            "1"
+          ],
+          "Value": "pkfeather_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Leo",
+            "1"
+          ],
+          "Value": "pkfeather_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "3"
+          ],
+          "Value": "pkfeather_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "5"
+          ],
+          "Value": "pkfeather_item",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

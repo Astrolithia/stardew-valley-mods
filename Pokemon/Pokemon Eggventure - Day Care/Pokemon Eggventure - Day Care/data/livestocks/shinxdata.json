@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load shinx textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/shinx/shinx, {{ModId}}/shinx/shinyshinx, {{ModId}}/shinx/luxio, {{ModId}}/shinx/shinyluxio, {{ModId}}/shinx/luxray, {{ModId}}/shinx/shinyluxray, {{ModId}}/shinx/shinxegg",
+      "FromFile": "assets/livestocks/shinx/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_shinx data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinx": {
+          "DisplayName": "{{i18n: shinx}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_shinxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinxbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shinx/luxio",
+          "BabyTexture": "{{ModId}}/shinx/shinx",
+          "Sound": "{{ModId}}_luxraycry",
+          "BabySound": "{{ModId}}_shinxcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shinxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinx evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinx",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinxevolution": {
+          "Id": "shinxevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/shinx/luxray"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyshinx data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyshinx": {
+          "DisplayName": "{{i18n: shinyshinx}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_shinxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyshinxbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/shinx/shinyluxio",
+          "BabyTexture": "{{ModId}}/shinx/shinyshinx",
+          "Sound": "{{ModId}}_luxraycry",
+          "BabySound": "{{ModId}}_shinxcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_shinxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyshinx evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyshinx",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyshinxevolution": {
+          "Id": "shinyshinxevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/shinx/shinyluxray"
+        }
+      }
+    },
+    {
+      "LogName": "shinx cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_shinxcry": {
+          "ID": "{{ModId}}_shinxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shinx/shinxcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_luxraycry": {
+          "ID": "{{ModId}}_luxraycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/shinx/luxraycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shinx egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_shinxegg": {
+          "Name": "{{ModId}}_shinxegg",
+          "DisplayName": "{{i18n: shinxegg}}",
+          "Description": "{{i18n: shinxegg.d}}",
+          "Texture": "{{ModId}}/shinx/shinxegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_verycommon",
+            "pkegg_skullcavern_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "shinx hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_shinxegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyshinx",
+              "AnimalId": "{{ModId}}_shinyshinx",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_shinx",
+              "AnimalId": "{{ModId}}_shinx",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

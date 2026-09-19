@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load morelull textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/morelull/morelull, {{ModId}}/morelull/shinymorelull, {{ModId}}/morelull/shiinotic, {{ModId}}/morelull/shinyshiinotic, {{ModId}}/morelull/morelullegg",
+      "FromFile": "assets/livestocks/morelull/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_morelull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_morelull": {
+          "DisplayName": "{{i18n: morelull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_morelullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: morelullbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/morelull/shiinotic",
+          "BabyTexture": "{{ModId}}/morelull/morelull",
+          "Sound": "{{ModId}}_shiinoticcry",
+          "BabySound": "{{ModId}}_morelullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_morelullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymorelull data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymorelull": {
+          "DisplayName": "{{i18n: shinymorelull}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_morelullegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymorelullbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/morelull/shinyshiinotic",
+          "BabyTexture": "{{ModId}}/morelull/shinymorelull",
+          "Sound": "{{ModId}}_shiinoticcry",
+          "BabySound": "{{ModId}}_morelullcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_morelullegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "morelull cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_morelullcry": {
+          "ID": "{{ModId}}_morelullcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/morelull/morelullcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_shiinoticcry": {
+          "ID": "{{ModId}}_shiinoticcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/morelull/shiinoticcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "morelull egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_morelullegg": {
+          "Name": "{{ModId}}_morelullegg",
+          "DisplayName": "{{i18n: morelullegg}}",
+          "Description": "{{i18n: morelullegg.d}}",
+          "Texture": "{{ModId}}/morelull/morelullegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "morelull hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_morelullegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymorelull",
+              "AnimalId": "{{ModId}}_shinymorelull",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_morelull",
+              "AnimalId": "{{ModId}}_morelull",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

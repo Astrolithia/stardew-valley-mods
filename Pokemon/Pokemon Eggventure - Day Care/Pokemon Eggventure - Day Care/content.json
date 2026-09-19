@@ -1,0 +1,3616 @@
+{
+  "Format": "2.6.0",
+  "ConfigSchema": {
+    "EconomyLevel": {
+      "AllowValues": "Strict, Balanced, Generous, VeryGenerous, Fortune",
+      "Default": "Balanced",
+      "Description": "Overall Pokemon sell price economy. Strict = low prices, Fortune = very high prices. Applies to all rarity tiers proportionally.",
+      "Section": "Sell Price"
+    },
+    "IncubationSpeed": {
+      "AllowValues": "VeryFast, Fast, Balanced, Slow, VerySlow",
+      "Default": "Balanced",
+      "Description": "Incubation time for all rarity tiers. Balanced = intended pacing.",
+      "Section": "Incubation Days"
+    },
+    "BabyGrowthSpeed": {
+      "AllowValues": "VeryFast, Fast, Balanced, Slow, VerySlow",
+      "Default": "Balanced",
+      "Description": "Baby stage duration for all rarity tiers. Balanced = intended pacing.",
+      "Section": "Baby Days"
+    },
+    "ShinyRate": {
+      "AllowValues": "VeryRare, Rare, Balanced, Common, High, VeryHigh, Guaranteed",
+      "Default": "Balanced",
+      "Description": "Chance for eggs to hatch a Shiny Pokemon. VeryRare = 1%, Rare = 5%, Balanced = 10%, Common = 20%, High = 50%, VeryHigh = 70%, Guaranteed = every hatch is Shiny!",
+      "Section": "Shiny Hunting"
+    },
+    "EvolutionHearts": {
+      "AllowValues": "1, 2, 3, 4, 5",
+      "Default": "2",
+      "Description": "Hearts of friendship needed for a Pokemon to reach its final evolution (1 heart = 200 friendship).",
+      "Section": "Frienship Evolution"
+    },
+    "EggLayingRate": {
+      "AllowValues": "Never, Rare, Balanced, Common, Generous",
+      "Default": "Balanced",
+      "Description": "Daily chance for a high-friendship Pokemon to produce its own egg. Never disables renewable eggs entirely.",
+      "Section": "Eggs Laying Rates"
+    },
+    "RateMine": {
+      "Default": "0.003",
+      "Description": "Chance of finding a Pokemon egg from the regular Mines, floors 1-120. Type the chance itself, between 0 and 1 — no maths needed. 0.003 is the mod's own value, which means 0.3% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateQuarry": {
+      "Default": "0.015",
+      "Description": "Chance of finding a Pokemon egg from the Quarry. Type the chance itself, between 0 and 1 — no maths needed. 0.015 is the mod's own value, which means 1.5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateQuarryMine": {
+      "Default": "0.0025",
+      "Description": "Chance of finding a Pokemon egg from the hidden Quarry Mine. Type the chance itself, between 0 and 1 — no maths needed. 0.0025 is the mod's own value, which means 0.25% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateSkullCavern": {
+      "Default": "0.001",
+      "Description": "Chance of finding a Pokemon egg from the Skull Cavern. Type the chance itself, between 0 and 1 — no maths needed. 0.001 is the mod's own value, which means 0.1% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateVolcano": {
+      "Default": "0.004",
+      "Description": "Chance of finding a Pokemon egg from the Volcano Dungeon. Type the chance itself, between 0 and 1 — no maths needed. 0.004 is the mod's own value, which means 0.4% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateHardmodeMine": {
+      "Default": "0.001",
+      "Description": "Chance of finding a Pokemon egg from the Hardmode Mines (Qi quest). Type the chance itself, between 0 and 1 — no maths needed. 0.001 is the mod's own value, which means 0.1% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateSkullRift": {
+      "Default": "0.001",
+      "Description": "Chance of finding a Pokemon egg from the rift nodes deep in the Skull Cavern. Type the chance itself, between 0 and 1 — no maths needed. 0.001 is the mod's own value, which means 0.1% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Mines"
+    },
+    "RateChopValleyTree": {
+      "Default": "0.0075",
+      "Description": "Chance of finding a Pokemon egg from chopping oak, maple, pine and mahogany. Type the chance itself, between 0 and 1 — no maths needed. 0.0075 is the mod's own value, which means 0.75% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateChopDesertPalm": {
+      "Default": "0.0174",
+      "Description": "Chance of finding a Pokemon egg from chopping desert palms. Type the chance itself, between 0 and 1 — no maths needed. 0.0174 is the mod's own value, which means 1.74% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateChopIslandPalm": {
+      "Default": "0.0131",
+      "Description": "Chance of finding a Pokemon egg from chopping island palms. Type the chance itself, between 0 and 1 — no maths needed. 0.0131 is the mod's own value, which means 1.31% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateShakeTree": {
+      "Default": "0.008",
+      "Description": "Chance of finding a Pokemon egg from shaking any ordinary tree. Type the chance itself, between 0 and 1 — no maths needed. 0.008 is the mod's own value, which means 0.8% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateGreenRainChop": {
+      "Default": "0.0078",
+      "Description": "Chance of finding a Pokemon egg from chopping green rain trees. Type the chance itself, between 0 and 1 — no maths needed. 0.0078 is the mod's own value, which means 0.78% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateGreenRainShake": {
+      "Default": "0.015",
+      "Description": "Chance of finding a Pokemon egg from shaking green rain trees. Type the chance itself, between 0 and 1 — no maths needed. 0.015 is the mod's own value, which means 1.5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateMysticChop": {
+      "Default": "0.0059",
+      "Description": "Chance of finding a Pokemon egg from chopping mystic trees. Type the chance itself, between 0 and 1 — no maths needed. 0.0059 is the mod's own value, which means 0.59% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateMysticShake": {
+      "Default": "0.012",
+      "Description": "Chance of finding a Pokemon egg from shaking mystic trees. Type the chance itself, between 0 and 1 — no maths needed. 0.012 is the mod's own value, which means 1.2% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateMushroomChop": {
+      "Default": "0.0258",
+      "Description": "Chance of finding a Pokemon egg from chopping mushroom trees. Type the chance itself, between 0 and 1 — no maths needed. 0.0258 is the mod's own value, which means 2.58% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateMushroomShake": {
+      "Default": "0.05",
+      "Description": "Chance of finding a Pokemon egg from shaking mushroom trees. Type the chance itself, between 0 and 1 — no maths needed. 0.05 is the mod's own value, which means 5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Trees"
+    },
+    "RateGeodes": {
+      "Default": "0.012",
+      "Description": "Chance of finding a Pokemon fossil when you crack a geode. Type the chance itself, between 0 and 1 — no maths needed. 0.012 is the mod's own value, which means 1.2% per fossil. It was lowered when fossils also became findable in the desert and in fishing chests. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "RatePanning": {
+      "Default": "0.15",
+      "Description": "Chance of finding a Pokemon egg from panning. Type the chance itself, between 0 and 1 — no maths needed. 0.15 is the mod's own value, which means 15% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "RateTrain": {
+      "Default": "0.05",
+      "Description": "Chance of finding a Pokemon egg from the freight train. Type the chance itself, between 0 and 1 — no maths needed. 0.05 is the mod's own value, which means 5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "RateGarbage": {
+      "Default": "0.0073",
+      "Description": "Chance of finding a Pokemon egg from garbage cans. Type the chance itself, between 0 and 1 — no maths needed. 0.0073 is the mod's own value, which means 0.73% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "RateBeehouse": {
+      "Default": "0.01",
+      "Description": "Chance of finding a Pokemon egg from bee houses. Type the chance itself, between 0 and 1 — no maths needed. 0.01 is the mod's own value, which means 1% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "RateFishingOcean": {
+      "Default": "0.005",
+      "Description": "Chance of finding a Pokemon egg from fishing in the ocean at the beach. Type the chance itself, between 0 and 1 — no maths needed. 0.005 is the mod's own value, which means 0.5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Fishing"
+    },
+    "RateFishingFreshwater": {
+      "Default": "0.005",
+      "Description": "Chance of finding a Pokemon egg from fishing in the valley's rivers, lakes and ponds (town, forest, mountain). Type the chance itself, between 0 and 1 — no maths needed. 0.005 is the mod's own value, which means 0.5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Fishing"
+    },
+    "RateFishingSewer": {
+      "Default": "0.01",
+      "Description": "Chance of finding a Pokemon egg from fishing in the sewers. Type the chance itself, between 0 and 1 — no maths needed. 0.01 is the mod's own value, which means 1% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Fishing"
+    },
+    "RateFishingIsland": {
+      "Default": "0.04",
+      "Description": "Chance of finding a Pokemon egg from fishing anywhere on Ginger Island. Type the chance itself, between 0 and 1 — no maths needed. 0.04 is the mod's own value, which means 4% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Fishing"
+    },
+    "RateFishingDesert": {
+      "Default": "0.05",
+      "Description": "Chance of finding a Pokemon egg from fishing in the desert. Type the chance itself, between 0 and 1 — no maths needed. 0.05 is the mod's own value, which means 5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Fishing"
+    },
+    "RateFishingMine": {
+      "Default": "0.05",
+      "Description": "Chance of finding a Pokemon egg from fishing on the mine levels. Type the chance itself, between 0 and 1 — no maths needed. 0.05 is the mod's own value, which means 5% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Fishing"
+    },
+    "BerryPressCost": {
+      "Default": "5",
+      "Description": "How many identical berries the Berry Press needs. Type the number itself. 5 is the mod's own value. Numbers only.",
+      "Section": "Berries"
+    },
+    "BerryPressMinutes": {
+      "Default": "60",
+      "Description": "How many in-game minutes the Berry Press takes. Type the number itself. 60 is the mod's own value. Numbers only.",
+      "Section": "Berries"
+    },
+    "RateGems": {
+      "Default": "0.02",
+      "Description": "Chance of finding a type gem when you crack a geode. Type the chance itself, between 0 and 1 — no maths needed. 0.02 is the mod's own value, which means 2% each time. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "GemCrystalariumMinutes": {
+      "Default": "7200",
+      "Description": "How many in-game minutes the Crystalarium takes to copy a type gem. Type the number itself. 7200 is the mod's own value, which is 5 days. Numbers only.",
+      "Section": "Other"
+    },
+    "LuckyClover": {
+      "Default": "true",
+      "AllowValues": "true, false",
+      "Description": "Turn the vanilla Rabbit's Foot into a Lucky Clover, name and sprite, so no Pokemon has to lose a foot. The item itself is unchanged, so every bundle, secret note and event still works. Set to false to keep the vanilla foot."
+    },
+    "CommunityCenter": {
+      "Default": "pokemon",
+      "AllowValues": "pokemon, difficile, off",
+      "Description": "How the Community Center bundles handle Pokemon products. pokemon: the Animal and Dye bundles ask for Pokemon milk, wool, eggs and feather instead of the vanilla ones, so you never need a chicken. difficile: the same, but every item must be gold quality and the Animal bundle wants all six. off: the bundles are left untouched, for players who use another Community Center mod."
+    },
+    "RateFishingTreasure": {
+      "Default": "0.02",
+      "Description": "Chance for a marine fossil to be added to a fishing treasure chest. Type the chance itself, between 0 and 1 — no maths needed. 0.02 is the mod's own value, which means 2% per chest for each of the seven marine fossils. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    },
+    "RatePanningExtras": {
+      "Default": "0.08",
+      "Description": "Chance of panning up one of the mod's marine items or nuggets. Type the chance itself, between 0 and 1 — no maths needed. 0.08 is the mod's own value, which means 8% per pan. The rarer items also need Fishing level 4. Set 0 to switch this source off. Numbers only, dot for decimals.",
+      "Section": "Other"
+    }
+  },
+  "DynamicTokens": [
+    {
+      "Name": "IncubationDaysVeryCommon",
+      "Value": "2"
+    },
+    {
+      "Name": "IncubationDaysVeryCommon",
+      "Value": "1",
+      "When": {
+        "IncubationSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryCommon",
+      "Value": "1",
+      "When": {
+        "IncubationSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryCommon",
+      "Value": "3",
+      "When": {
+        "IncubationSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryCommon",
+      "Value": "5",
+      "When": {
+        "IncubationSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "IncubationDaysCommon",
+      "Value": "3"
+    },
+    {
+      "Name": "IncubationDaysCommon",
+      "Value": "1",
+      "When": {
+        "IncubationSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "IncubationDaysCommon",
+      "Value": "2",
+      "When": {
+        "IncubationSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "IncubationDaysCommon",
+      "Value": "5",
+      "When": {
+        "IncubationSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "IncubationDaysCommon",
+      "Value": "7",
+      "When": {
+        "IncubationSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "IncubationDaysRare",
+      "Value": "5"
+    },
+    {
+      "Name": "IncubationDaysRare",
+      "Value": "2",
+      "When": {
+        "IncubationSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "IncubationDaysRare",
+      "Value": "3",
+      "When": {
+        "IncubationSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "IncubationDaysRare",
+      "Value": "7",
+      "When": {
+        "IncubationSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "IncubationDaysRare",
+      "Value": "10",
+      "When": {
+        "IncubationSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryRare",
+      "Value": "7"
+    },
+    {
+      "Name": "IncubationDaysVeryRare",
+      "Value": "3",
+      "When": {
+        "IncubationSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryRare",
+      "Value": "5",
+      "When": {
+        "IncubationSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryRare",
+      "Value": "10",
+      "When": {
+        "IncubationSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "IncubationDaysVeryRare",
+      "Value": "14",
+      "When": {
+        "IncubationSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "IncubationDaysLegendary",
+      "Value": "10"
+    },
+    {
+      "Name": "IncubationDaysLegendary",
+      "Value": "5",
+      "When": {
+        "IncubationSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "IncubationDaysLegendary",
+      "Value": "7",
+      "When": {
+        "IncubationSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "IncubationDaysLegendary",
+      "Value": "14",
+      "When": {
+        "IncubationSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "IncubationDaysLegendary",
+      "Value": "21",
+      "When": {
+        "IncubationSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryCommon",
+      "Value": "4"
+    },
+    {
+      "Name": "BabyDaysVeryCommon",
+      "Value": "2",
+      "When": {
+        "BabyGrowthSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryCommon",
+      "Value": "3",
+      "When": {
+        "BabyGrowthSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryCommon",
+      "Value": "5",
+      "When": {
+        "BabyGrowthSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryCommon",
+      "Value": "7",
+      "When": {
+        "BabyGrowthSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "BabyDaysCommon",
+      "Value": "6"
+    },
+    {
+      "Name": "BabyDaysCommon",
+      "Value": "3",
+      "When": {
+        "BabyGrowthSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "BabyDaysCommon",
+      "Value": "4",
+      "When": {
+        "BabyGrowthSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "BabyDaysCommon",
+      "Value": "8",
+      "When": {
+        "BabyGrowthSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "BabyDaysCommon",
+      "Value": "10",
+      "When": {
+        "BabyGrowthSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "BabyDaysRare",
+      "Value": "8"
+    },
+    {
+      "Name": "BabyDaysRare",
+      "Value": "4",
+      "When": {
+        "BabyGrowthSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "BabyDaysRare",
+      "Value": "6",
+      "When": {
+        "BabyGrowthSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "BabyDaysRare",
+      "Value": "10",
+      "When": {
+        "BabyGrowthSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "BabyDaysRare",
+      "Value": "14",
+      "When": {
+        "BabyGrowthSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryRare",
+      "Value": "10"
+    },
+    {
+      "Name": "BabyDaysVeryRare",
+      "Value": "5",
+      "When": {
+        "BabyGrowthSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryRare",
+      "Value": "7",
+      "When": {
+        "BabyGrowthSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryRare",
+      "Value": "14",
+      "When": {
+        "BabyGrowthSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "BabyDaysVeryRare",
+      "Value": "18",
+      "When": {
+        "BabyGrowthSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "BabyDaysLegendary",
+      "Value": "12"
+    },
+    {
+      "Name": "BabyDaysLegendary",
+      "Value": "6",
+      "When": {
+        "BabyGrowthSpeed": "VeryFast"
+      }
+    },
+    {
+      "Name": "BabyDaysLegendary",
+      "Value": "8",
+      "When": {
+        "BabyGrowthSpeed": "Fast"
+      }
+    },
+    {
+      "Name": "BabyDaysLegendary",
+      "Value": "16",
+      "When": {
+        "BabyGrowthSpeed": "Slow"
+      }
+    },
+    {
+      "Name": "BabyDaysLegendary",
+      "Value": "21",
+      "When": {
+        "BabyGrowthSpeed": "VerySlow"
+      }
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "0.10"
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "0.01",
+      "When": {
+        "ShinyRate": "VeryRare"
+      }
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "0.05",
+      "When": {
+        "ShinyRate": "Rare"
+      }
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "0.20",
+      "When": {
+        "ShinyRate": "Common"
+      }
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "0.50",
+      "When": {
+        "ShinyRate": "High"
+      }
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "0.70",
+      "When": {
+        "ShinyRate": "VeryHigh"
+      }
+    },
+    {
+      "Name": "ShinyChance",
+      "Value": "1.0",
+      "When": {
+        "ShinyRate": "Guaranteed"
+      }
+    },
+    {
+      "Name": "EggLayingChance",
+      "Value": "0.03"
+    },
+    {
+      "Name": "EggLayingChance",
+      "Value": "0",
+      "When": {
+        "EggLayingRate": "Never"
+      }
+    },
+    {
+      "Name": "EggLayingChance",
+      "Value": "0.01",
+      "When": {
+        "EggLayingRate": "Rare"
+      }
+    },
+    {
+      "Name": "EggLayingChance",
+      "Value": "0.08",
+      "When": {
+        "EggLayingRate": "Common"
+      }
+    },
+    {
+      "Name": "EggLayingChance",
+      "Value": "0.15",
+      "When": {
+        "EggLayingRate": "Generous"
+      }
+    },
+    {
+      "Name": "SellPriceVeryCommon",
+      "Value": "800"
+    },
+    {
+      "Name": "SellPriceVeryCommon",
+      "Value": "300",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "SellPriceVeryCommon",
+      "Value": "1300",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "SellPriceVeryCommon",
+      "Value": "2000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "SellPriceVeryCommon",
+      "Value": "3200",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "SellPriceCommon",
+      "Value": "1500"
+    },
+    {
+      "Name": "SellPriceCommon",
+      "Value": "600",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "SellPriceCommon",
+      "Value": "2400",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "SellPriceCommon",
+      "Value": "3800",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "SellPriceCommon",
+      "Value": "6000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "SellPriceRare",
+      "Value": "4000"
+    },
+    {
+      "Name": "SellPriceRare",
+      "Value": "1600",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "SellPriceRare",
+      "Value": "6400",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "SellPriceRare",
+      "Value": "10000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "SellPriceRare",
+      "Value": "16000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "SellPriceVeryRare",
+      "Value": "8000"
+    },
+    {
+      "Name": "SellPriceVeryRare",
+      "Value": "3200",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "SellPriceVeryRare",
+      "Value": "12800",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "SellPriceVeryRare",
+      "Value": "20000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "SellPriceVeryRare",
+      "Value": "32000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "SellPriceLegendary",
+      "Value": "16000"
+    },
+    {
+      "Name": "SellPriceLegendary",
+      "Value": "6400",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "SellPriceLegendary",
+      "Value": "25600",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "SellPriceLegendary",
+      "Value": "40000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "SellPriceLegendary",
+      "Value": "64000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "EggPriceVeryCommon",
+      "Value": "1200"
+    },
+    {
+      "Name": "EggPriceVeryCommon",
+      "Value": "500",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "EggPriceVeryCommon",
+      "Value": "1900",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "EggPriceVeryCommon",
+      "Value": "3000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "EggPriceVeryCommon",
+      "Value": "4800",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "EggPriceCommon",
+      "Value": "2250"
+    },
+    {
+      "Name": "EggPriceCommon",
+      "Value": "900",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "EggPriceCommon",
+      "Value": "3600",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "EggPriceCommon",
+      "Value": "5600",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "EggPriceCommon",
+      "Value": "9000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "EggPriceRare",
+      "Value": "6000"
+    },
+    {
+      "Name": "EggPriceRare",
+      "Value": "2400",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "EggPriceRare",
+      "Value": "9600",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "EggPriceRare",
+      "Value": "15000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "EggPriceRare",
+      "Value": "24000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "EggPriceVeryRare",
+      "Value": "12000"
+    },
+    {
+      "Name": "EggPriceVeryRare",
+      "Value": "4800",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "EggPriceVeryRare",
+      "Value": "19200",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "EggPriceVeryRare",
+      "Value": "30000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "EggPriceVeryRare",
+      "Value": "48000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    },
+    {
+      "Name": "EggPriceLegendary",
+      "Value": "24000"
+    },
+    {
+      "Name": "EggPriceLegendary",
+      "Value": "9600",
+      "When": {
+        "EconomyLevel": "Strict"
+      }
+    },
+    {
+      "Name": "EggPriceLegendary",
+      "Value": "38400",
+      "When": {
+        "EconomyLevel": "Generous"
+      }
+    },
+    {
+      "Name": "EggPriceLegendary",
+      "Value": "60000",
+      "When": {
+        "EconomyLevel": "VeryGenerous"
+      }
+    },
+    {
+      "Name": "EggPriceLegendary",
+      "Value": "96000",
+      "When": {
+        "EconomyLevel": "Fortune"
+      }
+    }
+  ],
+  "Changes": [
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/abradata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/absoldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/aerodactyldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/aipomdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolacubonedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/aloladiglettdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolageodudedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolagrimerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolameowthdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolapichudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolarattatadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolasandshrewdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alolavulpixdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/alomomoladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/amauradata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/anorithdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/applinhydrappledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/arceusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/archendata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/arctovishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/arctozoltdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/armarougedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/arondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/arrokudadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/articunodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/audinodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/axewdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/azelfdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/azurilldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bagondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/baltoydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/barboachdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/basculindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/beautiflydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/beldumdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bellsproutdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bergmitedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bidoofdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/binacledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/blacephalondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/blipbugdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/blitzledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bombirdierdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bonslydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bouffalantdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bounsweetdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bramblindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bronzordata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/brutebonnetdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bruxishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/budewdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/buizeldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bulbasaurdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bunearydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/bunnelbydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/buzzwoledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cacneadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/calyrexdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/capsakiddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/carbinkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/carnivinedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/carvanhadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/castformdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/caterpiedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/celebidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/celesteeladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ceruledgedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cetoddledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/charmanderdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chatotdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cherubidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chespindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chewtledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chienpaodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chikoritadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chimchardata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chinchoudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chinglingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/chiyudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/clauncherdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cleffadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/clobbopusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cobaliondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/combeedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/comfeydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/corphishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/corsoladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cottoneedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/crabrawlerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cramorantdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cranidosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cresseliadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/croagunkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cryogonaldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cubchoodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cubonedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cufantdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cutieflydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cyclizardata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/cyndaquildata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/darkraidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/darumakadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dedennedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/deerlingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/deinodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/delibirddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/deoxysdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dewpiderdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dhelmisedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dialgadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dianciedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/diglettdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dittodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/doduodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dracovishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dracozoltdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/drampadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dratinidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dreepydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/drifloondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/drilburdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/drowzeedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/druddigondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ducklettdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dunsparcedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/duraludondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/durantdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/duskulldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dustoxdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dwebbledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveeespeondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveeflareondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveeglaceondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveejolteondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveeleafeondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveesylveondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveeumbreondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eeveevaporeondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eiscuedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ekansdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/electrikedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/elekiddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/elgyemdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/emolgadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/enteidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/espurrdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/eternatusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/exeggcutedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/falinksdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/farfetchddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/feebasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fennekindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ferroseeddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fezandipitidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fidoughdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/finizendata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/finneondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/flabebedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/floetteeternaldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/flamigodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fletchlingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/flittledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fluttermanedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fomantisdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/foongusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/frigibaxdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/frillish2data.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/froakiedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/froslassdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/fuecocodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/furfroudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galararticunodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarcorsoladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galardarumakadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarfarfetchddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarkoffingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarmeowthdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarmoltresdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarponytadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarslowbrodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarslowkingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarstunfiskdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galaryamaskdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarzapdosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galarzigzagoondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/galladedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gardevoirdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gastlydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/genesectdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/geodudedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gibledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gimmighouldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/girafarigdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/giratinadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/glaliedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/glameowdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/glastrierdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gligardata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/glimmetdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/goldeendata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/golettdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/goomydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gossifleurdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gothitadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gougingfiredata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/greattuskdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/greavarddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/grimerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/grookeydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/groudondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/growlithedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/grubbindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/gulpindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/guzzlorddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/happinydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hatennadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hawluchadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/heatmordata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/heatrandata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/helioptiledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/heracrossdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hippopotasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuigrowlithedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuiqwilfishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuivoltorbdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hitmonchandata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hitmonleedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hitmontopdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/honedgedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hoohdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hoopadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hoothootdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hoppipdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/horseadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/houndourdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/igglybuffdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/illumisedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/impidimpdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/indeedeedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/inkaydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironboulderdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironbundledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironcrowndata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironhandsdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironjugulisdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironleavesdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironmothdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironthornsdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/irontreadsdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ironvaliantdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/jangmoodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/jirachidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/joltikdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kabutodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kangaskhandata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/karrablastdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kartanadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kecleondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/keldeodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/klawfdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/klefkidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/klinkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/koffingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/komaladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/krabbydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kricketotdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kubfudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kyogredata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kyuremdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/landorusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/laprasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/larvestadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/larvitardata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/latiasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/latiosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lechonkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ledybadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lickitungdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lileepdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lillipupdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/litleodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/littendata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/litwickdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lotaddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lugiadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lunaladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/lunatonedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/luvdiscdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/machopdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/magbydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/magearnadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/magikarpdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/magnemitedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/makuhitadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/manaphydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mankeydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mantykedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/maractusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mareaniedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mareepdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/marshadowdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/maschiffdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mawiledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/medititedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/meloettadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/meltandata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/meowthdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mespritdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mewdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mewtwodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mienfoodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/milcerydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/miltankdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mimikyudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/minccinodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/miniordata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/minundata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/misdreavusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/missignodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/moltresdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/morelulldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/morpekodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mothimdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mrmimedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mrrimedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mudbraydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/mudkipdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/munchlaxdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/munkidoridata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/munnadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/murkrowdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/naclidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/natudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/necrozmadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nickitdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nidoranfdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nidoranmdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nihilegodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nincadaninjaskdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nincadashedinjadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/noibatdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nosepassdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/numeldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/nymbledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/oddishbellossomdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/oddishvileplumedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ogerpondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/okidogidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/omanytedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/onixdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/orangurudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/oricoriodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/orthwormdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/oshawottdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pachirisudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/paldeataurosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/paldeawooperdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/palkiadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/panchamdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/panpourdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pansagedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/panseardata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/parasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/patratdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pawmidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pawniarddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pecharuntdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/petilildata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/phanpydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/phantumpdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pheromosadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/phionedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pichudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pidgeydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pidovedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pikipekdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pincurchindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pinecodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pinsirdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/piplupdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/plusledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/poipoledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/poliwagpolitoeddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/poliwagpoliwrathdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/poltchageistdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ponytadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/poochyenadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/poppliodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/porygondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/psyduckdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pumpkaboodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/purrloindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/pyukumukudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/quaxlydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/qwilfishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/raikoudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rattatadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rayquazadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/regicedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/regidragodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/regielekidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/regigigasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/regirockdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/registeeldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/relicanthdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rellordata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/remoraiddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/reshiramdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rhyhorndata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rioludata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/roaringmoondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rockruffdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/roggenroladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rolycolydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rookideedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rosabyssdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rotomdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/rowletdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/ruffletdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sableyedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/salanditdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sandiledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sandshrewdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sandygastdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sandyshocksdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sawkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/scatterbugdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/scorbunnydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/scraggydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/screamtaildata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/scytherdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/seedotdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/seeldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sentretdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/serpangdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/seviperdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sewaddledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shaymindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shellderdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shellosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shelmetdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shieldondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shinxdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shroodledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shroomishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shuckledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shuppetdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sigilyphdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/silicobradata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sinisteadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sizzlipededata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/skarmorydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/skiddodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/skittydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/skorupidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/skrelpdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/skwovetdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/slakothdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/slitherwingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/slowbrodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/slowkingdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/slugmadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/smeargledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/smolivdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/smoochumdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sneaseldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/snivydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/snomdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/snoverdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/snubbulldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sobbledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/solgaleodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/solosisdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/solrockdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spearowdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spectrierdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sphealdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spinarakdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spindadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spiritombdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spoinkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sprigatitodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/spritzeedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/squawkabillydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/squirtledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/stakatakadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/stantlerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/starlydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/staryudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/stonjournerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/stuffuldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/stunfiskdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/stunkydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/suicunedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/sunkerndata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/surskitdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/swabludata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/swinubdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/swirlixdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tadbulbdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/taillowdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tandemausdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tangeladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tapubuludata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tapufinidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tapukokodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tapuleledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tarountuladata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tatsugiridata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/taurosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/teddiursadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tentacooldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tepigdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/terapagosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/terrakiondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/throhdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/thundurusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/timburrdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tingludata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tinkatinkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tirtougadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/toedscooldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/togedemarudata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/togepidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/torchicdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/torkoaldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tornadusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/totodiledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/toxeldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/trapinchdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/treeckodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tropiusdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/trubbishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/turtonatordata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/turtwigdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tympoledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tynamodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/typenulldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/tyruntdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/unowndata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/uxiedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/vanillitedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/varoomdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/veluzadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/venipededata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/venonatdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/victinidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/viriziondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/volbeatdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/volcaniondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/voltorbdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/vullabydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/vulpixdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wailmerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/walkingwakedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wattreldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/weedledata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/whismurdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wiglettdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wimpoddata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wingulldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wishiwashidata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wochiendata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/woobatdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wooloodata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wooperdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wormadamdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/wynautdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/xerneasdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/xurkitreedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/yamaskdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/yamperdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/yanmadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/yungoosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/yveltaldata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zaciandata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zamazentadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zangoosedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zapdosdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zarudedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zekromdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zeraoradata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zigzagoondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zoruadata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zubatdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/zygardedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/appletundata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/dipplindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/frillishdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuiavaluggdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuibraviarydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuidecidueyedata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuigoodradata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuililligantdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuisamurottdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuisneaslerdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuityphlosiondata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/hisuizoroarkdata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/kleavordata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/livestocks/shayminskydata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/energiesgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/pokemondropgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/egggifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/platesgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/fossilsgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/mayosgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/bigcraftables/energyextractor.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/bigcraftables/incubator.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/mail/maildata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/mail/triggers.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/travelingcart.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/energy.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/mayos.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/pokemondrops.json"
+    },
+    {
+      "Action": "Load",
+      "Target": "{{ModId}}/i18n",
+      "FromFile": "{{FirstValidFile: i18n/{{language}}.json, i18n/default.json }}"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/beehousedrop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/casino.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/choptreedrop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/festivalshop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/fishing.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/friendship.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/garbagedrop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/geodesdrop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/minedrop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/hardmine.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/panning.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/shaketreedrop.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/choptreespecial.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/traindata.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/museum/fossils.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/bigcraftables/reanimationmachine.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/mushroomtree.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/mystictree.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/greenraintree.json"
+    },
+    {
+      "LogName": "Load Bunnelby clover sprite",
+      "Action": "Load",
+      "Target": "{{ModId}}/trefle",
+      "FromFile": "assets/pokemondrop/trefle.png"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/vanillaeggs.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/museum/arceusplates.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/skullrift.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/ccjoja.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/spawndata/quarrymail.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/mail/willymine.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/berries/berries.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/berries/seeds.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/berries/berrymail.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/berries/apricorns.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/berries/berryshops.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/berrygifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/berries/berrypress.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/gems.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/gemgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/wool.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/woolgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/milk.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/milkgifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/feather.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/feathergifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/crafts/clover.json",
+      "When": {
+        "LuckyClover": "true"
+      }
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/bundles/bundles.json",
+      "When": {
+        "CommunityCenter": "pokemon, difficile"
+      }
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/museum/fishingtreasure.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/marine/marine.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/marinegifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/marine/treasures.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/gifttastes/treasuregifttastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/mail/marniemail.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/mail/extramail.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "data/marine/panningmarine.json"
+    }
+  ]
+}

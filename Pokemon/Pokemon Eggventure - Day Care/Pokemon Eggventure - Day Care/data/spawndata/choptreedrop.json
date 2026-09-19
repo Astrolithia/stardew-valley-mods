@@ -1,0 +1,514 @@
+{
+  "Changes": [
+    {
+      "LogName": "CHOP arbre 1 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_1_general": {
+          "Id": "{{ModId}}_chop_1_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_general",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_1_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 1 pool summer_storm",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_1_summer_storm": {
+          "Id": "{{ModId}}_chop_1_summer_storm",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_summer_storm",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here summer, WEATHER Here Storm"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_1_summer_storm",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 1 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "1",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_1_winter": {
+          "Id": "{{ModId}}_chop_1_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_1_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 2 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_2_general": {
+          "Id": "{{ModId}}_chop_2_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_general",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_2_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 2 pool summer_storm",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_2_summer_storm": {
+          "Id": "{{ModId}}_chop_2_summer_storm",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_summer_storm",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here summer, WEATHER Here Storm"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_2_summer_storm",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 2 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "2",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_2_winter": {
+          "Id": "{{ModId}}_chop_2_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_2_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 3 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_3_general": {
+          "Id": "{{ModId}}_chop_3_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_general",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_3_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 3 pool summer_storm",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_3_summer_storm": {
+          "Id": "{{ModId}}_chop_3_summer_storm",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_summer_storm",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here summer, WEATHER Here Storm"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_3_summer_storm",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 3 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "3",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_3_winter": {
+          "Id": "{{ModId}}_chop_3_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_3_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 8 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_8_general": {
+          "Id": "{{ModId}}_chop_8_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_general",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_8_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 8 pool summer_storm",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_8_summer_storm": {
+          "Id": "{{ModId}}_chop_8_summer_storm",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_summer_storm",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here summer, WEATHER Here Storm"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_8_summer_storm",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 8 pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "8",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_8_winter": {
+          "Id": "{{ModId}}_chop_8_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_8_winter",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre Birch_Tree pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_birch_general": {
+          "Id": "{{ModId}}_chop_birch_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_general",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_birch_general",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "CHOP arbre Birch_Tree pool summer_storm",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_birch_summer_storm": {
+          "Id": "{{ModId}}_chop_birch_summer_storm",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_summer_storm",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here summer, WEATHER Here Storm"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_birch_summer_storm",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "CHOP arbre Birch_Tree pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Birch_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_birch_winter": {
+          "Id": "{{ModId}}_chop_birch_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_birch_winter",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "CHOP arbre Fir_Tree pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_fir_general": {
+          "Id": "{{ModId}}_chop_fir_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_general",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_fir_general",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "CHOP arbre Fir_Tree pool summer_storm",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_fir_summer_storm": {
+          "Id": "{{ModId}}_chop_fir_summer_storm",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_summer_storm",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here summer, WEATHER Here Storm"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_fir_summer_storm",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "CHOP arbre Fir_Tree pool winter",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "FlashShifter.StardewValleyExpandedCP_Fir_Tree",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_fir_winter": {
+          "Id": "{{ModId}}_chop_fir_winter",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_winter",
+          "MaxItems": 1,
+          "Chance": "{{RateChopValleyTree}}",
+          "Condition": "LOCATION_SEASON Here winter"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_fir_winter",
+          "ToPosition": "Top"
+        }
+      ],
+      "When": {
+        "HasMod": "FlashShifter.StardewValleyExpandedCP"
+      }
+    },
+    {
+      "LogName": "CHOP arbre 6 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "6",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_6_general": {
+          "Id": "{{ModId}}_chop_6_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_palmdesert",
+          "MaxItems": 1,
+          "Chance": "{{RateChopDesertPalm}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_6_general",
+          "ToPosition": "Top"
+        }
+      ]
+    },
+    {
+      "LogName": "CHOP arbre 9 pool general",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "9",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_9_general": {
+          "Id": "{{ModId}}_chop_9_general",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_chop_palmisland",
+          "MaxItems": 1,
+          "Chance": "{{RateChopIslandPalm}}"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_chop_9_general",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

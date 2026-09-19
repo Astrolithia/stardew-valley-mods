@@ -1,0 +1,249 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load spearow textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/spearow/spearow, {{ModId}}/spearow/shinyspearow, {{ModId}}/spearow/fearow, {{ModId}}/spearow/shinyfearow, {{ModId}}/spearow/spearowegg, {{ModId}}/spearow/spearowshop",
+      "FromFile": "assets/livestocks/spearow/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "spearow egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_spearowegg": {
+          "Name": "{{ModId}}_spearowegg",
+          "DisplayName": "{{i18n: spearowegg}}",
+          "Description": "{{i18n: spearowegg.d}}",
+          "Texture": "{{ModId}}/spearow/spearowegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_spearow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_spearow": {
+          "DisplayName": "{{i18n: spearow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_spearowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: spearowbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spearow/fearow",
+          "BabyTexture": "{{ModId}}/spearow/spearow",
+          "Sound": "{{ModId}}_fearowcry",
+          "BabySound": "{{ModId}}_spearowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_spearowegg",
+              "MinimumFriendship": 0
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "DropOvernight",
+          "PurchasePrice": 400,
+          "ShopDescription": "{{i18n:marnie_spearow_desc}}",
+          "ShopTexture": "{{ModId}}/spearow/spearowshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "DeluxeProduceItemIds": []
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyspearow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyspearow": {
+          "DisplayName": "{{i18n: shinyspearow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_spearowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyspearowbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/spearow/shinyfearow",
+          "BabyTexture": "{{ModId}}/spearow/shinyspearow",
+          "Sound": "{{ModId}}_fearowcry",
+          "BabySound": "{{ModId}}_spearowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_spearowegg",
+              "MinimumFriendship": 0
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "DropOvernight",
+          "DeluxeProduceItemIds": []
+        }
+      }
+    },
+    {
+      "LogName": "spearow cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_spearowcry": {
+          "ID": "{{ModId}}_spearowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spearow/spearowcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_fearowcry": {
+          "ID": "{{ModId}}_fearowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/spearow/fearowcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "spearow hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_spearowegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyspearow",
+              "AnimalId": "{{ModId}}_shinyspearow",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_spearow",
+              "AnimalId": "{{ModId}}_spearow",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_spearow",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_spearow",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_spearow_dailydrop": {
+          "Id": "{{ModId}}_spearow_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_spearow_dailydrop_item",
+              "ItemId": "{{ModId}}_prettyfeather",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - spearow",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_spearow",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_prettyfeather": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinyspearow",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyspearow",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinyspearow_dailydrop": {
+          "Id": "{{ModId}}_shinyspearow_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinyspearow_dailydrop_item",
+              "ItemId": "{{ModId}}_prettyfeather",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyspearow",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyspearow",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_prettyfeather": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

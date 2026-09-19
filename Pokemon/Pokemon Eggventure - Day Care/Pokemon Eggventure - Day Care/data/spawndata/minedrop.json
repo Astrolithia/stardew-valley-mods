@@ -1,0 +1,688 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load custom nodes texture (partagee mine/arbres/forage)",
+      "Action": "Load",
+      "Target": "{{ModId}}/customnodes",
+      "FromFile": "assets/customnodes.png"
+    },
+    {
+      "LogName": "Mine egg nodes (par palier, pioche + niveau)",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Resources",
+      "Entries": {
+        "{{ModId}}_EggNode_mine_101_120_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_101_120_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_101_120_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "101/120",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 6"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_101_120_p5": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_101_120_p5_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_101_120_p5",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "101/120",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 8"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_1_30_p1": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 0,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_1_30_p1_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_1_30_p1",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/30",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_1_30_p2": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 1,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_1_30_p2_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_1_30_p2",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/30",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 2"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_31_40_p2": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 1,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_31_40_p2_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_31_40_p2",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "31/40",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 2"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_31_40_p3": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_31_40_p3_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_31_40_p3",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "31/40",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 4"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_41_60_p3": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_41_60_p3_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_41_60_p3",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "41/60",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 4"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_41_60_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_41_60_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_41_60_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "41/60",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 6"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_61_80_p3": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_61_80_p3_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_61_80_p3",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "61/80",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 4"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_61_80_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_61_80_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_61_80_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "61/80",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 6"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_81_100_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_81_100_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_81_100_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "81/100",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 6"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_mine_81_100_p5": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_mine_81_100_p5_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_mine_81_100_p5",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "81/100",
+              "Type": "Normal",
+              "SpawnFrequency": "{{RateMine}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 8"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_quarry_p2": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 1,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_quarry_p2_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_quarry_p2",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Mountain",
+              "SpawnFrequency": "{{RateQuarry}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 2"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_quarry_p3": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_quarry_p3_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_quarry_p3",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Mountain",
+              "SpawnFrequency": "{{RateQuarry}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 4"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_quarry_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_quarry_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_quarry_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Mountain",
+              "SpawnFrequency": "{{RateQuarry}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 6"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_skullcavern_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_skullcavern_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_skullcavern_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "121/-999",
+              "Type": "All",
+              "SpawnFrequency": "{{RateSkullCavern}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 7"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_skullcavern_p5": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_skullcavern_p5_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_skullcavern_p5",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "121/-999",
+              "Type": "All",
+              "SpawnFrequency": "{{RateSkullCavern}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 9"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_volcano_p3": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_volcano_p3_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_volcano_p3",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Volcano",
+              "SpawnFrequency": "{{RateVolcano}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 8"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_volcano_p4": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_volcano_p4_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_volcano_p4",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Volcano",
+              "SpawnFrequency": "{{RateVolcano}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 9"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_volcano_p5": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_volcano_p5_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_volcano_p5",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/-999",
+              "Type": "Volcano",
+              "SpawnFrequency": "{{RateVolcano}}",
+              "Condition": "PLAYER_MINING_LEVEL Current 10"
+            }
+          ]
+        },
+        "{{ModId}}_EggNode_quarrymine": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 3,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone #B388FF",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_EggNode_quarrymine_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_quarrymine",
+              "MaxItems": 1,
+              "Chance": 1
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "77377",
+              "Type": "All",
+              "SpawnFrequency": "{{RateQuarryMine}}",
+              "Condition": "PLAYER_HAS_MAIL Current {{ModId}}_quarrymail Any"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

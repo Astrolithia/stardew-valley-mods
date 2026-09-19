@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load tadbulb textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/tadbulb/tadbulb, {{ModId}}/tadbulb/shinytadbulb, {{ModId}}/tadbulb/bellibolt, {{ModId}}/tadbulb/shinybellibolt, {{ModId}}/tadbulb/tadbulbegg",
+      "FromFile": "assets/livestocks/tadbulb/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_tadbulb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_tadbulb": {
+          "DisplayName": "{{i18n: tadbulb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tadbulbegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: tadbulbbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tadbulb/bellibolt",
+          "BabyTexture": "{{ModId}}/tadbulb/tadbulb",
+          "Sound": "{{ModId}}_belliboltcry",
+          "BabySound": "{{ModId}}_tadbulbcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tadbulbegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytadbulb data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytadbulb": {
+          "DisplayName": "{{i18n: shinytadbulb}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_tadbulbegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytadbulbbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/tadbulb/shinybellibolt",
+          "BabyTexture": "{{ModId}}/tadbulb/shinytadbulb",
+          "Sound": "{{ModId}}_belliboltcry",
+          "BabySound": "{{ModId}}_tadbulbcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_tadbulbegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "tadbulb cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_tadbulbcry": {
+          "ID": "{{ModId}}_tadbulbcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tadbulb/tadbulbcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_belliboltcry": {
+          "ID": "{{ModId}}_belliboltcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/tadbulb/belliboltcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tadbulb egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_tadbulbegg": {
+          "Name": "{{ModId}}_tadbulbegg",
+          "DisplayName": "{{i18n: tadbulbegg}}",
+          "Description": "{{i18n: tadbulbegg.d}}",
+          "Texture": "{{ModId}}/tadbulb/tadbulbegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "pkegg_panning_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "tadbulb hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_tadbulbegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytadbulb",
+              "AnimalId": "{{ModId}}_shinytadbulb",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_tadbulb",
+              "AnimalId": "{{ModId}}_tadbulb",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

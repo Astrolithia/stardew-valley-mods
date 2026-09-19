@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zorua textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zorua/zorua, {{ModId}}/zorua/shinyzorua, {{ModId}}/zorua/zoroark, {{ModId}}/zorua/shinyzoroark, {{ModId}}/zorua/zoruaegg",
+      "FromFile": "assets/livestocks/zorua/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zorua data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zorua": {
+          "DisplayName": "{{i18n: zorua}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zoruaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zoruabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zorua/zoroark",
+          "BabyTexture": "{{ModId}}/zorua/zorua",
+          "Sound": "{{ModId}}_zoroarkcry",
+          "BabySound": "{{ModId}}_zoruacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zoruaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzorua data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzorua": {
+          "DisplayName": "{{i18n: shinyzorua}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_zoruaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzoruabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zorua/shinyzoroark",
+          "BabyTexture": "{{ModId}}/zorua/shinyzorua",
+          "Sound": "{{ModId}}_zoroarkcry",
+          "BabySound": "{{ModId}}_zoruacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zoruaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "zorua cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zoruacry": {
+          "ID": "{{ModId}}_zoruacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zorua/zoruacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_zoroarkcry": {
+          "ID": "{{ModId}}_zoroarkcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zorua/zoroarkcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zorua egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zoruaegg": {
+          "Name": "{{ModId}}_zoruaegg",
+          "DisplayName": "{{i18n: zoruaegg}}",
+          "Description": "{{i18n: zoruaegg.d}}",
+          "Texture": "{{ModId}}/zorua/zoruaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_rare",
+            "pkegg_mine_31_40_p3",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zorua hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zoruaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzorua",
+              "AnimalId": "{{ModId}}_shinyzorua",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zorua",
+              "AnimalId": "{{ModId}}_zorua",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

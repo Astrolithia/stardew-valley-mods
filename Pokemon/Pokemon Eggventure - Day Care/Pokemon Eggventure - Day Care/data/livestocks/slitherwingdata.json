@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load slitherwing textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/slitherwing/slitherwing, {{ModId}}/slitherwing/shinyslitherwing, {{ModId}}/slitherwing/slitherwingegg",
+      "FromFile": "assets/livestocks/slitherwing/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_slitherwing data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_slitherwing": {
+          "DisplayName": "{{i18n: slitherwing}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_slitherwingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: slitherwingbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/slitherwing/slitherwing",
+          "BabyTexture": "{{ModId}}/slitherwing/slitherwing",
+          "Sound": "{{ModId}}_slitherwingcry",
+          "BabySound": "{{ModId}}_slitherwingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_slitherwingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyslitherwing data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyslitherwing": {
+          "DisplayName": "{{i18n: shinyslitherwing}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_slitherwingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyslitherwingbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/slitherwing/shinyslitherwing",
+          "BabyTexture": "{{ModId}}/slitherwing/shinyslitherwing",
+          "Sound": "{{ModId}}_slitherwingcry",
+          "BabySound": "{{ModId}}_slitherwingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_slitherwingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "slitherwing cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_slitherwingcry": {
+          "ID": "{{ModId}}_slitherwingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/slitherwing/slitherwingcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "slitherwing egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_slitherwingegg": {
+          "Name": "{{ModId}}_slitherwingegg",
+          "DisplayName": "{{i18n: slitherwingegg}}",
+          "Description": "{{i18n: slitherwingegg.d}}",
+          "Texture": "{{ModId}}/slitherwing/slitherwingegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_bug",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_anciens",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "slitherwing hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_slitherwingegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyslitherwing",
+              "AnimalId": "{{ModId}}_shinyslitherwing",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_slitherwing",
+              "AnimalId": "{{ModId}}_slitherwing",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

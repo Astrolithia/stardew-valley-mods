@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load nacli textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/nacli/nacli, {{ModId}}/nacli/shinynacli, {{ModId}}/nacli/naclstack, {{ModId}}/nacli/shinynaclstack, {{ModId}}/nacli/garganacl, {{ModId}}/nacli/shinygarganacl, {{ModId}}/nacli/nacliegg",
+      "FromFile": "assets/livestocks/nacli/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_nacli data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_nacli": {
+          "DisplayName": "{{i18n: nacli}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_nacliegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: naclibirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nacli/naclstack",
+          "BabyTexture": "{{ModId}}/nacli/nacli",
+          "Sound": "{{ModId}}_garganaclcry",
+          "BabySound": "{{ModId}}_naclicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nacliegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_nacli evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_nacli",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "naclievolution": {
+          "Id": "naclievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/nacli/garganacl"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinynacli data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinynacli": {
+          "DisplayName": "{{i18n: shinynacli}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_nacliegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinynaclibirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nacli/shinynaclstack",
+          "BabyTexture": "{{ModId}}/nacli/shinynacli",
+          "Sound": "{{ModId}}_garganaclcry",
+          "BabySound": "{{ModId}}_naclicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nacliegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinynacli evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinynacli",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinynaclievolution": {
+          "Id": "shinynaclievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/nacli/shinygarganacl"
+        }
+      }
+    },
+    {
+      "LogName": "nacli cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_naclicry": {
+          "ID": "{{ModId}}_naclicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nacli/naclicry.ogg}}"
+          ]
+        },
+        "{{ModId}}_garganaclcry": {
+          "ID": "{{ModId}}_garganaclcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nacli/garganaclcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nacli egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_nacliegg": {
+          "Name": "{{ModId}}_nacliegg",
+          "DisplayName": "{{i18n: nacliegg}}",
+          "Description": "{{i18n: nacliegg.d}}",
+          "Texture": "{{ModId}}/nacli/nacliegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_verycommon",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nacli hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_nacliegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinynacli",
+              "AnimalId": "{{ModId}}_shinynacli",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_nacli",
+              "AnimalId": "{{ModId}}_nacli",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

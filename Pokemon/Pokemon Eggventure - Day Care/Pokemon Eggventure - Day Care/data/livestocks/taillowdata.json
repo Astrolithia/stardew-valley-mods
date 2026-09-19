@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load taillow textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/taillow/taillow, {{ModId}}/taillow/shinytaillow, {{ModId}}/taillow/swellow, {{ModId}}/taillow/shinyswellow, {{ModId}}/taillow/taillowegg",
+      "FromFile": "assets/livestocks/taillow/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_taillow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_taillow": {
+          "DisplayName": "{{i18n: taillow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_taillowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: taillowbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/taillow/swellow",
+          "BabyTexture": "{{ModId}}/taillow/taillow",
+          "Sound": "{{ModId}}_swellowcry",
+          "BabySound": "{{ModId}}_taillowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_taillowegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytaillow data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytaillow": {
+          "DisplayName": "{{i18n: shinytaillow}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_taillowegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytaillowbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/taillow/shinyswellow",
+          "BabyTexture": "{{ModId}}/taillow/shinytaillow",
+          "Sound": "{{ModId}}_swellowcry",
+          "BabySound": "{{ModId}}_taillowcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_taillowegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "taillow cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_taillowcry": {
+          "ID": "{{ModId}}_taillowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/taillow/taillowcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_swellowcry": {
+          "ID": "{{ModId}}_swellowcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/taillow/swellowcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "taillow egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_taillowegg": {
+          "Name": "{{ModId}}_taillowegg",
+          "DisplayName": "{{i18n: taillowegg}}",
+          "Description": "{{i18n: taillowegg.d}}",
+          "Texture": "{{ModId}}/taillow/taillowegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_general",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "taillow hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_taillowegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytaillow",
+              "AnimalId": "{{ModId}}_shinytaillow",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_taillow",
+              "AnimalId": "{{ModId}}_taillow",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

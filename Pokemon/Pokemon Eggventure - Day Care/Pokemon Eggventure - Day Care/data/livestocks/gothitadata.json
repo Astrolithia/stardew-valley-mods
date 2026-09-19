@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gothita textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/gothita/gothita, {{ModId}}/gothita/shinygothita, {{ModId}}/gothita/gothorita, {{ModId}}/gothita/shinygothorita, {{ModId}}/gothita/gothitelle, {{ModId}}/gothita/shinygothitelle, {{ModId}}/gothita/gothitaegg",
+      "FromFile": "assets/livestocks/gothita/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gothita data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gothita": {
+          "DisplayName": "{{i18n: gothita}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gothitaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gothitabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gothita/gothorita",
+          "BabyTexture": "{{ModId}}/gothita/gothita",
+          "Sound": "{{ModId}}_gothitellecry",
+          "BabySound": "{{ModId}}_gothitacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gothitaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_gothita evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_gothita",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "gothitaevolution": {
+          "Id": "gothitaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/gothita/gothitelle"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygothita data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygothita": {
+          "DisplayName": "{{i18n: shinygothita}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gothitaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygothitabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gothita/shinygothorita",
+          "BabyTexture": "{{ModId}}/gothita/shinygothita",
+          "Sound": "{{ModId}}_gothitellecry",
+          "BabySound": "{{ModId}}_gothitacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gothitaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygothita evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygothita",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygothitaevolution": {
+          "Id": "shinygothitaevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/gothita/shinygothitelle"
+        }
+      }
+    },
+    {
+      "LogName": "gothita cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_gothitacry": {
+          "ID": "{{ModId}}_gothitacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gothita/gothitacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gothitellecry": {
+          "ID": "{{ModId}}_gothitellecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gothita/gothitellecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gothita egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gothitaegg": {
+          "Name": "{{ModId}}_gothitaegg",
+          "DisplayName": "{{i18n: gothitaegg}}",
+          "Description": "{{i18n: gothitaegg.d}}",
+          "Texture": "{{ModId}}/gothita/gothitaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gothita hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_gothitaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygothita",
+              "AnimalId": "{{ModId}}_shinygothita",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gothita",
+              "AnimalId": "{{ModId}}_gothita",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "Changes": [
+    {
+      "LogName": "Pokemon wool gift tastes (copied from vanilla Wool)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Emily",
+            "1"
+          ],
+          "Value": "pkwool_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "3"
+          ],
+          "Value": "pkwool_item",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Penny",
+            "5"
+          ],
+          "Value": "pkwool_item",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

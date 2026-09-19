@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load klink textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/klink/klink, {{ModId}}/klink/shinyklink, {{ModId}}/klink/klang, {{ModId}}/klink/shinyklang, {{ModId}}/klink/klinklang, {{ModId}}/klink/shinyklinklang, {{ModId}}/klink/klinkegg",
+      "FromFile": "assets/livestocks/klink/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_klink data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_klink": {
+          "DisplayName": "{{i18n: klink}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_klinkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: klinkbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/klink/klang",
+          "BabyTexture": "{{ModId}}/klink/klink",
+          "Sound": "{{ModId}}_klinklangcry",
+          "BabySound": "{{ModId}}_klinkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_klinkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_klink evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_klink",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "klinkevolution": {
+          "Id": "klinkevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/klink/klinklang"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyklink data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyklink": {
+          "DisplayName": "{{i18n: shinyklink}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_klinkegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyklinkbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/klink/shinyklang",
+          "BabyTexture": "{{ModId}}/klink/shinyklink",
+          "Sound": "{{ModId}}_klinklangcry",
+          "BabySound": "{{ModId}}_klinkcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_klinkegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyklink evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyklink",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyklinkevolution": {
+          "Id": "shinyklinkevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/klink/shinyklinklang"
+        }
+      }
+    },
+    {
+      "LogName": "klink cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_klinkcry": {
+          "ID": "{{ModId}}_klinkcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/klink/klinkcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_klinklangcry": {
+          "ID": "{{ModId}}_klinklangcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/klink/klinklangcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "klink egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_klinkegg": {
+          "Name": "{{ModId}}_klinkegg",
+          "DisplayName": "{{i18n: klinkegg}}",
+          "Description": "{{i18n: klinkegg.d}}",
+          "Texture": "{{ModId}}/klink/klinkegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_common",
+            "pkegg_quarry_p2",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "klink hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_klinkegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyklink",
+              "AnimalId": "{{ModId}}_shinyklink",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_klink",
+              "AnimalId": "{{ModId}}_klink",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

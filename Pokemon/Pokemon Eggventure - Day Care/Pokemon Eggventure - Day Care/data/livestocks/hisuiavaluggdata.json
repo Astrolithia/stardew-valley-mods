@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuiavalugg textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bergmite/bergmite_hisuiavalugg, {{ModId}}/bergmite/shinybergmite_hisuiavalugg, {{ModId}}/bergmite/hisuiavalugg, {{ModId}}/bergmite/shinyhisuiavalugg, {{ModId}}/bergmite/hisuiavaluggegg",
+      "FromFile": "assets/livestocks/bergmite/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuiavalugg data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuiavalugg": {
+          "DisplayName": "{{i18n: hisuiavalugg}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuiavaluggegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuiavaluggbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bergmite/hisuiavalugg",
+          "BabyTexture": "{{ModId}}/bergmite/bergmite_hisuiavalugg",
+          "Sound": "{{ModId}}_hisuiavaluggcry",
+          "BabySound": "{{ModId}}_bergmitecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuiavaluggegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hisuiavalugg type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hisuiavalugg"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuiavalugg data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuiavalugg": {
+          "DisplayName": "{{i18n: shinyhisuiavalugg}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuiavaluggegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuiavaluggbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bergmite/shinyhisuiavalugg",
+          "BabyTexture": "{{ModId}}/bergmite/shinybergmite_hisuiavalugg",
+          "Sound": "{{ModId}}_hisuiavaluggcry",
+          "BabySound": "{{ModId}}_bergmitecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuiavaluggegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhisuiavalugg type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhisuiavalugg"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "hisuiavalugg cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bergmitecry": {
+          "ID": "{{ModId}}_bergmitecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bergmite/bergmitecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuiavaluggcry": {
+          "ID": "{{ModId}}_hisuiavaluggcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bergmite/hisuiavaluggcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuiavalugg egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuiavaluggegg": {
+          "Name": "{{ModId}}_hisuiavaluggegg",
+          "DisplayName": "{{i18n: hisuiavaluggegg}}",
+          "Description": "{{i18n: hisuiavaluggegg.d}}",
+          "Texture": "{{ModId}}/bergmite/hisuiavaluggegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_common",
+            "pkegg_mine_41_60_p4",
+            "pkegg_mine_61_80_p4",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuiavalugg hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuiavaluggegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuiavalugg",
+              "AnimalId": "{{ModId}}_shinyhisuiavalugg",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuiavalugg",
+              "AnimalId": "{{ModId}}_hisuiavalugg",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

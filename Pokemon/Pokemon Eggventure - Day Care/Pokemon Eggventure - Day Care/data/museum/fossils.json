@@ -1,0 +1,275 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fossil textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fossils/fossilnautile, {{ModId}}/fossils/fossildome, {{ModId}}/fossils/vieilambre, {{ModId}}/fossils/fossilgriffe, {{ModId}}/fossils/fossilracine, {{ModId}}/fossils/fossilcrane, {{ModId}}/fossils/fossilarmure, {{ModId}}/fossils/fossilplume, {{ModId}}/fossils/fossilplaque, {{ModId}}/fossils/fossilmachoire, {{ModId}}/fossils/fossilsceau, {{ModId}}/fossils/fossilvish, {{ModId}}/fossils/fossilzolt, {{ModId}}/fossils/fossilarcto, {{ModId}}/fossils/fossilpatch",
+      "FromFile": "assets/museum/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Fossil objects",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fossilnautile": {
+          "Name": "{{ModId}}_fossilnautile",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilnautile}}",
+          "Description": "{{i18n:fossilnautile_d}}",
+          "Texture": "{{ModId}}/fossils/fossilnautile",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilnautile",
+            "pkfossil_geode",
+            "color_brown"
+          ]
+        },
+        "{{ModId}}_fossildome": {
+          "Name": "{{ModId}}_fossildome",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossildome}}",
+          "Description": "{{i18n:fossildome_d}}",
+          "Texture": "{{ModId}}/fossils/fossildome",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossildome",
+            "pkfossil_geode",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_vieilambre": {
+          "Name": "{{ModId}}_vieilambre",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:vieilambre}}",
+          "Description": "{{i18n:vieilambre_d}}",
+          "Texture": "{{ModId}}/fossils/vieilambre",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_vieilambre",
+            "pkfossil_trove",
+            "color_gold"
+          ]
+        },
+        "{{ModId}}_fossilgriffe": {
+          "Name": "{{ModId}}_fossilgriffe",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilgriffe}}",
+          "Description": "{{i18n:fossilgriffe_d}}",
+          "Texture": "{{ModId}}/fossils/fossilgriffe",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilgriffe",
+            "pkfossil_omni",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_fossilracine": {
+          "Name": "{{ModId}}_fossilracine",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilracine}}",
+          "Description": "{{i18n:fossilracine_d}}",
+          "Texture": "{{ModId}}/fossils/fossilracine",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilracine",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_fossilcrane": {
+          "Name": "{{ModId}}_fossilcrane",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilcrane}}",
+          "Description": "{{i18n:fossilcrane_d}}",
+          "Texture": "{{ModId}}/fossils/fossilcrane",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilcrane",
+            "pkfossil_magma",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_fossilarmure": {
+          "Name": "{{ModId}}_fossilarmure",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilarmure}}",
+          "Description": "{{i18n:fossilarmure_d}}",
+          "Texture": "{{ModId}}/fossils/fossilarmure",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilarmure",
+            "pkfossil_omni",
+            "color_brown"
+          ]
+        },
+        "{{ModId}}_fossilplume": {
+          "Name": "{{ModId}}_fossilplume",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilplume}}",
+          "Description": "{{i18n:fossilplume_d}}",
+          "Texture": "{{ModId}}/fossils/fossilplume",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilplume",
+            "pkfossil_trove",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_fossilplaque": {
+          "Name": "{{ModId}}_fossilplaque",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilplaque}}",
+          "Description": "{{i18n:fossilplaque_d}}",
+          "Texture": "{{ModId}}/fossils/fossilplaque",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilplaque",
+            "pkfossil_frozen",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_fossilmachoire": {
+          "Name": "{{ModId}}_fossilmachoire",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilmachoire}}",
+          "Description": "{{i18n:fossilmachoire_d}}",
+          "Texture": "{{ModId}}/fossils/fossilmachoire",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilmachoire",
+            "pkfossil_magma",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_fossilsceau": {
+          "Name": "{{ModId}}_fossilsceau",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilsceau}}",
+          "Description": "{{i18n:fossilsceau_d}}",
+          "Texture": "{{ModId}}/fossils/fossilsceau",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilsceau",
+            "pkfossil_frozen",
+            "color_sea_green"
+          ]
+        },
+        "{{ModId}}_fossilvish": {
+          "Name": "{{ModId}}_fossilvish",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilvish}}",
+          "Description": "{{i18n:fossilvish_d}}",
+          "Texture": "{{ModId}}/fossils/fossilvish",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilvish",
+            "pkfossil_trove",
+            "color_lime"
+          ]
+        },
+        "{{ModId}}_fossilzolt": {
+          "Name": "{{ModId}}_fossilzolt",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilzolt}}",
+          "Description": "{{i18n:fossilzolt_d}}",
+          "Texture": "{{ModId}}/fossils/fossilzolt",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilzolt",
+            "pkfossil_magma",
+            "color_dark_brown"
+          ]
+        },
+        "{{ModId}}_fossilarcto": {
+          "Name": "{{ModId}}_fossilarcto",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilarcto}}",
+          "Description": "{{i18n:fossilarcto_d}}",
+          "Texture": "{{ModId}}/fossils/fossilarcto",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilarcto",
+            "pkfossil_frozen",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_fossilpatch": {
+          "Name": "{{ModId}}_fossilpatch",
+          "Category": -2,
+          "Type": "Minerals",
+          "DisplayName": "{{i18n:fossilpatch}}",
+          "Description": "{{i18n:fossilpatch_d}}",
+          "Texture": "{{ModId}}/fossils/fossilpatch",
+          "SpriteIndex": 0,
+          "Price": 300,
+          "ContextTags": [
+            "pkfossil_item",
+            "id_o_{{ModId}}_fossilpatch",
+            "pkfossil_frozen",
+            "color_dark_cyan"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "First fossil donation unlocks reanimation recipe",
+      "Action": "EditData",
+      "Target": "Data/MuseumRewards",
+      "Entries": {
+        "{{ModId}}_FirstFossilReward": {
+          "TargetContextTags": [
+            {
+              "Tag": "pkfossil_item",
+              "Count": 1
+            }
+          ],
+          "FlagOnCompletion": true,
+          "RewardActions": [
+            "AddMail Current {{ModId}}_ReanimationRecipe"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load impidimp textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/impidimp/impidimp, {{ModId}}/impidimp/shinyimpidimp, {{ModId}}/impidimp/morgrem, {{ModId}}/impidimp/shinymorgrem, {{ModId}}/impidimp/grimmsnarl, {{ModId}}/impidimp/shinygrimmsnarl, {{ModId}}/impidimp/impidimpegg",
+      "FromFile": "assets/livestocks/impidimp/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_impidimp data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_impidimp": {
+          "DisplayName": "{{i18n: impidimp}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_impidimpegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: impidimpbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/impidimp/morgrem",
+          "BabyTexture": "{{ModId}}/impidimp/impidimp",
+          "Sound": "{{ModId}}_grimmsnarlcry",
+          "BabySound": "{{ModId}}_impidimpcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_impidimpegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_impidimp evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_impidimp",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "impidimpevolution": {
+          "Id": "impidimpevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/impidimp/grimmsnarl"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyimpidimp data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyimpidimp": {
+          "DisplayName": "{{i18n: shinyimpidimp}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_impidimpegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyimpidimpbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/impidimp/shinymorgrem",
+          "BabyTexture": "{{ModId}}/impidimp/shinyimpidimp",
+          "Sound": "{{ModId}}_grimmsnarlcry",
+          "BabySound": "{{ModId}}_impidimpcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_impidimpegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyimpidimp evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyimpidimp",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyimpidimpevolution": {
+          "Id": "shinyimpidimpevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/impidimp/shinygrimmsnarl"
+        }
+      }
+    },
+    {
+      "LogName": "impidimp cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_impidimpcry": {
+          "ID": "{{ModId}}_impidimpcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/impidimp/impidimpcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_grimmsnarlcry": {
+          "ID": "{{ModId}}_grimmsnarlcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/impidimp/grimmsnarlcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "impidimp egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_impidimpegg": {
+          "Name": "{{ModId}}_impidimpegg",
+          "DisplayName": "{{i18n: impidimpegg}}",
+          "Description": "{{i18n: impidimpegg.d}}",
+          "Texture": "{{ModId}}/impidimp/impidimpegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_verycommon",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "impidimp hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_impidimpegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyimpidimp",
+              "AnimalId": "{{ModId}}_shinyimpidimp",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_impidimp",
+              "AnimalId": "{{ModId}}_impidimp",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load slakoth textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/slakoth/slakoth, {{ModId}}/slakoth/shinyslakoth, {{ModId}}/slakoth/vigoroth, {{ModId}}/slakoth/shinyvigoroth, {{ModId}}/slakoth/slaking, {{ModId}}/slakoth/shinyslaking, {{ModId}}/slakoth/slakothegg",
+      "FromFile": "assets/livestocks/slakoth/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_slakoth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_slakoth": {
+          "DisplayName": "{{i18n: slakoth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_slakothegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: slakothbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/slakoth/vigoroth",
+          "BabyTexture": "{{ModId}}/slakoth/slakoth",
+          "Sound": "{{ModId}}_slakingcry",
+          "BabySound": "{{ModId}}_slakothcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_slakothegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_slakoth evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_slakoth",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "slakothevolution": {
+          "Id": "slakothevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/slakoth/slaking"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyslakoth data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyslakoth": {
+          "DisplayName": "{{i18n: shinyslakoth}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_slakothegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyslakothbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/slakoth/shinyvigoroth",
+          "BabyTexture": "{{ModId}}/slakoth/shinyslakoth",
+          "Sound": "{{ModId}}_slakingcry",
+          "BabySound": "{{ModId}}_slakothcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_quickclaw",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_slakothegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyslakoth evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyslakoth",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyslakothevolution": {
+          "Id": "shinyslakothevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/slakoth/shinyslaking"
+        }
+      }
+    },
+    {
+      "LogName": "slakoth cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_slakothcry": {
+          "ID": "{{ModId}}_slakothcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/slakoth/slakothcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_slakingcry": {
+          "ID": "{{ModId}}_slakingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/slakoth/slakingcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "slakoth egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_slakothegg": {
+          "Name": "{{ModId}}_slakothegg",
+          "DisplayName": "{{i18n: slakothegg}}",
+          "Description": "{{i18n: slakothegg.d}}",
+          "Texture": "{{ModId}}/slakoth/slakothegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_normal",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "slakoth hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_slakothegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyslakoth",
+              "AnimalId": "{{ModId}}_shinyslakoth",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_slakoth",
+              "AnimalId": "{{ModId}}_slakoth",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

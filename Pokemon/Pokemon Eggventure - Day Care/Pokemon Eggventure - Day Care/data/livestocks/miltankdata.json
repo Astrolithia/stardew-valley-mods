@@ -1,0 +1,300 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load miltank textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/miltank/miltank, {{ModId}}/miltank/shinymiltank, {{ModId}}/miltank/miltankegg, {{ModId}}/miltank/miltankshop",
+      "FromFile": "assets/livestocks/miltank/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_miltank data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_miltank": {
+          "DisplayName": "{{i18n: miltank}}",
+          "Gender": "Female",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_miltankegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: miltankbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/miltank/miltank",
+          "BabyTexture": "{{ModId}}/miltank/miltank",
+          "Sound": "{{ModId}}_miltankcry",
+          "BabySound": "{{ModId}}_miltankcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_moomoo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_miltankegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_moomoolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "PurchasePrice": 750,
+          "ShopDescription": "{{i18n:marnie_miltank_desc}}",
+          "ShopTexture": "{{ModId}}/miltank/miltankshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymiltank data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymiltank": {
+          "DisplayName": "{{i18n: shinymiltank}}",
+          "Gender": "Female",
+          "House": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_miltankegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymiltankbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/miltank/shinymiltank",
+          "BabyTexture": "{{ModId}}/miltank/shinymiltank",
+          "Sound": "{{ModId}}_miltankcry",
+          "BabySound": "{{ModId}}_miltankcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_milk_moomoo",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_miltankegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            },
+            {
+              "Id": "LargeResource",
+              "ItemId": "{{ModId}}_milk_moomoolarge",
+              "MinimumFriendship": 0,
+              "Condition": "RANDOM 0.1"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Milk Pail",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "miltank cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_miltankcry": {
+          "ID": "{{ModId}}_miltankcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/miltank/miltankcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "miltank egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_miltankegg": {
+          "Name": "{{ModId}}_miltankegg",
+          "DisplayName": "{{i18n: miltankegg}}",
+          "Description": "{{i18n: miltankegg.d}}",
+          "Texture": "{{ModId}}/miltank/miltankegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_normal",
+            "pkegg_rarity_rare",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "miltank hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_miltankegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymiltank",
+              "AnimalId": "{{ModId}}_shinymiltank",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_miltank",
+              "AnimalId": "{{ModId}}_miltank",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - miltank",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_miltank",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinymiltank",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymiltank",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_miltank",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_miltank",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_miltank_dailydrop": {
+          "Id": "{{ModId}}_miltank_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_miltank_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - miltank",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_miltank",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinymiltank",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymiltank",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinymiltank_dailydrop": {
+          "Id": "{{ModId}}_shinymiltank_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinymiltank_dailydrop_item",
+              "ItemId": "{{ModId}}_quickclaw",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinymiltank",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymiltank",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_quickclaw": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load poipole textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/poipole/poipole, {{ModId}}/poipole/shinypoipole, {{ModId}}/poipole/naganadel, {{ModId}}/poipole/shinynaganadel, {{ModId}}/poipole/poipoleegg",
+      "FromFile": "assets/livestocks/poipole/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_poipole data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_poipole": {
+          "DisplayName": "{{i18n: poipole}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_poipoleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: poipolebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poipole/naganadel",
+          "BabyTexture": "{{ModId}}/poipole/poipole",
+          "Sound": "{{ModId}}_naganadelcry",
+          "BabySound": "{{ModId}}_poipolecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poipoleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypoipole data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypoipole": {
+          "DisplayName": "{{i18n: shinypoipole}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_poipoleegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypoipolebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poipole/shinynaganadel",
+          "BabyTexture": "{{ModId}}/poipole/shinypoipole",
+          "Sound": "{{ModId}}_naganadelcry",
+          "BabySound": "{{ModId}}_poipolecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poipoleegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "poipole cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_poipolecry": {
+          "ID": "{{ModId}}_poipolecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poipole/poipolecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_naganadelcry": {
+          "ID": "{{ModId}}_naganadelcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poipole/naganadelcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poipole egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_poipoleegg": {
+          "Name": "{{ModId}}_poipoleegg",
+          "DisplayName": "{{i18n: poipoleegg}}",
+          "Description": "{{i18n: poipoleegg.d}}",
+          "Texture": "{{ModId}}/poipole/poipoleegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_poison",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poipole hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_poipoleegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypoipole",
+              "AnimalId": "{{ModId}}_shinypoipole",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_poipole",
+              "AnimalId": "{{ModId}}_poipole",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

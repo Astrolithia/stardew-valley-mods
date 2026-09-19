@@ -1,0 +1,112 @@
+{
+  "Changes": [
+    {
+      "LogName": "Arbre champignon (ID7) - CHOP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "7",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_mushroom_foongus_chop": {
+          "Id": "{{ModId}}_mushroom_foongus_chop",
+          "ItemId": "{{ModId}}_foongusegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_mushroom_morelull_chop": {
+          "Id": "{{ModId}}_mushroom_morelull_chop",
+          "ItemId": "{{ModId}}_morelullegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_mushroom_paras_chop": {
+          "Id": "{{ModId}}_mushroom_paras_chop",
+          "ItemId": "{{ModId}}_parasegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_mushroom_shroomish_chop": {
+          "Id": "{{ModId}}_mushroom_shroomish_chop",
+          "ItemId": "{{ModId}}_shroomishegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_mushroom_toedscool_chop": {
+          "Id": "{{ModId}}_mushroom_toedscool_chop",
+          "ItemId": "{{ModId}}_toedscoolegg",
+          "Chance": "{{RateMushroomChop}}"
+        }
+      }
+    },
+    {
+      "LogName": "Arbre champignon (ID7) - SHAKE",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "7",
+        "ShakeItems"
+      ],
+      "Entries": {
+        "{{ModId}}_mushroom_foongus_shake": {
+          "Id": "{{ModId}}_mushroom_foongus_shake",
+          "ItemId": "{{ModId}}_foongusegg",
+          "Chance": "{{RateMushroomShake}}"
+        },
+        "{{ModId}}_mushroom_morelull_shake": {
+          "Id": "{{ModId}}_mushroom_morelull_shake",
+          "ItemId": "{{ModId}}_morelullegg",
+          "Chance": "{{RateMushroomShake}}"
+        },
+        "{{ModId}}_mushroom_paras_shake": {
+          "Id": "{{ModId}}_mushroom_paras_shake",
+          "ItemId": "{{ModId}}_parasegg",
+          "Chance": "{{RateMushroomShake}}"
+        },
+        "{{ModId}}_mushroom_shroomish_shake": {
+          "Id": "{{ModId}}_mushroom_shroomish_shake",
+          "ItemId": "{{ModId}}_shroomishegg",
+          "Chance": "{{RateMushroomShake}}"
+        },
+        "{{ModId}}_mushroom_toedscool_shake": {
+          "Id": "{{ModId}}_mushroom_toedscool_shake",
+          "ItemId": "{{ModId}}_toedscoolegg",
+          "Chance": "{{RateMushroomShake}}"
+        }
+      }
+    },
+    {
+      "LogName": "Arbre champignon (ID7) - TAP",
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [
+        "7",
+        "ChopItems"
+      ],
+      "Entries": {
+        "{{ModId}}_chop_7_toedscoolegg": {
+          "Id": "{{ModId}}_chop_7_toedscoolegg",
+          "ItemId": "{{ModId}}_toedscoolegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_chop_7_foongusegg": {
+          "Id": "{{ModId}}_chop_7_foongusegg",
+          "ItemId": "{{ModId}}_foongusegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_chop_7_parasegg": {
+          "Id": "{{ModId}}_chop_7_parasegg",
+          "ItemId": "{{ModId}}_parasegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_chop_7_shroomishegg": {
+          "Id": "{{ModId}}_chop_7_shroomishegg",
+          "ItemId": "{{ModId}}_shroomishegg",
+          "Chance": "{{RateMushroomChop}}"
+        },
+        "{{ModId}}_chop_7_morelullegg": {
+          "Id": "{{ModId}}_chop_7_morelullegg",
+          "ItemId": "{{ModId}}_morelullegg",
+          "Chance": "{{RateMushroomChop}}"
+        }
+      }
+    }
+  ]
+}

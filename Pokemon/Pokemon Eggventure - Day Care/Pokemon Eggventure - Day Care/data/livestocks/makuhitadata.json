@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load makuhita textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/makuhita/makuhita, {{ModId}}/makuhita/shinymakuhita, {{ModId}}/makuhita/hariyama, {{ModId}}/makuhita/shinyhariyama, {{ModId}}/makuhita/makuhitaegg",
+      "FromFile": "assets/livestocks/makuhita/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_makuhita data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_makuhita": {
+          "DisplayName": "{{i18n: makuhita}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_makuhitaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: makuhitabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/makuhita/hariyama",
+          "BabyTexture": "{{ModId}}/makuhita/makuhita",
+          "Sound": "{{ModId}}_hariyamacry",
+          "BabySound": "{{ModId}}_makuhitacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_makuhitaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymakuhita data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymakuhita": {
+          "DisplayName": "{{i18n: shinymakuhita}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_makuhitaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymakuhitabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/makuhita/shinyhariyama",
+          "BabyTexture": "{{ModId}}/makuhita/shinymakuhita",
+          "Sound": "{{ModId}}_hariyamacry",
+          "BabySound": "{{ModId}}_makuhitacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_makuhitaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "makuhita cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_makuhitacry": {
+          "ID": "{{ModId}}_makuhitacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/makuhita/makuhitacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hariyamacry": {
+          "ID": "{{ModId}}_hariyamacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/makuhita/hariyamacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "makuhita egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_makuhitaegg": {
+          "Name": "{{ModId}}_makuhitaegg",
+          "DisplayName": "{{i18n: makuhitaegg}}",
+          "Description": "{{i18n: makuhitaegg.d}}",
+          "Texture": "{{ModId}}/makuhita/makuhitaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_common",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "makuhita hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_makuhitaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymakuhita",
+              "AnimalId": "{{ModId}}_shinymakuhita",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_makuhita",
+              "AnimalId": "{{ModId}}_makuhita",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

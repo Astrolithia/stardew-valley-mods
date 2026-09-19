@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load bombirdier textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/bombirdier/bombirdier, {{ModId}}/bombirdier/shinybombirdier, {{ModId}}/bombirdier/bombirdieregg",
+      "FromFile": "assets/livestocks/bombirdier/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_bombirdier data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_bombirdier": {
+          "DisplayName": "{{i18n: bombirdier}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bombirdieregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: bombirdierbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bombirdier/bombirdier",
+          "BabyTexture": "{{ModId}}/bombirdier/bombirdier",
+          "Sound": "{{ModId}}_bombirdiercry",
+          "BabySound": "{{ModId}}_bombirdiercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bombirdieregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinybombirdier data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinybombirdier": {
+          "DisplayName": "{{i18n: shinybombirdier}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_bombirdieregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinybombirdierbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/bombirdier/shinybombirdier",
+          "BabyTexture": "{{ModId}}/bombirdier/shinybombirdier",
+          "Sound": "{{ModId}}_bombirdiercry",
+          "BabySound": "{{ModId}}_bombirdiercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_bombirdieregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "bombirdier cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_bombirdiercry": {
+          "ID": "{{ModId}}_bombirdiercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/bombirdier/bombirdiercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bombirdier egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_bombirdieregg": {
+          "Name": "{{ModId}}_bombirdieregg",
+          "DisplayName": "{{i18n: bombirdieregg}}",
+          "Description": "{{i18n: bombirdieregg.d}}",
+          "Texture": "{{ModId}}/bombirdier/bombirdieregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_flying",
+            "pkegg_rarity_veryrare",
+            "pkegg_chop_general",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "bombirdier hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_bombirdieregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinybombirdier",
+              "AnimalId": "{{ModId}}_shinybombirdier",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_bombirdier",
+              "AnimalId": "{{ModId}}_bombirdier",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

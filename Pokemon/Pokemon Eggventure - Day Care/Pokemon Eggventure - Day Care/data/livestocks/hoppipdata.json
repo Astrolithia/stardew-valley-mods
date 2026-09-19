@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hoppip textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/hoppip/hoppip, {{ModId}}/hoppip/shinyhoppip, {{ModId}}/hoppip/skiploom, {{ModId}}/hoppip/shinyskiploom, {{ModId}}/hoppip/jumpluff, {{ModId}}/hoppip/shinyjumpluff, {{ModId}}/hoppip/hoppipegg",
+      "FromFile": "assets/livestocks/hoppip/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hoppip data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hoppip": {
+          "DisplayName": "{{i18n: hoppip}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hoppipegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hoppipbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hoppip/skiploom",
+          "BabyTexture": "{{ModId}}/hoppip/hoppip",
+          "Sound": "{{ModId}}_jumpluffcry",
+          "BabySound": "{{ModId}}_hoppipcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hoppipegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_hoppip evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_hoppip",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "hoppipevolution": {
+          "Id": "hoppipevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/hoppip/jumpluff"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhoppip data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhoppip": {
+          "DisplayName": "{{i18n: shinyhoppip}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_hoppipegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhoppipbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/hoppip/shinyskiploom",
+          "BabyTexture": "{{ModId}}/hoppip/shinyhoppip",
+          "Sound": "{{ModId}}_jumpluffcry",
+          "BabySound": "{{ModId}}_hoppipcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hoppipegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhoppip evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhoppip",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhoppipevolution": {
+          "Id": "shinyhoppipevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/hoppip/shinyjumpluff"
+        }
+      }
+    },
+    {
+      "LogName": "hoppip cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hoppipcry": {
+          "ID": "{{ModId}}_hoppipcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hoppip/hoppipcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_jumpluffcry": {
+          "ID": "{{ModId}}_jumpluffcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/hoppip/jumpluffcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hoppip egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hoppipegg": {
+          "Name": "{{ModId}}_hoppipegg",
+          "DisplayName": "{{i18n: hoppipegg}}",
+          "Description": "{{i18n: hoppipegg.d}}",
+          "Texture": "{{ModId}}/hoppip/hoppipegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_verycommon",
+            "pkegg_shake_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hoppip hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hoppipegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhoppip",
+              "AnimalId": "{{ModId}}_shinyhoppip",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hoppip",
+              "AnimalId": "{{ModId}}_hoppip",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load guzzlord textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/guzzlord/guzzlord, {{ModId}}/guzzlord/shinyguzzlord, {{ModId}}/guzzlord/guzzlordegg",
+      "FromFile": "assets/livestocks/guzzlord/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_guzzlord data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_guzzlord": {
+          "DisplayName": "{{i18n: guzzlord}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_guzzlordegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: guzzlordbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/guzzlord/guzzlord",
+          "BabyTexture": "{{ModId}}/guzzlord/guzzlord",
+          "Sound": "{{ModId}}_guzzlordcry",
+          "BabySound": "{{ModId}}_guzzlordcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_guzzlordegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyguzzlord data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyguzzlord": {
+          "DisplayName": "{{i18n: shinyguzzlord}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_guzzlordegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyguzzlordbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/guzzlord/shinyguzzlord",
+          "BabyTexture": "{{ModId}}/guzzlord/shinyguzzlord",
+          "Sound": "{{ModId}}_guzzlordcry",
+          "BabySound": "{{ModId}}_guzzlordcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_guzzlordegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "guzzlord cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_guzzlordcry": {
+          "ID": "{{ModId}}_guzzlordcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/guzzlord/guzzlordcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "guzzlord egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_guzzlordegg": {
+          "Name": "{{ModId}}_guzzlordegg",
+          "DisplayName": "{{i18n: guzzlordegg}}",
+          "Description": "{{i18n: guzzlordegg.d}}",
+          "Texture": "{{ModId}}/guzzlord/guzzlordegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dark",
+            "pkegg_rarity_legendary",
+            "pkegg_skullrift_ultra",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "guzzlord hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_guzzlordegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyguzzlord",
+              "AnimalId": "{{ModId}}_shinyguzzlord",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_guzzlord",
+              "AnimalId": "{{ModId}}_guzzlord",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

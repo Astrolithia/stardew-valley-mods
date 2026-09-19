@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load meditite textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/meditite/meditite, {{ModId}}/meditite/shinymeditite, {{ModId}}/meditite/medicham, {{ModId}}/meditite/shinymedicham, {{ModId}}/meditite/medititeegg",
+      "FromFile": "assets/livestocks/meditite/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_meditite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_meditite": {
+          "DisplayName": "{{i18n: meditite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_medititeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: medititebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meditite/medicham",
+          "BabyTexture": "{{ModId}}/meditite/meditite",
+          "Sound": "{{ModId}}_medichamcry",
+          "BabySound": "{{ModId}}_medititecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_medititeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymeditite data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymeditite": {
+          "DisplayName": "{{i18n: shinymeditite}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_medititeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymedititebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/meditite/shinymedicham",
+          "BabyTexture": "{{ModId}}/meditite/shinymeditite",
+          "Sound": "{{ModId}}_medichamcry",
+          "BabySound": "{{ModId}}_medititecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_medititeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "meditite cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_medititecry": {
+          "ID": "{{ModId}}_medititecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meditite/medititecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_medichamcry": {
+          "ID": "{{ModId}}_medichamcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/meditite/medichamcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meditite egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_medititeegg": {
+          "Name": "{{ModId}}_medititeegg",
+          "DisplayName": "{{i18n: medititeegg}}",
+          "Description": "{{i18n: medititeegg.d}}",
+          "Texture": "{{ModId}}/meditite/medititeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_common",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "meditite hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_medititeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymeditite",
+              "AnimalId": "{{ModId}}_shinymeditite",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_meditite",
+              "AnimalId": "{{ModId}}_meditite",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

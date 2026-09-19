@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load solrock textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/solrock/solrock, {{ModId}}/solrock/shinysolrock, {{ModId}}/solrock/solrockegg",
+      "FromFile": "assets/livestocks/solrock/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_solrock data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_solrock": {
+          "DisplayName": "{{i18n: solrock}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_solrockegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: solrockbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/solrock/solrock",
+          "BabyTexture": "{{ModId}}/solrock/solrock",
+          "Sound": "{{ModId}}_solrockcry",
+          "BabySound": "{{ModId}}_solrockcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_solrockegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysolrock data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysolrock": {
+          "DisplayName": "{{i18n: shinysolrock}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_solrockegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysolrockbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/solrock/shinysolrock",
+          "BabyTexture": "{{ModId}}/solrock/shinysolrock",
+          "Sound": "{{ModId}}_solrockcry",
+          "BabySound": "{{ModId}}_solrockcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_solrockegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "solrock cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_solrockcry": {
+          "ID": "{{ModId}}_solrockcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/solrock/solrockcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "solrock egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_solrockegg": {
+          "Name": "{{ModId}}_solrockegg",
+          "DisplayName": "{{i18n: solrockegg}}",
+          "Description": "{{i18n: solrockegg.d}}",
+          "Texture": "{{ModId}}/solrock/solrockegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "pkegg_mine_1_30_p2",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "solrock hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_solrockegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysolrock",
+              "AnimalId": "{{ModId}}_shinysolrock",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_solrock",
+              "AnimalId": "{{ModId}}_solrock",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

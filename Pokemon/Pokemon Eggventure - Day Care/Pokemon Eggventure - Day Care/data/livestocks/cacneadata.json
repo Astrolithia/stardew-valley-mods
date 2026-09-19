@@ -1,0 +1,188 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cacnea textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cacnea/cacnea, {{ModId}}/cacnea/shinycacnea, {{ModId}}/cacnea/cacturne, {{ModId}}/cacnea/shinycacturne, {{ModId}}/cacnea/cacneaegg",
+      "FromFile": "assets/livestocks/cacnea/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cacnea data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cacnea": {
+          "DisplayName": "{{i18n: cacnea}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cacneaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cacneabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cacnea/cacturne",
+          "BabyTexture": "{{ModId}}/cacnea/cacnea",
+          "Sound": "{{ModId}}_cacturnecry",
+          "BabySound": "{{ModId}}_cacneacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cacneaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycacnea data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycacnea": {
+          "DisplayName": "{{i18n: shinycacnea}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cacneaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycacneabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cacnea/shinycacturne",
+          "BabyTexture": "{{ModId}}/cacnea/shinycacnea",
+          "Sound": "{{ModId}}_cacturnecry",
+          "BabySound": "{{ModId}}_cacneacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cacneaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "cacnea cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cacneacry": {
+          "ID": "{{ModId}}_cacneacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cacnea/cacneacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_cacturnecry": {
+          "ID": "{{ModId}}_cacturnecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cacnea/cacturnecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cacnea egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cacneaegg": {
+          "Name": "{{ModId}}_cacneaegg",
+          "DisplayName": "{{i18n: cacneaegg}}",
+          "Description": "{{i18n: cacneaegg.d}}",
+          "Texture": "{{ModId}}/cacnea/cacneaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "pkegg_shake_palmdesert",
+            "pkegg_chop_palmdesert",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cacnea hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cacneaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycacnea",
+              "AnimalId": "{{ModId}}_shinycacnea",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cacnea",
+              "AnimalId": "{{ModId}}_cacnea",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

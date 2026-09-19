@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load stunfisk textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/stunfisk/stunfisk, {{ModId}}/stunfisk/shinystunfisk, {{ModId}}/stunfisk/stunfiskegg",
+      "FromFile": "assets/livestocks/stunfisk/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_stunfisk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_stunfisk": {
+          "DisplayName": "{{i18n: stunfisk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_stunfiskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: stunfiskbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stunfisk/stunfisk",
+          "BabyTexture": "{{ModId}}/stunfisk/stunfisk",
+          "Sound": "{{ModId}}_stunfiskcry",
+          "BabySound": "{{ModId}}_stunfiskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stunfiskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinystunfisk data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinystunfisk": {
+          "DisplayName": "{{i18n: shinystunfisk}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_stunfiskegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinystunfiskbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/stunfisk/shinystunfisk",
+          "BabyTexture": "{{ModId}}/stunfisk/shinystunfisk",
+          "Sound": "{{ModId}}_stunfiskcry",
+          "BabySound": "{{ModId}}_stunfiskcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_stunfiskegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "stunfisk cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_stunfiskcry": {
+          "ID": "{{ModId}}_stunfiskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/stunfisk/stunfiskcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stunfisk egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_stunfiskegg": {
+          "Name": "{{ModId}}_stunfiskegg",
+          "DisplayName": "{{i18n: stunfiskegg}}",
+          "Description": "{{i18n: stunfiskegg.d}}",
+          "Texture": "{{ModId}}/stunfisk/stunfiskegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_rare",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "stunfisk hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_stunfiskegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinystunfisk",
+              "AnimalId": "{{ModId}}_shinystunfisk",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_stunfisk",
+              "AnimalId": "{{ModId}}_stunfisk",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

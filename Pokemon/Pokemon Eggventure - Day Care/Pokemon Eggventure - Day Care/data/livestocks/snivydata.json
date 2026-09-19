@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load snivy textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/snivy/snivy, {{ModId}}/snivy/shinysnivy, {{ModId}}/snivy/servine, {{ModId}}/snivy/shinyservine, {{ModId}}/snivy/serperior, {{ModId}}/snivy/shinyserperior, {{ModId}}/snivy/snivyegg",
+      "FromFile": "assets/livestocks/snivy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_snivy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_snivy": {
+          "DisplayName": "{{i18n: snivy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_snivyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: snivybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snivy/servine",
+          "BabyTexture": "{{ModId}}/snivy/snivy",
+          "Sound": "{{ModId}}_serperiorcry",
+          "BabySound": "{{ModId}}_snivycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_snivyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_snivy evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_snivy",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "snivyevolution": {
+          "Id": "snivyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/snivy/serperior"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysnivy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysnivy": {
+          "DisplayName": "{{i18n: shinysnivy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_snivyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysnivybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/snivy/shinyservine",
+          "BabyTexture": "{{ModId}}/snivy/shinysnivy",
+          "Sound": "{{ModId}}_serperiorcry",
+          "BabySound": "{{ModId}}_snivycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_snivyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysnivy evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysnivy",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinysnivyevolution": {
+          "Id": "shinysnivyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/snivy/shinyserperior"
+        }
+      }
+    },
+    {
+      "LogName": "snivy cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_snivycry": {
+          "ID": "{{ModId}}_snivycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snivy/snivycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_serperiorcry": {
+          "ID": "{{ModId}}_serperiorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/snivy/serperiorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "snivy egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_snivyegg": {
+          "Name": "{{ModId}}_snivyegg",
+          "DisplayName": "{{i18n: snivyegg}}",
+          "Description": "{{i18n: snivyegg.d}}",
+          "Texture": "{{ModId}}/snivy/snivyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_grass",
+            "pkegg_rarity_rare",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "snivy hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_snivyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysnivy",
+              "AnimalId": "{{ModId}}_shinysnivy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_snivy",
+              "AnimalId": "{{ModId}}_snivy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

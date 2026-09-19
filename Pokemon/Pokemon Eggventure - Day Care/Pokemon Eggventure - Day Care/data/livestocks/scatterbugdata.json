@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load scatterbug textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/scatterbug/scatterbug, {{ModId}}/scatterbug/shinyscatterbug, {{ModId}}/scatterbug/spewpa, {{ModId}}/scatterbug/shinyspewpa, {{ModId}}/scatterbug/vivillon, {{ModId}}/scatterbug/shinyvivillon, {{ModId}}/scatterbug/vivillon2, {{ModId}}/scatterbug/shinyvivillon2, {{ModId}}/scatterbug/vivillon3, {{ModId}}/scatterbug/shinyvivillon3, {{ModId}}/scatterbug/vivillon4, {{ModId}}/scatterbug/shinyvivillon4, {{ModId}}/scatterbug/vivillon5, {{ModId}}/scatterbug/shinyvivillon5, {{ModId}}/scatterbug/vivillon6, {{ModId}}/scatterbug/shinyvivillon6, {{ModId}}/scatterbug/vivillon7, {{ModId}}/scatterbug/shinyvivillon7, {{ModId}}/scatterbug/vivillon8, {{ModId}}/scatterbug/shinyvivillon8, {{ModId}}/scatterbug/vivillon9, {{ModId}}/scatterbug/shinyvivillon9, {{ModId}}/scatterbug/vivillon10, {{ModId}}/scatterbug/shinyvivillon10, {{ModId}}/scatterbug/vivillon11, {{ModId}}/scatterbug/shinyvivillon11, {{ModId}}/scatterbug/vivillon12, {{ModId}}/scatterbug/shinyvivillon12, {{ModId}}/scatterbug/vivillon13, {{ModId}}/scatterbug/shinyvivillon13, {{ModId}}/scatterbug/vivillon14, {{ModId}}/scatterbug/shinyvivillon14, {{ModId}}/scatterbug/vivillon15, {{ModId}}/scatterbug/shinyvivillon15, {{ModId}}/scatterbug/vivillon16, {{ModId}}/scatterbug/shinyvivillon16, {{ModId}}/scatterbug/vivillon17, {{ModId}}/scatterbug/shinyvivillon17, {{ModId}}/scatterbug/vivillon18, {{ModId}}/scatterbug/shinyvivillon18, {{ModId}}/scatterbug/vivillon19, {{ModId}}/scatterbug/shinyvivillon19, {{ModId}}/scatterbug/vivillon20, {{ModId}}/scatterbug/shinyvivillon20, {{ModId}}/scatterbug/scatterbugegg",
+      "FromFile": "assets/livestocks/scatterbug/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_scatterbug data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_scatterbug": {
+          "DisplayName": "{{i18n: scatterbug}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_scatterbugegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: scatterbugbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scatterbug/spewpa",
+          "BabyTexture": "{{ModId}}/scatterbug/scatterbug",
+          "Sound": "{{ModId}}_vivilloncry",
+          "BabySound": "{{ModId}}_scatterbugcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_scatterbugegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_scatterbug evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_scatterbug",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "scatterbugevolution": {
+          "Id": "scatterbugevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/scatterbug/vivillon"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyscatterbug data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyscatterbug": {
+          "DisplayName": "{{i18n: shinyscatterbug}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_scatterbugegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyscatterbugbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scatterbug/shinyspewpa",
+          "BabyTexture": "{{ModId}}/scatterbug/shinyscatterbug",
+          "Sound": "{{ModId}}_vivilloncry",
+          "BabySound": "{{ModId}}_scatterbugcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_scatterbugegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyscatterbug evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyscatterbug",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyscatterbugevolution": {
+          "Id": "shinyscatterbugevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/scatterbug/shinyvivillon"
+        }
+      }
+    },
+    {
+      "LogName": "scatterbug cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_scatterbugcry": {
+          "ID": "{{ModId}}_scatterbugcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scatterbug/scatterbugcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_vivilloncry": {
+          "ID": "{{ModId}}_vivilloncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scatterbug/vivilloncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scatterbug egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_scatterbugegg": {
+          "Name": "{{ModId}}_scatterbugegg",
+          "DisplayName": "{{i18n: scatterbugegg}}",
+          "Description": "{{i18n: scatterbugegg.d}}",
+          "Texture": "{{ModId}}/scatterbug/scatterbugegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_general",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scatterbug hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_scatterbugegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyscatterbug",
+              "AnimalId": "{{ModId}}_shinyscatterbug",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_scatterbug",
+              "AnimalId": "{{ModId}}_scatterbug",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

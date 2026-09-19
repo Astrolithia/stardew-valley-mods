@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load timburr textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/timburr/timburr, {{ModId}}/timburr/shinytimburr, {{ModId}}/timburr/gurdurr, {{ModId}}/timburr/shinygurdurr, {{ModId}}/timburr/conkeldurr, {{ModId}}/timburr/shinyconkeldurr, {{ModId}}/timburr/timburregg",
+      "FromFile": "assets/livestocks/timburr/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_timburr data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_timburr": {
+          "DisplayName": "{{i18n: timburr}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_timburregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: timburrbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/timburr/gurdurr",
+          "BabyTexture": "{{ModId}}/timburr/timburr",
+          "Sound": "{{ModId}}_conkeldurrcry",
+          "BabySound": "{{ModId}}_timburrcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_timburregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_timburr evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_timburr",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "timburrevolution": {
+          "Id": "timburrevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/timburr/conkeldurr"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinytimburr data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinytimburr": {
+          "DisplayName": "{{i18n: shinytimburr}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_timburregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinytimburrbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/timburr/shinygurdurr",
+          "BabyTexture": "{{ModId}}/timburr/shinytimburr",
+          "Sound": "{{ModId}}_conkeldurrcry",
+          "BabySound": "{{ModId}}_timburrcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_timburregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinytimburr evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinytimburr",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinytimburrevolution": {
+          "Id": "shinytimburrevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/timburr/shinyconkeldurr"
+        }
+      }
+    },
+    {
+      "LogName": "timburr cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_timburrcry": {
+          "ID": "{{ModId}}_timburrcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/timburr/timburrcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_conkeldurrcry": {
+          "ID": "{{ModId}}_conkeldurrcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/timburr/conkeldurrcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "timburr egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_timburregg": {
+          "Name": "{{ModId}}_timburregg",
+          "DisplayName": "{{i18n: timburregg}}",
+          "Description": "{{i18n: timburregg.d}}",
+          "Texture": "{{ModId}}/timburr/timburregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_fighting",
+            "pkegg_rarity_common",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "timburr hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_timburregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinytimburr",
+              "AnimalId": "{{ModId}}_shinytimburr",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_timburr",
+              "AnimalId": "{{ModId}}_timburr",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

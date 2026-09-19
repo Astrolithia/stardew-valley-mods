@@ -1,0 +1,15 @@
+{
+  "Name": "Pokemon Eggventure - FTM (SVE)",
+  "Author": "Parme69",
+  "Version": "2.1.0",
+  "Description": "Forage et artifact spots Pokemon sur les cartes de Stardew Valley Expanded.",
+  "UniqueID": "Parme.PokemonEggventure.FTM.SVE",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [
+    "Nexus:49098"
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Esca.FarmTypeManager",
+    "MinimumVersion": "1.23.0"
+  }
+}

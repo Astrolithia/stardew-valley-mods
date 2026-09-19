@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pawmi textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pawmi/pawmi, {{ModId}}/pawmi/shinypawmi, {{ModId}}/pawmi/pawmo, {{ModId}}/pawmi/shinypawmo, {{ModId}}/pawmi/pawmot, {{ModId}}/pawmi/shinypawmot, {{ModId}}/pawmi/pawmiegg",
+      "FromFile": "assets/livestocks/pawmi/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pawmi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pawmi": {
+          "DisplayName": "{{i18n: pawmi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pawmiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pawmibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pawmi/pawmo",
+          "BabyTexture": "{{ModId}}/pawmi/pawmi",
+          "Sound": "{{ModId}}_pawmotcry",
+          "BabySound": "{{ModId}}_pawmicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pawmiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_pawmi evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pawmi",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "pawmievolution": {
+          "Id": "pawmievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pawmi/pawmot"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypawmi data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypawmi": {
+          "DisplayName": "{{i18n: shinypawmi}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pawmiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypawmibirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pawmi/shinypawmo",
+          "BabyTexture": "{{ModId}}/pawmi/shinypawmi",
+          "Sound": "{{ModId}}_pawmotcry",
+          "BabySound": "{{ModId}}_pawmicry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pawmiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypawmi evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypawmi",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypawmievolution": {
+          "Id": "shinypawmievolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pawmi/shinypawmot"
+        }
+      }
+    },
+    {
+      "LogName": "pawmi cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pawmicry": {
+          "ID": "{{ModId}}_pawmicry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pawmi/pawmicry.ogg}}"
+          ]
+        },
+        "{{ModId}}_pawmotcry": {
+          "ID": "{{ModId}}_pawmotcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pawmi/pawmotcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pawmi egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pawmiegg": {
+          "Name": "{{ModId}}_pawmiegg",
+          "DisplayName": "{{i18n: pawmiegg}}",
+          "Description": "{{i18n: pawmiegg.d}}",
+          "Texture": "{{ModId}}/pawmi/pawmiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pawmi hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pawmiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypawmi",
+              "AnimalId": "{{ModId}}_shinypawmi",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pawmi",
+              "AnimalId": "{{ModId}}_pawmi",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

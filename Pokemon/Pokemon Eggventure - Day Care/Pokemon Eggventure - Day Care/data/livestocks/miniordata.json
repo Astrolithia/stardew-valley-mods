@@ -1,0 +1,253 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load minior textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/minior/minior, {{ModId}}/minior/shinyminior, {{ModId}}/minior/minior8, {{ModId}}/minior/minior9, {{ModId}}/minior/minior10, {{ModId}}/minior/minior11, {{ModId}}/minior/minior12, {{ModId}}/minior/minior13, {{ModId}}/minior/minior14, {{ModId}}/minior/minioregg",
+      "FromFile": "assets/livestocks/minior/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_minior data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_minior": {
+          "DisplayName": "{{i18n: minior}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_minioregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: miniorbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/minior/minior",
+          "BabyTexture": "{{ModId}}/minior/minior",
+          "Sound": "{{ModId}}_miniorcry",
+          "BabySound": "{{ModId}}_miniorcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_minioregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}",
+          "Skins": [
+            {
+              "Id": "minior8",
+              "Texture": "{{ModId}}/minior/minior8",
+              "BabyTexture": "{{ModId}}/minior/minior8"
+            },
+            {
+              "Id": "minior9",
+              "Texture": "{{ModId}}/minior/minior9",
+              "BabyTexture": "{{ModId}}/minior/minior9"
+            },
+            {
+              "Id": "minior10",
+              "Texture": "{{ModId}}/minior/minior10",
+              "BabyTexture": "{{ModId}}/minior/minior10"
+            },
+            {
+              "Id": "minior11",
+              "Texture": "{{ModId}}/minior/minior11",
+              "BabyTexture": "{{ModId}}/minior/minior11"
+            },
+            {
+              "Id": "minior12",
+              "Texture": "{{ModId}}/minior/minior12",
+              "BabyTexture": "{{ModId}}/minior/minior12"
+            },
+            {
+              "Id": "minior13",
+              "Texture": "{{ModId}}/minior/minior13",
+              "BabyTexture": "{{ModId}}/minior/minior13"
+            },
+            {
+              "Id": "minior14",
+              "Texture": "{{ModId}}/minior/minior14",
+              "BabyTexture": "{{ModId}}/minior/minior14"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyminior data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyminior": {
+          "DisplayName": "{{i18n: shinyminior}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_minioregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyminiorbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/minior/shinyminior",
+          "BabyTexture": "{{ModId}}/minior/shinyminior",
+          "Sound": "{{ModId}}_miniorcry",
+          "BabySound": "{{ModId}}_miniorcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_minioregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryRare}}",
+          "Skins": [
+            {
+              "Id": "minior8",
+              "Texture": "{{ModId}}/minior/minior8",
+              "BabyTexture": "{{ModId}}/minior/minior8"
+            },
+            {
+              "Id": "minior9",
+              "Texture": "{{ModId}}/minior/minior9",
+              "BabyTexture": "{{ModId}}/minior/minior9"
+            },
+            {
+              "Id": "minior10",
+              "Texture": "{{ModId}}/minior/minior10",
+              "BabyTexture": "{{ModId}}/minior/minior10"
+            },
+            {
+              "Id": "minior11",
+              "Texture": "{{ModId}}/minior/minior11",
+              "BabyTexture": "{{ModId}}/minior/minior11"
+            },
+            {
+              "Id": "minior12",
+              "Texture": "{{ModId}}/minior/minior12",
+              "BabyTexture": "{{ModId}}/minior/minior12"
+            },
+            {
+              "Id": "minior13",
+              "Texture": "{{ModId}}/minior/minior13",
+              "BabyTexture": "{{ModId}}/minior/minior13"
+            },
+            {
+              "Id": "minior14",
+              "Texture": "{{ModId}}/minior/minior14",
+              "BabyTexture": "{{ModId}}/minior/minior14"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "minior cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_miniorcry": {
+          "ID": "{{ModId}}_miniorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/minior/miniorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "minior egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_minioregg": {
+          "Name": "{{ModId}}_minioregg",
+          "DisplayName": "{{i18n: minioregg}}",
+          "Description": "{{i18n: minioregg.d}}",
+          "Texture": "{{ModId}}/minior/minioregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_veryrare",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "minior hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_minioregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyminior",
+              "AnimalId": "{{ModId}}_shinyminior",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_minior",
+              "AnimalId": "{{ModId}}_minior",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

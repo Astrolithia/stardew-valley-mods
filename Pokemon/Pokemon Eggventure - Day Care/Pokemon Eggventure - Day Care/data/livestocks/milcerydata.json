@@ -1,0 +1,686 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load milcery textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/milcery/milcery, {{ModId}}/milcery/shinymilcery, {{ModId}}/milcery/alcremie, {{ModId}}/milcery/shinyalcremie, {{ModId}}/milcery/ALCREMIE_1, {{ModId}}/milcery/ALCREMIE_2, {{ModId}}/milcery/ALCREMIE_3, {{ModId}}/milcery/ALCREMIE_4, {{ModId}}/milcery/ALCREMIE_5, {{ModId}}/milcery/ALCREMIE_6, {{ModId}}/milcery/ALCREMIE_7, {{ModId}}/milcery/ALCREMIE_8, {{ModId}}/milcery/ALCREMIE_9, {{ModId}}/milcery/ALCREMIE_10, {{ModId}}/milcery/ALCREMIE_11, {{ModId}}/milcery/ALCREMIE_12, {{ModId}}/milcery/ALCREMIE_13, {{ModId}}/milcery/ALCREMIE_14, {{ModId}}/milcery/ALCREMIE_15, {{ModId}}/milcery/ALCREMIE_16, {{ModId}}/milcery/ALCREMIE_17, {{ModId}}/milcery/ALCREMIE_18, {{ModId}}/milcery/ALCREMIE_19, {{ModId}}/milcery/ALCREMIE_20, {{ModId}}/milcery/ALCREMIE_21, {{ModId}}/milcery/ALCREMIE_22, {{ModId}}/milcery/ALCREMIE_23, {{ModId}}/milcery/ALCREMIE_24, {{ModId}}/milcery/ALCREMIE_25, {{ModId}}/milcery/ALCREMIE_26, {{ModId}}/milcery/ALCREMIE_27, {{ModId}}/milcery/ALCREMIE_28, {{ModId}}/milcery/ALCREMIE_29, {{ModId}}/milcery/ALCREMIE_30, {{ModId}}/milcery/ALCREMIE_31, {{ModId}}/milcery/ALCREMIE_32, {{ModId}}/milcery/ALCREMIE_33, {{ModId}}/milcery/ALCREMIE_34, {{ModId}}/milcery/ALCREMIE_35, {{ModId}}/milcery/ALCREMIE_36, {{ModId}}/milcery/ALCREMIE_37, {{ModId}}/milcery/ALCREMIE_38, {{ModId}}/milcery/ALCREMIE_39, {{ModId}}/milcery/ALCREMIE_40, {{ModId}}/milcery/ALCREMIE_41, {{ModId}}/milcery/ALCREMIE_42, {{ModId}}/milcery/ALCREMIE_43, {{ModId}}/milcery/ALCREMIE_44, {{ModId}}/milcery/ALCREMIE_45, {{ModId}}/milcery/ALCREMIE_46, {{ModId}}/milcery/ALCREMIE_47, {{ModId}}/milcery/ALCREMIE_48, {{ModId}}/milcery/ALCREMIE_49, {{ModId}}/milcery/ALCREMIE_50, {{ModId}}/milcery/ALCREMIE_51, {{ModId}}/milcery/ALCREMIE_52, {{ModId}}/milcery/ALCREMIE_53, {{ModId}}/milcery/ALCREMIE_54, {{ModId}}/milcery/ALCREMIE_55, {{ModId}}/milcery/ALCREMIE_56, {{ModId}}/milcery/ALCREMIE_57, {{ModId}}/milcery/ALCREMIE_58, {{ModId}}/milcery/ALCREMIE_59, {{ModId}}/milcery/ALCREMIE_60, {{ModId}}/milcery/ALCREMIE_61, {{ModId}}/milcery/ALCREMIE_62, {{ModId}}/milcery/milceryegg",
+      "FromFile": "assets/livestocks/milcery/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_milcery data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_milcery": {
+          "DisplayName": "{{i18n: milcery}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_milceryegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: milcerybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/milcery/alcremie",
+          "BabyTexture": "{{ModId}}/milcery/milcery",
+          "Sound": "{{ModId}}_alcremiecry",
+          "BabySound": "{{ModId}}_milcerycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_milceryegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "Skins": [
+            {
+              "Id": "ALCREMIE_1",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_1"
+            },
+            {
+              "Id": "ALCREMIE_2",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_2"
+            },
+            {
+              "Id": "ALCREMIE_3",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_3"
+            },
+            {
+              "Id": "ALCREMIE_4",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_4"
+            },
+            {
+              "Id": "ALCREMIE_5",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_5"
+            },
+            {
+              "Id": "ALCREMIE_6",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_6"
+            },
+            {
+              "Id": "ALCREMIE_7",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_7"
+            },
+            {
+              "Id": "ALCREMIE_8",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_8"
+            },
+            {
+              "Id": "ALCREMIE_9",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_9"
+            },
+            {
+              "Id": "ALCREMIE_10",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_10"
+            },
+            {
+              "Id": "ALCREMIE_11",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_11"
+            },
+            {
+              "Id": "ALCREMIE_12",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_12"
+            },
+            {
+              "Id": "ALCREMIE_13",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_13"
+            },
+            {
+              "Id": "ALCREMIE_14",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_14"
+            },
+            {
+              "Id": "ALCREMIE_15",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_15"
+            },
+            {
+              "Id": "ALCREMIE_16",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_16"
+            },
+            {
+              "Id": "ALCREMIE_17",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_17"
+            },
+            {
+              "Id": "ALCREMIE_18",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_18"
+            },
+            {
+              "Id": "ALCREMIE_19",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_19"
+            },
+            {
+              "Id": "ALCREMIE_20",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_20"
+            },
+            {
+              "Id": "ALCREMIE_21",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_21"
+            },
+            {
+              "Id": "ALCREMIE_22",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_22"
+            },
+            {
+              "Id": "ALCREMIE_23",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_23"
+            },
+            {
+              "Id": "ALCREMIE_24",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_24"
+            },
+            {
+              "Id": "ALCREMIE_25",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_25"
+            },
+            {
+              "Id": "ALCREMIE_26",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_26"
+            },
+            {
+              "Id": "ALCREMIE_27",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_27"
+            },
+            {
+              "Id": "ALCREMIE_28",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_28"
+            },
+            {
+              "Id": "ALCREMIE_29",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_29"
+            },
+            {
+              "Id": "ALCREMIE_30",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_30"
+            },
+            {
+              "Id": "ALCREMIE_31",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_31"
+            },
+            {
+              "Id": "ALCREMIE_32",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_32"
+            },
+            {
+              "Id": "ALCREMIE_33",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_33"
+            },
+            {
+              "Id": "ALCREMIE_34",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_34"
+            },
+            {
+              "Id": "ALCREMIE_35",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_35"
+            },
+            {
+              "Id": "ALCREMIE_36",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_36"
+            },
+            {
+              "Id": "ALCREMIE_37",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_37"
+            },
+            {
+              "Id": "ALCREMIE_38",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_38"
+            },
+            {
+              "Id": "ALCREMIE_39",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_39"
+            },
+            {
+              "Id": "ALCREMIE_40",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_40"
+            },
+            {
+              "Id": "ALCREMIE_41",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_41"
+            },
+            {
+              "Id": "ALCREMIE_42",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_42"
+            },
+            {
+              "Id": "ALCREMIE_43",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_43"
+            },
+            {
+              "Id": "ALCREMIE_44",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_44"
+            },
+            {
+              "Id": "ALCREMIE_45",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_45"
+            },
+            {
+              "Id": "ALCREMIE_46",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_46"
+            },
+            {
+              "Id": "ALCREMIE_47",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_47"
+            },
+            {
+              "Id": "ALCREMIE_48",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_48"
+            },
+            {
+              "Id": "ALCREMIE_49",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_49"
+            },
+            {
+              "Id": "ALCREMIE_50",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_50"
+            },
+            {
+              "Id": "ALCREMIE_51",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_51"
+            },
+            {
+              "Id": "ALCREMIE_52",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_52"
+            },
+            {
+              "Id": "ALCREMIE_53",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_53"
+            },
+            {
+              "Id": "ALCREMIE_54",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_54"
+            },
+            {
+              "Id": "ALCREMIE_55",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_55"
+            },
+            {
+              "Id": "ALCREMIE_56",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_56"
+            },
+            {
+              "Id": "ALCREMIE_57",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_57"
+            },
+            {
+              "Id": "ALCREMIE_58",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_58"
+            },
+            {
+              "Id": "ALCREMIE_59",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_59"
+            },
+            {
+              "Id": "ALCREMIE_60",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_60"
+            },
+            {
+              "Id": "ALCREMIE_61",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_61"
+            },
+            {
+              "Id": "ALCREMIE_62",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_62"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymilcery data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymilcery": {
+          "DisplayName": "{{i18n: shinymilcery}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_milceryegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymilcerybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/milcery/shinyalcremie",
+          "BabyTexture": "{{ModId}}/milcery/shinymilcery",
+          "Sound": "{{ModId}}_alcremiecry",
+          "BabySound": "{{ModId}}_milcerycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_milceryegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "Skins": [
+            {
+              "Id": "ALCREMIE_1",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_1"
+            },
+            {
+              "Id": "ALCREMIE_2",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_2"
+            },
+            {
+              "Id": "ALCREMIE_3",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_3"
+            },
+            {
+              "Id": "ALCREMIE_4",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_4"
+            },
+            {
+              "Id": "ALCREMIE_5",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_5"
+            },
+            {
+              "Id": "ALCREMIE_6",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_6"
+            },
+            {
+              "Id": "ALCREMIE_7",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_7"
+            },
+            {
+              "Id": "ALCREMIE_8",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_8"
+            },
+            {
+              "Id": "ALCREMIE_9",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_9"
+            },
+            {
+              "Id": "ALCREMIE_10",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_10"
+            },
+            {
+              "Id": "ALCREMIE_11",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_11"
+            },
+            {
+              "Id": "ALCREMIE_12",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_12"
+            },
+            {
+              "Id": "ALCREMIE_13",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_13"
+            },
+            {
+              "Id": "ALCREMIE_14",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_14"
+            },
+            {
+              "Id": "ALCREMIE_15",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_15"
+            },
+            {
+              "Id": "ALCREMIE_16",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_16"
+            },
+            {
+              "Id": "ALCREMIE_17",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_17"
+            },
+            {
+              "Id": "ALCREMIE_18",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_18"
+            },
+            {
+              "Id": "ALCREMIE_19",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_19"
+            },
+            {
+              "Id": "ALCREMIE_20",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_20"
+            },
+            {
+              "Id": "ALCREMIE_21",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_21"
+            },
+            {
+              "Id": "ALCREMIE_22",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_22"
+            },
+            {
+              "Id": "ALCREMIE_23",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_23"
+            },
+            {
+              "Id": "ALCREMIE_24",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_24"
+            },
+            {
+              "Id": "ALCREMIE_25",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_25"
+            },
+            {
+              "Id": "ALCREMIE_26",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_26"
+            },
+            {
+              "Id": "ALCREMIE_27",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_27"
+            },
+            {
+              "Id": "ALCREMIE_28",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_28"
+            },
+            {
+              "Id": "ALCREMIE_29",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_29"
+            },
+            {
+              "Id": "ALCREMIE_30",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_30"
+            },
+            {
+              "Id": "ALCREMIE_31",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_31"
+            },
+            {
+              "Id": "ALCREMIE_32",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_32"
+            },
+            {
+              "Id": "ALCREMIE_33",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_33"
+            },
+            {
+              "Id": "ALCREMIE_34",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_34"
+            },
+            {
+              "Id": "ALCREMIE_35",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_35"
+            },
+            {
+              "Id": "ALCREMIE_36",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_36"
+            },
+            {
+              "Id": "ALCREMIE_37",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_37"
+            },
+            {
+              "Id": "ALCREMIE_38",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_38"
+            },
+            {
+              "Id": "ALCREMIE_39",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_39"
+            },
+            {
+              "Id": "ALCREMIE_40",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_40"
+            },
+            {
+              "Id": "ALCREMIE_41",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_41"
+            },
+            {
+              "Id": "ALCREMIE_42",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_42"
+            },
+            {
+              "Id": "ALCREMIE_43",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_43"
+            },
+            {
+              "Id": "ALCREMIE_44",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_44"
+            },
+            {
+              "Id": "ALCREMIE_45",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_45"
+            },
+            {
+              "Id": "ALCREMIE_46",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_46"
+            },
+            {
+              "Id": "ALCREMIE_47",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_47"
+            },
+            {
+              "Id": "ALCREMIE_48",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_48"
+            },
+            {
+              "Id": "ALCREMIE_49",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_49"
+            },
+            {
+              "Id": "ALCREMIE_50",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_50"
+            },
+            {
+              "Id": "ALCREMIE_51",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_51"
+            },
+            {
+              "Id": "ALCREMIE_52",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_52"
+            },
+            {
+              "Id": "ALCREMIE_53",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_53"
+            },
+            {
+              "Id": "ALCREMIE_54",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_54"
+            },
+            {
+              "Id": "ALCREMIE_55",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_55"
+            },
+            {
+              "Id": "ALCREMIE_56",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_56"
+            },
+            {
+              "Id": "ALCREMIE_57",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_57"
+            },
+            {
+              "Id": "ALCREMIE_58",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_58"
+            },
+            {
+              "Id": "ALCREMIE_59",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_59"
+            },
+            {
+              "Id": "ALCREMIE_60",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_60"
+            },
+            {
+              "Id": "ALCREMIE_61",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_61"
+            },
+            {
+              "Id": "ALCREMIE_62",
+              "Texture": "{{ModId}}/milcery/ALCREMIE_62"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "milcery cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_milcerycry": {
+          "ID": "{{ModId}}_milcerycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/milcery/milcerycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alcremiecry": {
+          "ID": "{{ModId}}_alcremiecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/milcery/alcremiecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "milcery egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_milceryegg": {
+          "Name": "{{ModId}}_milceryegg",
+          "DisplayName": "{{i18n: milceryegg}}",
+          "Description": "{{i18n: milceryegg.d}}",
+          "Texture": "{{ModId}}/milcery/milceryegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "milcery hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_milceryegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymilcery",
+              "AnimalId": "{{ModId}}_shinymilcery",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_milcery",
+              "AnimalId": "{{ModId}}_milcery",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load starly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/starly/starly, {{ModId}}/starly/shinystarly, {{ModId}}/starly/staravia, {{ModId}}/starly/shinystaravia, {{ModId}}/starly/staraptor, {{ModId}}/starly/shinystaraptor, {{ModId}}/starly/starlyegg",
+      "FromFile": "assets/livestocks/starly/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_starly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_starly": {
+          "DisplayName": "{{i18n: starly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_starlyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: starlybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/starly/staravia",
+          "BabyTexture": "{{ModId}}/starly/starly",
+          "Sound": "{{ModId}}_staraptorcry",
+          "BabySound": "{{ModId}}_starlycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_starlyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_starly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_starly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "starlyevolution": {
+          "Id": "starlyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/starly/staraptor"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinystarly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinystarly": {
+          "DisplayName": "{{i18n: shinystarly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_starlyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinystarlybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/starly/shinystaravia",
+          "BabyTexture": "{{ModId}}/starly/shinystarly",
+          "Sound": "{{ModId}}_staraptorcry",
+          "BabySound": "{{ModId}}_starlycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_starlyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinystarly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinystarly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinystarlyevolution": {
+          "Id": "shinystarlyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/starly/shinystaraptor"
+        }
+      }
+    },
+    {
+      "LogName": "starly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_starlycry": {
+          "ID": "{{ModId}}_starlycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/starly/starlycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_staraptorcry": {
+          "ID": "{{ModId}}_staraptorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/starly/staraptorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "starly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_starlyegg": {
+          "Name": "{{ModId}}_starlyegg",
+          "DisplayName": "{{i18n: starlyegg}}",
+          "Description": "{{i18n: starlyegg.d}}",
+          "Texture": "{{ModId}}/starly/starlyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "pkegg_chop_general",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "starly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_starlyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinystarly",
+              "AnimalId": "{{ModId}}_shinystarly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_starly",
+              "AnimalId": "{{ModId}}_starly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

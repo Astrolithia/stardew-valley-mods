@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load scraggy textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/scraggy/scraggy, {{ModId}}/scraggy/shinyscraggy, {{ModId}}/scraggy/scrafty, {{ModId}}/scraggy/shinyscrafty, {{ModId}}/scraggy/scraggyegg",
+      "FromFile": "assets/livestocks/scraggy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_scraggy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_scraggy": {
+          "DisplayName": "{{i18n: scraggy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_scraggyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: scraggybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scraggy/scrafty",
+          "BabyTexture": "{{ModId}}/scraggy/scraggy",
+          "Sound": "{{ModId}}_scraftycry",
+          "BabySound": "{{ModId}}_scraggycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_scraggyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyscraggy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyscraggy": {
+          "DisplayName": "{{i18n: shinyscraggy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_scraggyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyscraggybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/scraggy/shinyscrafty",
+          "BabyTexture": "{{ModId}}/scraggy/shinyscraggy",
+          "Sound": "{{ModId}}_scraftycry",
+          "BabySound": "{{ModId}}_scraggycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_scraggyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "scraggy cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_scraggycry": {
+          "ID": "{{ModId}}_scraggycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scraggy/scraggycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_scraftycry": {
+          "ID": "{{ModId}}_scraftycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/scraggy/scraftycry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scraggy egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_scraggyegg": {
+          "Name": "{{ModId}}_scraggyegg",
+          "DisplayName": "{{i18n: scraggyegg}}",
+          "Description": "{{i18n: scraggyegg.d}}",
+          "Texture": "{{ModId}}/scraggy/scraggyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_common",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "scraggy hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_scraggyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyscraggy",
+              "AnimalId": "{{ModId}}_shinyscraggy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_scraggy",
+              "AnimalId": "{{ModId}}_scraggy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sizzlipede textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sizzlipede/sizzlipede, {{ModId}}/sizzlipede/shinysizzlipede, {{ModId}}/sizzlipede/centiskorch, {{ModId}}/sizzlipede/shinycentiskorch, {{ModId}}/sizzlipede/sizzlipedeegg",
+      "FromFile": "assets/livestocks/sizzlipede/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sizzlipede data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sizzlipede": {
+          "DisplayName": "{{i18n: sizzlipede}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sizzlipedeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sizzlipedebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sizzlipede/centiskorch",
+          "BabyTexture": "{{ModId}}/sizzlipede/sizzlipede",
+          "Sound": "{{ModId}}_centiskorchcry",
+          "BabySound": "{{ModId}}_sizzlipedecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sizzlipedeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_sizzlipede type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_sizzlipede"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysizzlipede data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysizzlipede": {
+          "DisplayName": "{{i18n: shinysizzlipede}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_sizzlipedeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysizzlipedebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sizzlipede/shinycentiskorch",
+          "BabyTexture": "{{ModId}}/sizzlipede/shinysizzlipede",
+          "Sound": "{{ModId}}_centiskorchcry",
+          "BabySound": "{{ModId}}_sizzlipedecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sizzlipedeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinysizzlipede type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinysizzlipede"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "sizzlipede cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sizzlipedecry": {
+          "ID": "{{ModId}}_sizzlipedecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sizzlipede/sizzlipedecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_centiskorchcry": {
+          "ID": "{{ModId}}_centiskorchcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sizzlipede/centiskorchcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sizzlipede egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sizzlipedeegg": {
+          "Name": "{{ModId}}_sizzlipedeegg",
+          "DisplayName": "{{i18n: sizzlipedeegg}}",
+          "Description": "{{i18n: sizzlipedeegg.d}}",
+          "Texture": "{{ModId}}/sizzlipede/sizzlipedeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_common",
+            "pkegg_volcano_p5",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sizzlipede hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sizzlipedeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysizzlipede",
+              "AnimalId": "{{ModId}}_shinysizzlipede",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sizzlipede",
+              "AnimalId": "{{ModId}}_sizzlipede",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

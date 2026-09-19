@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load darumaka textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/darumaka/darumaka, {{ModId}}/darumaka/shinydarumaka, {{ModId}}/darumaka/darmanitan, {{ModId}}/darumaka/shinydarmanitan, {{ModId}}/darumaka/darumakaegg",
+      "FromFile": "assets/livestocks/darumaka/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_darumaka data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_darumaka": {
+          "DisplayName": "{{i18n: darumaka}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_darumakaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: darumakabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/darumaka/darmanitan",
+          "BabyTexture": "{{ModId}}/darumaka/darumaka",
+          "Sound": "{{ModId}}_darmanitancry",
+          "BabySound": "{{ModId}}_darumakacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_darumakaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_darumaka type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_darumaka"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydarumaka data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydarumaka": {
+          "DisplayName": "{{i18n: shinydarumaka}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_darumakaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydarumakabirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/darumaka/shinydarmanitan",
+          "BabyTexture": "{{ModId}}/darumaka/shinydarumaka",
+          "Sound": "{{ModId}}_darmanitancry",
+          "BabySound": "{{ModId}}_darumakacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_darumakaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinydarumaka type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinydarumaka"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "darumaka cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_darumakacry": {
+          "ID": "{{ModId}}_darumakacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/darumaka/darumakacry.ogg}}"
+          ]
+        },
+        "{{ModId}}_darmanitancry": {
+          "ID": "{{ModId}}_darmanitancry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/darumaka/darmanitancry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "darumaka egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_darumakaegg": {
+          "Name": "{{ModId}}_darumakaegg",
+          "DisplayName": "{{i18n: darumakaegg}}",
+          "Description": "{{i18n: darumakaegg.d}}",
+          "Texture": "{{ModId}}/darumaka/darumakaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_common",
+            "pkegg_volcano_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "darumaka hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_darumakaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydarumaka",
+              "AnimalId": "{{ModId}}_shinydarumaka",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_darumaka",
+              "AnimalId": "{{ModId}}_darumaka",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

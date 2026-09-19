@@ -1,0 +1,90 @@
+{
+  "Changes": [
+    {
+      "LogName": "Panning - oeufs freshwater (taux augmente)",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Panning",
+      "Entries": {
+        "{{ModId}}_panning_p1": {
+          "Id": "{{ModId}}_panning_p1",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p1",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}"
+        },
+        "{{ModId}}_panning_p2": {
+          "Id": "{{ModId}}_panning_p2",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p2",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 2"
+        },
+        "{{ModId}}_panning_p4": {
+          "Id": "{{ModId}}_panning_p4",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p4",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 6"
+        },
+        "{{ModId}}_panning_p3": {
+          "Id": "{{ModId}}_panning_p3",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p3",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 4"
+        },
+        "{{ModId}}_panning_p5": {
+          "Id": "{{ModId}}_panning_p5",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p5",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 8"
+        },
+        "{{ModId}}_panning_p5_rainsnow": {
+          "Id": "{{ModId}}_panning_p5_rainsnow",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p5_rainsnow",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 8, WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_panning_p3_rainsnow": {
+          "Id": "{{ModId}}_panning_p3_rainsnow",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p3_rainsnow",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 4, WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_panning_p4_rainsnow": {
+          "Id": "{{ModId}}_panning_p4_rainsnow",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p4_rainsnow",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 6, WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_panning_p1_rainsnow": {
+          "Id": "{{ModId}}_panning_p1_rainsnow",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p1_rainsnow",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "WEATHER Here Rain Storm Snow"
+        },
+        "{{ModId}}_panning_p2_rainsnow": {
+          "Id": "{{ModId}}_panning_p2_rainsnow",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_panning_p2_rainsnow",
+          "MaxItems": 1,
+          "Chance": "{{RatePanning}}",
+          "Condition": "PLAYER_FISHING_LEVEL Current 2, WEATHER Here Rain Storm Snow"
+        }
+      }
+    }
+  ]
+}

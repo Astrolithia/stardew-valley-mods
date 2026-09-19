@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load varoom textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/revavroom/varoom, {{ModId}}/revavroom/shinyvaroom, {{ModId}}/revavroom/revavroom, {{ModId}}/revavroom/shinyrevavroom, {{ModId}}/revavroom/varoomegg",
+      "FromFile": "assets/livestocks/revavroom/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_varoom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_varoom": {
+          "DisplayName": "{{i18n: varoom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_varoomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: varoombirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/revavroom/revavroom",
+          "BabyTexture": "{{ModId}}/revavroom/varoom",
+          "Sound": "{{ModId}}_revavroomcry",
+          "BabySound": "{{ModId}}_varoomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_varoomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvaroom data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvaroom": {
+          "DisplayName": "{{i18n: shinyvaroom}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_varoomegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvaroombirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/revavroom/shinyrevavroom",
+          "BabyTexture": "{{ModId}}/revavroom/shinyvaroom",
+          "Sound": "{{ModId}}_revavroomcry",
+          "BabySound": "{{ModId}}_varoomcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_varoomegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "varoom cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_varoomcry": {
+          "ID": "{{ModId}}_varoomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/revavroom/varoomcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_revavroomcry": {
+          "ID": "{{ModId}}_revavroomcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/revavroom/revavroomcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "varoom egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_varoomegg": {
+          "Name": "{{ModId}}_varoomegg",
+          "DisplayName": "{{i18n: varoomegg}}",
+          "Description": "{{i18n: varoomegg.d}}",
+          "Texture": "{{ModId}}/revavroom/varoomegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_common",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "varoom hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_varoomegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvaroom",
+              "AnimalId": "{{ModId}}_shinyvaroom",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_varoom",
+              "AnimalId": "{{ModId}}_varoom",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

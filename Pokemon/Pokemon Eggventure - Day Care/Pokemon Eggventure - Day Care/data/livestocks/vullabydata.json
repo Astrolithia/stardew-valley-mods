@@ -1,0 +1,188 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load vullaby textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/vullaby/vullaby, {{ModId}}/vullaby/shinyvullaby, {{ModId}}/vullaby/mandibuzz, {{ModId}}/vullaby/shinymandibuzz, {{ModId}}/vullaby/vullabyegg",
+      "FromFile": "assets/livestocks/vullaby/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_vullaby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_vullaby": {
+          "DisplayName": "{{i18n: vullaby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_vullabyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: vullabybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vullaby/mandibuzz",
+          "BabyTexture": "{{ModId}}/vullaby/vullaby",
+          "Sound": "{{ModId}}_mandibuzzcry",
+          "BabySound": "{{ModId}}_vullabycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_vullabyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyvullaby data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyvullaby": {
+          "DisplayName": "{{i18n: shinyvullaby}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_vullabyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyvullabybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/vullaby/shinymandibuzz",
+          "BabyTexture": "{{ModId}}/vullaby/shinyvullaby",
+          "Sound": "{{ModId}}_mandibuzzcry",
+          "BabySound": "{{ModId}}_vullabycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_vullabyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "vullaby cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_vullabycry": {
+          "ID": "{{ModId}}_vullabycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vullaby/vullabycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mandibuzzcry": {
+          "ID": "{{ModId}}_mandibuzzcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/vullaby/mandibuzzcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "vullaby egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_vullabyegg": {
+          "Name": "{{ModId}}_vullabyegg",
+          "DisplayName": "{{i18n: vullabyegg}}",
+          "Description": "{{i18n: vullabyegg.d}}",
+          "Texture": "{{ModId}}/vullaby/vullabyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_common",
+            "pkegg_shake_palmdesert",
+            "pkegg_chop_palmdesert",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "vullaby hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_vullabyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyvullaby",
+              "AnimalId": "{{ModId}}_shinyvullaby",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_vullaby",
+              "AnimalId": "{{ModId}}_vullaby",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

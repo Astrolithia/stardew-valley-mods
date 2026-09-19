@@ -1,0 +1,225 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load kyurem textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/kyurem/kyurem, {{ModId}}/kyurem/shinykyurem, {{ModId}}/kyurem/kyurem2, {{ModId}}/kyurem/kyurem3, {{ModId}}/kyurem/kyuremegg",
+      "FromFile": "assets/livestocks/kyurem/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_kyurem data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_kyurem": {
+          "DisplayName": "{{i18n: kyurem}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kyuremegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: kyurembirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kyurem/kyurem",
+          "BabyTexture": "{{ModId}}/kyurem/kyurem",
+          "Sound": "{{ModId}}_kyuremcry",
+          "BabySound": "{{ModId}}_kyuremcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kyuremegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "kyurem2",
+              "Texture": "{{ModId}}/kyurem/kyurem2",
+              "BabyTexture": "{{ModId}}/kyurem/kyurem2"
+            },
+            {
+              "Id": "kyurem3",
+              "Texture": "{{ModId}}/kyurem/kyurem3",
+              "BabyTexture": "{{ModId}}/kyurem/kyurem3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_kyurem type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_kyurem"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykyurem data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykyurem": {
+          "DisplayName": "{{i18n: shinykyurem}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kyuremegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykyurembirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kyurem/shinykyurem",
+          "BabyTexture": "{{ModId}}/kyurem/shinykyurem",
+          "Sound": "{{ModId}}_kyuremcry",
+          "BabySound": "{{ModId}}_kyuremcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kyuremegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "kyurem2",
+              "Texture": "{{ModId}}/kyurem/kyurem2",
+              "BabyTexture": "{{ModId}}/kyurem/kyurem2"
+            },
+            {
+              "Id": "kyurem3",
+              "Texture": "{{ModId}}/kyurem/kyurem3",
+              "BabyTexture": "{{ModId}}/kyurem/kyurem3"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinykyurem type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinykyurem"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "kyurem cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_kyuremcry": {
+          "ID": "{{ModId}}_kyuremcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kyurem/kyuremcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kyurem egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_kyuremegg": {
+          "Name": "{{ModId}}_kyuremegg",
+          "DisplayName": "{{i18n: kyuremegg}}",
+          "Description": "{{i18n: kyuremegg.d}}",
+          "Texture": "{{ModId}}/kyurem/kyuremegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_dragon",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kyurem hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_kyuremegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykyurem",
+              "AnimalId": "{{ModId}}_shinykyurem",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_kyurem",
+              "AnimalId": "{{ModId}}_kyurem",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

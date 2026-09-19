@@ -1,0 +1,286 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add Energy for Energy Extractor",
+      "Action": "Load",
+      "Target": "{{ModId}}/energy/energybug, {{ModId}}/energy/energydark, {{ModId}}/energy/energydragon, {{ModId}}/energy/energyelectric, {{ModId}}/energy/energyfairy, {{ModId}}/energy/energyfighting, {{ModId}}/energy/energyfire, {{ModId}}/energy/energyflying, {{ModId}}/energy/energyghost, {{ModId}}/energy/energygrass, {{ModId}}/energy/energyground, {{ModId}}/energy/energyice, {{ModId}}/energy/energynormal, {{ModId}}/energy/energypoison, {{ModId}}/energy/energypsychic, {{ModId}}/energy/energyrock, {{ModId}}/energy/energysteel, {{ModId}}/energy/energywater",
+      "FromFile": "assets/energy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_energybug": {
+          "Name": "{{ModId}}_energybug",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energybug}}",
+          "Description": "{{i18n:energybug_d}}",
+          "Texture": "{{ModId}}/energy/energybug",
+          "Price": 150,
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_bug",
+            "color_yellow_green"
+          ]
+        },
+        "{{ModId}}_energydark": {
+          "Name": "{{ModId}}_energydark",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energydark}}",
+          "Description": "{{i18n:energydark_d}}",
+          "Texture": "{{ModId}}/energy/energydark",
+          "Price": 150,
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_dark",
+            "color_poppyseed"
+          ]
+        },
+        "{{ModId}}_energydragon": {
+          "Name": "{{ModId}}_energydragon",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energydragon}}",
+          "Description": "{{i18n:energydragon_d}}",
+          "Texture": "{{ModId}}/energy/energydragon",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_dragon",
+            "color_aquamarine"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyelectric": {
+          "Name": "{{ModId}}_energyelectric",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyelectric}}",
+          "Description": "{{i18n:energyelectric_d}}",
+          "Texture": "{{ModId}}/energy/energyelectric",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_electric",
+            "color_yellow"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyfairy": {
+          "Name": "{{ModId}}_energyfairy",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyfairy}}",
+          "Description": "{{i18n:energyfairy_d}}",
+          "Texture": "{{ModId}}/energy/energyfairy",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_fairy",
+            "color_dark_pink"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyfighting": {
+          "Name": "{{ModId}}_energyfighting",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyfighting}}",
+          "Description": "{{i18n:energyfighting_d}}",
+          "Texture": "{{ModId}}/energy/energyfighting",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_fighting",
+            "color_orange"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyfire": {
+          "Name": "{{ModId}}_energyfire",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyfire}}",
+          "Description": "{{i18n:energyfire_d}}",
+          "Texture": "{{ModId}}/energy/energyfire",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_fire",
+            "color_red"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyflying": {
+          "Name": "{{ModId}}_energyflying",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyflying}}",
+          "Description": "{{i18n:energyflying_d}}",
+          "Texture": "{{ModId}}/energy/energyflying",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_flying",
+            "color_dark_blue"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyghost": {
+          "Name": "{{ModId}}_energyghost",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyghost}}",
+          "Description": "{{i18n:energyghost_d}}",
+          "Texture": "{{ModId}}/energy/energyghost",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_ghost",
+            "color_dark_blue"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energygrass": {
+          "Name": "{{ModId}}_energygrass",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energygrass}}",
+          "Description": "{{i18n:energygrass_d}}",
+          "Texture": "{{ModId}}/energy/energygrass",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_grass",
+            "color_green"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyground": {
+          "Name": "{{ModId}}_energyground",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyground}}",
+          "Description": "{{i18n:energyground_d}}",
+          "Texture": "{{ModId}}/energy/energyground",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_ground",
+            "color_copper"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energynormal": {
+          "Name": "{{ModId}}_energynormal",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energynormal}}",
+          "Description": "{{i18n:energynormal_d}}",
+          "Texture": "{{ModId}}/energy/energynormal",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_normal",
+            "color_sand"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energypoison": {
+          "Name": "{{ModId}}_energypoison",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energypoison}}",
+          "Description": "{{i18n:energypoison_d}}",
+          "Texture": "{{ModId}}/energy/energypoison",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_poison",
+            "color_iridium"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energypsychic": {
+          "Name": "{{ModId}}_energypsychic",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energypsychic}}",
+          "Description": "{{i18n:energypsychic_d}}",
+          "Texture": "{{ModId}}/energy/energypsychic",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_psychic",
+            "color_iridium"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyrock": {
+          "Name": "{{ModId}}_energyrock",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyrock}}",
+          "Description": "{{i18n:energyrock_d}}",
+          "Texture": "{{ModId}}/energy/energyrock",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_rock",
+            "color_orange"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energywater": {
+          "Name": "{{ModId}}_energywater",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energywater}}",
+          "Description": "{{i18n:energywater_d}}",
+          "Texture": "{{ModId}}/energy/energywater",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_water",
+            "color_blue"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energysteel": {
+          "Name": "{{ModId}}_energysteel",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energysteel}}",
+          "Description": "{{i18n:energysteel_d}}",
+          "Texture": "{{ModId}}/energy/energysteel",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_steel",
+            "color_gray"
+          ],
+          "SpriteIndex": 0
+        },
+        "{{ModId}}_energyice": {
+          "Name": "{{ModId}}_energyice",
+          "Category": -15,
+          "Type": "Basic",
+          "DisplayName": "{{i18n:energyice}}",
+          "Description": "{{i18n:energyice_d}}",
+          "Texture": "{{ModId}}/energy/energyice",
+          "Price": 150,
+          "ContextTags": [
+            "pkenergy_item",
+            "pkenergy_type_ice",
+            "color_light_cyan"
+          ],
+          "SpriteIndex": 0
+        }
+      }
+    }
+  ]
+}

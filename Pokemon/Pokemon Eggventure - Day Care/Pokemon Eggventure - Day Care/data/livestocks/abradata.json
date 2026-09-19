@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load abra textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/abra/abra, {{ModId}}/abra/shinyabra, {{ModId}}/abra/kadabra, {{ModId}}/abra/shinykadabra, {{ModId}}/abra/alakazam, {{ModId}}/abra/shinyalakazam, {{ModId}}/abra/abraegg",
+      "FromFile": "assets/livestocks/abra/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_abra data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_abra": {
+          "DisplayName": "{{i18n: abra}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_abraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: abrabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/abra/kadabra",
+          "BabyTexture": "{{ModId}}/abra/abra",
+          "Sound": "{{ModId}}_alakazamcry",
+          "BabySound": "{{ModId}}_abracry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_abraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_abra evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_abra",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "abraevolution": {
+          "Id": "abraevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/abra/alakazam"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyabra data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyabra": {
+          "DisplayName": "{{i18n: shinyabra}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_abraegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyabrabirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/abra/shinykadabra",
+          "BabyTexture": "{{ModId}}/abra/shinyabra",
+          "Sound": "{{ModId}}_alakazamcry",
+          "BabySound": "{{ModId}}_abracry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_twistedspoon",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_abraegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyabra evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyabra",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyabraevolution": {
+          "Id": "shinyabraevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/abra/shinyalakazam"
+        }
+      }
+    },
+    {
+      "LogName": "abra cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_abracry": {
+          "ID": "{{ModId}}_abracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/abra/abracry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alakazamcry": {
+          "ID": "{{ModId}}_alakazamcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/abra/alakazamcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "abra egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_abraegg": {
+          "Name": "{{ModId}}_abraegg",
+          "DisplayName": "{{i18n: abraegg}}",
+          "Description": "{{i18n: abraegg.d}}",
+          "Texture": "{{ModId}}/abra/abraegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_psychic",
+            "pkegg_rarity_verycommon",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "abra hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_abraegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyabra",
+              "AnimalId": "{{ModId}}_shinyabra",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_abra",
+              "AnimalId": "{{ModId}}_abra",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

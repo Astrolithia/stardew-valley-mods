@@ -1,0 +1,306 @@
+{
+  "Changes": [
+    {
+      "LogName": "Add BigCraftables",
+      "Action": "Load",
+      "Target": "{{ModId}}/bigcraftables/energyextractor",
+      "FromFile": "assets/bigcraftables/{{TargetWithoutPath}}.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "{{ModId}}_EnergyExtractor": {
+          "Name": "{{ModId}}_EnergyExtractor",
+          "DisplayName": "{{i18n:EnergyExtractor}}",
+          "Description": "{{i18n:EnergyExtractor_d}}",
+          "Texture": "{{ModId}}/bigcraftables/energyextractor",
+          "Price": 50,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "SpriteIndex": 0
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_EnergyExtractor": "335 5 334 5 390 30 80 5/Home/{{ModId}}_EnergyExtractor/true/l {{ModId}}_energyextractormail/{{i18n:EnergyExtractor}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_EnergyExtractor": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_blackglasses",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_blackglasses"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energydark"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_blackbelt",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_blackbelt"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyfighting"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_blacksludge",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_blacksludge"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energypoison"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_twistedspoon",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_twistedspoon"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energypsychic"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_dragonfang",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_dragonfang"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energydragon"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_firecoal",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_firecoal"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyfire"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_hardstone",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_hardstone"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyrock"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_lovesweet",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_lovesweet"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyfairy"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_magnet",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_magnet"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyelectric"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_metalcoat",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_metalcoat"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energysteel"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_miracleseed",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_miracleseed"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energygrass"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_mysticwater",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_mysticwater"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energywater"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_nevermeltice",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_nevermeltice"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyice"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_prettyfeather",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_prettyfeather"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyflying"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_quickclaw",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_quickclaw"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energynormal"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_reapercloth",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_reapercloth"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyghost"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_shedshell",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_shedshell"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energybug"
+                }
+              ],
+              "MinutesUntilReady": 400
+            },
+            {
+              "Id": "{{ModId}}_softsand",
+              "Triggers": [
+                {
+                  "RequiredItemId": "{{ModId}}_softsand"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "ItemId": "{{ModId}}_energyground"
+                }
+              ],
+              "MinutesUntilReady": 400
+            }
+          ],
+          "LoadEffects": [
+            {
+              "Sounds": [
+                {
+                  "Id": "woodchipper"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

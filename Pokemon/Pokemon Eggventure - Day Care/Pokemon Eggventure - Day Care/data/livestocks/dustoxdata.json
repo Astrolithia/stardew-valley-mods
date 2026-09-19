@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dustox textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/wurmple/wurmple_dustox, {{ModId}}/wurmple/shinywurmple_dustox, {{ModId}}/wurmple/cascoon, {{ModId}}/wurmple/shinycascoon, {{ModId}}/wurmple/dustox, {{ModId}}/wurmple/shinydustox, {{ModId}}/wurmple/dustoxegg",
+      "FromFile": "assets/livestocks/wurmple/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dustox data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dustox": {
+          "DisplayName": "{{i18n: dustox}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dustoxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dustoxbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wurmple/cascoon",
+          "BabyTexture": "{{ModId}}/wurmple/wurmple_dustox",
+          "Sound": "{{ModId}}_dustoxcry",
+          "BabySound": "{{ModId}}_wurmplecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dustoxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_dustox evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_dustox",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "dustoxevolution": {
+          "Id": "dustoxevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/wurmple/dustox"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydustox data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydustox": {
+          "DisplayName": "{{i18n: shinydustox}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_dustoxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydustoxbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/wurmple/shinycascoon",
+          "BabyTexture": "{{ModId}}/wurmple/shinywurmple_dustox",
+          "Sound": "{{ModId}}_dustoxcry",
+          "BabySound": "{{ModId}}_wurmplecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dustoxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinydustox evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinydustox",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinydustoxevolution": {
+          "Id": "shinydustoxevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/wurmple/shinydustox"
+        }
+      }
+    },
+    {
+      "LogName": "dustox cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_wurmplecry": {
+          "ID": "{{ModId}}_wurmplecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wurmple/wurmplecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dustoxcry": {
+          "ID": "{{ModId}}_dustoxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/wurmple/dustoxcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dustox egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dustoxegg": {
+          "Name": "{{ModId}}_dustoxegg",
+          "DisplayName": "{{i18n: dustoxegg}}",
+          "Description": "{{i18n: dustoxegg.d}}",
+          "Texture": "{{ModId}}/wurmple/dustoxegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dustox hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dustoxegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydustox",
+              "AnimalId": "{{ModId}}_shinydustox",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dustox",
+              "AnimalId": "{{ModId}}_dustox",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

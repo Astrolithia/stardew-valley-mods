@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load frigibax textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/frigibax/frigibax, {{ModId}}/frigibax/shinyfrigibax, {{ModId}}/frigibax/arctibax, {{ModId}}/frigibax/shinyarctibax, {{ModId}}/frigibax/baxcalibur, {{ModId}}/frigibax/shinybaxcalibur, {{ModId}}/frigibax/frigibaxegg",
+      "FromFile": "assets/livestocks/frigibax/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_frigibax data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_frigibax": {
+          "DisplayName": "{{i18n: frigibax}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_frigibaxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: frigibaxbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/frigibax/arctibax",
+          "BabyTexture": "{{ModId}}/frigibax/frigibax",
+          "Sound": "{{ModId}}_baxcaliburcry",
+          "BabySound": "{{ModId}}_frigibaxcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_frigibaxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_frigibax evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_frigibax",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "frigibaxevolution": {
+          "Id": "frigibaxevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/frigibax/baxcalibur"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_frigibax type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_frigibax"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfrigibax data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfrigibax": {
+          "DisplayName": "{{i18n: shinyfrigibax}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_frigibaxegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfrigibaxbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/frigibax/shinyarctibax",
+          "BabyTexture": "{{ModId}}/frigibax/shinyfrigibax",
+          "Sound": "{{ModId}}_baxcaliburcry",
+          "BabySound": "{{ModId}}_frigibaxcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_frigibaxegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfrigibax evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfrigibax",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyfrigibaxevolution": {
+          "Id": "shinyfrigibaxevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/frigibax/shinybaxcalibur"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyfrigibax type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyfrigibax"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "frigibax cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_frigibaxcry": {
+          "ID": "{{ModId}}_frigibaxcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/frigibax/frigibaxcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_baxcaliburcry": {
+          "ID": "{{ModId}}_baxcaliburcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/frigibax/baxcaliburcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "frigibax egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_frigibaxegg": {
+          "Name": "{{ModId}}_frigibaxegg",
+          "DisplayName": "{{i18n: frigibaxegg}}",
+          "Description": "{{i18n: frigibaxegg.d}}",
+          "Texture": "{{ModId}}/frigibax/frigibaxegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "pkegg_mine_41_60_p4",
+            "pkegg_mine_61_80_p4",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "frigibax hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_frigibaxegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfrigibax",
+              "AnimalId": "{{ModId}}_shinyfrigibax",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_frigibax",
+              "AnimalId": "{{ModId}}_frigibax",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

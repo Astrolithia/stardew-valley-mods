@@ -1,0 +1,160 @@
+{
+  "Changes": [
+    {
+      "LogName": "Fossiles dans Geode",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "535",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_535_fossilnautile": {
+          "Id": "{{ModId}}_535_fossilnautile",
+          "ItemId": "{{ModId}}_fossilnautile",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_535_fossildome": {
+          "Id": "{{ModId}}_535_fossildome",
+          "ItemId": "{{ModId}}_fossildome",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Fossiles dans Coffre a artefacts",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "275",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_275_vieilambre": {
+          "Id": "{{ModId}}_275_vieilambre",
+          "ItemId": "{{ModId}}_vieilambre",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_275_fossilplume": {
+          "Id": "{{ModId}}_275_fossilplume",
+          "ItemId": "{{ModId}}_fossilplume",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_275_fossilvish": {
+          "Id": "{{ModId}}_275_fossilvish",
+          "ItemId": "{{ModId}}_fossilvish",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Fossiles dans Omni-geode",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "749",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_749_fossilgriffe": {
+          "Id": "{{ModId}}_749_fossilgriffe",
+          "ItemId": "{{ModId}}_fossilgriffe",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_749_fossilarmure": {
+          "Id": "{{ModId}}_749_fossilarmure",
+          "ItemId": "{{ModId}}_fossilarmure",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Fossiles dans Noix de coco doree",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "791",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_791_fossilracine": {
+          "Id": "{{ModId}}_791_fossilracine",
+          "ItemId": "{{ModId}}_fossilracine",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Fossiles dans Geode magma",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "537",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_537_fossilcrane": {
+          "Id": "{{ModId}}_537_fossilcrane",
+          "ItemId": "{{ModId}}_fossilcrane",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_fossilmachoire": {
+          "Id": "{{ModId}}_537_fossilmachoire",
+          "ItemId": "{{ModId}}_fossilmachoire",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_537_fossilzolt": {
+          "Id": "{{ModId}}_537_fossilzolt",
+          "ItemId": "{{ModId}}_fossilzolt",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        }
+      }
+    },
+    {
+      "LogName": "Fossiles dans Geode gelee",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "TargetField": [
+        "536",
+        "GeodeDrops"
+      ],
+      "Entries": {
+        "{{ModId}}_536_fossilplaque": {
+          "Id": "{{ModId}}_536_fossilplaque",
+          "ItemId": "{{ModId}}_fossilplaque",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_fossilsceau": {
+          "Id": "{{ModId}}_536_fossilsceau",
+          "ItemId": "{{ModId}}_fossilsceau",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_fossilarcto": {
+          "Id": "{{ModId}}_536_fossilarcto",
+          "ItemId": "{{ModId}}_fossilarcto",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        },
+        "{{ModId}}_536_fossilpatch": {
+          "Id": "{{ModId}}_536_fossilpatch",
+          "ItemId": "{{ModId}}_fossilpatch",
+          "Chance": "{{RateGeodes}}",
+          "Precedence": -100
+        }
+      }
+    }
+  ]
+}

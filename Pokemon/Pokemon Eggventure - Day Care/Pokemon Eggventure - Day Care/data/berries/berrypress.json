@@ -1,0 +1,2800 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load berry press sprite",
+      "Action": "Load",
+      "Target": "{{ModId}}/berries/fruits/berrypress",
+      "FromFile": "assets/bigcraftables/berrypress.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "{{ModId}}_BerryPress": {
+          "Name": "{{ModId}}_BerryPress",
+          "DisplayName": "{{i18n:berrypress}}",
+          "Description": "{{i18n:berrypress.d}}",
+          "Texture": "{{ModId}}/berries/fruits/berrypress",
+          "Price": 50,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "SpriteIndex": 0
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_BerryPress": "388 50 390 30 771 20/Home/{{ModId}}_BerryPress/true/l {{ModId}}_berrymail/{{i18n:berrypress}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_BerryPress": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_press_framby",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_framby_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_framby",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_framby_iridium",
+                  "ItemId": "{{ModId}}_berryseed_framby",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_framby_gold",
+                  "ItemId": "{{ModId}}_berryseed_framby",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_framby_silver",
+                  "ItemId": "{{ModId}}_berryseed_framby",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_framby_normal",
+                  "ItemId": "{{ModId}}_berryseed_framby",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_remu",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_remu_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_remu",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_remu_iridium",
+                  "ItemId": "{{ModId}}_berryseed_remu",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_remu_gold",
+                  "ItemId": "{{ModId}}_berryseed_remu",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_remu_silver",
+                  "ItemId": "{{ModId}}_berryseed_remu",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_remu_normal",
+                  "ItemId": "{{ModId}}_berryseed_remu",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_nanab",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_nanab_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_nanab",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_nanab_iridium",
+                  "ItemId": "{{ModId}}_berryseed_nanab",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanab_gold",
+                  "ItemId": "{{ModId}}_berryseed_nanab",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanab_silver",
+                  "ItemId": "{{ModId}}_berryseed_nanab",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanab_normal",
+                  "ItemId": "{{ModId}}_berryseed_nanab",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_repoi",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_repoi_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_repoi",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_repoi_iridium",
+                  "ItemId": "{{ModId}}_berryseed_repoi",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_repoi_gold",
+                  "ItemId": "{{ModId}}_berryseed_repoi",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_repoi_silver",
+                  "ItemId": "{{ModId}}_berryseed_repoi",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_repoi_normal",
+                  "ItemId": "{{ModId}}_berryseed_repoi",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_nanana",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_nanana_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_nanana",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_nanana_iridium",
+                  "ItemId": "{{ModId}}_berryseed_nanana",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanana_gold",
+                  "ItemId": "{{ModId}}_berryseed_nanana",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanana_silver",
+                  "ItemId": "{{ModId}}_berryseed_nanana",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanana_normal",
+                  "ItemId": "{{ModId}}_berryseed_nanana",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_ceriz",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_ceriz_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_ceriz",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_ceriz_iridium",
+                  "ItemId": "{{ModId}}_berryseed_ceriz",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_ceriz_gold",
+                  "ItemId": "{{ModId}}_berryseed_ceriz",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_ceriz_silver",
+                  "ItemId": "{{ModId}}_berryseed_ceriz",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_ceriz_normal",
+                  "ItemId": "{{ModId}}_berryseed_ceriz",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_maron",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_maron_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_maron",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_maron_iridium",
+                  "ItemId": "{{ModId}}_berryseed_maron",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_maron_gold",
+                  "ItemId": "{{ModId}}_berryseed_maron",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_maron_silver",
+                  "ItemId": "{{ModId}}_berryseed_maron",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_maron_normal",
+                  "ItemId": "{{ModId}}_berryseed_maron",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_pecha",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_pecha_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_pecha",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_pecha_iridium",
+                  "ItemId": "{{ModId}}_berryseed_pecha",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_pecha_gold",
+                  "ItemId": "{{ModId}}_berryseed_pecha",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_pecha_silver",
+                  "ItemId": "{{ModId}}_berryseed_pecha",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_pecha_normal",
+                  "ItemId": "{{ModId}}_berryseed_pecha",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_fraive",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_fraive_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_fraive",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_fraive_iridium",
+                  "ItemId": "{{ModId}}_berryseed_fraive",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_fraive_gold",
+                  "ItemId": "{{ModId}}_berryseed_fraive",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_fraive_silver",
+                  "ItemId": "{{ModId}}_berryseed_fraive",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_fraive_normal",
+                  "ItemId": "{{ModId}}_berryseed_fraive",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_willia",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_willia_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_willia",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_willia_iridium",
+                  "ItemId": "{{ModId}}_berryseed_willia",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_willia_gold",
+                  "ItemId": "{{ModId}}_berryseed_willia",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_willia_silver",
+                  "ItemId": "{{ModId}}_berryseed_willia",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_willia_normal",
+                  "ItemId": "{{ModId}}_berryseed_willia",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_mepo",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_mepo_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_mepo",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_mepo_iridium",
+                  "ItemId": "{{ModId}}_berryseed_mepo",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_mepo_gold",
+                  "ItemId": "{{ModId}}_berryseed_mepo",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_mepo_silver",
+                  "ItemId": "{{ModId}}_berryseed_mepo",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_mepo_normal",
+                  "ItemId": "{{ModId}}_berryseed_mepo",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_oran",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_oran_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_oran",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_oran_iridium",
+                  "ItemId": "{{ModId}}_berryseed_oran",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_oran_gold",
+                  "ItemId": "{{ModId}}_berryseed_oran",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_oran_silver",
+                  "ItemId": "{{ModId}}_berryseed_oran",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_oran_normal",
+                  "ItemId": "{{ModId}}_berryseed_oran",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_kika",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_kika_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_kika",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_kika_iridium",
+                  "ItemId": "{{ModId}}_berryseed_kika",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_kika_gold",
+                  "ItemId": "{{ModId}}_berryseed_kika",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_kika_silver",
+                  "ItemId": "{{ModId}}_berryseed_kika",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_kika_normal",
+                  "ItemId": "{{ModId}}_berryseed_kika",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_figuy",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_figuy_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_figuy",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_figuy_iridium",
+                  "ItemId": "{{ModId}}_berryseed_figuy",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_figuy_gold",
+                  "ItemId": "{{ModId}}_berryseed_figuy",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_figuy_silver",
+                  "ItemId": "{{ModId}}_berryseed_figuy",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_figuy_normal",
+                  "ItemId": "{{ModId}}_berryseed_figuy",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_wiki",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_wiki_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_wiki",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_wiki_iridium",
+                  "ItemId": "{{ModId}}_berryseed_wiki",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_wiki_gold",
+                  "ItemId": "{{ModId}}_berryseed_wiki",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_wiki_silver",
+                  "ItemId": "{{ModId}}_berryseed_wiki",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_wiki_normal",
+                  "ItemId": "{{ModId}}_berryseed_wiki",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_mago",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_mago_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_mago",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_mago_iridium",
+                  "ItemId": "{{ModId}}_berryseed_mago",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_mago_gold",
+                  "ItemId": "{{ModId}}_berryseed_mago",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_mago_silver",
+                  "ItemId": "{{ModId}}_berryseed_mago",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_mago_normal",
+                  "ItemId": "{{ModId}}_berryseed_mago",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_gowav",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_gowav_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_gowav",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_gowav_iridium",
+                  "ItemId": "{{ModId}}_berryseed_gowav",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_gowav_gold",
+                  "ItemId": "{{ModId}}_berryseed_gowav",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_gowav_silver",
+                  "ItemId": "{{ModId}}_berryseed_gowav",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_gowav_normal",
+                  "ItemId": "{{ModId}}_berryseed_gowav",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_papaya",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_papaya_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_papaya",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_papaya_iridium",
+                  "ItemId": "{{ModId}}_berryseed_papaya",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_papaya_gold",
+                  "ItemId": "{{ModId}}_berryseed_papaya",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_papaya_silver",
+                  "ItemId": "{{ModId}}_berryseed_papaya",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_papaya_normal",
+                  "ItemId": "{{ModId}}_berryseed_papaya",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_siam",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_siam_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_siam",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_siam_iridium",
+                  "ItemId": "{{ModId}}_berryseed_siam",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_siam_gold",
+                  "ItemId": "{{ModId}}_berryseed_siam",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_siam_silver",
+                  "ItemId": "{{ModId}}_berryseed_siam",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_siam_normal",
+                  "ItemId": "{{ModId}}_berryseed_siam",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_mangou",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_mangou_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_mangou",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_mangou_iridium",
+                  "ItemId": "{{ModId}}_berryseed_mangou",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_mangou_gold",
+                  "ItemId": "{{ModId}}_berryseed_mangou",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_mangou_silver",
+                  "ItemId": "{{ModId}}_berryseed_mangou",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_mangou_normal",
+                  "ItemId": "{{ModId}}_berryseed_mangou",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_rabuta",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_rabuta_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_rabuta",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_rabuta_iridium",
+                  "ItemId": "{{ModId}}_berryseed_rabuta",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_rabuta_gold",
+                  "ItemId": "{{ModId}}_berryseed_rabuta",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_rabuta_silver",
+                  "ItemId": "{{ModId}}_berryseed_rabuta",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_rabuta_normal",
+                  "ItemId": "{{ModId}}_berryseed_rabuta",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_tronci",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_tronci_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_tronci",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_tronci_iridium",
+                  "ItemId": "{{ModId}}_berryseed_tronci",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_tronci_gold",
+                  "ItemId": "{{ModId}}_berryseed_tronci",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_tronci_silver",
+                  "ItemId": "{{ModId}}_berryseed_tronci",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_tronci_normal",
+                  "ItemId": "{{ModId}}_berryseed_tronci",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_prine",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_prine_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_prine",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_prine_iridium",
+                  "ItemId": "{{ModId}}_berryseed_prine",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_prine_gold",
+                  "ItemId": "{{ModId}}_berryseed_prine",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_prine_silver",
+                  "ItemId": "{{ModId}}_berryseed_prine",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_prine_normal",
+                  "ItemId": "{{ModId}}_berryseed_prine",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_grena",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_grena_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_grena",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_grena_iridium",
+                  "ItemId": "{{ModId}}_berryseed_grena",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_grena_gold",
+                  "ItemId": "{{ModId}}_berryseed_grena",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_grena_silver",
+                  "ItemId": "{{ModId}}_berryseed_grena",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_grena_normal",
+                  "ItemId": "{{ModId}}_berryseed_grena",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_alga",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_alga_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_alga",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_alga_iridium",
+                  "ItemId": "{{ModId}}_berryseed_alga",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_alga_gold",
+                  "ItemId": "{{ModId}}_berryseed_alga",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_alga_silver",
+                  "ItemId": "{{ModId}}_berryseed_alga",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_alga_normal",
+                  "ItemId": "{{ModId}}_berryseed_alga",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_qualot",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_qualot_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_qualot",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_qualot_iridium",
+                  "ItemId": "{{ModId}}_berryseed_qualot",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_qualot_gold",
+                  "ItemId": "{{ModId}}_berryseed_qualot",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_qualot_silver",
+                  "ItemId": "{{ModId}}_berryseed_qualot",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_qualot_normal",
+                  "ItemId": "{{ModId}}_berryseed_qualot",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_lonme",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_lonme_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_lonme",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_lonme_iridium",
+                  "ItemId": "{{ModId}}_berryseed_lonme",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_lonme_gold",
+                  "ItemId": "{{ModId}}_berryseed_lonme",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_lonme_silver",
+                  "ItemId": "{{ModId}}_berryseed_lonme",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_lonme_normal",
+                  "ItemId": "{{ModId}}_berryseed_lonme",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_resin",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_resin_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_resin",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_resin_iridium",
+                  "ItemId": "{{ModId}}_berryseed_resin",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_resin_gold",
+                  "ItemId": "{{ModId}}_berryseed_resin",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_resin_silver",
+                  "ItemId": "{{ModId}}_berryseed_resin",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_resin_normal",
+                  "ItemId": "{{ModId}}_berryseed_resin",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_tamato",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_tamato_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_tamato",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_tamato_iridium",
+                  "ItemId": "{{ModId}}_berryseed_tamato",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_tamato_gold",
+                  "ItemId": "{{ModId}}_berryseed_tamato",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_tamato_silver",
+                  "ItemId": "{{ModId}}_berryseed_tamato",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_tamato_normal",
+                  "ItemId": "{{ModId}}_berryseed_tamato",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_kiwan",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_kiwan_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_kiwan",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_kiwan_iridium",
+                  "ItemId": "{{ModId}}_berryseed_kiwan",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_kiwan_gold",
+                  "ItemId": "{{ModId}}_berryseed_kiwan",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_kiwan_silver",
+                  "ItemId": "{{ModId}}_berryseed_kiwan",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_kiwan_normal",
+                  "ItemId": "{{ModId}}_berryseed_kiwan",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_palma",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_palma_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_palma",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_palma_iridium",
+                  "ItemId": "{{ModId}}_berryseed_palma",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_palma_gold",
+                  "ItemId": "{{ModId}}_berryseed_palma",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_palma_silver",
+                  "ItemId": "{{ModId}}_berryseed_palma",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_palma_normal",
+                  "ItemId": "{{ModId}}_berryseed_palma",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_stekpa",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_stekpa_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_stekpa",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_stekpa_iridium",
+                  "ItemId": "{{ModId}}_berryseed_stekpa",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_stekpa_gold",
+                  "ItemId": "{{ModId}}_berryseed_stekpa",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_stekpa_silver",
+                  "ItemId": "{{ModId}}_berryseed_stekpa",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_stekpa_normal",
+                  "ItemId": "{{ModId}}_berryseed_stekpa",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_durin",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_durin_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_durin",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_durin_iridium",
+                  "ItemId": "{{ModId}}_berryseed_durin",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_durin_gold",
+                  "ItemId": "{{ModId}}_berryseed_durin",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_durin_silver",
+                  "ItemId": "{{ModId}}_berryseed_durin",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_durin_normal",
+                  "ItemId": "{{ModId}}_berryseed_durin",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_myrte",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_myrte_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_myrte",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_myrte_iridium",
+                  "ItemId": "{{ModId}}_berryseed_myrte",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_myrte_gold",
+                  "ItemId": "{{ModId}}_berryseed_myrte",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_myrte_silver",
+                  "ItemId": "{{ModId}}_berryseed_myrte",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_myrte_normal",
+                  "ItemId": "{{ModId}}_berryseed_myrte",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_sitrus",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_sitrus_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_sitrus",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_sitrus_iridium",
+                  "ItemId": "{{ModId}}_berryseed_sitrus",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_sitrus_gold",
+                  "ItemId": "{{ModId}}_berryseed_sitrus",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_sitrus_silver",
+                  "ItemId": "{{ModId}}_berryseed_sitrus",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_sitrus_normal",
+                  "ItemId": "{{ModId}}_berryseed_sitrus",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_enigma",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_enigma_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_enigma",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_enigma_iridium",
+                  "ItemId": "{{ModId}}_berryseed_enigma",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_enigma_gold",
+                  "ItemId": "{{ModId}}_berryseed_enigma",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_enigma_silver",
+                  "ItemId": "{{ModId}}_berryseed_enigma",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_enigma_normal",
+                  "ItemId": "{{ModId}}_berryseed_enigma",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_micle",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_micle_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_micle",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_micle_iridium",
+                  "ItemId": "{{ModId}}_berryseed_micle",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_micle_gold",
+                  "ItemId": "{{ModId}}_berryseed_micle",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_micle_silver",
+                  "ItemId": "{{ModId}}_berryseed_micle",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_micle_normal",
+                  "ItemId": "{{ModId}}_berryseed_micle",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_cherim",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_cherim_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_cherim",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_cherim_iridium",
+                  "ItemId": "{{ModId}}_berryseed_cherim",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_cherim_gold",
+                  "ItemId": "{{ModId}}_berryseed_cherim",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_cherim_silver",
+                  "ItemId": "{{ModId}}_berryseed_cherim",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_cherim_normal",
+                  "ItemId": "{{ModId}}_berryseed_cherim",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_jaboca",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_jaboca_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_jaboca",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_jaboca_iridium",
+                  "ItemId": "{{ModId}}_berryseed_jaboca",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_jaboca_gold",
+                  "ItemId": "{{ModId}}_berryseed_jaboca",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_jaboca_silver",
+                  "ItemId": "{{ModId}}_berryseed_jaboca",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_jaboca_normal",
+                  "ItemId": "{{ModId}}_berryseed_jaboca",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_pommo",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_pommo_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_pommo",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_pommo_iridium",
+                  "ItemId": "{{ModId}}_berryseed_pommo",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_pommo_gold",
+                  "ItemId": "{{ModId}}_berryseed_pommo",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_pommo_silver",
+                  "ItemId": "{{ModId}}_berryseed_pommo",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_pommo_normal",
+                  "ItemId": "{{ModId}}_berryseed_pommo",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_rangma",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_rangma_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_rangma",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_rangma_iridium",
+                  "ItemId": "{{ModId}}_berryseed_rangma",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_rangma_gold",
+                  "ItemId": "{{ModId}}_berryseed_rangma",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_rangma_silver",
+                  "ItemId": "{{ModId}}_berryseed_rangma",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_rangma_normal",
+                  "ItemId": "{{ModId}}_berryseed_rangma",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_eka",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_eka_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_eka",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_eka_iridium",
+                  "ItemId": "{{ModId}}_berryseed_eka",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_eka_gold",
+                  "ItemId": "{{ModId}}_berryseed_eka",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_eka_silver",
+                  "ItemId": "{{ModId}}_berryseed_eka",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_eka_normal",
+                  "ItemId": "{{ModId}}_berryseed_eka",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_chocco",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_chocco_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_chocco",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_chocco_iridium",
+                  "ItemId": "{{ModId}}_berryseed_chocco",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_chocco_gold",
+                  "ItemId": "{{ModId}}_berryseed_chocco",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_chocco_silver",
+                  "ItemId": "{{ModId}}_berryseed_chocco",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_chocco_normal",
+                  "ItemId": "{{ModId}}_berryseed_chocco",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_pocpoc",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_pocpoc_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_pocpoc",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_pocpoc_iridium",
+                  "ItemId": "{{ModId}}_berryseed_pocpoc",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_pocpoc_gold",
+                  "ItemId": "{{ModId}}_berryseed_pocpoc",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_pocpoc_silver",
+                  "ItemId": "{{ModId}}_berryseed_pocpoc",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_pocpoc_normal",
+                  "ItemId": "{{ModId}}_berryseed_pocpoc",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_parma",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_parma_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_parma",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_parma_iridium",
+                  "ItemId": "{{ModId}}_berryseed_parma",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_parma_gold",
+                  "ItemId": "{{ModId}}_berryseed_parma",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_parma_silver",
+                  "ItemId": "{{ModId}}_berryseed_parma",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_parma_normal",
+                  "ItemId": "{{ModId}}_berryseed_parma",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_ratam",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_ratam_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_ratam",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_ratam_iridium",
+                  "ItemId": "{{ModId}}_berryseed_ratam",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_ratam_gold",
+                  "ItemId": "{{ModId}}_berryseed_ratam",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_ratam_silver",
+                  "ItemId": "{{ModId}}_berryseed_ratam",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_ratam_normal",
+                  "ItemId": "{{ModId}}_berryseed_ratam",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_nanone",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_nanone_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_nanone",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_nanone_iridium",
+                  "ItemId": "{{ModId}}_berryseed_nanone",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanone_gold",
+                  "ItemId": "{{ModId}}_berryseed_nanone",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanone_silver",
+                  "ItemId": "{{ModId}}_berryseed_nanone",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_nanone_normal",
+                  "ItemId": "{{ModId}}_berryseed_nanone",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_pomroz",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_pomroz_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_pomroz",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_pomroz_iridium",
+                  "ItemId": "{{ModId}}_berryseed_pomroz",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_pomroz_gold",
+                  "ItemId": "{{ModId}}_berryseed_pomroz",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_pomroz_silver",
+                  "ItemId": "{{ModId}}_berryseed_pomroz",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_pomroz_normal",
+                  "ItemId": "{{ModId}}_berryseed_pomroz",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_kebia",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_kebia_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_kebia",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_kebia_iridium",
+                  "ItemId": "{{ModId}}_berryseed_kebia",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_kebia_gold",
+                  "ItemId": "{{ModId}}_berryseed_kebia",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_kebia_silver",
+                  "ItemId": "{{ModId}}_berryseed_kebia",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_kebia_normal",
+                  "ItemId": "{{ModId}}_berryseed_kebia",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_jouca",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_jouca_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_jouca",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_jouca_iridium",
+                  "ItemId": "{{ModId}}_berryseed_jouca",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_jouca_gold",
+                  "ItemId": "{{ModId}}_berryseed_jouca",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_jouca_silver",
+                  "ItemId": "{{ModId}}_berryseed_jouca",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_jouca_normal",
+                  "ItemId": "{{ModId}}_berryseed_jouca",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_cobaba",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_cobaba_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_cobaba",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_cobaba_iridium",
+                  "ItemId": "{{ModId}}_berryseed_cobaba",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_cobaba_gold",
+                  "ItemId": "{{ModId}}_berryseed_cobaba",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_cobaba_silver",
+                  "ItemId": "{{ModId}}_berryseed_cobaba",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_cobaba_normal",
+                  "ItemId": "{{ModId}}_berryseed_cobaba",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_yapap",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_yapap_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_yapap",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_yapap_iridium",
+                  "ItemId": "{{ModId}}_berryseed_yapap",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_yapap_gold",
+                  "ItemId": "{{ModId}}_berryseed_yapap",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_yapap_silver",
+                  "ItemId": "{{ModId}}_berryseed_yapap",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_yapap_normal",
+                  "ItemId": "{{ModId}}_berryseed_yapap",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_panga",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_panga_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_panga",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_panga_iridium",
+                  "ItemId": "{{ModId}}_berryseed_panga",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_panga_gold",
+                  "ItemId": "{{ModId}}_berryseed_panga",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_panga_silver",
+                  "ItemId": "{{ModId}}_berryseed_panga",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_panga_normal",
+                  "ItemId": "{{ModId}}_berryseed_panga",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_charti",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_charti_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_charti",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_charti_iridium",
+                  "ItemId": "{{ModId}}_berryseed_charti",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_charti_gold",
+                  "ItemId": "{{ModId}}_berryseed_charti",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_charti_silver",
+                  "ItemId": "{{ModId}}_berryseed_charti",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_charti_normal",
+                  "ItemId": "{{ModId}}_berryseed_charti",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_sedra",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_sedra_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_sedra",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_sedra_iridium",
+                  "ItemId": "{{ModId}}_berryseed_sedra",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_sedra_gold",
+                  "ItemId": "{{ModId}}_berryseed_sedra",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_sedra_silver",
+                  "ItemId": "{{ModId}}_berryseed_sedra",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_sedra_normal",
+                  "ItemId": "{{ModId}}_berryseed_sedra",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_fraigo",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_fraigo_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_fraigo",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_fraigo_iridium",
+                  "ItemId": "{{ModId}}_berryseed_fraigo",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_fraigo_gold",
+                  "ItemId": "{{ModId}}_berryseed_fraigo",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_fraigo_silver",
+                  "ItemId": "{{ModId}}_berryseed_fraigo",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_fraigo_normal",
+                  "ItemId": "{{ModId}}_berryseed_fraigo",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_lampou",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_lampou_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_lampou",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_lampou_iridium",
+                  "ItemId": "{{ModId}}_berryseed_lampou",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_lampou_gold",
+                  "ItemId": "{{ModId}}_berryseed_lampou",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_lampou_silver",
+                  "ItemId": "{{ModId}}_berryseed_lampou",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_lampou_normal",
+                  "ItemId": "{{ModId}}_berryseed_lampou",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_babiri",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_babiri_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_babiri",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_babiri_iridium",
+                  "ItemId": "{{ModId}}_berryseed_babiri",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_babiri_gold",
+                  "ItemId": "{{ModId}}_berryseed_babiri",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_babiri_silver",
+                  "ItemId": "{{ModId}}_berryseed_babiri",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_babiri_normal",
+                  "ItemId": "{{ModId}}_berryseed_babiri",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_zalis",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_zalis_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_zalis",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_zalis_iridium",
+                  "ItemId": "{{ModId}}_berryseed_zalis",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_zalis_gold",
+                  "ItemId": "{{ModId}}_berryseed_zalis",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_zalis_silver",
+                  "ItemId": "{{ModId}}_berryseed_zalis",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_zalis_normal",
+                  "ItemId": "{{ModId}}_berryseed_zalis",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_selro",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_selro_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_selro",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_selro_iridium",
+                  "ItemId": "{{ModId}}_berryseed_selro",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_selro_gold",
+                  "ItemId": "{{ModId}}_berryseed_selro",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_selro_silver",
+                  "ItemId": "{{ModId}}_berryseed_selro",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_selro_normal",
+                  "ItemId": "{{ModId}}_berryseed_selro",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_lichii",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_lichii_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_lichii",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_lichii_iridium",
+                  "ItemId": "{{ModId}}_berryseed_lichii",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_lichii_gold",
+                  "ItemId": "{{ModId}}_berryseed_lichii",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_lichii_silver",
+                  "ItemId": "{{ModId}}_berryseed_lichii",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_lichii_normal",
+                  "ItemId": "{{ModId}}_berryseed_lichii",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_lingan",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_lingan_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_lingan",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_lingan_iridium",
+                  "ItemId": "{{ModId}}_berryseed_lingan",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_lingan_gold",
+                  "ItemId": "{{ModId}}_berryseed_lingan",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_lingan_silver",
+                  "ItemId": "{{ModId}}_berryseed_lingan",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_lingan_normal",
+                  "ItemId": "{{ModId}}_berryseed_lingan",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_sailak",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_sailak_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_sailak",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_sailak_iridium",
+                  "ItemId": "{{ModId}}_berryseed_sailak",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_sailak_gold",
+                  "ItemId": "{{ModId}}_berryseed_sailak",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_sailak_silver",
+                  "ItemId": "{{ModId}}_berryseed_sailak",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_sailak_normal",
+                  "ItemId": "{{ModId}}_berryseed_sailak",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_pitaye",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_pitaye_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_pitaye",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_pitaye_iridium",
+                  "ItemId": "{{ModId}}_berryseed_pitaye",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_pitaye_gold",
+                  "ItemId": "{{ModId}}_berryseed_pitaye",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_pitaye_silver",
+                  "ItemId": "{{ModId}}_berryseed_pitaye",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_pitaye_normal",
+                  "ItemId": "{{ModId}}_berryseed_pitaye",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_abriko",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_abriko_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_abriko",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_abriko_iridium",
+                  "ItemId": "{{ModId}}_berryseed_abriko",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_abriko_gold",
+                  "ItemId": "{{ModId}}_berryseed_abriko",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_abriko_silver",
+                  "ItemId": "{{ModId}}_berryseed_abriko",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_abriko_normal",
+                  "ItemId": "{{ModId}}_berryseed_abriko",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_lansat",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_lansat_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_lansat",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_lansat_iridium",
+                  "ItemId": "{{ModId}}_berryseed_lansat",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_lansat_gold",
+                  "ItemId": "{{ModId}}_berryseed_lansat",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_lansat_silver",
+                  "ItemId": "{{ModId}}_berryseed_lansat",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_lansat_normal",
+                  "ItemId": "{{ModId}}_berryseed_lansat",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            },
+            {
+              "Id": "{{ModId}}_press_frista",
+              "Triggers": [
+                {
+                  "Id": "{{ModId}}_press_frista_in",
+                  "Trigger": "ItemPlacedInMachine",
+                  "RequiredItemId": "{{ModId}}_berry_frista",
+                  "RequiredCount": "{{BerryPressCost}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "{{ModId}}_press_frista_iridium",
+                  "ItemId": "{{ModId}}_berryseed_frista",
+                  "MinStack": 4,
+                  "MaxStack": 4,
+                  "Condition": "ITEM_QUALITY Input 4"
+                },
+                {
+                  "Id": "{{ModId}}_press_frista_gold",
+                  "ItemId": "{{ModId}}_berryseed_frista",
+                  "MinStack": 3,
+                  "MaxStack": 3,
+                  "Condition": "ITEM_QUALITY Input 2"
+                },
+                {
+                  "Id": "{{ModId}}_press_frista_silver",
+                  "ItemId": "{{ModId}}_berryseed_frista",
+                  "MinStack": 2,
+                  "MaxStack": 2,
+                  "Condition": "ITEM_QUALITY Input 1"
+                },
+                {
+                  "Id": "{{ModId}}_press_frista_normal",
+                  "ItemId": "{{ModId}}_berryseed_frista",
+                  "MinStack": 1,
+                  "MaxStack": 1
+                }
+              ],
+              "MinutesUntilReady": "{{BerryPressMinutes}}"
+            }
+          ],
+          "LoadEffects": [
+            {
+              "Id": "default",
+              "Sound": "seeds"
+            }
+          ],
+          "InvalidItemMessage": "{{i18n:berrypress_invalid}}",
+          "InvalidCountMessage": "{{i18n:berrypress_count}}"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load phantump textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/phantump/phantump, {{ModId}}/phantump/shinyphantump, {{ModId}}/phantump/trevenant, {{ModId}}/phantump/shinytrevenant, {{ModId}}/phantump/phantumpegg",
+      "FromFile": "assets/livestocks/phantump/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_phantump data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_phantump": {
+          "DisplayName": "{{i18n: phantump}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_phantumpegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: phantumpbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/phantump/trevenant",
+          "BabyTexture": "{{ModId}}/phantump/phantump",
+          "Sound": "{{ModId}}_trevenantcry",
+          "BabySound": "{{ModId}}_phantumpcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_phantumpegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyphantump data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyphantump": {
+          "DisplayName": "{{i18n: shinyphantump}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_phantumpegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyphantumpbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/phantump/shinytrevenant",
+          "BabyTexture": "{{ModId}}/phantump/shinyphantump",
+          "Sound": "{{ModId}}_trevenantcry",
+          "BabySound": "{{ModId}}_phantumpcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_phantumpegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "phantump cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_phantumpcry": {
+          "ID": "{{ModId}}_phantumpcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/phantump/phantumpcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_trevenantcry": {
+          "ID": "{{ModId}}_trevenantcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/phantump/trevenantcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "phantump egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_phantumpegg": {
+          "Name": "{{ModId}}_phantumpegg",
+          "DisplayName": "{{i18n: phantumpegg}}",
+          "Description": "{{i18n: phantumpegg.d}}",
+          "Texture": "{{ModId}}/phantump/phantumpegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "phantump hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_phantumpegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyphantump",
+              "AnimalId": "{{ModId}}_shinyphantump",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_phantump",
+              "AnimalId": "{{ModId}}_phantump",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

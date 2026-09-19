@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarkoffing textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/koffing/galarkoffing, {{ModId}}/koffing/shinygalarkoffing, {{ModId}}/koffing/galarweezing, {{ModId}}/koffing/shinygalarweezing, {{ModId}}/koffing/galarkoffingegg",
+      "FromFile": "assets/livestocks/koffing/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarkoffing data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarkoffing": {
+          "DisplayName": "{{i18n: galarkoffing}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galarkoffingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarkoffingbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/koffing/galarweezing",
+          "BabyTexture": "{{ModId}}/koffing/galarkoffing",
+          "Sound": "{{ModId}}_galarweezingcry",
+          "BabySound": "{{ModId}}_koffingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarkoffingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarkoffing data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarkoffing": {
+          "DisplayName": "{{i18n: shinygalarkoffing}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_galarkoffingegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarkoffingbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/koffing/shinygalarweezing",
+          "BabyTexture": "{{ModId}}/koffing/shinygalarkoffing",
+          "Sound": "{{ModId}}_galarweezingcry",
+          "BabySound": "{{ModId}}_koffingcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarkoffingegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarkoffing cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_koffingcry": {
+          "ID": "{{ModId}}_koffingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/koffing/koffingcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_galarweezingcry": {
+          "ID": "{{ModId}}_galarweezingcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/koffing/galarweezingcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarkoffing egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarkoffingegg": {
+          "Name": "{{ModId}}_galarkoffingegg",
+          "DisplayName": "{{i18n: galarkoffingegg}}",
+          "Description": "{{i18n: galarkoffingegg.d}}",
+          "Texture": "{{ModId}}/koffing/galarkoffingegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarkoffing hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarkoffingegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarkoffing",
+              "AnimalId": "{{ModId}}_shinygalarkoffing",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarkoffing",
+              "AnimalId": "{{ModId}}_galarkoffing",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load kyogre textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/kyogre/kyogre, {{ModId}}/kyogre/shinykyogre, {{ModId}}/kyogre/kyogreprimal, {{ModId}}/kyogre/shinykyogreprimal, {{ModId}}/kyogre/kyogreegg",
+      "FromFile": "assets/livestocks/kyogre/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_kyogre data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_kyogre": {
+          "DisplayName": "{{i18n: kyogre}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kyogreegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: kyogrebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kyogre/kyogre",
+          "BabyTexture": "{{ModId}}/kyogre/kyogre",
+          "Sound": "{{ModId}}_kyogrecry",
+          "BabySound": "{{ModId}}_kyogrecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kyogreegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "kyogreprimal",
+              "Texture": "{{ModId}}/kyogre/kyogreprimal",
+              "BabyTexture": "{{ModId}}/kyogre/kyogreprimal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_kyogre type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_kyogre"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinykyogre data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinykyogre": {
+          "DisplayName": "{{i18n: shinykyogre}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_kyogreegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinykyogrebirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/kyogre/shinykyogre",
+          "BabyTexture": "{{ModId}}/kyogre/shinykyogre",
+          "Sound": "{{ModId}}_kyogrecry",
+          "BabySound": "{{ModId}}_kyogrecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_kyogreegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "kyogreprimal",
+              "Texture": "{{ModId}}/kyogre/shinykyogreprimal",
+              "BabyTexture": "{{ModId}}/kyogre/shinykyogreprimal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinykyogre type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinykyogre"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "kyogre cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_kyogrecry": {
+          "ID": "{{ModId}}_kyogrecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/kyogre/kyogrecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kyogre egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_kyogreegg": {
+          "Name": "{{ModId}}_kyogreegg",
+          "DisplayName": "{{i18n: kyogreegg}}",
+          "Description": "{{i18n: kyogreegg.d}}",
+          "Texture": "{{ModId}}/kyogre/kyogreegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_water",
+            "pkegg_rarity_legendary",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "kyogre hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_kyogreegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinykyogre",
+              "AnimalId": "{{ModId}}_shinykyogre",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_kyogre",
+              "AnimalId": "{{ModId}}_kyogre",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

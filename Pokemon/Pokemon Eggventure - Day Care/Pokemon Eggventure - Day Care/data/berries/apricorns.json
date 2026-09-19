@@ -1,0 +1,422 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load apricorn sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/berries/fruits/apricorns/rouge, {{ModId}}/berries/fruits/apricorns/bleu, {{ModId}}/berries/fruits/apricorns/jaune, {{ModId}}/berries/fruits/apricorns/vert, {{ModId}}/berries/fruits/apricorns/rose, {{ModId}}/berries/fruits/apricorns/blanc, {{ModId}}/berries/fruits/apricorns/noir",
+      "FromFile": "assets/berries/apricorns/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Load apricorn sapling sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/berries/fruits/apricornsaplings/rouge, {{ModId}}/berries/fruits/apricornsaplings/bleu, {{ModId}}/berries/fruits/apricornsaplings/jaune, {{ModId}}/berries/fruits/apricornsaplings/vert, {{ModId}}/berries/fruits/apricornsaplings/rose, {{ModId}}/berries/fruits/apricornsaplings/blanc, {{ModId}}/berries/fruits/apricornsaplings/noir",
+      "FromFile": "assets/berries/apricornsaplings/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Load apricorn tree sheet",
+      "Action": "Load",
+      "Target": "{{ModId}}/berries/fruits/apricorntrees",
+      "FromFile": "assets/berries/apricorntrees.png"
+    },
+    {
+      "LogName": "Add apricorns and saplings",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_apricorn_rouge": {
+          "Name": "{{ModId}}_apricorn_rouge",
+          "DisplayName": "{{i18n: apricorn_rouge}}",
+          "Description": "{{i18n: apricorn_rouge.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/rouge",
+          "Price": 110,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_rouge",
+            "seedmaker_banned",
+            "color_red"
+          ]
+        },
+        "{{ModId}}_apricornsapling_rouge": {
+          "Name": "{{ModId}}_apricornsapling_rouge",
+          "DisplayName": "{{i18n: apricornsapling_rouge}}",
+          "Description": "{{i18n: apricornsapling_rouge.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/rouge",
+          "Price": 1250,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_rouge"
+          ]
+        },
+        "{{ModId}}_apricorn_bleu": {
+          "Name": "{{ModId}}_apricorn_bleu",
+          "DisplayName": "{{i18n: apricorn_bleu}}",
+          "Description": "{{i18n: apricorn_bleu.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/bleu",
+          "Price": 110,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_bleu",
+            "seedmaker_banned",
+            "color_blue"
+          ]
+        },
+        "{{ModId}}_apricornsapling_bleu": {
+          "Name": "{{ModId}}_apricornsapling_bleu",
+          "DisplayName": "{{i18n: apricornsapling_bleu}}",
+          "Description": "{{i18n: apricornsapling_bleu.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/bleu",
+          "Price": 1250,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_bleu"
+          ]
+        },
+        "{{ModId}}_apricorn_jaune": {
+          "Name": "{{ModId}}_apricorn_jaune",
+          "DisplayName": "{{i18n: apricorn_jaune}}",
+          "Description": "{{i18n: apricorn_jaune.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/jaune",
+          "Price": 110,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_jaune",
+            "seedmaker_banned",
+            "color_gold"
+          ]
+        },
+        "{{ModId}}_apricornsapling_jaune": {
+          "Name": "{{ModId}}_apricornsapling_jaune",
+          "DisplayName": "{{i18n: apricornsapling_jaune}}",
+          "Description": "{{i18n: apricornsapling_jaune.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/jaune",
+          "Price": 1250,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_jaune"
+          ]
+        },
+        "{{ModId}}_apricorn_vert": {
+          "Name": "{{ModId}}_apricorn_vert",
+          "DisplayName": "{{i18n: apricorn_vert}}",
+          "Description": "{{i18n: apricorn_vert.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/vert",
+          "Price": 110,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_vert",
+            "seedmaker_banned",
+            "color_green"
+          ]
+        },
+        "{{ModId}}_apricornsapling_vert": {
+          "Name": "{{ModId}}_apricornsapling_vert",
+          "DisplayName": "{{i18n: apricornsapling_vert}}",
+          "Description": "{{i18n: apricornsapling_vert.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/vert",
+          "Price": 1250,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_vert"
+          ]
+        },
+        "{{ModId}}_apricorn_rose": {
+          "Name": "{{ModId}}_apricorn_rose",
+          "DisplayName": "{{i18n: apricorn_rose}}",
+          "Description": "{{i18n: apricorn_rose.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/rose",
+          "Price": 130,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_rose",
+            "seedmaker_banned",
+            "color_pink"
+          ]
+        },
+        "{{ModId}}_apricornsapling_rose": {
+          "Name": "{{ModId}}_apricornsapling_rose",
+          "DisplayName": "{{i18n: apricornsapling_rose}}",
+          "Description": "{{i18n: apricornsapling_rose.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/rose",
+          "Price": 1500,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_rose"
+          ]
+        },
+        "{{ModId}}_apricorn_blanc": {
+          "Name": "{{ModId}}_apricorn_blanc",
+          "DisplayName": "{{i18n: apricorn_blanc}}",
+          "Description": "{{i18n: apricorn_blanc.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/blanc",
+          "Price": 130,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_blanc",
+            "seedmaker_banned",
+            "color_white"
+          ]
+        },
+        "{{ModId}}_apricornsapling_blanc": {
+          "Name": "{{ModId}}_apricornsapling_blanc",
+          "DisplayName": "{{i18n: apricornsapling_blanc}}",
+          "Description": "{{i18n: apricornsapling_blanc.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/blanc",
+          "Price": 1500,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_blanc"
+          ]
+        },
+        "{{ModId}}_apricorn_noir": {
+          "Name": "{{ModId}}_apricorn_noir",
+          "DisplayName": "{{i18n: apricorn_noir}}",
+          "Description": "{{i18n: apricorn_noir.d}}",
+          "Type": "Basic",
+          "Category": -79,
+          "Texture": "{{ModId}}/berries/fruits/apricorns/noir",
+          "Price": 220,
+          "Edibility": -1,
+          "ContextTags": [
+            "pkapricorn_item",
+            "pkapricorn_noir",
+            "seedmaker_banned",
+            "color_black"
+          ]
+        },
+        "{{ModId}}_apricornsapling_noir": {
+          "Name": "{{ModId}}_apricornsapling_noir",
+          "DisplayName": "{{i18n: apricornsapling_noir}}",
+          "Description": "{{i18n: apricornsapling_noir.d}}",
+          "Type": "Basic",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/apricornsaplings/noir",
+          "Price": 6000,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkapricorn_sapling",
+            "pkapricorn_sapling_noir"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add apricorn fruit trees",
+      "Action": "EditData",
+      "Target": "Data/FruitTrees",
+      "Entries": {
+        "{{ModId}}_apricornsapling_rouge": {
+          "DisplayName": "{{i18n: apricorn_rouge}}",
+          "Seasons": [
+            "spring"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_rouge",
+              "ItemId": "{{ModId}}_apricorn_rouge"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 0
+        },
+        "{{ModId}}_apricornsapling_bleu": {
+          "DisplayName": "{{i18n: apricorn_bleu}}",
+          "Seasons": [
+            "spring"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_bleu",
+              "ItemId": "{{ModId}}_apricorn_bleu"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 1
+        },
+        "{{ModId}}_apricornsapling_jaune": {
+          "DisplayName": "{{i18n: apricorn_jaune}}",
+          "Seasons": [
+            "summer"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_jaune",
+              "ItemId": "{{ModId}}_apricorn_jaune"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 2
+        },
+        "{{ModId}}_apricornsapling_vert": {
+          "DisplayName": "{{i18n: apricorn_vert}}",
+          "Seasons": [
+            "summer"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_vert",
+              "ItemId": "{{ModId}}_apricorn_vert"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 3
+        },
+        "{{ModId}}_apricornsapling_rose": {
+          "DisplayName": "{{i18n: apricorn_rose}}",
+          "Seasons": [
+            "fall"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_rose",
+              "ItemId": "{{ModId}}_apricorn_rose"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 4
+        },
+        "{{ModId}}_apricornsapling_blanc": {
+          "DisplayName": "{{i18n: apricorn_blanc}}",
+          "Seasons": [
+            "fall"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_blanc",
+              "ItemId": "{{ModId}}_apricorn_blanc"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 5
+        },
+        "{{ModId}}_apricornsapling_noir": {
+          "DisplayName": "{{i18n: apricorn_noir}}",
+          "Seasons": [
+            "spring",
+            "summer",
+            "fall"
+          ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_apricornfruit_noir",
+              "ItemId": "{{ModId}}_apricorn_noir"
+            }
+          ],
+          "Texture": "{{ModId}}/berries/fruits/apricorntrees",
+          "TextureSpriteRow": 6
+        }
+      }
+    },
+    {
+      "LogName": "Sell apricorn saplings at Pierre's",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "SeedShop",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_apricornsapling_rouge": {
+          "Id": "{{ModId}}_apricornsapling_rouge",
+          "ItemId": "{{ModId}}_apricornsapling_rouge",
+          "Price": 2500
+        },
+        "{{ModId}}_apricornsapling_bleu": {
+          "Id": "{{ModId}}_apricornsapling_bleu",
+          "ItemId": "{{ModId}}_apricornsapling_bleu",
+          "Price": 2500
+        },
+        "{{ModId}}_apricornsapling_jaune": {
+          "Id": "{{ModId}}_apricornsapling_jaune",
+          "ItemId": "{{ModId}}_apricornsapling_jaune",
+          "Price": 2500
+        },
+        "{{ModId}}_apricornsapling_vert": {
+          "Id": "{{ModId}}_apricornsapling_vert",
+          "ItemId": "{{ModId}}_apricornsapling_vert",
+          "Price": 2500
+        },
+        "{{ModId}}_apricornsapling_rose": {
+          "Id": "{{ModId}}_apricornsapling_rose",
+          "ItemId": "{{ModId}}_apricornsapling_rose",
+          "Price": 3000
+        },
+        "{{ModId}}_apricornsapling_blanc": {
+          "Id": "{{ModId}}_apricornsapling_blanc",
+          "ItemId": "{{ModId}}_apricornsapling_blanc",
+          "Price": 3000
+        },
+        "{{ModId}}_apricornsapling_noir": {
+          "Id": "{{ModId}}_apricornsapling_noir",
+          "ItemId": "{{ModId}}_apricornsapling_noir",
+          "Price": 12000
+        }
+      },
+      "MoveEntries": [
+        {
+          "ID": "{{ModId}}_apricornsapling_rouge",
+          "AfterID": "(O)633"
+        },
+        {
+          "ID": "{{ModId}}_apricornsapling_bleu",
+          "AfterID": "{{ModId}}_apricornsapling_rouge"
+        },
+        {
+          "ID": "{{ModId}}_apricornsapling_jaune",
+          "AfterID": "{{ModId}}_apricornsapling_bleu"
+        },
+        {
+          "ID": "{{ModId}}_apricornsapling_vert",
+          "AfterID": "{{ModId}}_apricornsapling_jaune"
+        },
+        {
+          "ID": "{{ModId}}_apricornsapling_rose",
+          "AfterID": "{{ModId}}_apricornsapling_vert"
+        },
+        {
+          "ID": "{{ModId}}_apricornsapling_blanc",
+          "AfterID": "{{ModId}}_apricornsapling_rose"
+        },
+        {
+          "ID": "{{ModId}}_apricornsapling_noir",
+          "AfterID": "{{ModId}}_apricornsapling_blanc"
+        }
+      ]
+    }
+  ]
+}

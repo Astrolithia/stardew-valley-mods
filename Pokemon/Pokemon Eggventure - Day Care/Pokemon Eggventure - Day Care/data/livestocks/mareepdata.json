@@ -1,0 +1,309 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mareep textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mareep/mareep, {{ModId}}/mareep/shinymareep, {{ModId}}/mareep/flaaffy, {{ModId}}/mareep/shinyflaaffy, {{ModId}}/mareep/ampharos, {{ModId}}/mareep/shinyampharos, {{ModId}}/mareep/mareepegg, {{ModId}}/mareep/mareepshop",
+      "FromFile": "assets/livestocks/mareep/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mareep data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mareep": {
+          "DisplayName": "{{i18n: mareep}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Deluxe Barn",
+          "EggItemIds": [
+            "{{ModId}}_mareepegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mareepbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mareep/flaaffy",
+          "BabyTexture": "{{ModId}}/mareep/mareep",
+          "Sound": "{{ModId}}_ampharoscry",
+          "BabySound": "{{ModId}}_mareepcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_mareep",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_mareepegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "PurchasePrice": 4000,
+          "ShopDescription": "{{i18n:marnie_mareep_desc}}",
+          "ShopTexture": "{{ModId}}/mareep/mareepshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymareep data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymareep": {
+          "DisplayName": "{{i18n: shinymareep}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mareepegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymareepbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mareep/shinyflaaffy",
+          "BabyTexture": "{{ModId}}/mareep/shinymareep",
+          "Sound": "{{ModId}}_ampharoscry",
+          "BabySound": "{{ModId}}_mareepcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "{{ModId}}_wool_mareep",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_mareepegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "HarvestWithTool",
+          "HarvestTool": "Shears",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymareep evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymareep",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymareepevolution": {
+          "Id": "shinymareepevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mareep/shinyampharos"
+        }
+      }
+    },
+    {
+      "LogName": "mareep cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mareepcry": {
+          "ID": "{{ModId}}_mareepcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mareep/mareepcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_ampharoscry": {
+          "ID": "{{ModId}}_ampharoscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mareep/ampharoscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mareep egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mareepegg": {
+          "Name": "{{ModId}}_mareepegg",
+          "DisplayName": "{{i18n: mareepegg}}",
+          "Description": "{{i18n: mareepegg.d}}",
+          "Texture": "{{ModId}}/mareep/mareepegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_electric",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mareep hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mareepegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymareep",
+              "AnimalId": "{{ModId}}_shinymareep",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mareep",
+              "AnimalId": "{{ModId}}_mareep",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mareep",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_magnet": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymareep",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_magnet": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_mareep",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mareep",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_mareep_dailydrop": {
+          "Id": "{{ModId}}_mareep_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_mareep_dailydrop_item",
+              "ItemId": "{{ModId}}_magnet",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - mareep",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mareep",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_magnet": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinymareep",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymareep",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinymareep_dailydrop": {
+          "Id": "{{ModId}}_shinymareep_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinymareep_dailydrop_item",
+              "ItemId": "{{ModId}}_magnet",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinymareep",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymareep",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_magnet": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

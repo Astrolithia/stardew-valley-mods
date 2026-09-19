@@ -1,0 +1,23 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load clover sprite",
+      "Action": "Load",
+      "Target": "{{ModId}}/misc/clover",
+      "FromFile": "assets/misc/clover.png"
+    },
+    {
+      "LogName": "Turn the Rabbit's Foot into a Lucky Clover",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Fields": {
+        "446": {
+          "DisplayName": "{{i18n: clover}}",
+          "Description": "{{i18n: clover.d}}",
+          "Texture": "{{ModId}}/misc/clover",
+          "SpriteIndex": 0
+        }
+      }
+    }
+  ]
+}

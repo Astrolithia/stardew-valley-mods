@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load cyclizar textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/cyclizar/cyclizard, {{ModId}}/cyclizar/shinycyclizard, {{ModId}}/cyclizar/cyclizard2, {{ModId}}/cyclizar/shinycyclizard2, {{ModId}}/cyclizar/cyclizaregg",
+      "FromFile": "assets/livestocks/cyclizar/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_cyclizar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_cyclizar": {
+          "DisplayName": "{{i18n: cyclizar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cyclizaregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: cyclizarbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cyclizar/cyclizard",
+          "BabyTexture": "{{ModId}}/cyclizar/cyclizard",
+          "Sound": "{{ModId}}_cyclizardcry",
+          "BabySound": "{{ModId}}_cyclizardcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cyclizaregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "cyclizard2",
+              "Texture": "{{ModId}}/cyclizar/cyclizard2",
+              "BabyTexture": "{{ModId}}/cyclizar/cyclizard2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycyclizar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycyclizar": {
+          "DisplayName": "{{i18n: shinycyclizar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_cyclizaregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycyclizarbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/cyclizar/shinycyclizard",
+          "BabyTexture": "{{ModId}}/cyclizar/shinycyclizard",
+          "Sound": "{{ModId}}_cyclizardcry",
+          "BabySound": "{{ModId}}_cyclizardcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_cyclizaregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "Skins": [
+            {
+              "Id": "cyclizard2",
+              "Texture": "{{ModId}}/cyclizar/shinycyclizard2",
+              "BabyTexture": "{{ModId}}/cyclizar/shinycyclizard2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cyclizar cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_cyclizardcry": {
+          "ID": "{{ModId}}_cyclizardcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/cyclizar/cyclizardcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cyclizar egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_cyclizaregg": {
+          "Name": "{{ModId}}_cyclizaregg",
+          "DisplayName": "{{i18n: cyclizaregg}}",
+          "Description": "{{i18n: cyclizaregg.d}}",
+          "Texture": "{{ModId}}/cyclizar/cyclizaregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_common",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "cyclizar hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_cyclizaregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycyclizar",
+              "AnimalId": "{{ModId}}_shinycyclizar",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_cyclizar",
+              "AnimalId": "{{ModId}}_cyclizar",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

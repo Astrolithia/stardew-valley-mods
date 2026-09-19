@@ -1,0 +1,208 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load crabrawler textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/crabrawler/crabrawler, {{ModId}}/crabrawler/shinycrabrawler, {{ModId}}/crabrawler/crabominable, {{ModId}}/crabrawler/shinycrabominable, {{ModId}}/crabrawler/crabrawleregg",
+      "FromFile": "assets/livestocks/crabrawler/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_crabrawler data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_crabrawler": {
+          "DisplayName": "{{i18n: crabrawler}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_crabrawleregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: crabrawlerbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/crabrawler/crabominable",
+          "BabyTexture": "{{ModId}}/crabrawler/crabrawler",
+          "Sound": "{{ModId}}_crabominablecry",
+          "BabySound": "{{ModId}}_crabrawlercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_crabrawleregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_crabrawler type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_crabrawler"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinycrabrawler data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinycrabrawler": {
+          "DisplayName": "{{i18n: shinycrabrawler}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_crabrawleregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinycrabrawlerbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/crabrawler/shinycrabominable",
+          "BabyTexture": "{{ModId}}/crabrawler/shinycrabrawler",
+          "Sound": "{{ModId}}_crabominablecry",
+          "BabySound": "{{ModId}}_crabrawlercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_crabrawleregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinycrabrawler type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinycrabrawler"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "crabrawler cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_crabrawlercry": {
+          "ID": "{{ModId}}_crabrawlercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/crabrawler/crabrawlercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_crabominablecry": {
+          "ID": "{{ModId}}_crabominablecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/crabrawler/crabominablecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "crabrawler egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_crabrawleregg": {
+          "Name": "{{ModId}}_crabrawleregg",
+          "DisplayName": "{{i18n: crabrawleregg}}",
+          "Description": "{{i18n: crabrawleregg.d}}",
+          "Texture": "{{ModId}}/crabrawler/crabrawleregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_verycommon",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "crabrawler hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_crabrawleregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinycrabrawler",
+              "AnimalId": "{{ModId}}_shinycrabrawler",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_crabrawler",
+              "AnimalId": "{{ModId}}_crabrawler",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

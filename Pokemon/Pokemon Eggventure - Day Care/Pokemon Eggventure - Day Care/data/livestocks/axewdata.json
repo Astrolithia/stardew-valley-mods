@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load axew textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/axew/axew, {{ModId}}/axew/shinyaxew, {{ModId}}/axew/fraxure, {{ModId}}/axew/shinyfraxure, {{ModId}}/axew/haxorus, {{ModId}}/axew/shinyhaxorus, {{ModId}}/axew/axewegg",
+      "FromFile": "assets/livestocks/axew/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_axew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_axew": {
+          "DisplayName": "{{i18n: axew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_axewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: axewbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/axew/fraxure",
+          "BabyTexture": "{{ModId}}/axew/axew",
+          "Sound": "{{ModId}}_haxoruscry",
+          "BabySound": "{{ModId}}_axewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_axewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_axew evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_axew",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "axewevolution": {
+          "Id": "axewevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/axew/haxorus"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyaxew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyaxew": {
+          "DisplayName": "{{i18n: shinyaxew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_axewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyaxewbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/axew/shinyfraxure",
+          "BabyTexture": "{{ModId}}/axew/shinyaxew",
+          "Sound": "{{ModId}}_haxoruscry",
+          "BabySound": "{{ModId}}_axewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_axewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyaxew evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyaxew",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyaxewevolution": {
+          "Id": "shinyaxewevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/axew/shinyhaxorus"
+        }
+      }
+    },
+    {
+      "LogName": "axew cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_axewcry": {
+          "ID": "{{ModId}}_axewcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/axew/axewcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_haxoruscry": {
+          "ID": "{{ModId}}_haxoruscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/axew/haxoruscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "axew egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_axewegg": {
+          "Name": "{{ModId}}_axewegg",
+          "DisplayName": "{{i18n: axewegg}}",
+          "Description": "{{i18n: axewegg.d}}",
+          "Texture": "{{ModId}}/axew/axewegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "pkegg_skullcavern_p5",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "axew hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_axewegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyaxew",
+              "AnimalId": "{{ModId}}_shinyaxew",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_axew",
+              "AnimalId": "{{ModId}}_axew",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "Changes": [
+    {
+      "LogName": "Pokemon eggs sold by the traveling cart, priced by rarity",
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "Entries": {
+        "{{ModId}}_Travelingcart_egg_verycommon": {
+          "Id": "{{ModId}}_Travelingcart_egg_verycommon",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_travelingcart, ITEM_CONTEXT_TAG Target pkegg_rarity_verycommon",
+          "Condition": "!SYNCED_RANDOM day {{ModId}}_cart_veryrare 0.02, !SYNCED_RANDOM day {{ModId}}_cart_rare 0.0816, !SYNCED_RANDOM day {{ModId}}_cart_common 0.3333",
+          "Price": "{{EggPriceVeryCommon}}",
+          "MaxItems": 1,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_Travelingcart_egg_common": {
+          "Id": "{{ModId}}_Travelingcart_egg_common",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_travelingcart, ITEM_CONTEXT_TAG Target pkegg_rarity_common",
+          "Condition": "!SYNCED_RANDOM day {{ModId}}_cart_veryrare 0.02, !SYNCED_RANDOM day {{ModId}}_cart_rare 0.0816, SYNCED_RANDOM day {{ModId}}_cart_common 0.3333",
+          "Price": "{{EggPriceCommon}}",
+          "MaxItems": 1,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_Travelingcart_egg_rare": {
+          "Id": "{{ModId}}_Travelingcart_egg_rare",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_travelingcart, ITEM_CONTEXT_TAG Target pkegg_rarity_rare",
+          "Condition": "!SYNCED_RANDOM day {{ModId}}_cart_veryrare 0.02, SYNCED_RANDOM day {{ModId}}_cart_rare 0.0816",
+          "Price": "{{EggPriceRare}}",
+          "MaxItems": 1,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player"
+        },
+        "{{ModId}}_Travelingcart_egg_veryrare": {
+          "Id": "{{ModId}}_Travelingcart_egg_veryrare",
+          "ItemId": "RANDOM_ITEMS (O)",
+          "PerItemCondition": "ITEM_CONTEXT_TAG Target pkegg_travelingcart, ITEM_CONTEXT_TAG Target pkegg_rarity_veryrare",
+          "Condition": "SYNCED_RANDOM day {{ModId}}_cart_veryrare 0.02",
+          "Price": "{{EggPriceVeryRare}}",
+          "MaxItems": 1,
+          "AvailableStock": 1,
+          "AvailableStockLimit": "Player"
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_Travelingcart_egg_veryrare",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_Travelingcart_egg_rare",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_Travelingcart_egg_common",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_Travelingcart_egg_verycommon",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

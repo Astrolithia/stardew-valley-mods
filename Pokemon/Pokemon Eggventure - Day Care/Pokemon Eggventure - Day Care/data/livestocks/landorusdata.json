@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load landorus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/landorus/landorus, {{ModId}}/landorus/shinylandorus, {{ModId}}/landorus/landorus2, {{ModId}}/landorus/shinylandorus2, {{ModId}}/landorus/landorusegg",
+      "FromFile": "assets/livestocks/landorus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_landorus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_landorus": {
+          "DisplayName": "{{i18n: landorus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_landorusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: landorusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/landorus/landorus",
+          "BabyTexture": "{{ModId}}/landorus/landorus",
+          "Sound": "{{ModId}}_landoruscry",
+          "BabySound": "{{ModId}}_landoruscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_landorusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "landorus2",
+              "Texture": "{{ModId}}/landorus/landorus2",
+              "BabyTexture": "{{ModId}}/landorus/landorus2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinylandorus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinylandorus": {
+          "DisplayName": "{{i18n: shinylandorus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_landorusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinylandorusbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/landorus/shinylandorus",
+          "BabyTexture": "{{ModId}}/landorus/shinylandorus",
+          "Sound": "{{ModId}}_landoruscry",
+          "BabySound": "{{ModId}}_landoruscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_landorusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "landorus2",
+              "Texture": "{{ModId}}/landorus/shinylandorus2",
+              "BabyTexture": "{{ModId}}/landorus/shinylandorus2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "landorus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_landoruscry": {
+          "ID": "{{ModId}}_landoruscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/landorus/landoruscry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "landorus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_landorusegg": {
+          "Name": "{{ModId}}_landorusegg",
+          "DisplayName": "{{i18n: landorusegg}}",
+          "Description": "{{i18n: landorusegg.d}}",
+          "Texture": "{{ModId}}/landorus/landorusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ground",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "landorus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_landorusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinylandorus",
+              "AnimalId": "{{ModId}}_shinylandorus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_landorus",
+              "AnimalId": "{{ModId}}_landorus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

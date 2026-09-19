@@ -1,0 +1,209 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load clauncher textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/clauncher/clauncher, {{ModId}}/clauncher/shinyclauncher, {{ModId}}/clauncher/clawitzer, {{ModId}}/clauncher/shinyclawitzer, {{ModId}}/clauncher/clauncheregg",
+      "FromFile": "assets/livestocks/clauncher/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_clauncher data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_clauncher": {
+          "DisplayName": "{{i18n: clauncher}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_clauncheregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: clauncherbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/clauncher/clawitzer",
+          "BabyTexture": "{{ModId}}/clauncher/clauncher",
+          "Sound": "{{ModId}}_clawitzercry",
+          "BabySound": "{{ModId}}_claunchercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_clauncheregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_clauncher type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_clauncher"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyclauncher data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyclauncher": {
+          "DisplayName": "{{i18n: shinyclauncher}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_clauncheregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyclauncherbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/clauncher/shinyclawitzer",
+          "BabyTexture": "{{ModId}}/clauncher/shinyclauncher",
+          "Sound": "{{ModId}}_clawitzercry",
+          "BabySound": "{{ModId}}_claunchercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_mysticwater",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_clauncheregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyclauncher type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyclauncher"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "clauncher cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_claunchercry": {
+          "ID": "{{ModId}}_claunchercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/clauncher/claunchercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_clawitzercry": {
+          "ID": "{{ModId}}_clawitzercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/clauncher/clawitzercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "clauncher egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_clauncheregg": {
+          "Name": "{{ModId}}_clauncheregg",
+          "DisplayName": "{{i18n: clauncheregg}}",
+          "Description": "{{i18n: clauncheregg.d}}",
+          "Texture": "{{ModId}}/clauncher/clauncheregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_water",
+            "pkegg_rarity_verycommon",
+            "pkegg_panning_p4",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "clauncher hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_clauncheregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyclauncher",
+              "AnimalId": "{{ModId}}_shinyclauncher",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_clauncher",
+              "AnimalId": "{{ModId}}_clauncher",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load clobbopus textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/clobbopus/clobbopus, {{ModId}}/clobbopus/shinyclobbopus, {{ModId}}/clobbopus/grapploct, {{ModId}}/clobbopus/shinygrapploct, {{ModId}}/clobbopus/clobbopusegg",
+      "FromFile": "assets/livestocks/clobbopus/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_clobbopus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_clobbopus": {
+          "DisplayName": "{{i18n: clobbopus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_clobbopusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: clobbopusbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/clobbopus/grapploct",
+          "BabyTexture": "{{ModId}}/clobbopus/clobbopus",
+          "Sound": "{{ModId}}_grapploctcry",
+          "BabySound": "{{ModId}}_clobbopuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_clobbopusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyclobbopus data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyclobbopus": {
+          "DisplayName": "{{i18n: shinyclobbopus}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_clobbopusegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyclobbopusbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/clobbopus/shinygrapploct",
+          "BabyTexture": "{{ModId}}/clobbopus/shinyclobbopus",
+          "Sound": "{{ModId}}_grapploctcry",
+          "BabySound": "{{ModId}}_clobbopuscry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_clobbopusegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "clobbopus cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_clobbopuscry": {
+          "ID": "{{ModId}}_clobbopuscry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/clobbopus/clobbopuscry.ogg}}"
+          ]
+        },
+        "{{ModId}}_grapploctcry": {
+          "ID": "{{ModId}}_grapploctcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/clobbopus/grapploctcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "clobbopus egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_clobbopusegg": {
+          "Name": "{{ModId}}_clobbopusegg",
+          "DisplayName": "{{i18n: clobbopusegg}}",
+          "Description": "{{i18n: clobbopusegg.d}}",
+          "Texture": "{{ModId}}/clobbopus/clobbopusegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "clobbopus hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_clobbopusegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyclobbopus",
+              "AnimalId": "{{ModId}}_shinyclobbopus",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_clobbopus",
+              "AnimalId": "{{ModId}}_clobbopus",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

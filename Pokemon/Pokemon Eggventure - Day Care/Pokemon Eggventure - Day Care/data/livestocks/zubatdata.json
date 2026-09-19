@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load zubat textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/zubat/zubat, {{ModId}}/zubat/shinyzubat, {{ModId}}/zubat/golbat, {{ModId}}/zubat/shinygolbat, {{ModId}}/zubat/crobat, {{ModId}}/zubat/shinycrobat, {{ModId}}/zubat/zubategg",
+      "FromFile": "assets/livestocks/zubat/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_zubat data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_zubat": {
+          "DisplayName": "{{i18n: zubat}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_zubategg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: zubatbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zubat/golbat",
+          "BabyTexture": "{{ModId}}/zubat/zubat",
+          "Sound": "{{ModId}}_crobatcry",
+          "BabySound": "{{ModId}}_zubatcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zubategg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_zubat evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_zubat",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "zubatevolution": {
+          "Id": "zubatevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/zubat/crobat"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyzubat data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyzubat": {
+          "DisplayName": "{{i18n: shinyzubat}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_zubategg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyzubatbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/zubat/shinygolbat",
+          "BabyTexture": "{{ModId}}/zubat/shinyzubat",
+          "Sound": "{{ModId}}_crobatcry",
+          "BabySound": "{{ModId}}_zubatcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_zubategg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyzubat evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyzubat",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyzubatevolution": {
+          "Id": "shinyzubatevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/zubat/shinycrobat"
+        }
+      }
+    },
+    {
+      "LogName": "zubat cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_zubatcry": {
+          "ID": "{{ModId}}_zubatcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zubat/zubatcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_crobatcry": {
+          "ID": "{{ModId}}_crobatcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/zubat/crobatcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zubat egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_zubategg": {
+          "Name": "{{ModId}}_zubategg",
+          "DisplayName": "{{i18n: zubategg}}",
+          "Description": "{{i18n: zubategg.d}}",
+          "Texture": "{{ModId}}/zubat/zubategg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_1_30_p1",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "zubat hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_zubategg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyzubat",
+              "AnimalId": "{{ModId}}_shinyzubat",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_zubat",
+              "AnimalId": "{{ModId}}_zubat",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

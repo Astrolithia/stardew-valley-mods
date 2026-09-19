@@ -1,0 +1,217 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load honedge textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/honedge/honedge, {{ModId}}/honedge/shinyhonedge, {{ModId}}/honedge/doublade, {{ModId}}/honedge/shinydoublade, {{ModId}}/honedge/aegislash, {{ModId}}/honedge/shinyaegislash, {{ModId}}/honedge/honedgeegg",
+      "FromFile": "assets/livestocks/honedge/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_honedge data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_honedge": {
+          "DisplayName": "{{i18n: honedge}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_honedgeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: honedgebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/honedge/doublade",
+          "BabyTexture": "{{ModId}}/honedge/honedge",
+          "Sound": "{{ModId}}_aegislashcry",
+          "BabySound": "{{ModId}}_honedgecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_honedgeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_honedge evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_honedge",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "honedgeevolution": {
+          "Id": "honedgeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/honedge/aegislash"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhonedge data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhonedge": {
+          "DisplayName": "{{i18n: shinyhonedge}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_honedgeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhonedgebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/honedge/shinydoublade",
+          "BabyTexture": "{{ModId}}/honedge/shinyhonedge",
+          "Sound": "{{ModId}}_aegislashcry",
+          "BabySound": "{{ModId}}_honedgecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_honedgeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyhonedge evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyhonedge",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyhonedgeevolution": {
+          "Id": "shinyhonedgeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/honedge/shinyaegislash"
+        }
+      }
+    },
+    {
+      "LogName": "honedge cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_honedgecry": {
+          "ID": "{{ModId}}_honedgecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/honedge/honedgecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_aegislashcry": {
+          "ID": "{{ModId}}_aegislashcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/honedge/aegislashcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "honedge egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_honedgeegg": {
+          "Name": "{{ModId}}_honedgeegg",
+          "DisplayName": "{{i18n: honedgeegg}}",
+          "Description": "{{i18n: honedgeegg.d}}",
+          "Texture": "{{ModId}}/honedge/honedgeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_steel",
+            "pkegg_rarity_common",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "honedge hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_honedgeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhonedge",
+              "AnimalId": "{{ModId}}_shinyhonedge",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_honedge",
+              "AnimalId": "{{ModId}}_honedge",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

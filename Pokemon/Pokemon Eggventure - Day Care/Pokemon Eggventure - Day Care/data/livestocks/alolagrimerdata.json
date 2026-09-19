@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load alolagrimer textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/grimer/alolagrimer, {{ModId}}/grimer/shinyalolagrimer, {{ModId}}/grimer/alolamuk, {{ModId}}/grimer/shinyalolamuk, {{ModId}}/grimer/alolagrimeregg",
+      "FromFile": "assets/livestocks/grimer/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_alolagrimer data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_alolagrimer": {
+          "DisplayName": "{{i18n: alolagrimer}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolagrimeregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: alolagrimerbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/grimer/alolamuk",
+          "BabyTexture": "{{ModId}}/grimer/alolagrimer",
+          "Sound": "{{ModId}}_alolamukcry",
+          "BabySound": "{{ModId}}_alolagrimercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolagrimeregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyalolagrimer data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyalolagrimer": {
+          "DisplayName": "{{i18n: shinyalolagrimer}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_alolagrimeregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyalolagrimerbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/grimer/shinyalolamuk",
+          "BabyTexture": "{{ModId}}/grimer/shinyalolagrimer",
+          "Sound": "{{ModId}}_alolamukcry",
+          "BabySound": "{{ModId}}_alolagrimercry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_alolagrimeregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "alolagrimer cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_alolagrimercry": {
+          "ID": "{{ModId}}_alolagrimercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/grimer/alolagrimercry.ogg}}"
+          ]
+        },
+        "{{ModId}}_alolamukcry": {
+          "ID": "{{ModId}}_alolamukcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/grimer/alolamukcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolagrimer egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_alolagrimeregg": {
+          "Name": "{{ModId}}_alolagrimeregg",
+          "DisplayName": "{{i18n: alolagrimeregg}}",
+          "Description": "{{i18n: alolagrimeregg.d}}",
+          "Texture": "{{ModId}}/grimer/alolagrimeregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_common",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "alolagrimer hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_alolagrimeregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyalolagrimer",
+              "AnimalId": "{{ModId}}_shinyalolagrimer",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_alolagrimer",
+              "AnimalId": "{{ModId}}_alolagrimer",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

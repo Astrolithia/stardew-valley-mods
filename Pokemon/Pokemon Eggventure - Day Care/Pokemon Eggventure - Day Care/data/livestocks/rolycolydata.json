@@ -1,0 +1,242 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rolycoly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rolycoly/rolycoly, {{ModId}}/rolycoly/shinyrolycoly, {{ModId}}/rolycoly/carkol, {{ModId}}/rolycoly/shinycarkol, {{ModId}}/rolycoly/coalossal, {{ModId}}/rolycoly/shinycoalossal, {{ModId}}/rolycoly/rolycolyegg",
+      "FromFile": "assets/livestocks/rolycoly/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rolycoly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rolycoly": {
+          "DisplayName": "{{i18n: rolycoly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_rolycolyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rolycolybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rolycoly/carkol",
+          "BabyTexture": "{{ModId}}/rolycoly/rolycoly",
+          "Sound": "{{ModId}}_coalossalcry",
+          "BabySound": "{{ModId}}_rolycolycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rolycolyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_rolycoly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_rolycoly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "rolycolyevolution": {
+          "Id": "rolycolyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rolycoly/coalossal"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_rolycoly type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_rolycoly"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrolycoly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrolycoly": {
+          "DisplayName": "{{i18n: shinyrolycoly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_rolycolyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrolycolybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rolycoly/shinycarkol",
+          "BabyTexture": "{{ModId}}/rolycoly/shinyrolycoly",
+          "Sound": "{{ModId}}_coalossalcry",
+          "BabySound": "{{ModId}}_rolycolycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rolycolyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyrolycoly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyrolycoly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyrolycolyevolution": {
+          "Id": "shinyrolycolyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rolycoly/shinycoalossal"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyrolycoly type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyrolycoly"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "rolycoly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rolycolycry": {
+          "ID": "{{ModId}}_rolycolycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rolycoly/rolycolycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_coalossalcry": {
+          "ID": "{{ModId}}_coalossalcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rolycoly/coalossalcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rolycoly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rolycolyegg": {
+          "Name": "{{ModId}}_rolycolyegg",
+          "DisplayName": "{{i18n: rolycolyegg}}",
+          "Description": "{{i18n: rolycolyegg.d}}",
+          "Texture": "{{ModId}}/rolycoly/rolycolyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_81_100_p4",
+            "pkegg_mine_101_120_p4",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rolycoly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rolycolyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrolycoly",
+              "AnimalId": "{{ModId}}_shinyrolycoly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rolycoly",
+              "AnimalId": "{{ModId}}_rolycoly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

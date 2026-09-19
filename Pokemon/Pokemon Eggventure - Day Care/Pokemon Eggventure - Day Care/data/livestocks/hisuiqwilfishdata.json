@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuiqwilfish textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/qwilfish/hisuiqwilfish, {{ModId}}/qwilfish/shinyhisuiqwilfish, {{ModId}}/qwilfish/hisuioverqwil, {{ModId}}/qwilfish/shinyhisuioverqwil, {{ModId}}/qwilfish/hisuiqwilfishegg",
+      "FromFile": "assets/livestocks/qwilfish/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuiqwilfish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuiqwilfish": {
+          "DisplayName": "{{i18n: hisuiqwilfish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuiqwilfishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuiqwilfishbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/qwilfish/hisuioverqwil",
+          "BabyTexture": "{{ModId}}/qwilfish/hisuiqwilfish",
+          "Sound": "{{ModId}}_hisuioverqwilcry",
+          "BabySound": "{{ModId}}_hisuiqwilfishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuiqwilfishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuiqwilfish data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuiqwilfish": {
+          "DisplayName": "{{i18n: shinyhisuiqwilfish}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuiqwilfishegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuiqwilfishbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/qwilfish/shinyhisuioverqwil",
+          "BabyTexture": "{{ModId}}/qwilfish/shinyhisuiqwilfish",
+          "Sound": "{{ModId}}_hisuioverqwilcry",
+          "BabySound": "{{ModId}}_hisuiqwilfishcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackglasses",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuiqwilfishegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hisuiqwilfish cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hisuiqwilfishcry": {
+          "ID": "{{ModId}}_hisuiqwilfishcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/qwilfish/hisuiqwilfishcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuioverqwilcry": {
+          "ID": "{{ModId}}_hisuioverqwilcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/qwilfish/hisuioverqwilcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuiqwilfish egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuiqwilfishegg": {
+          "Name": "{{ModId}}_hisuiqwilfishegg",
+          "DisplayName": "{{i18n: hisuiqwilfishegg}}",
+          "Description": "{{i18n: hisuiqwilfishegg.d}}",
+          "Texture": "{{ModId}}/qwilfish/hisuiqwilfishegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dark",
+            "pkegg_rarity_rare",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuiqwilfish hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuiqwilfishegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuiqwilfish",
+              "AnimalId": "{{ModId}}_shinyhisuiqwilfish",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuiqwilfish",
+              "AnimalId": "{{ModId}}_hisuiqwilfish",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

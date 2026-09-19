@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load gastly textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/gastly/gastly, {{ModId}}/gastly/shinygastly, {{ModId}}/gastly/haunter, {{ModId}}/gastly/shinyhaunter, {{ModId}}/gastly/gengar, {{ModId}}/gastly/shinygengar, {{ModId}}/gastly/gastlyegg",
+      "FromFile": "assets/livestocks/gastly/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_gastly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_gastly": {
+          "DisplayName": "{{i18n: gastly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gastlyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: gastlybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gastly/haunter",
+          "BabyTexture": "{{ModId}}/gastly/gastly",
+          "Sound": "{{ModId}}_gengarcry",
+          "BabySound": "{{ModId}}_gastlycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gastlyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_gastly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_gastly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "gastlyevolution": {
+          "Id": "gastlyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/gastly/gengar"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygastly data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygastly": {
+          "DisplayName": "{{i18n: shinygastly}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_gastlyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygastlybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/gastly/shinyhaunter",
+          "BabyTexture": "{{ModId}}/gastly/shinygastly",
+          "Sound": "{{ModId}}_gengarcry",
+          "BabySound": "{{ModId}}_gastlycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_gastlyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinygastly evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinygastly",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinygastlyevolution": {
+          "Id": "shinygastlyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/gastly/shinygengar"
+        }
+      }
+    },
+    {
+      "LogName": "gastly cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_gastlycry": {
+          "ID": "{{ModId}}_gastlycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gastly/gastlycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_gengarcry": {
+          "ID": "{{ModId}}_gengarcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/gastly/gengarcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gastly egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_gastlyegg": {
+          "Name": "{{ModId}}_gastlyegg",
+          "DisplayName": "{{i18n: gastlyegg}}",
+          "Description": "{{i18n: gastlyegg.d}}",
+          "Texture": "{{ModId}}/gastly/gastlyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ghost",
+            "pkegg_rarity_common",
+            "pkegg_mine_31_40_p2",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "gastly hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_gastlyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygastly",
+              "AnimalId": "{{ModId}}_shinygastly",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_gastly",
+              "AnimalId": "{{ModId}}_gastly",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

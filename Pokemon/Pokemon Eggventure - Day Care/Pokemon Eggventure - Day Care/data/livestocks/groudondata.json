@@ -1,0 +1,193 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load groudon textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/groudon/groudon, {{ModId}}/groudon/shinygroudon, {{ModId}}/groudon/groudonprimal, {{ModId}}/groudon/shinygroudonprimal, {{ModId}}/groudon/groudonegg",
+      "FromFile": "assets/livestocks/groudon/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_groudon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_groudon": {
+          "DisplayName": "{{i18n: groudon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_groudonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: groudonbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/groudon/groudon",
+          "BabyTexture": "{{ModId}}/groudon/groudon",
+          "Sound": "{{ModId}}_groudoncry",
+          "BabySound": "{{ModId}}_groudoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_groudonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "groudonprimal",
+              "Texture": "{{ModId}}/groudon/groudonprimal",
+              "BabyTexture": "{{ModId}}/groudon/groudonprimal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygroudon data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygroudon": {
+          "DisplayName": "{{i18n: shinygroudon}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_groudonegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygroudonbirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/groudon/shinygroudon",
+          "BabyTexture": "{{ModId}}/groudon/shinygroudon",
+          "Sound": "{{ModId}}_groudoncry",
+          "BabySound": "{{ModId}}_groudoncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_groudonegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}",
+          "Skins": [
+            {
+              "Id": "groudonprimal",
+              "Texture": "{{ModId}}/groudon/shinygroudonprimal",
+              "BabyTexture": "{{ModId}}/groudon/shinygroudonprimal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "groudon cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_groudoncry": {
+          "ID": "{{ModId}}_groudoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/groudon/groudoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "groudon egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_groudonegg": {
+          "Name": "{{ModId}}_groudonegg",
+          "DisplayName": "{{i18n: groudonegg}}",
+          "Description": "{{i18n: groudonegg.d}}",
+          "Texture": "{{ModId}}/groudon/groudonegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ground",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "groudon hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_groudonegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygroudon",
+              "AnimalId": "{{ModId}}_shinygroudon",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_groudon",
+              "AnimalId": "{{ModId}}_groudon",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

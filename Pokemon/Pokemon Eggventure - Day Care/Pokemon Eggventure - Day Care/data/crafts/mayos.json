@@ -1,0 +1,768 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load type mayonnaise sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/mayos",
+      "FromFile": "assets/artisanalitems/mayos.png"
+    },
+    {
+      "LogName": "Type mayonnaise objects",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mayo_normal": {
+          "Name": "{{ModId}}_mayo_normal",
+          "DisplayName": "{{i18n: mayo_normal}}",
+          "Description": "{{i18n: mayo_normal.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_normal",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_mayo_fire": {
+          "Name": "{{ModId}}_mayo_fire",
+          "DisplayName": "{{i18n: mayo_fire}}",
+          "Description": "{{i18n: mayo_fire.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 1,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_fire",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_mayo_water": {
+          "Name": "{{ModId}}_mayo_water",
+          "DisplayName": "{{i18n: mayo_water}}",
+          "Description": "{{i18n: mayo_water.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 2,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_water",
+            "color_blue"
+          ]
+        },
+        "{{ModId}}_mayo_grass": {
+          "Name": "{{ModId}}_mayo_grass",
+          "DisplayName": "{{i18n: mayo_grass}}",
+          "Description": "{{i18n: mayo_grass.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 3,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_grass",
+            "color_lime"
+          ]
+        },
+        "{{ModId}}_mayo_electric": {
+          "Name": "{{ModId}}_mayo_electric",
+          "DisplayName": "{{i18n: mayo_electric}}",
+          "Description": "{{i18n: mayo_electric.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 4,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_electric",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_mayo_ice": {
+          "Name": "{{ModId}}_mayo_ice",
+          "DisplayName": "{{i18n: mayo_ice}}",
+          "Description": "{{i18n: mayo_ice.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 5,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_ice",
+            "color_light_cyan"
+          ]
+        },
+        "{{ModId}}_mayo_fighting": {
+          "Name": "{{ModId}}_mayo_fighting",
+          "DisplayName": "{{i18n: mayo_fighting}}",
+          "Description": "{{i18n: mayo_fighting.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 6,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_fighting",
+            "color_salmon"
+          ]
+        },
+        "{{ModId}}_mayo_poison": {
+          "Name": "{{ModId}}_mayo_poison",
+          "DisplayName": "{{i18n: mayo_poison}}",
+          "Description": "{{i18n: mayo_poison.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 7,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_poison",
+            "color_purple"
+          ]
+        },
+        "{{ModId}}_mayo_ground": {
+          "Name": "{{ModId}}_mayo_ground",
+          "DisplayName": "{{i18n: mayo_ground}}",
+          "Description": "{{i18n: mayo_ground.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 8,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_ground",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_mayo_flying": {
+          "Name": "{{ModId}}_mayo_flying",
+          "DisplayName": "{{i18n: mayo_flying}}",
+          "Description": "{{i18n: mayo_flying.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 9,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_flying",
+            "color_iridium"
+          ]
+        },
+        "{{ModId}}_mayo_psychic": {
+          "Name": "{{ModId}}_mayo_psychic",
+          "DisplayName": "{{i18n: mayo_psychic}}",
+          "Description": "{{i18n: mayo_psychic.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 10,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_psychic",
+            "color_dark_pink"
+          ]
+        },
+        "{{ModId}}_mayo_bug": {
+          "Name": "{{ModId}}_mayo_bug",
+          "DisplayName": "{{i18n: mayo_bug}}",
+          "Description": "{{i18n: mayo_bug.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 11,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_bug",
+            "color_yellow_green"
+          ]
+        },
+        "{{ModId}}_mayo_rock": {
+          "Name": "{{ModId}}_mayo_rock",
+          "DisplayName": "{{i18n: mayo_rock}}",
+          "Description": "{{i18n: mayo_rock.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 12,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_rock",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_mayo_ghost": {
+          "Name": "{{ModId}}_mayo_ghost",
+          "DisplayName": "{{i18n: mayo_ghost}}",
+          "Description": "{{i18n: mayo_ghost.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 13,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_ghost",
+            "color_iridium"
+          ]
+        },
+        "{{ModId}}_mayo_dragon": {
+          "Name": "{{ModId}}_mayo_dragon",
+          "DisplayName": "{{i18n: mayo_dragon}}",
+          "Description": "{{i18n: mayo_dragon.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 14,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_dragon",
+            "color_iridium"
+          ]
+        },
+        "{{ModId}}_mayo_dark": {
+          "Name": "{{ModId}}_mayo_dark",
+          "DisplayName": "{{i18n: mayo_dark}}",
+          "Description": "{{i18n: mayo_dark.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 15,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_dark",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_mayo_steel": {
+          "Name": "{{ModId}}_mayo_steel",
+          "DisplayName": "{{i18n: mayo_steel}}",
+          "Description": "{{i18n: mayo_steel.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 16,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_steel",
+            "color_salmon"
+          ]
+        },
+        "{{ModId}}_mayo_fairy": {
+          "Name": "{{ModId}}_mayo_fairy",
+          "DisplayName": "{{i18n: mayo_fairy}}",
+          "Description": "{{i18n: mayo_fairy.d}}",
+          "Type": "Basic",
+          "Category": -26,
+          "Price": 250,
+          "Edibility": 50,
+          "Texture": "{{ModId}}/mayos",
+          "SpriteIndex": 17,
+          "ContextTags": [
+            "mayo_item",
+            "pkmayo_item",
+            "pkmayo_type_fairy",
+            "color_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Mayonnaise machine type rules",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)24",
+        "OutputRules"
+      ],
+      "Entries": {
+        "{{ModId}}_MayoType_normal": {
+          "Id": "{{ModId}}_MayoType_normal",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_normal_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_normal"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_normal_out",
+              "ItemId": "{{ModId}}_mayo_normal"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_fire": {
+          "Id": "{{ModId}}_MayoType_fire",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_fire_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_fire"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_fire_out",
+              "ItemId": "{{ModId}}_mayo_fire"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_water": {
+          "Id": "{{ModId}}_MayoType_water",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_water_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_water"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_water_out",
+              "ItemId": "{{ModId}}_mayo_water"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_grass": {
+          "Id": "{{ModId}}_MayoType_grass",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_grass_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_grass"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_grass_out",
+              "ItemId": "{{ModId}}_mayo_grass"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_electric": {
+          "Id": "{{ModId}}_MayoType_electric",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_electric_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_electric"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_electric_out",
+              "ItemId": "{{ModId}}_mayo_electric"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_ice": {
+          "Id": "{{ModId}}_MayoType_ice",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_ice_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_ice"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_ice_out",
+              "ItemId": "{{ModId}}_mayo_ice"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_fighting": {
+          "Id": "{{ModId}}_MayoType_fighting",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_fighting_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_fighting"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_fighting_out",
+              "ItemId": "{{ModId}}_mayo_fighting"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_poison": {
+          "Id": "{{ModId}}_MayoType_poison",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_poison_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_poison"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_poison_out",
+              "ItemId": "{{ModId}}_mayo_poison"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_ground": {
+          "Id": "{{ModId}}_MayoType_ground",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_ground_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_ground"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_ground_out",
+              "ItemId": "{{ModId}}_mayo_ground"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_flying": {
+          "Id": "{{ModId}}_MayoType_flying",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_flying_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_flying"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_flying_out",
+              "ItemId": "{{ModId}}_mayo_flying"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_psychic": {
+          "Id": "{{ModId}}_MayoType_psychic",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_psychic_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_psychic"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_psychic_out",
+              "ItemId": "{{ModId}}_mayo_psychic"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_bug": {
+          "Id": "{{ModId}}_MayoType_bug",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_bug_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_bug"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_bug_out",
+              "ItemId": "{{ModId}}_mayo_bug"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_rock": {
+          "Id": "{{ModId}}_MayoType_rock",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_rock_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_rock"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_rock_out",
+              "ItemId": "{{ModId}}_mayo_rock"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_ghost": {
+          "Id": "{{ModId}}_MayoType_ghost",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_ghost_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_ghost"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_ghost_out",
+              "ItemId": "{{ModId}}_mayo_ghost"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_dragon": {
+          "Id": "{{ModId}}_MayoType_dragon",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_dragon_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_dragon"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_dragon_out",
+              "ItemId": "{{ModId}}_mayo_dragon"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_dark": {
+          "Id": "{{ModId}}_MayoType_dark",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_dark_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_dark"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_dark_out",
+              "ItemId": "{{ModId}}_mayo_dark"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_steel": {
+          "Id": "{{ModId}}_MayoType_steel",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_steel_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_steel"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_steel_out",
+              "ItemId": "{{ModId}}_mayo_steel"
+            }
+          ],
+          "MinutesUntilReady": 180
+        },
+        "{{ModId}}_MayoType_fairy": {
+          "Id": "{{ModId}}_MayoType_fairy",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_MayoType_fairy_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkegg_type_fairy"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_MayoType_fairy_out",
+              "ItemId": "{{ModId}}_mayo_fairy"
+            }
+          ],
+          "MinutesUntilReady": 180
+        }
+      },
+      "MoveEntries": [
+        {
+          "Id": "{{ModId}}_MayoType_normal",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_fire",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_water",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_grass",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_electric",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_ice",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_fighting",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_poison",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_ground",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_flying",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_psychic",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_bug",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_rock",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_ghost",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_dragon",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_dark",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_steel",
+          "ToPosition": "Top"
+        },
+        {
+          "Id": "{{ModId}}_MayoType_fairy",
+          "ToPosition": "Top"
+        }
+      ]
+    }
+  ]
+}

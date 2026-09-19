@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load helioptile textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/helioptile/helioptile, {{ModId}}/helioptile/shinyhelioptile, {{ModId}}/helioptile/heliolisk, {{ModId}}/helioptile/shinyheliolisk, {{ModId}}/helioptile/helioptileegg",
+      "FromFile": "assets/livestocks/helioptile/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_helioptile data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_helioptile": {
+          "DisplayName": "{{i18n: helioptile}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_helioptileegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: helioptilebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/helioptile/heliolisk",
+          "BabyTexture": "{{ModId}}/helioptile/helioptile",
+          "Sound": "{{ModId}}_helioliskcry",
+          "BabySound": "{{ModId}}_helioptilecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_helioptileegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhelioptile data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhelioptile": {
+          "DisplayName": "{{i18n: shinyhelioptile}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_helioptileegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhelioptilebirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/helioptile/shinyheliolisk",
+          "BabyTexture": "{{ModId}}/helioptile/shinyhelioptile",
+          "Sound": "{{ModId}}_helioliskcry",
+          "BabySound": "{{ModId}}_helioptilecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_magnet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_helioptileegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "helioptile cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_helioptilecry": {
+          "ID": "{{ModId}}_helioptilecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/helioptile/helioptilecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_helioliskcry": {
+          "ID": "{{ModId}}_helioliskcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/helioptile/helioliskcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "helioptile egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_helioptileegg": {
+          "Name": "{{ModId}}_helioptileegg",
+          "DisplayName": "{{i18n: helioptileegg}}",
+          "Description": "{{i18n: helioptileegg.d}}",
+          "Texture": "{{ModId}}/helioptile/helioptileegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_electric",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "helioptile hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_helioptileegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhelioptile",
+              "AnimalId": "{{ModId}}_shinyhelioptile",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_helioptile",
+              "AnimalId": "{{ModId}}_helioptile",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

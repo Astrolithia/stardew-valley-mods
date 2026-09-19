@@ -1,0 +1,263 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mudbray textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mudbray/mudbray, {{ModId}}/mudbray/shinymudbray, {{ModId}}/mudbray/mudsdale, {{ModId}}/mudbray/shinymudsdale, {{ModId}}/mudbray/mudbrayegg, {{ModId}}/mudbray/mudbrayshop",
+      "FromFile": "assets/livestocks/mudbray/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mudbray data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mudbray": {
+          "DisplayName": "{{i18n: mudbray}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mudbrayegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mudbraybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mudbray/mudsdale",
+          "BabyTexture": "{{ModId}}/mudbray/mudbray",
+          "Sound": "{{ModId}}_mudsdalecry",
+          "BabySound": "{{ModId}}_mudbraycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "330",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_mudbrayegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "HarvestType": "DropOvernight",
+          "PurchasePrice": 1500,
+          "ShopDescription": "{{i18n:marnie_mudbray_desc}}",
+          "ShopTexture": "{{ModId}}/mudbray/mudbrayshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          }
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymudbray data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymudbray": {
+          "DisplayName": "{{i18n: shinymudbray}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mudbrayegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymudbraybirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mudbray/shinymudsdale",
+          "BabyTexture": "{{ModId}}/mudbray/shinymudbray",
+          "Sound": "{{ModId}}_mudsdalecry",
+          "BabySound": "{{ModId}}_mudbraycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "330",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_mudbrayegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "HarvestType": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "mudbray cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mudbraycry": {
+          "ID": "{{ModId}}_mudbraycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mudbray/mudbraycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mudsdalecry": {
+          "ID": "{{ModId}}_mudsdalecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mudbray/mudsdalecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mudbray egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mudbrayegg": {
+          "Name": "{{ModId}}_mudbrayegg",
+          "DisplayName": "{{i18n: mudbrayegg}}",
+          "Description": "{{i18n: mudbrayegg.d}}",
+          "Texture": "{{ModId}}/mudbray/mudbrayegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mudbray hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mudbrayegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymudbray",
+              "AnimalId": "{{ModId}}_shinymudbray",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mudbray",
+              "AnimalId": "{{ModId}}_mudbray",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_mudbray",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mudbray",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_mudbray_dailydrop": {
+          "Id": "{{ModId}}_mudbray_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_mudbray_dailydrop_item",
+              "ItemId": "{{ModId}}_softsand",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - mudbray",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mudbray",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_softsand": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinymudbray",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymudbray",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinymudbray_dailydrop": {
+          "Id": "{{ModId}}_shinymudbray_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinymudbray_dailydrop_item",
+              "ItemId": "{{ModId}}_softsand",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinymudbray",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymudbray",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_softsand": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

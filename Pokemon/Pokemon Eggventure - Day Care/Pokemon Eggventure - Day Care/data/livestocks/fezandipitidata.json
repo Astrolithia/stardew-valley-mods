@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load fezandipiti textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/fezandipiti/fezandipiti, {{ModId}}/fezandipiti/shinyfezandipiti, {{ModId}}/fezandipiti/fezandipitiegg",
+      "FromFile": "assets/livestocks/fezandipiti/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_fezandipiti data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_fezandipiti": {
+          "DisplayName": "{{i18n: fezandipiti}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fezandipitiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: fezandipitibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fezandipiti/fezandipiti",
+          "BabyTexture": "{{ModId}}/fezandipiti/fezandipiti",
+          "Sound": "{{ModId}}_fezandipiticry",
+          "BabySound": "{{ModId}}_fezandipiticry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fezandipitiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyfezandipiti data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyfezandipiti": {
+          "DisplayName": "{{i18n: shinyfezandipiti}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_fezandipitiegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysLegendary}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyfezandipitibirthtext}}",
+          "DaysToMature": "{{BabyDaysLegendary}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/fezandipiti/shinyfezandipiti",
+          "BabyTexture": "{{ModId}}/fezandipiti/shinyfezandipiti",
+          "Sound": "{{ModId}}_fezandipiticry",
+          "BabySound": "{{ModId}}_fezandipiticry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_fezandipitiegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceLegendary}}"
+        }
+      }
+    },
+    {
+      "LogName": "fezandipiti cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_fezandipiticry": {
+          "ID": "{{ModId}}_fezandipiticry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/fezandipiti/fezandipiticry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fezandipiti egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_fezandipitiegg": {
+          "Name": "{{ModId}}_fezandipitiegg",
+          "DisplayName": "{{i18n: fezandipitiegg}}",
+          "Description": "{{i18n: fezandipitiegg.d}}",
+          "Texture": "{{ModId}}/fezandipiti/fezandipitiegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_poison",
+            "pkegg_rarity_legendary",
+            "pkegg_hardmine",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "fezandipiti hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_fezandipitiegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyfezandipiti",
+              "AnimalId": "{{ModId}}_shinyfezandipiti",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_fezandipiti",
+              "AnimalId": "{{ModId}}_fezandipiti",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

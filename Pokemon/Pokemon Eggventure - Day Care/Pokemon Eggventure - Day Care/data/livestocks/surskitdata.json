@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load surskit textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/surskit/surskit, {{ModId}}/surskit/shinysurskit, {{ModId}}/surskit/masquerain, {{ModId}}/surskit/shinymasquerain, {{ModId}}/surskit/surskitegg",
+      "FromFile": "assets/livestocks/surskit/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_surskit data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_surskit": {
+          "DisplayName": "{{i18n: surskit}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_surskitegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: surskitbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/surskit/masquerain",
+          "BabyTexture": "{{ModId}}/surskit/surskit",
+          "Sound": "{{ModId}}_masqueraincry",
+          "BabySound": "{{ModId}}_surskitcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_surskitegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysurskit data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysurskit": {
+          "DisplayName": "{{i18n: shinysurskit}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_surskitegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysurskitbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/surskit/shinymasquerain",
+          "BabyTexture": "{{ModId}}/surskit/shinysurskit",
+          "Sound": "{{ModId}}_masqueraincry",
+          "BabySound": "{{ModId}}_surskitcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_shedshell",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_surskitegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "surskit cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_surskitcry": {
+          "ID": "{{ModId}}_surskitcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/surskit/surskitcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_masqueraincry": {
+          "ID": "{{ModId}}_masqueraincry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/surskit/masqueraincry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "surskit egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_surskitegg": {
+          "Name": "{{ModId}}_surskitegg",
+          "DisplayName": "{{i18n: surskitegg}}",
+          "Description": "{{i18n: surskitegg.d}}",
+          "Texture": "{{ModId}}/surskit/surskitegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_bug",
+            "pkegg_rarity_verycommon",
+            "pkegg_panning_p2_rainsnow",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "surskit hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_surskitegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysurskit",
+              "AnimalId": "{{ModId}}_shinysurskit",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_surskit",
+              "AnimalId": "{{ModId}}_surskit",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarfarfetchd textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/farfetchd/galarfarfetchd, {{ModId}}/farfetchd/shinygalarfarfetchd, {{ModId}}/farfetchd/galarfarfetchdegg",
+      "FromFile": "assets/livestocks/farfetchd/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarfarfetchd data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarfarfetchd": {
+          "DisplayName": "{{i18n: galarfarfetchd}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarfarfetchdegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarfarfetchdbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/farfetchd/galarfarfetchd",
+          "BabyTexture": "{{ModId}}/farfetchd/galarfarfetchd",
+          "Sound": "{{ModId}}_galarfarfetchdcry",
+          "BabySound": "{{ModId}}_galarfarfetchdcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarfarfetchdegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarfarfetchd data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarfarfetchd": {
+          "DisplayName": "{{i18n: shinygalarfarfetchd}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarfarfetchdegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarfarfetchdbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/farfetchd/shinygalarfarfetchd",
+          "BabyTexture": "{{ModId}}/farfetchd/shinygalarfarfetchd",
+          "Sound": "{{ModId}}_galarfarfetchdcry",
+          "BabySound": "{{ModId}}_galarfarfetchdcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarfarfetchdegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarfarfetchd cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarfarfetchdcry": {
+          "ID": "{{ModId}}_galarfarfetchdcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/farfetchd/galarfarfetchdcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarfarfetchd egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarfarfetchdegg": {
+          "Name": "{{ModId}}_galarfarfetchdegg",
+          "DisplayName": "{{i18n: galarfarfetchdegg}}",
+          "Description": "{{i18n: galarfarfetchdegg.d}}",
+          "Texture": "{{ModId}}/farfetchd/galarfarfetchdegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_copper"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarfarfetchd hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarfarfetchdegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarfarfetchd",
+              "AnimalId": "{{ModId}}_shinygalarfarfetchd",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarfarfetchd",
+              "AnimalId": "{{ModId}}_galarfarfetchd",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

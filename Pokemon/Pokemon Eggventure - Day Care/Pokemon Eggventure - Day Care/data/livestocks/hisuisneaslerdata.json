@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load hisuisneasler textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sneasel/hisuisneasel, {{ModId}}/sneasel/shinyhisuisneasel, {{ModId}}/sneasel/hisuisneasler, {{ModId}}/sneasel/shinyhisuisneasler, {{ModId}}/sneasel/hisuisneasleregg",
+      "FromFile": "assets/livestocks/sneasel/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_hisuisneasler data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_hisuisneasler": {
+          "DisplayName": "{{i18n: hisuisneasler}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuisneasleregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: hisuisneaslerbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sneasel/hisuisneasler",
+          "BabyTexture": "{{ModId}}/sneasel/hisuisneasel",
+          "Sound": "{{ModId}}_hisuisneaslercry",
+          "BabySound": "{{ModId}}_hisuisneaselcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuisneasleregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyhisuisneasler data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyhisuisneasler": {
+          "DisplayName": "{{i18n: shinyhisuisneasler}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_hisuisneasleregg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyhisuisneaslerbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sneasel/shinyhisuisneasler",
+          "BabyTexture": "{{ModId}}/sneasel/shinyhisuisneasel",
+          "Sound": "{{ModId}}_hisuisneaslercry",
+          "BabySound": "{{ModId}}_hisuisneaselcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blackbelt",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_hisuisneasleregg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "hisuisneasler cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_hisuisneaselcry": {
+          "ID": "{{ModId}}_hisuisneaselcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sneasel/hisuisneaselcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_hisuisneaslercry": {
+          "ID": "{{ModId}}_hisuisneaslercry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sneasel/hisuisneaslercry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuisneasler egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_hisuisneasleregg": {
+          "Name": "{{ModId}}_hisuisneasleregg",
+          "DisplayName": "{{i18n: hisuisneasleregg}}",
+          "Description": "{{i18n: hisuisneasleregg.d}}",
+          "Texture": "{{ModId}}/sneasel/hisuisneasleregg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fighting",
+            "pkegg_rarity_rare",
+            "color_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "hisuisneasler hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_hisuisneasleregg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyhisuisneasler",
+              "AnimalId": "{{ModId}}_shinyhisuisneasler",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_hisuisneasler",
+              "AnimalId": "{{ModId}}_hisuisneasler",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

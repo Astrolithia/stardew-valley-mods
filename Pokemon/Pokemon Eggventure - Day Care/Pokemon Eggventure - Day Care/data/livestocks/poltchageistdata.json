@@ -1,0 +1,185 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load poltchageist textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/poltchageist/poltchageist, {{ModId}}/poltchageist/shinypoltchageist, {{ModId}}/poltchageist/sinistcha, {{ModId}}/poltchageist/shinysinistcha, {{ModId}}/poltchageist/poltchageistegg",
+      "FromFile": "assets/livestocks/poltchageist/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_poltchageist data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_poltchageist": {
+          "DisplayName": "{{i18n: poltchageist}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_poltchageistegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: poltchageistbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poltchageist/sinistcha",
+          "BabyTexture": "{{ModId}}/poltchageist/poltchageist",
+          "Sound": "{{ModId}}_sinistchacry",
+          "BabySound": "{{ModId}}_poltchageistcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poltchageistegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypoltchageist data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypoltchageist": {
+          "DisplayName": "{{i18n: shinypoltchageist}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_poltchageistegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypoltchageistbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/poltchageist/shinysinistcha",
+          "BabyTexture": "{{ModId}}/poltchageist/shinypoltchageist",
+          "Sound": "{{ModId}}_sinistchacry",
+          "BabySound": "{{ModId}}_poltchageistcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_miracleseed",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_poltchageistegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "poltchageist cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_poltchageistcry": {
+          "ID": "{{ModId}}_poltchageistcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poltchageist/poltchageistcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_sinistchacry": {
+          "ID": "{{ModId}}_sinistchacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/poltchageist/sinistchacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poltchageist egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_poltchageistegg": {
+          "Name": "{{ModId}}_poltchageistegg",
+          "DisplayName": "{{i18n: poltchageistegg}}",
+          "Description": "{{i18n: poltchageistegg.d}}",
+          "Texture": "{{ModId}}/poltchageist/poltchageistegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_grass",
+            "pkegg_rarity_common",
+            "color_lime"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "poltchageist hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_poltchageistegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypoltchageist",
+              "AnimalId": "{{ModId}}_shinypoltchageist",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_poltchageist",
+              "AnimalId": "{{ModId}}_poltchageist",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

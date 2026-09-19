@@ -1,0 +1,178 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load galarcorsola textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/corsola/galarcorsola, {{ModId}}/corsola/shinygalarcorsola, {{ModId}}/corsola/galarcorsolaegg",
+      "FromFile": "assets/livestocks/corsola/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_galarcorsola data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_galarcorsola": {
+          "DisplayName": "{{i18n: galarcorsola}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarcorsolaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: galarcorsolabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/corsola/galarcorsola",
+          "BabyTexture": "{{ModId}}/corsola/galarcorsola",
+          "Sound": "{{ModId}}_galarcorsolacry",
+          "BabySound": "{{ModId}}_galarcorsolacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarcorsolaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinygalarcorsola data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinygalarcorsola": {
+          "DisplayName": "{{i18n: shinygalarcorsola}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_galarcorsolaegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinygalarcorsolabirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/corsola/shinygalarcorsola",
+          "BabyTexture": "{{ModId}}/corsola/shinygalarcorsola",
+          "Sound": "{{ModId}}_galarcorsolacry",
+          "BabySound": "{{ModId}}_galarcorsolacry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_reapercloth",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_galarcorsolaegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "galarcorsola cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_galarcorsolacry": {
+          "ID": "{{ModId}}_galarcorsolacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/corsola/galarcorsolacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarcorsola egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_galarcorsolaegg": {
+          "Name": "{{ModId}}_galarcorsolaegg",
+          "DisplayName": "{{i18n: galarcorsolaegg}}",
+          "Description": "{{i18n: galarcorsolaegg.d}}",
+          "Texture": "{{ModId}}/corsola/galarcorsolaegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_ghost",
+            "pkegg_rarity_rare",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "galarcorsola hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_galarcorsolaegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinygalarcorsola",
+              "AnimalId": "{{ModId}}_shinygalarcorsola",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_galarcorsola",
+              "AnimalId": "{{ModId}}_galarcorsola",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

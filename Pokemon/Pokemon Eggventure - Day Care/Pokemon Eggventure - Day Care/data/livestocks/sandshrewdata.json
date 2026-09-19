@@ -1,0 +1,186 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load sandshrew textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/sandshrew/sandshrew, {{ModId}}/sandshrew/shinysandshrew, {{ModId}}/sandshrew/sandslash, {{ModId}}/sandshrew/shinysandslash, {{ModId}}/sandshrew/sandshrewegg",
+      "FromFile": "assets/livestocks/sandshrew/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_sandshrew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_sandshrew": {
+          "DisplayName": "{{i18n: sandshrew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sandshrewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: sandshrewbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandshrew/sandslash",
+          "BabyTexture": "{{ModId}}/sandshrew/sandshrew",
+          "Sound": "{{ModId}}_sandslashcry",
+          "BabySound": "{{ModId}}_sandshrewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandshrewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinysandshrew data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinysandshrew": {
+          "DisplayName": "{{i18n: shinysandshrew}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_sandshrewegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinysandshrewbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/sandshrew/shinysandslash",
+          "BabyTexture": "{{ModId}}/sandshrew/shinysandshrew",
+          "Sound": "{{ModId}}_sandslashcry",
+          "BabySound": "{{ModId}}_sandshrewcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_sandshrewegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "sandshrew cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_sandshrewcry": {
+          "ID": "{{ModId}}_sandshrewcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandshrew/sandshrewcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_sandslashcry": {
+          "ID": "{{ModId}}_sandslashcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/sandshrew/sandslashcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandshrew egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_sandshrewegg": {
+          "Name": "{{ModId}}_sandshrewegg",
+          "DisplayName": "{{i18n: sandshrewegg}}",
+          "Description": "{{i18n: sandshrewegg.d}}",
+          "Texture": "{{ModId}}/sandshrew/sandshrewegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "sandshrew hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_sandshrewegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinysandshrew",
+              "AnimalId": "{{ModId}}_shinysandshrew",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_sandshrew",
+              "AnimalId": "{{ModId}}_sandshrew",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

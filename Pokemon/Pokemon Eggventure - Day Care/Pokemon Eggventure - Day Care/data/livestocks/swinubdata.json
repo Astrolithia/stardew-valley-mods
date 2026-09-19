@@ -1,0 +1,298 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load swinub textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/swinub/swinub, {{ModId}}/swinub/shinyswinub, {{ModId}}/swinub/piloswine, {{ModId}}/swinub/shinypiloswine, {{ModId}}/swinub/mamoswine, {{ModId}}/swinub/shinymamoswine, {{ModId}}/swinub/swinubegg",
+      "FromFile": "assets/livestocks/swinub/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_swinub data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_swinub": {
+          "DisplayName": "{{i18n: swinub}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_swinubegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: swinubbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/swinub/piloswine",
+          "BabyTexture": "{{ModId}}/swinub/swinub",
+          "Sound": "{{ModId}}_mamoswinecry",
+          "BabySound": "{{ModId}}_swinubcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "430",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_swinubegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "DigUp",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_swinub type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_swinub"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyswinub data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyswinub": {
+          "DisplayName": "{{i18n: shinyswinub}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_swinubegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyswinubbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/swinub/shinypiloswine",
+          "BabyTexture": "{{ModId}}/swinub/shinyswinub",
+          "Sound": "{{ModId}}_mamoswinecry",
+          "BabySound": "{{ModId}}_swinubcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "VanillaResource",
+              "ItemId": "430",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_swinubegg",
+              "MinimumFriendship": 500,
+              "Condition": "RANDOM {{EggLayingChance}}"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "DigUp",
+          "DeluxeProduceMinimumFriendship": 0
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyswinub evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyswinub",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyswinubevolution": {
+          "Id": "shinyswinubevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/swinub/shinymamoswine"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyswinub type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyswinub"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "swinub cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_swinubcry": {
+          "ID": "{{ModId}}_swinubcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/swinub/swinubcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mamoswinecry": {
+          "ID": "{{ModId}}_mamoswinecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/swinub/mamoswinecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "swinub egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_swinubegg": {
+          "Name": "{{ModId}}_swinubegg",
+          "DisplayName": "{{i18n: swinubegg}}",
+          "Description": "{{i18n: swinubegg.d}}",
+          "Texture": "{{ModId}}/swinub/swinubegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_verycommon",
+            "pkegg_mine_41_60_p3",
+            "pkegg_mine_61_80_p3",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "swinub hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_swinubegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyswinub",
+              "AnimalId": "{{ModId}}_shinyswinub",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_swinub",
+              "AnimalId": "{{ModId}}_swinub",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_swinub",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_swinub",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_swinub_dailydrop": {
+          "Id": "{{ModId}}_swinub_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_swinub_dailydrop_item",
+              "ItemId": "{{ModId}}_nevermeltice",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - swinub",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_swinub",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_nevermeltice": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinyswinub",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyswinub",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinyswinub_dailydrop": {
+          "Id": "{{ModId}}_shinyswinub_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinyswinub_dailydrop_item",
+              "ItemId": "{{ModId}}_nevermeltice",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyswinub",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyswinub",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_nevermeltice": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

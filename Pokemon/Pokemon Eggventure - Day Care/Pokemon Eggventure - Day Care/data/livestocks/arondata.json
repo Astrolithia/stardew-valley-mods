@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load aron textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/aron/aron, {{ModId}}/aron/shinyaron, {{ModId}}/aron/lairon, {{ModId}}/aron/shinylairon, {{ModId}}/aron/aggron, {{ModId}}/aron/shinyaggron, {{ModId}}/aron/aronegg",
+      "FromFile": "assets/livestocks/aron/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_aron data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_aron": {
+          "DisplayName": "{{i18n: aron}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_aronegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: aronbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/aron/lairon",
+          "BabyTexture": "{{ModId}}/aron/aron",
+          "Sound": "{{ModId}}_aggroncry",
+          "BabySound": "{{ModId}}_aroncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aronegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_aron evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_aron",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "aronevolution": {
+          "Id": "aronevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/aron/aggron"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyaron data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyaron": {
+          "DisplayName": "{{i18n: shinyaron}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_aronegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyaronbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/aron/shinylairon",
+          "BabyTexture": "{{ModId}}/aron/shinyaron",
+          "Sound": "{{ModId}}_aggroncry",
+          "BabySound": "{{ModId}}_aroncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_metalcoat",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_aronegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyaron evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyaron",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyaronevolution": {
+          "Id": "shinyaronevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/aron/shinyaggron"
+        }
+      }
+    },
+    {
+      "LogName": "aron cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_aroncry": {
+          "ID": "{{ModId}}_aroncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/aron/aroncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_aggroncry": {
+          "ID": "{{ModId}}_aggroncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/aron/aggroncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aron egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_aronegg": {
+          "Name": "{{ModId}}_aronegg",
+          "DisplayName": "{{i18n: aronegg}}",
+          "Description": "{{i18n: aronegg.d}}",
+          "Texture": "{{ModId}}/aron/aronegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_steel",
+            "pkegg_rarity_common",
+            "pkegg_skullcavern_p4",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "aron hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_aronegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyaron",
+              "AnimalId": "{{ModId}}_shinyaron",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_aron",
+              "AnimalId": "{{ModId}}_aron",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

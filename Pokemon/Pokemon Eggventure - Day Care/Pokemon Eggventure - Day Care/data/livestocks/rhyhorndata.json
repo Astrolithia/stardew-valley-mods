@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load rhyhorn textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/rhyhorn/rhyhorn, {{ModId}}/rhyhorn/shinyrhyhorn, {{ModId}}/rhyhorn/rhydon, {{ModId}}/rhyhorn/shinyrhydon, {{ModId}}/rhyhorn/rhyperior, {{ModId}}/rhyhorn/shinyrhyperior, {{ModId}}/rhyhorn/rhyhornegg",
+      "FromFile": "assets/livestocks/rhyhorn/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_rhyhorn data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_rhyhorn": {
+          "DisplayName": "{{i18n: rhyhorn}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_rhyhornegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: rhyhornbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rhyhorn/rhydon",
+          "BabyTexture": "{{ModId}}/rhyhorn/rhyhorn",
+          "Sound": "{{ModId}}_rhyperiorcry",
+          "BabySound": "{{ModId}}_rhyhorncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rhyhornegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_rhyhorn evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_rhyhorn",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "rhyhornevolution": {
+          "Id": "rhyhornevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rhyhorn/rhyperior"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyrhyhorn data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyrhyhorn": {
+          "DisplayName": "{{i18n: shinyrhyhorn}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_rhyhornegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyrhyhornbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/rhyhorn/shinyrhydon",
+          "BabyTexture": "{{ModId}}/rhyhorn/shinyrhyhorn",
+          "Sound": "{{ModId}}_rhyperiorcry",
+          "BabySound": "{{ModId}}_rhyhorncry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_softsand",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_rhyhornegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyrhyhorn evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyrhyhorn",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyrhyhornevolution": {
+          "Id": "shinyrhyhornevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/rhyhorn/shinyrhyperior"
+        }
+      }
+    },
+    {
+      "LogName": "rhyhorn cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_rhyhorncry": {
+          "ID": "{{ModId}}_rhyhorncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rhyhorn/rhyhorncry.ogg}}"
+          ]
+        },
+        "{{ModId}}_rhyperiorcry": {
+          "ID": "{{ModId}}_rhyperiorcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/rhyhorn/rhyperiorcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rhyhorn egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_rhyhornegg": {
+          "Name": "{{ModId}}_rhyhornegg",
+          "DisplayName": "{{i18n: rhyhornegg}}",
+          "Description": "{{i18n: rhyhornegg.d}}",
+          "Texture": "{{ModId}}/rhyhorn/rhyhornegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ground",
+            "pkegg_rarity_common",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "rhyhorn hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_rhyhornegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyrhyhorn",
+              "AnimalId": "{{ModId}}_shinyrhyhorn",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_rhyhorn",
+              "AnimalId": "{{ModId}}_rhyhorn",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

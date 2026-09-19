@@ -1,0 +1,145 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load wool sprite",
+      "Action": "Load",
+      "Target": "{{ModId}}/wool/wool",
+      "FromFile": "assets/wool/wool.png"
+    },
+    {
+      "LogName": "Add Pokemon wools",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_wool_mareep": {
+          "Name": "{{ModId}}_wool_mareep",
+          "DisplayName": "{{i18n: wool_mareep}}",
+          "Description": "{{i18n: wool_mareep.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/wool/wool",
+          "Price": 340,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkwool_item",
+            "pkwool_mareep",
+            "color_white",
+            "item_wool"
+          ]
+        },
+        "{{ModId}}_wool_wooloo": {
+          "Name": "{{ModId}}_wool_wooloo",
+          "DisplayName": "{{i18n: wool_wooloo}}",
+          "Description": "{{i18n: wool_wooloo.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/wool/wool",
+          "Price": 340,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkwool_item",
+            "pkwool_wooloo",
+            "color_white",
+            "item_wool"
+          ]
+        },
+        "{{ModId}}_wool_bunnelby": {
+          "Name": "{{ModId}}_wool_bunnelby",
+          "DisplayName": "{{i18n: wool_bunnelby}}",
+          "Description": "{{i18n: wool_bunnelby.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/wool/wool",
+          "Price": 340,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkwool_item",
+            "pkwool_bunnelby",
+            "color_white",
+            "item_wool"
+          ]
+        },
+        "{{ModId}}_wool_buneary": {
+          "Name": "{{ModId}}_wool_buneary",
+          "DisplayName": "{{i18n: wool_buneary}}",
+          "Description": "{{i18n: wool_buneary.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/wool/wool",
+          "Price": 340,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkwool_item",
+            "pkwool_buneary",
+            "color_white",
+            "item_wool"
+          ]
+        },
+        "{{ModId}}_wool_scorbunny": {
+          "Name": "{{ModId}}_wool_scorbunny",
+          "DisplayName": "{{i18n: wool_scorbunny}}",
+          "Description": "{{i18n: wool_scorbunny.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/wool/wool",
+          "Price": 340,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkwool_item",
+            "pkwool_scorbunny",
+            "color_white",
+            "item_wool"
+          ]
+        },
+        "{{ModId}}_wool_minccino": {
+          "Name": "{{ModId}}_wool_minccino",
+          "DisplayName": "{{i18n: wool_minccino}}",
+          "Description": "{{i18n: wool_minccino.d}}",
+          "Type": "Basic",
+          "Category": -18,
+          "Texture": "{{ModId}}/wool/wool",
+          "Price": 340,
+          "Edibility": -300,
+          "ContextTags": [
+            "pkwool_item",
+            "pkwool_minccino",
+            "color_white",
+            "item_wool"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "The Loom accepts Pokemon wool",
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "TargetField": [
+        "(BC)17",
+        "OutputRules"
+      ],
+      "Entries": {
+        "{{ModId}}_loom_pokemonwool": {
+          "Id": "{{ModId}}_loom_pokemonwool",
+          "Triggers": [
+            {
+              "Id": "{{ModId}}_loom_pokemonwool_in",
+              "Trigger": "ItemPlacedInMachine",
+              "RequiredTags": [
+                "pkwool_item"
+              ],
+              "RequiredCount": 1
+            }
+          ],
+          "OutputItem": [
+            {
+              "Id": "{{ModId}}_loom_pokemonwool_out",
+              "ItemId": "(O)428",
+              "CopyQuality": true
+            }
+          ],
+          "MinutesUntilReady": 240
+        }
+      }
+    }
+  ]
+}

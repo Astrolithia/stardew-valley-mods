@@ -1,0 +1,187 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load glimmet textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/glimmet/glimmet, {{ModId}}/glimmet/shinyglimmet, {{ModId}}/glimmet/glimmora, {{ModId}}/glimmet/shinyglimmora, {{ModId}}/glimmet/glimmetegg",
+      "FromFile": "assets/livestocks/glimmet/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_glimmet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_glimmet": {
+          "DisplayName": "{{i18n: glimmet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_glimmetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: glimmetbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/glimmet/glimmora",
+          "BabyTexture": "{{ModId}}/glimmet/glimmet",
+          "Sound": "{{ModId}}_glimmoracry",
+          "BabySound": "{{ModId}}_glimmetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_glimmetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyglimmet data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyglimmet": {
+          "DisplayName": "{{i18n: shinyglimmet}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_glimmetegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyglimmetbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/glimmet/shinyglimmora",
+          "BabyTexture": "{{ModId}}/glimmet/shinyglimmet",
+          "Sound": "{{ModId}}_glimmoracry",
+          "BabySound": "{{ModId}}_glimmetcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_hardstone",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_glimmetegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "glimmet cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_glimmetcry": {
+          "ID": "{{ModId}}_glimmetcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/glimmet/glimmetcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_glimmoracry": {
+          "ID": "{{ModId}}_glimmoracry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/glimmet/glimmoracry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "glimmet egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_glimmetegg": {
+          "Name": "{{ModId}}_glimmetegg",
+          "DisplayName": "{{i18n: glimmetegg}}",
+          "Description": "{{i18n: glimmetegg.d}}",
+          "Texture": "{{ModId}}/glimmet/glimmetegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_rock",
+            "pkegg_rarity_rare",
+            "pkegg_quarry_p3",
+            "color_white"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "glimmet hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_glimmetegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyglimmet",
+              "AnimalId": "{{ModId}}_shinyglimmet",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_glimmet",
+              "AnimalId": "{{ModId}}_glimmet",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

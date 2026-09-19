@@ -1,0 +1,2307 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load berry seed sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/berries/fruits/seeds/framby, {{ModId}}/berries/fruits/seeds/remu, {{ModId}}/berries/fruits/seeds/nanab, {{ModId}}/berries/fruits/seeds/repoi, {{ModId}}/berries/fruits/seeds/nanana, {{ModId}}/berries/fruits/seeds/ceriz, {{ModId}}/berries/fruits/seeds/maron, {{ModId}}/berries/fruits/seeds/pecha, {{ModId}}/berries/fruits/seeds/fraive, {{ModId}}/berries/fruits/seeds/willia, {{ModId}}/berries/fruits/seeds/mepo, {{ModId}}/berries/fruits/seeds/oran, {{ModId}}/berries/fruits/seeds/kika, {{ModId}}/berries/fruits/seeds/figuy, {{ModId}}/berries/fruits/seeds/wiki, {{ModId}}/berries/fruits/seeds/mago, {{ModId}}/berries/fruits/seeds/gowav, {{ModId}}/berries/fruits/seeds/papaya, {{ModId}}/berries/fruits/seeds/siam, {{ModId}}/berries/fruits/seeds/mangou, {{ModId}}/berries/fruits/seeds/rabuta, {{ModId}}/berries/fruits/seeds/tronci, {{ModId}}/berries/fruits/seeds/prine, {{ModId}}/berries/fruits/seeds/grena, {{ModId}}/berries/fruits/seeds/alga, {{ModId}}/berries/fruits/seeds/qualot, {{ModId}}/berries/fruits/seeds/lonme, {{ModId}}/berries/fruits/seeds/resin, {{ModId}}/berries/fruits/seeds/tamato, {{ModId}}/berries/fruits/seeds/kiwan, {{ModId}}/berries/fruits/seeds/palma, {{ModId}}/berries/fruits/seeds/stekpa, {{ModId}}/berries/fruits/seeds/durin, {{ModId}}/berries/fruits/seeds/myrte, {{ModId}}/berries/fruits/seeds/sitrus, {{ModId}}/berries/fruits/seeds/enigma, {{ModId}}/berries/fruits/seeds/micle, {{ModId}}/berries/fruits/seeds/cherim, {{ModId}}/berries/fruits/seeds/jaboca, {{ModId}}/berries/fruits/seeds/pommo, {{ModId}}/berries/fruits/seeds/rangma, {{ModId}}/berries/fruits/seeds/eka, {{ModId}}/berries/fruits/seeds/chocco, {{ModId}}/berries/fruits/seeds/pocpoc, {{ModId}}/berries/fruits/seeds/parma, {{ModId}}/berries/fruits/seeds/ratam, {{ModId}}/berries/fruits/seeds/nanone, {{ModId}}/berries/fruits/seeds/pomroz, {{ModId}}/berries/fruits/seeds/kebia, {{ModId}}/berries/fruits/seeds/jouca, {{ModId}}/berries/fruits/seeds/cobaba, {{ModId}}/berries/fruits/seeds/yapap, {{ModId}}/berries/fruits/seeds/panga, {{ModId}}/berries/fruits/seeds/charti, {{ModId}}/berries/fruits/seeds/sedra, {{ModId}}/berries/fruits/seeds/fraigo, {{ModId}}/berries/fruits/seeds/lampou, {{ModId}}/berries/fruits/seeds/babiri, {{ModId}}/berries/fruits/seeds/zalis, {{ModId}}/berries/fruits/seeds/selro, {{ModId}}/berries/fruits/seeds/lichii, {{ModId}}/berries/fruits/seeds/lingan, {{ModId}}/berries/fruits/seeds/sailak, {{ModId}}/berries/fruits/seeds/pitaye, {{ModId}}/berries/fruits/seeds/abriko, {{ModId}}/berries/fruits/seeds/lansat, {{ModId}}/berries/fruits/seeds/frista",
+      "FromFile": "assets/berries/seeds/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Load berry crop sprites",
+      "Action": "Load",
+      "Target": "{{ModId}}/berries/fruits/crops/framby, {{ModId}}/berries/fruits/crops/remu, {{ModId}}/berries/fruits/crops/nanab, {{ModId}}/berries/fruits/crops/repoi, {{ModId}}/berries/fruits/crops/nanana, {{ModId}}/berries/fruits/crops/ceriz, {{ModId}}/berries/fruits/crops/maron, {{ModId}}/berries/fruits/crops/pecha, {{ModId}}/berries/fruits/crops/fraive, {{ModId}}/berries/fruits/crops/willia, {{ModId}}/berries/fruits/crops/mepo, {{ModId}}/berries/fruits/crops/oran, {{ModId}}/berries/fruits/crops/kika, {{ModId}}/berries/fruits/crops/figuy, {{ModId}}/berries/fruits/crops/wiki, {{ModId}}/berries/fruits/crops/mago, {{ModId}}/berries/fruits/crops/gowav, {{ModId}}/berries/fruits/crops/papaya, {{ModId}}/berries/fruits/crops/siam, {{ModId}}/berries/fruits/crops/mangou, {{ModId}}/berries/fruits/crops/rabuta, {{ModId}}/berries/fruits/crops/tronci, {{ModId}}/berries/fruits/crops/prine, {{ModId}}/berries/fruits/crops/grena, {{ModId}}/berries/fruits/crops/alga, {{ModId}}/berries/fruits/crops/qualot, {{ModId}}/berries/fruits/crops/lonme, {{ModId}}/berries/fruits/crops/resin, {{ModId}}/berries/fruits/crops/tamato, {{ModId}}/berries/fruits/crops/kiwan, {{ModId}}/berries/fruits/crops/palma, {{ModId}}/berries/fruits/crops/stekpa, {{ModId}}/berries/fruits/crops/durin, {{ModId}}/berries/fruits/crops/myrte, {{ModId}}/berries/fruits/crops/sitrus, {{ModId}}/berries/fruits/crops/enigma, {{ModId}}/berries/fruits/crops/micle, {{ModId}}/berries/fruits/crops/cherim, {{ModId}}/berries/fruits/crops/jaboca, {{ModId}}/berries/fruits/crops/pommo, {{ModId}}/berries/fruits/crops/rangma, {{ModId}}/berries/fruits/crops/eka, {{ModId}}/berries/fruits/crops/chocco, {{ModId}}/berries/fruits/crops/pocpoc, {{ModId}}/berries/fruits/crops/parma, {{ModId}}/berries/fruits/crops/ratam, {{ModId}}/berries/fruits/crops/nanone, {{ModId}}/berries/fruits/crops/pomroz, {{ModId}}/berries/fruits/crops/kebia, {{ModId}}/berries/fruits/crops/jouca, {{ModId}}/berries/fruits/crops/cobaba, {{ModId}}/berries/fruits/crops/yapap, {{ModId}}/berries/fruits/crops/panga, {{ModId}}/berries/fruits/crops/charti, {{ModId}}/berries/fruits/crops/sedra, {{ModId}}/berries/fruits/crops/fraigo, {{ModId}}/berries/fruits/crops/lampou, {{ModId}}/berries/fruits/crops/babiri, {{ModId}}/berries/fruits/crops/zalis, {{ModId}}/berries/fruits/crops/selro, {{ModId}}/berries/fruits/crops/lichii, {{ModId}}/berries/fruits/crops/lingan, {{ModId}}/berries/fruits/crops/sailak, {{ModId}}/berries/fruits/crops/pitaye, {{ModId}}/berries/fruits/crops/abriko, {{ModId}}/berries/fruits/crops/lansat, {{ModId}}/berries/fruits/crops/frista",
+      "FromFile": "assets/berries/crops/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add berry seeds",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_berryseed_framby": {
+          "Name": "{{ModId}}_berryseed_framby",
+          "DisplayName": "{{i18n: berryseed_framby}}",
+          "Description": "{{i18n: berryseed_framby.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/framby",
+          "Price": 15,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_framby"
+          ]
+        },
+        "{{ModId}}_berryseed_remu": {
+          "Name": "{{ModId}}_berryseed_remu",
+          "DisplayName": "{{i18n: berryseed_remu}}",
+          "Description": "{{i18n: berryseed_remu.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/remu",
+          "Price": 15,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_remu"
+          ]
+        },
+        "{{ModId}}_berryseed_nanab": {
+          "Name": "{{ModId}}_berryseed_nanab",
+          "DisplayName": "{{i18n: berryseed_nanab}}",
+          "Description": "{{i18n: berryseed_nanab.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/nanab",
+          "Price": 15,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_nanab"
+          ]
+        },
+        "{{ModId}}_berryseed_repoi": {
+          "Name": "{{ModId}}_berryseed_repoi",
+          "DisplayName": "{{i18n: berryseed_repoi}}",
+          "Description": "{{i18n: berryseed_repoi.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/repoi",
+          "Price": 15,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_repoi"
+          ]
+        },
+        "{{ModId}}_berryseed_nanana": {
+          "Name": "{{ModId}}_berryseed_nanana",
+          "DisplayName": "{{i18n: berryseed_nanana}}",
+          "Description": "{{i18n: berryseed_nanana.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/nanana",
+          "Price": 15,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_nanana"
+          ]
+        },
+        "{{ModId}}_berryseed_ceriz": {
+          "Name": "{{ModId}}_berryseed_ceriz",
+          "DisplayName": "{{i18n: berryseed_ceriz}}",
+          "Description": "{{i18n: berryseed_ceriz.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/ceriz",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_ceriz"
+          ]
+        },
+        "{{ModId}}_berryseed_maron": {
+          "Name": "{{ModId}}_berryseed_maron",
+          "DisplayName": "{{i18n: berryseed_maron}}",
+          "Description": "{{i18n: berryseed_maron.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/maron",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_maron"
+          ]
+        },
+        "{{ModId}}_berryseed_pecha": {
+          "Name": "{{ModId}}_berryseed_pecha",
+          "DisplayName": "{{i18n: berryseed_pecha}}",
+          "Description": "{{i18n: berryseed_pecha.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/pecha",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_pecha"
+          ]
+        },
+        "{{ModId}}_berryseed_fraive": {
+          "Name": "{{ModId}}_berryseed_fraive",
+          "DisplayName": "{{i18n: berryseed_fraive}}",
+          "Description": "{{i18n: berryseed_fraive.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/fraive",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_fraive"
+          ]
+        },
+        "{{ModId}}_berryseed_willia": {
+          "Name": "{{ModId}}_berryseed_willia",
+          "DisplayName": "{{i18n: berryseed_willia}}",
+          "Description": "{{i18n: berryseed_willia.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/willia",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_willia"
+          ]
+        },
+        "{{ModId}}_berryseed_mepo": {
+          "Name": "{{ModId}}_berryseed_mepo",
+          "DisplayName": "{{i18n: berryseed_mepo}}",
+          "Description": "{{i18n: berryseed_mepo.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/mepo",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_mepo"
+          ]
+        },
+        "{{ModId}}_berryseed_oran": {
+          "Name": "{{ModId}}_berryseed_oran",
+          "DisplayName": "{{i18n: berryseed_oran}}",
+          "Description": "{{i18n: berryseed_oran.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/oran",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_oran"
+          ]
+        },
+        "{{ModId}}_berryseed_kika": {
+          "Name": "{{ModId}}_berryseed_kika",
+          "DisplayName": "{{i18n: berryseed_kika}}",
+          "Description": "{{i18n: berryseed_kika.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/kika",
+          "Price": 22,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_kika"
+          ]
+        },
+        "{{ModId}}_berryseed_figuy": {
+          "Name": "{{ModId}}_berryseed_figuy",
+          "DisplayName": "{{i18n: berryseed_figuy}}",
+          "Description": "{{i18n: berryseed_figuy.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/figuy",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_figuy"
+          ]
+        },
+        "{{ModId}}_berryseed_wiki": {
+          "Name": "{{ModId}}_berryseed_wiki",
+          "DisplayName": "{{i18n: berryseed_wiki}}",
+          "Description": "{{i18n: berryseed_wiki.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/wiki",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_wiki"
+          ]
+        },
+        "{{ModId}}_berryseed_mago": {
+          "Name": "{{ModId}}_berryseed_mago",
+          "DisplayName": "{{i18n: berryseed_mago}}",
+          "Description": "{{i18n: berryseed_mago.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/mago",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_mago"
+          ]
+        },
+        "{{ModId}}_berryseed_gowav": {
+          "Name": "{{ModId}}_berryseed_gowav",
+          "DisplayName": "{{i18n: berryseed_gowav}}",
+          "Description": "{{i18n: berryseed_gowav.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/gowav",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_gowav"
+          ]
+        },
+        "{{ModId}}_berryseed_papaya": {
+          "Name": "{{ModId}}_berryseed_papaya",
+          "DisplayName": "{{i18n: berryseed_papaya}}",
+          "Description": "{{i18n: berryseed_papaya.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/papaya",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_papaya"
+          ]
+        },
+        "{{ModId}}_berryseed_siam": {
+          "Name": "{{ModId}}_berryseed_siam",
+          "DisplayName": "{{i18n: berryseed_siam}}",
+          "Description": "{{i18n: berryseed_siam.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/siam",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_siam"
+          ]
+        },
+        "{{ModId}}_berryseed_mangou": {
+          "Name": "{{ModId}}_berryseed_mangou",
+          "DisplayName": "{{i18n: berryseed_mangou}}",
+          "Description": "{{i18n: berryseed_mangou.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/mangou",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_mangou"
+          ]
+        },
+        "{{ModId}}_berryseed_rabuta": {
+          "Name": "{{ModId}}_berryseed_rabuta",
+          "DisplayName": "{{i18n: berryseed_rabuta}}",
+          "Description": "{{i18n: berryseed_rabuta.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/rabuta",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_rabuta"
+          ]
+        },
+        "{{ModId}}_berryseed_tronci": {
+          "Name": "{{ModId}}_berryseed_tronci",
+          "DisplayName": "{{i18n: berryseed_tronci}}",
+          "Description": "{{i18n: berryseed_tronci.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/tronci",
+          "Price": 30,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_tronci"
+          ]
+        },
+        "{{ModId}}_berryseed_prine": {
+          "Name": "{{ModId}}_berryseed_prine",
+          "DisplayName": "{{i18n: berryseed_prine}}",
+          "Description": "{{i18n: berryseed_prine.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/prine",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_prine"
+          ]
+        },
+        "{{ModId}}_berryseed_grena": {
+          "Name": "{{ModId}}_berryseed_grena",
+          "DisplayName": "{{i18n: berryseed_grena}}",
+          "Description": "{{i18n: berryseed_grena.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/grena",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_grena"
+          ]
+        },
+        "{{ModId}}_berryseed_alga": {
+          "Name": "{{ModId}}_berryseed_alga",
+          "DisplayName": "{{i18n: berryseed_alga}}",
+          "Description": "{{i18n: berryseed_alga.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/alga",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_alga"
+          ]
+        },
+        "{{ModId}}_berryseed_qualot": {
+          "Name": "{{ModId}}_berryseed_qualot",
+          "DisplayName": "{{i18n: berryseed_qualot}}",
+          "Description": "{{i18n: berryseed_qualot.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/qualot",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_qualot"
+          ]
+        },
+        "{{ModId}}_berryseed_lonme": {
+          "Name": "{{ModId}}_berryseed_lonme",
+          "DisplayName": "{{i18n: berryseed_lonme}}",
+          "Description": "{{i18n: berryseed_lonme.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/lonme",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_lonme"
+          ]
+        },
+        "{{ModId}}_berryseed_resin": {
+          "Name": "{{ModId}}_berryseed_resin",
+          "DisplayName": "{{i18n: berryseed_resin}}",
+          "Description": "{{i18n: berryseed_resin.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/resin",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_resin"
+          ]
+        },
+        "{{ModId}}_berryseed_tamato": {
+          "Name": "{{ModId}}_berryseed_tamato",
+          "DisplayName": "{{i18n: berryseed_tamato}}",
+          "Description": "{{i18n: berryseed_tamato.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/tamato",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_tamato"
+          ]
+        },
+        "{{ModId}}_berryseed_kiwan": {
+          "Name": "{{ModId}}_berryseed_kiwan",
+          "DisplayName": "{{i18n: berryseed_kiwan}}",
+          "Description": "{{i18n: berryseed_kiwan.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/kiwan",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_kiwan"
+          ]
+        },
+        "{{ModId}}_berryseed_palma": {
+          "Name": "{{ModId}}_berryseed_palma",
+          "DisplayName": "{{i18n: berryseed_palma}}",
+          "Description": "{{i18n: berryseed_palma.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/palma",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_palma"
+          ]
+        },
+        "{{ModId}}_berryseed_stekpa": {
+          "Name": "{{ModId}}_berryseed_stekpa",
+          "DisplayName": "{{i18n: berryseed_stekpa}}",
+          "Description": "{{i18n: berryseed_stekpa.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/stekpa",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_stekpa"
+          ]
+        },
+        "{{ModId}}_berryseed_durin": {
+          "Name": "{{ModId}}_berryseed_durin",
+          "DisplayName": "{{i18n: berryseed_durin}}",
+          "Description": "{{i18n: berryseed_durin.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/durin",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_durin"
+          ]
+        },
+        "{{ModId}}_berryseed_myrte": {
+          "Name": "{{ModId}}_berryseed_myrte",
+          "DisplayName": "{{i18n: berryseed_myrte}}",
+          "Description": "{{i18n: berryseed_myrte.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/myrte",
+          "Price": 42,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_myrte"
+          ]
+        },
+        "{{ModId}}_berryseed_sitrus": {
+          "Name": "{{ModId}}_berryseed_sitrus",
+          "DisplayName": "{{i18n: berryseed_sitrus}}",
+          "Description": "{{i18n: berryseed_sitrus.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/sitrus",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_sitrus"
+          ]
+        },
+        "{{ModId}}_berryseed_enigma": {
+          "Name": "{{ModId}}_berryseed_enigma",
+          "DisplayName": "{{i18n: berryseed_enigma}}",
+          "Description": "{{i18n: berryseed_enigma.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/enigma",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_enigma"
+          ]
+        },
+        "{{ModId}}_berryseed_micle": {
+          "Name": "{{ModId}}_berryseed_micle",
+          "DisplayName": "{{i18n: berryseed_micle}}",
+          "Description": "{{i18n: berryseed_micle.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/micle",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_micle"
+          ]
+        },
+        "{{ModId}}_berryseed_cherim": {
+          "Name": "{{ModId}}_berryseed_cherim",
+          "DisplayName": "{{i18n: berryseed_cherim}}",
+          "Description": "{{i18n: berryseed_cherim.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/cherim",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_cherim"
+          ]
+        },
+        "{{ModId}}_berryseed_jaboca": {
+          "Name": "{{ModId}}_berryseed_jaboca",
+          "DisplayName": "{{i18n: berryseed_jaboca}}",
+          "Description": "{{i18n: berryseed_jaboca.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/jaboca",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_jaboca"
+          ]
+        },
+        "{{ModId}}_berryseed_pommo": {
+          "Name": "{{ModId}}_berryseed_pommo",
+          "DisplayName": "{{i18n: berryseed_pommo}}",
+          "Description": "{{i18n: berryseed_pommo.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/pommo",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_pommo"
+          ]
+        },
+        "{{ModId}}_berryseed_rangma": {
+          "Name": "{{ModId}}_berryseed_rangma",
+          "DisplayName": "{{i18n: berryseed_rangma}}",
+          "Description": "{{i18n: berryseed_rangma.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/rangma",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_rangma"
+          ]
+        },
+        "{{ModId}}_berryseed_eka": {
+          "Name": "{{ModId}}_berryseed_eka",
+          "DisplayName": "{{i18n: berryseed_eka}}",
+          "Description": "{{i18n: berryseed_eka.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/eka",
+          "Price": 58,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_eka"
+          ]
+        },
+        "{{ModId}}_berryseed_chocco": {
+          "Name": "{{ModId}}_berryseed_chocco",
+          "DisplayName": "{{i18n: berryseed_chocco}}",
+          "Description": "{{i18n: berryseed_chocco.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/chocco",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_chocco"
+          ]
+        },
+        "{{ModId}}_berryseed_pocpoc": {
+          "Name": "{{ModId}}_berryseed_pocpoc",
+          "DisplayName": "{{i18n: berryseed_pocpoc}}",
+          "Description": "{{i18n: berryseed_pocpoc.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/pocpoc",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_pocpoc"
+          ]
+        },
+        "{{ModId}}_berryseed_parma": {
+          "Name": "{{ModId}}_berryseed_parma",
+          "DisplayName": "{{i18n: berryseed_parma}}",
+          "Description": "{{i18n: berryseed_parma.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/parma",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_parma"
+          ]
+        },
+        "{{ModId}}_berryseed_ratam": {
+          "Name": "{{ModId}}_berryseed_ratam",
+          "DisplayName": "{{i18n: berryseed_ratam}}",
+          "Description": "{{i18n: berryseed_ratam.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/ratam",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_ratam"
+          ]
+        },
+        "{{ModId}}_berryseed_nanone": {
+          "Name": "{{ModId}}_berryseed_nanone",
+          "DisplayName": "{{i18n: berryseed_nanone}}",
+          "Description": "{{i18n: berryseed_nanone.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/nanone",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_nanone"
+          ]
+        },
+        "{{ModId}}_berryseed_pomroz": {
+          "Name": "{{ModId}}_berryseed_pomroz",
+          "DisplayName": "{{i18n: berryseed_pomroz}}",
+          "Description": "{{i18n: berryseed_pomroz.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/pomroz",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_pomroz"
+          ]
+        },
+        "{{ModId}}_berryseed_kebia": {
+          "Name": "{{ModId}}_berryseed_kebia",
+          "DisplayName": "{{i18n: berryseed_kebia}}",
+          "Description": "{{i18n: berryseed_kebia.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/kebia",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_kebia"
+          ]
+        },
+        "{{ModId}}_berryseed_jouca": {
+          "Name": "{{ModId}}_berryseed_jouca",
+          "DisplayName": "{{i18n: berryseed_jouca}}",
+          "Description": "{{i18n: berryseed_jouca.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/jouca",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_jouca"
+          ]
+        },
+        "{{ModId}}_berryseed_cobaba": {
+          "Name": "{{ModId}}_berryseed_cobaba",
+          "DisplayName": "{{i18n: berryseed_cobaba}}",
+          "Description": "{{i18n: berryseed_cobaba.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/cobaba",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_cobaba"
+          ]
+        },
+        "{{ModId}}_berryseed_yapap": {
+          "Name": "{{ModId}}_berryseed_yapap",
+          "DisplayName": "{{i18n: berryseed_yapap}}",
+          "Description": "{{i18n: berryseed_yapap.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/yapap",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_yapap"
+          ]
+        },
+        "{{ModId}}_berryseed_panga": {
+          "Name": "{{ModId}}_berryseed_panga",
+          "DisplayName": "{{i18n: berryseed_panga}}",
+          "Description": "{{i18n: berryseed_panga.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/panga",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_panga"
+          ]
+        },
+        "{{ModId}}_berryseed_charti": {
+          "Name": "{{ModId}}_berryseed_charti",
+          "DisplayName": "{{i18n: berryseed_charti}}",
+          "Description": "{{i18n: berryseed_charti.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/charti",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_charti"
+          ]
+        },
+        "{{ModId}}_berryseed_sedra": {
+          "Name": "{{ModId}}_berryseed_sedra",
+          "DisplayName": "{{i18n: berryseed_sedra}}",
+          "Description": "{{i18n: berryseed_sedra.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/sedra",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_sedra"
+          ]
+        },
+        "{{ModId}}_berryseed_fraigo": {
+          "Name": "{{ModId}}_berryseed_fraigo",
+          "DisplayName": "{{i18n: berryseed_fraigo}}",
+          "Description": "{{i18n: berryseed_fraigo.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/fraigo",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_fraigo"
+          ]
+        },
+        "{{ModId}}_berryseed_lampou": {
+          "Name": "{{ModId}}_berryseed_lampou",
+          "DisplayName": "{{i18n: berryseed_lampou}}",
+          "Description": "{{i18n: berryseed_lampou.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/lampou",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_lampou"
+          ]
+        },
+        "{{ModId}}_berryseed_babiri": {
+          "Name": "{{ModId}}_berryseed_babiri",
+          "DisplayName": "{{i18n: berryseed_babiri}}",
+          "Description": "{{i18n: berryseed_babiri.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/babiri",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_babiri"
+          ]
+        },
+        "{{ModId}}_berryseed_zalis": {
+          "Name": "{{ModId}}_berryseed_zalis",
+          "DisplayName": "{{i18n: berryseed_zalis}}",
+          "Description": "{{i18n: berryseed_zalis.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/zalis",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_zalis"
+          ]
+        },
+        "{{ModId}}_berryseed_selro": {
+          "Name": "{{ModId}}_berryseed_selro",
+          "DisplayName": "{{i18n: berryseed_selro}}",
+          "Description": "{{i18n: berryseed_selro.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/selro",
+          "Price": 75,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_selro"
+          ]
+        },
+        "{{ModId}}_berryseed_lichii": {
+          "Name": "{{ModId}}_berryseed_lichii",
+          "DisplayName": "{{i18n: berryseed_lichii}}",
+          "Description": "{{i18n: berryseed_lichii.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/lichii",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_lichii"
+          ]
+        },
+        "{{ModId}}_berryseed_lingan": {
+          "Name": "{{ModId}}_berryseed_lingan",
+          "DisplayName": "{{i18n: berryseed_lingan}}",
+          "Description": "{{i18n: berryseed_lingan.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/lingan",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_lingan"
+          ]
+        },
+        "{{ModId}}_berryseed_sailak": {
+          "Name": "{{ModId}}_berryseed_sailak",
+          "DisplayName": "{{i18n: berryseed_sailak}}",
+          "Description": "{{i18n: berryseed_sailak.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/sailak",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_sailak"
+          ]
+        },
+        "{{ModId}}_berryseed_pitaye": {
+          "Name": "{{ModId}}_berryseed_pitaye",
+          "DisplayName": "{{i18n: berryseed_pitaye}}",
+          "Description": "{{i18n: berryseed_pitaye.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/pitaye",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_pitaye"
+          ]
+        },
+        "{{ModId}}_berryseed_abriko": {
+          "Name": "{{ModId}}_berryseed_abriko",
+          "DisplayName": "{{i18n: berryseed_abriko}}",
+          "Description": "{{i18n: berryseed_abriko.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/abriko",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_abriko"
+          ]
+        },
+        "{{ModId}}_berryseed_lansat": {
+          "Name": "{{ModId}}_berryseed_lansat",
+          "DisplayName": "{{i18n: berryseed_lansat}}",
+          "Description": "{{i18n: berryseed_lansat.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/lansat",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_lansat"
+          ]
+        },
+        "{{ModId}}_berryseed_frista": {
+          "Name": "{{ModId}}_berryseed_frista",
+          "DisplayName": "{{i18n: berryseed_frista}}",
+          "Description": "{{i18n: berryseed_frista.d}}",
+          "Type": "Seeds",
+          "Category": -74,
+          "Texture": "{{ModId}}/berries/fruits/seeds/frista",
+          "Price": 125,
+          "ContextTags": [
+            "pkberry_seed",
+            "pkberry_seed_frista"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add berry crops",
+      "Action": "EditData",
+      "Target": "Data/Crops",
+      "Entries": {
+        "{{ModId}}_berryseed_framby": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_berry_framby",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/framby",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_remu": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_berry_remu",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/remu",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_nanab": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_berry_nanab",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/nanab",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_repoi": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_berry_repoi",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/repoi",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_nanana": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "RegrowDays": 3,
+          "HarvestItemId": "{{ModId}}_berry_nanana",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/nanana",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_ceriz": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_ceriz",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/ceriz",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_maron": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_maron",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/maron",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_pecha": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_pecha",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/pecha",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_fraive": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_fraive",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/fraive",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_willia": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_willia",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/willia",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_mepo": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_mepo",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/mepo",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_oran": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_oran",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/oran",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_kika": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_kika",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/kika",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_figuy": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_figuy",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/figuy",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_wiki": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_wiki",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/wiki",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_mago": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_mago",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/mago",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_gowav": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_gowav",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/gowav",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_papaya": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_papaya",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/papaya",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_siam": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_siam",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/siam",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_mangou": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_mangou",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/mangou",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_rabuta": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_rabuta",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/rabuta",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_tronci": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "RegrowDays": 4,
+          "HarvestItemId": "{{ModId}}_berry_tronci",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/tronci",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_prine": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_prine",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/prine",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_grena": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_grena",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/grena",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_alga": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_alga",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/alga",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_qualot": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_qualot",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/qualot",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_lonme": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_lonme",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/lonme",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_resin": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_resin",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/resin",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_tamato": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_tamato",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/tamato",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_kiwan": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_kiwan",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/kiwan",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_palma": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_palma",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/palma",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_stekpa": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_stekpa",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/stekpa",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_durin": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_durin",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/durin",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_myrte": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 5,
+          "HarvestItemId": "{{ModId}}_berry_myrte",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/myrte",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_sitrus": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_sitrus",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/sitrus",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_enigma": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_enigma",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/enigma",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_micle": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_micle",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/micle",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_cherim": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_cherim",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/cherim",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_jaboca": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_jaboca",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/jaboca",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_pommo": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_pommo",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/pommo",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_rangma": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_rangma",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/rangma",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_eka": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_eka",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/eka",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_chocco": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_chocco",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/chocco",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_pocpoc": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_pocpoc",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/pocpoc",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_parma": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_parma",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/parma",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_ratam": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_ratam",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/ratam",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_nanone": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_nanone",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/nanone",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_pomroz": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_pomroz",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/pomroz",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_kebia": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_kebia",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/kebia",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_jouca": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_jouca",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/jouca",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_cobaba": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_cobaba",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/cobaba",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_yapap": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_yapap",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/yapap",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_panga": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_panga",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/panga",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_charti": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_charti",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/charti",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_sedra": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_sedra",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/sedra",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_fraigo": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_fraigo",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/fraigo",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_lampou": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_lampou",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/lampou",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_babiri": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_babiri",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/babiri",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_zalis": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_zalis",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/zalis",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_selro": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "RegrowDays": 6,
+          "HarvestItemId": "{{ModId}}_berry_selro",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/selro",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_lichii": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_lichii",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/lichii",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_lingan": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_lingan",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/lingan",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_sailak": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_sailak",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/sailak",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_pitaye": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_pitaye",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/pitaye",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_abriko": {
+          "Seasons": [
+            "summer"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_abriko",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/abriko",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_lansat": {
+          "Seasons": [
+            "fall"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_lansat",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/lansat",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        },
+        "{{ModId}}_berryseed_frista": {
+          "Seasons": [
+            "spring"
+          ],
+          "DaysInPhase": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "RegrowDays": 8,
+          "HarvestItemId": "{{ModId}}_berry_frista",
+          "HarvestMinStack": 1,
+          "HarvestMaxStack": 2,
+          "ExtraHarvestChance": 0.15,
+          "HarvestMethod": "Grab",
+          "Texture": "{{ModId}}/berries/fruits/crops/frista",
+          "SpriteIndex": 0,
+          "CountForMonoculture": false,
+          "CountForPolyculture": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load nidoranf textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/nidoranf/nidoranf, {{ModId}}/nidoranf/shinynidoranf, {{ModId}}/nidoranf/nidorina, {{ModId}}/nidoranf/shinynidorina, {{ModId}}/nidoranf/nidoqueen, {{ModId}}/nidoranf/shinynidoqueen, {{ModId}}/nidoranf/nidoranfegg",
+      "FromFile": "assets/livestocks/nidoranf/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_nidoranf data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_nidoranf": {
+          "DisplayName": "{{i18n: nidoranf}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_nidoranfegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: nidoranfbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nidoranf/nidorina",
+          "BabyTexture": "{{ModId}}/nidoranf/nidoranf",
+          "Sound": "{{ModId}}_nidoqueencry",
+          "BabySound": "{{ModId}}_nidoranfcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nidoranfegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_nidoranf evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_nidoranf",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "nidoranfevolution": {
+          "Id": "nidoranfevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/nidoranf/nidoqueen"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinynidoranf data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinynidoranf": {
+          "DisplayName": "{{i18n: shinynidoranf}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_nidoranfegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinynidoranfbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/nidoranf/shinynidorina",
+          "BabyTexture": "{{ModId}}/nidoranf/shinynidoranf",
+          "Sound": "{{ModId}}_nidoqueencry",
+          "BabySound": "{{ModId}}_nidoranfcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_blacksludge",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_nidoranfegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinynidoranf evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinynidoranf",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinynidoranfevolution": {
+          "Id": "shinynidoranfevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/nidoranf/shinynidoqueen"
+        }
+      }
+    },
+    {
+      "LogName": "nidoranf cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_nidoranfcry": {
+          "ID": "{{ModId}}_nidoranfcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nidoranf/nidoranfcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_nidoqueencry": {
+          "ID": "{{ModId}}_nidoqueencry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/nidoranf/nidoqueencry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nidoranf egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_nidoranfegg": {
+          "Name": "{{ModId}}_nidoranfegg",
+          "DisplayName": "{{i18n: nidoranfegg}}",
+          "Description": "{{i18n: nidoranfegg.d}}",
+          "Texture": "{{ModId}}/nidoranf/nidoranfegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_poison",
+            "pkegg_rarity_verycommon",
+            "color_dark_pink"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "nidoranf hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_nidoranfegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinynidoranf",
+              "AnimalId": "{{ModId}}_shinynidoranf",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_nidoranf",
+              "AnimalId": "{{ModId}}_nidoranf",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

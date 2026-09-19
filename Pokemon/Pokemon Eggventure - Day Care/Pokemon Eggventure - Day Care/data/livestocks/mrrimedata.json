@@ -1,0 +1,248 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load mrrime textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/mimejr/galarmmime, {{ModId}}/mimejr/shinygalarmmime, {{ModId}}/mimejr/mrrime, {{ModId}}/mimejr/shinymrrime, {{ModId}}/mimejr/mrrimeegg",
+      "FromFile": "assets/livestocks/mimejr/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_mrrime data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_mrrime": {
+          "DisplayName": "{{i18n: mrrime}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mrrimeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: mrrimebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mimejr/galarmmime",
+          "BabyTexture": "{{ModId}}/mimejr/mimejr",
+          "Sound": "{{ModId}}_galarmrmimecry",
+          "BabySound": "{{ModId}}_mimejrcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mrrimeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mrrime evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mrrime",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "mrrimeevolution": {
+          "Id": "mrrimeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mimejr/mrrime"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_mrrime type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_mrrime"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinymrrime data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinymrrime": {
+          "DisplayName": "{{i18n: shinymrrime}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_mrrimeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinymrrimebirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/mimejr/shinygalarmmime",
+          "BabyTexture": "{{ModId}}/mimejr/shinymimejr",
+          "Sound": "{{ModId}}_galarmrmimecry",
+          "BabySound": "{{ModId}}_mimejrcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_nevermeltice",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_mrrimeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymrrime evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymrrime",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinymrrimeevolution": {
+          "Id": "shinymrrimeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/mimejr/shinymrrime"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinymrrime type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinymrrime"
+      ],
+      "Entries": {
+        "IgnoreWinter": true
+      }
+    },
+    {
+      "LogName": "mrrime cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_mimejrcry": {
+          "ID": "{{ModId}}_mimejrcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mimejr/mimejrcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_galarmrmimecry": {
+          "ID": "{{ModId}}_galarmrmimecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mimejr/galarmrmimecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_mrrimecry": {
+          "ID": "{{ModId}}_mrrimecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/mimejr/mrrimecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mrrime egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_mrrimeegg": {
+          "Name": "{{ModId}}_mrrimeegg",
+          "DisplayName": "{{i18n: mrrimeegg}}",
+          "Description": "{{i18n: mrrimeegg.d}}",
+          "Texture": "{{ModId}}/mimejr/mrrimeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_ice",
+            "pkegg_rarity_rare",
+            "pkegg_mine_61_80_p4",
+            "color_poppyseed"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "mrrime hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_mrrimeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinymrrime",
+              "AnimalId": "{{ModId}}_shinymrrime",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_mrrime",
+              "AnimalId": "{{ModId}}_mrrime",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

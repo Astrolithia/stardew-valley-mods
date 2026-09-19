@@ -1,0 +1,241 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load chimchar textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/chimchar/chimchar, {{ModId}}/chimchar/shinychimchar, {{ModId}}/chimchar/monferno, {{ModId}}/chimchar/shinymonferno, {{ModId}}/chimchar/infernape, {{ModId}}/chimchar/shinyinfernape, {{ModId}}/chimchar/chimcharegg",
+      "FromFile": "assets/livestocks/chimchar/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_chimchar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_chimchar": {
+          "DisplayName": "{{i18n: chimchar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chimcharegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: chimcharbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chimchar/monferno",
+          "BabyTexture": "{{ModId}}/chimchar/chimchar",
+          "Sound": "{{ModId}}_infernapecry",
+          "BabySound": "{{ModId}}_chimcharcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chimcharegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_chimchar evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_chimchar",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "chimcharevolution": {
+          "Id": "chimcharevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/chimchar/infernape"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_chimchar type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_chimchar"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinychimchar data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinychimchar": {
+          "DisplayName": "{{i18n: shinychimchar}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_chimcharegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinychimcharbirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/chimchar/shinymonferno",
+          "BabyTexture": "{{ModId}}/chimchar/shinychimchar",
+          "Sound": "{{ModId}}_infernapecry",
+          "BabySound": "{{ModId}}_chimcharcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_firecoal",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_chimcharegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinychimchar evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinychimchar",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinychimcharevolution": {
+          "Id": "shinychimcharevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/chimchar/shinyinfernape"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinychimchar type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinychimchar"
+      ],
+      "Entries": {
+        "IsHeater": true
+      }
+    },
+    {
+      "LogName": "chimchar cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_chimcharcry": {
+          "ID": "{{ModId}}_chimcharcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chimchar/chimcharcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_infernapecry": {
+          "ID": "{{ModId}}_infernapecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/chimchar/infernapecry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chimchar egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_chimcharegg": {
+          "Name": "{{ModId}}_chimcharegg",
+          "DisplayName": "{{i18n: chimcharegg}}",
+          "Description": "{{i18n: chimcharegg.d}}",
+          "Texture": "{{ModId}}/chimchar/chimcharegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fire",
+            "pkegg_rarity_rare",
+            "pkegg_volcano_p4",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "chimchar hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_chimcharegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinychimchar",
+              "AnimalId": "{{ModId}}_shinychimchar",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_chimchar",
+              "AnimalId": "{{ModId}}_chimchar",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

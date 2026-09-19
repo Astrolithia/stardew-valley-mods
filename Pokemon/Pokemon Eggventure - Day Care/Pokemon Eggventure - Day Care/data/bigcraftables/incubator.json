@@ -1,0 +1,21 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "{{ModId}}_Incubator": "388 40 390 40 334 5/Home/101/true/l {{ModId}}_incubatormail/{{i18n:incubator_name}}"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Fields": {
+        "101": {
+          "DisplayName": "{{i18n:incubator_name}}",
+          "Description": "{{i18n:incubator_description}}"
+        }
+      }
+    }
+  ]
+}

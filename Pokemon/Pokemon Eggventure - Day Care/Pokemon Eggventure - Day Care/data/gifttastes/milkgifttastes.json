@@ -1,0 +1,52 @@
+{
+  "Changes": [
+    {
+      "LogName": "Goat milk gift tastes (copied from vanilla Goat Milk)",
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Priority": "Late",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "3"
+          ],
+          "Value": "pkmilk_goat",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "3"
+          ],
+          "Value": "pkmilk_goat",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Harvey",
+            "3"
+          ],
+          "Value": "pkmilk_goat_large",
+          "Delimiter": " "
+        },
+        {
+          "Operation": "Append",
+          "Target": [
+            "Fields",
+            "Sandy",
+            "3"
+          ],
+          "Value": "pkmilk_goat_large",
+          "Delimiter": " "
+        }
+      ]
+    }
+  ]
+}

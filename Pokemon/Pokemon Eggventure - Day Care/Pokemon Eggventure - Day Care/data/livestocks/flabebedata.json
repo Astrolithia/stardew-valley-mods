@@ -1,0 +1,254 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load flabebe textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/flabebe/flabebe, {{ModId}}/flabebe/shinyflabebe, {{ModId}}/flabebe/flabebe2, {{ModId}}/flabebe/shinyflabebe2, {{ModId}}/flabebe/flabebe3, {{ModId}}/flabebe/shinyflabebe3, {{ModId}}/flabebe/flabebe4, {{ModId}}/flabebe/shinyflabebe4, {{ModId}}/flabebe/flabebe5, {{ModId}}/flabebe/shinyflabebe5, {{ModId}}/flabebe/floette, {{ModId}}/flabebe/shinyfloette, {{ModId}}/flabebe/floette2, {{ModId}}/flabebe/shinyfloette2, {{ModId}}/flabebe/floette3, {{ModId}}/flabebe/shinyfloette3, {{ModId}}/flabebe/floette4, {{ModId}}/flabebe/shinyfloette4, {{ModId}}/flabebe/floette5, {{ModId}}/flabebe/shinyfloette5, {{ModId}}/flabebe/florges, {{ModId}}/flabebe/shinyflorges, {{ModId}}/flabebe/florges2, {{ModId}}/flabebe/shinyflorges2, {{ModId}}/flabebe/florges3, {{ModId}}/flabebe/shinyflorges3, {{ModId}}/flabebe/florges4, {{ModId}}/flabebe/shinyflorges4, {{ModId}}/flabebe/florges5, {{ModId}}/flabebe/shinyflorges5, {{ModId}}/flabebe/flabebeegg",
+      "FromFile": "assets/livestocks/flabebe/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_flabebe data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_flabebe": {
+          "DisplayName": "{{i18n: flabebe}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_flabebeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: flabebebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/flabebe/floette",
+          "BabyTexture": "{{ModId}}/flabebe/flabebe",
+          "Sound": "{{ModId}}_florgescry",
+          "BabySound": "{{ModId}}_flabebecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_flabebeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "Skins": [
+            {
+              "Id": "floette2",
+              "Texture": "{{ModId}}/flabebe/floette2"
+            },
+            {
+              "Id": "floette3",
+              "Texture": "{{ModId}}/flabebe/floette3"
+            },
+            {
+              "Id": "floette4",
+              "Texture": "{{ModId}}/flabebe/floette4"
+            },
+            {
+              "Id": "floette5",
+              "Texture": "{{ModId}}/flabebe/floette5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_flabebe evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_flabebe",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "flabebeevolution": {
+          "Id": "flabebeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/flabebe/florges"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyflabebe data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyflabebe": {
+          "DisplayName": "{{i18n: shinyflabebe}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_flabebeegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyflabebebirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/flabebe/shinyfloette",
+          "BabyTexture": "{{ModId}}/flabebe/shinyflabebe",
+          "Sound": "{{ModId}}_florgescry",
+          "BabySound": "{{ModId}}_flabebecry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_lovesweet",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_flabebeegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "Skins": [
+            {
+              "Id": "floette2",
+              "Texture": "{{ModId}}/flabebe/shinyfloette2"
+            },
+            {
+              "Id": "floette3",
+              "Texture": "{{ModId}}/flabebe/shinyfloette3"
+            },
+            {
+              "Id": "floette4",
+              "Texture": "{{ModId}}/flabebe/shinyfloette4"
+            },
+            {
+              "Id": "floette5",
+              "Texture": "{{ModId}}/flabebe/shinyfloette5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyflabebe evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyflabebe",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinyflabebeevolution": {
+          "Id": "shinyflabebeevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/flabebe/shinyflorges"
+        }
+      }
+    },
+    {
+      "LogName": "flabebe cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_flabebecry": {
+          "ID": "{{ModId}}_flabebecry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/flabebe/flabebecry.ogg}}"
+          ]
+        },
+        "{{ModId}}_florgescry": {
+          "ID": "{{ModId}}_florgescry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/flabebe/florgescry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "flabebe egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_flabebeegg": {
+          "Name": "{{ModId}}_flabebeegg",
+          "DisplayName": "{{i18n: flabebeegg}}",
+          "Description": "{{i18n: flabebeegg.d}}",
+          "Texture": "{{ModId}}/flabebe/flabebeegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_fairy",
+            "pkegg_rarity_verycommon",
+            "color_salmon"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "flabebe hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_flabebeegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyflabebe",
+              "AnimalId": "{{ModId}}_shinyflabebe",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_flabebe",
+              "AnimalId": "{{ModId}}_flabebe",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

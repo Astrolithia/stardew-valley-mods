@@ -1,0 +1,15 @@
+{
+  "Name": "Pokemon Eggventure - FTM",
+  "Author": "Parme69",
+  "Version": "2.1.0",
+  "Description": "Forage et artifact spots Pokemon pour Pokemon Eggventure.",
+  "UniqueID": "Parme.PokemonEggventure.FTM",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [
+    "Nexus:49098"
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Esca.FarmTypeManager",
+    "MinimumVersion": "1.23.0"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "Changes": [
+    {
+      "LogName": "Train marchandises - tous wagons Resource droppent des oeufs",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Train",
+      "Entries": {
+        "{{ModId}}_train_patrat_packages": {
+          "Id": "{{ModId}}_train_patrat_packages",
+          "Car": "Resource",
+          "Type": "Packages",
+          "ItemId": "(O){{ModId}}_patrategg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_patrat_compartments": {
+          "Id": "{{ModId}}_train_patrat_compartments",
+          "Car": "Resource",
+          "Type": "Compartments",
+          "ItemId": "(O){{ModId}}_patrategg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_fletchling_hay": {
+          "Id": "{{ModId}}_train_fletchling_hay",
+          "Car": "Resource",
+          "Type": "Hay",
+          "ItemId": "(O){{ModId}}_fletchlingegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_fletchling_grass": {
+          "Id": "{{ModId}}_train_fletchling_grass",
+          "Car": "Resource",
+          "Type": "Grass",
+          "ItemId": "(O){{ModId}}_fletchlingegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_electrike_metal": {
+          "Id": "{{ModId}}_train_electrike_metal",
+          "Car": "Resource",
+          "Type": "Metal",
+          "ItemId": "(O){{ModId}}_electrikeegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_electrike_coal": {
+          "Id": "{{ModId}}_train_electrike_coal",
+          "Car": "Resource",
+          "Type": "Coal",
+          "ItemId": "(O){{ModId}}_electrikeegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_buneary_grass": {
+          "Id": "{{ModId}}_train_buneary_grass",
+          "Car": "Resource",
+          "Type": "Grass",
+          "ItemId": "(O){{ModId}}_bunearyegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_buneary_hay": {
+          "Id": "{{ModId}}_train_buneary_hay",
+          "Car": "Resource",
+          "Type": "Hay",
+          "ItemId": "(O){{ModId}}_bunearyegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_galarzigzagoon_rocks": {
+          "Id": "{{ModId}}_train_galarzigzagoon_rocks",
+          "Car": "Resource",
+          "Type": "Rocks",
+          "ItemId": "(O){{ModId}}_galarzigzagoonegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_galarzigzagoon_bricks": {
+          "Id": "{{ModId}}_train_galarzigzagoon_bricks",
+          "Car": "Resource",
+          "Type": "Bricks",
+          "ItemId": "(O){{ModId}}_galarzigzagoonegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_murkrow_presents": {
+          "Id": "{{ModId}}_train_murkrow_presents",
+          "Car": "Resource",
+          "Type": "Presents",
+          "ItemId": "(O){{ModId}}_murkrowegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_murkrow_packages": {
+          "Id": "{{ModId}}_train_murkrow_packages",
+          "Car": "Resource",
+          "Type": "Packages",
+          "ItemId": "(O){{ModId}}_murkrowegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingspring_grass": {
+          "Id": "{{ModId}}_train_deerlingspring_grass",
+          "Car": "Resource",
+          "Type": "Grass",
+          "ItemId": "(O){{ModId}}_deerlingspringegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingspring_wood": {
+          "Id": "{{ModId}}_train_deerlingspring_wood",
+          "Car": "Resource",
+          "Type": "Wood",
+          "ItemId": "(O){{ModId}}_deerlingspringegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingsummer_grass": {
+          "Id": "{{ModId}}_train_deerlingsummer_grass",
+          "Car": "Resource",
+          "Type": "Grass",
+          "ItemId": "(O){{ModId}}_deerlingsummeregg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingsummer_hay": {
+          "Id": "{{ModId}}_train_deerlingsummer_hay",
+          "Car": "Resource",
+          "Type": "Hay",
+          "ItemId": "(O){{ModId}}_deerlingsummeregg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingfall_wood": {
+          "Id": "{{ModId}}_train_deerlingfall_wood",
+          "Car": "Resource",
+          "Type": "Wood",
+          "ItemId": "(O){{ModId}}_deerlingfallegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingfall_hay": {
+          "Id": "{{ModId}}_train_deerlingfall_hay",
+          "Car": "Resource",
+          "Type": "Hay",
+          "ItemId": "(O){{ModId}}_deerlingfallegg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingwinter_wood": {
+          "Id": "{{ModId}}_train_deerlingwinter_wood",
+          "Car": "Resource",
+          "Type": "Wood",
+          "ItemId": "(O){{ModId}}_deerlingwinteregg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_deerlingwinter_coal": {
+          "Id": "{{ModId}}_train_deerlingwinter_coal",
+          "Car": "Resource",
+          "Type": "Coal",
+          "ItemId": "(O){{ModId}}_deerlingwinteregg",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        },
+        "{{ModId}}_train_DIAG_diamond": {
+          "Id": "{{ModId}}_train_DIAG_diamond",
+          "Car": "Resource",
+          "Type": "Coal",
+          "ItemId": "(O)72",
+          "MaxItems": 1,
+          "Chance": "{{RateTrain}}"
+        }
+      }
+    }
+  ]
+}

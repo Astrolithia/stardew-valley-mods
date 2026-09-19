@@ -1,0 +1,74 @@
+{
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_Welcome": {
+          "Id": "{{ModId}}_Welcome",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any",
+          "Actions": [
+            "AddMail Current {{ModId}}_Welcome Now"
+          ]
+        },
+        "{{ModId}}_incubatormail_coop": {
+          "Id": "{{ModId}}_incubatormail_coop",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, BUILDINGS_CONSTRUCTED Farm Coop",
+          "Actions": [
+            "AddMail Current {{ModId}}_incubatormail Now"
+          ]
+        },
+        "{{ModId}}_incubatormail_bigcoop": {
+          "Id": "{{ModId}}_incubatormail_bigcoop",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, BUILDINGS_CONSTRUCTED Farm \"Big Coop\"",
+          "Actions": [
+            "AddMail Current {{ModId}}_incubatormail Now"
+          ]
+        },
+        "{{ModId}}_incubatormail_deluxecoop": {
+          "Id": "{{ModId}}_incubatormail_deluxecoop",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, BUILDINGS_CONSTRUCTED Farm \"Deluxe Coop\"",
+          "Actions": [
+            "AddMail Current {{ModId}}_incubatormail Now"
+          ]
+        },
+        "{{ModId}}_incubatormail_barn": {
+          "Id": "{{ModId}}_incubatormail_barn",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, BUILDINGS_CONSTRUCTED Farm Barn",
+          "Actions": [
+            "AddMail Current {{ModId}}_incubatormail Now"
+          ]
+        },
+        "{{ModId}}_incubatormail_bigbarn": {
+          "Id": "{{ModId}}_incubatormail_bigbarn",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, BUILDINGS_CONSTRUCTED Farm \"Big Barn\"",
+          "Actions": [
+            "AddMail Current {{ModId}}_incubatormail Now"
+          ]
+        },
+        "{{ModId}}_incubatormail_deluxebarn": {
+          "Id": "{{ModId}}_incubatormail_deluxebarn",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, PLAYER_HAS_MAIL Current {{ModId}}_Welcome Any, BUILDINGS_CONSTRUCTED Farm \"Deluxe Barn\"",
+          "Actions": [
+            "AddMail Current {{ModId}}_incubatormail Now"
+          ]
+        },
+        "{{ModId}}_energyextractormail": {
+          "Id": "{{ModId}}_energyextractormail",
+          "Trigger": "DayStarted",
+          "Condition": "!PLAYER_HAS_MAIL Current {{ModId}}_energyextractormail Any, PLAYER_HAS_MAIL Current {{ModId}}_incubatormail Any, DAYS_PLAYED 6",
+          "Actions": [
+            "AddMail Current {{ModId}}_energyextractormail Tomorrow"
+          ]
+        }
+      }
+    }
+  ]
+}

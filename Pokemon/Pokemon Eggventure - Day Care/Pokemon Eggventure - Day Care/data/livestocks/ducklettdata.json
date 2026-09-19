@@ -1,0 +1,285 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load ducklett textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/ducklett/ducklett, {{ModId}}/ducklett/shinyducklett, {{ModId}}/ducklett/swanna, {{ModId}}/ducklett/shinyswanna, {{ModId}}/ducklett/ducklettegg, {{ModId}}/ducklett/ducklettshop",
+      "FromFile": "assets/livestocks/ducklett/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "ducklett egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_ducklettegg": {
+          "Name": "{{ModId}}_ducklettegg",
+          "DisplayName": "{{i18n: ducklettegg}}",
+          "Description": "{{i18n: ducklettegg.d}}",
+          "Texture": "{{ModId}}/ducklett/ducklettegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 80,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_water",
+            "pkegg_rarity_common",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_ducklett data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_ducklett": {
+          "DisplayName": "{{i18n: ducklett}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Big Coop",
+          "EggItemIds": [
+            "{{ModId}}_ducklettegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: ducklettbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ducklett/swanna",
+          "BabyTexture": "{{ModId}}/ducklett/ducklett",
+          "Sound": "{{ModId}}_swannacry",
+          "BabySound": "{{ModId}}_ducklettcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_ducklettegg",
+              "MinimumFriendship": 0
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "HarvestType": "DropOvernight",
+          "PurchasePrice": 2000,
+          "ShopDescription": "{{i18n:marnie_ducklett_desc}}",
+          "ShopTexture": "{{ModId}}/ducklett/ducklettshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "feather",
+              "ItemId": "{{ModId}}_feather_ducklett",
+              "MinimumFriendship": 200,
+              "Condition": "RANDOM 0.12"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_ducklett type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ducklett"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinyducklett data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinyducklett": {
+          "DisplayName": "{{i18n: shinyducklett}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_ducklettegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinyducklettbirthtext}}",
+          "DaysToMature": "{{BabyDaysCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/ducklett/shinyswanna",
+          "BabyTexture": "{{ModId}}/ducklett/shinyducklett",
+          "Sound": "{{ModId}}_swannacry",
+          "BabySound": "{{ModId}}_ducklettcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": true,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_ducklettegg",
+              "MinimumFriendship": 0
+            }
+          ],
+          "SellPrice": "{{SellPriceCommon}}",
+          "HarvestType": "DropOvernight",
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "feather",
+              "ItemId": "{{ModId}}_feather_ducklett",
+              "MinimumFriendship": 200,
+              "Condition": "RANDOM 0.12"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinyducklett type flags",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyducklett"
+      ],
+      "Entries": {
+        "IgnoreRain": true
+      }
+    },
+    {
+      "LogName": "ducklett cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_ducklettcry": {
+          "ID": "{{ModId}}_ducklettcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ducklett/ducklettcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_swannacry": {
+          "ID": "{{ModId}}_swannacry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/ducklett/swannacry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "ducklett hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_ducklettegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinyducklett",
+              "AnimalId": "{{ModId}}_shinyducklett",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_ducklett",
+              "AnimalId": "{{ModId}}_ducklett",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_ducklett",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ducklett",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_ducklett_dailydrop": {
+          "Id": "{{ModId}}_ducklett_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_ducklett_dailydrop_item",
+              "ItemId": "{{ModId}}_mysticwater",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - ducklett",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_ducklett",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_mysticwater": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinyducklett",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyducklett",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinyducklett_dailydrop": {
+          "Id": "{{ModId}}_shinyducklett_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinyducklett_dailydrop_item",
+              "ItemId": "{{ModId}}_mysticwater",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinyducklett",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinyducklett",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_mysticwater": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

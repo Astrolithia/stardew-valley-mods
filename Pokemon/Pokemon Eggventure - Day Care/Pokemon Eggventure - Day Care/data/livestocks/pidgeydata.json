@@ -1,0 +1,281 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pidgey textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pidgey/pidgey, {{ModId}}/pidgey/shinypidgey, {{ModId}}/pidgey/pidgeotto, {{ModId}}/pidgey/shinypidgeotto, {{ModId}}/pidgey/pidgeot, {{ModId}}/pidgey/shinypidgeot, {{ModId}}/pidgey/pidgeyegg, {{ModId}}/pidgey/pidgeyshop",
+      "FromFile": "assets/livestocks/pidgey/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "pidgey egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pidgeyegg": {
+          "Name": "{{ModId}}_pidgeyegg",
+          "DisplayName": "{{i18n: pidgeyegg}}",
+          "Description": "{{i18n: pidgeyegg.d}}",
+          "Texture": "{{ModId}}/pidgey/pidgeyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_pidgey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pidgey": {
+          "DisplayName": "{{i18n: pidgey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pidgeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pidgeybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pidgey/pidgeotto",
+          "BabyTexture": "{{ModId}}/pidgey/pidgey",
+          "Sound": "{{ModId}}_pidgeotcry",
+          "BabySound": "{{ModId}}_pidgeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_pidgeyegg",
+              "MinimumFriendship": 0
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "DropOvernight",
+          "PurchasePrice": 400,
+          "ShopDescription": "{{i18n:marnie_pidgey_desc}}",
+          "ShopTexture": "{{ModId}}/pidgey/pidgeyshop",
+          "ShopSourceRect": {
+            "X": 0,
+            "Y": 0,
+            "Width": 32,
+            "Height": 16
+          },
+          "DeluxeProduceItemIds": []
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_pidgey evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pidgey",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "pidgeyevolution": {
+          "Id": "pidgeyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pidgey/pidgeot"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypidgey data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypidgey": {
+          "DisplayName": "{{i18n: shinypidgey}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pidgeyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypidgeybirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pidgey/shinypidgeotto",
+          "BabyTexture": "{{ModId}}/pidgey/shinypidgey",
+          "Sound": "{{ModId}}_pidgeotcry",
+          "BabySound": "{{ModId}}_pidgeycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "PokemonEgg",
+              "ItemId": "{{ModId}}_pidgeyegg",
+              "MinimumFriendship": 0
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}",
+          "HarvestType": "DropOvernight",
+          "DeluxeProduceItemIds": []
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypidgey evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypidgey",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypidgeyevolution": {
+          "Id": "shinypidgeyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pidgey/shinypidgeot"
+        }
+      }
+    },
+    {
+      "LogName": "pidgey cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pidgeycry": {
+          "ID": "{{ModId}}_pidgeycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pidgey/pidgeycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_pidgeotcry": {
+          "ID": "{{ModId}}_pidgeotcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pidgey/pidgeotcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pidgey hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pidgeyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypidgey",
+              "AnimalId": "{{ModId}}_shinypidgey",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pidgey",
+              "AnimalId": "{{ModId}}_pidgey",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_pidgey",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pidgey",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_pidgey_dailydrop": {
+          "Id": "{{ModId}}_pidgey_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_pidgey_dailydrop_item",
+              "ItemId": "{{ModId}}_prettyfeather",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - pidgey",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pidgey",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_prettyfeather": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop quotidien - {{ModId}}_shinypidgey",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypidgey",
+        "ExtraProduceSpawnList"
+      ],
+      "Entries": {
+        "{{ModId}}_shinypidgey_dailydrop": {
+          "Id": "{{ModId}}_shinypidgey_dailydrop",
+          "ProduceItemIds": [
+            {
+              "Id": "{{ModId}}_shinypidgey_dailydrop_item",
+              "ItemId": "{{ModId}}_prettyfeather",
+              "MinimumFriendship": 0
+            }
+          ],
+          "DaysToProduce": 1,
+          "SyncWithMainProduce": false
+        }
+      }
+    },
+    {
+      "LogName": "Pokemondrop tombe au sol - shinypidgey",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypidgey",
+        "AnimalProduceExtensionData"
+      ],
+      "Entries": {
+        "(O){{ModId}}_prettyfeather": {
+          "HarvestTool": "DropOvernight"
+        }
+      }
+    }
+  ]
+}

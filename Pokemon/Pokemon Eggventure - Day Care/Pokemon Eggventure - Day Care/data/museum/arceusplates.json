@@ -1,0 +1,630 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load plate normal",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_renouveau",
+      "FromFile": "assets/museum/plate_renouveau.png"
+    },
+    {
+      "LogName": "Load plate fire",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_flame",
+      "FromFile": "assets/museum/plate_flame.png"
+    },
+    {
+      "LogName": "Load plate water",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_splash",
+      "FromFile": "assets/museum/plate_splash.png"
+    },
+    {
+      "LogName": "Load plate electric",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_zap",
+      "FromFile": "assets/museum/plate_zap.png"
+    },
+    {
+      "LogName": "Load plate grass",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_meadow",
+      "FromFile": "assets/museum/plate_meadow.png"
+    },
+    {
+      "LogName": "Load plate ice",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_icicle",
+      "FromFile": "assets/museum/plate_icicle.png"
+    },
+    {
+      "LogName": "Load plate fighting",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_fist",
+      "FromFile": "assets/museum/plate_fist.png"
+    },
+    {
+      "LogName": "Load plate poison",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_toxic",
+      "FromFile": "assets/museum/plate_toxic.png"
+    },
+    {
+      "LogName": "Load plate ground",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_earth",
+      "FromFile": "assets/museum/plate_earth.png"
+    },
+    {
+      "LogName": "Load plate flying",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_sky",
+      "FromFile": "assets/museum/plate_sky.png"
+    },
+    {
+      "LogName": "Load plate psychic",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_mind",
+      "FromFile": "assets/museum/plate_mind.png"
+    },
+    {
+      "LogName": "Load plate bug",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_insect",
+      "FromFile": "assets/museum/plate_insect.png"
+    },
+    {
+      "LogName": "Load plate rock",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_stone",
+      "FromFile": "assets/museum/plate_stone.png"
+    },
+    {
+      "LogName": "Load plate ghost",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_spooky",
+      "FromFile": "assets/museum/plate_spooky.png"
+    },
+    {
+      "LogName": "Load plate dragon",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_draco",
+      "FromFile": "assets/museum/plate_draco.png"
+    },
+    {
+      "LogName": "Load plate dark",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_dread",
+      "FromFile": "assets/museum/plate_dread.png"
+    },
+    {
+      "LogName": "Load plate steel",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_iron",
+      "FromFile": "assets/museum/plate_iron.png"
+    },
+    {
+      "LogName": "Load plate fairy",
+      "Action": "Load",
+      "Target": "{{ModId}}/plates/plate_pixie",
+      "FromFile": "assets/museum/plate_pixie.png"
+    },
+    {
+      "LogName": "Arceus plate objects",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_plate_normal": {
+          "Name": "{{ModId}}_plate_normal",
+          "DisplayName": "{{i18n: plate_normal}}",
+          "Description": "{{i18n: plate_normal.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_renouveau",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_normal",
+            "pkplate_mine_1_30",
+            "color_gray"
+          ]
+        },
+        "{{ModId}}_plate_rock": {
+          "Name": "{{ModId}}_plate_rock",
+          "DisplayName": "{{i18n: plate_rock}}",
+          "Description": "{{i18n: plate_rock.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_stone",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_rock",
+            "pkplate_mine_1_30",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_plate_ground": {
+          "Name": "{{ModId}}_plate_ground",
+          "DisplayName": "{{i18n: plate_ground}}",
+          "Description": "{{i18n: plate_ground.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_earth",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_ground",
+            "pkplate_mine_1_30",
+            "color_copper"
+          ]
+        },
+        "{{ModId}}_plate_bug": {
+          "Name": "{{ModId}}_plate_bug",
+          "DisplayName": "{{i18n: plate_bug}}",
+          "Description": "{{i18n: plate_bug.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_insect",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_bug",
+            "pkplate_mine_31_40",
+            "color_yellow_green"
+          ]
+        },
+        "{{ModId}}_plate_grass": {
+          "Name": "{{ModId}}_plate_grass",
+          "DisplayName": "{{i18n: plate_grass}}",
+          "Description": "{{i18n: plate_grass.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_meadow",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_grass",
+            "pkplate_mine_31_40",
+            "color_lime"
+          ]
+        },
+        "{{ModId}}_plate_poison": {
+          "Name": "{{ModId}}_plate_poison",
+          "DisplayName": "{{i18n: plate_poison}}",
+          "Description": "{{i18n: plate_poison.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_toxic",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_poison",
+            "pkplate_mine_31_40",
+            "color_iridium"
+          ]
+        },
+        "{{ModId}}_plate_ice": {
+          "Name": "{{ModId}}_plate_ice",
+          "DisplayName": "{{i18n: plate_ice}}",
+          "Description": "{{i18n: plate_ice.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_icicle",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_ice",
+            "pkplate_mine_41_60",
+            "color_light_cyan"
+          ]
+        },
+        "{{ModId}}_plate_water": {
+          "Name": "{{ModId}}_plate_water",
+          "DisplayName": "{{i18n: plate_water}}",
+          "Description": "{{i18n: plate_water.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_splash",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_water",
+            "pkplate_mine_41_60",
+            "color_blue"
+          ]
+        },
+        "{{ModId}}_plate_steel": {
+          "Name": "{{ModId}}_plate_steel",
+          "DisplayName": "{{i18n: plate_steel}}",
+          "Description": "{{i18n: plate_steel.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_iron",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_steel",
+            "pkplate_mine_41_60",
+            "color_sand"
+          ]
+        },
+        "{{ModId}}_plate_psychic": {
+          "Name": "{{ModId}}_plate_psychic",
+          "DisplayName": "{{i18n: plate_psychic}}",
+          "Description": "{{i18n: plate_psychic.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_mind",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_psychic",
+            "pkplate_mine_61_80",
+            "color_pink"
+          ]
+        },
+        "{{ModId}}_plate_fairy": {
+          "Name": "{{ModId}}_plate_fairy",
+          "DisplayName": "{{i18n: plate_fairy}}",
+          "Description": "{{i18n: plate_fairy.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_pixie",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_fairy",
+            "pkplate_mine_61_80",
+            "color_pink"
+          ]
+        },
+        "{{ModId}}_plate_flying": {
+          "Name": "{{ModId}}_plate_flying",
+          "DisplayName": "{{i18n: plate_flying}}",
+          "Description": "{{i18n: plate_flying.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_sky",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_flying",
+            "pkplate_mine_61_80",
+            "color_cyan"
+          ]
+        },
+        "{{ModId}}_plate_fire": {
+          "Name": "{{ModId}}_plate_fire",
+          "DisplayName": "{{i18n: plate_fire}}",
+          "Description": "{{i18n: plate_fire.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_flame",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_fire",
+            "pkplate_mine_81_100",
+            "color_salmon"
+          ]
+        },
+        "{{ModId}}_plate_fighting": {
+          "Name": "{{ModId}}_plate_fighting",
+          "DisplayName": "{{i18n: plate_fighting}}",
+          "Description": "{{i18n: plate_fighting.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_fist",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_fighting",
+            "pkplate_mine_81_100",
+            "color_salmon"
+          ]
+        },
+        "{{ModId}}_plate_dragon": {
+          "Name": "{{ModId}}_plate_dragon",
+          "DisplayName": "{{i18n: plate_dragon}}",
+          "Description": "{{i18n: plate_dragon.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_draco",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_dragon",
+            "pkplate_mine_81_100",
+            "color_pale_violet_red"
+          ]
+        },
+        "{{ModId}}_plate_electric": {
+          "Name": "{{ModId}}_plate_electric",
+          "DisplayName": "{{i18n: plate_electric}}",
+          "Description": "{{i18n: plate_electric.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_zap",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_electric",
+            "pkplate_mine_101_120",
+            "color_yellow"
+          ]
+        },
+        "{{ModId}}_plate_dark": {
+          "Name": "{{ModId}}_plate_dark",
+          "DisplayName": "{{i18n: plate_dark}}",
+          "Description": "{{i18n: plate_dark.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_dread",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_dark",
+            "pkplate_mine_101_120",
+            "color_light_cyan"
+          ]
+        },
+        "{{ModId}}_plate_ghost": {
+          "Name": "{{ModId}}_plate_ghost",
+          "DisplayName": "{{i18n: plate_ghost}}",
+          "Description": "{{i18n: plate_ghost.d}}",
+          "Type": "Arch",
+          "Category": -2,
+          "Price": 300,
+          "Texture": "{{ModId}}/plates/plate_spooky",
+          "ContextTags": [
+            "pkplate_item",
+            "pkplate_type_ghost",
+            "pkplate_mine_101_120",
+            "color_purple"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Arceus plate mine nodes",
+      "Action": "EditData",
+      "Target": "Mods/mistyspring.ItemExtensions/Resources",
+      "Entries": {
+        "{{ModId}}_PlateNode_mine_1_30": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 0,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_PlateNode_mine_1_30_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkplate_mine_1_30",
+              "MaxItems": 1,
+              "Chance": 1.0
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "1/30",
+              "Type": "Normal",
+              "SpawnFrequency": 0.004,
+              "Condition": "PLAYER_MINING_LEVEL Current 0"
+            }
+          ]
+        },
+        "{{ModId}}_PlateNode_mine_31_40": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 1,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_PlateNode_mine_31_40_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkplate_mine_31_40",
+              "MaxItems": 1,
+              "Chance": 1.0
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "31/40",
+              "Type": "Normal",
+              "SpawnFrequency": 0.004,
+              "Condition": "PLAYER_MINING_LEVEL Current 2"
+            }
+          ]
+        },
+        "{{ModId}}_PlateNode_mine_41_60": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_PlateNode_mine_41_60_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkplate_mine_41_60",
+              "MaxItems": 1,
+              "Chance": 1.0
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "41/60",
+              "Type": "Normal",
+              "SpawnFrequency": 0.004,
+              "Condition": "PLAYER_MINING_LEVEL Current 4"
+            }
+          ]
+        },
+        "{{ModId}}_PlateNode_mine_61_80": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 2,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_PlateNode_mine_61_80_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkplate_mine_61_80",
+              "MaxItems": 1,
+              "Chance": 1.0
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "61/80",
+              "Type": "Normal",
+              "SpawnFrequency": 0.004,
+              "Condition": "PLAYER_MINING_LEVEL Current 4"
+            }
+          ]
+        },
+        "{{ModId}}_PlateNode_mine_81_100": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 3,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_PlateNode_mine_81_100_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkplate_mine_81_100",
+              "MaxItems": 1,
+              "Chance": 1.0
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "81/100",
+              "Type": "Normal",
+              "SpawnFrequency": 0.004,
+              "Condition": "PLAYER_MINING_LEVEL Current 6"
+            }
+          ]
+        },
+        "{{ModId}}_PlateNode_mine_101_120": {
+          "Texture": "{{ModId}}/customnodes",
+          "SpriteIndex": 1,
+          "Width": 1,
+          "Height": 1,
+          "Health": 1,
+          "Tool": "Pickaxe",
+          "MinToolLevel": 4,
+          "Sound": "hammer",
+          "BreakingSound": "stoneCrack",
+          "Debris": "stone",
+          "CountTowards": "Stone",
+          "MinDrops": 0,
+          "MaxDrops": 0,
+          "ExtraItems": [
+            {
+              "Id": "{{ModId}}_PlateNode_mine_101_120_pool",
+              "ItemId": "RANDOM_ITEMS (O)",
+              "PerItemCondition": "ITEM_CONTEXT_TAG Target pkplate_mine_101_120",
+              "MaxItems": 1,
+              "Chance": 1.0
+            }
+          ],
+          "MineSpawns": [
+            {
+              "Floors": "101/120",
+              "Type": "Normal",
+              "SpawnFrequency": 0.004,
+              "Condition": "PLAYER_MINING_LEVEL Current 8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Arceus museum reward",
+      "Action": "EditData",
+      "Target": "Data/MuseumRewards",
+      "Entries": {
+        "{{ModId}}_ArceusPlates": {
+          "Id": "{{ModId}}_ArceusPlates",
+          "TargetContextTags": [
+            {
+              "Tag": "pkplate_item",
+              "Count": 18
+            }
+          ],
+          "FlagOnCompletion": true,
+          "RewardActions": [
+            "AddMail Current {{ModId}}_arceusmail Now"
+          ]
+        },
+        "{{ModId}}_ArceusPlateFirst": {
+          "Id": "{{ModId}}_ArceusPlateFirst",
+          "TargetContextTags": [
+            {
+              "Tag": "pkplate_item",
+              "Count": 1
+            }
+          ],
+          "FlagOnCompletion": true,
+          "RewardActions": [
+            "AddMail Current {{ModId}}_arceusintromail Now"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "Arceus mail",
+      "Action": "EditData",
+      "Target": "Data/mail",
+      "Entries": {
+        "{{ModId}}_arceusmail": "{{i18n:mail_arceus_text}}%item id (O){{ModId}}_arceusegg 1 %%[letterbg 2][#]{{i18n:mail_arceus_title}}",
+        "{{ModId}}_arceusintromail": "{{i18n:mail_arceus_intro_text}}[#]{{i18n:mail_arceus_intro_title}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load pikipek textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/pikipek/pikipek, {{ModId}}/pikipek/shinypikipek, {{ModId}}/pikipek/trumbeak, {{ModId}}/pikipek/shinytrumbeak, {{ModId}}/pikipek/toucannon, {{ModId}}/pikipek/shinytoucannon, {{ModId}}/pikipek/pikipekegg",
+      "FromFile": "assets/livestocks/pikipek/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_pikipek data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_pikipek": {
+          "DisplayName": "{{i18n: pikipek}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pikipekegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: pikipekbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pikipek/trumbeak",
+          "BabyTexture": "{{ModId}}/pikipek/pikipek",
+          "Sound": "{{ModId}}_toucannoncry",
+          "BabySound": "{{ModId}}_pikipekcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pikipekegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_pikipek evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_pikipek",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "pikipekevolution": {
+          "Id": "pikipekevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pikipek/toucannon"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinypikipek data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinypikipek": {
+          "DisplayName": "{{i18n: shinypikipek}}",
+          "Gender": "MaleOrFemale",
+          "House": "Coop",
+          "RequiredBuilding": "Coop",
+          "EggItemIds": [
+            "{{ModId}}_pikipekegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysVeryCommon}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinypikipekbirthtext}}",
+          "DaysToMature": "{{BabyDaysVeryCommon}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/pikipek/shinytrumbeak",
+          "BabyTexture": "{{ModId}}/pikipek/shinypikipek",
+          "Sound": "{{ModId}}_toucannoncry",
+          "BabySound": "{{ModId}}_pikipekcry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_prettyfeather",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_pikipekegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceVeryCommon}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinypikipek evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinypikipek",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinypikipekevolution": {
+          "Id": "shinypikipekevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/pikipek/shinytoucannon"
+        }
+      }
+    },
+    {
+      "LogName": "pikipek cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_pikipekcry": {
+          "ID": "{{ModId}}_pikipekcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pikipek/pikipekcry.ogg}}"
+          ]
+        },
+        "{{ModId}}_toucannoncry": {
+          "ID": "{{ModId}}_toucannoncry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/pikipek/toucannoncry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pikipek egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_pikipekegg": {
+          "Name": "{{ModId}}_pikipekegg",
+          "DisplayName": "{{i18n: pikipekegg}}",
+          "Description": "{{i18n: pikipekegg.d}}",
+          "Texture": "{{ModId}}/pikipek/pikipekegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_flying",
+            "pkegg_rarity_verycommon",
+            "color_blue"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "pikipek hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_pikipekegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinypikipek",
+              "AnimalId": "{{ModId}}_shinypikipek",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_pikipek",
+              "AnimalId": "{{ModId}}_pikipek",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

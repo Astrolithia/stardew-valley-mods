@@ -1,0 +1,219 @@
+{
+  "Changes": [
+    {
+      "LogName": "Load dreepy textures",
+      "Action": "Load",
+      "Target": "{{ModId}}/dreepy/dreepy, {{ModId}}/dreepy/shinydreepy, {{ModId}}/dreepy/drakloak, {{ModId}}/dreepy/shinydrakloak, {{ModId}}/dreepy/dragapult, {{ModId}}/dreepy/shinydragapult, {{ModId}}/dreepy/dreepyegg",
+      "FromFile": "assets/livestocks/dreepy/{{TargetWithoutPath}}.png"
+    },
+    {
+      "LogName": "Add {{ModId}}_dreepy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_dreepy": {
+          "DisplayName": "{{i18n: dreepy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dreepyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: dreepybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dreepy/drakloak",
+          "BabyTexture": "{{ModId}}/dreepy/dreepy",
+          "Sound": "{{ModId}}_dragapultcry",
+          "BabySound": "{{ModId}}_dreepycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dreepyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_dreepy evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_dreepy",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "dreepyevolution": {
+          "Id": "dreepyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/dreepy/dragapult"
+        }
+      }
+    },
+    {
+      "LogName": "Add {{ModId}}_shinydreepy data",
+      "Action": "EditData",
+      "Target": "Data/FarmAnimals",
+      "Entries": {
+        "{{ModId}}_shinydreepy": {
+          "DisplayName": "{{i18n: shinydreepy}}",
+          "Gender": "MaleOrFemale",
+          "House": "Barn",
+          "RequiredBuilding": "Barn",
+          "EggItemIds": [
+            "{{ModId}}_dreepyegg"
+          ],
+          "IncubationTime": "{{Query: {{IncubationDaysRare}} * 1440}}",
+          "IncubatorParentSheetOffset": 1,
+          "BirthText": "{{i18n: shinydreepybirthtext}}",
+          "DaysToMature": "{{BabyDaysRare}}",
+          "CanGetPregnant": false,
+          "Texture": "{{ModId}}/dreepy/shinydrakloak",
+          "BabyTexture": "{{ModId}}/dreepy/shinydreepy",
+          "Sound": "{{ModId}}_dragapultcry",
+          "BabySound": "{{ModId}}_dreepycry",
+          "SleepFrame": "0",
+          "SpriteWidth": 32,
+          "SpriteHeight": 32,
+          "UseFlippedRightForLeft": true,
+          "UseDoubleUniqueAnimationFrames": false,
+          "ProfessionForHappinessBoost": 2,
+          "ProfessionForQualityBoost": 2,
+          "ProfessionForFasterProduce": 2,
+          "CanSwim": false,
+          "ShowInSummitCredits": true,
+          "DaysToProduce": "1",
+          "ProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "MinimumFriendship": 0,
+              "ItemId": "{{ModId}}_dragonfang",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "DeluxeProduceItemIds": [
+            {
+              "Id": "Default",
+              "Condition": "RANDOM {{EggLayingChance}}",
+              "MinimumFriendship": 500,
+              "ItemId": "{{ModId}}_dreepyegg",
+              "HarvestType": "DropOverNight"
+            }
+          ],
+          "SellPrice": "{{SellPriceRare}}"
+        }
+      }
+    },
+    {
+      "LogName": "{{ModId}}_shinydreepy evolution appearance",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/AnimalExtensionData",
+      "TargetField": [
+        "{{ModId}}_shinydreepy",
+        "TextureOverrides"
+      ],
+      "Entries": {
+        "shinydreepyevolution": {
+          "Id": "shinydreepyevolution",
+          "Condition": "selph.ExtraAnimalConfig_ANIMAL_FRIENDSHIP {{Query: {{EvolutionHearts}} * 200}}",
+          "TextureToUse": "{{ModId}}/dreepy/shinydragapult"
+        }
+      }
+    },
+    {
+      "LogName": "dreepy cries",
+      "Action": "EditData",
+      "Target": "Data/AudioChanges",
+      "Entries": {
+        "{{ModId}}_dreepycry": {
+          "ID": "{{ModId}}_dreepycry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dreepy/dreepycry.ogg}}"
+          ]
+        },
+        "{{ModId}}_dragapultcry": {
+          "ID": "{{ModId}}_dragapultcry",
+          "Category": "Sound",
+          "FilePaths": [
+            "{{AbsoluteFilePath: assets/livestocks/dreepy/dragapultcry.ogg}}"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dreepy egg",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_dreepyegg": {
+          "Name": "{{ModId}}_dreepyegg",
+          "DisplayName": "{{i18n: dreepyegg}}",
+          "Description": "{{i18n: dreepyegg.d}}",
+          "Texture": "{{ModId}}/dreepy/dreepyegg",
+          "Type": "Basic",
+          "Category": -5,
+          "Price": 50,
+          "ContextTags": [
+            "pkegg_item",
+            "egg_item",
+            "pkegg_travelingcart",
+            "pkegg_type_dragon",
+            "pkegg_rarity_rare",
+            "pkegg_mine_31_40_p3",
+            "color_dark_gray"
+          ]
+        }
+      }
+    },
+    {
+      "LogName": "dreepy hatch",
+      "Action": "EditData",
+      "Target": "selph.ExtraAnimalConfig/EggExtensionData",
+      "Entries": {
+        "(O){{ModId}}_dreepyegg": {
+          "AnimalSpawnList": [
+            {
+              "Id": "{{ModId}}_shinydreepy",
+              "AnimalId": "{{ModId}}_shinydreepy",
+              "Condition": "RANDOM {{ShinyChance}}"
+            },
+            {
+              "Id": "{{ModId}}_dreepy",
+              "AnimalId": "{{ModId}}_dreepy",
+              "Condition": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
