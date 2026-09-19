@@ -1,0 +1,11 @@
+# macOS Finder
+.DS_Store
+
+# SMAPI logs and generated files
+*.log
+*.log.*
+smapi-internal/
+
+# Local-only configuration and backups
+*.backup
+*.bak
